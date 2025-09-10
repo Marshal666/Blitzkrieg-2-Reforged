@@ -1,0 +1,1 @@
+xcopy *icon.tga c:\b2\icons\*.* /D /S /Y /R /C
