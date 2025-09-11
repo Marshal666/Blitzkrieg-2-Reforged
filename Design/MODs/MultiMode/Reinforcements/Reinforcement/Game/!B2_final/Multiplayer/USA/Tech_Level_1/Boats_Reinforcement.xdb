@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000933">
+	<Type>RT_LIGHT_TANKS</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankLight_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Boats_name.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/US/Ships/Sea_hunter/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/Ships/Sea_hunter/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Boats_name.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="/Reinforcements/DeployTemplate/Test/ship_distant_DeployTemplate.xdb#xpointer(/DeployTemplate)" />
+</Reinforcement>

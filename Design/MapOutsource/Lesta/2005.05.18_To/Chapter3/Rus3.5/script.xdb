@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000105">
+	<FileName />
+	<ScriptText>-- Paratroops
+u52 = 1000;
+commando = {};
+function StartParatroop()
+	Cmd(ACT_UNLOAD, 52, 200, GetScriptAreaParams (&quot;A&quot;));
+--	QCmd(0, 52, 200, GetScriptAreaParams (&quot;A0&quot;));
+
+	
+	LandReinforcementFromMap (1, &quot;Paratroops&quot;,0, 999 );
+	Wait(1);
+	Cmd(ACT_UNLOAD, 999, 200, GetScriptAreaParams (&quot;A1&quot;));
+--	QCmd(0, 999, 200, GetScriptAreaParams (&quot;A0&quot;));
+--	QCmd(ACT_DISAPPEAR, 999);
+	
+	LandReinforcementFromMap (1, &quot;Paratroops&quot;,1, 998 );
+	Wait(5);
+	Cmd(ACT_UNLOAD, 998, 200, GetScriptAreaParams (&quot;A&quot;));
+--	QCmd(0, 998, 200, GetScriptAreaParams (&quot;A0&quot;));
+--	QCmd(ACT_DISAPPEAR, 998);
+	
+--	LandReinforcementFromMap (1, &quot;Paratroops&quot;,2, 997 );
+--	Wait(5);
+--	Cmd(ACT_UNLOAD, 997, 200, GetScriptAreaParams (&quot;A&quot;));
+--	QCmd(0, 997, 200, GetScriptAreaParams (&quot;A0&quot;));
+	--QCmd(ACT_DISAPPEAR, 997);
+	Wait(60);
+	StartThread( Paratroop);
+end;
+function Paratroop()
+
+	while 1 do
+		points =Random(3)-1;
+		Trace ( &apos;u521= %g&apos;, u52 );
+		LandReinforcementFromMap ( 1, &quot;Paratroops&quot;,points, u52 );
+		Wait(5);
+		Cmd(ACT_UNLOAD, u52, 200, GetScriptAreaParams (&quot;A&quot;));
+--		StartThread( Paratroop1);
+		
+		Wait(90);
+	end;
+end;
+function Perimetr()
+	while 1 do
+			commando = GetUnitListInAreaArray(1, &quot;Aerodrom&quot;);
+			i = 1;
+			for ii = 1, 7 do
+				if GetNUnitsInArea (1, &quot;A&quot; .. ii) &lt; 5 then
+					Sleep(5);
+					UnitCmd(ACT_SWARM, commando[i], 500, GetScriptAreaParams (&quot;A&quot;.. ii));	
+					i = i +1;
+				end;
+				Wait(5);
+			end;
+			Wait(2);	
+	end;
+end;
+function Paratroop1()
+	while 1 do
+	Wait(2);
+		if (GetNScriptUnitsInArea(u52, &quot;Aerodrom&quot;, 0)&gt; 0 and GetNScriptUnitsInArea(u52, &quot;Aerodrom&quot;, 0) == GetNScriptUnitsInArea(u52, &quot;Aerodrom&quot;, 1)) then
+				Trace ( &apos;u522= %g&apos;, u52 );
+		Wait(5);
+--			commando = GetObjectListArray(u52);
+			commando = GetUnitListInAreaArray(1, &quot;Aerodrom&quot;);
+			i = 1;
+			for ii = 1, 7 do
+				if GetNUnitsInArea (1, &quot;A&quot; .. ii) &lt; 1 then
+					Sleep(5);
+					UnitCmd(ACT_SWARM, commando[i], 100, GetScriptAreaParams (&quot;A&quot;.. ii));	
+					i = i +1;
+				end;
+				Wait(1);
+			end;
+			u52=u52+1;
+			return 1;
+		end;
+		if GetNUnitsInScriptGroup( u52, 1 ) &lt; 1 then
+				Trace ( &apos;u523= %g&apos;, u52 );
+			u52=u52+1;
+			return 1;
+		end;
+	end;
+end;
+function Aerodrom()
+	while 1 do
+	Wait(1);
+		if GetNUnitsInArea(3, &quot;Aerodrom&quot;) &lt; 1 then
+			Sleep(2);
+			ViewZone (&quot;Aerodrom1&quot;, 1 );
+			ViewZone (&quot;Aerodrom2&quot;, 1 );
+--			ViewZone (&quot;Aerodrom&quot;, 1 ); --no job quadrate! version blin...
+			return 1;
+		end;
+	end;
+end;
+function Winner()
+	while 1 do
+	if GetNUnitsInArea(1, &quot;Aerodrom&quot;) &lt; 1 and GetNUnitsInArea(3, &quot;Aerodrom&quot;) &gt; 0 then
+	Win(0);
+	end;
+	Wait(2);
+	end;
+end;
+function Attack()
+local a = 1
+local point1 = 1;
+local point2 = 2;
+	while 1 do
+		LandReinforcementFromMap (3, &quot;Attack&quot;,point1, a );
+		Wait(1);
+		Cmd(ACT_SWARM, a, 200, GetScriptAreaParams (&quot;B1&quot;));
+		QCmd(ACT_SWARM, a, 200, GetScriptAreaParams (&quot;Aerodrom&quot;));
+		a=a+1;
+		LandReinforcementFromMap (3, &quot;Attack&quot;,point2, a );
+		Wait(1);
+		Cmd(ACT_SWARM, a, 200, GetScriptAreaParams (&quot;B2&quot;));
+		QCmd(ACT_SWARM, a, 200, GetScriptAreaParams (&quot;Aerodrom&quot;));
+		a=a+1;
+		Wait(90);
+	end;
+
+end;
+---------------------------------
+Wait(1);
+ViewZone (&quot;Aerodrom1&quot;, 1 );
+ViewZone (&quot;Aerodrom2&quot;, 1 );
+StartThread( StartParatroop);
+StartThread( Perimetr);
+StartThread( Aerodrom);
+Wait(1);
+GiveObjective( 0 );
+Wait(60);
+StartThread( Attack);
+StartThread( Winner);
+Wait(900+Random(300));
+Win(1);</ScriptText>
+</Script>

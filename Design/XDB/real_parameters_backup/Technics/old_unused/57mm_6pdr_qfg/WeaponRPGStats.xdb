@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="79">
+	<KeyName>57mm 6pdr QFG</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>1.8</Dispersion>
+	<AimingTime>0.55</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>33</RangeMax>
+	<RangeMin>4</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>81</Piercing>
+			<DamageRandom>25</DamageRandom>
+			<DamagePower>50</DamagePower>
+			<PiercingRandom>30</PiercingRandom>
+			<Area>0.4</Area>
+			<Area2>1.61</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>60</FireRate>
+			<RelaxTime>1</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

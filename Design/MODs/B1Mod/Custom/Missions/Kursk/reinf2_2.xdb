@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000898">
+	<Type>RT_HEAVY_TANKS</Type>
+	<IconTexture href="" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/Tanks/Pz_IV_Ausf_G/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Assault_Squad/german_assault_5/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/Tanks/pz_v_panther_ausf_g/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Assault_Squad/german_assault_5/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="160">
+	<KeyName>MP-40</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_SUBMACHINEGUN</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>2</Dispersion>
+	<AimingTime>0.8</AimingTime>
+	<AmmoPerBurst>4</AmmoPerBurst>
+	<RangeMax>25</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>4</Piercing>
+			<DamageRandom>3</DamageRandom>
+			<DamagePower>3</DamagePower>
+			<PiercingRandom>1</PiercingRandom>
+			<Area>0</Area>
+			<Area2>0</Area2>
+			<Speed>392</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0.2</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/machinegun_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>500</FireRate>
+			<RelaxTime>0.5</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

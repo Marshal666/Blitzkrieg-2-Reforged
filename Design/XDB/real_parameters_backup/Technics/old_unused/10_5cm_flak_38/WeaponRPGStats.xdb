@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="15">
+	<KeyName>10.5 cm FLAK-38</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>3.84</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>80</RangeMax>
+	<RangeMin>5</RangeMin>
+	<Ceiling>11800</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>164</Piercing>
+			<DamageRandom>99</DamageRandom>
+			<DamagePower>198</DamagePower>
+			<PiercingRandom>26</PiercingRandom>
+			<Area>0.86</Area>
+			<Area2>3.45</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>37</FireRate>
+			<RelaxTime>1.61</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

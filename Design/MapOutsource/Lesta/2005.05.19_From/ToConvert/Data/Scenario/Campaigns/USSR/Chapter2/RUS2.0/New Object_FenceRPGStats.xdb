@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FenceRPGStats ObjectRecordID="1000000">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_FENCE</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="" />
+	<IconTexture href="" />
+	<LocalizedName href="" />
+	<LocalizedNameText />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>0</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="" />
+	<EffectDeath href="" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<stats />
+	<dirs />
+	<PlacementType>FENCE_PLACE_STAGGERED</PlacementType>
+	<CenterSegments>
+		<VisObjes />
+		<passability>
+			<data />
+		</passability>
+		<PassProfile>
+			<polygons />
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>0</x>
+			<y>0</y>
+		</Origin>
+	</CenterSegments>
+	<DamagedSegments>
+		<VisObjes />
+		<passability>
+			<data />
+		</passability>
+		<PassProfile>
+			<polygons />
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>0</x>
+			<y>0</y>
+		</Origin>
+	</DamagedSegments>
+	<DamagedSegmentsOtherSide>
+		<VisObjes />
+		<passability>
+			<data />
+		</passability>
+		<PassProfile>
+			<polygons />
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>0</x>
+			<y>0</y>
+		</Origin>
+	</DamagedSegmentsOtherSide>
+	<DestroyedSegments>
+		<VisObjes />
+		<passability>
+			<data />
+		</passability>
+		<PassProfile>
+			<polygons />
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>0</x>
+			<y>0</y>
+		</Origin>
+	</DestroyedSegments>
+	<FenceHeight>100</FenceHeight>
+</FenceRPGStats>

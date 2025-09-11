@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000000">
+	<FileName href="" />
+	<ScriptText>--------------------------------------------------------------------------------
+
+__AUTO_ID = 2000;
+
+function AutoID ()
+	__AUTO_ID = __AUTO_ID + 1;
+	return __AUTO_ID;
+end;
+
+--------------------------------------------------------------------------------
+
+ID_ALLIED_FIGHTERS	= AutoID ();
+ID_ALLIED_CONVOY	= AutoID ();
+ID_ALLIED_BOATS1	= AutoID ();
+ID_ALLIED_BOATS2	= AutoID ();
+
+ID_GERMAN_GAP 		= AutoID ();
+ID_GERMAN_BOMBERS 	= AutoID ();
+ID_GERMAN_TROOPERS 	= AutoID ();
+ID_GERMAN_BOATS1 	= AutoID ();
+ID_GERMAN_BOATS2 	= AutoID ();
+ID_GERMAN_BOATS3 	= AutoID ();
+
+--------------------------------------------------------------------------------
+
+ID_COAST_GUNS 	= 500;
+ID_FLAK_GUNS 	= 501;
+
+--------------------------------------------------------------------------------
+
+ID_PLAYER 	= 0;
+ID_GERMANS 	= 1;
+ID_ALLIES 	= 2;
+
+--------------------------------------------------------------------------------
+
+ID_OBJ_DEFEND_GUNS 		= 0;
+ID_OBJ_DEFEND_CONVOYS 	= 1;
+
+--------------------------------------------------------------------------------
+
+function CallOutAlliedFighters ()
+	Wait (60);
+	
+	-- Call out allied fighters to help us to defend the guns
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedFighters&quot;, 0, ID_ALLIED_FIGHTERS);
+	Cmd (ACT_SWARM, ID_ALLIED_FIGHTERS, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	while (1) do
+		Wait (10);
+		
+		-- The germans was defeated - return planes to base
+		if (GetNUnitsInParty (ID_GERMANS)==0) then
+			Cmd (ACT_MOVE, ID_ALLIED_FIGHTERS, 50, GetScriptAreaParams (&quot;Area_Escape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_FIGHTERS);
+			break;
+		end;
+		
+	end;
+end
+
+--------------------------------------------------------------------------------
+
+function AttackCoastGuns ()
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 1, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 1, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 1, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 1, ID_GERMAN_TROOPERS);
+	Cmd (ACT_UNLOAD, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_LandingZone&quot;));
+
+	Wait (25);
+
+	-- German planes should attack guns&apos; position
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBomber&quot;, 0, ID_GERMAN_BOMBERS);
+	Wait(2)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBomber&quot;, 0, ID_GERMAN_BOMBERS);
+	Wait(2)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBomber&quot;, 0, ID_GERMAN_BOMBERS);
+	Cmd (ACT_MOVE, ID_GERMAN_BOMBERS, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	while (1) do
+		Wait (5);
+		
+		Cmd (ACT_SWARM, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_FlakGuns&quot;));
+		
+		if (IsSomeBodyAlive (ID_GERMANS, ID_GERMAN_TROOPERS)==0) then
+			break;
+		end
+		
+		if (IsSomeBodyAlive (ID_PLAYER, ID_FLAK_GUNS)==0) then
+			-- Flak guns destroyed - call off the attacking forces
+			Cmd (ACT_MOVE, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_Escape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_TROOPERS);
+			break;
+		end;
+	end;
+end;
+
+--------------------------------------------------------------------------------
+
+function AlliedReconnaissance ()
+
+	while (1) do
+		ID_ALLIED_RECON = AutoID ();
+		
+		if (IsSomeBodyAlive (ID_ALLIES, ID_ALLIED_RECON)&lt;3) then
+			LandReinforcementFromMap (ID_ALLIES, &quot;AlliedReconPlane&quot;, 2, ID_ALLIED_RECON);
+			for i = 1,5 do
+				QCmd (ACT_MOVE, ID_ALLIED_RECON, 50, GetScriptAreaParams (&quot;Area_Recon&quot;..Random(8)));
+			end;
+			QCmd (ACT_MOVE, ID_ALLIED_RECON, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_RECON);
+		end;
+		Wait (30);
+	end;
+
+end;
+
+--------------------------------------------------------------------------------
+
+function LandingParty2 ()
+	
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanTroopers&quot;, 0, ID_GERMAN_TROOPERS);
+	Cmd (ACT_UNLOAD, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_EastLandingZone&quot;));
+	QCmd (ACT_SWARM, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	Wait (10);
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	while (1) do
+		Wait (5);
+		Cmd (ACT_SWARM, ID_GERMAN_TROOPERS, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+		
+		if (GetNScriptUnitsInArea (ID_GERMANS, &quot;Area_CoastGuns&quot;, false) &gt; 0) then
+			DamageScriptObject (ID_COAST_GUNS, 10000);
+			break;
+		end;
+		
+		if (IsSomeBodyAlive (ID_GERMANS, ID_GERMAN_TROOPERS)==0) then
+			break;
+		end;
+	end;
+
+end;
+
+--------------------------------------------------------------------------------
+
+function DefendConvoys ()
+	
+	StartThread (AlliedReconnaissance)
+
+	-- Give some time to player to rearrange his troops after the first attack
+
+	Wait (30);
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedBoats&quot;, 1, ID_ALLIED_BOATS1);
+	Cmd (ACT_SWARM, ID_ALLIED_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBoats&quot;, 0, ID_GERMAN_BOATS1);
+	Cmd (ACT_MOVE, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	Wait (10);
+	Cmd (ACT_SWARM, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	GiveObjective (ID_OBJ_DEFEND_CONVOYS);
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedConvoy&quot;, 1, ID_ALLIED_CONVOY);
+	Cmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBoats&quot;, 0, ID_GERMAN_BOATS1);
+	Cmd (ACT_MOVE, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	Wait (10);
+	Cmd (ACT_SWARM, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedBoats&quot;, 1, ID_ALLIED_BOATS2);
+	Cmd (ACT_FOLLOW, ID_ALLIED_BOATS2, ID_ALLIED_CONVOY);
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBoats&quot;, 0, ID_GERMAN_BOATS2);
+	Cmd (ACT_MOVE, ID_GERMAN_BOATS2, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	Wait (10);
+	Cmd (ACT_SWARM, ID_GERMAN_BOATS2, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBoats&quot;, 0, ID_GERMAN_BOATS3);
+	Cmd (ACT_MOVE, ID_GERMAN_BOATS3, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	Wait (10);
+	Cmd (ACT_SWARM, ID_GERMAN_BOATS3, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+
+	while (1) do
+		Wait (5);
+		
+		-- Check if the convoy arrived at its destination point
+		if (GetNScriptUnitsInArea (ID_ALLIED_CONVOY, &quot;ConvoyTarget&quot;, false) &gt; 0) then
+			
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_CONVOY);
+			
+			Cmd (ACT_MOVE, ID_ALLIED_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_BOATS1);
+			
+			Cmd (ACT_MOVE, ID_ALLIED_BOATS2, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_BOATS2);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_BOATS1);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_BOATS2, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_BOATS1);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_BOATS3, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_BOATS1);
+			
+			break;
+			
+		else
+			-- Check if the convoy was destroyed
+			if (IsSomeBodyAlive (ID_ALLIES, ID_ALLIED_CONVOY)==0) then
+				Wait (5);
+				FailObjective (ID_OBJ_DEFEND_CONVOYS);
+				Wait (5);
+				Loose ();
+				return 0;
+			end;
+		end;
+		
+	end
+
+	Wait (30);
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;Area_CoastGuns&quot;));
+
+	Wait (30);
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedConvoy&quot;, 1, ID_ALLIED_CONVOY);
+	Cmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+
+	Wait (30);
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	Wait (30);
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+
+	Wait (30);
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+	
+	while (1) do
+		Wait (5);
+		
+		-- Check if the convoy arrived at its destination point
+		if (GetNScriptUnitsInArea (ID_ALLIED_CONVOY, &quot;ConvoyTarget&quot;, false) &gt; 0) then
+			
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_CONVOY);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_GAP);
+			break;
+			
+		else
+			-- Check if the convoy was destroyed
+			if (IsSomeBodyAlive (ID_ALLIES, ID_ALLIED_CONVOY)==0) then
+				Wait (5);
+				FailObjective (ID_OBJ_DEFEND_CONVOYS);
+				Wait (5);
+				Loose ();
+				return 0;
+			end;
+		end;
+		
+	end	
+
+	Wait (20);
+
+	StartThread (LandingParty2)
+
+	Wait (40);
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedConvoy&quot;, 1, ID_ALLIED_CONVOY);
+	Cmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+	QCmd (ACT_MOVE, ID_ALLIED_CONVOY, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanBoats&quot;, 0, ID_GERMAN_BOATS1);
+	Cmd (ACT_MOVE, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+	Wait (10);
+	Cmd (ACT_SWARM, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	LandReinforcementFromMap (ID_ALLIES, &quot;AlliedBoats&quot;, 1, ID_ALLIED_BOATS2);
+	Cmd (ACT_FOLLOW, ID_ALLIED_BOATS2, ID_ALLIED_CONVOY);
+
+	Wait (30);
+
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyWP1&quot;));
+
+	Wait (30);
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyWP2&quot;));
+
+	Wait (30);
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Wait(1)
+	LandReinforcementFromMap (ID_GERMANS, &quot;GermanGAP&quot;, 0, ID_GERMAN_GAP);
+	Cmd (ACT_SWARM, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+	
+	while (1) do
+		Wait (5);
+		
+		-- Check if the convoy arrived at its destination point
+		if (GetNScriptUnitsInArea (ID_ALLIED_CONVOY, &quot;ConvoyTarget&quot;, false) &gt; 0) then
+			
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_CONVOY);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_GAP, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_GAP);
+			
+			Cmd (ACT_MOVE, ID_GERMAN_BOATS1, 50, GetScriptAreaParams (&quot;GermanBoatsEscape&quot;));
+			QCmd (ACT_DISAPPEAR, ID_GERMAN_BOATS1);
+			
+			Cmd (ACT_MOVE, ID_ALLIED_BOATS1, 50, GetScriptAreaParams (&quot;ConvoyTarget&quot;));
+			QCmd (ACT_DISAPPEAR, ID_ALLIED_BOATS1);
+			
+			CompleteObjective (ID_OBJ_DEFEND_GUNS);
+			
+			Wait (20);
+			
+			break;
+			
+		else
+			-- Check if the convoy was destroyed
+			if (IsSomeBodyAlive (ID_ALLIES, ID_ALLIED_CONVOY)==0) then
+				Wait (5);
+				FailObjective (ID_OBJ_DEFEND_CONVOYS);
+				Wait (5);
+				Loose ();
+				return 0;
+			end;
+		end;
+		
+	end	
+
+	CompleteObjective (ID_OBJ_DEFEND_CONVOYS);
+	Wait (5);
+	Win (0);
+
+end;
+
+--------------------------------------------------------------------------------
+
+function DefendGuns ()
+
+	GiveObjective (ID_OBJ_DEFEND_GUNS);
+
+	-- Player needs some time to deploy his troops
+
+	Wait (35);
+
+	StartThread (AttackCoastGuns);
+	StartThread (CallOutAlliedFighters);
+
+	while (1) do
+		Wait (5);
+		
+		if (GetNUnitsInParty (ID_GERMANS)==0) then
+			StartThread (DefendConvoys);
+			break;
+		end;
+		
+		-- Check if the objective 0 (defend the guns) is failed
+		if (IsSomeBodyAlive (ID_PLAYER, ID_COAST_GUNS)==0) then
+			Wait (5);
+			FailObjective (ID_OBJ_DEFEND_GUNS);
+			Wait (5);
+			Loose ();
+			return 0;
+		end;
+	end;
+
+	while (1) do
+		Wait (5);
+		
+		-- Check if the objective 0 (defend the guns) is failed
+		if (IsSomeBodyAlive (ID_PLAYER, ID_COAST_GUNS)==0) then
+			Wait (5);
+			FailObjective (ID_OBJ_DEFEND_GUNS);
+			Wait (5);
+			Loose ();
+			return 0;
+		end;
+	end;
+
+end;
+
+--------------------------------------------------------------------------------
+
+StartThread (DefendGuns);
+</ScriptText>
+</Script>

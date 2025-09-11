@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MechUnitRPGStats ObjectRecordID="166">
+	<KeyName>Opel Kadett</KeyName>
+	<ParentName/>
+	<StatsType>Mech</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments/>
+	<MaxHP>30</MaxHP>
+	<DamageLevels/>
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href=""/>
+	<IconTexture href=""/>
+	<LocalizedName href="name_text.xdb#xpointer(/Text)"/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_TRN_MILITARY_AUTO</DBtype>
+	<M1UnitTargetType href=""/>
+	<M1UnitSpecific href=""/>
+	<M1UnitActions href=""/>
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescription href=""/>
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>1</AIPassabilityClass>
+	<AcksNames/>
+	<Sight>30</Sight>
+	<SightPower>1</SightPower>
+	<Speed>20</Speed>
+	<RotateSpeed>75.3</RotateSpeed>
+	<Passability>0</Passability>
+	<Priority>1</Priority>
+	<Camouflage>20</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>1</BoundTileRadius>
+	<Weight>740</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>-3.94418</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>15.5065</x>
+		<y>35.1193</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>0</Radius>
+		<IsRound>false</IsRound>
+	</BoundCircle>
+	<aabb_as/>
+	<aabb_ds/>
+	<animdescs/>
+	<SmallAABBCoeff>0.5</SmallAABBCoeff>
+	<Actions href="/other/unitactions/game/units/dummy/unitactions.xdb#xpointer(/UnitActions)"/>
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href=""/>
+	<ExpPrice>1</ExpPrice>
+	<UnitType>UNIT_TYPE_UNKNOWN</UnitType>
+	<platforms>
+		<Item>
+			<RecoilShakeAngle>0</RecoilShakeAngle>
+			<HorizontalRotationSpeed>60</HorizontalRotationSpeed>
+			<VerticalRotationSpeed>10</VerticalRotationSpeed>
+			<ModelPart>1</ModelPart>
+			<constraint>
+				<Min>-0.041713</Min>
+				<Max>0.045379</Max>
+			</constraint>
+			<constraintVertical>
+				<Min>0</Min>
+				<Max>0</Max>
+			</constraintVertical>
+			<GunCarriageParts>-1</GunCarriageParts>
+			<RotatePoint/>
+			<AIRotatePointPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</AIRotatePointPos>
+			<AttachedPlatformVisObj href=""/>
+			<AttachedPlatformLocator/>
+			<ParentPlatform>-1</ParentPlatform>
+			<guns/>
+		</Item>
+		<Item>
+			<RecoilShakeAngle>0</RecoilShakeAngle>
+			<HorizontalRotationSpeed>60</HorizontalRotationSpeed>
+			<VerticalRotationSpeed>10</VerticalRotationSpeed>
+			<ModelPart>-1</ModelPart>
+			<constraint>
+				<Min>0</Min>
+				<Max>0</Max>
+			</constraint>
+			<constraintVertical>
+				<Min>0</Min>
+				<Max>0</Max>
+			</constraintVertical>
+			<GunCarriageParts>-1</GunCarriageParts>
+			<RotatePoint/>
+			<AIRotatePointPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</AIRotatePointPos>
+			<AttachedPlatformVisObj href=""/>
+			<AttachedPlatformLocator/>
+			<ParentPlatform>-1</ParentPlatform>
+			<guns/>
+		</Item>
+	</platforms>
+	<slots/>
+	<armors>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+	</armors>
+	<TowingForce>0</TowingForce>
+	<Crew>1</Crew>
+	<Passangers>3</Passangers>
+	<TurnRadius>5</TurnRadius>
+	<exhaustPoints/>
+	<damagePoints/>
+	<peoplePointIndices/>
+	<FatalitySmokePoint>0</FatalitySmokePoint>
+	<ShootDustPoint>0</ShootDustPoint>
+	<TowPoint>
+		<x>0</x>
+		<y>0</y>
+	</TowPoint>
+	<EntrancePoint>
+		<x>-19</x>
+		<y>0</y>
+	</EntrancePoint>
+	<PeoplePoints>
+		<Item>
+			<x>0</x>
+			<y>0</y>
+		</Item>
+	</PeoplePoints>
+	<AmmoPoint>
+		<x>0</x>
+		<y>0</y>
+	</AmmoPoint>
+	<Gunners>
+		<Item>
+			<gunners/>
+		</Item>
+		<Item>
+			<gunners/>
+		</Item>
+		<Item>
+			<gunners/>
+		</Item>
+	</Gunners>
+	<HookPoint>
+		<x>0</x>
+		<y>0</y>
+	</HookPoint>
+	<FrontWheel>
+		<x>0</x>
+		<y>0</y>
+	</FrontWheel>
+	<BackWheel>
+		<x>0</x>
+		<y>0</y>
+	</BackWheel>
+	<EffectDiesel href=""/>
+	<EffectWheelDust href=""/>
+	<EffectWheelSplash href=""/>
+	<EffectSmoke href=""/>
+	<EffectFatality href=""/>
+	<SmokeTrails/>
+	<EffectShootDust href=""/>
+	<EffectEntrenching href=""/>
+	<EffectDisappear href=""/>
+	<jx>
+		<Period1>0.9</Period1>
+		<Period2>0.5</Period2>
+		<Amp1>1.1</Amp1>
+		<Amp2>0.8</Amp2>
+		<Phaze1>0.3</Phaze1>
+		<Phaze2>2.1</Phaze2>
+	</jx>
+	<jy>
+		<Period1>0.7</Period1>
+		<Period2>0.3</Period2>
+		<Amp1>0.8</Amp1>
+		<Amp2>0.4</Amp2>
+		<Phaze1>0.1</Phaze1>
+		<Phaze2>1.9</Phaze2>
+	</jy>
+	<jz>
+		<Period1>1</Period1>
+		<Period2>0.3</Period2>
+		<Amp1>1</Amp1>
+		<Amp2>0.6</Amp2>
+		<Phaze1>0</Phaze1>
+		<Phaze2>2.1</Phaze2>
+	</jz>
+	<LeavesTracks>true</LeavesTracks>
+	<TrackWidth>0.15</TrackWidth>
+	<TrackOffset>0.15</TrackOffset>
+	<TrackStart>0.2</TrackStart>
+	<TrackEnd>0.2</TrackEnd>
+	<TrackIntensity>0.7</TrackIntensity>
+	<TrackLifetime>10000</TrackLifetime>
+	<TrackFrequency>0.5</TrackFrequency>
+	<SoundMoveStart href=""/>
+	<SoundMoveCycle href=""/>
+	<SoundMoveStop href=""/>
+	<MaxHeight>500</MaxHeight>
+	<DivingAngle>20</DivingAngle>
+	<ClimbAngle>20</ClimbAngle>
+	<TiltAngle>30</TiltAngle>
+	<TiltRatio>2</TiltRatio>
+	<TiltAcceleration>180</TiltAcceleration>
+	<TiltSpeed>360</TiltSpeed>
+	<deathCraters href=""/>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<Fuel>1000</Fuel>
+	<AllowedPlaneManuvers/>
+	<AnimableModel href=""/>
+	<TransportableModel href=""/>
+	<ShipEffects>
+		<BoardSideEffect href=""/>
+		<BoardSideLocators/>
+		<RastrumEffect href=""/>
+		<RastrumLocators/>
+	</ShipEffects>
+	<BoardedMechUnitPosition/>
+	<DestructableCorpse>true</DestructableCorpse>
+	<InnerUnitBonus href=""/>
+</MechUnitRPGStats>

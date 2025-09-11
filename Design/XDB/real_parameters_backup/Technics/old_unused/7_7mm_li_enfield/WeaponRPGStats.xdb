@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WeaponRPGStats ObjectRecordID="111">
+	<KeyName>Li Enfield</KeyName>
+	<ParentName/>
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments/>
+	<WeaponType>WEAPON_RIFLE</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>1</Dispersion>
+	<AimingTime>1</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>3</Piercing>
+			<DamageRandom>3</DamageRandom>
+			<DamagePower>7</DamagePower>
+			<PiercingRandom>2</PiercingRandom>
+			<Area>0</Area>
+			<Area2>0</Area2>
+			<Speed>865</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0.2</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>15</FireRate>
+			<RelaxTime>0.5</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href="/weapons/infantry/rifle/6_5_mm_arisaka_sniper/weapon_visobj.xdb#xpointer(/VisObj)"/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

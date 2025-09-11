@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000937">
+	<Type>RT_ENGINEERING</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Ingineer_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="name.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/Ships/Transport_ship/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="name.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="/Reinforcements/DeployTemplate/Test/ship_distant_DeployTemplate.xdb#xpointer(/DeployTemplate)" />
+</Reinforcement>

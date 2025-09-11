@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="315">
+	<KeyName>75mmKwK40L70</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/Cannon_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>1.6</Dispersion>
+	<AimingTime>0.5</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>4</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>127</Piercing>
+			<DamageRandom>44</DamageRandom>
+			<DamagePower>88</DamagePower>
+			<PiercingRandom>18</PiercingRandom>
+			<Area>0.63</Area>
+			<Area2>2.53</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>1</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<TraceLength>400</TraceLength>
+			<TraceWidth>3.5</TraceWidth>
+			<TraceMaterial href="/Scene/TexAndMats/All/Units/Weapons/ATGun_shot_trace.xdb#xpointer(/Material)" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Weapons/Cannons/Shots/shot3_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Cannons/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Weapons/Cannons/Riccos_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Weapons/Cannons/Riccos_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Weapons/Cannons/Hits/Soft_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/medium.xdb#xpointer(/CraterSet)" />
+			<FireRate>31</FireRate>
+			<RelaxTime>1.94</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

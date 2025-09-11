@@ -1,0 +1,48 @@
+A:link {
+	FONT-SIZE: 14px; COLOR: #00008b; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:active {
+	FONT-SIZE: 14px; COLOR: #ff0000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:visited {
+	FONT-SIZE: 14px; COLOR: purple; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+A:hover {
+	FONT-SIZE: 14px; COLOR: #ff0000; FONT-STYLE: oblique; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H1 {
+	FONT-WEIGHT: 800; FONT-SIZE: 24px; COLOR: #3366ff; FONT-STYLE: normal; FONT-FAMILY: Georgia, "Times New Roman", Times, serif
+}
+H2 {
+	FONT-WEIGHT: 800; FONT-SIZE: 20px; COLOR: #fc2306; FONT-STYLE: normal; FONT-FAMILY: Georgia, "Times New Roman", Times, serif
+}
+H3 {
+	FONT-SIZE: 18px; COLOR: #0000cc; FONT-STYLE: normal; FONT-FAMILY: bolder
+}
+H4 {
+	FONT-SIZE: 14px; COLOR: white; FONT-STYLE: normal; FONT-FAMILY: bolder
+}
+TD {
+	FONT-SIZE: 13px; COLOR: black; FONT-STYLE: normal; FONT-FAMILY: "Times New Roman", Times, serif
+}
+BODY {
+	SCROLLBAR-FACE-COLOR: #fff3cc; SCROLLBAR-HIGHLIGHT-COLOR: #0000cc; SCROLLBAR-SHADOW-COLOR: #999999; SCROLLBAR-3DLIGHT-COLOR: #0000cc; SCROLLBAR-ARROW-COLOR: #0000cc; SCROLLBAR-TRACK-COLOR: #8b8b8b; SCROLLBAR-DARKSHADOW-COLOR: black; SCROLLBAR-BASE-COLOR: #fff3cc
+}
+TD.normal {
+	FONT-WEIGHT: bold; BACKGROUND: #000099; CURSOR: hand; COLOR: yellow
+}
+TD.selected {
+	FONT-WEIGHT: bold; BACKGROUND: #0066ff; CURSOR: hand; COLOR: white
+}
+A.menu:link {
+	FONT-SIZE: 12px; COLOR: yellow; FONT-FAMILY: "Times New Roman", Times, serif; TEXT-DECORATION: none
+}
+A.menu:active {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: "Times New Roman", Times, serif; TEXT-DECORATION: underline
+}
+A.menu:visited {
+	FONT-SIZE: 12px; COLOR: #00bfff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: none
+}
+A.menu:hover {
+	FONT-SIZE: 12px; COLOR: #ff0000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}

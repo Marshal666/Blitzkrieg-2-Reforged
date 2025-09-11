@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000104">
+	<FileName />
+	<ScriptText>-- Lake
+function Loose()    while 1 do        if ( GetNUnitsInParty(0) &lt; 1 and GetNUnitsInParty(3) &lt; 1 and GetReinforcementCallsLeft( 0 ) == 0 ) then			Win(1);			return 1;		end;	Wait(5);	end;end;
+function Loose1()    while 1 do		if (GetNUnitsInArea(1, &quot;Village1&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village1&quot;, 0) &lt; 1 and GetNUnitsInArea(3, &quot;Village1&quot;, 0) &lt; 1) then			FailObjective (0);
+			Wait(1);			Win(1);			return 1;		end;	Wait(5);	end;end;
+function Loose2()    while 1 do		if (GetNUnitsInArea(1, &quot;Village2&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village2&quot;, 0) &lt; 1 and GetNUnitsInArea(3, &quot;Village2&quot;, 0) &lt; 1) then			FailObjective (0);
+			Wait(1);			Win(1);			return 1;		end;	Wait(5);	end;end;
+function Attack()
+	for c = 1, 3 do		a = Random(2);
+		b = Random(2);
+		LandReinforcementFromMap ( 1, &quot;Attack1&quot;, 0, 100 );		Wait(2);		Cmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;A1&quot; .. a));		QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;Village1&quot;));
+		Wait(15);
+		LandReinforcementFromMap ( 1, &quot;Attack2&quot;, 0, 103 );		Wait(2);		Cmd( ACT_SWARM, 103, 50, GetScriptAreaParams (&quot;A1&quot; .. a));		QCmd( ACT_SWARM, 103, 50, GetScriptAreaParams (&quot;Village1&quot;));
+		Wait(100);
+		LandReinforcementFromMap ( 1, &quot;Attack1&quot;, 1, 101 );		Wait(2);		Cmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;A2&quot; .. b));		QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;Village2&quot;));		
+		Wait(15)		LandReinforcementFromMap ( 1, &quot;Attack2&quot;, 1, 104 );		Wait(2);		Cmd( ACT_SWARM, 104, 50, GetScriptAreaParams (&quot;A2&quot; .. b));		QCmd( ACT_SWARM, 104, 50, GetScriptAreaParams (&quot;Village2&quot;));
+		Wait(180+Random(100))
+	end;
+		StartThread( TheLastBattle);end;
+function TheLastBattle()
+		a = Random(2);
+		b = Random(2);
+		LandReinforcementFromMap ( 1, &quot;Attack11&quot;, 0, 200 );		Wait(2);		Cmd( ACT_SWARM, 200, 50, GetScriptAreaParams (&quot;A1&quot; .. a));		QCmd( ACT_SWARM, 200, 50, GetScriptAreaParams (&quot;Village1&quot;));
+		LandReinforcementFromMap ( 1, &quot;Attack11&quot;, 1, 201 );		Wait(2);		Cmd( ACT_SWARM, 201, 50, GetScriptAreaParams (&quot;A2&quot; .. b));		QCmd( ACT_SWARM, 201, 50, GetScriptAreaParams (&quot;Village2&quot;));
+		StartThread( Winner);		
+		Wait(180);
+		Win(0);
+end;
+function Winner()
+	while 1 do
+		if GetNUnitsInScriptGroup( 200, 1 ) &lt; 1 and GetNUnitsInScriptGroup( 201, 1 ) &lt; 1 then
+		Win(0);
+		end;
+		Wait(3);
+	end;
+end;
+function AttackGap1()
+Wait(100+Random(500))
+--	if GetNUnitsInArea(1, &quot;Village1&quot;, 0) &gt; 0 then
+		LandReinforcementFromMap ( 1, &quot;Gap&quot;, 0, 1000 );
+		Wait(1);
+		Cmd( ACT_SWARM, 1000, 50, GetScriptAreaParams (&quot;Village1&quot;));
+--	end;
+end;
+function AttackGap2()
+Wait(100+Random(500))
+--	if GetNUnitsInArea(1, &quot;Village2&quot;, 0) &gt; 0 then
+		LandReinforcementFromMap ( 1, &quot;Gap&quot;, 1, 1001 );
+		Wait(1);
+		Cmd( ACT_SWARM, 1001, 50, GetScriptAreaParams (&quot;Village2&quot;));
+--	end;
+end;
+function Train()
+	while 1 do
+		if GetNUnitsInArea(1, &quot;Village1&quot;, 0) &gt; 0 then
+			Cmd(0, 900, 50, GetScriptAreaParams (&quot;T1&quot;));
+		end;
+		if GetNUnitsInArea(1, &quot;Village2&quot;, 0) &gt; 0 then
+			Cmd(0, 900, 50, GetScriptAreaParams (&quot;T2&quot;));
+		end;
+		Wait(5);
+	end;
+end;
+function Reinf()
+	while 1 do
+		for k = 1, 6 do
+			if GetNUnitsInScriptGroup(k, 3 ) &lt; 1 then
+				LandReinforcementFromMap ( 3, &quot;Vzvod&quot;, 0, k );
+				Wait(1);
+				ke = k+10;
+				Cmd( ACT_SWARM, k, 50, GetScriptAreaParams (&quot;P2&quot;));	
+				QCmd( ACT_ENTER, k, ke);		
+			end;
+		end;
+		Wait(3);
+	end;
+end;
+function Reinf1()
+	while 1 do
+		for k1 = 7, 10 do
+			if GetNUnitsInScriptGroup(k1, 3 ) &lt; 1 then
+				LandReinforcementFromMap ( 3, &quot;Vzvod&quot;, 1, k1 );
+				Wait(1);
+				ke1 = k1+10;
+				Cmd( ACT_SWARM, k1, 50, GetScriptAreaParams (&quot;P1&quot;));	
+				QCmd( ACT_ENTER, k1, ke1);		
+			end;
+		end;
+		Wait(3);
+	end;
+end;
+---------------------------------
+Wait(1);
+GiveObjective( 0 );
+Wait( 2 )
+GiveObjective( 1 );
+StartThread( Loose);
+StartThread( Loose1);
+StartThread( Loose2);
+StartThread( Train);
+StartThread( Reinf);
+StartThread( Reinf1);
+Wait(10);
+StartThread( Attack);
+--StartThread( AttackGap1);
+--StartThread( AttackGap2);</ScriptText>
+</Script>

@@ -1,0 +1,636 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<meta name="generator" content="Fog Creek CityDesk 2.0.3" />
+<meta name="citydesk" content="310F8F6F/165" />
+<title>Combat_system_B1</title>
+</head>
+<body bgcolor="#ebebeb" text="#000000"><SPAN 
+style="WIDTH: 100%; HEIGHT: 54px; BACKGROUND-COLOR: #ebebeb"><FONT size=6>
+<P align=left><SPAN></SPAN><SPAN></P>
+<P align=center><IMG height=85 alt="" 
+src="../../../blitz2.jpg" width=1261 border=0></P></SPAN></FONT></SPAN><P><SPAN 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 1ex; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 1ex; FLOAT: left; PADDING-BOTTOM: 5%; PADDING-TOP: 1ex">
+
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Appendix/Policy/HowToUse.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Home</SPAN></B></SPAN></B></SPAN></B></SPAN></B></A></SPAN></B></SPAN></B></SPAN></B></SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../News.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">News</SPAN></SPAN></A></SPAN></SPAN></P><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Introduction/Vision.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Vision</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><A 
+href="../../../../Articles/Appendix/Features/Features.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Feature 
+list</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_design.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Hardware 
+requirements</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../Game_cycle.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+cycle</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Introduction/Comparison_with_another_m.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">RTS 
+Comparison</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Campaigning_phases.html"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns 
+phases</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Player_army_reinforcement.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Army 
+development</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Experience_Mission_awards.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Experience 
+&amp; Awards</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Learning_curve.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Learning 
+curve</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tactical 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Units/Units.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Unit 
+types</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Singleplayer/Units/Special_Abilities.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Special 
+abilities</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Combat_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Combat 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Leaders/Leaders.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Leaders</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Objects/Interective_objects/Buildings/Key_Buildings.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+buildings</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Missions/Campaigns/Mission_Spec.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/German/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Germany</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/Russian/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USSR</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/US/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USA</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/GB/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Great 
+Britain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Missions/Alpha/Alpha_mission.html">Alpha_mission</A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Multiplayer/Multiplayer.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Multiplayer</SPAN></B></A></SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+modes</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Nival 
+.Net</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Multiplayer/Alpha/Alpha_mission_Deathmatch.html">Alpha-mission 
+(Deathmatch</A>)</SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Articles/Singleplayer/Art/Art_Navigation.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics</SPAN></SPAN></B></SPAN></SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/General_style.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">General 
+style</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/Terrains/Terrains_and_seasons.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Seasons 
+&amp; terrain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/Effects/Effects.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Effects</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/FMV/FMV.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Movies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Sound</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Sound/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Sound/Music_concept/Music.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Music</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Singleplayer/Sound/Sound_concept/SoundEffects.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">SFX</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Interface</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Mission_interface.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Mission 
+</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Intermission</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Main_Menu.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Main 
+menu</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Options</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Multiplayer/Matchmaking.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Match 
+making</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Technical_design/Technical_design.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tech</SPAN><SPAN 
+style="FONT-FAMILY: 'Lucida Sans Unicode'">. </SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">design</SPAN></SPAN></B></A></SPAN></SPAN></B><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_specifications/Expected_performance_and_.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Performance</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_specifications/Graphics_engine/Graphics_technology_for_p.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/AI.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">AI 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/UI_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">UI 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Resource_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Resource 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Tools/Game_editor.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Map/Resource 
+editor</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Tools/ELK.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">ELK</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Middleware/Required_middleware.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Middleware</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Under_construction.html">
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Assets</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Units</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Buildings</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Objects</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Under_construction.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Management</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="J:\Manage\A10_Milestones.doc"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Milestones</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Plans/Plans.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Plans</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Appendix/Policy/Policy.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Policies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../Site_map.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Site 
+map</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><A 
+href="file:///\\store2k\a10root\Design\Design\Des_Doc_Site_English\index.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Switch 
+to English</SPAN></A><o:p></o:p></P>
+<P>&nbsp;</P>
+</SPAN></P><SPAN 
+style="PADDING-LEFT: 3em; FLOAT: left">
+<P><EM>By <A href="mailto:alexander.valencia-campo@nival.com">Alexander Valencia</a></EM> <BR><EM> 13 &#1084;&#1072;&#1103;&nbsp; 2003</EM> </FONT></P> 
+<P><STRONG><FONT size=5><CENTER>Combat_system_B1</CENTER></FONT> </STRONG>
+<P></P>
+<P><H1 style="MARGIN: 12pt 0cm 3pt; TEXT-ALIGN: center" align=center><SPAN style="FONT-SIZE: 18pt; FONT-FAMILY: Arial">Комбатная система.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></H1>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система передвижения:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Все мобильные юниты по типу ходовой части делятся на 4 типа проходимости. </SPAN><SPAN lang=EN-US>Human, Wheel, Halftrack, Track</SPAN><SPAN style="mso-ansi-language: RU">. Каждый тайлсет террейна имеет четыре флага которые указывают может ли соответствующий тип юнита в принципе передвигаться по этому тайлсету. Текущая скорость юнита UnitCurrentSpeed = fUnitSpeed * ( fMapPass + ( 1 - fMapPass ) * fUnitPass ). Где: <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">fMapPass параметр в пространстве [0; 1] – прописывается в тайлсете, имеет смысл качества поверхности, на сколько удобно по этому тайлсету двигаться (чем ближе к 1 тем ближе скорость к максимальной). fMapPass </SPAN><SPAN lang=EN-US style="FONT-FAMILY: 'Lucida Sans Unicode'">=</SPAN><SPAN style="mso-ansi-language: RU"> Terrains-&gt;Passability_coefficient.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">fUnitPass параметр в пространстве [-1; 1] – прописывается в юните, имееет смысл качества ходовой части, на сколько хорошо юнит борется с бездорожьем (чем меньше значение тем сильнее влияет на<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>скорость юнита коэффициент fMapPass). fUnitPass </SPAN><SPAN lang=EN-US style="FONT-FAMILY: 'Lucida Sans Unicode'">=</SPAN><SPAN style="mso-ansi-language: RU"> Basic_info-&gt;Passability.</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Артиллерия которая не способна передвигаться при помощи расчета передвигается грузовиками. При этом учитывается тяговое усилие грузовика Basic_info-&gt;Pulling_power и вес артиллерии Basic_info-&gt;Weight. На подцепление артиллерии к грузовику и отцепление тратится время Basic-&gt;Unistall_transport_time. На подготовку артиллерии к перемещению силами расчета и обратную операцию тратится время Basic-&gt;Unistall_rotate_time, это же время тратится и для подготовки артиллерии к повороту на месте.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Скорость разворота является константой и не зависит от внешних условий.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Радиус поворота используется только для авиации.<o:p></o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система обнаружения: <o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Дальность обнаружения противника определяется тремя конкурирующими параметрами. Basic-&gt;Sight – радиус в АИ тайлах максимальной зоны обнаружения юнитов и приравненных к ним обектов (окопы, дзоты). Если объект находится в этом радиусе то проверяется камуфляж объекта – Basic-&gt;Camouflage относительно силы зрения наблюдателя – Basic-&gt;Sight_power <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">fMinTileCoeff &lt;= fUnitCamouflage * tileVis / MAX_VIS_POWER - тогда юнит виден <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">fMinTileCoeff = max( fUnitSightPower * fLen / fR ), max по юнитам, видящим тайл, fLen - расстояние от юнита до тайла, fR - его радиус видимости.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Камуфляж перестает действовать в случае совершения активных действий (стрельба, перемещение, поворот на месте). К активным действиям не относится точное наведение ствола пушки или вращение башни танка.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Снайперский камуфляж обрабатывается особым образом. Он не снимается при активных действиях. При стрельбе заводится «градусник» раскрытости снайпера который увеличивается от каждого выстрела, уменьшается от времени. При смене позиции на определенную дистанцию «градусник» сбрасывается. Каждый выстрел снайпера кидается случайное число, если оно меньше значения градусника то камуфляж со снайпера снимается.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Если юнит который ведет огонь по наблюдателю находится за радиусом Basic-&gt;Sight наблюдателя то каждые 1.2 секунды для него кидается присущая его типу вероятность consts.xml-&gt;base-&gt;AI-&gt;RevealInfo-&gt;”type”-&gt;Query быть обнаруженным. Юнит может снова скрыть отехав на расстояние consts.xml-&gt;base-&gt;AI-&gt;RevealInfo-&gt;”type”-&gt;Distance или прекратив стрельбу через время .xml-&gt;base-&gt;AI-&gt;RevealInfo-&gt;”type”-&gt;Tiem. В Блицкриге практически не заметно из того, что радиусы зрения и стрельбы у большинства юнитов совпадают.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Специальные дымовые снаряды могут перекрывать видимость в зоне разрыва. Параметр </SPAN><SPAN lang=EN-US>Weapon-&gt;Shell-&gt;Shell_type = smoke </SPAN><SPAN style="mso-ansi-language: RU">определяет тип снаряда. </SPAN><SPAN lang=EN-US>Weapon-&gt;Shell-&gt;</SPAN><SPAN style="mso-ansi-language: RU">Damage_area<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>- радиус задымления в тайлах. </SPAN><SPAN lang=EN-US>Weapon-&gt;Shell-&gt;</SPAN><SPAN style="mso-ansi-language: RU">Piercing_power – прозрачность в целых числах от 0 до 7. </SPAN><SPAN lang=EN-US>Weapon-&gt;Shell-&gt;</SPAN><SPAN style="mso-ansi-language: RU">Damage_power – время существования в ms.<o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 3pt 27pt"><SPAN style="FONT-FAMILY: Arial">Система звукового обнаружения:<o:p></o:p></SPAN></H3>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Weapon-&gt;Reveal_radius – расстояние на котором должны находится юниты противника что-бы получить оповещение о выстреле (круги на минимапе). Имеет смысл громкости выстрела орудия.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система поражения:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU">Чтобы нанести поражение необходимо:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 18pt; TEXT-INDENT: 18pt"><SPAN style="mso-ansi-language: RU">Осуществить грубое наведение в сторону цели по средством поворота базы и/или поворота башни. Влияющие параметры: Basic_info-&gt;Rotate_speed,<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Basic_info-&gt;Platforms-&gt;Turret-&gt;Vertical_rotation_speed, Basic_info-&gt;Platforms-&gt;Turret-&gt;Horizontal_rotation_speed. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 18pt; TEXT-INDENT: 18pt"><SPAN style="mso-ansi-language: RU">Осуществить точное наведение. Влияющие параметры: Weapon-&gt;Aiming_time.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 18pt; TEXT-INDENT: 18pt"><SPAN style="mso-ansi-language: RU">Произвести выстрел. В момент выстрела происходит вычисление конечной точки попадания на террейне. Точка попадания является случайной координатой в радиусе определяемом Wepon-&gt;Dispersion от точки прицеливания. Точка прицеливания для танков - центр, для объектов - ближайший залоканый тайл. После того как выстрел произведен отсчитывается время полета снаряда до цели, которое определяется параметром Weapon-&gt;Shell-&gt;Speed. Что бы попасть в цель необходимо, что бы точка попадания оказалась на залоканом тайле. Из залоканого тайла вычисляется объкт по которому осуществлено попадание. Следует учитывать, что за время полета снаряда подвижный объект может сменить положение на карте. После того, как было осуществлено попадание по залоканому тайлу, проверяется попадание снаряда по силуэту объекта. Силуэт объекта<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>анизотропен (в Б2 лучше разбить по направлениям)– Basic_info-&gt;Silhouette – и является вероятностной величиной в промежутке [0:1], имеющей смысл отношения площади силуэта объекта к площади очерчивающего прямоугольника. Если осуществилось попадание по силуэту проверяется пробитие брони. Пробивающая способность определяется двумя параметрами пробития – средним и отклонением, Current_Piercing = Weapon-&gt;Shell-&gt;Piercing_</SPAN><SPAN lang=EN-US>power</SPAN><SPAN lang=EN-US style="mso-fareast-language: RU"> +RND(-</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman CYR'; mso-ansi-language: RU; mso-fareast-language: RU">Weapon-&gt;Shell-&gt;Random_Piercing</SPAN><SPAN lang=EN-US style="mso-fareast-language: RU"> ; +</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman CYR'; mso-ansi-language: RU; mso-fareast-language: RU">Weapon-&gt;Shell-&gt;Random_Piercing</SPAN><SPAN lang=EN-US style="mso-fareast-language: RU">)</SPAN><SPAN style="FONT-FAMILY: 'Times New Roman CYR'; mso-ansi-language: RU; mso-fareast-language: RU">. </SPAN><SPAN style="mso-ansi-language: RU">Броня (Current_Armor) определяется случайным числом находящимся в промежутке [Unit-&gt;Defences-&gt;”Side”-&gt;Min_armor ; Unit-&gt;Defences-&gt;”Side”-&gt;Max_armor]. Пробитие брони осуществляется если Current_Piercing &gt; Current_Armor.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU">Если цель не менялась (в том числе не изменялось положение цели и стреляющего друг относительно друга), следующий выстрел произойдет через время перезарядки – Weapon-&gt;Shell-&gt;Relax_time. Для оружия стреляющего очередями этот параметр задает время между очередями. Время между выстрелами в очереди определяется Weapon-&gt;Shell-&gt;Rate_of_fire. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Игрок может предпринять дополнительные меры по усилению живучести. Для техники – окапывание. Снижает параметр силуэт путем умножения Basic_info-&gt;Silhouette * consts.xml-&gt;base-&gt;ai-&gt;common-&gt;TankPitCover. Для пехоты – силуэт снижается залеганием.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">При встрече снаряда с объектом (актуально для здание, юнит – у остальных объектов броня одинаковая со всех сторон) учитывается с кокой стороны произошло попадание. При этом объект моделируется описывающим параллелограммом. Бронирование объекта имеет в общем случае разные значения брони по разным сторонам параллелограмма.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Снаряд может быть выстрелен по разным траекториям. При этом возможность выстрелить по определенной траектории определяется наличием в Weapon-&gt;Shell-&gt;</SPAN><SPAN lang=EN-US>Trajectory_type снаряда с </SPAN><SPAN style="mso-ansi-language: RU">соответствующей траекторией.</SPAN> </P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Weapon-&gt;Shell-&gt;</SPAN><SPAN lang=EN-US>Trajectory_type</SPAN><SPAN style="mso-ansi-language: RU"> = :<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">line</SPAN><SPAN lang=EN-US> – </SPAN><SPAN style="mso-ansi-language: RU">снаряд</SPAN> <SPAN style="mso-ansi-language: RU">приходит в одну из четырех горизонтальных сторон. Вертикальной наводки не требуется (Basic_info-&gt;Platforms-&gt;Turret-&gt;Vertical_rotation_speed). Траектория прямая.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN lang=EN-US>cannon – </SPAN><SPAN style="mso-ansi-language: RU">снаряд</SPAN> <SPAN style="mso-ansi-language: RU">приходит в одну из четырех горизонтальных сторон. Вертикальная наводка требуется. Траектория навесная пологая.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN lang=EN-US>howitzer – </SPAN><SPAN style="mso-ansi-language: RU">снаряд приходит в верхнюю плоскость. Вертикальная наводка требуется. Траектория навесная крутая.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN lang=EN-US>bomb - </SPAN><SPAN style="mso-ansi-language: RU">снаряд приходит в верхнюю плоскость</SPAN><SPAN lang=EN-US>. </SPAN><SPAN style="mso-ansi-language: RU">Вертикальной наводки не требуется. Траектория бомбы.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN lang=EN-US>rocket - </SPAN><SPAN style="mso-ansi-language: RU">снаряд приходит в верхнюю плоскость. Вертикальная наводка требуется. Траектория навесная пологая. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN lang=EN-US>grenade - </SPAN><SPAN style="mso-ansi-language: RU">снаряд</SPAN> <SPAN style="mso-ansi-language: RU">приходит в одну из четырех горизонтальных сторон. Вертикальная наводка требуется. Траектория навесная крутая.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times New Roman'; mso-ansi-language: RU; mso-fareast-language: RU; mso-fareast-font-family: 'Times New Roman'; mso-bidi-language: AR-SA">При стрельбе прямой наводкой (в зоне прямой видимости) стрельба происходит только по траектории line. </SPAN>При стрельбе по траекториям cannon и howitzer особое значение имеет параметр Wepon-&gt;Dispersion. Для большей реалистичности создается элипс рассеивания параметры которого определяются </SPAN><SPAN lang=EN-US>consts.xml-&gt;Base-&gt;AI-&gt;Artillery-&gt;DispersionRatio </SPAN><SPAN style="mso-ansi-language: RU">для</SPAN> <SPAN style="mso-ansi-language: RU">каждого из типов траекторий.<o:p></o:p></SPAN></P>
+<H3 style="MARGIN: 12pt 0cm 3pt 27pt"><SPAN style="FONT-FAMILY: Arial">Area damage:<o:p></o:p></SPAN></H3>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Каждый снаряд имеет два параметра. Weapon-&gt;Shell-&gt;Damage_area – радиус действия по лежащим солдатам и объектам. Weapon-&gt;Shell-&gt;Damage_area_2 – радиус действия по стоящим солдатам (разлет мелких осколков). <o:p></o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Для юнитов.<o:p></o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Weapon-&gt;Shell-&gt;Damage_area проходит через броню, величина которой по направлению к взрыву после бросания рандома не больше, чем SConsts::ARMOR_FOR_AREA_DAMAGE<o:p></o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Weapon-&gt;Shell-&gt;Damage_area_2 проходит только по стоящим солдатам.<o:p></o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Для объектов.<o:p></o:p></P>
+<P class=MsoPlainText style="MARGIN: 0cm 0cm 0pt">Weapon-&gt;Shell-&gt;Damage_area_2 проходит по всем объектам, кроме зданий. Величина брони по направлению к взрыву после бросания рандома должная быть не больше, чем SConsts::ARMOR_FOR_AREA_DAMAGE<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система повреждения:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Все объекты (юниты, деревья, здания) имеют хиты – максимальные и текущие. При поражении объекта из его текущего значения хитов вычитается случайное число вычисляющееся по формуле damage = weapon.average_damage + RANDOM(weapon.rnd.damage). Данные для вычислений прописанны в оружии которое нанесло поражение. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">После падения текущих хитов ниже нуля объект считается уничтоженным. Для некоторых объектов (здания, юниты) существуют способы восстановления текущих хитов до максимального уровня (ремонт, лечение). Колличество необходимых ресурсов для восстановления одного хита определяется Basic_info-&gt;Repair_cost. Виды смерти (анимации) юнита зависят от количества смертельных повреждений. Например у танка почти гарантировано отрывает башню, что имитирует детонацию боекомплекта, при условии что <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">if ( Random( 0.0f, 1.0f ) &lt; SConsts::FATALITY_PROBABILITY || <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">fDamage / fMaxHP &gt;SConsts::DAMAGE_FOR_MASSIVE_DAMAGE_FATALITY &amp;&amp; <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Random( 0.0f, 0.1f ) &lt; SConsts::MASSIVE_DAMAGE_FATALITY_PROBABILITY )<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Специальные виды повреждений</SPAN></B><SPAN style="mso-ansi-language: RU">:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Некоторые юниты могут быть иммобилизованы, что имитирует разрыв гусеницы или повреждение ходовой части. Для этого в оружии прописывается специальный параметр – weapon-&gt;shell-&gt;chance_to_break_track. Параметр имеет вероятностный смысл. Если он равен единице то при поражении (с учетом необходимости пробития брони) юнит всегда иммобилизуется, если нулю то это оружие в принципе не способно повредить ходовую. В Блицкриге используется только в гранатах. В текущей версии используется только флаг Weapon-&gt;Shell-&gt;Track_damage_flag который выполняет роль краевых значений 0;1.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><SPAN style="mso-ansi-language: RU"><EM><FONT face=Arial>Система контейнеров<o:p></o:p></FONT></EM></SPAN></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Пехота может заходить внутрь зданий, окопов, грузовиков, и садится на танки.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">В зданиях (окопы считаются зданием) пехота распределяется по стрелковым ячейкам, медицинским ячейкам Basic_info-&gt;Number_of_medical_slots , и запасным ячейкам Basic_info-&gt;Number_of_rest_slots. Из стрелковых ячеек пехота может отстреливаться из личного оружия или предустановленного в ячейке - Shoot_slots-&gt;Shoot_point-&gt;Build_in_weapon. Стрелковая ячейка определяет направление - Shoot_slots-&gt;Shoot_point-&gt;Direction, угол обзора - Shoot_slots-&gt;Shoot_point-&gt;Angle, увеличение дальности зрения связанного с высотой расположения стрелковой ячейки - Shoot_slots-&gt;Shoot_point-&gt;Sight_multiplier, укрытие - Shoot_slots-&gt;Shoot_point-&gt;Cover – является мультипликативным коэффициентом к константе – consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt;DefaultFireplaceCoverage, действует так же как силуэт юнитов описанный в разделе система поражения (для окопов Shoot_slots-&gt;Shoot_point-&gt;Silhouette). Shoot_slots-&gt;Shoot_point-&gt;Ammo определяет запас боеприпасов для предустановленного в ячейке оружия. Shoot_slots-&gt;Shoot_point-&gt;Rotation_speed - скорость разворота предустановленного оружия. Shoot_slots-&gt;Shoot_point-&gt;Priority – определяет важность оружия для данного здания в задаче целераспределения и будут ли параметры данного оружия показаны в интерфейсе. 1 – означает самый высокий приоритет и параметры именно этого оружия будут показаны в интерфейсе. В здании должно быть не больше одного оружия с приоритетом 1. В противном случае будет использовано первое попавшееся, порядок не гарантирован.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Медицинские ячейки осуществляют лечение пехоты со скоростью consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt;CureSpeedInBuilding.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Если здание свободно от вражеской пехоты то распределение пехоты по ячейкам происходит следующим образом:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">В здании пехоту требуется размещать таким образом, чтобы обеспечить круговой обзор. Поэтому для каждой стороны здания (предполагается, что их 4) выбираются три специальных fireplace. Первый — наиболее центральный, второй — наиболее близкий к 1/3 длины стороны, третий — наиболее близкий к 2/3 длины стороны.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Если здание не обстреливается.<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Сначала сажается пехотинец в ячейку с предустановленной пушкой максимального приоритета Shoot_slots-&gt;Shoot_point-&gt;Priority. Если в здании не больше, чем 4 пехотинца, то они сажаются в центральные специальные Shoot_slots-&gt;Shoot_point сторон. Если их меньше, чем 4, то они постоянно бегают по центарльным специальным Shoot_slots-&gt;Shoot_point, чтобы обеспечить круговой обзор. Если их больше, чем 4, но меньше, чем 8, то они распределяются так: в часть сторон — два крайних специальных Shoot_slots-&gt;Shoot_point, остальные стороны — центральные. И они также постоянно бегают по сторонам, чтобы был круговой обзор. Если же их не меньше, чем 8, то обязательно какие-то 8 сидят в боковых специальных Shoot_slots-&gt;Shoot_point каждой стороны.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">В medical slots сажают самых больных. Как только они выздоравливают, туда сажают других самых больных. Сидение в medical slots приоритетнее, чем бегание в специальным Shoot_slots-&gt;Shoot_point.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">В rest slots сидят те, кто не влез в Shoot_point и medical slots.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Если здание обстреливается.<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Все солдаты в нём заводятся и заполняют Shoot_point. Причём, если есть свободные Shoot_point, то солдаты забираются из medical slots. Солдаты рандомно бегают по Shoot_point и пытаются стрелять из них.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Поражения пехоты внутри здания<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Стрелять по солдату в fireplace можно только из угла обзора fireplace.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Поражения пехоты внутри здания при попадании в здание&nbsp; снаряда возможно только area damage.</SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Вероятность убийства солдата = &lt;damage снаряда&gt;/&lt;максимальные HP здания&gt;. Пробегаем по всем солдатам внутри и кидаем вероятность жив или мёртв.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Если HP здания после попадания снаряда становятся меньше, чем fMaxHP* HPPercentToEscapeFromBuilding (consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt;HPPercentToEscapeFromBuilding), то солдаты из него выбегают до кидания random на выживание. Если здание убито, то все в нём умирают.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Штурм здания<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Здание занятое противником можно штурмовать. При этом солдаты штурмующего взвода, по мере забегания во вход здания, накапливаются в промежуточном буфере. Накопление в буфере регулируется временем отсчитываемом от начала забегания первого солдата consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt;CampingTime. По истечении этого промежутка времени, вне зависимости от того все ли солдаты взвода вошли в буфер, начинается штурм.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Как только начался штурм взвод забежавший внутрь здания, начинает воевать с защищающими здание. При это ни те, не другие ничего снаружи здания не видят. Бой внутри происходит так:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">С периодом consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt; InsideObjCombatPeriod берутся два произвольных солдата с атакующей и защищающийся сторон. Потом каждый делает по очереди из нулевого оружия с радиусом разброса пуль DispersionOfGun()*InsideObjWeaponFactor (consts.xml-&gt;base-&gt;Ai-&gt;Buildings-&gt; InsideObjWeaponFactor). InsideObjWeaponFactor имеет смысл среднестатистической дистанции ведения боя внутри помещения.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><B style="mso-bidi-font-weight: normal"><SPAN style="mso-ansi-language: RU">Поражение пехоты на броне<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Солдаты рассаживаются на броне поровну с каждой стороны. Они считаются сидящими в fireplaces без камуфляжа, но сами стрелять не могут.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"></o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система боепитания:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Юниты имеющие оружие, имеют ассоциированный с оружием параметр Platforms-&gt;Base-&gt;Gun-&gt;Ammo_count или эквивалентный Platforms-&gt;Turret-&gt;Gun-&gt;Ammo_count. Ammo_count<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>указывает количество выстрелов которое можно сделать из данного оружия без до зарядки. Количество ресурсов которые необходимо потратить на загрузку одного снаряда определяется параметром Platforms-&gt;Base-&gt;Gun-&gt;Reload_coast. Дозаправка боекомплекта осуществляется грузовичками снабжения.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Время присутствия самолетов на карте ограничено «по топливу».<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><SPAN style="FONT-FAMILY: Arial">Система формаций:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Пехотные взводы могут быть построены в формации. В блицкриге максимум 4. Формация дает следующие преимущества отдельным пехотным юнитам в нее входящим. Параметры определяющие преимущества являются мультипликативными коэффициентами. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Speed_bonus – скорость движения,<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Dispersion_bonus – точность стрельбы,<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Fire_rate_bonus – скорострельность в очереди,<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Relax_time_bonus – скорость перезарядки,<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Cover_bonus – уменьшение силуэта,<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Squad-&gt;Formations-&gt;Sight_bonus – увеличение зрения.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Взводы могут быть расформированы для возможности управления каждым солдатом в отдельности, а затем собраны снова в единую по управлению боевую единицу (солдат всегда знает свой взвод). <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU"><o:p>&nbsp;</o:p></SPAN></P>
+<H2 style="MARGIN: auto 0cm"><EM><SPAN style="FONT-FAMILY: Arial">Система повышения квалификации:<o:p></o:p></SPAN></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Юниты приобретают опыт при уничтожении других юнитов. Количество приобретаемого опыта зависит от типа уничтоженного юнита и прописывается в файле </SPAN><SPAN lang=EN-US>AIPrices.xml в </SPAN><SPAN style="mso-ansi-language: RU">таблице Prices.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">Характеристики юнитов растут скачкообразно и определяются уровнем достигнутым юнитом. Уровней – четыре. Первый уровень – стартовый. Количество опыта который необходим для достижения следующего уровня зависит от типа юнита и прописано в том же файле (</SPAN><SPAN lang=EN-US>AIPrices.xml</SPAN><SPAN style="mso-ansi-language: RU">) в разделе </SPAN><SPAN lang=EN-US>ExpLevels.</SPAN><SPAN style="mso-ansi-language: RU"> <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-INDENT: 27pt"><SPAN style="mso-ansi-language: RU">От уровня юнита зависят (мультипликативный коэффициент) следующие параметры:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusSpeed – увеличивает параметр Basic_Info-&gt;Speed<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusRelaxTime – уменьшает параметр Weapon-&gt;Shell-&gt;Relax_time<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusDispersion – уменьшает параметр Wepon-&gt;Dispersion<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusSight – увеличивает параметр Basic_Info-&gt;Sight<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusFireRange – увеличивает параметр Weapon-&gt;Range_max<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 54pt; TEXT-INDENT: -9pt"><SPAN style="mso-ansi-language: RU">BonusRotate – увеличивает параметр Basic_Info-&gt;Rotate_speed</SPAN></P></P>
+<P><FONT size=2> <EM></EM>  
+</FONT></P></SPAN></body>
+</html>

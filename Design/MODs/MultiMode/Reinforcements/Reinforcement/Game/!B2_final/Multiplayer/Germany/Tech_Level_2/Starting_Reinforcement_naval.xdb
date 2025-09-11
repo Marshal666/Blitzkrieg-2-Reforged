@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000946">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/Ships/Transport_ship/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/opel_blitz_engineering/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/5_cm_PaK38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/5_cm_PaK38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="/Reinforcements/DeployTemplate/Test/Naval_Start_DeployTemplate.xdb#xpointer(/DeployTemplate)" />
+</Reinforcement>

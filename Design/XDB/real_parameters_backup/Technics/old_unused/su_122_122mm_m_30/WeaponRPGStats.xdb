@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="176">
+	<KeyName>SU-122 (122mm M-30)</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>23.4</Dispersion>
+	<AimingTime>1</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>177</RangeMax>
+	<RangeMin>4</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>177</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>100</Piercing>
+			<DamageRandom>80</DamageRandom>
+			<DamagePower>160</DamagePower>
+			<PiercingRandom>20</PiercingRandom>
+			<Area>2.26</Area>
+			<Area2>4.53</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>19</FireRate>
+			<RelaxTime>3.15</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>18</Piercing>
+			<DamageRandom>80</DamageRandom>
+			<DamagePower>160</DamagePower>
+			<PiercingRandom>8</PiercingRandom>
+			<Area>2.26</Area>
+			<Area2>4.53</Area2>
+			<Speed>80</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>12.1</FireRate>
+			<RelaxTime>4.94</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_MORALE</DamageType>
+			<Piercing>0</Piercing>
+			<DamageRandom>10</DamageRandom>
+			<DamagePower>15</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>5</Area>
+			<Area2>0</Area2>
+			<Speed>80</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>12.1</FireRate>
+			<RelaxTime>4.94</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_FOG</DamageType>
+			<Piercing>7</Piercing>
+			<DamageRandom>1000</DamageRandom>
+			<DamagePower>9000</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>5</Area>
+			<Area2>0</Area2>
+			<Speed>80</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>12.1</FireRate>
+			<RelaxTime>4.94</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

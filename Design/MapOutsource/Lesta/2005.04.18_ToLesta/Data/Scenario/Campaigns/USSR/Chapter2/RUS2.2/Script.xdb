@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="206" ObjectRecordIDs="">
+	<FileName/>
+	<ScriptText>timer = 0;
+
+attack = 0;	-- number attack
+
+function Objective1()
+
+	while 1 do
+
+		if (GetNUnitsInArea(1, "Defence", 0) &gt; 0 and GetNUnitsInArea(0, "Defence", 0) &lt; 1) then
+
+			Wait(1);
+
+			FailObjective (0);
+
+			SetIGlobalVar( "temp.objective.0", 3 );
+
+			GiveObjective (1);
+
+			Wait(1);						
+
+			StartThread( Objective0 );
+
+			timer = 1;
+
+			Wait(600);
+
+			StartThread( Timer );
+
+			return 1;
+
+		end;
+
+	Wait(3);
+
+	end;
+
+end;
+
+function Timer()
+
+	if timer == 1 then
+
+		Wait(1);
+
+		Win(1);
+
+	end;
+
+end;
+
+function Objective0()
+
+	while 1 do
+
+        if (GetNUnitsInArea(0, "Defence", 0) &gt; 0 and GetNUnitsInArea(1, "Defence", 0) &lt; 1) then
+
+			Wait(1);
+
+			timer = 0;
+
+			CompleteObjective (1);
+
+			GiveObjective (0);
+
+			SetIGlobalVar( "temp.objective.0", 1 );			
+
+			StartThread( Objective1 );
+
+			return 1;
+
+		end;
+
+	Wait(3);
+
+	end;
+
+end;
+
+function Attack()
+
+	if attack &lt;= 2 then 
+
+		LandReinforcementFromMap ( 1, "Attack", 0, 100 );
+
+		Wait(2);
+
+		LandReinforcementFromMap ( 1, "Attack", 1, 101 );	
+
+		Wait(2);
+
+		LandReinforcementFromMap ( 1, "Attack", 2, 102 );	
+
+		Wait(2);
+
+		LandReinforcementFromMap ( 1, "Attack", 3, 103 );	
+
+		StartThread( Go );
+
+	else
+
+		if (GetIGlobalVar("temp.objective.0", 0) == 3) then
+
+			Wait(1);
+
+			Win(1);
+
+			return
+
+		else
+
+			Wait(1);
+
+			CompleteObjective (0);
+
+			Win(0);
+
+			return
+
+		end;
+
+	end;
+
+end;
+
+function Go()
+
+	a = Random(3);
+
+	c = Random(2);
+
+	Cmd( 3 , 100 , 50 , GetScriptAreaParams ( "A1" .. a) );
+
+	QCmd( 3 , 100 , 50 , GetScriptAreaParams ( "A" .. a) );
+
+	QCmd( 3 , 100 , 50 , GetScriptAreaParams ( "Defence" ) );
+
+	
+
+	Cmd( 3 , 101 , 50 , GetScriptAreaParams ( "C1" .. c) );
+
+	QCmd( 3 , 101 , 50 , GetScriptAreaParams ( "C" .. c) );
+
+	QCmd( 3 , 101 , 50 , GetScriptAreaParams ( "Defence" ) );
+
+	
+
+	Cmd( 3 , 102 , 50 , GetScriptAreaParams ( "A1" .. c) );
+
+	QCmd( 3 , 102 , 50 , GetScriptAreaParams ( "A" .. c) );
+
+	QCmd( 3 , 102 , 50 , GetScriptAreaParams ( "Defence" ) );
+
+	
+
+	Cmd( 3 , 103 , 50 , GetScriptAreaParams ( "B1" .. c) );
+
+	QCmd( 3 , 103 , 50 , GetScriptAreaParams ( "B" .. c) );
+
+	QCmd( 3 , 103 , 50 , GetScriptAreaParams ( "Defence" ) );
+
+	attack = attack + 1;	-- attack number
+
+	Wait(300 + Random(180)); -- attack time
+
+	StartThread( Attack );
+
+end;
+
+function Loose()
+
+    while 1 do
+
+        if ( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then
+
+			Wait(2);
+
+			Win(1);
+
+			return 1;
+
+		end;
+
+	Wait(5);
+
+	end;
+
+end;
+
+-------------------------------------------------------Main
+
+GiveObjective (0);
+
+StartThread( Objective1 );
+
+StartThread( Loose );
+
+Wait(500 + Random(100));		-- attack time
+
+StartThread( Attack );</ScriptText>
+</Script>

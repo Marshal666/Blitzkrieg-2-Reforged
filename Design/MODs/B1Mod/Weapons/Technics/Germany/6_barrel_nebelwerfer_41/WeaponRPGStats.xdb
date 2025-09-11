@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="264">
+	<KeyName>6 barrel Nebelwerfer</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/Rocket_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>10</Dispersion>
+	<AimingTime>3</AimingTime>
+	<AmmoPerBurst>6</AmmoPerBurst>
+	<RangeMax>117.75</RangeMax>
+	<RangeMin>20</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>117.75</RevealRadius>
+	<DeltaAngle>15</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>25</Piercing>
+			<DamageRandom>40</DamageRandom>
+			<DamagePower>160</DamagePower>
+			<PiercingRandom>10</PiercingRandom>
+			<Area>1</Area>
+			<Area2>3.83</Area2>
+			<Speed>40</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0.3</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/MRLS/nebelwerfer_41_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Missiles/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Weapons/Missiles/Riccos_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Weapons/Missiles/Riccos_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/RocketExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/big.xdb#xpointer(/CraterSet)" />
+			<FireRate>60</FireRate>
+			<RelaxTime>5.9</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Rockets/MLRS/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_FOG</DamageType>
+			<Piercing>7</Piercing>
+			<DamageRandom>1000</DamageRandom>
+			<DamagePower>9000</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>5</Area>
+			<Area2>0</Area2>
+			<Speed>50</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="" />
+			<EffectHitWater href="" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>60</FireRate>
+			<RelaxTime>5.9</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Rockets/MLRS/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

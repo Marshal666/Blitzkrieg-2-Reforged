@@ -1,0 +1,571 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<meta name="generator" content="Fog Creek CityDesk 2.0.3" />
+<meta name="citydesk" content="310F8F6F/183" />
+<title>Resource_system</title>
+</head>
+<body bgcolor="#ebebeb" text="#000000"><SPAN 
+style="WIDTH: 100%; HEIGHT: 54px; BACKGROUND-COLOR: #ebebeb"><FONT size=6>
+<P align=left><SPAN></SPAN><SPAN></P>
+<P align=center><IMG height=85 alt="" 
+src="../blitz2.jpg" width=1261 border=0></P></SPAN></FONT></SPAN><P><SPAN 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 1ex; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 1ex; FLOAT: left; PADDING-BOTTOM: 5%; PADDING-TOP: 1ex">
+
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Appendix/Policy/HowToUse.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Home</SPAN></B></SPAN></B></SPAN></B></SPAN></B></A></SPAN></B></SPAN></B></SPAN></B></SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../News.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">News</SPAN></SPAN></A></SPAN></SPAN></P><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Introduction/Vision.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Vision</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><A 
+href="../../Articles/Appendix/Features/Features.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Feature 
+list</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Technical_design.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Hardware 
+requirements</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Game_cycle.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+cycle</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Introduction/Comparison_with_another_m.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">RTS 
+Comparison</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Inter_mission/Campaigning_phases.html"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns 
+phases</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Inter_mission/Player_army_reinforcement.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Army 
+development</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Inter_mission/Experience_Mission_awards.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Experience 
+&amp; Awards</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Inter_mission/Learning_curve.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Learning 
+curve</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tactical 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Units/Units.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Unit 
+types</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Singleplayer/Units/Special_Abilities.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Special 
+abilities</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Combat_system/Combat_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Combat 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Gameplay/Leaders/Leaders.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Leaders</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Objects/Interective_objects/Buildings/Key_Buildings.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+buildings</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Missions/Campaigns/Mission_Spec.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Missions/Campaigns/German/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Germany</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Missions/Campaigns/Russian/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USSR</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Missions/Campaigns/US/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USA</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Missions/Campaigns/GB/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Great 
+Britain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Missions/Alpha/Alpha_mission.html">Alpha_mission</A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Multiplayer/Multiplayer.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Multiplayer</SPAN></B></A></SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Under_construction.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+modes</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Nival 
+.Net</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Multiplayer/Alpha/Alpha_mission_Deathmatch.html">Alpha-mission 
+(Deathmatch</A>)</SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../Articles/Singleplayer/Art/Art_Navigation.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics</SPAN></SPAN></B></SPAN></SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Art/General_style.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">General 
+style</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Art/Terrains/Terrains_and_seasons.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Seasons 
+&amp; terrain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Art/Effects/Effects.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Effects</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Art/FMV/FMV.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Movies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Sound</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Sound/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Sound/Music_concept/Music.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Music</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Articles/Singleplayer/Sound/Sound_concept/SoundEffects.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">SFX</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Interface</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Interface/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Interface/Mission_interface.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Mission 
+</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Intermission</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Singleplayer/Interface/Main_Menu.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Main 
+menu</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Options</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Multiplayer/Matchmaking.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Match 
+making</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="Technical_design.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tech</SPAN><SPAN 
+style="FONT-FAMILY: 'Lucida Sans Unicode'">. </SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">design</SPAN></SPAN></B></A></SPAN></SPAN></B><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Technical_specifications/Expected_performance_and_.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Performance</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Technical_specifications/Graphics_engine/Graphics_technology_for_p.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="AI.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">AI 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="UI_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">UI 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Resource_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Resource 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Tools/Game_editor.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Map/Resource 
+editor</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Tools/ELK.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">ELK</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="Middleware/Required_middleware.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Middleware</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../Under_construction.html">
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Assets</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Units</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Buildings</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Objects</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../Under_construction.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Management</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="J:\Manage\A10_Milestones.doc"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Milestones</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Plans/Plans.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Plans</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../Articles/Appendix/Policy/Policy.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Policies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../Site_map.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Site 
+map</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><A 
+href="file:///\\store2k\a10root\Design\Design\Des_Doc_Site_English\index.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Switch 
+to English</SPAN></A><o:p></o:p></P>
+<P>&nbsp;</P>
+</SPAN></P><SPAN 
+style="PADDING-LEFT: 3em; FLOAT: left">
+<P><EM>By <A href="mailto:yuri.blazhevich@nival.com">Yuri Blazhevich</a></EM> <BR><EM> 12 &#1084;&#1072;&#1103;&nbsp; 2003</EM> </FONT></P> 
+<P><STRONG><FONT size=5><CENTER>Resource_system</CENTER></FONT> </STRONG>
+<P></P>
+<P><H1 style="MARGIN: 12pt 0cm 3pt"><FONT size=5><FONT face=Arial>Ресурсы и данные<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></FONT></FONT></H1>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><FONT face=Arial>Данные<o:p></o:p></FONT></EM></H2>
+<H3 style="MARGIN: 12pt 0cm 3pt"><FONT face=Arial>Основные положения<o:p></o:p></FONT></H3>
+<UL style="MARGIN-TOP: 0cm" type=disc>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l0 level1 lfo4; tab-stops: list 36.0pt">Первичный ключ является <SPAN lang=EN-US style="mso-ansi-language: EN-US">int</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">identity</SPAN> (<SPAN lang=EN-US style="mso-ansi-language: EN-US">autocounter</SPAN>)<o:p></o:p></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l0 level1 lfo4; tab-stops: list 36.0pt">Каждый объект имеет дополнительно <SPAN lang=EN-US style="mso-ansi-language: EN-US">user</SPAN>-<SPAN lang=EN-US style="mso-ansi-language: EN-US">defined</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">name</SPAN> (<SPAN lang=EN-US style="mso-ansi-language: EN-US">UserName</SPAN>) и ссылку на логический <SPAN lang=EN-US style="mso-ansi-language: EN-US">folder</SPAN> (<SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">FolderID</SPAN>). Отдельно присутствует табличка с <SPAN lang=EN-US style="mso-ansi-language: EN-US">folder</SPAN>’ами.<o:p></o:p></LI></UL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">1) Используемые структуры данных описываются в .XSD файлах, которые в последующем считываются при помощи MS XML 4.0. Эти файлы сложены в отдельной директории. Один из них описывает общие для всех структур "простые типы" (вектора, цвет, ссылка на другую описанную структуру, ссылки на все бинарные ресурсы), а каждый из остальных описывает свои структуры данных, пользуясь этими "простыми типами" или другими описанными сложными структурами. Значения полей по умолчанию проставляются как атрибут "</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">default</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">". При работе с конкретным типом структуры в кэш MS XML считываются все .XSD файлы.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">2) Существует утилита, которая считывает информацию из указанного ей .XSD файла, и преобразует его информацию в таблицы MS SQL и С++ заголовки с описанием структур и прототипами их функций. Также она создает сами функции (в .</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">cpp</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> </SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">или в .</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">h</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> </SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">файле) (в частности, функции бинарной сериализации).<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">3) В .</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">XSD</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> файлах при описании структур используется наследование, которое впоследствии отобрадается на физическую структуру таблиц в БД и на сгенерённые структуры данных.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Преобразование в таблицы происходит следующим образом (все ссылки в таблицах имеют тип </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">int</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">):<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<UL style="MARGIN-TOP: 0cm" type=disc>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">для всех узлов структуры с числом вхождений &lt;= 1 (либо, если оно известно заранее) просто создаются колонки с именами, соответствующими именам XSD элементов<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">если узел может появляться более одного раза, то для структур, в нем содержащихся, создается отдельная таблица, помимо прочих полей содержащая поле с ссылкой на запись в основной таблице (это правило действует рекурсивно)<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">поля, имеющие ссылочный тип, преобразуются в ссылки на соответствующие таблицы.<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l3 level1 lfo2; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">если некоторые поля структуры определены в базовом классе, то вместо этих полей в таблице появляется поле – ссылка на таблицу с объектами базового класса (правило действует рекурсивно)<o:p></o:p></SPAN></LI></UL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Преобразование в .CPP/.H файлы:<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<UL style="MARGIN-TOP: 0cm" type=disc>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">каждый уровень дерева преобразуется в соответствующую структуру <o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">для элементов, которые могут входить несколько раз, создаются массивы (vector)<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">если элемент является ссылкой на другой ресурс (табличный), то для него заводится поле типа CDBPtr&lt;Type&gt;, куда пишется идентификатор ресурса<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">если элемент является ссылкой на бинарный ресурс, то для него заводится строка с именем ресурса <o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">описываются функции бинарной сериализации, chunk_id для элементов берется из аттрибутов элементов в .XSD <o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">описываются функции получения контрольной суммы; в расчет берутся все помеченные соответствующим образом поля. Конторольная сумма нужна для проверки синхронности данных для игры по сети </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">peer</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">-</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">to</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">-</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">peer</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p></o:p></SPAN></LI></UL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">После первичной обработки .XSD файла он записывается в БД. В дальнейшем при повторной обработке этого файла поступивший на вход файл сравнивается с предыдущей версией в БД. В этом случае утилита изменяет структуру БД в соответствии с произведенными изменениями (удаляются колонки и таблицы, соответствующие удаленным элементам, добавляются для вновь появившихся; старые данные при этом удаляются из БД только если удалено соответствующее поле в .</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">XSD</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> файле). Для каждого объекта помимо его основной информации в БД хранится также строка, идентифицирующая объект в программе (то, что показывается в редакторе) и дата его последнего изменения.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">4) Редактор анализирует .XSD файлы из БД, и на основе полученной информации предоставляет интерфейс редактирования структур данных в БД в виде property control. <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Все внесенные изменения отображаются в property control и записываются в базу (есть идея не записывать изменения сразу в базу, а складывать их в очередь SQL-запросов пока юзер на нажмет на Save, что ведет к последовательному исполнению запросов и очистке очереди запросов). Редактор умеет записывать объекты из БД в бинарном формате, имитируя функцию бинарной сериализации для соответствующей структуры (на основе .</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">XSD</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> файла). <o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Экспорт производится путём выбора объектов и/или веток деревьев в соответствующих закладках. Под <I style="mso-bidi-font-style: normal">объектом</I> подразумевается текстуры, модели, звуки, танчики, пехотинцы, карты, кампании, и т.д. При экспорте проверяется дата последнего экспорта (для избежания экспорта </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">up</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">-</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">to</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">-</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">date</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> объектов). Проверку можно принудительно подавить (</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">forced</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">export</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">). Планируется возможность рекурсивного экспорта (заэкспортить Т-34 с моделькой, текстурой, звуками, эффектами, статсами и т.д.). Можно указать дату последнего изменения, которая будет являться нижней границей для экспортируемых структур (при этом все ссылки структуры по прежнему обрабатываются). Есть возможность зажать все экспортируемые файлы в PAK.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">5) Игра. Считывает данные из запакованных бинарников. Бинарники есть трех типов:<o:p></o:p></SPAN></P>
+<UL style="MARGIN-TOP: 0cm" type=disc>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo3; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">основные, загружаются первыми в произвольном порядке; не должны содержать ресурсов с одинаковыми ключами<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo3; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">патч; помимо прочей информации содержит номер версии, после основных бинарников загружаются все патчи в порядке возрастания версии, заменяя ресурсы <o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo3; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">мод; может быть подключен после загрузки основного бинарника и патчей, для всех замещенных объектов записывается оригинальное состояние, впоследствии может быть отключен<o:p></o:p></SPAN></LI>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo3; tab-stops: list 36.0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">сейчас поддерживается только один мод в один момент времени, но систему можно легко расширить до множества модов (как показал опыт а7 при множестве модов становится неочевидным пользовательский интерфейс менеджмента модов и встают в полный рост сопутствующие проблемы (хранение </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">save</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">’ов, сделанных под этими модами; сгенерённые карты и т.д.))<o:p></o:p></SPAN></LI></UL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Бинарник представляет из себя записанный массив с ключами ресурсов, их типами и самими данными ресурсов. Тип бинарника определяется по его расширению, у пользователей в редакторе должна быть отключена возможность делать что-то, кроме модов.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">При загрузке система ресурсов считывает ключи и типы ресурсов, сами объекты подгружаются при непосредственном запросе к их данным. Все структуры игры (за исключением самой системы ресурсов) должны работать с ресурсами данных исключительно через CDBPtr. Система ресурсов предостваляет интерфейс для получения const указателя на ресурс по ключу-строке, который в дальнейшем должен хранится как CDBPtr. При его сериализации в файл записывается только ключ ресурса.<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">Первичный ключ в базе – </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">int</SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'"> </SPAN><SPAN lang=EN-US style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'; mso-ansi-language: EN-US">identity</SPAN><SPAN style="FONT-SIZE: 10pt; FONT-FAMILY: 'Courier New CYR'">.<o:p></o:p></SPAN></P>
+<H2 style="MARGIN: 12pt 0cm 3pt"><EM><FONT face=Arial>Бинарные ресурсы<o:p></o:p></FONT></EM></H2>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none">Бинарные данные есть двух типов – те, что интересны пользователям для редактирования внешними тулзами (текстуры, звуки – «открытые» ресурсы) и те, что нельзя редактировать внешними тулзами (модели, анимации, и т.д. – «закрытые» ресурсы). «Открытые» ресурсы при экспорте раскладываются по каталогам с красивыми именами (так же, как и их исходники), а «закрытые» сваливаются в одну директорию (например, “<SPAN lang=EN-US style="mso-ansi-language: EN-US">binary</SPAN>”) и именуются <SPAN lang=EN-US style="mso-ansi-language: EN-US">DB</SPAN>’шными <SPAN lang=EN-US style="mso-ansi-language: EN-US">ID</SPAN>’шниками.<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none">Пакуется всё <SPAN lang=EN-US style="mso-ansi-language: EN-US">zip</SPAN>’ом (методы <SPAN lang=EN-US style="mso-ansi-language: EN-US">STORE</SPAN> или <SPAN lang=EN-US style="mso-ansi-language: EN-US">DEFLATE</SPAN>). Файловая система поддерживает как файлы в открытом виде, так и запакованные в <SPAN lang=EN-US style="mso-ansi-language: EN-US">zip</SPAN> прозрачно для пользователя. Если существует несколько одинаковых файлов в разных <SPAN lang=EN-US style="mso-ansi-language: EN-US">zip</SPAN>’ах и один в открытом виде, то среди них выбирается файл с самой последней датой. При этом, если подключен мод, то сначала файл ищется в моде (по тем же правилам), а только потом в основном ресурсе.<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none">Тексты живут в базе и при экспорте либо записываются в один файл (бынарный массив <SPAN lang=EN-US style="mso-ansi-language: EN-US">wstring</SPAN>’ов) либо считаются «закрытыми» данными и записываются в одну директорию с именами по <SPAN lang=EN-US style="mso-ansi-language: EN-US">DB</SPAN>’шным <SPAN lang=EN-US style="mso-ansi-language: EN-US">ID</SPAN>’шникам.<SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p>&nbsp;</o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-layout-grid-align: none"><SPAN style="COLOR: red">Не до конца определено с модами.<o:p></o:p></SPAN></P></P>
+<P><FONT size=2> <EM></EM>  
+</FONT></P></SPAN></body>
+</html>

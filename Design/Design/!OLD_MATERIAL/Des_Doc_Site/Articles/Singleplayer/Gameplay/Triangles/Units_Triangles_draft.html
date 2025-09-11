@@ -1,0 +1,573 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<head>
+	<meta name="generator" content="Fog Creek CityDesk 2.0.3" />
+<meta name="citydesk" content="310F8F6F/68" />
+<title>Units_Triangles_draft</title>
+</head>
+<body bgcolor="#ebebeb" text="#000000"><SPAN 
+style="WIDTH: 100%; HEIGHT: 54px; BACKGROUND-COLOR: #ebebeb"><FONT size=6>
+<P align=left><SPAN></SPAN><SPAN></P>
+<P align=center><IMG height=85 alt="" 
+src="../../../blitz2.jpg" width=1261 border=0></P></SPAN></FONT></SPAN><P><SPAN 
+style="BORDER-RIGHT: windowtext 1pt solid; PADDING-RIGHT: 1ex; BORDER-TOP: windowtext 1pt solid; PADDING-LEFT: 1ex; FLOAT: left; PADDING-BOTTOM: 5%; PADDING-TOP: 1ex">
+
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Appendix/Policy/HowToUse.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Home</SPAN></B></SPAN></B></SPAN></B></SPAN></B></A></SPAN></B></SPAN></B></SPAN></B></SPAN></B><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../News.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">News</SPAN></SPAN></A></SPAN></SPAN></P><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Introduction/Vision.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Vision</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><A 
+href="../../../../Articles/Appendix/Features/Features.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Feature 
+list</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_design.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Hardware 
+requirements</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../Game_cycle.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+cycle</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Introduction/Comparison_with_another_m.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">RTS 
+Comparison</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Campaigning_phases.html"><B style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="FONT-WEIGHT: normal; FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns 
+phases</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Player_army_reinforcement.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Army 
+development</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Experience_Mission_awards.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Experience 
+&amp; Awards</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Inter_mission/Learning_curve.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Learning 
+curve</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tactical 
+layer</SPAN></B> 
+</SPAN></B></A> 
+</SPAN></B> 
+</SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Units/Units.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Unit 
+types</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Singleplayer/Units/Special_Abilities.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Special 
+abilities</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Combat_system/Combat_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Combat 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Gameplay/Leaders/Leaders.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Leaders</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Objects/Interective_objects/Buildings/Key_Buildings.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Strategic 
+buildings</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Missions/Campaigns/Mission_Spec.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Campaigns</SPAN></B></A></SPAN></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/German/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Germany</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/Russian/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USSR</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/US/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">USA</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Missions/Campaigns/GB/Chapters_list.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Great 
+Britain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Missions/Alpha/Alpha_mission.html">Alpha_mission</A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></O:P></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Multiplayer/Multiplayer.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Multiplayer</SPAN></B></A></SPAN><o:p></O:P></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Game 
+modes</SPAN></SPAN></A> 
+</SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Nival 
+.Net</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Multiplayer/Alpha/Alpha_mission_Deathmatch.html">Alpha-mission 
+(Deathmatch</A>)</SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Articles/Singleplayer/Art/Art_Navigation.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics</SPAN></SPAN></B></SPAN></SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/General_style.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">General 
+style</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/Terrains/Terrains_and_seasons.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Seasons 
+&amp; terrain</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/Effects/Effects.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Effects</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Art/FMV/FMV.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Movies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Sound</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Sound/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Sound/Music_concept/Music.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Music</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Singleplayer/Sound/Sound_concept/SoundEffects.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">SFX</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Under_construction.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Interface</SPAN></B></A></SPAN><o:p></o:p></B></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Concept.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Concept</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Mission_interface.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Mission 
+</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Intermission</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Singleplayer/Interface/Main_Menu.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Main 
+menu</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Under_construction.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Options</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Multiplayer/Matchmaking.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Match 
+making</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A href="../../../../Articles/Technical_design/Technical_design.html"><B 
+style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 10pt"><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Tech</SPAN><SPAN 
+style="FONT-FAMILY: 'Lucida Sans Unicode'">. </SPAN><SPAN lang=EN-US 
+style="FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">design</SPAN></SPAN></B></A></SPAN></SPAN></B><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_specifications/Expected_performance_and_.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Performance</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Technical_specifications/Graphics_engine/Graphics_technology_for_p.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Graphics 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/AI.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">AI 
+engine</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/UI_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">UI 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Resource_system.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Resource 
+system</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Tools/Game_editor.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Map/Resource 
+editor</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Tools/ELK.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">ELK</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Technical_design/Middleware/Required_middleware.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Middleware</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Under_construction.html">
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Assets</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Units</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Buildings</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="file://J:\Design\Design\Database\Production.htm"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Objects</SPAN></SPAN></SPAN></SPAN></A></SPAN></SPAN></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P><A href="../../../../Under_construction.html">
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="mso-ansi-language: EN-US"><o:p></o:p></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><B 
+style="mso-bidi-font-weight: normal"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Management</SPAN></B></P></A><B 
+style="mso-bidi-font-weight: normal"><o:p></o:p></B>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="J:\Manage\A10_Milestones.doc"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Milestones</SPAN></SPAN></A></SPAN></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Plans/Plans.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Plans</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../../Articles/Appendix/Policy/Policy.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Policies</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt 9pt"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"></SPAN>&nbsp;</P>
+<P class=StrongLucidaSansUnicode 
+style="MARGIN: 0cm 0cm 0pt"><o:p></o:p></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US"><A 
+href="../../../Site_map.html"><SPAN lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Site 
+map</SPAN></A></SPAN></P>
+<P class=StrongLucidaSansUnicode style="MARGIN: 0cm 0cm 0pt"><A 
+href="file:///\\store2k\a10root\Design\Design\Des_Doc_Site_English\index.html"><SPAN 
+lang=EN-US 
+style="FONT-SIZE: 10pt; FONT-FAMILY: 'Lucida Sans Unicode'; mso-ansi-language: EN-US">Switch 
+to English</SPAN></A><o:p></o:p></P>
+<P>&nbsp;</P>
+</SPAN></P><SPAN 
+style="PADDING-LEFT: 3em; FLOAT: left">
+<P><EM>By <A href="mailto:alexander.valencia-campo@nival.com">Alexander Valencia</a></EM> <BR><EM> 18 &#1072;&#1087;&#1088;&#1077;&#1083;&#1103;&nbsp; 2003</EM> </FONT></P> 
+<P><STRONG><FONT size=5><CENTER>Units_Triangles_draft</CENTER></FONT> </STRONG>
+<P></P>
+<P><P class=MsoNormal style="MARGIN: 0cm 0cm 0pt; TEXT-ALIGN: center" align=center><B style="mso-bidi-font-weight: normal"><SPAN style="FONT-SIZE: 14pt">Примеры конкретных треугольников.<?xml:namespace prefix = o ns = "urn:schemas-microsoft-com:office:office" /><o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">На примере теста Бликрига-1.<o:p></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P>
+<H1 style="MARGIN: 0cm 0cm 0pt"><SPAN lang=EN-US><FONT size=3>Heavy/Medium Tank&gt;Infantry&gt;Tank Destroyer&gt;</FONT></SPAN></H1>
+<OL style="MARGIN-TOP: 0cm" type=1>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_2(</SPAN>остается<SPAN lang=EN-US style="mso-ansi-language: EN-US"> 2)&gt;6 German_rifle_45 (</SPAN>остается<SPAN lang=EN-US style="mso-ansi-language: EN-US"> 3-4)&gt;3 Yagdpanther (</SPAN>остается<SPAN lang=EN-US style="mso-ansi-language: EN-US"> 2)&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt">4 <SPAN lang=EN-US style="mso-ansi-language: EN-US">KV</SPAN>_2(остается 1-2)&gt; 12 <SPAN lang=EN-US style="mso-ansi-language: EN-US">German</SPAN>_<SPAN lang=EN-US style="mso-ansi-language: EN-US">rifle</SPAN>_43(остается 4-5) &gt; 6<SPAN style="mso-spacerun: yes">&nbsp; </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Sturmg</SPAN>._3_<SPAN lang=EN-US style="mso-ansi-language: EN-US">F</SPAN>(остается 3)&gt;<o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt">4 <SPAN lang=EN-US style="mso-ansi-language: EN-US">T</SPAN>34_85 (остается 2-3)&gt;6 <SPAN lang=EN-US style="mso-ansi-language: EN-US">German</SPAN>_<SPAN lang=EN-US style="mso-ansi-language: EN-US">rifle</SPAN>_45 (3-4)&gt;3 <SPAN lang=EN-US style="mso-ansi-language: EN-US">Yagdpanther</SPAN> (остается 1-2)&gt;<o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_2(2)&gt;6 German_rifle_45 (3-4)&gt;2 Ferdinand (0)&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_2(2)&gt;6 German_rifle_45 (3-4)&gt;3 Yagdtiger (1, but AI bug)…<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">3 KV_1(1-2)&gt;10 German_rifle_41(4, but not enough grenades)…&gt;…4<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>Sturmg._3_F(</SPAN>остается<SPAN lang=EN-US style="mso-ansi-language: EN-US"> 3)&gt;<SPAN style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>NOT WORK!!!<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_3 ()&gt; 8 German_rifle_45(not enough grenades)&gt;5Yagpanther = NOT WORK!!!<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_3 ()&gt; 8 German_rifle_45(4-5)&gt;3 Yagdtiger(2) &gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 JS_3 ()&gt;8 German_rifle_45(4-5)&gt;3 Ferdinand(2)&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">6 T34 &gt; 8 German_rifle_43&gt; 4 Sturmg._3_F&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">6 T34 &gt; 8 German_rifle_43&gt; 3 Hetzer&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">6 T34_76 &gt; 8 German_rifle_43&gt; 3 Sturmg._3_F&gt; <o:p></o:p></SPAN>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su76(1-2) &gt; 6 Pz3j...<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su76 (3) &gt; 4 Pz4d...<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su76 &gt; 3 Pz4g...<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su76 &gt; 1 Pz5d...<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su100 &gt; 6 Pz4g...<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su100 &gt; 5 Pz5d</SPAN>...<SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su100 &gt; 4 Pz5g</SPAN>...<SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su100 &gt; 3 Tiger</SPAN>...<SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su100 &gt; 2 Tiger2</SPAN>...<SPAN lang=EN-US style="mso-ansi-language: EN-US"><o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su85 &gt; 2 Tiger &gt; 9 USSR_rifle_43&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">5 Su85 &gt; 3 Pz5g &gt; 9 USSR_rifle_43&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su85 &gt; 3 Pz5d &gt; 9 USSR_rifle_43&gt;<o:p></o:p></SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level1 lfo1; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 Su85 &gt; 6 Pz4g &gt; 9 USSR_rifle_43&gt; <o:p></o:p></SPAN></LI></OL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">Причины<SPAN lang=EN-US style="mso-ansi-language: EN-US">:<o:p></o:p></SPAN></P>
+<OL style="MARGIN-TOP: 0cm" type=1 start=25>
+<OL style="MARGIN-TOP: 0cm" type=a>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level2 lfo1; tab-stops: list 72.0pt">У пехоты недостаточно гранат для <SPAN lang=EN-US style="mso-ansi-language: EN-US">Heavy</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Tank</SPAN>.<o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level2 lfo1; tab-stops: list 72.0pt">У <SPAN lang=EN-US style="mso-ansi-language: EN-US">Heavy</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Tan</SPAN>к пулеметы (которых обычно больше, например, у <SPAN lang=EN-US style="mso-ansi-language: EN-US">Ferdinand</SPAN>’<SPAN lang=EN-US style="mso-ansi-language: EN-US">a</SPAN> нет пулеметов вовсе) наводятся быстрее – из-за вращающейся башни. 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level2 lfo1; tab-stops: list 72.0pt">Если у <SPAN lang=EN-US style="mso-ansi-language: EN-US">Tank</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Destroyer</SPAN>’<SPAN lang=EN-US style="mso-ansi-language: EN-US">a</SPAN> подбили гусеницу, то он не может стрелять по целям, находящимся сбоку и сзади (нет вращающейся башни).<o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l2 level2 lfo1; tab-stops: list 72.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Tank</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Destroyer</SPAN><SPAN lang=EN-US> </SPAN>имеет меньший силует, чем <SPAN lang=EN-US style="mso-ansi-language: EN-US">Heavy</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Tank</SPAN> (по нему попасть сложнее). При этом он вполне способен пробить лобовую броню танка.<o:p></o:p></LI></OL></OL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">Разные весовые категории:</P>
+<OL style="MARGIN-TOP: 0cm" type=1>
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">JS_2&gt;&gt;Sturmg</SPAN>._3_<SPAN lang=EN-US style="mso-ansi-language: EN-US">F</SPAN> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">KV_85&gt;&gt;Sturmg</SPAN>._3_<SPAN lang=EN-US style="mso-ansi-language: EN-US">F</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">T</SPAN>34_85<SPAN lang=EN-US style="mso-ansi-language: EN-US">&gt;&gt; Hetzer</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Hetzer &gt;&gt; T34_76</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Su-76&gt;&gt;&gt;Pz2f</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Su-76&gt;&gt;Pz3e</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Pz5g(</SPAN>критический танк<SPAN lang=EN-US style="mso-ansi-language: EN-US">)&gt;&gt;</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">Su-76</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Su100&gt;&gt; Pz2f, Pz3e, Pz3j,pz4d</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Tiger2&gt;&gt;Su85</SPAN><o:p></o:p> 
+<LI class=MsoNormal style="MARGIN: 0cm 0cm 0pt; mso-list: l1 level1 lfo2; tab-stops: list 36.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US">Su85&gt;&gt;Pz4d..</SPAN><o:p></o:p></LI></OL>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><B><o:p>&nbsp;</o:p></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><B><SPAN lang=EN-US style="mso-ansi-language: EN-US">Heavy/Medium Tank&gt;Infantry&gt;ATG&gt;<o:p></o:p></SPAN></B></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt 21pt; TEXT-INDENT: -18pt; mso-list: l0 level1 lfo3; tab-stops: list 21.0pt"><SPAN lang=EN-US style="mso-ansi-language: EN-US"><SPAN style="mso-list: Ignore">1.<SPAN style="FONT: 7pt 'Times New Roman'">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </SPAN></SPAN></SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">3 Pz4g &gt; 4 German_rifle_43 &gt;</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">4 ZIS-3</SPAN><SPAN lang=EN-US> </SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">&gt;<o:p></o:p></SPAN></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">Причины:</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt">У <SPAN lang=EN-US style="mso-ansi-language: EN-US">ATG</SPAN><SPAN lang=EN-US> </SPAN>нет бронирования, и нет пулеметов – именно поэтому его очень легко взять пехотой.</P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p><A href="J:\Design\Design\Des_Doc_Site\Articles\Singleplayer\Gameplay\Triangles\Full_Schema.vsd ">J:\Design\Design\Des_Doc_Site\Articles\Singleplayer\Gameplay\Triangles\Full_Schema.vsd </A></o:p></P>
+<P class=MsoNormal style="MARGIN: 0cm 0cm 0pt"><o:p>&nbsp;</o:p></P></P>
+<P><FONT size=2> <EM></EM>  
+</FONT></P></SPAN></body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000100">
+	<FileName />
+	<ScriptText>-- Tanks attack
+
+function Loose()    while 1 do        if ( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then			Wait(2);			Win(1);			return 1;		end;	Wait(5);	end;end;
+function Loose1()    while 1 do		if (GetNUnitsInArea(1, &quot;Village0&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village0&quot;, 0) &lt; 1) then--			FailObjective (0);
+			Wait(300);			StartThread( Loose11 );			return 1;		end;	Wait(2);	end;end;
+function Loose11()	if (GetNUnitsInArea(1, &quot;Village0&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village0&quot;, 0) &lt; 1) then		Wait(1);		Win(1);
+	else
+--		GiveObjective( 0 );
+		StartThread( Loose1 );	end;
+end;
+function Loose2()    while 1 do		if (GetNUnitsInArea(1, &quot;Village1&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village1&quot;, 0) &lt; 1) then--			FailObjective (1);
+			Wait(300);			StartThread( Loose21 );			return 1;		end;	Wait(2);	end;end;
+function Loose21()	if (GetNUnitsInArea(1, &quot;Village1&quot;, 0) &gt; 0 and GetNUnitsInArea(0, &quot;Village1&quot;, 0) &lt; 1) then		Wait(1);		Win(1);
+	else
+--		GiveObjective( 1 );
+		StartThread( Loose2 );	end;
+end;
+function Attack()
+while 1 do
+	Wait(250+Random(100));
+	a = Random(4);
+	b = 100+a;
+	if a == 1 then		LandReinforcementFromMap ( 1, &quot;Attack&quot;, 0, b );		Wait(2);		Cmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;A11&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;A21&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;Village0&quot;));
+	end;
+	if a == 2 then		LandReinforcementFromMap ( 1, &quot;Attack&quot;, 0, b );		Wait(2);		Cmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;A12&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;A22&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;Village0&quot;));
+	end;
+	if a == 3 then		LandReinforcementFromMap ( 1, &quot;Attack&quot;, 1, b );		Wait(2);		Cmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;B11&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;B21&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;Village1&quot;));	end;
+	if a == 4 then		LandReinforcementFromMap ( 1, &quot;Attack&quot;, 1, b );		Wait(2);		Cmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;B12&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;B22&quot;));		QCmd( ACT_SWARM, b, 50, GetScriptAreaParams (&quot;Village1&quot;));	end;
+
+end;end;
+function Winner()    while 1 do		if  (GetNUnitsInParty(1) &lt; 1 and GetNUnitsInParty(0) &gt; 0) then
+			Win(0);			return 1;		end;	Wait(2);	end;end;
+-----------------------------------------------------------------------------
+Wait( 1 );
+GiveObjective( 0 );
+Wait( 2 )
+GiveObjective( 1 );
+---------------------------------------------------------------------------------
+StartThread( Attack);
+StartThread( Loose );
+Wait(100);
+StartThread( Loose1 );
+StartThread( Loose2 );
+Wait(1200)
+StartThread( Winner );--StartThread( Attack );</ScriptText>
+</Script>

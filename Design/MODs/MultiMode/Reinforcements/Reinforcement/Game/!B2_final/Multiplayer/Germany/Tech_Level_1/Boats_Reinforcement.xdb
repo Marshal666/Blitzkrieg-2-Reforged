@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000932">
+	<Type>RT_LIGHT_TANKS</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankLight_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="Boats_name.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/Ships/R-Boat/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/Ships/R-Boat/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="Boats_name.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="/Reinforcements/DeployTemplate/Test/ship_distant_DeployTemplate.xdb#xpointer(/DeployTemplate)" />
+</Reinforcement>

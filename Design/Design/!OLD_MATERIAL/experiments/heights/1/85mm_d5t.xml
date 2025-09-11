@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!-- edited with XML Spy v3.5 NT (http://www.xmlspy.com) by z (z) -->
+<base>
+	<History>
+		<PreviousPath>c:\blitzkrieg\resourcebase\weapons\ussr\tanks\85mm_d5t\current.wpn</PreviousPath>
+		<PreviousDate>29.04.2003</PreviousDate>
+		<PreviousTime>14:27:55</PreviousTime>
+		<PreviousOwner>Igor.Petukhov</PreviousOwner>
+		<Action>Exported as</Action>
+		<CurrentPath>c:\a7\data\weapons\85mm_d5t.xml</CurrentPath>
+		<CurrentDate>29.04.2003</CurrentDate>
+		<CurrentTime>14:27:59</CurrentTime>
+		<CurrentOwner>Igor.Petukhov</CurrentOwner>
+	</History>
+	<RPG Dispersion="1.8" AimingTime="0.17" AmmoPerBurst="1" RangeMax="70" RangeMin="4" Ceiling="0" DeltaAngle="10" RevealRadius="0">
+		<KeyName>85 mm D-5T</KeyName>
+		<StatsType>Weapon</StatsType>
+		<Shells>
+			<item TrajectoryType="0" Piercing="117" PiercingRandom="38" DamagePower="130" DamageRandom="65" Area="0.74" Area2="2.94" ProjectileSpeed="140" DetonationPower="0" BrokeTrackProbability="0" FireRate="29.2" RelaxTime="2.05" DamageType="0" TraceProbability="0" TraceSpeedCoeff="0.2">
+				<Specials Size="32">
+					<BitArray>
+						<item data="0"/>
+						<item data="0"/>
+						<item data="0"/>
+						<item data="0"/>
+						<item data="0"/>
+					</BitArray>
+				</Specials>
+				<InfantryFireSound/>
+				<EffectGunFire>shootgun3</EffectGunFire>
+				<EffectTrajectory/>
+				<EffectHitDirect>directhit1</EffectHitDirect>
+				<EffectHitMiss>misshit1</EffectHitMiss>
+				<EffectHitReflect>reflecthit1</EffectHitReflect>
+				<EffectHitGround>expground3</EffectHitGround>
+				<EffectHitWater>expwater3</EffectHitWater>
+				<EffectHitAir/>
+				<Craters>
+					<item>objects\terraobjects\shell_hole\middle\01\1</item>
+					<item>objects\terraobjects\shell_hole\middle\02\1</item>
+					<item>objects\terraobjects\shell_hole\middle\03\1</item>
+				</Craters>
+				<FlashFire Power="100" Duration="500"/>
+				<FlashExplosion Power="200" Duration="500"/>
+			</item>
+		</Shells>
+	</RPG>
+</base>

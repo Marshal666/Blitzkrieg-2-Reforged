@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="192">
+	<KeyName>BM-8-48</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/Rocket_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>23</Dispersion>
+	<AimingTime>1</AimingTime>
+	<AmmoPerBurst>48</AmmoPerBurst>
+	<RangeMax>82</RangeMax>
+	<RangeMin>30</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>82</RevealRadius>
+	<DeltaAngle>15</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>50</Piercing>
+			<DamageRandom>40</DamageRandom>
+			<DamagePower>80</DamagePower>
+			<PiercingRandom>20</PiercingRandom>
+			<Area>1.4</Area>
+			<Area2>2.8</Area2>
+			<Speed>40</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0.1</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>10</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Missiles/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/RocketExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/medium.xdb#xpointer(/CraterSet)" />
+			<FireRate>180</FireRate>
+			<RelaxTime>20</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Rockets/MLRS/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

@@ -1,0 +1,42 @@
+<!-- Published by Fog Creek Software CityDesk OGUCSJBMCEMTLHSO/A1BCB307/157 -->
+<html>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<head>
+	<title>03_04_28_Programers</title>
+</head>
+<body bgcolor="#ffffff" text="#000000"><span style="WIDTH: 100%; BACKGROUND-COLOR: #dddddd">
+		<font size="6">Blitzkrieg-2</font><br>
+		<font color="#ff8040" size="2">Nival Interactive</font>
+	</span>
+
+	<blockquote style="MARGIN-RIGHT: 0px">
+			<p><strong>03_04_28_Programers</strong></p>
+			<p>
+				<font size="2">
+					<em>By Yuri V. Blazhevich</em>
+					<br>
+					<em>
+					    Monday, April 28, 2003</em>
+				</font>
+			</p>
+		
+		
+		<p>Undo делаем не через манипулятор. Манипулятор про Undo ничего не знает.<BR>Для этого необходимо внести изменения в манипулятор. Изменения<BR>следующие: при добавлении пары (строка - значение) в манипулятор,<BR>возвращается iterator, где перечисляются новые (привнесенные) пары<BR>(строка - значение).<BR><BR>При работе с определенным манипулятором мы записываем последовательность<BR>классов-команд в буфер Undo. Каждый такой класс содержит код и данный по<BR>прямой команде для манипулятора и, дополнительно, обратной команде<BR>манипулятора. Пример: прямая команда - добавить пару ("objects.[1]",<BR>указатель на новый обьект), обратная команда - удалить пару<BR>("objects.[1]", указатель). Дополнительно необходимо записывать<BR>дополнительную информацию по визуализации.<BR><BR>При работе с базой есть два режима работы:<BR>&nbsp; 1. Только для чтения.<BR>&nbsp; 2. Для чтения и изменения.<BR>По умолчанию выбирается первый режим, при необходимости внесения<BR>изменения данные перечитываются и блокируются на изменения другим<BR>пользователем.<BR><BR>Есть мысль дополнительно в базе данных для каждого типа записи хранить<BR>права по умолчанию на первый просмотр такого типа данных, всех<BR>пользователей различать правам по умолчанию (дизайнеры, программисты,<BR>художники и .т.д.).<BR></p>
+  		<p>
+			<font size="2">
+				
+					<em></em>
+				
+			</font>
+		</p>
+
+	</blockquote>
+
+	<p><A href="../../index.html">Home</A></p>
+
+	<p>
+<a href="http://www.fogcreek.com/CityDesk"><IMG height=31 alt="Made with CityDesk" src="../../Images/MadeWithCityDesk.gif" width=88 border=0></a>
+	</p>
+</body>
+</html>
+

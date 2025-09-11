@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000951">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/US/Ships/Transport_ship/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/auto/studebaker_engineering_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/USA/Main_Squad/us_main_6/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/USA/Main_Squad/us_main_6/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/USA/Main_Squad/us_main_6/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/USA/Main_Squad/us_main_6/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="/Reinforcements/DeployTemplate/Test/Naval_Start_DeployTemplate.xdb#xpointer(/DeployTemplate)" />
+</Reinforcement>
