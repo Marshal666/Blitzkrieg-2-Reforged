@@ -1,0 +1,105 @@
+
+global proc cr_emit()
+{
+
+if (`window -ex Smoke` != 0) {
+		return;
+	}
+
+window -title "EmiterSmoke" -widthHeight 700 700 Smoke;
+columnLayout;
+     textFieldButtonGrp -label "Name:"  -buttonLabel "Create" -bc "create" "name_";
+showWindow Smoke;
+}
+
+
+global proc create()
+{
+string $name = `textFieldButtonGrp -q -tx "name_"`;
+
+//$name = "smoke";
+$p_name = $name + "_prtcls";
+print $name;
+$live_t = 3.0;
+$spread = 0.5;
+
+
+emitter -pos 0 0 0 -type direction
+        -dx 0 -dy 0 -dz 1
+        -sp $spread
+        -name $name
+        -r 100 -sro 0
+        -nuv 0 -cye none -cyi 1 -spd 1 -srn 0 -nsp 1 -tsp 0 -mxd 0 -mnd 0;
+particle -n $p_name;
+connectDynamic -em $name $p_name;
+
+
+eval ("setAttr "+$p_name+"Shape.particleRenderType 5");
+//Set color wite:
+eval ("addAttr -is true -ln \"colorRed\" -dv 0.0 -at double "+$p_name+"Shape");
+eval ("setAttr -keyable true "+$p_name+"Shape.colorRed");
+eval ("setAttr "+$p_name+"Shape.colorRed 1");
+
+eval ("addAttr -is true -ln \"colorGreen\" -dv 0.0 -at double "+$p_name+"Shape");
+eval ("setAttr -keyable true "+$p_name+"Shape.colorGreen");
+eval ("setAttr "+$p_name+"Shape.colorGreen 1");
+
+eval ("addAttr -is true -ln \"colorBlue\" -dv 0.0 -at double "+$p_name+"Shape");
+eval ("setAttr -keyable true "+$p_name+"Shape.colorBlue");
+eval ("setAttr "+$p_name+"Shape.colorBlue 1");
+
+//Add opacity and scale:
+eval ("addAttr -ln spriteScaleXPP -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln spriteScaleXPP0 -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln spriteScaleYPP -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln spriteScaleYPP0 -dt doubleArray "+$p_name+"Shape");
+
+eval ("addAttr -ln \"opacityPP\" -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln \"opacityPP0\" -dt doubleArray "+$p_name+"Shape");
+
+
+//Add twist:
+eval ("addAttr -ln spriteTwistPP -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln spriteTwistPP0 -dt doubleArray "+$p_name+"Shape");
+
+
+//Set living time:
+
+eval ("setAttr "+$p_name+"Shape.lifespanMode 1");
+eval ("setAttr \""+$p_name+"Shape.lifespan\" "+$live_t);
+
+
+//Define rotation direction and speed:
+
+eval ("addAttr -ln userScalar1PP -dt doubleArray "+$p_name+"Shape");
+eval ("addAttr -ln userScalar1PP0 -dt doubleArray "+$p_name+"Shape");
+
+
+
+$expr_1 = $p_name+"Shape.userScalar1PP=rand(-1,1);";
+dynExpression -s $expr_1 -c ($p_name+"Shape");
+
+
+
+
+$expr_2 = $p_name+"Shape.spriteTwistPP=500*time*"+$p_name+"Shape.userScalar1PP;";
+dynExpression -s $expr_2 -r ($p_name+"Shape");
+
+
+//Create ramp for scale:
+shadingNode -at ramp -n ($p_name+"_Scale_ramp");
+$am01= `eval ("arrayMapper -target "+$p_name+"Shape -destAttr spriteScaleYPP -inputV ageNormalized -mapTo "
+      +$p_name+"_Scale_ramp")`;
+
+$am02=`eval ("arrayMapper -target "+$p_name+"Shape -destAttr spriteScaleXPP -inputV ageNormalized -mapTo "
+      +$p_name+"_Scale_ramp")`;
+
+rename $am01 ($p_name+"Scale_mapper");
+
+eval ("connectAttr -f "+$p_name+"Scale_mapper.minValue "+$am02[0]+".minValue");
+eval ("connectAttr -f "+$p_name+"Scale_mapper.maxValue "+$am02[0]+".maxValue");
+
+
+}
+
+

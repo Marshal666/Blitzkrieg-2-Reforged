@@ -1,0 +1,232 @@
+PACKAGE RSPS_Evaluation rational 1.5 1C0AB0D69C73 \
+	COMPONENTS="PerformanceStudioSuite:1.0:1 \
+	LTmaster:7.1:1 LTgui:7.1:10 LTvu:7.1:100 \
+	LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+	LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE RSPS_Base_License rational 1.5 AAEC0768D8DA \
+	COMPONENTS="PerformanceStudioSuite:1.0:1 \
+	LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:50 LThttp:7.1:1"
+
+PACKAGE LT_Playback_100VU rational 7.5 10B297DCA509 \
+	COMPONENTS="LTvu:7.1:100 LT_100VT:8.0:1"
+
+PACKAGE LT_Playback_250VU rational 7.5 46D73E06F8CA \
+	COMPONENTS="LTvu:7.1:250 LT_250VT:8.0:1"
+
+PACKAGE LT_Playback_500VU rational 7.5 EF451B5CFD15 \
+	COMPONENTS="LTvu:7.1:500 LT_500VT:8.0:1"
+
+PACKAGE LT_Playback_1000VU rational 7.5 68C15DACA3A7 \
+	COMPONENTS="LTvu:7.1:1000 LT_1000VT:8.0:1"
+
+PACKAGE LT_Playback_2500VU rational 7.5 41BCC971EFB0 \
+	COMPONENTS="LTvu:7.1:2500 LT_2500VT:8.0:1"
+
+PACKAGE LT_Playback_5000VU rational 7.5 E809693053EF \
+	COMPONENTS="LTvu:7.1:5000 LT_5000VT:8.0:1"
+
+PACKAGE LT_Playback_10000VU rational 7.5 79F52A91E693 \
+	COMPONENTS="LTvu:7.1:10000 LT_10000VT:8.0:1"
+
+PACKAGE LT_Playback_20000VU rational 7.5 0ED4D35282E1 \
+	COMPONENTS="LTvu:7.1:20000 LT_20000VT:8.0:1"
+
+PACKAGE LT_Playback_50000VU rational 7.5 D8A40635DE7B \
+	COMPONENTS="LTvu:7.1:50000 LT_50000VT:8.0:1"
+
+PACKAGE LT_Playback_100000VU rational 7.5 2624850A2BBE \
+	COMPONENTS="LTvu:7.1:100000 LT_100000VT:8.0:1"
+
+PACKAGE RSPS_TLA_500VU rational 1.5 7EBAF9407ED4 \
+	COMPONENTS="PerformanceStudioSuite:1.0:1 \
+	LTmaster:7.1:1 LTgui:7.1:500 LTvu:7.1:500 \
+	LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+	LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE RSPS_TLA_100KVU rational 1.5 E2A84565831B \
+	COMPONENTS="PerformanceStudioSuite:1.0:1 \
+	LTmaster:7.1:1 LTgui:7.1:500 LTvu:7.1:100000 \
+	LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+	LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE LT_All_VU_Protocols rational 7.5 CD8298ACC192 \
+	COMPONENTS="LT_All_Protocols:7.1:1"
+
+PACKAGE PerformanceStudioOEM rational 7.5 768CFCB275A5 \
+	COMPONENTS="PerformanceStudioSuite:1.0:1 \
+	LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:1 \
+	LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+	LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE LoadTest_Base rational 7.5 27CCA9A18283 \
+	COMPONENTS="LoadTestSuite:7.5:1 \
+	LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:50 LThttp:7.1:1"
+
+PACKAGE TMvtpool rational 8.0 FE4376C9DEE0 \
+	COMPONENTS="TMvirtualtester:8.0:5"
+
+
+PACKAGE RSPS_Evaluation rational 1.5 1C0AB0D69C73 \
+COMPONENTS="PerformanceStudioSuite:1.0:1 \
+LTmaster:7.1:1 LTgui:7.1:10 LTvu:7.1:100 \
+LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE RSPS_Base_License rational 1.5 AAEC0768D8DA \
+COMPONENTS="PerformanceStudioSuite:1.0:1 \
+LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:50 LThttp:7.1:1"
+
+PACKAGE LT_Playback_100VU rational 7.5 10B297DCA509 \
+COMPONENTS="LTvu:7.1:100 LT_100VT:8.0:1"
+
+PACKAGE LT_Playback_250VU rational 7.5 46D73E06F8CA \
+COMPONENTS="LTvu:7.1:250 LT_250VT:8.0:1"
+
+PACKAGE LT_Playback_500VU rational 7.5 EF451B5CFD15 \
+COMPONENTS="LTvu:7.1:500 LT_500VT:8.0:1"
+
+PACKAGE LT_Playback_1000VU rational 7.5 68C15DACA3A7 \
+COMPONENTS="LTvu:7.1:1000 LT_1000VT:8.0:1"
+
+PACKAGE LT_Playback_2500VU rational 7.5 41BCC971EFB0 \
+COMPONENTS="LTvu:7.1:2500 LT_2500VT:8.0:1"
+
+PACKAGE LT_Playback_5000VU rational 7.5 E809693053EF \
+COMPONENTS="LTvu:7.1:5000 LT_5000VT:8.0:1"
+
+PACKAGE LT_Playback_10000VU rational 7.5 79F52A91E693 \
+COMPONENTS="LTvu:7.1:10000 LT_10000VT:8.0:1"
+
+PACKAGE LT_Playback_20000VU rational 7.5 0ED4D35282E1 \
+COMPONENTS="LTvu:7.1:20000 LT_20000VT:8.0:1"
+
+PACKAGE LT_Playback_50000VU rational 7.5 D8A40635DE7B \
+COMPONENTS="LTvu:7.1:50000 LT_50000VT:8.0:1"
+
+PACKAGE LT_Playback_100000VU rational 7.5 2624850A2BBE \
+COMPONENTS="LTvu:7.1:100000 LT_100000VT:8.0:1"
+
+PACKAGE RSPS_TLA_500VU rational 1.5 7EBAF9407ED4 \
+COMPONENTS="PerformanceStudioSuite:1.0:1 \
+LTmaster:7.1:1 LTgui:7.1:500 LTvu:7.1:500 \
+LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE RSPS_TLA_100KVU rational 1.5 E2A84565831B \
+COMPONENTS="PerformanceStudioSuite:1.0:1 \
+LTmaster:7.1:1 LTgui:7.1:500 LTvu:7.1:100000 \
+LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE LT_All_VU_Protocols rational 7.5 CD8298ACC192 \
+COMPONENTS="LT_All_Protocols:7.1:1"
+
+PACKAGE PerformanceStudioOEM rational 7.5 768CFCB275A5 \
+COMPONENTS="PerformanceStudioSuite:1.0:1 \
+LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:1 \
+LTjolt:7.1:1 LTtux:7.1:1 LTsql:7.1:1 \
+LThttp:7.1:1 LTsap:7.1:1 LTcorba:7.1:1 LTdcom:7.1:1"
+
+PACKAGE LoadTest_Base rational 7.5 27CCA9A18283 \
+COMPONENTS="LoadTestSuite:7.5:1 \
+LTmaster:7.1:1 LTgui:7.1:1 LTvu:7.1:50 LThttp:7.1:1"
+
+PACKAGE TMvtpool rational 8.0 FE4376C9DEE0 \
+COMPONENTS="TMvirtualtester:8.0:5"
+
+
+
+#version 1.0
+FEATURE AnalystStudio rational 1.0 permanent uncounted 9C0756A5CC895A4DC28E \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE DevelopmentStudio rational 1.0 permanent uncounted FCA706C5394D26A13CFF \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE TestStudio rational 1.0 permanent uncounted ECE72695F6E3EE600A1C HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE DevelopmentStudioUNIXWeb rational 1.0 permanent uncounted \
+	1C5746B50C1ED97F43F5 HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE RationalSuiteEnterprise rational 1.0 permanent uncounted \
+	CCF7E6F5805454C08AC0 HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+
+
+
+#version 1.1
+FEATURE ClearQuest rational 1.1 permanent uncounted 2C77260550888655BBFF HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE ClearQuest_Web rational 1.1 permanent uncounted 1C1716B58E8A5DC9D39D \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+
+
+#version 3.0
+FEATURE SoDA_Frame rational 3.0 permanent uncounted 0C57C6951CE6B58FAD29 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+
+
+#version 3.5
+FEATURE soda_word rational 3.5 permanent uncounted 1CC746C566D462C0BF91 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+
+
+
+#version 4.0
+FEATURE RequisitePro rational 4.0 permanent uncounted BC67A6E54DCA583B78C4 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE RequisiteWeb rational 4.0 permanent uncounted 2CF7A60568D57BEDB983 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+
+
+#version 5.1
+FEATURE UnifiedProcess rational 5.1 permanent uncounted 1C4796C5E91A28841AF1 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+
+
+#version 6.0
+FEATURE rose_enterprise_windows rational 6.0 permanent uncounted \
+	DC77E6655E39B48E8BBF HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE rose_modeler_windows rational 6.0 permanent uncounted 7C5766053BA16C4DDA2E \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE rose_vb_windows rational 6.0 permanent uncounted 0C87C655FDE13F7B5E81 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE rose_j_windows rational 6.0 permanent uncounted 5C67064560CA6C5A1EDA \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE rose_cpp_windows rational 6.0 permanent uncounted FCB796A578ADDB61F22E \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE rose_ada_windows rational 6.0 permanent uncounted BC57C6755C925C5C4AB4 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE PurifyNT rational 6.0 permanent uncounted AC0716D58F191854056C HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE VisualQuantify rational 6.0 permanent uncounted 3CB7D625E839ED525E93 \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE VisualPureCoverage rational 6.0 permanent uncounted BCA76655132F95013E0F \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+
+
+#version 7.1
+FEATURE TestAccelerator rational 7.1 permanent uncounted 0C2766A5A34E7FBE72AA \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+FEATURE Robot rational 7.1 permanent uncounted 6C873615700DFF7DB886 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE TeamTest rational 7.1 permanent uncounted ECA70655B862179ABD0B HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTmaster rational 7.1 permanent uncounted 1CB736A5A184E5BCF34A HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTgui rational 7.1 permanent uncounted ACE706F598F91350A510 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LThttp rational 7.1 permanent uncounted 8CC77625276CA40F6907 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTsql rational 7.1 permanent uncounted DC37F6F5525EC4C67767 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTtux rational 7.1 permanent uncounted 7C3786C5C599D5AD4077 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTjolt rational 7.1 permanent uncounted 1C67667538473ED51FDC HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTsap rational 7.1 permanent uncounted 9C773675EABA80A65F33 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTdcom rational 7.1 permanent uncounted 9C2786C5D222FCAA4DAB HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE LTcorba rational 7.1 permanent uncounted 0CD776E58EE300D8ADD3 HOSTID=ANY \
+	ISSUER="Homer J. Simpson [uCF]"
+FEATURE atbuCQTeamTest rational 7.1 permanent uncounted 0CA736C51812A8EAAB1F \
+	HOSTID=ANY ISSUER="Homer J. Simpson [uCF]"
+

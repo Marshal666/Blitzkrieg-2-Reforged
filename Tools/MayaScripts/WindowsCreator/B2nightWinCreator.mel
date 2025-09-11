@@ -1,0 +1,63 @@
+//Creation of nght-windows-faces for buldings.(B2, M1 projects)
+//Scaning windows locators("LWindow" position to set position).
+// 07.04.2004 Nival Interactive
+// Eugene Melkov
+
+
+//WindowScaleX è WindowScaleY
+
+global proc B2nightWinCreator(string $winMask, float $width, float $height, float $delta)
+{//start proc
+
+//creation of  mesh for single window:
+     polyPlane -w 1 -h 1 -sx 1 -sy 1 -ax 0 0 1 -tx 1 -ch 0 -n "window";
+     setAttr "window.scaleX" $width;
+     setAttr "window.scaleY" $height;
+
+//get array of windows locators:
+     select -r $winMask;
+     $locsList = `ls -sl -tr`;
+
+
+
+
+//Clone "windows" and put them to right position:
+     for ($loc in $locsList)
+     {
+
+          //add new attributes to the windows locators:
+          select -r $loc;
+
+          addAttr  -longName WindowScaleX -sn wsx -attributeType "float" -min 0 -dv 1;
+          eval ("setAttr  -k 1 " + $loc + ".WindowScaleX");
+
+          addAttr  -longName WindowScaleY -sn wsy -attributeType "float" -min 0 -dv 1;
+          eval ("setAttr  -k 1 " + $loc + ".WindowScaleY");
+
+
+
+
+
+
+
+          select -r "window*";
+          duplicate -rr -n "Dup0";
+          $curentWinName = `ls -sl -tr`;
+          pointConstraint   $loc $curentWinName ;
+          orientConstraint  $loc $curentWinName ;
+          delete (`ls -type  pointConstraint`);
+          delete (`ls -type orientConstraint`);
+          select $curentWinName;
+          move -r -os 0 0 $delta;
+
+          eval ("connectAttr -f " + $curentWinName[0] + ".scaleX " + $loc + ".wsx");
+          eval ("connectAttr -f " + $curentWinName[0] + ".scaleY " + $loc + ".wsy");
+
+
+     }
+
+    // delete "window";
+     select "Dup*";
+     group -n "windows_adj";
+     xform -os -piv 0 0 0;
+}

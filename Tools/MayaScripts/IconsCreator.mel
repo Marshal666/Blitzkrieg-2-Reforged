@@ -1,0 +1,43 @@
+//--- SET DATA
+string $pathData         = "";
+string $temp_path_mod        = "J:/Tools/MayaScripts/temp.mb";
+//string $temp_path_mod        = "J:/Tools/MayaScripts/1.tga";
+
+string $rootMask         = "Basis*";
+int $icResX              = 64; // Icon's width;
+int $icResY              = 64; // Icon's height;
+float $MatAmbVal         = 0.5;// Material ambient val;
+
+//delete "AABB";
+
+
+//--- GET OBJECT FROM SCENE
+
+file -import -type "mayaBinary" -rpr "temp" -options "v=0" $temp_path_mod;
+select -r $rootMask;
+CombinePolygons;
+rename "object";
+rotate -a -os -22 -22 -135 ;
+FreezeTransformations;
+
+
+//CREATING MATERIAL
+
+file -import -type "mayaBinary" -rpr "material" -options "v=0" "J:/Tools/MayaScripts/IconsCreator/material.mb";
+defaultNavigation -connectToExisting -source Icon_Material -destination Icon_MaterialSG;
+shadingNode -as Icon_MaterialSG;
+connectAttr -f Icon_Material.outColor Icon_MaterialSG.surfaceShader;
+sets -e -forceElement Icon_MaterialSG;
+
+
+
+$bsize = `polyEvaluate -b`;
+//$xmid = ($bsize[0] + $bsize[1])/2;
+$ymid = ($bsize[2] + $bsize[3])/2;
+$zmid = ($bsize[4] + $bsize[5])/2;
+
+$xsize = abs($bsize[0] - $bsize[1]);
+$ysize = abs($bsize[2] - $bsize[3]);
+$zsize = abs($bsize[4] - $bsize[5]);
+
+

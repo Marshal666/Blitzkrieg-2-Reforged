@@ -1,0 +1,858 @@
+/*					<------------------------------------->
+					|	PoseStudio public V1.5        |
+					<------------------------------------->
+						for Maya 4.5/5.0
+
+						By : Chang Liu
+						E-mail : artofmaya@sina.com
+						web    : www.smartmel.com
+							 July 2003
+
+___________________________________________________________________________________________________________________
+
+DESCRIPTION : 	PoseStudio is a mel script for maya character animator and character TDs to enhance their character
+		animation pipeline.
+		It has the powerful abilitity to manage a character's pose,
+		Especially ! IT HAS A REALLY COOL UI !
+
+___________________________________________________________________________________________________________________
+
+UPDATE :	V1.0(10.07.2003)  ->	- First public version.
+		V1.5(10.20.2003)  ->	- The UI changed.
+					- The left menu bar was moved to the top area to make the UI more clean.
+					- The UI can be resized vertical to make your work area more flexible.
+___________________________________________________________________________________________________________________
+
+INSTALLATION :	- Copy PoseStudio.mel and PoseStudioUI.mel into your custom script directory
+			( ex : c:\documents and settings\Administrator\My Documents\maya\4.5\scripts\ )
+
+		- Copy all *.bmp file into your custom icon directory
+			( ex : c:\documents and settings\Administrator\My Documents\maya\4.5\prefs\icons\ )
+
+		- Copy shelf_PoseStudio.mel into your maya shelves directory
+			( ex : C:\Documents and Settings\Administrator\My Documents\maya\4.5\prefs\shelves\ )
+
+		- Now open Maya, you will find a new shelf called "PoseStudio" , juset click to start PoseStudio.
+
+		Finally use PosestudioIcon.BMP as an icon of PoseStudio in you shelf.
+
+___________________________________________________________________________________________________________________
+
+HOW TO :	Visit www.smartmel.com to find a tutorial of PoseStudio.
+
+___________________________________________________________________________________________________________________
+*/
+
+
+global proc PoseStudio(){
+
+	global string $Echaracter;
+	global string $lib[];
+	clear $lib;
+	global string $Clib;
+	$Clib = "";
+	global string $CDlib = "";
+	global string $Pfx;
+	global int $PSGlstates = 1;
+	global int $aks = 0;
+	global int $lp = 0;
+	global int $libid;
+	           $libid = 0;
+	global int $nncr;
+	$nncr = 5;
+PSUI;
+}
+
+
+//------------------------------------
+global proc NL(){
+global string $lib[];
+global string $Clib;
+global string $Echaracter;
+string $attrList[];
+string $attrLists;
+string $tmpa0[];
+int $i;
+int $j;
+if ($Echaracter=="")
+	{OP 8;return;}
+$attrList = `character -q $Echaracter`;
+$j = `size $attrList`;
+for ($i=0;$i<$j;$i++)
+	{
+	$tmpa0 = `ls -l $attrList[$i]`;
+	if (`size $tmpa0` > 1)
+		{
+		break;
+		}
+	$attrList[$i] = $tmpa0[0];
+	}
+$attrLists = `sa2s $attrList`;
+int $id = `size $lib`;
+if ($id==5)
+	{
+	string $st= ` confirmDialog -t "Confirm Me" -m "Warning : The PoseLib Overflow!!\n Are You Sure To Continue ?"
+	-button "Yes" -button "No" -db "no"
+	-cb "No" -ds "No"
+	-bgc .76 .75 .745`;
+	if ($st=="No")
+	return;
+	}
+string $name  = `textField  -q -tx LNameInputTF`;
+if ($name == "")
+	{OP 2;return;}
+if ( `objExists $name` )
+	{OP 3;return;}
+$Clib = `createNode groupId -n $name`;
+	addAttr -ln IAL -at bool $name;
+	addAttr -ln ("owner") -dt "string" $name;
+	addAttr -ln ("AttrList") -dt "string" $name;
+	addAttr -ln ("currentPose") -at long $name;
+	addAttr -ln ("poseNumber") -at long $name;
+
+	setAttr ($name+".IAL") 1;
+	setAttr ($name+".owner") -type "string" -l 1 $Echaracter;
+	setAttr ($name+".AttrList") -type "string" -l 1 $attrLists;
+	setAttr ($name+".currentPose") 0;
+	setAttr ($name+".poseNumber") 0;
+int $id = `size $lib`;
+if ($id==5)
+	{
+	$id = 0;
+	}
+$lib[$id] = $Clib;
+LIBSET ($id+1);
+makeLDir $Clib;
+select -cl;
+}
+
+
+//--------------------------------------------------
+global proc sv(){
+	global int $PSGlstates;
+	if ($PSGlstates == 1)
+		{
+		OP 1;
+		return;
+		};
+	global string $Clib;
+	if ($Clib == "")
+		{
+		OP 11;
+		return;
+		}
+	select -r $Clib;
+	string $dir = `makeLDir $Clib`;
+	string $n;
+	string $st;
+	string $res = `promptDialog -t "Fill me" -m "Please input file name." -b "OK" -b "Cancel" -db "OK" -cb "Cancel" -ds "Cancel" -bgc .76 .75 .745`;
+if ($res != "OK")
+	{
+	return;
+	}
+$n = `promptDialog -query -text`;
+string $dir = $dir + "/"+$n+".ma";
+if ((`filetest -r $dir`))
+	{
+	$st = `confirmDialog -t "Confirm Me" -m ("The file"+$n+".ma exists! Will you write it?")
+			-button "Yes" -button "No" -db "no"
+			-cb "No" -ds "No"
+			-bgc .76 .75 .745`;
+	if (($st == "No")&&($st==""))
+		{
+		OP 10;
+		return;
+		}
+	file -es -typ mayaAscii $dir;
+	print ("// done : "+$dir+"\n");
+	}
+file -es -typ mayaAscii $dir;
+print ("// done : "+$dir+"\n");
+
+}
+
+//----------------------------------------------------------------
+
+global proc int RV(int $sa,string $bn,string $i01,string $i02){
+string $IN = `iconTextButton -q -i1 $bn`;
+if ($IN==$i01)
+   iconTextButton -e -i1 $i02 $bn;
+else
+   iconTextButton -e -i1 $i01 $bn;
+if ($sa ==0)
+    $sa = 1;
+else
+    $sa = 0;
+return $sa;
+}
+
+
+
+
+
+global proc string DC(){
+string $cs[] = `ls -sl`;
+if ($cs[0] == "")
+	{OP 4;
+	return "";}
+if (`nodeType $cs[0]` != "character")
+	{OP 5;
+	return "";}
+print ("// done : current character is "+$cs[0]+"\n");
+return $cs[0];
+}
+
+
+
+
+global proc UpdateInfoDisp(){
+global string $Echaracter;
+global string $Clib;
+text -e -l $Echaracter PSchrTEX;
+text -e -l $Clib PSlibTEX;
+}
+
+
+
+
+global proc LIBSET(int $c){
+print "a;";print $c;print "\n";
+global int $libid;
+global string $lib[];//0-5 lib
+global string $Clib;
+int $hr = 0;
+if ($c>`size $lib`)
+	{
+	OP 6;
+	return;
+	}
+if (`columnLayout -ex aboutlay`)
+	{
+	deleteUI -lay aboutlay;
+	iconTextButton -e -i1 "PSabo4414.BMP" -en 1 b18;
+	}
+iconTextButton -e -i1 "PSls01.BMP" tb10;
+iconTextButton -e -i1 "PSls01.BMP" tb11;
+iconTextButton -e -i1 "PSls01.BMP" tb12;
+iconTextButton -e -i1 "PSls01.BMP" tb13;
+iconTextButton -e -i1 "PSls01.BMP" tb14;
+int $i;
+int $a = `size $lib`;
+for ($i=1;$i<=$a;$i++)
+	{
+	iconTextButton -e -ann $lib[$i-1] ("tb"+($i+9));
+	iconTextButton -e  -i1 "PSls02.BMP" ("tb"+($i+9));
+	}
+$Clib = $lib[$c-1];
+
+switch ($c)
+	{
+	case 1:
+	iconTextButton -e -i1 "PSls03.BMP" tb10;
+	break;
+	case 2:
+	iconTextButton -e -i1 "PSls03.BMP" tb11;
+	break;
+	case 3:
+	iconTextButton -e -i1 "PSls03.BMP" tb12;
+	break;
+	case 4:
+	iconTextButton -e -i1 "PSls03.BMP" tb13;
+	break;
+	case 5:
+	iconTextButton -e -i1 "PSls03.BMP" tb14;
+	break;
+	}
+print ("// done : Current lib = "+$Clib+"("+$c+")\n");
+
+if (!`gridLayout -q -ex gridlayout`)
+	{
+	string $gridlayout = `gridLayout -p scrolls -nc 6 -cwh 72 110 -bgc .76 .75 .745 gridlayout`;
+	updateGrid;
+	$hr = 1;
+	}
+print "b;";print $libid;print "\n";
+print "c;";print $c;print "\n";
+text -e -l $Clib PSlibTEX;
+if ($libid != $c)
+	{
+	if ($hr == 0)
+		{
+		updateGrid;
+		}
+	$libid =$c;
+	print "d;";print $libid;print "\n";
+	}
+}
+
+
+
+
+
+global proc LL(){
+global string $lib[];
+global string $Clib;
+
+int $free = 5-`size $lib`;
+string $selLib[] = `textScrollList -q -si LlibTSL`;
+int $numofsel = `size $selLib`;
+print $free;print "\n";
+if ($numofsel>$free)
+	{
+	string $st= ` confirmDialog -t "Confirm Me" -m "Warning : The PoseLib Overflow!!\n Not All Sel Will Be Loaded!!"
+	-button "Yes" -button "No" -db "no"
+	-cb "No" -ds "No"
+	-bgc .76 .75 .745`;
+	}
+int $i;
+int $j = 5 - $free;
+int $t = $free;$t = $free<$numofsel ? $free : $numofsel;
+for ($i=0;$i<$t;$i++)
+	{
+	$lib[$j + $i] = $selLib[$i];
+	}
+for ($i=0;$i<`size $lib`;$i++)
+	{
+	if ($lib[$i] == $Clib)
+		$j = $i;
+	}
+if ($Clib=="")
+	LIBSET 1;
+else
+	LIBSET ($j+1);
+}
+
+
+
+
+
+global proc sellib(){
+string $selLib[] = `textScrollList -q -si LlibTSL`;
+if (`size $selLib` == 0)
+return;
+select -r $selLib[0];
+}
+
+
+
+
+
+global proc CLS(){
+global string $lib[];
+global string $Clib;
+string $st= ` confirmDialog -t "Confirm Me" -m "Are You Sure To Clean Lib Stor?"
+	-button "Yes" -button "No" -db "no"
+	-cb "No" -ds "No"
+	-bgc .76 .75 .745`;
+if ($st == "No")
+	return;
+clear $lib;
+iconTextButton -e -i1 "PSls01.BMP" tb10;
+iconTextButton -e -i1 "PSls01.BMP" tb11;
+iconTextButton -e -i1 "PSls01.BMP" tb12;
+iconTextButton -e -i1 "PSls01.BMP" tb13;
+iconTextButton -e -i1 "PSls01.BMP" tb14;
+clear $lib;
+$Clib = "";
+updateGrid;
+}
+
+
+
+
+global proc RSL(){
+global string $lib[];
+global string $Clib;
+string $st= `confirmDialog -t "Confirm Me" -m "Are You Sure To Remove The Lib??"
+		-button "Yes" -button "No" -db "no"
+		-cb "No" -ds "No"
+		-bgc .76 .75 .745`;
+if ($st == "No")
+	return;
+string $rm[];$rm[0] = $Clib;
+$lib = stringArrayRemove($rm,$lib);
+LIBSET 1;
+}
+
+
+
+
+global proc OP(int $s){
+switch ($s)
+	{
+	case 1:
+	error " You are in animate model,please switch to edit model!!";
+	break;
+	case 2:
+	warning " You have to input lib name!";
+	break;
+	case 3:
+	warning " The name exists ,Rename and try again!";
+	break;
+	case 4:
+	warning " You select nothing!!!";
+	break;
+	case 5:
+	warning " One character obj should be selected!";
+	break;
+	case 6:
+	warning " No lib stor here!!";
+	break;
+	case 7:
+	warning " No current lib!!";
+	break;
+	case 8:
+	warning " No current character!!";
+	break;
+	case 9:
+	warning " You have to input the pose's name!!";
+	break;
+	case 10:
+	warning " You have to input the lib file name!!";
+	break;
+	case 11:
+	warning " No lib in stor!!";
+	break;
+	case 12:
+	warning " As you turn on the prefix , You have to input something .";
+	break;
+	case 13:
+	warning " No pose !!";
+	break;
+	}
+}
+
+
+
+
+
+
+global proc NP(int $st){
+	global string $Clib;
+	string $pn;
+	int $maxID;
+	int $opid;
+		if ($Clib == "")
+			{OP 7;return;}
+	if ($st == 0)
+		{
+		$pn = `textField -q -tx PNTF`;
+		if ($pn == "")
+			{
+			OP 9;return;
+			}
+		$maxID = `getAttr ($Clib+".poseNumber")`;
+		}
+	if ($st == 0)
+		{
+		$opid = $maxID+1;
+		}
+	else
+	{
+	$opid = `getAttr ($Clib+".currentPose")`;
+	}
+string $attrList = `getAttr ($Clib+".AttrList")`;
+string $attrlist[] = `s2sa $attrList`;
+string $attrValueListA[] = `getAttrValue $attrlist`;
+$attrValueListA[0] = `sa2s $attrValueListA`;
+	if ($st == 0)
+		{
+		addAttr -ln ("P"+$opid) -dt "string" $Clib;
+		addAttr -ln ("P"+$opid+"Value") -dt "string" $Clib;
+		addAttr -ln ("P"+$opid+"Icon") -dt "string" $Clib;
+		setAttr ($Clib+(".P"+$opid)) -type "string" -l 1 $pn;
+		}
+setAttr ($Clib+(".P"+$opid+"Value"))  -l 0;
+setAttr ($Clib+(".P"+$opid+"Value")) -type "string" -l 1 $attrValueListA[0];
+	if ($st == 0)
+		{
+		setAttr ($Clib+".currentPose") $opid;
+		setAttr ($Clib+".poseNumber") $opid;
+		newBox $opid;
+		}
+	if ($st == 1)
+	print ("done : pose saved!!!\n");
+}
+
+
+
+
+
+global proc string sa2s(string $isa[]){
+int $i;
+int $j = `size $isa`;
+string $rs;
+	for ($i=0;$i<$j;$i++)
+	{
+	if ($i==0)
+		{
+		$rs = $isa[$i];
+		}
+	else
+		{
+		$rs = $rs + " " + $isa[$i];
+		}
+	}
+return $rs;
+}
+global proc string[] s2sa(string $is){
+string $rsa[];
+tokenizeList($is, $rsa);
+return $rsa;
+}
+global proc string[] getAttrValue (string $ias[]){
+print $ias;
+	string $ca;
+	float  $cavs[];
+	string $avs[];
+	int $i = 0;
+	for ($ca in $ias)
+		{
+		$cavs[$i] = `getAttr $ca`;
+		$avs[$i] = $cavs[$i];
+		$i++;
+		}
+return $avs;
+}
+
+
+
+
+
+global proc string makeLDir(string $libN){
+	string $tmp[] = `workspace -q -lw`;
+	string $workSpaceDir = $tmp[1];
+	string $DirName = ($workSpaceDir+"/poseData");
+if (!(`filetest -d $DirName`))
+	sysFile -makeDir $DirName;
+$DirName = $DirName + "/"+$libN+"Data";
+if (!(`filetest -d $DirName`))
+	sysFile -makeDir $DirName;
+return $DirName;
+}
+
+
+
+
+
+
+global proc string iconize(string $ld,string $pn){
+	$cTime = `currentTime -q`;
+	$cf = `getAttr defaultRenderGlobals.imageFormat`;
+	setAttr defaultRenderGlobals.imageFormat 20;
+string $ifile =`playblast -orn off -st $cTime -et $cTime -w 70 -h 70 -p 100 -v off -fo -fmt image -f ($ld+"/"+$pn)`;
+$ilist = `getFileList -folder ($ld+"/") -filespec ($pn+".*.bmp")`;
+if (`filetest -r ($ld+"/"+$pn+"Icon.bmp")`)
+sysFile -delete ($ld+"/"+$pn+"Icon.bmp");
+sysFile -rename ($ld+"/"+$pn+"Icon.bmp") ($ld+"/"+$ilist[0]);
+setAttr defaultRenderGlobals.imageFormat $cf;
+return ($ld+"/"+$pn+"Icon.bmp");
+}
+
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+global proc doicon(){
+global string $Clib;
+if ($Clib == "")
+	{
+	OP 11;
+	return;
+}
+global int    $PSGlstates;
+if ($PSGlstates == 1)
+	{
+	OP 1;
+	return;
+	}
+if (`getAttr ($Clib+".poseNumber")`==0)
+	{
+	OP 13;
+	return;
+	}
+string $libDir = `makeLDir $Clib`;
+string $id = `getAttr ($Clib+".currentPose")`;
+string $pname = `getAttr ($Clib+".P"+$id)`;
+string $icon = `iconize $libDir $pname`;    ///FIND!!!!!
+iconTextButton -e -i1 "" ($Clib+"P"+$id+"ITB");
+iconTextButton -e -i1 $icon ($Clib+"P"+$id+"ITB");
+setAttr -type "string" ($Clib+".P"+$id+"Icon") $icon;
+print ("// done : one icon created( "+$icon+" )!!\n");
+}
+
+
+
+
+
+
+
+global proc dp(){
+global int $PSGlstates;
+global string $Clib;
+if ($Clib == "")
+	{
+	OP 11;
+	return;
+}
+if ($PSGlstates == 1)
+	{
+	OP 1;
+	return;
+	}
+if (`getAttr ($Clib+".poseNumber")`==0)
+	{
+	OP 13;
+	return;
+	}
+string $st= `confirmDialog -t "Confirm Me" -m "Are You Sure To delete the pose??"
+		-button "Yes" -button "No" -db "no"
+		-cb "No" -ds "No"
+		-bgc .76 .75 .745`;
+if ($st == "No")
+	return;
+global string $Clib;
+int $id =  `getAttr ($Clib+".currentPose")`;
+int $mid = `getAttr ($Clib+".poseNumber")`;
+int $i;
+deleteAttr ($Clib+".P"+$id);
+deleteAttr ($Clib+".P"+$id+"Value");
+deleteAttr ($Clib+".P"+$id+"Icon");
+for ($i=($id+1);$i<=$mid;$i++)
+	{
+	renameAttr ($Clib+".P"+$i+"") ("P"+($i-1)+"");
+	renameAttr ($Clib+".P"+$i+"Value") ("P"+($i-1)+"Value");
+	renameAttr ($Clib+".P"+$i+"Icon") ("P"+($i-1)+"Icon");
+	}
+setAttr ($Clib+".poseNumber") ($mid-1);
+updateGrid;
+}
+
+
+
+
+
+
+global proc updateGrid(){
+	global string $Clib;
+	int $i;
+	int $pnum;
+	int $id;
+if ($Clib!="")
+	{
+	$pnum = `getAttr ($Clib+".poseNumber")`;
+	}
+if (`gridLayout -q -ex gridlayout`)
+	{
+	deleteUI -lay gridlayout;
+	}
+string $gridlayout = `gridLayout -p scrolls -nc 6 -cwh 72 110 -bgc .76 .75 .745 gridlayout`;
+if ($Clib!="")
+	{
+	for ($i=1;$i<=$pnum;$i++)
+		{
+		newBox $i;
+		}
+	}
+if ($pnum!=0)
+	{
+	$id =`getAttr ($Clib+".currentPose")`;
+	iconTextButton -e -bgc .0 0 .45 ($Clib+"P"+$id+"ITB");
+	}
+}
+
+
+
+
+
+
+global proc ov(){
+	global string $Clib;
+	string $tmp[] = `workspace -q -lw`;
+	string $workSpaceDir = $tmp[1];
+	string $DirName = ($workSpaceDir+"/poseData");
+if ($Clib != "")
+	{
+	$DirName+=("/"+$Clib+"Data");
+	}
+$ext = "/*.ma";
+	$init=$DirName + $ext;
+	$text=`fileDialog -dm $init`;
+if ($text != "")
+	{
+	file -i -typ mayaAscii $text;
+	print ("// done : One lib inputed . Use \"load lib\" to load the lib.\n");
+	}
+}
+
+
+
+
+
+global proc setV(int $st,float $p){
+global string $Clib;
+string $CPid = `getAttr ($Clib+".currentPose")`;
+string $pvs = `getAttr ($Clib+".P"+$CPid+"Value")`;
+string $pva[] = `s2sa $pvs`;
+float  $pvfa[] = `sa2fa $pva`;
+string $attrs = `getAttr ($Clib+".AttrList")`;
+string $attrlist[] = `s2sa $attrs`;
+int $s = `size $attrlist`;
+int $i;
+if ($p == 1)
+	{
+	setAttrValue $attrlist $pvfa;
+	return;
+	}
+string $ova[] = `getAttrValue $attrlist`;
+float  $ovfa[] = `sa2fa $ova`;
+if ($st == 0)
+	{
+		for ($i=0;$i<$s;$i++)
+		{
+		$pvfa[$i] = $pvfa[$i] - $ovfa[$i];
+		$ovfa[$i] = $ovfa[$i] + ($pvfa[$i]*$p);
+		}
+	}
+else
+	{
+		for ($i=0;$i<$s;$i++)
+		{
+		$pvfa[$i] = $pvfa[$i] - $ovfa[$i];
+		$ovfa[$i] = $ovfa[$i] - ($pvfa[$i]*$p);
+		}
+	}
+setAttrValue $attrlist $ovfa;
+}
+
+
+
+
+
+
+
+
+global proc setAttrValue(string $oal[],float $oavl[]){
+int $s = `size $oal`;
+int $i;
+for ($i=0;$i<$s;$i++)
+	{
+	setAttr $oal[$i] $oavl[$i];
+	}
+}
+
+
+
+
+
+global proc Licon(string $boxname){
+global string $Clib;
+int $id = `getAttr ($Clib+".currentPose")`;
+string $text;
+string $ws[], $init;
+$ws=`workspace -q -lw`;
+$init=$ws[1] + "/*.bmp";
+$text=`fileDialog -dm $init`;
+if ($text==""){return;}
+setAttr -type "string" ($Clib+".P"+$id+"Icon") $text;
+iconTextButton -e -i1 $text $boxname;
+print ("// done : "+$text+"\n");
+}
+
+
+
+
+global proc Spose(){
+global string $Clib;
+if ($Clib == "")
+	{
+	OP 11;
+	return;
+}
+global int $PSGlstates;
+if ($PSGlstates == 1)
+	{
+	OP 1;
+	return;
+	};
+if (`getAttr ($Clib+".poseNumber")`==0)
+	{
+	OP 13;
+	return;
+	}
+string $st= `confirmDialog -t "Confirm Me" -m "Are You Sure To Write Current Pose??"
+		-button "Yes" -button "No" -db "no"
+		-cb "No" -ds "No"
+		-bgc .76 .75 .745`;
+if ($st == "No")
+	return;
+NP 1;
+}
+
+
+
+
+
+global proc float[] sa2fa(string $is[]){
+float $ofa[];
+int $s = `size $is`;
+for ($i=0;$i<$s;$i++)
+	{
+	$ofa[$i] = $is[$i];
+	}
+return $ofa;
+}
+
+
+
+
+
+
+
+global proc string nav(string $is,int $st){
+string $tmp;
+if ($st == 0)
+	{
+	$tmp = substituteAllString($is, "-", "_");
+	}
+else
+	{
+	$tmp = substituteAllString($is, "_", "-");
+	}
+return $tmp;
+}
+
+
+
+
+
+
+
+global proc refcolor(){
+global string $Clib;
+int $n = `getAttr ($Clib+".poseNumber")`;
+int $i;
+for ($i=1;$i<=$n;$i++)
+	{
+	iconTextButton -e -bgc .76 .75 .745 ($Clib+"P"+$i+"ITB");
+	}
+}
+
+
+
+
+
+global proc rimage(int $cp){
+global int $lp;
+global string $Clib;
+int $n;
+int $i;
+if ($cp != $lp)
+	{
+	$lp = $cp;
+	$n = `getAttr ($Clib+".poseNumber")`;
+	for ($i=1;$i<=$n;$i++)
+		{
+		iconTextButton -e -en 1 ($Clib+"P"+$i+"ITB");
+		}
+	}
+}

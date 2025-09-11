@@ -1,0 +1,18 @@
+global proc int B2ExportParticles( string $name, string $dst, string $src, string $exportPrefix, string $pluginName, string $pluginFileName )
+{
+	loadPlugin $pluginFileName;
+	cycleCheck -e off;
+
+    sysFile -del $dst;
+    if ($src != `file -q -sceneName`) {
+        file -o -f $src;
+    }
+
+	string $list[] = `ls -type objectSet $exportPrefix`;
+	for ($item in $list)
+		select -add -ne $item;
+
+	file -es -f -typ $pluginName -op "particles=1;" $dst;
+
+    return !(`filetest -f $dst`);
+}

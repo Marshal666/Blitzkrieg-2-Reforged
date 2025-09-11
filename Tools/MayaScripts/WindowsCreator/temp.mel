@@ -1,0 +1,12 @@
+window -t "ex";
+paneLayout -configuration "horizontal2";
+columnLayout;
+     floatSliderGrp -l "fff" -min -10 -max 10;
+     setParent ..;
+
+     frameLayout -labelVisible false;
+        modelPanel -e -cam "top";
+        showWindow;
+
+
+

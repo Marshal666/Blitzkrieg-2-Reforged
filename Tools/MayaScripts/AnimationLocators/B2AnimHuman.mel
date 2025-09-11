@@ -1,0 +1,1781 @@
+//Script for creating animation data
+//Developed for B2 project.
+//Nival Interactive 2003
+//Creator: Eugene Melkov
+
+//checking of animation existence
+
+//global proc B2AnimHuman()
+//{
+      string $a1;
+
+
+if (exist("Animations")==0) spaceLocator -p 0 0 0 -n "Animations";
+
+//check existence of UI
+if ( (`window -ex HumAnimLoc`) == true ) deleteUI HumAnimLoc;
+
+
+//create UI
+window -title "Create animation locators for human units" -widthHeight 400 400 HumAnimLoc;
+               scrollLayout scrollLayout;
+             columnLayout -adjustableColumn true;
+             button -l "R E F R E S H" -c "source \"B2AnimHuman.mel\";";
+             button -l "Add action point to selected locator" -c "addAPsel()";
+             text " ";
+
+
+
+//Comment names
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    text " " ;
+                    text"animation/weapon";
+                    text"start frame";
+                    text"end frame";
+                setParent..;
+
+//----------------------------------------MOVE----------------------------------------------
+
+     $a1 = "MOVE";
+
+
+     $ch_boxName_a1 = "chb_"+$a1;
+     $butName_a1    = "b_"  +$a1;
+     $fieldName1_a1 = $a1  +"_sf";
+     $fieldName2_a1 = $a1  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a1))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a1;
+                         //change_chb($ch_boxName_a1);
+
+                         button -l $a1 -en 1 -c "set_weapon($a1)" $butName_a1;
+                         intField -en 1 $fieldName1_a1;
+                         intField -en 1 $fieldName2_a1;
+                         connectControl $fieldName1_a1 ($a1+".start_frame");
+                         connectControl $fieldName2_a1 ($a1+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a1)" $ch_boxName_a1;
+                         setAllKey ($a1);
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a1;
+                         button -l $a1 -en 0 -c "set_weapon($a1)" $butName_a1;
+                         intField -en 0 $fieldName1_a1;
+                         intField -en 0 $fieldName2_a1;
+                        // connectControl $fieldName1_a1 ($a1+".start_frame");
+                        // connectControl $fieldName2_a1 ($a1+".EndTime");
+                         checkBox -e -cc  "change_chb($a1)" $ch_boxName_a1;
+
+                    }
+               setParent..;
+
+
+//----------------------------------------MARCH----------------------------------------------
+ $a2 = "MARCH";
+
+
+     $ch_boxName_a2 = "chb_"+$a2;
+     $butName_a2    = "b_"  +$a2;
+     $fieldName1_a2 = $a2  +"_sf";
+     $fieldName2_a2 = $a2  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a2))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a2;
+                         button -l $a2 -en 1 -c "set_weapon($a2)" $butName_a2;
+                         intField -en 1 $fieldName1_a2;
+                         intField -en 1 $fieldName2_a2;
+                         connectControl $fieldName1_a2 ($a2+".start_frame");
+                         connectControl $fieldName2_a2 ($a2+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a2)" $ch_boxName_a2;
+                         setAllKey ($a2);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a2;
+                         button -l $a2 -en 0 -c "set_weapon($a2)" $butName_a2;
+                         intField -en 0 $fieldName1_a2;
+                         intField -en 0 $fieldName2_a2;
+                         checkBox -e -cc  "change_chb($a2)" $ch_boxName_a2;
+                    }
+               setParent..;
+
+
+//----------------------------------------WALK----------------------------------------------
+ $a3 = "WALK";
+
+
+     $ch_boxName_a3 = "chb_"+$a3;
+     $butName_a3    = "b_"  +$a3;
+     $fieldName1_a3 = $a3  +"_sf";
+     $fieldName2_a3 = $a3  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a3))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a3;
+                         button -l $a3 -en 1 -c "set_weapon($a3)" $butName_a3;
+                         intField -en 1 $fieldName1_a3;
+                         intField -en 1 $fieldName2_a3;
+                         connectControl $fieldName1_a3 ($a3+".start_frame");
+                         connectControl $fieldName2_a3 ($a3+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a3)" $ch_boxName_a3;
+                         setAllKey ($a3);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a3;
+                         button -l $a3 -en 0 -c "set_weapon($a3)" $butName_a3;
+                         intField -en 0 $fieldName1_a3;
+                         intField -en 0 $fieldName2_a3;
+                         checkBox -e -cc  "change_chb($a3)" $ch_boxName_a3;
+                    }
+               setParent..;
+//----------------------------------------CRAWL----------------------------------------------
+ $a4 = "CRAWL";
+
+
+     $ch_boxName_a4 = "chb_"+$a4;
+     $butName_a4    = "b_"  +$a4;
+     $fieldName1_a4 = $a4  +"_sf";
+     $fieldName2_a4 = $a4  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a4))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a4;
+                         button -l $a4 -en 1 -c "set_weapon($a4)" $butName_a4;
+                         intField -en 1 $fieldName1_a4;
+                         intField -en 1 $fieldName2_a4;
+                         connectControl $fieldName1_a4 ($a4+".start_frame");
+                         connectControl $fieldName2_a4 ($a4+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a4)" $ch_boxName_a4;
+                         setAllKey ($a4);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a4;
+                         button -l $a4 -en 0 -c "set_weapon($a4)" $butName_a4;
+                         intField -en 0 $fieldName1_a4;
+                         intField -en 0 $fieldName2_a4;
+                         checkBox -e -cc  "change_chb($a4)" $ch_boxName_a4;
+                    }
+               setParent..;
+
+//----------------------------------------SHOOT----------------------------------------------
+ $a5 = "SHOOT";
+
+
+     $ch_boxName_a5 = "chb_"+$a5;
+     $butName_a5    = "b_"  +$a5;
+     $fieldName1_a5 = $a5  +"_sf";
+     $fieldName2_a5 = $a5  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a5))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a5;
+                         button -l $a5 -en 1 -c "set_weapon($a5)" $butName_a5;
+                         intField -en 1 $fieldName1_a5;
+                         intField -en 1 $fieldName2_a5;
+                         connectControl $fieldName1_a5 ($a5+".start_frame");
+                         connectControl $fieldName2_a5 ($a5+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a5)" $ch_boxName_a5;
+                         setAllKey ($a5);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a5;
+                         button -l $a5 -en 0 -c "set_weapon($a5)" $butName_a5;
+                         intField -en 0 $fieldName1_a5;
+                         intField -en 0 $fieldName2_a5;
+                         checkBox -e -cc  "change_chb($a5)" $ch_boxName_a5;
+                    }
+               setParent..;
+
+
+
+//----------------------------------------SHOOT_TRENCH----------------------------------------------
+ $a6 = "SHOOT_TRENCH";
+
+
+     $ch_boxName_a6 = "chb_"+$a6;
+     $butName_a6    = "b_"  +$a6;
+     $fieldName1_a6 = $a6  +"_sf";
+     $fieldName2_a6 = $a6  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a6))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a6;
+                         button -l $a6 -en 1 -c "set_weapon($a6)" $butName_a6;
+                         intField -en 1 $fieldName1_a6;
+                         intField -en 1 $fieldName2_a6;
+                         connectControl $fieldName1_a6 ($a6+".start_frame");
+                         connectControl $fieldName2_a6 ($a6+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a6)" $ch_boxName_a6;
+                         setAllKey ($a6);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a6;
+                         button -l $a6 -en 0 -c "set_weapon($a6)" $butName_a6;
+                         intField -en 0 $fieldName1_a6;
+                         intField -en 0 $fieldName2_a6;
+                         checkBox -e -cc  "change_chb($a6)" $ch_boxName_a6;
+                    }
+               setParent..;
+
+//----------------------------------------SHOOT_DOWN----------------------------------------------
+ $a7 = "SHOOT_DOWN";
+
+
+     $ch_boxName_a7 = "chb_"+$a7;
+     $butName_a7    = "b_"  +$a7;
+     $fieldName1_a7 = $a7  +"_sf";
+     $fieldName2_a7 = $a7  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a7))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a7;
+                         button -l $a7 -en 1 -c "set_weapon($a7)" $butName_a7;
+                         intField -en 1 $fieldName1_a7;
+                         intField -en 1 $fieldName2_a7;
+                         connectControl $fieldName1_a7 ($a7+".start_frame");
+                         connectControl $fieldName2_a7 ($a7+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a7)" $ch_boxName_a7;
+                         setAllKey ($a7);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a7;
+                         button -l $a7 -en 0 -c "set_weapon($a7)" $butName_a7;
+                         intField -en 0 $fieldName1_a7;
+                         intField -en 0 $fieldName2_a7;
+                         checkBox -e -cc  "change_chb($a7)" $ch_boxName_a7;
+                    }
+               setParent..;
+
+//----------------------------------------IDLE_REST----------------------------------------------
+ $a8 = "IDLE_REST";
+
+
+     $ch_boxName_a8 = "chb_"+$a8;
+     $butName_a8    = "b_"  +$a8;
+     $fieldName1_a8 = $a8  +"_sf";
+     $fieldName2_a8 = $a8  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a8))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a8;
+                         button -l $a8 -en 1 -c "set_weapon($a8)" $butName_a8;
+                         intField -en 1 $fieldName1_a8;
+                         intField -en 1 $fieldName2_a8;
+                         connectControl $fieldName1_a8 ($a8+".start_frame");
+                         connectControl $fieldName2_a8 ($a8+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a8)" $ch_boxName_a8;
+                         setAllKey ($a8);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a8;
+                         button -l $a8 -en 0 -c "set_weapon($a8)" $butName_a8;
+                         intField -en 0 $fieldName1_a8;
+                         intField -en 0 $fieldName2_a8;
+                         checkBox -e -cc  "change_chb($a8)" $ch_boxName_a8;
+                    }
+               setParent..;
+
+//----------------------------------------IDLE----------------------------------------------
+ $a9 = "IDLE";
+
+
+     $ch_boxName_a9 = "chb_"+$a9;
+     $butName_a9    = "b_"  +$a9;
+     $fieldName1_a9 = $a9  +"_sf";
+     $fieldName2_a9 = $a9  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a9))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a9;
+                         button -l $a9 -en 1 -c "set_weapon($a9)" $butName_a9;
+                         intField -en 1 $fieldName1_a9;
+                         intField -en 1 $fieldName2_a9;
+                         connectControl $fieldName1_a9 ($a9+".start_frame");
+                         connectControl $fieldName2_a9 ($a9+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a9)" $ch_boxName_a9;
+                         setAllKey ($a9);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a9;
+                         button -l $a9 -en 0 -c "set_weapon($a9)" $butName_a9;
+                         intField -en 0 $fieldName1_a9;
+                         intField -en 0 $fieldName2_a9;
+                         checkBox -e -cc  "change_chb($a9)" $ch_boxName_a9;
+                    }
+               setParent..;
+
+//----------------------------------WEAPON_SHOW------------------------
+$a10 = "WEAPON_SHOW";
+
+
+     $ch_boxName_a10 = "chb_"+$a10;
+     $butName_a10    = "b_"  +$a10;
+     $fieldName1_a10 = $a10  +"_sf";
+     $fieldName2_a10 = $a10  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a10))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a10;
+                         button -l $a10 -en 1 -c "set_weapon($a10)" $butName_a10;
+                         intField -en 1 $fieldName1_a10;
+                         intField -en 1 $fieldName2_a10;
+                         connectControl $fieldName1_a10 ($a10+".start_frame");
+                         connectControl $fieldName2_a10 ($a10+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a10)" $ch_boxName_a10;
+                         setAllKey ($a10);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a10;
+                         button -l $a10 -en 0 -c "set_weapon($a10)" $butName_a10;
+                         intField -en 0 $fieldName1_a10;
+                         intField -en 0 $fieldName2_a10;
+                         checkBox -e -cc  "change_chb($a10)" $ch_boxName_a10;
+                    }
+               setParent..;
+
+//----------------------------------WEAPON_HIDE------------------------
+$a11 = "WEAPON_HIDE";
+
+
+     $ch_boxName_a11 = "chb_"+$a11;
+     $butName_a11    = "b_"  +$a11;
+     $fieldName1_a11 = $a11  +"_sf";
+     $fieldName2_a11 = $a11  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a11))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a11;
+                         button -l $a11 -en 1 -c "set_weapon($a11)" $butName_a11;
+                         intField -en 1 $fieldName1_a11;
+                         intField -en 1 $fieldName2_a11;
+                         connectControl $fieldName1_a11 ($a11+".start_frame");
+                         connectControl $fieldName2_a11 ($a11+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a11)" $ch_boxName_a11;
+                         setAllKey ($a11);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a11;
+                         button -l $a11 -en 0 -c "set_weapon($a11)" $butName_a11;
+                         intField -en 0 $fieldName1_a11;
+                         intField -en 0 $fieldName2_a11;
+                         checkBox -e -cc  "change_chb($a11)" $ch_boxName_a11;
+                    }
+               setParent..;
+
+
+//----------------------------------LIE------------------------
+$a12 = "LIE";
+
+
+     $ch_boxName_a12 = "chb_"+$a12;
+     $butName_a12    = "b_"  +$a12;
+     $fieldName1_a12 = $a12  +"_sf";
+     $fieldName2_a12 = $a12  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a12))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a12;
+                         button -l $a12 -en 1 -c "set_weapon($a12)" $butName_a12;
+                         intField -en 1 $fieldName1_a12;
+                         intField -en 1 $fieldName2_a12;
+                         connectControl $fieldName1_a12 ($a12+".start_frame");
+                         connectControl $fieldName2_a12 ($a12+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a12)" $ch_boxName_a12;
+                         setAllKey ($a12);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a12;
+                         button -l $a12 -en 0 -c "set_weapon($a12)" $butName_a12;
+                         intField -en 0 $fieldName1_a12;
+                         intField -en 0 $fieldName2_a12;
+                         checkBox -e -cc  "change_chb($a12)" $ch_boxName_a12;
+                    }
+               setParent..;
+
+
+//----------------------------------STAND------------------------
+$a13 = "STAND";
+
+
+     $ch_boxName_a13 = "chb_"+$a13;
+     $butName_a13    = "b_"  +$a13;
+     $fieldName1_a13 = $a13  +"_sf";
+     $fieldName2_a13 = $a13  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a13))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a13;
+                         button -l $a13 -en 1 -c "set_weapon($a13)" $butName_a13;
+                         intField -en 1 $fieldName1_a13;
+                         intField -en 1 $fieldName2_a13;
+                         connectControl $fieldName1_a13 ($a13+".start_frame");
+                         connectControl $fieldName2_a13 ($a13+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a13)" $ch_boxName_a13;
+                         setAllKey ($a13);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a13;
+                         button -l $a13 -en 0 -c "set_weapon($a13)" $butName_a13;
+                         intField -en 0 $fieldName1_a13;
+                         intField -en 0 $fieldName2_a13;
+                         checkBox -e -cc  "change_chb($a13)" $ch_boxName_a13;
+                    }
+               setParent..;
+
+
+//----------------------------------DEATH------------------------
+$a14 = "DEATH";
+
+
+     $ch_boxName_a14 = "chb_"+$a14;
+     $butName_a14    = "b_"  +$a14;
+     $fieldName1_a14 = $a14  +"_sf";
+     $fieldName2_a14 = $a14  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a14))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a14;
+                         button -l $a14 -en 1 -c "set_weapon($a14)" $butName_a14;
+                         intField -en 1 $fieldName1_a14;
+                         intField -en 1 $fieldName2_a14;
+                         connectControl $fieldName1_a14 ($a14+".start_frame");
+                         connectControl $fieldName2_a14 ($a14+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a14)" $ch_boxName_a14;
+                         setAllKey ($a14);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a14;
+                         button -l $a14 -en 0 -c "set_weapon($a14)" $butName_a14;
+                         intField -en 0 $fieldName1_a14;
+                         intField -en 0 $fieldName2_a14;
+                         checkBox -e -cc  "change_chb($a14)" $ch_boxName_a14;
+                    }
+               setParent..;
+
+//----------------------------------DEATH_DOWN------------------------
+$a15 = "DEATH_DOWN";
+
+
+     $ch_boxName_a15 = "chb_"+$a15;
+     $butName_a15    = "b_"  +$a15;
+     $fieldName1_a15 = $a15  +"_sf";
+     $fieldName2_a15 = $a15  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a15))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a15;
+                         button -l $a15 -en 1 -c "set_weapon($a15)" $butName_a15;
+                         intField -en 1 $fieldName1_a15;
+                         intField -en 1 $fieldName2_a15;
+                         connectControl $fieldName1_a15 ($a15+".start_frame");
+                         connectControl $fieldName2_a15 ($a15+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a15)" $ch_boxName_a15;
+                         setAllKey ($a15);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a15;
+                         button -l $a15 -en 0 -c "set_weapon($a15)" $butName_a15;
+                         intField -en 0 $fieldName1_a15;
+                         intField -en 0 $fieldName2_a15;
+                         checkBox -e -cc  "change_chb($a15)" $ch_boxName_a15;
+                    }
+               setParent..;
+
+//----------------------------------FATALITY------------------------
+$a16 = "FATALITY";
+
+
+     $ch_boxName_a16 = "chb_"+$a16;
+     $butName_a16    = "b_"  +$a16;
+     $fieldName1_a16 = $a16  +"_sf";
+     $fieldName2_a16 = $a16  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a16))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a16;
+                         button -l $a16 -en 1 -c "set_weapon($a16)" $butName_a16;
+                         intField -en 1 $fieldName1_a16;
+                         intField -en 1 $fieldName2_a16;
+                         connectControl $fieldName1_a16 ($a16+".start_frame");
+                         connectControl $fieldName2_a16 ($a16+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a16)" $ch_boxName_a16;
+                         setAllKey ($a16);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a16;
+                         button -l $a16 -en 0 -c "set_weapon($a16)" $butName_a16;
+                         intField -en 0 $fieldName1_a16;
+                         intField -en 0 $fieldName2_a16;
+                         checkBox -e -cc  "change_chb($a16)" $ch_boxName_a16;
+                    }
+               setParent..;
+
+//----------------------------------POINT------------------------
+$a17 = "POINT";
+
+
+     $ch_boxName_a17 = "chb_"+$a17;
+     $butName_a17    = "b_"  +$a17;
+     $fieldName1_a17 = $a17  +"_sf";
+     $fieldName2_a17 = $a17  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a17))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a17;
+                         button -l $a17 -en 1 -c "set_weapon($a17)" $butName_a17;
+                         intField -en 1 $fieldName1_a17;
+                         intField -en 1 $fieldName2_a17;
+                         connectControl $fieldName1_a17 ($a17+".start_frame");
+                         connectControl $fieldName2_a17 ($a17+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a17)" $ch_boxName_a17;
+                         setAllKey ($a17);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a17;
+                         button -l $a17 -en 0 -c "set_weapon($a17)" $butName_a17;
+                         intField -en 0 $fieldName1_a17;
+                         intField -en 0 $fieldName2_a17;
+                         checkBox -e -cc  "change_chb($a17)" $ch_boxName_a17;
+                    }
+               setParent..;
+
+
+//----------------------------------POINT_DOWN------------------------
+$a18a = "POINT_DOWN";
+
+
+     $ch_boxName_a18a = "chb_"+$a18a;
+     $butName_a18a    = "b_"  +$a18a;
+     $fieldName1_a18a = $a18a  +"_sf";
+     $fieldName2_a18a = $a18a  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a18a))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a18a;
+                         button -l $a18a -en 1 -c "set_weapon($a18a)" $butName_a18a;
+                         intField -en 1 $fieldName1_a18a;
+                         intField -en 1 $fieldName2_a18a;
+                         connectControl $fieldName1_a18a ($a18a+".start_frame");
+                         connectControl $fieldName2_a18a ($a18a+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a18a)" $ch_boxName_a18a;
+                         setAllKey ($a18a);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a18a;
+                         button -l $a18a -en 0 -c "set_weapon($a18a)" $butName_a18a;
+                         intField -en 0 $fieldName1_a18a;
+                         intField -en 0 $fieldName2_a18a;
+                         checkBox -e -cc  "change_chb($a18a)" $ch_boxName_a18a;
+                    }
+               setParent..;
+
+
+
+//----------------------------------BINOCULARS------------------------
+$a18 = "BINOCULARS";
+
+
+     $ch_boxName_a18 = "chb_"+$a18;
+     $butName_a18    = "b_"  +$a18;
+     $fieldName1_a18 = $a18  +"_sf";
+     $fieldName2_a18 = $a18  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a18))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a18;
+                         button -l $a18 -en 1 -c "set_weapon($a18)" $butName_a18;
+                         intField -en 1 $fieldName1_a18;
+                         intField -en 1 $fieldName2_a18;
+                         connectControl $fieldName1_a18 ($a18+".start_frame");
+                         connectControl $fieldName2_a18 ($a18+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a18)" $ch_boxName_a18;
+                         setAllKey ($a18);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a18;
+                         button -l $a18 -en 0 -c "set_weapon($a18)" $butName_a18;
+                         intField -en 0 $fieldName1_a18;
+                         intField -en 0 $fieldName2_a18;
+                         checkBox -e -cc  "change_chb($a18)" $ch_boxName_a18;
+                    }
+               setParent..;
+
+//----------------------------------BINOCULARS_DOWN------------------------
+$a19 = "BINOCULARS_DOWN";
+
+
+     $ch_boxName_a19 = "chb_"+$a19;
+     $butName_a19    = "b_"  +$a19;
+     $fieldName1_a19 = $a19  +"_sf";
+     $fieldName2_a19 = $a19  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a19))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a19;
+                         button -l $a19 -en 1 -c "set_weapon($a19)" $butName_a19;
+                         intField -en 1 $fieldName1_a19;
+                         intField -en 1 $fieldName2_a19;
+                         connectControl $fieldName1_a19 ($a19+".start_frame");
+                         connectControl $fieldName2_a19 ($a19+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a19)" $ch_boxName_a19;
+                         setAllKey ($a19);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a19;
+                         button -l $a19 -en 0 -c "set_weapon($a19)" $butName_a19;
+                         intField -en 0 $fieldName1_a19;
+                         intField -en 0 $fieldName2_a19;
+                         checkBox -e -cc  "change_chb($a19)" $ch_boxName_a19;
+                    }
+               setParent..;
+
+//----------------------------------THROW_DOWN------------------------
+$a20 = "THROW_DOWN";
+
+
+     $ch_boxName_a20 = "chb_"+$a20;
+     $butName_a20    = "b_"  +$a20;
+     $fieldName1_a20 = $a20  +"_sf";
+     $fieldName2_a20 = $a20  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a20))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a20;
+                         button -l $a20 -en 1 -c "set_weapon($a20)" $butName_a20;
+                         intField -en 1 $fieldName1_a20;
+                         intField -en 1 $fieldName2_a20;
+                         connectControl $fieldName1_a20 ($a20+".start_frame");
+                         connectControl $fieldName2_a20 ($a20+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a20)" $ch_boxName_a20;
+                         setAllKey ($a20);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a20;
+                         button -l $a20 -en 0 -c "set_weapon($a20)" $butName_a20;
+                         intField -en 0 $fieldName1_a20;
+                         intField -en 0 $fieldName2_a20;
+                         checkBox -e -cc  "change_chb($a20)" $ch_boxName_a20;
+                    }
+               setParent..;
+
+//----------------------------------THROW------------------------
+$a21 = "THROW";
+
+
+     $ch_boxName_a21 = "chb_"+$a21;
+     $butName_a21    = "b_"  +$a21;
+     $fieldName1_a21 = $a21  +"_sf";
+     $fieldName2_a21 = $a21  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a21))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a21;
+                         button -l $a21 -en 1 -c "set_weapon($a21)" $butName_a21;
+                         intField -en 1 $fieldName1_a21;
+                         intField -en 1 $fieldName2_a21;
+                         connectControl $fieldName1_a21 ($a21+".start_frame");
+                         connectControl $fieldName2_a21 ($a21+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a21)" $ch_boxName_a21;
+                         setAllKey ($a21);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a21;
+                         button -l $a21 -en 0 -c "set_weapon($a21)" $butName_a21;
+                         intField -en 0 $fieldName1_a21;
+                         intField -en 0 $fieldName2_a21;
+                         checkBox -e -cc  "change_chb($a21)" $ch_boxName_a21;
+                    }
+               setParent..;
+
+//----------------------------------SNEAK------------------------
+$a22 = "SNEAK";
+
+
+     $ch_boxName_a22 = "chb_"+$a22;
+     $butName_a22    = "b_"  +$a22;
+     $fieldName1_a22 = $a22  +"_sf";
+     $fieldName2_a22 = $a22  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a22))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a22;
+                         button -l $a22 -en 1 -c "set_weapon($a22)" $butName_a22;
+                         intField -en 1 $fieldName1_a22;
+                         intField -en 1 $fieldName2_a22;
+                         connectControl $fieldName1_a22 ($a22+".start_frame");
+                         connectControl $fieldName2_a22 ($a22+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a22)" $ch_boxName_a22;
+                         setAllKey ($a22);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a22;
+                         button -l $a22 -en 0 -c "set_weapon($a22)" $butName_a22;
+                         intField -en 0 $fieldName1_a22;
+                         intField -en 0 $fieldName2_a22;
+                         checkBox -e -cc  "change_chb($a22)" $ch_boxName_a22;
+                    }
+               setParent..;
+
+//----------------------------------USE_LIE------------------------
+$a23 = "USE_LIE";
+
+
+     $ch_boxName_a23 = "chb_"+$a23;
+     $butName_a23    = "b_"  +$a23;
+     $fieldName1_a23 = $a23  +"_sf";
+     $fieldName2_a23 = $a23  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a23))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a23;
+                         button -l $a23 -en 1 -c "set_weapon($a23)" $butName_a23;
+                         intField -en 1 $fieldName1_a23;
+                         intField -en 1 $fieldName2_a23;
+                         connectControl $fieldName1_a23 ($a23+".start_frame");
+                         connectControl $fieldName2_a23 ($a23+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a23)" $ch_boxName_a23;
+                         setAllKey ($a23);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a23;
+                         button -l $a23 -en 0 -c "set_weapon($a23)" $butName_a23;
+                         intField -en 0 $fieldName1_a23;
+                         intField -en 0 $fieldName2_a23;
+                         checkBox -e -cc  "change_chb($a23)" $ch_boxName_a23;
+                    }
+               setParent..;
+
+//----------------------------------USE_DOWN------------------------
+$a24 = "USE_DOWN";
+
+
+     $ch_boxName_a24 = "chb_"+$a24;
+     $butName_a24    = "b_"  +$a24;
+     $fieldName1_a24 = $a24  +"_sf";
+     $fieldName2_a24 = $a24  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a24))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a24;
+                         button -l $a24 -en 1 -c "set_weapon($a24)" $butName_a24;
+                         intField -en 1 $fieldName1_a24;
+                         intField -en 1 $fieldName2_a24;
+                         connectControl $fieldName1_a24 ($a24+".start_frame");
+                         connectControl $fieldName2_a24 ($a24+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a24)" $ch_boxName_a24;
+                         setAllKey ($a24);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a24;
+                         button -l $a24 -en 0 -c "set_weapon($a24)" $butName_a24;
+                         intField -en 0 $fieldName1_a24;
+                         intField -en 0 $fieldName2_a24;
+                         checkBox -e -cc  "change_chb($a24)" $ch_boxName_a24;
+                    }
+               setParent..;
+
+
+//----------------------------------USE------------------------
+$a25 = "USE";
+
+
+     $ch_boxName_a25 = "chb_"+$a25;
+     $butName_a25    = "b_"  +$a25;
+     $fieldName1_a25 = $a25  +"_sf";
+     $fieldName2_a25 = $a25  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a25))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a25;
+                         button -l $a25 -en 1 -c "set_weapon($a25)" $butName_a25;
+                         intField -en 1 $fieldName1_a25;
+                         intField -en 1 $fieldName2_a25;
+                         connectControl $fieldName1_a25 ($a25+".start_frame");
+                         connectControl $fieldName2_a25 ($a25+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a25)" $ch_boxName_a25;
+                         setAllKey ($a25);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a25;
+                         button -l $a25 -en 0 -c "set_weapon($a25)" $butName_a25;
+                         intField -en 0 $fieldName1_a25;
+                         intField -en 0 $fieldName2_a25;
+                         checkBox -e -cc  "change_chb($a25)" $ch_boxName_a25;
+                    }
+               setParent..;
+
+
+//----------------------------------ENTRENCH------------------------
+$a26 = "ENTRENCH";
+
+
+     $ch_boxName_a26 = "chb_"+$a26;
+     $butName_a26    = "b_"  +$a26;
+     $fieldName1_a26 = $a26  +"_sf";
+     $fieldName2_a26 = $a26  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a26))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a26;
+                         button -l $a26 -en 1 -c "set_weapon($a26)" $butName_a26;
+                         intField -en 1 $fieldName1_a26;
+                         intField -en 1 $fieldName2_a26;
+                         connectControl $fieldName1_a26 ($a26+".start_frame");
+                         connectControl $fieldName2_a26 ($a26+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a26)" $ch_boxName_a26;
+                         setAllKey ($a26);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a26;
+                         button -l $a26 -en 0 -c "set_weapon($a26)" $butName_a26;
+                         intField -en 0 $fieldName1_a26;
+                         intField -en 0 $fieldName2_a26;
+                         checkBox -e -cc  "change_chb($a26)" $ch_boxName_a26;
+                    }
+               setParent..;
+
+//----------------------------------DIVING------------------------
+$a27 = "DIVING";
+
+
+     $ch_boxName_a27 = "chb_"+$a27;
+     $butName_a27    = "b_"  +$a27;
+     $fieldName1_a27 = $a27  +"_sf";
+     $fieldName2_a27 = $a27  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a27))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a27;
+                         button -l $a27 -en 1 -c "set_weapon($a27)" $butName_a27;
+                         intField -en 1 $fieldName1_a27;
+                         intField -en 1 $fieldName2_a27;
+                         connectControl $fieldName1_a27 ($a27+".start_frame");
+                         connectControl $fieldName2_a27 ($a27+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a27)" $ch_boxName_a27;
+                         setAllKey ($a27);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a27;
+                         button -l $a27 -en 0 -c "set_weapon($a27)" $butName_a27;
+                         intField -en 0 $fieldName1_a27;
+                         intField -en 0 $fieldName2_a27;
+                         checkBox -e -cc  "change_chb($a27)" $ch_boxName_a27;
+                    }
+               setParent..;
+
+//----------------------------------IDLE_DIVING------------------------
+$a28 = "IDLE_DIVING";
+
+
+     $ch_boxName_a28 = "chb_"+$a28;
+     $butName_a28    = "b_"  +$a28;
+     $fieldName1_a28 = $a28  +"_sf";
+     $fieldName2_a28 = $a28  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a28))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a28;
+                         button -l $a28 -en 1 -c "set_weapon($a28)" $butName_a28;
+                         intField -en 1 $fieldName1_a28;
+                         intField -en 1 $fieldName2_a28;
+                         connectControl $fieldName1_a28 ($a28+".start_frame");
+                         connectControl $fieldName2_a28 ($a28+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a28)" $ch_boxName_a28;
+                         setAllKey ($a28);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a28;
+                         button -l $a28 -en 0 -c "set_weapon($a28)" $butName_a28;
+                         intField -en 0 $fieldName1_a28;
+                         intField -en 0 $fieldName2_a28;
+                         checkBox -e -cc  "change_chb($a28)" $ch_boxName_a28;
+                    }
+               setParent..;
+
+//----------------------------------DEATH_DIVING------------------------
+$a29 = "DEATH_DIVING";
+
+
+     $ch_boxName_a29 = "chb_"+$a29;
+     $butName_a29    = "b_"  +$a29;
+     $fieldName1_a29 = $a29  +"_sf";
+     $fieldName2_a29 = $a29  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a29))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a29;
+                         button -l $a29 -en 1 -c "set_weapon($a29)" $butName_a29;
+                         intField -en 1 $fieldName1_a29;
+                         intField -en 1 $fieldName2_a29;
+                         connectControl $fieldName1_a29 ($a29+".start_frame");
+                         connectControl $fieldName2_a29 ($a29+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a29)" $ch_boxName_a29;
+                         setAllKey ($a29);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a29;
+                         button -l $a29 -en 0 -c "set_weapon($a29)" $butName_a29;
+                         intField -en 0 $fieldName1_a29;
+                         intField -en 0 $fieldName2_a29;
+                         checkBox -e -cc  "change_chb($a29)" $ch_boxName_a29;
+                    }
+               setParent..;
+
+//----------------------------------DEATH_FATALITY_FLOOR1------------------------
+$a30 = "DEATH_FATALITY_FLOOR1";
+
+
+     $ch_boxName_a30 = "chb_"+$a30;
+     $butName_a30    = "b_"  +$a30;
+     $fieldName1_a30 = $a30  +"_sf";
+     $fieldName2_a30 = $a30  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a30))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a30;
+                         button -l $a30 -en 1 -c "set_weapon($a30)" $butName_a30;
+                         intField -en 1 $fieldName1_a30;
+                         intField -en 1 $fieldName2_a30;
+                         connectControl $fieldName1_a30 ($a30+".start_frame");
+                         connectControl $fieldName2_a30 ($a30+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a30)" $ch_boxName_a30;
+                         setAllKey ($a30);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a30;
+                         button -l $a30 -en 0 -c "set_weapon($a30)" $butName_a30;
+                         intField -en 0 $fieldName1_a30;
+                         intField -en 0 $fieldName2_a30;
+                         checkBox -e -cc  "change_chb($a30)" $ch_boxName_a30;
+                    }
+               setParent..;
+
+//----------------------------------DEATH_FATALITY_FLOOR2------------------------
+$a31 = "DEATH_FATALITY_FLOOR2";
+
+
+     $ch_boxName_a31 = "chb_"+$a31;
+     $butName_a31    = "b_"  +$a31;
+     $fieldName1_a31 = $a31  +"_sf";
+     $fieldName2_a31 = $a31  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a31))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a31;
+                         button -l $a31 -en 1 -c "set_weapon($a31)" $butName_a31;
+                         intField -en 1 $fieldName1_a31;
+                         intField -en 1 $fieldName2_a31;
+                         connectControl $fieldName1_a31 ($a31+".start_frame");
+                         connectControl $fieldName2_a31 ($a31+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a31)" $ch_boxName_a31;
+                         setAllKey ($a31);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a31;
+                         button -l $a31 -en 0 -c "set_weapon($a31)" $butName_a31;
+                         intField -en 0 $fieldName1_a31;
+                         intField -en 0 $fieldName2_a31;
+                         checkBox -e -cc  "change_chb($a31)" $ch_boxName_a31;
+                    }
+               setParent..;
+
+
+//----------------------------------AIMING------------------------
+$a32 = "AIMING";
+
+
+     $ch_boxName_a32 = "chb_"+$a32;
+     $butName_a32    = "b_"  +$a32;
+     $fieldName1_a32 = $a32  +"_sf";
+     $fieldName2_a32 = $a32  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a32))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a32;
+                         button -l $a32 -en 1 -c "set_weapon($a32)" $butName_a32;
+                         intField -en 1 $fieldName1_a32;
+                         intField -en 1 $fieldName2_a32;
+                         connectControl $fieldName1_a32 ($a32+".start_frame");
+                         connectControl $fieldName2_a32 ($a32+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a32)" $ch_boxName_a32;
+                         setAllKey ($a32);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a32;
+                         button -l $a32 -en 0 -c "set_weapon($a32)" $butName_a32;
+                         intField -en 0 $fieldName1_a32;
+                         intField -en 0 $fieldName2_a32;
+                         checkBox -e -cc  "change_chb($a32)" $ch_boxName_a32;
+                    }
+               setParent..;
+
+//----------------------------------AIMING_DOWN------------------------
+$a33 = "AIMING_DOWN";
+
+
+     $ch_boxName_a33 = "chb_"+$a33;
+     $butName_a33    = "b_"  +$a33;
+     $fieldName1_a33 = $a33  +"_sf";
+     $fieldName2_a33 = $a33  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a33))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a33;
+                         button -l $a33 -en 1 -c "set_weapon($a33)" $butName_a33;
+                         intField -en 1 $fieldName1_a33;
+                         intField -en 1 $fieldName2_a33;
+                         connectControl $fieldName1_a33 ($a33+".start_frame");
+                         connectControl $fieldName2_a33 ($a33+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a33)" $ch_boxName_a33;
+                         setAllKey ($a33);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a33;
+                         button -l $a33 -en 0 -c "set_weapon($a33)" $butName_a33;
+                         intField -en 0 $fieldName1_a33;
+                         intField -en 0 $fieldName2_a33;
+                         checkBox -e -cc  "change_chb($a33)" $ch_boxName_a33;
+                    }
+               setParent..;
+
+
+//----------------------------------AIMING_TRENCH------------------------
+$a34 = "AIMING_TRENCH";
+
+
+     $ch_boxName_a34 = "chb_"+$a34;
+     $butName_a34    = "b_"  +$a34;
+     $fieldName1_a34 = $a34  +"_sf";
+     $fieldName2_a34 = $a34  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a34))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a34;
+                         button -l $a34 -en 1 -c "set_weapon($a34)" $butName_a34;
+                         intField -en 1 $fieldName1_a34;
+                         intField -en 1 $fieldName2_a34;
+                         connectControl $fieldName1_a34 ($a34+".start_frame");
+                         connectControl $fieldName2_a34 ($a34+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a34)" $ch_boxName_a34;
+                         setAllKey ($a34);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a34;
+                         button -l $a34 -en 0 -c "set_weapon($a34)" $butName_a34;
+                         intField -en 0 $fieldName1_a34;
+                         intField -en 0 $fieldName2_a34;
+                         checkBox -e -cc  "change_chb($a34)" $ch_boxName_a34;
+                    }
+               setParent..;
+
+//----------------------------------THROW_TRENCH------------------------
+$a35 = "THROW_TRENCH";
+
+
+     $ch_boxName_a35 = "chb_"+$a35;
+     $butName_a35    = "b_"  +$a35;
+     $fieldName1_a35 = $a35  +"_sf";
+     $fieldName2_a35 = $a35  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a35))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a35;
+                         button -l $a35 -en 1 -c "set_weapon($a35)" $butName_a35;
+                         intField -en 1 $fieldName1_a35;
+                         intField -en 1 $fieldName2_a35;
+                         connectControl $fieldName1_a35 ($a35+".start_frame");
+                         connectControl $fieldName2_a35 ($a35+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a35)" $ch_boxName_a35;
+                         setAllKey ($a35);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a35;
+                         button -l $a35 -en 0 -c "set_weapon($a35)" $butName_a35;
+                         intField -en 0 $fieldName1_a35;
+                         intField -en 0 $fieldName2_a35;
+                         checkBox -e -cc  "change_chb($a35)" $ch_boxName_a35;
+                    }
+               setParent..;
+
+//----------------------------------IDLE_DOWN------------------------
+$a36 = "IDLE_DOWN";
+
+
+     $ch_boxName_a36 = "chb_"+$a36;
+     $butName_a36    = "b_"  +$a36;
+     $fieldName1_a36 = $a36  +"_sf";
+     $fieldName2_a36 = $a36  +"_ef";
+
+
+
+               rowColumnLayout -numberOfColumns 4
+                               -columnWidth 1 40
+                               -columnWidth 2 100
+                               -columnWidth 3 60
+                               -columnWidth 4 60;
+
+                    if(exist($a36))
+                    {
+                         checkBox -l "" -v 1 $ch_boxName_a36;
+                         button -l $a36 -en 1 -c "set_weapon($a36)" $butName_a36;
+                         intField -en 1 $fieldName1_a36;
+                         intField -en 1 $fieldName2_a36;
+                         connectControl $fieldName1_a36 ($a36+".start_frame");
+                         connectControl $fieldName2_a36 ($a36+".EndTime");
+
+
+                         checkBox -e -cc  "change_chb($a36)" $ch_boxName_a36;
+                         setAllKey ($a36);
+
+                    }
+                    else
+                    {
+                         checkBox -l "" -v 0 $ch_boxName_a36;
+                         button -l $a36 -en 0 -c "set_weapon($a36)" $butName_a36;
+                         intField -en 0 $fieldName1_a36;
+                         intField -en 0 $fieldName2_a36;
+                         checkBox -e -cc  "change_chb($a36)" $ch_boxName_a36;
+                    }
+               setParent..;
+
+
+
+
+
+
+
+
+
+
+
+showWindow HumAnimLoc;
+
+//}
+
+//#################################################################################################################
+
+////////////////////////////////////////////////PROCEDURES/////////////////////////////////////////
+
+//--------------------------------Creation Locators
+
+global proc createAnLocator(string $v)
+{
+ $fieldName1_ = $v  +"_sf";
+ $fieldName2_ = $v  +"_ef";
+
+
+ spaceLocator -p 0 0 0 -n $v;
+ select $v;
+ //Adding start&end attr.
+ addAttr -ln StartTime -sn sf  -at long  -min 0 -max 1000 -dv 1 -k on $v;
+ addAttr -ln EndTime        -at long  -min 0 -max 1000 -dv 1 -k on $v;
+ //Adding weapon attr.
+ addAttr -ln PISTOL           -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln MACHINEGUN       -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln SUBMACHINEGUN    -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln RIFLE            -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln SNIPER_RIFLE     -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln ANTITANK_RIFLE   -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln BAZOOKA          -at bool  -min 0 -max 1 -dv 0 -k on $v;
+ addAttr -ln looped           -at bool  -min 0 -max 1 -dv 0 -k on $v;
+
+
+ connectControl $fieldName1_ ($v+".StartTime");
+ connectControl $fieldName2_ ($v+".EndTime");
+
+ parent $v Animations;
+
+
+}
+
+
+
+
+//----------------------------------Feedback from Changing check box anim
+global proc change_chb(string $z)
+{
+ //set names
+ $ch_boxName_ = "chb_"+$z;
+ $butName_    = "b_"  +$z;
+ $fieldName1_ = $z  +"_sf";
+ $fieldName2_ = $z  +"_ef";
+
+ //get value of box
+ $x = `checkBox -q -v $ch_boxName_`;
+ print $x;
+
+ //creation anim. locator
+ if ($x) createAnLocator($z);
+ else
+     {
+      intField -e -v 0 $fieldName1_;
+      intField -e -v 0 $fieldName2_;
+      delete $z;
+     }
+
+ //set fields conditions
+ button -e -en $x $butName_;
+ intField -e -en $x $fieldName1_;
+ intField -e -en $x $fieldName2_;
+}
+
+
+global proc int exist(string $s)
+{
+ $list = `ls $s`;
+ if (size($list)==0) return 0;
+ else return 1;
+}
+
+
+
+global proc set_weapon(string $x)
+{
+if ( (`window -ex set_weaponWin`) == true ) deleteUI set_weaponWin;
+select $x;
+window -title ("Set weapon for "+$x) -widthHeight 170 300 set_weaponWin;
+        columnLayout -adjustableColumn true;
+
+//Set check boxes for weapons:
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "PISTOL";
+                    checkBox -l "" -v 0 chb_PISTOL;
+                    connectControl chb_PISTOL ($x+".PISTOL");
+               setParent..;
+
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "MACHINEGUN";
+                    checkBox -l "" -v 0 chb_MACHINEGUN;
+                    connectControl chb_MACHINEGUN ($x+".MACHINEGUN");
+               setParent..;
+
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "SUBMACHINEGUN";
+                    checkBox -l "" -v 0 chb_SUBMACHINEGUN;
+                    connectControl chb_SUBMACHINEGUN ($x+".SUBMACHINEGUN");
+               setParent..;
+
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "RIFLE";
+                    checkBox -l "" -v 0 chb_RIFLE;
+                    connectControl chb_RIFLE ($x+".RIFLE");
+               setParent..;
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "SNIPER_RIFLE";
+                    checkBox -l "" -v 0 chb_SNIPER_RIFLE;
+                    connectControl chb_SNIPER_RIFLE ($x+".SNIPER_RIFLE");
+               setParent..;
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "ANTITANK_RIFLE";
+                    checkBox -l "" -v 0 chb_ANTITANK_RIFLE;
+                    connectControl chb_ANTITANK_RIFLE ($x+".ANTITANK_RIFLE");
+               setParent..;
+
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "BAZOOKA";
+                    checkBox -l "" -v 0 chb_BAZOOKA;
+                    connectControl chb_BAZOOKA ($x+".BAZOOKA");
+               setParent..;
+
+               rowColumnLayout -numberOfColumns 2
+                               -columnWidth 1 110
+                               -columnWidth 2 40;
+                    text "looped";
+                    checkBox -l "" -v 0 chb_looped;
+                    connectControl chb_looped ($x+".looped");
+               setParent..;
+
+ showWindow set_weaponWin;
+}
+
+global proc setAllKey(string $g)
+{
+  eval ("setAttr -k on "+$g+".StartTime");
+  eval ("setAttr -k on "+$g+".EndTime");
+  eval ("setAttr -k on "+$g+".PISTOL");
+  eval ("setAttr -k on "+$g+".MACHINEGUN");
+  eval ("setAttr -k on "+$g+".SUBMACHINEGUN");
+  eval ("setAttr -k on "+$g+".RIFLE");
+  eval ("setAttr -k on "+$g+".SNIPER_RIFLE");
+  eval ("setAttr -k on "+$g+".ANTITANK_RIFLE");
+  eval ("setAttr -k on "+$g+".BAZOOKA");
+  eval ("setAttr -k on "+$g+".looped");
+
+}
+
+global proc addAPsel()
+{
+ $sel = `ls -sl`;
+ if (size($sel)==0) print "\nError! Select locator!";
+ else
+          {
+               addAttr -ln action_point -at long  -min 0 -max 1000 -dv 0 -k on $sel[0];
+                eval ("setAttr -k on "+$sel[0]+".action_point");
+
+          }
+}
+
+

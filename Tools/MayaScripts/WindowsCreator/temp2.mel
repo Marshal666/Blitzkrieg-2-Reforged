@@ -1,0 +1,28 @@
+string $attrs[] = {"PIAT","AMERICAN_RIFLE" ,"FLAME_THROWER","STEN","PANZERFAUST","LUFTFAUST"} ;
+$sel = `ls -sl`;
+
+for ($attr in $attrs)
+{
+     select -r $sel[0];
+     addAttr  -longName $attr -attributeType "bool" -dv false;
+     eval ("setAttr  -k 1 " + $sel[0] + "." + $attr);
+
+}
+
+
+/*
+  "PISTOL"
+> "MACHINEGUN"
+> "SUBMACHINEGUN"
+> "RIFLE"
+> "SNIPER_RIFLE"
+> "ANTITANK_RIFLE"
+> "BAZOOKA"
+
+
+> "PIAT"
+> "AMERICAN_RIFLE"
+> "FLAME_THROWER"
+> "STEN"
+> "PANZERFAUST"
+> "LUFTFAUST"

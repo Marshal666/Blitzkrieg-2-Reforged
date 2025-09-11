@@ -1,0 +1,11 @@
+select -r -hi "Basis";
+$list =`ls -sl -s`;
+CombinePolygons;
+DeleteHistory;
+rename "object";
+select -all;
+select -d "object";
+delete;
+
+
+

@@ -1,0 +1,32 @@
+//
+// B2EportInit --
+//
+// Процедура начальной настройки maya для экспорта.
+//
+// $Author:: Ivan.chelubeev          $
+// $Date:: 9.06.04 18:36             $
+// $Revision:: 3                     $
+//
+
+proc B2LoadPlugin(string $name, string $pluginsPath)
+{
+    if (`pluginInfo -q -loaded $name` == 0) {
+        loadPlugin ($pluginsPath + "/" + $name + ".mll");
+        //if (`pluginInfo -q -loaded $pluginName` )
+        //    pluginInfo -edit -autoload true $name;
+    }
+}
+
+global proc int B2ExportInit(string $pluginsPath)
+{
+//    if (`undoInfo -q -state` == 0) {
+//        undoInfo -state on -length 50;
+//    }
+
+    // загружаем необходимые plugins
+    B2LoadPlugin("granny_maya4_5", $pluginsPath);
+//    B2LoadPlugin("A5ExportModel", $pluginsPath);
+//    B2LoadPlugin("modExport", $pluginsPath);
+
+    return 0;
+}

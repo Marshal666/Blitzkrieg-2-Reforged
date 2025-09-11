@@ -1,0 +1,86 @@
+
+
+global proc B2anim_scanner()
+
+{
+
+//string $pathData SAMPLE: = "J://Complete/Units/Technics/common.dir ";
+string $pathData         = "D://TEMP/temp/test.dir ";
+string $rootMask         = "Animations";
+
+///////////////////////////////////////////////////////////////////////
+
+
+    string $log_path         =  dirname ($pathData);
+    $fileId =`fopen $pathData "r"`;
+    string $nextPath = `fgetline $fileId`;
+
+
+    // Basic iteration
+    //while ( size( $nextPath ) > 0 )
+   while ($nextPath!="")
+   {
+               $nextPath = strip ($nextPath);
+               $proj_path = dirname( $nextPath );
+
+               //check path
+               if ((`file -q -ex $nextPath`)==0)
+                         {
+                              AF_logFile($log_path,("\n" + $proj_path +" - ERROR in path! File not found."));
+                             // $error_counter = $error_counter + 1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+               $proj_path = dirname( $nextPath );
+
+
+               //open file:
+               file -f -type "mayaBinary" -o $nextPath;
+
+
+
+               // check anim loc
+               if (size(`ls $rootMask `)==0)
+                         {
+                              AF_logFile($log_path,("\n" + $proj_path +" No animation found."));
+                              //$error_counter = $error_counter + 1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+              select -r -hi "Animations" ;
+              select -d "Animations";
+              $sel = `ls -sl -tr`;
+              AF_logFile($log_path,("\n" + $proj_path));
+              AF_logFile ($log_path,"\nanimations:");
+              for ($item in $sel)
+              {
+
+                    AF_logFile ($log_path,"\n\t" + $item );
+              }
+              $nextPath = `fgetline $fileId`;
+
+   }
+    file -f -new;
+    fclose $fileId;
+   // print ("\n" + $icon_counter + " ICONS CREATED. " + $error_counter + " ERRORS FOUND.(SEE error.log)");
+
+
+}
+
+
+//-------------------------------------------
+global proc float absm (float $x)
+{
+     if ($x>=0) return $x;
+     else return -$x;
+}
+
+
+global proc string subsitute_all(string $s1)
+{
+     while (`gmatch $s1 "*/*" `) $s1 = `substitute "/" $s1 "\\"`;
+     return $s1;
+}
+
+
+

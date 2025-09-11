@@ -1,0 +1,50 @@
+//Creation of BB for hierarchy chain (B2, M1 projects)
+//argument string $root      - name of root polymesh;
+//argument string $name_bb   - name of result bb;
+
+//return int 0 - ok
+
+
+//sample:
+//  BBhi("Basis");
+
+
+// 22.03.2004 Nival Interactive
+// Eugene Melkov
+
+global proc int BBhi(string $root, string $name_bb)
+{
+
+  string $list_temp_mesh[];
+  select -r -hi $root;
+  $list = `ls -sl -et "mesh"`;
+  string $temp_n = $list[0];
+
+  //        single root case:
+
+  if (size($list) == 1)
+     {
+
+       $bb_list = `BBcreator ($list)`;
+       rename ("BB_"+$temp_n) $name_bb;
+       clear $list;
+       return 0;
+     }
+
+
+
+  // root and hierarchy chain in scene case:
+  $bb_list = `BBcreator ($list)`;
+  $comm = "polyUnite -ch 0 -n UniteBB";
+  for ($bb in $bb_list) $comm = $comm + " " + $bb;
+  eval ($comm);
+
+  $list_temp_mesh[0] = "UniteBB";
+  BBcreator ($list_temp_mesh);
+  rename "BB_UniteBB" $name_bb;
+  delete UniteBB;
+  clear $list;
+  return 0;
+}
+
+

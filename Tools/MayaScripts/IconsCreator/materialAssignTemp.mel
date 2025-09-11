@@ -1,0 +1,152 @@
+
+//------------------------------- SET DATA------------------------------
+string $pathData         = "J://Complete/Units/Technics/set_mat_obj.dir ";
+string $rootMask         = "Basis";
+int $error_count  = 0;
+int $ok_count  = 0;
+
+
+///////////////////////////////////////////////////////////////////////
+    string $log_path         =  dirname ($pathData);
+    $fileId =`fopen $pathData "r"`;
+    string $nextPath = `fgetline $fileId`;
+// Basic iteration
+   while ($nextPath!="")
+   {
+               $nextPath = strip ($nextPath);
+      // ERROR WRITING
+               if ((`file -q -ex $nextPath`)==0)
+                         {
+                              logFile($log_path,("Error in path! File not found.Skiped:"+$nextPath));
+                              $error_count+=1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+
+
+               $proj_path = dirname( $nextPath );
+               $tex_path = $proj_path + "/1.tga";
+
+
+//-----------------------------OPEN FILE
+//==============================================================
+               file -f -options "v=0"  -typ "mayaBinary" -o $nextPath;
+
+
+               currentTime 0;
+               // ERROR WRITING
+               if (size(`ls $rootMask `)==0) $rootMask = "model";
+               if (size(`ls $rootMask `)==0)
+                         {
+                              logFile($log_path,("Error! No root node! Skiped:"+$nextPath));
+                              $error_count+=1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+
+     //______________________________MATERIAL______________________________
+
+
+
+// clear material's shit
+
+deleteShadingGroupsAndMaterials;
+$tx_files = `ls -textures`;
+
+int $issueCmd = false;
+string $cmd = "delete ";
+     for($tx_file in $tx_files)
+          {
+          $cmd += ($tx_file + " ");
+		$issueCmd = true;
+          }
+if($issueCmd) eval $cmd;
+
+
+
+//Creating not-shit material
+
+shadingNode -asShader lambert -n modelLambert;
+sets -renderable true -noSurfaceShader true -empty -name modelLambertSG;
+connectAttr -f modelLambert.outColor modelLambertSG.surfaceShader;
+
+
+shadingNode -asTexture file -n modelFile;
+shadingNode -asUtility place2dTexture -n place2dTexture_model ;
+connectAttr -f place2dTexture_model.coverage modelFile.coverage;
+connectAttr -f place2dTexture_model.translateFrame modelFile.translateFrame;
+connectAttr -f place2dTexture_model.rotateFrame modelFile.rotateFrame;
+connectAttr -f place2dTexture_model.mirrorU modelFile.mirrorU;
+connectAttr -f place2dTexture_model.mirrorV modelFile.mirrorV;
+connectAttr -f place2dTexture_model.stagger modelFile.stagger;
+connectAttr -f place2dTexture_model.wrapU modelFile.wrapU;
+connectAttr -f place2dTexture_model.wrapV modelFile.wrapV;
+connectAttr -f place2dTexture_model.repeatUV modelFile.repeatUV;
+connectAttr -f place2dTexture_model.offset modelFile.offset;
+connectAttr -f place2dTexture_model.rotateUV modelFile.rotateUV;
+connectAttr -f place2dTexture_model.noiseUV modelFile.noiseUV;
+connectAttr -f place2dTexture_model.vertexUvOne modelFile.vertexUvOne;
+connectAttr -f place2dTexture_model.vertexUvTwo modelFile.vertexUvTwo;
+connectAttr -f place2dTexture_model.vertexUvThree modelFile.vertexUvThree;
+connectAttr -f place2dTexture_model.vertexCameraOne modelFile.vertexCameraOne;
+connectAttr place2dTexture_model.outUV modelFile.uv;
+connectAttr place2dTexture_model.outUvFilterSize modelFile.uvFilterSize;
+
+connectAttr -force modelFile.outColor modelLambert.color;
+
+setAttr modelFile.filterType 0;
+setAttr -type "string" modelFile.fileTextureName $tex_path;
+
+//set TRANSPARANCY
+          if (`getAttr modelFile.fileHasAlpha` > 0)
+          {
+              connectAttr -force modelFile.outTransparency modelLambert.transparency;
+             print ("\n" + $proj_path + " alpha transparancy set");
+          };
+
+
+
+// assign not-shit material to the model
+               select -r -hi $rootMask;
+               $s = `ls -sl`;
+
+               sets -e -forceElement modelLambertSG $s;
+               $ok_count +=1;
+
+//smooth BBs:
+
+
+//select "AABB*";
+//polyPerformAction "polySoftEdge -a 180" e 0;
+//HideSelectedObjects;
+
+
+
+               print ("\n" + $ok_count + "files without materials shit...");
+               s_a_c();
+               $nextPath = `fgetline $fileId`;
+
+
+
+
+    }
+    fclose $fileId;
+    print ("\n"+ $error_count + "ERRORS FOUND. " + $ok_count + "files without materials shit...");
+
+
+//-------------------------------------------
+
+proc string subsitute_all(string $s1)
+{
+     while (`gmatch $s1 "*/*" `) $s1 = `substitute "/" $s1 "\\"`;
+     return $s1;
+}
+proc logFile(string $path,string $text)
+{
+     $fileId2=`fopen ($path+"\\errors.log") "a"`;
+    fwrite $fileId2 ($text+"\n");
+    fclose $fileId2;
+}
+
+
+

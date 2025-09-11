@@ -1,0 +1,8 @@
+global proc printAttr()
+{
+$sel = `ls -sl`;
+string $globals[] = `listAttr $sel[0]`;
+$globals = `sort $globals`;
+print $globals;
+}
+

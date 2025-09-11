@@ -1,0 +1,29 @@
+//Creation of BBs for fatality death (B2, M1 projects)
+// 22.03.2004 Nival Interactive
+// Eugene Melkov
+//---------------------------------------------------------
+
+//DATA
+$root_name = "Basis";
+select "Death*";
+$list_an = `ls -sl -tr`;
+$number_an = `size($list_an)`;
+
+//Basic loop for animations:
+
+for ($anim in $list_an)
+     {
+          $end_time   = eval ("getAttr " + $anim + ".EndTime");
+          $temp_str = `substitute "Death" $anim ""`;
+          $nameBBD = "AABB_D"+$temp_str;
+          currentTime $end_time;
+          BBhi($root_name,$nameBBD);
+
+      }
+     //CLEARING
+     clear $list_an;
+     //Smooth and hide
+     select "AABB*";
+     showHidden -a;
+     polyPerformAction "polySoftEdge -a 180" e 0;
+     HideSelectedObjects;

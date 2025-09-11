@@ -1,0 +1,10 @@
+//select single face and execute
+
+global proc createOtherSide()
+{
+   polySelectBorderShell 0;
+   $tmp = `ls -sl`;
+   polyChipOff -ch 1 -kft 1 -dup 1 $tmp;
+   $tmp = `ls -sl`;
+   polyNormal -normalMode 0 -ch 0 $tmp;
+}

@@ -1,0 +1,23 @@
+for ($f =0; $f< 70;$f++)
+{
+          currentTime $f;
+          select "aaa_root";
+          $scanPosRoot = `xform -q -t -ws`;
+          $scanRotRoot = `xform -q -ro -ws`;
+          select "root";
+          xform -ws -t $scanPosRoot[0] $scanPosRoot[1] $scanPosRoot[2];
+          xform -ws -ro $scanRotRoot[0] $scanRotRoot[1] $scanRotRoot[2];
+          setKeyframe;
+
+
+
+          select "aaa_child";
+          $scanPosChild = `xform -q -t -ws`;
+          $scanRotChild = `xform -q -ro -ws`;
+          select "child";
+          xform -ws -t $scanPosChild[0] $scanPosChild[1] $scanPosChild[2];
+          xform -ws -ro $scanRotChild[0] $scanRotChild[1] $scanRotChild[2];
+
+          setKeyframe;
+
+}

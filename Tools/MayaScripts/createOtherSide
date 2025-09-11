@@ -1,0 +1,8 @@
+global proc renameAll (string $mask)
+{
+$tmp = `ls -sl`;
+for ($item in $tmp)
+{
+     rename $item $mask;
+}
+}

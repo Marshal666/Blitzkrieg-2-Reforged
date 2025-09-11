@@ -1,0 +1,24 @@
+
+
+$list1 = `ls "install_rotate"`;
+if (size($list1)==1)
+{
+ rename "install_rotate" "temp1";
+ rename "uninstall_rotate" "temp2";
+ rename "temp1" "uninstall_rotate";
+ rename "temp2" "install_rotate";
+ print "\nSwitching install_rotate and uninstall_rotate";
+}
+
+
+
+$list2 = `ls "install_push"`;
+if (size($list2)==1)
+{
+ rename "install_push" "temp12";
+ rename "uninstall_push" "temp22";
+ rename "temp12" "uninstall_push";
+ rename "temp22" "install_push";
+ print "\nSwitching install_push and uninstall_push";
+}
+

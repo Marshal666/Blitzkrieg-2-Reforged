@@ -1,0 +1,11 @@
+currentTime 0 ;
+select -cl  ;
+select -r |Hip ;
+select -add translate ;
+group -n "group1";
+xform -os -piv 0 0 0;
+setAttr "group1.rotateZ" 180;
+select -r joint32.selectHandle joint32.rotateAxis;
+rotate -r -os 0 0 180 ;
+
+

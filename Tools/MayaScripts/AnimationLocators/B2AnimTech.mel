@@ -1,0 +1,152 @@
+$wc =200;
+$nc=1;
+
+//create UI
+if ( (`window -ex TechW`) == true ) deleteUI TechW;
+window -title "Utilities for technics B2" -widthHeight ($wc*$nc) 400 TechW;
+     scrollLayout scrollLayout;
+     columnLayout -adjustableColumn true
+                  -w ($wc*$nc);
+
+          frameLayout -label "Bodyparts Utilities" -labelAlign "top"
+                      -w ($wc*$nc)
+                      -borderStyle "etchedIn";
+
+                    columnLayout;
+                         button -w $wc -l "Create BB for hi chain" b1_1;
+                         button -w $wc -l "Set pivot and freeze tranform" b1_2;
+                         button -w $wc -en 0 -l "Not Used" b1_3;
+                    setParent ..;
+          setParent ..;
+
+
+//=====================================================================================
+                    frameLayout -label "Tanks and SPG" -labelAlign "top"
+                                                       -borderStyle "etchedIn"
+                                                          -cl 1
+
+                                                       -w $wc;
+                        columnLayout;
+                           text "CREATE  LOCATORS:";
+                           button -w $wc -l "MainGun" -c "cr_loc(\"MainGun\")" b2_1;
+                           button -w $wc -l "MachineGun" -c "cr_loc(\"MachineGun\")" b2_2;
+                           button -w $wc -l "MachineGun_Turret_Coax" b2_3a;
+                           button -w $wc -l "MachineGun_Turret_Back" b2_3b;
+                           button -w $wc -l "MachineGun_Turret_Cupola" b2_3c;
+                           button -w $wc -l "MachineGun_Turret_Basis" b2_3d;
+                           text " ";
+                           button -w $wc -l "Smoke" b2_4;
+                           button -w $wc -l "Fatality_Smoke" b2_5;
+                           button -w $wc -l "Exhaust" b2_6;
+                           text " ";
+                           text "RENAME BODYPARTS:";
+                           button -w $wc -l "Tracks" -c "ren_sel(\"Tracks\")" b2_7;
+                           button -w $wc -l "Basis" -c "ren_sel(\"Basis\")" b2_8;
+                           button -w $wc -l "MainBarrel" -c "ren_sel(\"MainBarrel\")"  b2_9;
+                           button -w $wc -l "ArmouredMantlet" -c "ren_sel(\"ArmoredMantlet\")"  b2_10;
+                        setParent ..;
+                      setParent ..;
+//=====================================================================================
+
+
+          frameLayout -label "Auto" -labelAlign "top"
+                      -borderStyle "etchedIn";
+                      columnLayout;
+                           text "CREATE  LOCATORS:";
+                           button -w $wc -l "Smoke" b3_1;
+                           button -w $wc -l "Explosion" b3_2;
+                           button -w $wc -l "Exhaust" b3_4;
+                           button -w $wc -l "TowingPoint" b3_5;
+                           button -w $wc -l "People" b3_6;
+                           text " ";
+
+                           text "RENAME BODYPARTS:";
+                           button -w $wc -l "Basis"  -c "ren_sel(\"Basis\")" b3_8;
+                           button -w $wc -l "Chasis" -c "ren_sel(\"Chasis\")" b3_7;
+                           button -w $wc -l "RearWheels" -c "ren_sel(\"RearWheels\")" b3_9;
+                           button -w $wc -l "FrontWheels" -c "ren_sel(\"FrontWheels\")" b3_10;
+                      setParent ..;
+                   setParent ..;
+
+//=====================================================================================
+
+
+          frameLayout -label "Avia" -labelAlign "top"
+                      -borderStyle "etchedIn";
+
+                      columnLayout;
+                           text "CREATE  LOCATORS:";
+                           button -w $wc -l "Smoke" b4_1;
+                           button -w $wc -l "Explosion" b4_2;
+                           button -w $wc -l "Exhaust" b4_4;
+                           button -w $wc -l "TowingPoint" b4_5;
+                           button -w $wc -l "People" b4_6;
+                           text " ";
+
+                           text "RENAME BODYPARTS:";
+                           button -w $wc -l "Basis" -c "ren_sel(\"Basis\")" b4_8;
+                           button -w $wc -l "Turret" -c "ren_sel(\"Turret\")" b4_7;
+                           button -w $wc -l "Bomb" -c "ren_sel(\"Bomb\")" b4_9;
+                      setParent ..;
+                   setParent ..;
+
+
+//=====================================================================================
+
+
+          frameLayout -label "Artillery" -labelAlign "top"
+                      -borderStyle "etchedIn";
+
+                      columnLayout;
+                           text "CREATE  LOCATORS:";
+                           button -w $wc -l "Smoke" b5_1;
+                           button -w $wc -l "Explosion" b5_2;
+                           button -w $wc -l "Exhaust" b5_4;
+                           button -w $wc -l "TowingPoint" b5_5;
+                           button -w $wc -l "People" b5_6;
+                           text " ";
+
+                           text "RENAME BODYPARTS:";
+                           button -w $wc -l "Basis"  -c "ren_sel(\"Basis\")" b5_8;
+                           button -w $wc -l "RearWheels" -c "ren_sel(\"RearWheels\")" b5_9;
+                           button -w $wc -l "Trail" -c "ren_sel(\"Trail\")" b5_10;
+                           button -w $wc -l "Turret" -c "ren_sel(\"Turret\")" b5_11;
+                           button -w $wc -l "GunCarriage" -c "ren_sel(\"GunCarriage\")" b5_12;
+                           button -w $wc -l "MaimBarrel" -c "ren_sel(\"MainBarrel\")" b5_13;
+
+                      setParent ..;
+                   setParent ..;
+            showWindow TechW;
+
+//PROCEDURES
+global proc ren_sel(string $newname)
+{
+
+     $check = `ls $newname`;
+     if (size($check)==0)
+     {
+     $name = `ls sl`;
+     rename $name $newname;
+     }
+     else winErr();
+}
+
+global proc winErr()
+{
+     if ( (`window -ex winMas`) == true ) deleteUI winMas;
+     window winMas;
+     columnLayout;
+     text "OBJECT  EXIST!!!";
+     showWindow winMas;
+}
+
+global proc cr_loc(string $name)
+{
+     spaceLocator -p 0 0 0 -n $name;
+}
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+
+setAttr "BINOCULARS.looped" 1;
+
+select -r "THROW*";
+$list = `ls -sl -tr`;
+for ($pr in $list)
+{
+  select -r $pr;
+  addAttr -ln ActionTime -at "float" -dv 0;
+  eval ("setAttr  -k 1 " + $pr + ".ActionTime");
+}
+
+select -r "BINOCULARS*";
+$list = `ls -sl -tr`;
+for ($pr in $list)
+{
+
+  eval ("setAttr " + $pr + ".looped" + " 1" );
+}
+

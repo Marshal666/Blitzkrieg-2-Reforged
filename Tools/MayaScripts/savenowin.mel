@@ -1,0 +1,13 @@
+
+global proc s_a_c()
+{
+string $li[] =`lsUI -wnd`;
+string $wnd;
+for( $wnd in $li )
+	if( $wnd == "CommandWindow" || $wnd == "ColorEditor") window -e -vis 0 $wnd;
+	else if( !`window -q -mw $wnd` ) deleteUI $wnd;
+setNamedPanelLayout "Persp/Outliner";
+SaveScene;
+}
+
+

@@ -1,0 +1,105 @@
+window -title "CameraControl" -widthHeight 700 700 CamControl;
+    columnLayout;
+ //Angle of view
+    floatSliderGrp -label "Focal L" -field true -minValue 5.0 -maxValue 300.0
+                   -fieldMinValue 5.0 -fieldMaxValue 300.0
+                   -value 38.592 "f_gr";
+    floatSliderGrp -e -dc "f_change" "f_gr";
+    floatSliderGrp -e -cc "f_change" "f_gr";
+
+
+//Angle from gorizont:
+
+    floatSliderGrp -label "Angle" -field true -minValue 45.0 -maxValue 89.0
+                   -fieldMinValue 45.0 -fieldMaxValue 89.0
+                   -value 50 "angle_gr";
+    floatSliderGrp -e -dc "ang_change" "angle_gr";
+    floatSliderGrp -e -cc "ang_change" "angle_gr";
+
+
+//Angle of rotation
+
+    floatSliderGrp -label "Rotate" -field true -minValue -180.0 -maxValue 180.0
+                   -fieldMinValue -180.0 -fieldMaxValue 180.0
+                   -value 0 "rotate_gr";
+    floatSliderGrp -e -dc "rot_change" "rotate_gr";
+    floatSliderGrp -e -cc "rot_change" "rotate_gr";
+
+
+
+//Distance
+
+    floatSliderGrp -label "Distance" -field true -minValue 50.0 -maxValue 300.0
+                   -fieldMinValue 50.0 -fieldMaxValue 300.0
+                   -value 0 "distance_gr";
+    floatSliderGrp -e -dc "dis_change" "distance_gr";
+    floatSliderGrp -e -cc "dis_change" "distance_gr";
+
+
+//Restore default:
+button -label "Restore default settings"   -align "left" -c "rest";
+button -label "Set keys" -c "setkeys";
+
+
+
+
+
+//    353 32 74
+showWindow CamControl;
+
+//-----------------------------------------MAIN--------------------------------------------------
+
+
+proc ang_change()
+{
+ $angle_val = `floatSliderGrp -q -v "angle_gr"`;
+ setAttr cam_curve.rotateX (-$angle_val);
+}
+
+proc rot_change()
+{
+ $rot_val = `floatSliderGrp -q -v "rotate_gr"`;
+ setAttr cam_loc.rotateZ ($rot_val);
+}
+
+proc dis_change()
+{
+ $dis_val = `floatSliderGrp -q -v "distance_gr"`;
+ setAttr motionPath1.uValue ($dis_val/311.12);
+}
+
+
+proc f_change()
+{
+ $f_val = `floatSliderGrp -q -v "f_gr"`;
+ setAttr camera_mainShape.focalLength $f_val;
+}
+
+
+
+proc rest()
+
+{
+     floatSliderGrp -e -v 50.0 "angle_gr";
+     ang_change();
+
+     floatSliderGrp -e -v 0.0 "rotate_gr";
+     rot_change();
+
+     floatSliderGrp -e -v 170.0 "distance_gr";
+     dis_change();
+
+     floatSliderGrp -e -v 77.0 "f_gr";
+     f_change();
+}
+
+proc setkeys()
+{
+          setKeyframe  cam_curve.rotateX;
+          setKeyframe  cam_loc.rotateZ;
+          setKeyframe  motionPath1.uValue;
+          setKeyframe  camera_mainShape.focalLength;
+}
+
+
+

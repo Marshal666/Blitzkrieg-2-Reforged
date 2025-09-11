@@ -1,0 +1,4 @@
+select -r "USE*";
+$sel = `ls -sl -tr`;
+for ($item in $sel)
+eval ("setAttr "+ $item + ".looped 1");

@@ -1,0 +1,49 @@
+global proc ScaleUVwindow()
+
+{
+
+if ( (`window -ex ScaleUV`) == true ) deleteUI ScaleUV;
+
+
+window -title "ScaleUV"  -widthHeight 350 200 ScaleUV;
+    columnLayout;
+
+text -label "Triangulate and delete history before!";
+
+
+
+intFieldGrp -numberOfFields 1
+        -label "Texture size" -extraLabel "pixels"
+        -value1 128 tex_size;
+
+intFieldGrp -numberOfFields 1
+        -label "Pixels per unit" -extraLabel "pix/unit"
+        -value1 13 pix_unit;
+
+button -label "Scale"   -align "center" -c "scale";
+
+
+showWindow ScaleUV;
+
+}
+
+
+global proc scale()
+{
+
+$ts = `intFieldGrp -q -v "tex_size"`;
+$pu = `intFieldGrp -q -v "pix_unit"`;
+
+polySelectBorderShell 0;
+$UVs = `ls -sl -fl`;
+PolySelectConvert 1;
+$faces =`ls -sl -fl`;
+select -r $faces;
+//polyTriangulate -ch 0;
+$comm = "scaleUV "+$ts[0]+" "+$pu[0];
+$d = eval($comm);
+select -r $UVs;
+polyEditUV  -su $d -sv $d;
+
+}
+

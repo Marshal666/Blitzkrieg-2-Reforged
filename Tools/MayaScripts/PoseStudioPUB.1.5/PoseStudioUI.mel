@@ -1,0 +1,340 @@
+/*					<------------------------------------->
+					|	PoseStudio public V1.5        |
+					<------------------------------------->
+						for Maya 4.5/5.0
+
+						By : Chang Liu
+						E-mail : artofmaya@sina.com
+						web    : www.smartmel.com
+							 July 2003
+
+___________________________________________________________________________________________________________________
+
+DESCRIPTION : 	PoseStudio is a mel script for maya character animator and character TDs to enhance their character
+		animation pipeline.
+		It has the powerful abilitity to manage a character's pose,
+		Especially ! IT HAS A REALLY COOL UI !
+
+___________________________________________________________________________________________________________________
+
+UPDATE :	V1.0(10.07.2003)  ->	- First public version.
+		V1.5(10.20.2003)  ->	- The UI changed.
+					- The left menu bar was moved to the top area to make the UI more clean.
+					- The UI can be resized vertical to make your work area more flexible.
+___________________________________________________________________________________________________________________
+
+INSTALLATION :	- Copy PoseStudio.mel and PoseStudioUI.mel into your custom script directory
+			( ex : c:\documents and settings\Administrator\My Documents\maya\4.5\scripts\ )
+
+		- Copy all *.bmp file into your custom icon directory
+			( ex : c:\documents and settings\Administrator\My Documents\maya\4.5\prefs\icons\ )
+
+		- Copy shelf_PoseStudio.mel into your maya shelves directory
+			( ex : C:\Documents and Settings\Administrator\My Documents\maya\4.5\prefs\shelves\ )
+
+		- Now open Maya, you will find a new shelf called "PoseStudio" , juset click to start PoseStudio.
+
+		Finally use PosestudioIcon.BMP as an icon of PoseStudio in you shelf.
+
+___________________________________________________________________________________________________________________
+
+HOW TO :	Visit www.smartmel.com to find a tutorial of PoseStudio.
+
+___________________________________________________________________________________________________________________
+*/
+global proc PSUI(){
+
+	global string $Echaracter;
+	global int    $PSGlstates;
+	global string $Clib;
+	global int    $aks;
+
+	global int $usePfx;
+	global string $Cpfx;
+
+if (`window -exists PoseStudioWin`)
+deleteUI PoseStudioWin;
+window -wh 533 375 -mxb 0 -t "PoseStudio public 1.5 b1020" PoseStudioWin;
+string $form = `formLayout -bgc .76 .75 .745`;
+	string $topButtonG = `columnLayout -adj 1 -h 30 -w 200 -bgc .76 .75 .745 topButtonColumn`;
+						rowLayout -nc 2 -cw2 3 440 -bgc .76 .75 .745;
+							separator -st none -w 3 -h 15 -bgc .76 .75 .745;
+							rowLayout -nc 5 -cw5 70 40 72 96 64 -bgc .76 .75 .745;
+								gridLayout -w 70 -nc 5 -cwh 13 15 -bgc .76 .75 .745 Tgridlayout02;
+									iconTextButton -c "LIBSET 1" -w 13 -h 15 -st "iconOnly" -i1 "PSls01.BMP" -ann "none" -bgc .76 .75 .745 tb10;
+									iconTextButton -c "LIBSET 2" -w 13 -h 15 -st "iconOnly" -i1 "PSls01.BMP" -ann "none" -bgc .76 .75 .745 tb11;
+									iconTextButton -c "LIBSET 3" -w 13 -h 15 -st "iconOnly" -i1 "PSls01.BMP" -ann "none" -bgc .76 .75 .745 tb12;
+									iconTextButton -c "LIBSET 4" -w 13 -h 15 -st "iconOnly" -i1 "PSls01.BMP" -ann "none" -bgc .76 .75 .745 tb13;
+									iconTextButton -c "LIBSET 5" -w 13 -h 15 -st "iconOnly" -i1 "PSls01.BMP" -ann "none" -bgc .76 .75 .745 tb14;
+								setParent..;
+								gridLayout -w 18 -nc 2 -cwh 9 17 -bgc .76 .75 .745 Tgridlayout03;
+									iconTextButton -c "RSL" -w 9 -h 17 -st "iconOnly" -i1 "PSdsl.bmp" -ann "remove sl lib" -bgc .76 .75 .745 tb15;
+									iconTextButton -c "CLS" -w 9 -h 17 -st "iconOnly" -i1 "PSdal.bmp" -ann "remove all lib" -bgc .76 .75 .745 tb16;
+								setParent..;
+								gridLayout -w 58 -nc 4 -cwh 13 15 -bgc .76 .75 .745 Tgridlayout04;
+
+									string $nl = `iconTextButton -c "NewLibWin" -ann "new pose lib" -w 13 -h 15 -st "iconOnly" -i1 "PSnl2914.BMP" -bgc .76 .75 .745 b01 `;
+									string $ll = `iconTextButton -c "LoadLibWin" -ann "load pose lib" -w 13 -h 15 -st "iconOnly" -i1 "PSll2914.BMP" -bgc .76 .75 .745 b02`;
+									string $ol = `iconTextButton -c "ov" -ann "input pose lib" -w 13 -h 15 -st "iconOnly" -i1 "PSol2914.BMP" -bgc .76 .75 .745 b025`;
+									string $sl = `iconTextButton -c "sv" -ann "output pose lib" -w 13 -h 15 -st "iconOnly" -i1 "PSsl2914.BMP" -bgc .76 .75 .745 b03`;
+								setParent..;
+								gridLayout -w 58 -nc 4 -cwh 13 15 -bgc .76 .75 .745 Tgridlayout05;
+									string $np = `iconTextButton -ann "new pose" -c "NewPoseWin" -w 13 -h 15 -st "iconOnly" -i1 "PSnp1214.BMP" -bgc .76 .75 .745 b12 `;
+									iconTextButton -ann "save pose" -c "Spose" -w 13 -h 15 -st "iconOnly" -i1 "PSsp1214.BMP" -bgc .76 .75 .745 b125 ;
+									iconTextButton -ann "delete pose" -c "dp" -w 26 -h 15 -st "iconOnly" -i1 "PSdp2514.BMP" -bgc .76 .75 .745 b14;
+								setParent..;
+								gridLayout -w 180 -nc 4 -cwh 45 15 -bgc .76 .75 .745 Tgridlayout06;
+									iconTextButton -ann "PoseStudio state"
+										-c ("$PSGlstates = `RV $PSGlstates tb00 \"PSstatesB5318.BMP\" \"PSstatesA5318.BMP\"`;"+
+										"if ($PSGlstates==0) print (\"// done : PS states = edit! \\n\");"+
+										"else print (\"// done : PS states = animate! \\n\");"
+										)
+										-w 45 -h 15 -st "iconOnly" -i1 "PSstatesA5318.BMP" -iol "" -bgc .76 .75 .745 tb00;
+									string $dc = `iconTextButton -ann "define character" -c "$Echaracter=`DC`;UpdateInfoDisp" -w 45 -h 15 -st "iconOnly" -i1 "PSdc4414.BMP" -bgc .76 .75 .745 b00`;
+									iconTextButton -ann "make icon" -c "doicon" -w 45 -h 15 -st "iconOnly" -i1 "PSic4414.BMP" -bgc .76 .75 .745 b13;
+									iconTextButton -ann "PoseStudio about" -c "ABO" -w 45 -h 15 -st "iconOnly" -i1 "PSabo4414.BMP" -bgc .76 .75 .745 b18;
+								setParent..;
+							setParent..;
+						setParent..;
+					setParent..;
+	string $buttomInfoG = `columnLayout -adj 1 -h 30 -w 200 -bgc .76 .75 .745 infoColumn`;
+					rowLayout -nc 2 -cw2 3 400 -bgc .76 .75 .745;
+						separator -st none -w 3 -h 15 -bgc .76 .75 .745;
+						rowLayout -nc 6 -cw6 40 120 40 120 40 120 -bgc .76 .75 .745;
+						picture -image "PSlibinfo.BMP";
+						text -l "*" -fn smallPlainLabelFont -bgc .76 .75 .745 PSlibTEX;
+						picture -image "PSchrinfo.BMP";
+						text -l "*" -fn smallPlainLabelFont -bgc .76 .75 .745 PSchrTEX;
+						picture -image "PSpfxinfo.BMP";
+						text -l "*" -fn smallPlainLabelFont -bgc .76 .75 .745 PSpfxTEX;
+						setParent..;
+					setParent..;
+				setParent..;
+
+	string $scrollArea = `scrollLayout -cr 1 -w 415 -bgc .76 .75 .745 scrolls`;
+				setParent..;
+	string $f01 = `picture -tl 1 -image   "PSf010.bmp"`;
+	string $f02 = `picture -tl 1 -image   "PSf020.bmp"`;
+	string $f03 = `picture -tl 1 -image   "PSf030.bmp"`;
+	string $f04 = `picture -tl 1 -image   "PSf040.bmp"`;
+			setParent..;
+	formLayout -e
+		-attachForm		$scrollArea "top"   20
+		-attachForm		$scrollArea "left"   6
+		-attachControl		$scrollArea "right"   -3  $f03
+		-attachControl		$scrollArea "bottom"  -3  $f04
+		-attachForm		$f01 "top"   17
+		-attachForm		$f01 "left"  3
+		-attachForm		$f02 "top"   23
+		-attachForm		$f02 "left"  3
+		-attachControl		$f02 "bottom"  0  $f04
+		-attachForm		$f03 "top"     23
+		-attachForm		$f03 "left"    461
+		-attachControl		$f03 "bottom"  0  $f04
+		-attachControl		$f04 "bottom"  1  $buttomInfoG
+		-attachForm		$f04 "left"    3
+		-attachForm     $topButtonG "top"   0
+		-attachForm     $topButtonG "left"  3
+		-attachForm     $buttomInfoG "bottom" 2
+		-attachForm     $buttomInfoG "left"  0
+	$form;
+
+string $gridlayout = `gridLayout -p $scrollArea -nc 6 -cwh 72 110 -bgc .76 .75 .745 gridlayout`;
+setParent..;
+showWindow PoseStudioWin;
+}
+global proc newBox(string $pid){
+int $i = $pid;
+string $pid = "P"+$pid;
+global string $Clib;
+string $BoxName = `getAttr ($Clib+"."+$pid)`;
+string $icon = `getAttr ($Clib+"."+$pid+"Icon")`;
+if ($icon == "")
+$icon = "PSnoicon2.bmp";
+columnLayout -p gridlayout -h 40 -adj 1 -cal "center" -bgc .76 .75 .745;
+	eval ("iconTextButton "+
+	"-dcc \"Licon "+$Clib+$pid+"ITB\""+
+	"-c \"setAttr "+$Clib+".currentPose "+$i+";refcolor;iconTextButton -e -bgc .0 0 .45 "+$Clib+$pid+"ITB;rimage "+$i+";\""+
+	" -st \"iconOnly\" -w 70 -h 72 -i1 \""+$icon+"\" -ann "+$BoxName+" -bgc .76 .75 .745 "+$Clib+$pid+"ITB");
+
+
+//---------------------------->>>>
+     floatSlider -w 50 -min 0 -max 1 -cc "" -bgc .76 .75 .745 ($Clib+$pid+"FSG");
+	rowLayout -nc 5 -cw5 12 16 16 16 12 -bgc .76 .75 .745;
+		separator -st none -w 12 -h 5 -bgc .76 .75 .745;
+		eval ("button -l \"<\" -w 14 -h 14 -bgc .76 .75 .745  -c \"setAttr "+$Clib+".currentPose "+$i+";refcolor;iconTextButton -e -bgc .0 0 .45 "+$Clib+$pid+"ITB;string $per = `floatSlider -q -v "+$Clib+$pid+"FSG`;setV 1 $per;rimage "+$i+";\" "+$Clib+$pid+"ITBsubB");
+		eval ("button -l \"S\" -w 16 -h 14 -bgc .85 .75 .745  -c \"setAttr "+$Clib+".currentPose "+$i+";refcolor;iconTextButton -e -bgc .0 0 .45 "+$Clib+$pid+"ITB;setV 0 1;rimage "+$i+";\" "+$Clib+$pid+"ITBsetB");
+		eval ("button -l \">\" -w 14 -h 14 -bgc .76 .75 .745  -c \"setAttr "+$Clib+".currentPose "+$i+";refcolor;iconTextButton -e -bgc .0 0 .45 "+$Clib+$pid+"ITB;string $per = `floatSlider -q -v "+$Clib+$pid+"FSG`;setV 0 $per;rimage "+$i+";\" "+$Clib+$pid+"ITBaddB");
+		separator -st none -w 12 -h 5 -bgc .76 .75 .745;
+}
+global proc NewLibWin (){
+global int    $PSGlstates;
+if ($PSGlstates == 1)
+	{
+	OP 1;
+	return;
+	}
+if (`window -ex New_Lib_Window`)
+   deleteUI -window New_Lib_Window;
+window -wh 150 95 -t "New Lib Window" New_Lib_Window;
+string $nlMainForm = `formLayout -bgc .76 .75 .745`;
+string $nlform = `formLayout -bgc .76 .75 .745 iform`;
+		textField  -tx ""  -bgc .76 .75 .745 LNameInputTF;
+		textField  -tx ""  -bgc .76 .75 .745 CNameInputTF;
+		string $nlf01 = `picture -image "PStit.BMP"`;
+		string $nlf02 = `picture -image "PStil.BMP"`;
+		string $nlf03 = `picture -image "PStir.BMP"`;
+		string $nlf04 = `picture -image "PStib.BMP"`;
+		string $nlf01a = `picture -image "PStit.BMP"`;
+		string $nlf02a = `picture -image "PStil.BMP"`;
+		string $nlf03a = `picture -image "PStir.BMP"`;
+		string $nlf04a = `picture -image "PStib.BMP"`;
+	setParent..;
+string $bbuttonArea = `columnLayout -adj 1 -bgc .76 .75 .745`;
+	iconTextButton -c "NL" -w 135 -h 15 -st "iconOnly" -i1 "PSok.bmp" -bgc .76 .75 .745 nlb00;
+	setParent ..;
+formLayout -e
+	-attachForm		LNameInputTF "top"   6
+	-attachForm		LNameInputTF "left"   3
+	-attachControl		LNameInputTF "right"   -3 $nlf03
+	-attachControl		LNameInputTF "bottom"  -3 $nlf04
+	-attachForm		$nlf01 "top"   5
+	-attachForm		$nlf01 "left"  1
+	-attachForm		$nlf02 "top"   9
+	-attachForm		$nlf02 "left"  1
+	-attachForm		$nlf03 "top"   9
+	-attachForm		$nlf03 "left"  136
+	-attachForm		$nlf04 "top"   25
+	-attachForm		$nlf04 "left"   1
+
+	-attachForm		CNameInputTF "top"   29
+	-attachForm		CNameInputTF "left"   3
+	-attachControl		CNameInputTF "right"   -3 $nlf03a
+	-attachControl		CNameInputTF "bottom"  -3 $nlf04a
+	-attachForm		$nlf01a "top"   28
+	-attachForm		$nlf01a "left"  1
+	-attachForm		$nlf02a "top"   32
+	-attachForm		$nlf02a "left"  1
+	-attachForm		$nlf03a "top"   32
+	-attachForm		$nlf03a "left"  136
+	-attachForm		$nlf04a "top"   48
+	-attachForm		$nlf04a "left"   1
+$nlform;
+formLayout -e
+	-attachForm	$nlform	"top"	0
+	-attachForm	$nlform	"left"	0
+	-attachForm	$bbuttonArea	"left"	3
+	-attachControl	$bbuttonArea	"top"	0  $nlform
+	$nlMainForm;
+showWindow New_Lib_Window;
+}
+global proc LoadLibWin(){
+string $list[] = `lsType groupId`;
+string $liblist[];
+string $obj;
+int $i=0;
+for ($obj in $list)
+	{
+	if (`objExists ($obj+".IAL")`)
+		{
+		$liblist[$i] = $obj;
+		$i++;
+		}
+	}
+if (`window -ex Load_Lib_Window`)
+   deleteUI -window Load_Lib_Window;
+window -wh 150 256 -t "load Lib Window" Load_Lib_Window;
+
+string $llform = `formLayout -bgc .76 .75 .745 iform`;
+	textScrollList -w 136 -nr 16 -ams true LlibTSL;
+		string $llf01 = `picture -image "PStit.BMP"`;
+		string $llf02 = `picture -image "PSllwfl.BMP"`;
+		string $llf03 = `picture -image "PSllwfr.BMP"`;
+		string $llf04 = `picture -image "PStib.BMP"`;
+		string $llb1 = `iconTextButton -c "LL" -w 135 -h 15 -st "iconOnly" -i1 "PSok.bmp" -bgc .76 .75 .745 llib01`;
+	setParent..;
+formLayout -e
+-attachForm		LlibTSL "top"   3
+-attachForm		LlibTSL "left"   4
+-attachControl		LlibTSL "right"   -1 $llf03
+-attachControl		LlibTSL "bottom"  -1 $llf04
+-attachForm		$llf01 "top"   0
+-attachForm		$llf01 "left"  0
+-attachForm		$llf02 "top"   4
+-attachForm		$llf02 "left"  0
+-attachForm		$llf03 "top"   4
+-attachForm		$llf03 "left"  135
+-attachForm		$llf04 "top"   206
+-attachForm		$llf04 "left"   0
+-attachForm		$llb1 "left"   3
+-attachForm		$llb1 "top"   210
+$llform;
+for ($obj in $liblist)
+	{
+	textScrollList -e -a $obj LlibTSL;
+	}
+showWindow Load_Lib_Window;
+}
+global proc NewPoseWin(){
+global int    $PSGlstates;
+global string $Clib;
+if ($Clib == "")
+	{
+	OP 11;
+	return;
+}
+if ($PSGlstates == 1)
+	{
+	OP 1;
+	return;
+	};
+if (`window -ex New_Pose_Window`)
+   deleteUI -window New_Pose_Window;
+window -wh 150 70 -t "New Pose" New_Pose_Window;
+
+string $npform = `formLayout -bgc .76 .75 .745 iform`;
+	textField -w 136 PNTF;
+		string $npf01 = `picture -image "PStit.BMP"`;
+		string $npf02 = `picture -image "PStil.BMP"`;
+		string $npf03 = `picture -image "PStir.BMP"`;
+		string $npf04 = `picture -image "PStib.BMP"`;
+		string $npb1 = `iconTextButton -c "NP 0" -w 135 -h 15 -st "iconOnly" -i1 "PSok.bmp" -bgc .76 .75 .745`;
+	setParent..;
+formLayout -e
+-attachForm		PNTF "top"   6
+-attachForm		PNTF "left"   3
+-attachControl		PNTF "right"   -3 $npf03
+-attachControl		PNTF "bottom"  -3 $npf04
+-attachForm		$npf01 "top"   5
+-attachForm		$npf01 "left"  1
+-attachForm		$npf02 "top"   9
+-attachForm		$npf02 "left"  1
+-attachForm		$npf03 "top"   9
+-attachForm		$npf03 "left"  136
+-attachForm		$npf04 "top"   25
+-attachForm		$npf04 "left"   1
+-attachForm		$npb1 "left"   3
+-attachForm		$npb1 "top"   30
+$npform;
+showWindow New_Pose_Window;
+}
+global proc ABO(){
+deleteUI -lay gridlayout;
+	columnLayout -p scrolls -h 40 -adj 1 -cal "center" -bgc .76 .75 .745 aboutlay;
+		picture -image "PSaboT.bmp" -bgc .76 .75 .745;
+		text -label "  Author : Chang Liu(from Guang Zhou China)" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  Contact : artofmaya@sina.com" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  HomePage : http://www.smartmel.com" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  Description : I think one of the deadly time killer of " -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  character animator is to pose a character . I wort Pose-" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  Studio to manage character's poses , It has the ability" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  to save and recall a pose , blends two poses and quickly" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  create icon for the saved pose , It also can load five" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  character poses library same time." -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  " -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  copyrighted , All rights reserved." -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  Note : This is only a free limited version , buttons with" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  gry text is not available . More info about the inhouse" -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+		text -label "  version , please visit my site." -fn "smallFixedWidthFont" -al "left" -bgc .76 .75 .745;
+	iconTextButton -e -i1 "PSabo4414r.BMP" -en 0 b18;
+}

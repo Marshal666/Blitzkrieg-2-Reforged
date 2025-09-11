@@ -1,0 +1,1 @@
+whereis.exe *.tga [nomip.bat @$2$3.tga@ @$2$3.dds@]

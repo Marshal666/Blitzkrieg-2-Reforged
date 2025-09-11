@@ -1,0 +1,228 @@
+
+//------------------------------- SET DATA------------------------------
+int $icon_counter  = 0;
+int $error_counter = 0;
+
+//string $pathData         = "J://Complete/Units/Technics/common.dir ";  //list of directories
+string $pathData         = "J://new/new.dir";
+string $tex_name         = "icon.tga";
+
+string $rootMask         = "Basis";
+int $icResX              = 512; // Icon's width;
+int $icResY              = 512; // Icon's height;
+float $MatAmbVal         = 0.5;// Material ambient val;
+float $scaleParam        = 1.05; //Scale parameter;
+
+///////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+    string $log_path         =  dirname ($pathData);
+    $fileId =`fopen $pathData "r"`;
+    string $nextPath = `fgetline $fileId`;
+    //string $nextPath = " ";
+
+
+// Basic iteration
+    //while ( size( $nextPath ) > 0 )
+   while ($nextPath!="")
+   {
+               $nextPath = strip ($nextPath);
+
+      // ERROR WRITING
+               if ((`file -q -ex $nextPath`)==0)
+                         {
+                              AF_logFile($log_path,("Error in path! File not found.Skiped:"+$nextPath));
+                              $error_counter = $error_counter + 1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+
+
+               $proj_path = dirname( $nextPath );
+               $tex_path = $proj_path + "/1.tga";
+               file -f -new;
+               setProject $proj_path;
+               print ( "set project "+$proj_path +"\n");
+
+
+
+
+
+//-----------------------------IMPORT MODEL TO TEMP FILE
+//==============================================================
+               file -import -type "mayaBinary" -rpr "temp" -options "v=0" $nextPath;
+
+               currentTime 0;
+               // ERROR WRITING
+               if (size(`ls $rootMask `)==0)
+                         {
+                              AF_logFile($log_path,("Error! No root node! Skiped:"+$nextPath));
+                              $error_counter = $error_counter + 1;
+                              $nextPath = `fgetline $fileId`;
+                              continue;
+                         };
+
+               select -r -hi $rootMask;
+               $list = `ls -sl -et "mesh"`;
+
+               if (size($list)>1 ) polyUnite -ch 0 -n "object";
+               else
+               {
+                    select -r $rootMask;
+                    duplicate -rr -n "object";
+                    delete $rootMask;
+
+                    select -r -hi "object";
+                    select -d "objectShape";
+                    select -d "object";
+                    delete;
+
+               }  ;
+
+
+               select -all;
+               select -d "object";
+               delete;
+
+               select "object";
+               rotate -a -os -22 -22 -135 ;
+               FreezeTransformations;
+
+
+               //GET SIZE OF BB
+               select "object";
+               $bsize = `polyEvaluate -b`;
+               $xmid = ($bsize[0] + $bsize[1])/2;
+               $ymid = ($bsize[2] + $bsize[3])/2;
+               $zmid = ($bsize[4] + $bsize[5])/2;
+
+               $xsize = absm($bsize[0] - $bsize[1]);
+               $ysize = absm($bsize[2] - $bsize[3]);
+               $zsize = absm($bsize[4] - $bsize[5]);
+               //--- CREATING MATERIAL
+               shadingNode -asShader lambert -n IconLambert;
+               sets -renderable true -noSurfaceShader true -empty -name IconLambertSG;
+               connectAttr -f IconLambert.outColor IconLambertSG.surfaceShader;
+               //Set ambient val
+               setAttr "IconLambert.ambientColor" -type double3 $MatAmbVal $MatAmbVal $MatAmbVal ;
+
+//Creating texture node
+
+shadingNode -asTexture file -n IconFile;
+shadingNode -asUtility place2dTexture -n place2dTexture_Icon ;
+connectAttr -f place2dTexture_Icon.coverage IconFile.coverage;
+connectAttr -f place2dTexture_Icon.translateFrame IconFile.translateFrame;
+connectAttr -f place2dTexture_Icon.rotateFrame IconFile.rotateFrame;
+connectAttr -f place2dTexture_Icon.mirrorU IconFile.mirrorU;
+connectAttr -f place2dTexture_Icon.mirrorV IconFile.mirrorV;
+connectAttr -f place2dTexture_Icon.stagger IconFile.stagger;
+connectAttr -f place2dTexture_Icon.wrapU IconFile.wrapU;
+connectAttr -f place2dTexture_Icon.wrapV IconFile.wrapV;
+connectAttr -f place2dTexture_Icon.repeatUV IconFile.repeatUV;
+connectAttr -f place2dTexture_Icon.offset IconFile.offset;
+connectAttr -f place2dTexture_Icon.rotateUV IconFile.rotateUV;
+connectAttr -f place2dTexture_Icon.noiseUV IconFile.noiseUV;
+connectAttr -f place2dTexture_Icon.vertexUvOne IconFile.vertexUvOne;
+connectAttr -f place2dTexture_Icon.vertexUvTwo IconFile.vertexUvTwo;
+connectAttr -f place2dTexture_Icon.vertexUvThree IconFile.vertexUvThree;
+connectAttr -f place2dTexture_Icon.vertexCameraOne IconFile.vertexCameraOne;
+connectAttr place2dTexture_Icon.outUV IconFile.uv;
+connectAttr place2dTexture_Icon.outUvFilterSize IconFile.uvFilterSize;
+
+connectAttr -force IconFile.outColor IconLambert.color;
+
+
+
+
+
+
+
+setAttr IconFile.filterType 0;
+
+//Assign material to model ("object")
+sets -e -forceElement IconLambertSG object;
+//AEassignTextureCB  IconFile.fileTextureName $temp_path_tex "image";
+//setAttr IconFile.fileTextureName -type $temp_path_tex;
+setAttr -type "string" IconFile.fileTextureName $tex_path;
+
+//----------------------- TRANSPARANCY ------------------------------
+if (`getAttr IconFile.fileHasAlpha` > 0)
+{
+     connectAttr -force IconFile.outTransparency IconLambert.transparency;
+     print ("\n" + $proj_path + " alpha transparancy set");
+};
+
+
+
+
+
+//----------------------------------set render options---------------------------
+/////////////////////////////////////////////////////////////////////////////////
+setAttr defaultRenderGlobals.imageFormat 19;      //19-tga
+
+setAttr defaultRenderQuality.edgeAntiAliasing 0;      //Highest
+setAttr defaultRenderQuality.useMultiPixelFilter 1;   //true
+setAttr defaultRenderQuality.pixelFilterType 4;       //Gauss
+setAttr defaultRenderQuality.pixelFilterWidthX 2.5;
+setAttr defaultRenderQuality.pixelFilterWidthY 2.5;
+//////////////////////////////////////////////////////////////////////////////////
+
+                      //CameraSettings
+
+setAttr "sideShape.orthographicWidth" (max($ysize,$zsize)*$scaleParam);
+//setAttr "sideShape.backgroundColor" -type double3 0.83137 0.81568 0.78431;
+setAttr "sideShape.backgroundColor" -type double3 0 0 0;
+
+setAttr "side.translateY" $ymid;
+setAttr "side.translateZ" $zmid;
+//RENDERING ICON
+
+render -x $icResX -y $icResY side;
+
+$sys_commandDel = "del /f " + $proj_path + "\\"+$tex_name;
+$sys_commandDel = subsitute_all($sys_commandDel);
+system($sys_commandDel);
+
+
+$sys_command = "rename " + $proj_path + "\\untitled_sideShape_tmp.tga "+ $tex_name;
+$sys_command = subsitute_all($sys_command);
+system($sys_command);
+
+
+$nextPath = `fgetline $fileId`;
+$icon_counter = $icon_counter+1;
+//AF_logFile($log_path,("All Correct! "+$nextPath));
+
+print ("\n" + $icon_counter + " icons created");
+
+
+    }
+    fclose $fileId;
+    print ("\n" + $icon_counter + " ICONS CREATED. " + $error_counter + " ERRORS FOUND.(SEE error.log)");
+
+
+
+
+
+//-------------------------------------------
+proc float absm (float $x)
+{
+     if ($x>=0) return $x;
+     else return -$x;
+}
+
+
+proc string subsitute_all(string $s1)
+{
+     while (`gmatch $s1 "*/*" `) $s1 = `substitute "/" $s1 "\\"`;
+     return $s1;
+}
+
+
+

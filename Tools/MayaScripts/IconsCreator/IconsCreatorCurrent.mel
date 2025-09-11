@@ -1,0 +1,163 @@
+global proc int IconsCreatorCurrent(int $icResX, int $icResY)
+{
+//------------------------------- SET DATA------------------------------
+string $tex_name         = "icon.tga";
+float  $MatAmbVal         = 0.5;// Material ambient val;
+float  $scaleParam        = 1.05; //Scale parameter;
+
+///////////////////////////////////////////////////////////////////////
+ $temp = `ls -sl -tr`;
+
+ if(size($temp)==0)
+ {
+          error "Nothing selected! Select root object and try again.";
+          return 1;
+ }
+
+ $rootMask = $temp[0];
+
+ //get file location
+ //$f = `file -q -loc`;
+ //$nextPath = $f[0];
+ $nextPath = `file -q -loc`;
+ $proj_path = dirname( $nextPath );
+ $tex_path = $proj_path + "/1.tga";
+
+
+//-----------------------------IMPORT MODEL TO TEMP FILE
+//==============================================================
+               s_a_c();
+               file -f -new;
+               setProject $proj_path;
+               print ( "set project "+$proj_path +"\n");
+               file -import -type "mayaBinary" -rpr "temp" -options "v=0" $nextPath;
+               currentTime 0;
+
+               // ERROR WRITING
+               if (size(`ls $rootMask `)==0) print  ("Error! No root node! Skiped:"+$nextPath);
+               select -r -hi $rootMask;
+               $list = `ls -sl -et "mesh"`;
+               // COMBINE
+               if (size($list)>1 ) polyUnite -ch 0 -n "object";
+               else
+               {
+                    select -r $rootMask;
+                    duplicate -rr -n "object";
+                    delete $rootMask;
+
+                    select -r -hi "object";
+                    select -d "objectShape";
+                    select -d "object";
+                    delete;
+
+               }  ;
+
+
+               select -all;
+               select -d "object";
+               delete;
+
+               select "object";
+               rotate -a -os -22 -22 -135 ;
+               FreezeTransformations;
+
+
+               //GET SIZE OF BB
+               select "object";
+               $bsize = `polyEvaluate -b`;
+               $xmid = ($bsize[0] + $bsize[1])/2;
+               $ymid = ($bsize[2] + $bsize[3])/2;
+               $zmid = ($bsize[4] + $bsize[5])/2;
+
+               $xsize = absm($bsize[0] - $bsize[1]);
+               $ysize = absm($bsize[2] - $bsize[3]);
+               $zsize = absm($bsize[4] - $bsize[5]);
+               //--- CREATING MATERIAL
+               shadingNode -asShader lambert -n IconLambert;
+               sets -renderable true -noSurfaceShader true -empty -name IconLambertSG;
+               connectAttr -f IconLambert.outColor IconLambertSG.surfaceShader;
+               //Set ambient val
+               setAttr "IconLambert.ambientColor" -type double3 $MatAmbVal $MatAmbVal $MatAmbVal ;
+
+//Creating texture node
+
+shadingNode -asTexture file -n IconFile;
+shadingNode -asUtility place2dTexture -n place2dTexture_Icon ;
+connectAttr -f place2dTexture_Icon.coverage IconFile.coverage;
+connectAttr -f place2dTexture_Icon.translateFrame IconFile.translateFrame;
+connectAttr -f place2dTexture_Icon.rotateFrame IconFile.rotateFrame;
+connectAttr -f place2dTexture_Icon.mirrorU IconFile.mirrorU;
+connectAttr -f place2dTexture_Icon.mirrorV IconFile.mirrorV;
+connectAttr -f place2dTexture_Icon.stagger IconFile.stagger;
+connectAttr -f place2dTexture_Icon.wrapU IconFile.wrapU;
+connectAttr -f place2dTexture_Icon.wrapV IconFile.wrapV;
+connectAttr -f place2dTexture_Icon.repeatUV IconFile.repeatUV;
+connectAttr -f place2dTexture_Icon.offset IconFile.offset;
+connectAttr -f place2dTexture_Icon.rotateUV IconFile.rotateUV;
+connectAttr -f place2dTexture_Icon.noiseUV IconFile.noiseUV;
+connectAttr -f place2dTexture_Icon.vertexUvOne IconFile.vertexUvOne;
+connectAttr -f place2dTexture_Icon.vertexUvTwo IconFile.vertexUvTwo;
+connectAttr -f place2dTexture_Icon.vertexUvThree IconFile.vertexUvThree;
+connectAttr -f place2dTexture_Icon.vertexCameraOne IconFile.vertexCameraOne;
+connectAttr place2dTexture_Icon.outUV IconFile.uv;
+connectAttr place2dTexture_Icon.outUvFilterSize IconFile.uvFilterSize;
+
+connectAttr -force IconFile.outColor IconLambert.color;
+
+
+setAttr IconFile.filterType 0;
+
+//Assign material to model ("object")
+sets -e -forceElement IconLambertSG object;
+//AEassignTextureCB  IconFile.fileTextureName $temp_path_tex "image";
+//setAttr IconFile.fileTextureName -type $temp_path_tex;
+setAttr -type "string" IconFile.fileTextureName $tex_path;
+
+//----------------------- TRANSPARANCY ------------------------------
+if (`getAttr IconFile.fileHasAlpha` > 0)
+{
+     connectAttr -force IconFile.outTransparency IconLambert.transparency;
+     print ("\n" + $proj_path + " alpha transparancy set");
+};
+
+
+
+
+
+//----------------------------------set render options---------------------------
+/////////////////////////////////////////////////////////////////////////////////
+setAttr defaultRenderGlobals.imageFormat 19;      //19-tga
+
+setAttr defaultRenderQuality.edgeAntiAliasing 0;      //Highest
+setAttr defaultRenderQuality.useMultiPixelFilter 1;   //true
+setAttr defaultRenderQuality.pixelFilterType 4;       //Gauss
+setAttr defaultRenderQuality.pixelFilterWidthX 2.5;
+setAttr defaultRenderQuality.pixelFilterWidthY 2.5;
+//////////////////////////////////////////////////////////////////////////////////
+
+//CameraSettings
+
+setAttr "sideShape.orthographicWidth" (max(float($ysize),float($zsize))*$scaleParam);
+//setAttr "sideShape.backgroundColor" -type double3 0.83137 0.81568 0.78431;
+setAttr "sideShape.backgroundColor" -type double3 0 0 0;
+
+setAttr "side.translateY" $ymid;
+setAttr "side.translateZ" $zmid;
+//RENDERING ICON
+
+render -x $icResX -y $icResY side;
+
+$sys_commandDel = "del /f " + $proj_path + "\\"+$tex_name;
+$sys_commandDel = AF_subsitute_all($sys_commandDel);
+system($sys_commandDel);
+
+
+$sys_command = "rename " + $proj_path + "\\untitled_sideShape_tmp.tga "+ $tex_name;
+$sys_command = AF_subsitute_all($sys_command);
+system($sys_command);
+file -f -open -type "mayaBinary" $nextPath;
+return 0;
+//$sys_command = "start " + $proj_path + $tex_name;
+//system($sys_command);
+//--------------------------------------------------------
+}

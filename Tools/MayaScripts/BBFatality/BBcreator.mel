@@ -1,0 +1,55 @@
+//Creation of BB for list of polymeshes (B2, M1 projects)
+//argument string[] - array of polymeshes names;
+//result - string[] - return  array of polymeshes BB names;
+
+// 22.03.2004 Nival Interactive
+// Eugene Melkov
+
+global proc string[] BBcreator (string $list[])
+{
+     int $n = 0;
+     string $bb_list[];
+
+     if (size($list)==0)
+               {
+                    print "\nERROR! LIST IS EMPTY!";
+                    $bb_list[0] = "";
+                    return $bb_list;
+               }
+
+
+
+     for ($element in $list)
+     {
+          select $element;
+          duplicate -rr -n "temp_element";
+          $list_parent =`listRelatives -p "temp_element"`;
+          if (size($list_parent)!=0) parent -w;
+          FreezeTransformations;
+
+
+
+          $bsize = `polyEvaluate -b`;
+          $xmid = ($bsize[0] + $bsize[1])/2;
+          $ymid = ($bsize[2] + $bsize[3])/2;
+          $zmid = ($bsize[4] + $bsize[5])/2;
+
+          $xsize = absm($bsize[0] - $bsize[1]);
+          $ysize = absm($bsize[2] - $bsize[3]);
+          $zsize = absm($bsize[4] - $bsize[5]);
+
+          delete "temp_element";
+
+
+          string $name = "BB_"+$element;
+          polyCube -w $xsize -h $ysize -d $zsize -sx 1 -sy 1 -sz 1 -ax 0 1 0 -tx 1 -ch 0 -n $name;
+          move -a  $xmid $ymid $zmid;
+          FreezeTransformations;
+          eval ("polyTriangulate -ch 0 "+$name+".f[0:5]");
+          eval ("move 0 0 0 " + $name + ".scalePivot "+$name+".rotatePivot");
+          select -cl;
+          $bb_list[$n] = $name;
+          $n+=1;
+     }
+     return $bb_list;
+}

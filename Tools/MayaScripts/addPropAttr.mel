@@ -1,0 +1,12 @@
+
+setAttr "BINOCULARS.looped" 1;
+
+select -r "THROW*";
+$list = `ls -sl -tr`;
+for ($pr in $list)
+{
+  select -r $pr;
+  addAttr -ln ActionTime -at "float" -dv 0;
+ // addAttr  -longName PointLightX -attributeType "float";
+  eval ("setAttr  -k 1 " + $pr + ".ActionTime");
+}

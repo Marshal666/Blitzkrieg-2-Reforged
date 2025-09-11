@@ -1,0 +1,1 @@
+@java net.sf.saxon.Query %1 >out.xml

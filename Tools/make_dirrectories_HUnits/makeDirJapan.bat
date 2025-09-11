@@ -1,0 +1,14 @@
+md A_Officer_w
+md Artillery_gunner
+md Assault_sapper_flamethrower
+md Assault_sapper_SMG
+md Assault_sapper_Type97_w
+md AT_gunner
+md Gunner
+md Kamikadze
+md M_gunner_Type97
+md Officer
+md Officer_paratrooper
+md Paratrooper_Arisaka
+md Paratrooper_SMG
+md Sniper

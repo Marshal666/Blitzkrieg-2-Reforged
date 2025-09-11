@@ -1,0 +1,20 @@
+global proc shelf_PoseStudio () {
+    global string $gBuffStr;
+    global string $gBuffStr0;
+    global string $gBuffStr1;
+
+
+    shelfButton
+        -enableCommandRepeat 1
+        -enable 1
+        -width 34
+        -height 34
+        -manage 1
+        -visible 1
+        -label "source PoseStudio.mel;source PoseStudioUI.mel;PoseStudio" 
+        -image1 "commandButton.xpm" 
+        -style "iconOnly" 
+        -command "source PoseStudio.mel;source PoseStudioUI.mel;PoseStudio" 
+    ;
+
+} 

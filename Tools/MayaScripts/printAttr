@@ -1,0 +1,7 @@
+$sel = `ls -sl`;
+string $globals[] = `listAttr $sel[0]`;
+$globals = `sort $globals`;
+print $globals;
+$r =`getAttr file1.outAlpha`;
+print $r;
+

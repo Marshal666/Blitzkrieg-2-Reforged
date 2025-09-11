@@ -1,0 +1,18 @@
+//Smoth all secected polyshapes
+// 13.02.2004 Eugene Melkov
+
+global proc smoothAll()
+{
+$list = `ls -sl -tr`;
+for ($n in $list)
+     {
+          print $n;
+          select -r $n;
+          $en = `polyEvaluate -e`;
+          $a = $en[0]-1;
+          $comm = "polySoftEdge -a 180 -ch 0 "+$n+".e[0:" + $a + "]";
+          eval $comm;
+          select -cl;
+     }
+     select -cl;
+}

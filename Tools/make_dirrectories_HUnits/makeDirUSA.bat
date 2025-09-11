@@ -1,0 +1,16 @@
+md A_Officer_w
+md Artillery_gunner
+md Assault_saper_Bar_w
+md Assault_saper_bazooka
+md Assault_saper_flamethrower_w
+md Assault_saper_thomson_w
+md AT_gunner_bazooka
+md Gunner
+md M_gunner_bar
+md Marine
+md Officer
+md Officer_Paratrooper
+md Paratrooper
+md Sapper
+md SM_gunner_thomson
+md Sniper

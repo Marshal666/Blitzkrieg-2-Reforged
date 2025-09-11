@@ -1,0 +1,218 @@
+global proc lightFXLocsWin()
+
+{
+
+if ( (`window -ex lightFXLocsWin`) == true ) deleteUI lightFXLocsWin;
+
+
+window -title "ScaleUV"  -widthHeight 350 200 lightFXLocsWin;
+     columnLayout;
+     button -label "Create new lightFX Locator"   -align "center" -c "lightFXLocs";
+showWindow lightFXLocsWin;
+
+}
+
+
+//---------------------------------------------------------------------------------
+
+global proc lightFXLocs()
+
+{
+
+
+// Creation MAIN LOCATOR
+
+spaceLocator -p 0 0 0 -n "LEffect01";
+toggle -localAxis;
+
+$nameLoc =`ls -sl -tr`;
+
+setAttr -lock true "LEffect01.sx";
+setAttr -lock true "LEffect01.sy";
+setAttr -lock true "LEffect01.sz";
+
+eval ("setAttr  -lock 1 " + $nameLoc[0] + ".sx");
+eval ("setAttr  -lock 1 " + $nameLoc[0] + ".sy");
+eval ("setAttr  -lock 1 " + $nameLoc[0] + ".sy");
+
+//Season
+
+addAttr  -longName atDay -attributeType  "bool" -dv false;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".atDay");
+
+addAttr  -longName atNight -attributeType  "bool" -dv true;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".atNight");
+
+
+
+// ----------------------Light--------------------------------------
+
+addAttr  -longName NeedLight -attributeType  "bool" -dv true;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".NeedLight");
+
+
+addAttr  -longName PointLightIntensity -sn pli -attributeType "float" -min 0 -dv 1;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".PointLightIntensity");
+
+addAttr  -longName PointLightX -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".PointLightX");
+
+addAttr  -longName PointLightY -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".PointLightY");
+
+addAttr  -longName PointLightZ -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".PointLightZ");
+
+
+// ----------------------Flare--------------------------------------
+addAttr  -longName NeedFlare -attributeType  "bool" -dv true;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".NeedFlare");
+
+
+
+addAttr  -longName FlareX -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".FlareX");
+
+addAttr  -longName FlareY -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".FlareY");
+
+addAttr  -longName FlareZ -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".FlareZ");
+
+
+addAttr  -longName FlareSize -attributeType "float";
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".FlareSize");
+
+// ----------------------Cone -------------------------
+
+addAttr  -longName NeedCone -attributeType  "bool" -dv true;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".NeedCone");
+
+addAttr  -longName ConeBasisScale -attributeType "float" -min 0 -dv 1;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".ConeBasisScale");
+
+addAttr  -longName ConeLengthScale -attributeType "float" -min 0 -dv 1;
+eval ("setAttr  -k 1 " + $nameLoc[0] + ".ConeLengthScale");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//create Cone
+cone -p 0 0 0 -ax 0 0 -1
+     -ssw 0 -esw 360 -r 1 -hr 2
+     -d 3 -ut 0 -tol 0.01 -s 8
+     -nsp 1 -ch 0 -n "cone";
+
+toggle -template -state on |cone ;
+move -a 0 0 2;
+move -r 0 0 -2 cone.scalePivot cone.rotatePivot ;
+FreezeTransformations;
+parent |cone $nameLoc[0];
+eval ("connectAttr -f "+$nameLoc[0]+".NeedCone " + $nameLoc[0] + "|cone.visibility");
+
+eval ("connectAttr -f "+$nameLoc[0]+".ConeBasisScale "  + $nameLoc[0] + "|cone.sx");
+eval ("connectAttr -f "+$nameLoc[0]+".ConeBasisScale "  + $nameLoc[0] + "|cone.sy");
+eval ("connectAttr -f "+$nameLoc[0]+".ConeLengthScale " + $nameLoc[0] + "|cone.sz");
+
+
+
+
+
+
+//-----------------------------------create Flare------------------------------
+
+
+particle -p 0 0 0  -c 1 -n "flare";
+pickWalk -d down;
+$flareShape = `ls -sl`;
+
+connectAttr -f |flare.sx |flare.sy;
+connectAttr -f |flare.sx |flare.sz;
+
+eval ("setAttr " + $flareShape[0] + ".particleRenderType 5");
+
+//Add color:
+          addAttr -is true -ln "colorRed" -dv 1.0 -at double |flare|flareShape;
+          setAttr -keyable true |flare|flareShape.colorRed;
+          addAttr -is true -ln "colorGreen" -dv 1.0 -at double |flare|flareShape;
+          setAttr -keyable true |flare|flareShape.colorGreen;
+          addAttr -is true -ln "colorBlue" -dv 1.0 -at double |flare|flareShape;
+          setAttr -keyable true |flare|flareShape.colorBlue;
+
+
+ //create Material
+
+if (size(`ls "flare_Lambert" `)!=1)
+{
+
+          utilityLambertFile ("flare", "J:/Art/Effects/Flares/1.tga");
+
+          if (`getAttr flare_file.fileHasAlpha` > 0)
+          {
+               connectAttr -force flare_file.outTransparency flare_Lambert.transparency;
+          }
+}
+
+//assign material:
+select -r |flare;
+sets -e -forceElement flare_LambertSG;
+
+
+
+
+
+
+
+parent |flare $nameLoc[0];
+
+
+
+eval ("connectAttr -f "+$nameLoc[0]+"|flare.tx " + $nameLoc[0] + ".FlareX");
+eval ("connectAttr -f "+$nameLoc[0]+"|flare.ty " + $nameLoc[0] + ".FlareY");
+eval ("connectAttr -f "+$nameLoc[0]+"|flare.tz " + $nameLoc[0] + ".FlareZ");
+
+setAttr -lock true "flare.rx";
+setAttr -lock true "flare.ry";
+setAttr -lock true "flare.rz";
+
+
+eval ("connectAttr -f "+$nameLoc[0]+"|flare.sx " + $nameLoc[0] + ".FlareSize");
+//eval ("connectAttr -f "+$nameLoc[0]+".NeedCone " + $nameLoc[0] + "|cone.visibility");
+
+
+
+//create light
+//spaceLocator -p 0 0 0 -n "pointLight";
+sphere -p 0 0 0 -ax 0 0 1 -ssw 0 -esw 360 -r 0.1 -d 3 -ut 0 -tol 0.01 -s 8 -nsp 4 -ch 0 -n "pointLight";
+
+eval ("connectAttr -f "+$nameLoc[0]+".pli pointLight.scaleX");
+eval ("connectAttr -f "+$nameLoc[0]+".pli pointLight.scaleY");
+eval ("connectAttr -f "+$nameLoc[0]+".pli pointLight.scaleZ");
+
+
+//connectAttr -f LEffect01.PointLightIntensity pointLight.scaleZ;
+
+
+move -a 0 0 2;
+parent |pointLight $nameLoc[0];
+
+setAttr -lock true "pointLight.rx";
+setAttr -lock true "pointLight.ry";
+setAttr -lock true "pointLight.rz";
+
+eval ("connectAttr -f "+$nameLoc[0]+"|pointLight.tx " + $nameLoc[0] + ".PointLightX");
+eval ("connectAttr -f "+$nameLoc[0]+"|pointLight.ty " + $nameLoc[0] + ".PointLightY");
+eval ("connectAttr -f "+$nameLoc[0]+"|pointLight.tz " + $nameLoc[0] + ".PointLightZ");
+
+}
+
