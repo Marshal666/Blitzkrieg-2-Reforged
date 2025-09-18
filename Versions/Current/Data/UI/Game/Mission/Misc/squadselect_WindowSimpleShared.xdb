@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="11">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/ui/game/mission/unitslots/unit_slot_01_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/ui/game/mission/unitslots/unit_slot_02_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/ui/game/mission/unitslots/unit_slot_03_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/ui/game/mission/unitslots/unit_slot_04_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+		<Item href="/ui/game/mission/unitslots/unit_slot_05_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+	</Children>
+	<Background href=""/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

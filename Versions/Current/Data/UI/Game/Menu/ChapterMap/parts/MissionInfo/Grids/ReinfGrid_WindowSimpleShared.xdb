@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="384">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf01_Eng_Track_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf02_Inf_Main_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf03_Inf_Assault_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf04_Armor_Light_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf05_Armor_Med_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf06_Armor_Hev_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf07_Armor_TankDestr_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf08_Art_AntiTank_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf09_Art_Field_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf10_Art_SPG_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf11_Art_MLRS_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf12_AntiAir_Fighter_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf13_AntiAir_Light_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf14_AntiAir_Heavy_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf15_AirSupport_GrounAttack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf16_AirSupport_Bomber_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf17_AirSuport_Para_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf18_AirSupport_Recon_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/Reinf19_SuperWeapon_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/ReinfGrid/reinfgridupgradeabletemplate_windowmsbutton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>10</x>
+				<y>100</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>267</x>
+				<y>272</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>15</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>15</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

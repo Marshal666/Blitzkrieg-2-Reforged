@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000001">
+	<FileName />
+	<ScriptText>-------------------------------------------Film
+function Film()	Wait ( 5 );
+--	ShowMovieBorder ( );	Wait ( 2 );
+	--	SCRunTime (&quot;scena1frame1&quot; , &quot;scene1frame2&quot; , 10 );
+	Wait ( 1 );	
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 200 );
+	Cmd ( 1 , 200 , 25 );
+	Wait ( 9 );
+	
+--	HideMovieBorder ( );	Wait ( 1 );--	SCReset ();
+end;
+function Film1()
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 201 );
+	Cmd ( 3 , 201 , 0 , GetScriptAreaParams &quot;Gap1&quot;);
+	
+	SCRunTime (&quot;scene1frame2&quot; , &quot;scene1frame3&quot; , 8 );
+	
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 2 , 202 );
+	Cmd ( 3 , 202 , 0 , GetScriptAreaParams &quot;Gap2&quot;);
+	
+	Wait ( 9 );
+	Cmd ( 0 , 100 , 0 , GetScriptAreaParams &quot;Tank100&quot;);
+	Cmd ( 0 , 101 , 0 , GetScriptAreaParams &quot;Tank101&quot;);
+	Cmd ( 0 , 102 , 0 , GetScriptAreaParams &quot;Tank102&quot;);
+	Cmd ( 0 , 103 , 0 , GetScriptAreaParams &quot;Tank103&quot;);
+	Cmd ( 0 , 104 , 0 , GetScriptAreaParams &quot;Tank104&quot;);
+	Cmd ( 0 , 110 , 0 , GetScriptAreaParams &quot;Tank100&quot;);
+	Cmd ( 0 , 111 , 0 , GetScriptAreaParams &quot;Tank101&quot;);
+	Cmd ( 0 , 112 , 0 , GetScriptAreaParams &quot;Tank102&quot;);
+	Cmd ( 0 , 113 , 0 , GetScriptAreaParams &quot;Tank103&quot;);
+	Cmd ( 0 , 114 , 0 , GetScriptAreaParams &quot;Tank104&quot;);
+	Wait ( 1 );
+	
+	SCRunTime (&quot;scene1frame2&quot; , &quot;scene2frame1&quot; , 0 );
+	
+	Wait ( 11 );
+	Cmd ( 16 , 120 , 0 , GetScriptAreaParams &quot;Art120&quot; );
+	Sleep ( 10 );
+	Cmd ( 16 , 121 , 0 , GetScriptAreaParams &quot;Art121&quot; );
+	Wait ( 1 );	
+	
+	SCRunTime (&quot;scene2frame1&quot; , &quot;scene3frame1&quot; , 0 );
+	Wait ( 6 );
+	Cmd ( 9 , 120 );
+	Cmd ( 9 , 121 );
+	
+	SCRunTime (&quot;scene3frame1&quot; , &quot;scene1frame2&quot; , 0 );
+	Wait ( 5 );
+	x , y = GetScriptAreaParams &quot;Effect3&quot;
+	PlayEffect( 0 , x , y , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Effect4&quot; , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Gap&quot; , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Art120&quot; , 0 );
+	Wait ( 1 );
+	PlayEffect( 0 , x , y  , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Effect4&quot; , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Gap&quot; , 0 );
+	PlayEffect( 0 , GetScriptAreaParams &quot;Art120&quot; , 0 );
+	Wait ( 5 );
+	
+	HideMovieBorder ( );	Wait ( 1 );	SCReset ();
+end;
+-------------------------------------------Start
+StartThread( Film );</ScriptText>
+</Script>

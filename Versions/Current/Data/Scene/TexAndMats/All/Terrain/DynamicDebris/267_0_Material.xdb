@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Material ObjectRecordID="14390">
+	<Texture href="/scene/texandmats/all/terrain/dynamicdebris/materials/stone_texture.xdb#xpointer(/Texture)"/>
+	<Bump href="/scene/texandmats/all/terrain/dynamicdebris/267_0_texture.xdb#xpointer(/Texture)"/>
+	<SpecFactor>0</SpecFactor>
+		<SpecColor>
+			<x>0</x>
+			<y>0</y>
+			<z>0</z>
+	</SpecColor>
+	<Gloss href=""/>
+	<MetalMirror>0</MetalMirror>
+	<DielMirror>0</DielMirror>
+	<Mirror href=""/>
+	<CastShadow>false</CastShadow>
+	<Priority>65</Priority>
+		<TranslucentColor>
+			<x>0</x>
+			<y>0</y>
+			<z>0</z>
+	</TranslucentColor>
+	<FloatParam>0</FloatParam>
+	<DetailTexture href=""/>
+	<DetailScale>5</DetailScale>
+	<ProjectOnTerrain>false</ProjectOnTerrain>
+	<LightingMode>L_NORMAL</LightingMode>
+	<Is2Sided>false</Is2Sided>
+	<Effect>M_GENERIC</Effect>
+	<AlphaMode>AM_OVERLAY</AlphaMode>
+	<AffectedByFog>true</AffectedByFog>
+	<AddPlaced>false</AddPlaced>
+</Material>

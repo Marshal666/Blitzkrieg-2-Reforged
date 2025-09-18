@@ -1,0 +1,1587 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="159">
+	<NumPatchesX>4</NumPatchesX>
+	<NumPatchesY>4</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<MapFilesPath>Maps\ArtTests\Seasons\Summer\</MapFilesPath>
+	<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href=""/>
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+	<Roads/>
+	<Rivers/>
+	<Crags/>
+	<Spots/>
+	<Lakes/>
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)"/>
+		<points/>
+		<ControlPoints/>
+		<VSOID>0</VSOID>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>A1CAAAFF-632B-428A-A2A0-337CB30A00D5</uid>
+	<MapDesigner href=""/>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/ussr_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/unknown_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>2874.29</x>
+				<y>3026.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>27781</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18494</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/common/cistern/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>398.977</x>
+				<y>1778.9</y>
+				<z>0</z>
+			</Pos>
+			<Dir>200</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18782</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_frenchshed02/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>191.302</x>
+				<y>2226.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18790</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_shed01/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2229.59</x>
+				<y>2045.08</y>
+				<z>0</z>
+			</Pos>
+			<Dir>16923</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18792</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_house01/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>191.565</x>
+				<y>3070.54</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18796</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_house02/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>131.588</x>
+				<y>3740.88</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18798</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_house03/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>692.417</x>
+				<y>3862.51</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18800</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_house04/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1043.38</x>
+				<y>3906.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18802</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_house05/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2241.97</x>
+				<y>2343.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18803</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_townhouse01/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1376.55</x>
+				<y>3929.51</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18805</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_townhouse02/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2017.59</x>
+				<y>2105.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18807</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_townhouse03/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1878.63</x>
+				<y>3886.99</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18809</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_townhouse04/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1377.68</x>
+				<y>2616.06</y>
+				<z>0</z>
+			</Pos>
+			<Dir>16299</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18812</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/gothic/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2700.33</x>
+				<y>1886.83</y>
+				<z>0</z>
+			</Pos>
+			<Dir>55618</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>18814</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/classicism_house/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2726.36</x>
+				<y>3467.79</y>
+				<z>0</z>
+			</Pos>
+			<Dir>860</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21864</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testbuildings/bridges/asphalt/center/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2401.28</x>
+				<y>3446.14</y>
+				<z>0</z>
+			</Pos>
+			<Dir>693</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21865</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testbuildings/bridges/asphalt/end/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1211.81</x>
+				<y>3417.05</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21866</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testbuildings/bridges/railway_little/center/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2191.74</x>
+				<y>2789.33</y>
+				<z>0</z>
+			</Pos>
+			<Dir>32331</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21867</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testbuildings/bridges/railway_little/end/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3715.64</x>
+				<y>1931.86</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48324</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21868</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/e_jetty/whole/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1897.94</x>
+				<y>2398.65</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21870</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/tree01/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1984.99</x>
+				<y>2663.64</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21871</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/tree03/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3987.5</x>
+				<y>1045.23</y>
+				<z>0</z>
+			</Pos>
+			<Dir>65390</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>21877</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testbuildings/bridges/concretebridge/center/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>952.727</x>
+				<y>2883.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58703</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22902</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>180.878</x>
+				<y>1877.27</y>
+				<z>0</z>
+			</Pos>
+			<Dir>55596</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22929</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>799.228</x>
+				<y>3028.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>61997</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22936</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>934.059</x>
+				<y>3036.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58800</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22937</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>644.511</x>
+				<y>2934.37</y>
+				<z>0</z>
+			</Pos>
+			<Dir>5855</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22942</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3252.77</x>
+				<y>1294.06</y>
+				<z>0</z>
+			</Pos>
+			<Dir>11651</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22944</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3383.48</x>
+				<y>655.424</y>
+				<z>0</z>
+			</Pos>
+			<Dir>11651</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>22945</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1524.32</x>
+				<y>2826.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19829</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>23195</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/lenin/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2572.87</x>
+				<y>2929.78</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48805</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>23197</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/europe/e_chapel/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2473.17</x>
+				<y>4160</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>23266</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/ships/vosper01_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1971.72</x>
+				<y>4160</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>23267</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/ships/vosper01_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3168.54</x>
+				<y>3005.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>14889</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>23309</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/ussr/factoryboiler/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2492.49</x>
+				<y>867.121</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50244</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174950</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/canes/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2534.09</x>
+				<y>699.161</y>
+				<z>0</z>
+			</Pos>
+			<Dir>39322</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174951</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/canes/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2563.01</x>
+				<y>464.778</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45875</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174952</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/canes/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2406.78</x>
+				<y>639.662</y>
+				<z>0</z>
+			</Pos>
+			<Dir>17476</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174953</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/canes/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2575.84</x>
+				<y>1359.62</y>
+				<z>0</z>
+			</Pos>
+			<Dir>2367</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174998</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/bigpine/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2633.31</x>
+				<y>1499.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>52793</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>174999</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/bigpine/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3003.06</x>
+				<y>1329.09</y>
+				<z>0</z>
+			</Pos>
+			<Dir>59164</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175000</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/flora/bigfir/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>710.974</x>
+				<y>570.666</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175275</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>774.949</x>
+				<y>572.454</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175276</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>838.924</x>
+				<y>574.242</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175277</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>902.899</x>
+				<y>576.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175278</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>966.874</x>
+				<y>577.818</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175279</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1030.85</x>
+				<y>579.606</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175280</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1094.82</x>
+				<y>581.394</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175281</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1158.8</x>
+				<y>583.182</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175282</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1222.77</x>
+				<y>584.97</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175283</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1286.75</x>
+				<y>586.758</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175284</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1350.72</x>
+				<y>588.546</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175285</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1414.7</x>
+				<y>590.334</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175286</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1478.67</x>
+				<y>592.122</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175287</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1542.65</x>
+				<y>593.91</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175288</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1606.62</x>
+				<y>595.698</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175289</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1670.6</x>
+				<y>597.486</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175290</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1734.57</x>
+				<y>599.274</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175291</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1798.55</x>
+				<y>601.062</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175292</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1862.52</x>
+				<y>602.85</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175293</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1926.5</x>
+				<y>604.638</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175294</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1990.47</x>
+				<y>606.426</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175295</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2054.45</x>
+				<y>608.214</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175296</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2118.42</x>
+				<y>610.002</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175297</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2182.4</x>
+				<y>611.79</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49443</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>175298</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/fences/common/fencebush/fencerpgstats.xdb#xpointer(/FenceRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1492.28</x>
+				<y>851.945</y>
+				<z>0</z>
+			</Pos>
+			<Dir>36349</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175299</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/auto/studebaker_cargo_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2004.63</x>
+				<y>826.917</y>
+				<z>0</z>
+			</Pos>
+			<Dir>29465</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175300</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/auto/willys_mb_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1765.36</x>
+				<y>862.586</y>
+				<z>0</z>
+			</Pos>
+			<Dir>36731</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175301</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1238.37</x>
+				<y>853.383</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40486</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175302</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m4a1_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1425.17</x>
+				<y>1105.37</y>
+				<z>0</z>
+			</Pos>
+			<Dir>32975</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175303</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/alphasquads/assault_squads/gb_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1981.45</x>
+				<y>422.185</y>
+				<z>0</z>
+			</Pos>
+			<Dir>39140</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175304</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/alphasquads/assault_squads/german_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1619.69</x>
+				<y>396.196</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4033</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175305</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/spg/sturmpanzer_iv_brummbar_sdkfz166/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1039.29</x>
+				<y>758.073</y>
+				<z>0</z>
+			</Pos>
+			<Dir>39668</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175306</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/spg/sturmpanzer_iv_brummbar_sdkfz166/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2167.07</x>
+				<y>873.999</y>
+				<z>0</z>
+			</Pos>
+			<Dir>28763</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>175307</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/spg/sturmpanzer_iv_brummbar_sdkfz166/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+	</Objects>
+	<HiddenObjectType href=""/>
+	<Season>SEASON_SUMMER</Season>
+	<DayTime />
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments/>
+	<Bridges/>
+	<ScenarioObjects/>
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data/>
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href=""/>
+	<ScriptAreas/>
+	<startCommandsList/>
+	<reservePositionsList/>
+	<soundsList/>
+	<ForestCircleSound href=""/>
+	<ForestAmbientSounds href=""/>
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects/>
+	<Bonuses/>
+	<EditAreas/>
+	<MiniMap href="/scene/texandmats/all/maps/test/arttest/new/summer_(2)/minimap_material.xdb#xpointer(/Material)"/>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<LoadingPicture href=""/>
+	<LoadingDescription href=""/>
+	<CameraPositions/>
+	<ScriptCameraPlacements/>
+	<Objectives/>
+	<Music href=""/>
+	<MPInfo>
+		<GameTypes/>
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects/>
+</MapInfo>

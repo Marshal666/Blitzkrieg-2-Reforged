@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000061">
+	<FileName href="" />
+	<ScriptText>CO1 = 0;
+CO2 = 0;
+
+------------------------------------------------OBJ
+
+function Objective()
+	GiveObjective ( 0 );
+ 	StartThread( CompleteObjective0 );
+ 	Wait( 1 );
+end; 
+
+function Objective1()
+ 	Wait( 1 ); 
+	GiveObjective ( 1 );
+	ViewZone ( &quot;OBJ&quot; , 1 );
+	Sleep ( 1 );
+	DamageScriptObject ( 10 , 10 );
+	Sleep ( 1 );
+ 	StartThread( CompleteObjective1 );
+end;
+
+function CompleteObjective0()
+ 	while 1 do 
+		Wait( 1 );
+ 		if GetNUnitsInScriptGroup ( 101  , 1 ) &lt; 1 then 
+			CompleteObjective ( 0 );
+			DamageScriptObject ( 9 , 100 );
+			CO1 = 1;
+			StartThread( Objective1 );
+ 			Wait( 1 );
+ 			break;
+ 		end;
+	end;
+end; 
+
+function CompleteObjective1()
+ 	while 1 do 
+		Wait( 1 ); 
+		if GetNUnitsInScriptGroup ( 150 , 2 ) &lt; 1 then 
+			CompleteObjective ( 1 );
+			DamageScriptObject ( 10, 40 );
+			CO2 = 1;
+			Wait( 1 ); 
+			break;
+ 		end;
+	end;
+end;
+
+------------------------------------------------WinLoose
+
+function Winner()
+	while 1 do
+		Wait( 1 );
+        if (CO2 + CO1) &gt; 1 then
+			Win(0);
+			break;
+		end;
+	end;
+end;
+
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+------------------------------------------------Start
+StartThread( Objective );
+StartThread( Unlucky );
+StartThread( Winner );</ScriptText>
+</Script>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowMSButtonShared ObjectRecordID="403">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/ui/game/menu/armyscreen2/reinfinfounit_windowsimple.xdb#xpointer(/WindowSimple)"/>
+		<Item href="/ui/game/menu/armyscreen2/countview_windowtextview.xdb#xpointer(/WindowTextView)"/>
+	</Children>
+	<Background href=""/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>38</x>
+				<y>38</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<VisualStates>
+		<Item>
+			<Normal>
+				<Background href="/ui/game/menu/armyscreen2/reinfinfounitnormal_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Normal>
+			<MouseOver>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands>
+						<Item href="/ui/game/menu/armyscreen2/reinfinfounitmouseover_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+					</Commands>
+					<Reversable>true</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</MouseOver>
+			<Pushed>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands>
+						<Item href="/ui/game/menu/armyscreen2/reinfinfounitpushed_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+					</Commands>
+					<Reversable>true</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Pushed>
+			<Disabled>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Disabled>
+			<RightButtonDown>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<Item href="/ui/game/menu/armyscreen2/reinfinfounitunpressed_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+		<Item>
+			<Normal>
+				<Background href="/ui/game/menu/armyscreen2/reinfinfounitnormal_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<Foreground href="/ui/game/menu/armyscreen2/reinfinfounitforegroundselected_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)"/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Normal>
+			<MouseOver>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</MouseOver>
+			<Pushed>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>true</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Pushed>
+			<Disabled>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</Disabled>
+			<RightButtonDown>
+				<Background href=""/>
+				<Foreground href=""/>
+				<TextString href=""/>
+				<OnEnterSubState>
+					<Commands/>
+					<Reversable>false</Reversable>
+				</OnEnterSubState>
+				<TextFormat href=""/>
+			</RightButtonDown>
+			<DefaultSubState>BST_NORMAL</DefaultSubState>
+			<VisualOnEnterState>
+				<Commands>
+					<Item href="/ui/game/menu/armyscreen2/reinfinfounitpressed_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualOnEnterState>
+		</Item>
+	</VisualStates>
+	<TriggerMode>BCST_ON_RELEASE</TriggerMode>
+</WindowMSButtonShared>

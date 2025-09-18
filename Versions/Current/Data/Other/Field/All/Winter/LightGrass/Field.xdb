@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Field ObjectRecordID="44">
+	<TileShells>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>0</Value>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value>9</Value>
+					<Weight>1</Weight>
+				</Item>
+			</Tiles>
+			<Width>4</Width>
+		</Item>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>4</Value>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value>9</Value>
+					<Weight>1</Weight>
+				</Item>
+			</Tiles>
+			<Width>512</Width>
+		</Item>
+	</TileShells>
+	<TerraSet href="/terrain/tgterraset/sets/winter_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<ObjectShells/>
+	<ProfileFileName>J:\Versions\Current\Editor\profile.tga</ProfileFileName>
+	<Height>0.2</Height>
+	<PatternSize>
+		<Min>3</Min>
+		<Max>5</Max>
+	</PatternSize>
+	<PositiveRatio>0.6</PositiveRatio>
+</Field>

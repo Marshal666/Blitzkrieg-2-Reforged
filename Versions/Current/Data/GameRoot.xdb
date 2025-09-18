@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameRoot ObjectRecordID="2">
+	<Consts href="/Consts/Game/GameContst_GameConsts.xdb#xpointer(/GameConsts)" />
+	<Campaigns>
+		<Item href="/Scenario/Campaigns/USA/Campaign.xdb#xpointer(/Campaign)" />
+		<Item href="/Scenario/Campaigns/GER/Campaign.xdb#xpointer(/Campaign)" />
+		<Item href="/Scenario/Campaigns/USSR/Campaign.xdb#xpointer(/Campaign)" />
+	</Campaigns>
+	<Tutorial href="/Scenario/Campaigns/Tutorial/Campaign.xdb#xpointer(/Campaign)" />
+	<TutorialMaps>
+		<Item>
+			<MapInfo href="/Scenario/Campaigns/Tutorial/Chapter/tutorial1/mapinfo.xdb#xpointer(/MapInfo)" />
+			<DifficultyFileRef href="/Scenario/Campaigns/Tutorial/Chapter/tutorial1/difficulty_Text.txt" />
+		</Item>
+		<Item>
+			<MapInfo href="/Scenario/Campaigns/Tutorial/Chapter/tutorial2/mapinfo.xdb#xpointer(/MapInfo)" />
+			<DifficultyFileRef href="/Scenario/Campaigns/Tutorial/Chapter/tutorial2/difficulty_Text.txt" />
+		</Item>
+		<Item>
+			<MapInfo href="/Scenario/Campaigns/Tutorial/Chapter/tutorial3/mapinfo.xdb#xpointer(/MapInfo)" />
+			<DifficultyFileRef href="/Scenario/Campaigns/Tutorial/Chapter/tutorial3/difficulty_Text.txt" />
+		</Item>
+		<Item>
+			<MapInfo href="/Scenario/Campaigns/Tutorial/Chapter/tutorial4/mapinfo.xdb#xpointer(/MapInfo)" />
+			<DifficultyFileRef href="/Scenario/Campaigns/Tutorial/Chapter/tutorial4/difficulty_Text.txt" />
+		</Item>
+	</TutorialMaps>
+	<CustomMissions />
+	<ScreenVideoPlayer href="" />
+	<Screens>
+		<Item>
+			<Screen href="/UI/Game/Mission/Mission_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>Mission</Type>
+			<HelpHeaderFileRef href="/Other/Text/Game/Help/ScreensInfo/MissionHeader/Text.txt" />
+			<HelpDescFileRef href="/Other/Text/Game/Help/ScreensInfo/MissionDesc/Text.txt" />
+			<HelpNoMultiplayer>true</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MainMenu_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MainMenu</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/EscMenu_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MissionEscMenu</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/OptionsMenu_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>OptionsMenu</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/MessageBox/MessageBox_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MessageBoxScreen</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/ChapterMap_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>ChapterMapMenu</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/SaveLoadMenu_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>SaveLoadMenu</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Mission/Objectives_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MissionObjectives</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/ProfileManager/ProfileManager_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>ProfileManager</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Mission/WinLoose/WinLoose_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>WinLooseDialog</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/LoadingSingle_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>LoadingSingle</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/Multiplayer_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>Multiplayer</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPNivalNet_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPNivalNet</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Help/Help_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>Help</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/VideoPlayer_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>InterMission</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPWaitPlayers_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPWaitPlayers</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Mission/MovieBorder_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MissionMovieBorder</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Test/Uvarkov/TestScreen/Test_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>TestScreen</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/CustomMission/CustomMission_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>CustomMissions</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/Encyclopedia_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>Encyclopedia</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/EncyclopediaWait_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>EncyclopediaWait</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPCustomGame_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPCustomGame</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPCreateCustomGame_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPCreateCustomGame</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/Credits_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>CreditsScreen</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPLoading_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPLoading</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPStatistics_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPStatistics</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPGameLobby_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPGameLobby</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPLadderGame_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPLadderGame</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/CommandersScreen/CommandersScreen_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>ArmyScreen</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/SingleStatistic_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>SingleStatistic</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPGameRoom_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPGameRoom</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Mission/moviehider_windowscreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MovieHider</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/PlayerStats/PlayerStats_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>PlayerStats</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MissionBackground/MissionBackground_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MissionBackground</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/CampaignSelection2/CampaignSelection_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>CampaignSelectionMenu2</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/SingleStatictics2/SingleStatistics2_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>SingleStatistics2</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MultiScreen/MultiScreen_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MultiScreenElementsJustAsSamples</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/SelectTutorial/SelectTutorial_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>SelectTutorial</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MPLadderStatistics_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MPLadderStatistics</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/CustomCampaign/CustomCampaign_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>CustomCampaign</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/LoadMod/LoadMod_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>LoadMod</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/MissionBriefing/MissionBriefing_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>MissionBriefing</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Mission/ArmyBranchDlg_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>ArmyBranchDlg</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/HallOfFame/HallOfFame_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>HallOfFame</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Demo/Demo_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>DemoScreen</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/UI/Game/Menu/ReplaySaveLoad/ReplaySaveLoad_WindowScreen.xdb#xpointer(/WindowScreen)" />
+			<Type>ReplaySaveLoad</Type>
+			<HelpHeaderFileRef href="" />
+			<HelpDescFileRef href="" />
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+	</Screens>
+	<Texts>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MainMenu/ExitQuestion/Text.txt" />
+			<TextID>T_MAIN_MENU_EXIT_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/EscMenu/ExitWindowsQuestion/Text.txt" />
+			<TextID>T_ESCAPE_MENU_EXIT_WINDOWS_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/EscMenu/ExitMainMenuQuestion/Text.txt" />
+			<TextID>T_ESCAPE_MENU_EXIT_MAIN_MENU_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/EscMenu/RestartMissionQuestion/Text.txt" />
+			<TextID>T_ESCAPE_MENU_RESTART_MISSION_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/Options/RestoreQuestion/Text.txt" />
+			<TextID>T_OPTIONS_MENU_RESTORE_DEFAULTS_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/SaveLoad/DeleteQuestion/Text.txt" />
+			<TextID>T_SAVELOAD_MENU_DELETE_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/SaveLoad/OverwriteQuestion/Text.txt" />
+			<TextID>T_SAVELOAD_MENU_OVERWRITE_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ProfileManager/EmptyName/Text.txt" />
+			<TextID>T_PROFILE_MANAGER_EMPTY_NAME</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ProfileManager/AlreadyExists/Text.txt" />
+			<TextID>T_PROFILE_MANAGER_ALREADY_EXISTS</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ProfileManager/NoDeleteCurrent/Text.txt" />
+			<TextID>T_PROFILE_MANAGER_DELETE_CURRENT</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ProfileManager/NoDeleteDefault/Text.txt" />
+			<TextID>T_PROFILE_MANAGER_DELETE_DEFAULT</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ProfileManager/DeleteQuestion/Text.txt" />
+			<TextID>T_PROFILE_MANAGER_DELETE_QUESTION</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/GameSpeedChanged/Text.txt" />
+			<TextID>T_GAME_SPEED_CHANGED</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/GameSpeedChangedMin/Text.txt" />
+			<TextID>T_GAME_SPEED_CHANGED_MIN</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/GameSpeedChangedMax/Text.txt" />
+			<TextID>T_GAME_SPEED_CHANGED_MAX</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ReinfAvailable/Text.txt" />
+			<TextID>T_REINF_AVAILABLE</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ReinfAvailableRepeat/Text.txt" />
+			<TextID>T_REINF_AVAILABLE_REPEAT</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ReinfOpen/Text.txt" />
+			<TextID>T_REINF_OPEN</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ObjectivesNotifyRepeat/Text.txt" />
+			<TextID>T_OBJECTIVES_NOTIFY_REPEAT</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/Saving/Text.txt" />
+			<TextID>T_SAVING</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/SaveDone/Text.txt" />
+			<TextID>T_SAVE_DONE</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/Loading/Text.txt" />
+			<TextID>T_LOADING</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/LoadDone/Text.txt" />
+			<TextID>T_LOAD_DONE</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/SaveLoad/LoadQuestion/Text.txt" />
+			<TextID>T_SAVELOAD_MENU_CONFIRM_LOAD</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ReinfCantCall/Text.txt" />
+			<TextID>T_REINF_CANT_CALL</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Mission/Misc/ReinfCallTooMuch/Text.txt" />
+			<TextID>T_REINF_CALL_TOO_MUCH</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ChapterMap/MissionInfo/Tooltips/PrefixReinfNotEnabled/Text.txt" />
+			<TextID>T_CHAPTER_MAP_PREFIX_NOT_ENABLED</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ChapterMap/MissionInfo/Tooltips/PrefixReinfDisabled/Text.txt" />
+			<TextID>T_CHAPTER_MAP_PREFIX_DISABLED</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ChapterMap/MissionInfo/Tooltips/PrefixReinfAvailable/Text.txt" />
+			<TextID>T_CHAPTER_MAP_PREFIX_AVAILABLE</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ChapterMap/MissionInfo/Tooltips/BadWeatherAviaBack/Text.txt" />
+			<TextID>T_BAD_WEATHER_AVIA_BACK</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Main/CommonTexts/QuickSaveName01/Text.txt" />
+			<TextID>T_QUICK_SAVE_NAME_01</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Main/CommonTexts/QuickSaveName02/Text.txt" />
+			<TextID>T_QUICK_SAVE_NAME_02</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Main/CommonTexts/AutoSaveName/Text.txt" />
+			<TextID>T_AUTO_SAVE_NAME</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Main/CommonTexts/AutoSaveObjectiveComplete.txt" />
+			<TextID>T_AUTO_SAVE_OBJECTIVE_COMPLETE</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Main/CommonTexts/SaveLoadMenuNoName/Text.txt" />
+			<TextID>T_SAVELOAD_MENU_NO_NAME</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Small/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_SMALL_MAP</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Medium/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_MEDIUM_MAP</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Large/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_LARGE_MAP</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Any/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_ANY</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Open/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_OPEN</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/MPGameRoom/Close/Text.txt" />
+			<TextID>T_MP_GAME_ROOM_CLOSED</TextID>
+		</Item>
+		<Item>
+			<TextFileRef href="/Other/Text/Game/Menu/ChapterMap/MissionInfo/Tooltips/BadWeatherMissing/Text.txt" />
+			<TextID>T_BAD_WEATHER_MISSING</TextID>
+		</Item>
+	</Texts>
+	<TextEntries>
+		<Item href="/Other/TextEntry/Game/GameRoot/t_auto_save_name.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_bad_weather_avia_back.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_chapter_map_prefix_available.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_chapter_map_prefix_disabled.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_chapter_map_prefix_not_enabled.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_escape_menu_exit_main_menu_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_escape_menu_exit_chapter_map_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_escape_menu_exit_windows_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_escape_menu_restart_mission_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_game_speed_changed.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_game_speed_changed_max.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_game_speed_changed_min.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_load_done.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_loading.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_main_menu_exit_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_any.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_closed.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_large_map.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_medium_map.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_open.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_game_room_small_map.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_objectives_notify_repeat.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_options_menu_restore_defaults_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_profile_manager_already_exists.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_profile_manager_delete_current.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_profile_manager_delete_default.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_profile_manager_delete_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_profile_manager_empty_name.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_quick_save_name_01.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_quick_save_name_02.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_available.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_available_repeat.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_call_too_much.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_cant_call.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_open.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_save_done.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_saveload_menu_confirm_load.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_saveload_menu_delete_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_saveload_menu_no_name.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_saveload_menu_overwrite_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_saving.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_cant_resolve_address.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_already_online.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_already_registered.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_bad_nick.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_banned_cdkey.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_banned_nick.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_connection_lost.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_kicked.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_login_timeout.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_not_registered.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_unknown.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_wrong_cd_key.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_wrong_net_version.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_mp_reject_reason_wrong_password.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_army_screen_reinf_unavailable.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_exp_level_name_01.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_exp_level_name_02.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_exp_level_name_03.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_exp_level_name_04.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_army_screen_auto_assign_question.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_chapter_map_question_back.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/T_MP_ESCAPE_MENU_SURRENDER/TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/T_MISSION_WEATHER_RAIN/TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/T_MISSION_WEATHER_SANDSTORM/TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/T_MISSION_WEATHER_SNOW/TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/T_MISSION_WEATHER_SUN/TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_private_message_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_nival_net_system_broadcast_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_nival_net_server_disconnect_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_chat_afk_response_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_reinf_recycle_tooltip_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_autosave_objective_complete.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_net_driver_error_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_replay_finished_TextEntry.xdb#xpointer(/TextEntry)" />
+		<Item href="/Other/TextEntry/Game/GameRoot/t_notifications_levelup_header.xdb#xpointer(/TextEntry)" />
+	</TextEntries>
+	<Fonts>
+		<Item href="/Fonts/Body/Font.xdb#xpointer(/Font)" />
+		<Item href="/Fonts/Header1/Font.xdb#xpointer(/Font)" />
+		<Item href="/Fonts/Header2/Font.xdb#xpointer(/Font)" />
+		<Item href="/Fonts/Numeric/Font.xdb#xpointer(/Font)" />
+	</Fonts>
+	<Sounds>
+		<Item>
+			<Type>SOUND_OBJECTIVE_RECEIVED</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/GroundHeavy1_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_OBJECTIVE_COMPLETED</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/WaterHeavy_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_OBJECTIVE_FAILED</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Armor_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_CAPTURE_KEY_OBJECT</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Armor_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_LOSS_KEY_OBJECT</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Armor_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_CANT_PERFORM_COMMAND</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Failed_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_REINF_AVAILABLE</Type>
+			<Sound href="/SoundAndMusic/Game/Mission/Notification/Reinforcements/CallReinforcement_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_REINF_CALL_TOO_MUCH</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Failed_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_BAD_WEATHER_AVIA_BACK</Type>
+			<Sound href="/SoundAndMusic/Test/Uvarkov/Failed_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_WEATHER_THUNDER</Type>
+			<Sound href="/SoundAndMusic/Test/Mamontov/Thunder/01_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+		<Item>
+			<Type>SOUND_RIVER_CYCLE</Type>
+			<Sound href="/SoundAndMusic/Game/Ambient/Water_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+		</Item>
+	</Sounds>
+	<Textures>
+		<Item>
+			<TextID>TX_MINIMAP_OBJECTIVE_NORMAL</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/ArrowObjectiveNormal_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_OBJECTIVE_SELECTED</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/ArrowObjectiveSelected_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_BLANK_MINIMAP_BORDER</TextID>
+			<Texture href="" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_NEUTRAL</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/KeyObjectNeutral_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_FRIEND</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/KeyObjectFriend_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_ENEMY</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/KeyObjectEnemy_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_FRIEND_SELECTED</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/KeyObjectFriendSelected_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_CHAPTER_MAP_ARROW_OWN</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_CHAPTER_MAP_ARROW_ENEMY</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_LEFT_NORMAL</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfLeftNormal_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_LEFT_LIGHT</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfLeftLight_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_LEFT_INACTIVE</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfLeftInactive_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_LEFT_INACTIVE_LIGHT</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfLeftInactiveLight_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_RIGHT_NORMAL</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfRightNormal_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_RIGHT_LIGHT</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfRightLight_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_RIGHT_INACTIVE</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfRightInactive_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_TOGGLE_REINF_RIGHT_INACTIVE_LIGHT</TextID>
+			<Texture href="/Consts/Common/Textures/ToggleReinfRightInactiveLight_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_NORTH_MARKER1</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Mission/Minimap/NorthPointer_Down_texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_NORTH_MARKER2</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Mission/Minimap/NorthPointer_left_texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_NORTH_MARKER3</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Mission/Minimap/NorthPointer_Up_texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_NORTH_MARKER4</TextID>
+			<Texture href="/Scene/TexAndMats/Game/Mission/Minimap/NorthPointer_right_texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_MP_MARKER</TextID>
+			<Texture href="/Scene/TexAndMats/All/UI/Mission/Minimap/MP/MPMarker_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+	</Textures>
+	<GameOptions href="/Other/OptionSystem/OptionSystem.xdb#xpointer(/OptionSystem)" />
+	<MainMenuBackground>
+		<Map href="/UI/mainmenumovie/mapinfo.xdb#xpointer(/MapInfo)" />
+		<Picture href="/Consts/Common/MainMenu/Background_Texture.xdb#xpointer(/Texture)" />
+	</MainMenuBackground>
+	<InterfacesBackground href="/Scenario/Campaigns/GER/Textures/MenuBackground_Texture.xdb#xpointer(/Texture)" />
+	<Notifications>
+		<Item href="/Other/Notification/Game/Mission/objectivereceived.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/objectivecompleted.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/objectivefailed.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/keyobjectcaptured.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/keyobjectlost.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/enemyartillery.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/enemyaa.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/reinforcementarrived.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/objectivesnotifyrepeat.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/UnitsGiven_Notification.xdb#xpointer(/Notification)" />
+		<Item href="/Other/Notification/Game/Mission/MinimapFlare_Notification.xdb#xpointer(/Notification)" />
+	</Notifications>
+	<NotificationEvents>
+		<Item href="/Other/NotificationEvent/Game/Mission/objectivecompleted.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/objectivereceived.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/objectivefailed.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/keypointcaptured.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/keypointattacked.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/keypointlost.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/playereliminated.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/reinfnewtype.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/reinflevelup.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/reinfcantcall.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/aviaavailable.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/aviabadweatherretreat.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/enemyaviadetected.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/enemyartdetected.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/enemyaadetected.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/enemyunitdetected.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/unitattacked.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/unitblowupatmine.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/unitoutofammunition.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/engineeringminedetected.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/engineeringcompleted.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/engineeringinterrupted.xdb#xpointer(/NotificationEvent)" />
+		<Item href="/Other/NotificationEvent/Game/Mission/UnitsGiven_NotificationEvent.xdb#xpointer(/NotificationEvent)" />
+	</NotificationEvents>
+	<IntroMovie href="/Movies/intro.xml" />
+	<EncyclopediaMechUnits>
+		<Item href="/Units/Technics/US/artillery/105mm_m2a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/12_7_mm_m2hb_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/7_7_mm_vickers_mki_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/155mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/155mm_m1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/25pdr_qfh_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/2pdr_qfg_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/3inch_mortar_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/40mm_bofors_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/4_5_inch_gun_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/6pdr_qfg_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/81mm_m29a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/90mm_m2_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/auto/aec_matador_cargo_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/auto/aec_matador_engineering_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/m3a1_scout_car_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/m3_halftruck_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/m5_tractor_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/studebaker_cargo_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/studebaker_engineering_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/auto/willys_mb_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/auto/willys_mb_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/b24J_Liberator_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/B25J_Mitchell_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/b29_superfortress_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/douglasc47_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/douglasc47_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/gloster_meteor_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/hawker_hurricane__mk1_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/p38J_lighting_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/p51_d_mustang_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/P47D27thunderbolt_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/westland_lysander_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/spg/bishop_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/spg/crusader_aa_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m10_wolverine_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m13_gmc_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m15_gmc_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m16_gmc_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m36_slugger_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/m7_priest_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/spg/sexton_ii_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/cruiser_mkviii_cromwell_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/cruiser_mkvi_crusader_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/tanks/humber_mk1_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/infantry_mkiii_valentine_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/tanks/infantry_mkii_matilda_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m26_general_pershing_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m3_general_stuart_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m3_grant_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m4a1_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Allies/tanks/m4a3_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m5_general_stuart_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/m8_greyhound_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/s35_somua_france/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/10.5_cm_flak38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/10.5_cm_LeFH18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/10_barrel_15_cm_panzerwerfer_42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/12_cm_sgrwr_42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/15_cm_k39/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/15_cm_sFH18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/17_cm_k18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/2_cm_flak30_38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/5_barrel_nebelwerfer_42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/5_cm_PaK38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/60_cm_morser_karl_gerat_040/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/6_barrel_nebelwerfer_41/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/75.18_mod35_italian/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/7.5_cm_PaK40/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/7.62_cm_PaK36(r)/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/7.92_mm_mg34/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/7.92_mm_mg42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/8.8_cm_flak18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/8_cm_grwr34/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/coastbattery_todt/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/kdf82_kubelwagen/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/opel_blitz_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/opel_blitz_engineering/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/sdkfz_251_ausf_d_hanomag/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/sdkfz_8/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/fi_156_storch/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/fw_189/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/junkers_ju52/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/junkers_ju87d_1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/messer_bf_109_e/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/messer_bf_109_f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/messer_bf_109_g/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/me_262_schwalbe/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/me_262_sturmvogel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/sm79_sparviero_italian/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/hummel_sdkfz165/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/jagdpanther_sdkfz173/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/jagdpanzer_38t_hetzer/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/jagdpanzer_elefant_ferdinand_sdkfz184/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/jagdtiger_sdkfz186/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/semovente_75_46_italian/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/sturmgeschutz_iii_ausf_a_b_c/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/sturmgeschutz_iii_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/sturmgeschutz_iii_ausf_f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/sturmpanzer_iv_brummbar_sdkfz166/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/wespe_sdkfz124/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/wirbelwind/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/auto/bmw_r75/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/m13_40_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_38t_ausf_a/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iv_ausf_d/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/tanks/pz_vi_tiger_ausf_a_h/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_vi_tiger_ii_aus_b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_v_panther_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/sdkfz_222/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/sdkfz_234_puma/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/100_mm_bs_3/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/120_mm_38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/122_mm_a_19/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/122_mm_m_30/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/12_7_mm_dshk/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/152_mm_d1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/152_mm_ml_20/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/37_mm_61_k/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/45_mm_m_37/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/57_mm_zis_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/76_2mm_f22/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/76_mm_zis_3/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/82_mm_37/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/85_mm_52_k/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/bm_13/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/bm_31_12/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/bm_8_48/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/studebaker_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/studebaker_engineering/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/voroshilovets/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/willys_mb_lend_lease/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/zis_5v_engineering/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/auto/zis_5_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/il_10/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/il_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/il_2m3/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/pe_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/po_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/yak_1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/yak_9/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/jsu_152/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/su_100/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/su_122/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/SPG/su_152/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/su_76/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/su_85/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/ba10/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/ba20/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/ba64/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/bt_7/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/js_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/js_3/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/kv_1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/kv_1c/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/kv_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/kv_85/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/m4a2_sherman_lend_lease/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/mkiii_valentine_lend_lease/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/t_26/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/t_34/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/t_34_76/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/t_34_85/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/t_70/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/183mm_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/Avro_683_Lancaster_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/Bristol_Blenheim_II_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/Fairey_Battle_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/37mm_ATG_m3_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/Hawker_Tempest_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/Douglas_SBD_Dauntless_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/Chans_Wout_F-4U1-C_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/Curtiss_P_40C_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/B25H_Mitchell_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/Grumman_Wildcat_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/spg/Archer_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/M12_gmc_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/spg/M40GMC_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/A41_Centurion_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/H_39_France/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/Sherman_Firefly_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/t_34_germany/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/75mm_AAG_Type_88/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/47mm_ATG_Type_1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/FH_150mm_Type_96/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/FG_105mm_Type_92/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/FG_75mm_Type_38/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/Type_93_HMG/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/Type_97_Mortar/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/auto/Kurogane/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/auto/License_Ford/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Mitsubishi_Ki-21/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/douglas_l2d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Nakadzima_Ki-84-1a_Hayate/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Mitsubishi_A6M2_Zero/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Nakadzima_Ki-51/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/auto/So-Da/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/spg/Ho-Ro/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/SB-2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/la-7/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/I-16_Type_24/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/SU-100Y/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/T-28e/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/T-35/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/77mm_atg_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/A34_Comet_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/Super_Marine_Spitfire_XIV/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Kawasaki_Ki-61_Hien/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/Churchill_MKVII_Late/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/auto/Universal_Carrier_MKI_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/tb3/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/Hs_129B/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/artillery/CoastGun/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/junkers_Ju87g/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/spitfire_v_gb_fighter/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/flame_thrower_hetzer/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Allies/tanks/flame_thower_m5_satan/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/nippon_kokusai_k7/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/T34Calliope_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/thunderbolt_usa_fighter/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/trains/train_pz_ivd/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/fw_190a/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/fw_190f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/Ba349Natter/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/hawker_hurricane__mk2C_gb_/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/37mm_ATG_m3a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/artillery/90mm_m1A1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/tanks/M24_Chafee/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/Avenger/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/B-17J_flyingfortress_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/b17g_FlyingFortress/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/F6F_HellCat/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/aviation/p38L_lighting_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/Pz_i_47mm/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/SPG/2cm_flak38_auf_Pz_38(t)/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_ii_ausf_c/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iv_ausf_f2/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_iv_ausf_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/ar_234_blitz/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/he_111H2_heinkel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/he_111H4_heinkel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/he_111H6_heinkel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/junkers_Ju88A/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/aviation/Fau-2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/artillery/85_mm_72_k/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/T-60/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Tanks/OT34/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/yak_7/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/aviation/li_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/ussr/trains/railwaygun_tm_1_180_gun/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/ussr/trains/tm_2_12/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/2pdr_qfg_markx_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/3inch_mortar_mkii_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/12_7_mm_vickers_mkiv_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/spg/m10_archiles_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/infantry_mkiii_valentine_IX_gb_/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/tanks/infantry_mkiii_valentine_vii_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/tanks/Churchill_Croc/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/vickers_wellington_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/aviation/hawker_hurricane__mkIV_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/GB/auto/williys_mg_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/artillery/25mm_AAG_Type_96/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/spg/Ho-Ni1/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/spg/Ta-Ha/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/tanks/Ha-Go/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/tanks/te-ke/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/tanks/chi-ha/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/tanks/chi-nu/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/tanks/Chi-To/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/aviation/Kavanishi_N1K2-Ja_Mod.21A/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/units/technics/gb/artillery/3_7_inch_aag/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/spg/ZSU_37/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/USSR/Ships/Armored_Sea_Hunter/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/US/Ships/Sea_hunter/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/Japan/Ships/H_35/H_35.xdb#xpointer(/MechUnitRPGStats)" />
+		<Item href="/Units/Technics/German/Ships/R-Boat/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+	</EncyclopediaMechUnits>
+	<CitationFileRefs>
+		<Item href="/Citations/01.txt" />
+		<Item href="/Citations/02.txt" />
+		<Item href="/Citations/03.txt" />
+		<Item href="/Citations/04.txt" />
+		<Item href="/Citations/05.txt" />
+		<Item href="/Citations/06.txt" />
+		<Item href="/Citations/07.txt" />
+		<Item href="/Citations/08.txt" />
+		<Item href="/Citations/09.txt" />
+		<Item href="/Citations/10.txt" />
+		<Item href="/Citations/11.txt" />
+		<Item href="/Citations/12.txt" />
+		<Item href="/Citations/13.txt" />
+		<Item href="/Citations/14.txt" />
+		<Item href="/Citations/15.txt" />
+		<Item href="/Citations/16.txt" />
+		<Item href="/Citations/17.txt" />
+		<Item href="/Citations/18.txt" />
+		<Item href="/Citations/19.txt" />
+		<Item href="/Citations/20.txt" />
+		<Item href="/Citations/21.txt" />
+		<Item href="/Citations/22.txt" />
+		<Item href="/Citations/24.txt" />
+		<Item href="/Citations/25.txt" />
+		<Item href="/Citations/26.txt" />
+		<Item href="/Citations/27.txt" />
+	</CitationFileRefs>
+	<MultiplayerMaps>
+		<Item href="/Maps/Multiplayer/Africa_8players_18x18/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/Asia_4players_14x14/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/Autumn_Europe_4players_12x12/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/Desert_2players_8x8/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/MP_2_10_1/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/MP_4_14_1/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/MP_6_14_1/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/MP_6_16_1/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/Summer_Europe_2players_8x8/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+		<Item href="/Maps/Multiplayer/Winter_4players_riversy/MultiplayerMap.xdb#xpointer(/MultiplayerMap)" />
+	</MultiplayerMaps>
+	<TestMap href="/Maps/LanTest/LanTest.xdb#xpointer(/MultiplayerMap)" />
+	<MainMenuMusic href="/SoundAndMusic/MainMenu_MapMusic.xdb#xpointer(/MapMusic)" />
+	<HallOfFameDefaultRecords>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place01.txt" />
+			<Score>10000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place02.txt" />
+			<Score>9000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place03.txt" />
+			<Score>8000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place04.txt" />
+			<Score>7000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place05.txt" />
+			<Score>6000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place06.txt" />
+			<Score>5000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place07.txt" />
+			<Score>4000</Score>
+		</Item>
+		<Item>
+			<NameFileRef href="/UI/HallOfFame/place08.txt" />
+			<Score>3000</Score>
+		</Item>
+	</HallOfFameDefaultRecords>
+</GameRoot>

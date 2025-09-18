@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Campaign ObjectRecordID="7">
+	<Chapters>
+		<Item href="/scenario/chapter/game/gb/3_italy_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/gb/2_el_alamein_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/gb/1_tobruk_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/gb/4_market_garden_chapter.xdb#xpointer(/Chapter)" />
+	</Chapters>
+	<LocalizedName href="/other/text/game/campaigns/gb/text.xdb#xpointer(/Text)" />
+	<ScriptFile href="/other/script/test/campaign/greatbritain/script.xdb#xpointer(/Script)" />
+	<Screens />
+	<TextureNotStarted href="/scene/texandmats/game/menu/selectcampaign/gbpressed_texture.xdb#xpointer(/Texture)" />
+	<TextureCompleted href="/scene/texandmats/game/menu/selectcampaign/gbpressed_texture.xdb#xpointer(/Texture)" />
+	<TextureNotStartedSelected href="/scene/texandmats/game/menu/selectcampaign/gbnormal_texture.xdb#xpointer(/Texture)" />
+	<TextureCompletedSelected href="/scene/texandmats/game/menu/selectcampaign/gbnormal_texture.xdb#xpointer(/Texture)" />
+	<TextureMissionCompleted href="/scene/texandmats/game/menu/chaptermap/sides/targetcompletedgb_texture.xdb#xpointer(/Texture)" />
+	<TextureChapterFinishBonus href="/scene/texandmats/game/menu/chaptermap/sides/finalbonusgb_texture.xdb#xpointer(/Texture)" />
+	<RankExperiences>
+		<Item>
+			<Experience>0</Experience>
+			<Rank href="/scenario/playerrank/game/gb_ranks/1_playerrank.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>5100</Experience>
+			<Rank href="/scenario/playerrank/game/gb_ranks/2_playerrank.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>13600</Experience>
+			<Rank href="/scenario/playerrank/game/gb_ranks/3_playerrank.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>25500</Experience>
+			<Rank href="/scenario/playerrank/game/gb_ranks/4_playerrank.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>40800</Experience>
+			<Rank href="/scenario/playerrank/game/gb_ranks/5_playerrank.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+	</RankExperiences>
+	<LeaderRanks>
+		<Item>
+			<RankName href="/other/text/game/ranks/leaderranks/gb/rank0/text.xdb#xpointer(/Text)" />
+			<ExpNeeded>0</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/game/ranks/leaderranks/gb/rank1/text.xdb#xpointer(/Text)" />
+			<ExpNeeded>930</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/game/ranks/leaderranks/gb/rank2/text.xdb#xpointer(/Text)" />
+			<ExpNeeded>2335</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/game/ranks/leaderranks/gb/rank3/text.xdb#xpointer(/Text)" />
+			<ExpNeeded>4600</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+	</LeaderRanks>
+	<LeaderFirstNames>
+		<Item href="/other/text/game/leaders/gb/firstnames/first1/text.xdb#xpointer(/Text)" />
+		<Item href="/other/text/game/leaders/gb/firstnames/first2/text.xdb#xpointer(/Text)" />
+		<Item href="/other/text/game/leaders/gb/firstnames/first3/text.xdb#xpointer(/Text)" />
+	</LeaderFirstNames>
+	<LeaderLastNames>
+		<Item href="/other/text/game/leaders/gb/lastnames/last1/text.xdb#xpointer(/Text)" />
+		<Item href="/other/text/game/leaders/gb/lastnames/last2/text.xdb#xpointer(/Text)" />
+		<Item href="/other/text/game/leaders/gb/lastnames/last3/text.xdb#xpointer(/Text)" />
+	</LeaderLastNames>
+	<LeaderPictures>
+		<Item href="/scene/texandmats/game/leaders/gb/picture1_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/leaders/gb/picture2_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/leaders/gb/picture3_texture.xdb#xpointer(/Texture)" />
+	</LeaderPictures>
+	<DifficultyLevels>
+		<Item href="/scenario/difficultylevel/game/easy_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/scenario/difficultylevel/game/normal_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/scenario/difficultylevel/game/hard_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+	</DifficultyLevels>
+	<IntroMovie />
+	<OutroMovie>Movies\test_outro1.xml</OutroMovie>
+	<ReinforcementTypes href="/reinforcements/reinforcementtypes/game/types_reinforcementtypes.xdb#xpointer(/ReinforcementTypes)" />
+	<IntermissionMusic href="" />
+	<SaveLoadFlag href="/scene/texandmats/game/menu/selectcampaign/saveload/uk_texture.xdb#xpointer(/Texture)" />
+	<ArrowTextures>
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/0_arrow_own_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/1_arrow_enemy_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/2_defence_own_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/3_defence_enemy_texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+</Campaign>

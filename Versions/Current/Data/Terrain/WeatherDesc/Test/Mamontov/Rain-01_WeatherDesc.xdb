@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeatherDesc ObjectRecordID="6">
+	<Type>WEATHER_RAIN</Type>
+	<PartMaterial href="/scene/texandmats/test/programmers_test/mamontov/raindrops_material.xdb#xpointer(/Material)"/>
+	<PartSize>0.1</PartSize>
+	<FallHeight>60</FallHeight>
+	<Speed>0.1</Speed>
+	<TrajectoryParameter>10</TrajectoryParameter>
+	<Intensity>40</Intensity>
+	<WindAffected>false</WindAffected>
+	<WeatherLight href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<Lightning>true</Lightning>
+	<Water href="/terrain/water/test/progtests/mamontov/rainy_water.xdb#xpointer(/Water)"/>
+	<bgSound href="/soundandmusic/test/mamontov/rainloop_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<RandomSounds>
+		<Item href="/soundandmusic/test/mamontov/thunder/01_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		<Item href="/soundandmusic/test/mamontov/thunder/02_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		<Item href="/soundandmusic/test/mamontov/thunder/03_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		<Item href="/soundandmusic/test/mamontov/thunder/04_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	</RandomSounds>
+</WeatherDesc>

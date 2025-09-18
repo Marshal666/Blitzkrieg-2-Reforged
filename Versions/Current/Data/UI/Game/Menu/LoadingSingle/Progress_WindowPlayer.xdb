@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowPlayer ObjectRecordID="2">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/loadingsingle/progress_windowplayershared.xdb#xpointer(/WindowPlayerShared)"/>
+	<Name>Video</Name>
+	<Tooltip href=""/>
+	<Visible>false</Visible>
+	<Priority>100</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>200</x>
+				<y>200</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<SequenceName>Movies\loading.xml</SequenceName>
+	<MaintainAspectRatio>true</MaintainAspectRatio>
+</WindowPlayer>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="68">
+	<Type>RT_ASSAULT_INFANTRY</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/infantry_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/mission/reinforcement/type/infantry/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/german_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/german_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/german_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/german_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/auto/sdkfz_8/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/auto/sdkfz_8/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/single_units/german_sniper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href=""/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

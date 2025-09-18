@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="180">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/ui/game/menu/mpgameslist/maparea_windowsimple.xdb#xpointer(/WindowSimple)"/>
+		<Item href="/ui/game/menu/mpgameslist/mapname_windowtextview.xdb#xpointer(/WindowTextView)"/>
+		<Item href="/ui/game/menu/mpgameslist/descarea_windowsimple.xdb#xpointer(/WindowSimple)"/>
+	</Children>
+	<Background href="/ui/game/menu/escapemenu/escmenu_bgr_2_3_backgroundtiledtexture.xdb#xpointer(/BackgroundTiledTexture)"/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>-50</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

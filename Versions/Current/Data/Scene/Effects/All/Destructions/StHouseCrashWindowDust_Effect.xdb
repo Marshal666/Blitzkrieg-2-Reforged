@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="70">
+	<Instances>
+		<Item href="StoneHouseCrash/StHouseCrWindow_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="StoneHouseCrash/StHouseCombustion01_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="WindowBurn_0_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

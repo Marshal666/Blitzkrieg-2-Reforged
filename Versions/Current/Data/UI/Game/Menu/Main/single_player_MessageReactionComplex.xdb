@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="60">
+	<ClassTypeID>285695171</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/UI/Game/Menu/HideMain_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+					<Item href="/UI/Game/Menu/ShowSinglePlayer_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+					<Item href="SinglePlayer_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+				</data>
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/UI/Game/Menu/check_single_player_enabled_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data />
+	</commonAfter>
+</MessageReactionComplex>

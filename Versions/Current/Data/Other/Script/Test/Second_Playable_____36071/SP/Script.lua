@@ -1,0 +1,119 @@
+--reinforcements
+Ger_reinf_I = 13;
+Ger_reinf_II =14;
+Ger_reinf_III = 15;
+
+USA_reinf_I = 16;
+USA_reinf_II = 17;
+USA_reinf_III = 18;
+
+Ger_reinf = { Ger_reinf_I, Ger_reinf_II, Ger_reinf_III };
+USA_reinf = { USA_reinf_I, USA_reinf_II, USA_reinf_III };
+Ger_reinf.n=3;
+USA_reinf.n=3;
+
+--areas  
+USA_area = "USA_reinf";
+Ger_area = "Ger_reinf";
+Attack = "Attack";
+Rest = "Rest";
+Rest1 = "Rest1";
+GerWin = false;
+
+--script groups
+--humber = 5000;
+--humber_units = {};
+--humber_units = GetObjectListArray ( humber );
+
+--functions
+--function hum1()
+--	for i=1, humber_units.n do
+--		UnitCmd ( ACT_SWARM, humber_units[i], GetScriptAreaParams ( Attack ) );
+--		UnitQCmd ( ACT_SWARM, humber_units[i], GetScriptAreaParams ( Rest ) );
+--		UnitQCmd ( ACT_ROTATE, humber_units[i], GetScriptAreaParams ( Ger_area ) );
+--	end;
+--end;
+
+function Ger_Reinforcements ( ) 
+local Ger = { };
+local k=1;
+local z=5;
+while 1 do	
+	while k <= Ger_reinf.n do
+	if ( GetNUnitsInParty ( 1 ) <= 0 ) then
+		Wait ( z ); z=7+Random(5);
+		LandReinforcement ( 1, Ger_reinf [ k ], 2, -1); -- create units at player 1 which 3 formation in reinf point 2 which ID=3 
+		--CallReinforcement( 1, , 3 );
+		Trace("Ger k=%g",k);
+		k=k+1;
+		
+		Wait( 1 );
+		Ger = GetUnitListInAreaArray ( 1, Ger_area );
+		CmdArrayDisp( ACT_MOVE, Ger, 50, 1504, 2906 );
+		QCmdArrayDisp( ACT_SWARM, Ger, 20, 1434, 2966 );
+		QCmdArrayDisp( ACT_SWARM, Ger, 20, 1210, 3130 );
+		QCmdArrayDisp( ACT_SWARM, Ger, 50, GetScriptAreaParams ( Attack ) );
+		QCmdArrayDisp( ACT_SWARM, Ger, 50, 845, 3800 );
+		QCmdArrayDisp( ACT_SWARM, Ger, 50, 945, 4137 );
+		QCmdArrayDisp( ACT_ROTATE, Ger, 500, GetScriptAreaParams ( USA_area ) );
+--		for i = 1, Ger.n do
+--			UnitCmd ( ACT_SWARM, Ger[i], GetScriptAreaParams ( Attack ) );
+--			UnitQCmd ( ACT_SWARM, Ger[i], GetScriptAreaParams ( Rest1 ) );
+--			UnitQCmd ( ACT_ROTATE, Ger[i], GetScriptAreaParams ( USA_area ) );
+--		end;
+	end;
+		Wait ( 3 );
+	end;
+	k=2;Trace("Ger k reset to 2");
+end;
+end;
+
+function USA_Reinforcements()
+local USA = {};
+local k=1;
+local z=5;
+while 1 do
+	while k <= USA_reinf.n do
+	if ( GetNUnitsInParty ( 0 ) <= 0 ) then 
+		Wait ( z ); z=15+Random(5);
+		LandReinforcement ( 0, USA_reinf [ k ], 1, -1); -- create units at player 0 which 3 formation in reinf point 1 which ID=2
+		--CallReinforcement( 0, , 2 );
+		Trace("USA k=%g",k);
+		k=k+1;
+
+		Wait( 1 );
+		USA = GetUnitListInAreaArray( 0, USA_area );
+		CmdArrayDisp( ACT_MOVE, USA, 20, 631, 3211 );
+		QCmdArrayDisp( ACT_SWARM, USA, 50, GetScriptAreaParams ( Attack ) );
+		QCmdArrayDisp( ACT_SWARM, USA, 50, GetScriptAreaParams ( Rest ) );
+		QCmdArrayDisp( ACT_ROTATE, USA, 500, GetScriptAreaParams ( Ger_area ) );
+--		for i = 1, USA.n do
+--			UnitCmd ( ACT_SWARM, USA[i], GetScriptAreaParams ( Attack ) );
+--			UnitQCmd ( ACT_SWARM, USA[i], GetScriptAreaParams ( Rest ) );
+--			UnitQCmd ( ACT_ROTATE, USA[i], GetScriptAreaParams ( Ger_area ) );
+--		end;
+	end;
+		Wait ( 3 );
+	end;
+	k=2;Trace("USA k reset to 2");
+end;
+end;
+
+function TraceUnits()
+	Trace( "Ger_units %g", GetNUnitsInParty ( 1 ) );
+	Trace( "USA_units %g", GetNUnitsInParty ( 0 ) );
+	Trace( "Ger_reinf.n %g", Ger_reinf.n );
+	Trace( "Ger_reinf.n %g", USA_reinf.n );
+end;
+
+--main
+--CameraMove ( 6, 0 );
+
+ViewZone ( Attack, 1 );
+
+StartThread ( USA_Reinforcements );
+
+Wait( 4 );
+
+StartThread ( Ger_Reinforcements );
+

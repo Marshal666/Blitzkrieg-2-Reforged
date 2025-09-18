@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="336">
+	<KeyName>114mm Caliope</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/Rocket_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>23</Dispersion>
+	<AimingTime>4</AimingTime>
+	<AmmoPerBurst>60</AmmoPerBurst>
+	<RangeMax>81</RangeMax>
+	<RangeMin>5</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>81</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>18</Piercing>
+			<DamageRandom>88</DamageRandom>
+			<DamagePower>175</DamagePower>
+			<PiercingRandom>5</PiercingRandom>
+			<Area>1</Area>
+			<Area2>5.86</Area2>
+			<Speed>70</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0.1</DetonationPower>
+			<trajectory>TRAJECTORY_ROCKET</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/CalliopeShots_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Missiles/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/RocketExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/medium.xdb#xpointer(/CraterSet)" />
+			<FireRate>180</FireRate>
+			<RelaxTime>20</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Rockets/Bazooka/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

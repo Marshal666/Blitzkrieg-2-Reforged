@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="18">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="/scene/texandmats/all/ui/mission/icons/units/allies/tanks/cruiser_mkviii_cromwell_gb_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href=""/>
+	<Entries>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/usa_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/alphasquads/assault_squads/usa_asquad/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href=""/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

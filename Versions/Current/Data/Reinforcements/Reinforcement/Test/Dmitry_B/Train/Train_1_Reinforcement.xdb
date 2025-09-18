@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1550">
+	<Type>RT_TANKS</Type>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/trains/train_german/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/trains/tender_german/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/trains/goods_wagon_german/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href=""/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

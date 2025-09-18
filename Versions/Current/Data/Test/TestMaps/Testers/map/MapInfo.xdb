@@ -1,0 +1,2632 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="394">
+	<NumPatchesX>4</NumPatchesX>
+	<NumPatchesY>4</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<MapFilesPath>Maps\TESTERS\</MapFilesPath>
+	<Light href="/scene/lights/all/africa/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<PreLight href="/terrain/prelight/all/africa/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href=""/>
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+	<Roads/>
+	<Rivers/>
+	<Crags/>
+	<Spots/>
+	<Lakes/>
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)"/>
+		<points/>
+		<ControlPoints/>
+		<VSOID>0</VSOID>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>35B4224A-0078-44E4-9010-E887A00EBBDB</uid>
+	<MapDesigner href=""/>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/france_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/gb_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/usa_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>153.609</x>
+				<y>215.671</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73132</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/m13_40_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>304.7</x>
+				<y>194.847</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73133</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/m13_40_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>445.802</x>
+				<y>174.516</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73134</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/m13_40_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>574.613</x>
+				<y>161.533</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73135</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/m13_40_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>737.813</x>
+				<y>173.199</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73136</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_38t_ausf_a/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>862.795</x>
+				<y>166.729</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73137</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_38t_ausf_a/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>973.47</x>
+				<y>170.063</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73138</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_38t_ausf_a/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1069.15</x>
+				<y>169.37</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73139</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_38t_ausf_a/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1202.74</x>
+				<y>180.992</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73140</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1308.26</x>
+				<y>183.663</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73141</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1388.68</x>
+				<y>171.425</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73142</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1480.78</x>
+				<y>184.138</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73143</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1687.44</x>
+				<y>177</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73144</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1837</x>
+				<y>191.167</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73145</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1991.72</x>
+				<y>182.555</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73146</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2156.41</x>
+				<y>199.634</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73147</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2364.67</x>
+				<y>211.469</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73148</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2504.8</x>
+				<y>211.425</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73150</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2637.61</x>
+				<y>203.089</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73151</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2794.69</x>
+				<y>214.266</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73152</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3029.65</x>
+				<y>173.649</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73154</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_d/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3165.77</x>
+				<y>156.693</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73155</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_d/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3334.87</x>
+				<y>142.299</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73156</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_d/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3462.84</x>
+				<y>137.216</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73158</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_d/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3684.85</x>
+				<y>230.442</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73161</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3870.51</x>
+				<y>117.448</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73162</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3966.12</x>
+				<y>315.71</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73163</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3769.16</x>
+				<y>414.301</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73164</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3968.42</x>
+				<y>473.363</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73165</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3859.58</x>
+				<y>619.844</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73166</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>88.2566</x>
+				<y>538.569</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73168</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_v_panther_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>273.332</x>
+				<y>531.952</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73169</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_v_panther_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>450.629</x>
+				<y>547.785</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73170</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_v_panther_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>616.198</x>
+				<y>560.998</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73171</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_v_panther_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>850.637</x>
+				<y>597.835</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73172</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1043.83</x>
+				<y>563.438</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73173</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1180.53</x>
+				<y>567.804</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73174</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1337.06</x>
+				<y>571.792</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73175</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1549.66</x>
+				<y>590.651</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73176</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ii_aus_b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1737.8</x>
+				<y>593.054</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73177</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ii_aus_b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1858.54</x>
+				<y>580.286</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73178</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ii_aus_b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1999.5</x>
+				<y>557.108</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73179</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ii_aus_b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2245.56</x>
+				<y>583.106</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73180</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_222/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2452.38</x>
+				<y>568.901</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73181</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_222/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2591.33</x>
+				<y>559.027</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73182</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_222/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2701.77</x>
+				<y>542.912</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73183</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_222/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2910.56</x>
+				<y>546.017</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73184</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3039.81</x>
+				<y>531.115</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73185</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3149.62</x>
+				<y>513.229</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73186</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3294.99</x>
+				<y>512.234</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73187</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3431.11</x>
+				<y>755.575</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73188</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_234_puma/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3458.43</x>
+				<y>906.031</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73189</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_234_puma/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3206.35</x>
+				<y>1039.84</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73190</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_234_puma/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3167.8</x>
+				<y>913.674</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73191</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/sdkfz_234_puma/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3586.45</x>
+				<y>1151.15</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73192</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/t_34_germany/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3849.63</x>
+				<y>987.289</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73193</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/t_34_germany/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3846.64</x>
+				<y>1180.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73194</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/t_34_germany/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3626.75</x>
+				<y>1321.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73195</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/t_34_germany/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>162.66</x>
+				<y>3860.86</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73196</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a34_comet_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>170.463</x>
+				<y>3666.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73197</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a34_comet_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>164.376</x>
+				<y>3538.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73198</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a34_comet_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>149.119</x>
+				<y>3435.75</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73199</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a34_comet_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>385.274</x>
+				<y>3875.74</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73200</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a41_centurion_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>375.67</x>
+				<y>3713.39</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73201</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a41_centurion_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>386.965</x>
+				<y>3522.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73202</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a41_centurion_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>359.74</x>
+				<y>3366.66</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73203</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/a41_centurion_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>678.913</x>
+				<y>3890.19</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73204</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkvi_crusader_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>647.262</x>
+				<y>3727.22</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73205</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkvi_crusader_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>614.249</x>
+				<y>3518.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73206</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkvi_crusader_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>575.578</x>
+				<y>3364.86</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73207</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkvi_crusader_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>897.46</x>
+				<y>3901.13</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73208</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkviii_cromwell_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>872.567</x>
+				<y>3749.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73209</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkviii_cromwell_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>798.274</x>
+				<y>3555.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73210</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkviii_cromwell_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>788.208</x>
+				<y>3355.12</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73211</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/cruiser_mkviii_cromwell_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1126.73</x>
+				<y>3939.72</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73212</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/humber_mk1_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1097.66</x>
+				<y>3793.63</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73213</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/humber_mk1_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1075.3</x>
+				<y>3563.41</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73214</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/humber_mk1_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1034.43</x>
+				<y>3403.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73215</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/humber_mk1_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1288.9</x>
+				<y>3964.81</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73216</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkii_matilda_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1295.17</x>
+				<y>3807.3</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73217</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkii_matilda_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1275.12</x>
+				<y>3607.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73218</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkii_matilda_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1229.18</x>
+				<y>3397.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73219</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkii_matilda_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1445.91</x>
+				<y>3358.33</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73220</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1452.2</x>
+				<y>3488.34</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73221</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1475.58</x>
+				<y>3674.88</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73222</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1471.12</x>
+				<y>3891.94</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73223</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1642.83</x>
+				<y>3283.52</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73224</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/infantry_mkiv_churchill_gb_early/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1651.77</x>
+				<y>3428.05</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73225</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/infantry_mkiv_churchill_gb_early/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1643.29</x>
+				<y>3623.12</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73226</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/infantry_mkiv_churchill_gb_early/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1628.67</x>
+				<y>3810.35</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73227</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/infantry_mkiv_churchill_gb_early/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1843.51</x>
+				<y>3251.2</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73228</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1852.85</x>
+				<y>3419.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73229</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1849.61</x>
+				<y>3610.04</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73230</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1817.48</x>
+				<y>3831.66</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73231</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m26_general_pershing_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2076.77</x>
+				<y>3224.72</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73232</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2093.83</x>
+				<y>3406.85</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73233</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2073.05</x>
+				<y>3616.28</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73234</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2041.89</x>
+				<y>3858.41</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73235</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2234.2</x>
+				<y>3872.27</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73236</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_grant_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2276.42</x>
+				<y>3629.02</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73237</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_grant_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2244.93</x>
+				<y>3445.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73238</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_grant_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2289.34</x>
+				<y>3207.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73239</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m3_grant_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2517.96</x>
+				<y>3925.81</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73240</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m4a1_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2510.84</x>
+				<y>3753.75</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73241</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m4a1_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2517.51</x>
+				<y>3473.1</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73242</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m4a1_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2523.98</x>
+				<y>3295.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73243</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m4a1_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2695.1</x>
+				<y>3895.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73244</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/m4a3_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2706.19</x>
+				<y>3696.47</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73245</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/m4a3_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2710.17</x>
+				<y>3487.1</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73246</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/m4a3_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2719.11</x>
+				<y>3241.25</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73247</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/allies/tanks/m4a3_general_sherman_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2914.31</x>
+				<y>3836.63</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73248</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m5_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2907.42</x>
+				<y>3646.17</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73249</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m5_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2906.03</x>
+				<y>3443.39</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73250</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m5_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2931.06</x>
+				<y>3230.45</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73251</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m5_general_stuart_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3119.64</x>
+				<y>3161.63</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73252</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m8_greyhound_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3085.94</x>
+				<y>3376.26</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73253</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m8_greyhound_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3082.87</x>
+				<y>3620.05</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73254</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m8_greyhound_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3075.49</x>
+				<y>3831.43</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73255</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/m8_greyhound_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3315.14</x>
+				<y>3126.66</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73256</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/s35_somua_france/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3307.18</x>
+				<y>3325.99</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73257</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/s35_somua_france/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3271.59</x>
+				<y>3566.76</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73258</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/s35_somua_france/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3262.9</x>
+				<y>3774.4</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73259</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/tanks/s35_somua_france/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3606.13</x>
+				<y>3065.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73260</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3559.35</x>
+				<y>3310.19</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73261</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3550.45</x>
+				<y>3573.99</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73262</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3528.78</x>
+				<y>3804.62</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73263</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1014.22</x>
+				<y>1434.42</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73671</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/artillery/105mm_m2a1_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1573.39</x>
+				<y>1560.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73672</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/us/artillery/12_7_mm_m2hb_usa/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1937.57</x>
+				<y>1362.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>73673</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/gb/artillery/7_7_mm_vickers_mki_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+	</Objects>
+	<HiddenObjectType href=""/>
+	<Season>SEASON_SPRING</Season>
+	<DayTime>DAY_DAY</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments/>
+	<Bridges/>
+	<ScenarioObjects/>
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data/>
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href=""/>
+	<ScriptAreas/>
+	<startCommandsList/>
+	<reservePositionsList/>
+	<soundsList/>
+	<ForestCircleSound href=""/>
+	<ForestAmbientSounds href=""/>
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects/>
+	<Bonuses/>
+	<EditAreas/>
+	<MiniMap href="/scene/texandmats/all/maps/test/testers/map_____35557/minimap_material.xdb#xpointer(/Material)"/>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<LoadingPicture href=""/>
+	<LoadingDescription href=""/>
+	<CameraPositions/>
+	<ScriptCameraPlacements/>
+	<Objectives/>
+	<Music href=""/>
+	<MPInfo>
+		<GameTypes/>
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects/>
+</MapInfo>

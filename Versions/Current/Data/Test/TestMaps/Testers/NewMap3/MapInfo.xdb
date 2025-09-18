@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="454">
+	<NumPatchesX>3</NumPatchesX>
+	<NumPatchesY>3</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<MapFilesPath>Maps\Test\Testers\NewMap3\</MapFilesPath>
+	<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href=""/>
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+	<Roads/>
+	<Rivers/>
+	<Crags/>
+	<Spots/>
+	<Lakes/>
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)"/>
+		<points/>
+		<ControlPoints/>
+		<VSOID>0</VSOID>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>98925A1B-88CB-41EA-986E-AF4DED91DC9B</uid>
+	<MapDesigner href=""/>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>60</x>
+					<y>60</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>50</Yaw>
+				<Pitch>24</Pitch>
+				<Dist>100</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/veselov/europe_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints>
+				<Item>
+					<Position>
+						<x>748.42</x>
+						<y>2425.44</y>
+					</Position>
+					<AviationPosition>
+						<x>0</x>
+						<y>0</y>
+					</AviationPosition>
+					<Direction>1</Direction>
+					<Template href="/reinforcements/deploytemplate/game/common_deploytemplate.xdb#xpointer(/DeployTemplate)"/>
+					<TypedTemplates/>
+					<IsDefault>true</IsDefault>
+					<___delete_from_here_to_the_end>false</___delete_from_here_to_the_end>
+					<Type>RT_MAIN_INFANTRY</Type>
+					<FactoryID>-1</FactoryID>
+					<PositionID>1</PositionID>
+					<DeployMask>
+						<Positions/>
+					</DeployMask>
+					<IsAerial>false</IsAerial>
+					<IsSea>false</IsSea>
+					<IsGround>false</IsGround>
+					<Radius>10</Radius>
+				</Item>
+			</ReinforcementPoints>
+			<ReinforcementTypes>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_1/player/main_squad_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_1/player/gap_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_1/player/tank_light_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_1/player/tank_medium_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_2/player/fighter_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_2/player/mobile_assault_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_2/player/recon_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_2/player/tank_destroyer_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/tank_heavy_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/germany/chapter_2/player/elite_squad_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/bomber_2_reinforcement.xdb#xpointer(/Reinforcement)"/>
+			</ReinforcementTypes>
+			<DefaultRank href=""/>
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>100</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints>
+				<Item>
+					<Position>
+						<x>0</x>
+						<y>0</y>
+					</Position>
+					<AviationPosition>
+						<x>0</x>
+						<y>0</y>
+					</AviationPosition>
+					<Direction>0</Direction>
+					<Template href=""/>
+					<TypedTemplates/>
+					<IsDefault>true</IsDefault>
+					<___delete_from_here_to_the_end>false</___delete_from_here_to_the_end>
+					<Type>RT_MAIN_INFANTRY</Type>
+					<FactoryID>-1</FactoryID>
+					<PositionID>1</PositionID>
+					<DeployMask>
+						<Positions/>
+					</DeployMask>
+					<IsAerial>false</IsAerial>
+					<IsSea>false</IsSea>
+					<IsGround>false</IsGround>
+					<Radius>10</Radius>
+				</Item>
+			</ReinforcementPoints>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>-1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>748.429</x>
+				<y>2425.44</y>
+				<z>0</z>
+			</Pos>
+			<Dir>41539</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>182787</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/africa/a_factoryoffice/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2587.25</x>
+				<y>517.076</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8249</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>182864</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_ii_ausf_f/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2711.36</x>
+				<y>2679.8</y>
+				<z>0</z>
+			</Pos>
+			<Dir>20033</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>182865</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>293.165</x>
+				<y>303.407</y>
+				<z>0</z>
+			</Pos>
+			<Dir>64534</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>182866</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+	</Objects>
+	<HiddenObjectType href=""/>
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_DAY</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments/>
+	<Bridges/>
+	<ScenarioObjects/>
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data/>
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href=""/>
+	<ScriptAreas/>
+	<startCommandsList/>
+	<reservePositionsList/>
+	<soundsList/>
+	<ForestCircleSound href=""/>
+	<ForestAmbientSounds href=""/>
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects/>
+	<Bonuses/>
+	<EditAreas/>
+	<MiniMap href="/scene/texandmats/all/maps/test/testers/newmap3/minimap_material.xdb#xpointer(/Material)"/>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<LoadingPicture href=""/>
+	<LoadingDescription href=""/>
+	<CameraPositions/>
+	<ScriptCameraPlacements/>
+	<Objectives/>
+	<Music href=""/>
+	<MPInfo>
+		<GameTypes/>
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects/>
+</MapInfo>

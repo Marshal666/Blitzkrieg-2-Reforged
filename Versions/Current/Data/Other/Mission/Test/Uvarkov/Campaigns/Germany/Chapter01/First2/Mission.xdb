@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="14">
+	<Map href="/test/testmaps/progtests/uvarkov/test/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses/>
+	<LocalizedName href="/other/text/test/uvarkov/campaigns/germany/chapter01/mission02/name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/test/uvarkov/campaigns/germany/chapter01/mission02/desc/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>300</x>
+		<y>200</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>5</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

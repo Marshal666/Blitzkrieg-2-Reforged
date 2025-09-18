@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="24">
+	<Map href="/test/testmaps/alpha/secondalpha/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href=""/>
+		</Item>
+	</ContextModifiers>
+	<bonuses>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_artillery_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_assaultspg_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_heavyartillery_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_heavyartillery_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_lighttanks_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/player_tanks_bonus_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/enemy_assaultspg_debuff_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/enemy_heavyartillery_debuff_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/enemy_lighttanks_debuff_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/enemy_tankdestroyers_debuff_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+		<Item href="/reinforcements/reinforcementchange/game/gb/alpha/enemy_tanks_debuff_reinforcementchange.xdb#xpointer(/ReinforcementChange)"/>
+	</bonuses>
+	<LocalizedName href="/other/text/game/missions_description/secondalpha/name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/game/missions_description/secondalpha/desc/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>58</x>
+		<y>234</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_GROUND_ATTACK_PLANES</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_BOMBERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_PARATROOPS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_FIGHTERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_LIGHT_TANKS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_GUNS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANK_DESTROYERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ARTILLERY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_HEAVY_ARTILLERY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_MAIN_INFANTRY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_INFANTRY</ReinfType>
+			<Number>0</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="825">
+	<NumPatchesX>10</NumPatchesX>
+	<NumPatchesY>10</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<MapFilesPath>Maps\Test\Melkov\GermanySummer\</MapFilesPath>
+	<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href=""/>
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+	<Roads/>
+	<Rivers/>
+	<Crags/>
+	<Spots/>
+	<Lakes/>
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)"/>
+		<points/>
+		<ControlPoints/>
+		<VSOID>0</VSOID>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>9623828B-1C62-49FC-BB5E-BB84BE1E1894</uid>
+	<MapDesigner href=""/>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/gb_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/ussr_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>186.341</x>
+				<y>232.676</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40050</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188676</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/artillery/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>198.495</x>
+				<y>339.085</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7282</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188677</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/artillery/sapper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>204.849</x>
+				<y>462.387</y>
+				<z>0</z>
+			</Pos>
+			<Dir>47878</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188678</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/artillery/sm_gunner_mp40/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>412.818</x>
+				<y>231.621</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18022</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188679</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/assault_squad/as_mg_mg34/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>424.219</x>
+				<y>365.317</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45693</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188680</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/assault_squad/as_mg_mg42/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>430.135</x>
+				<y>502.753</y>
+				<z>0</z>
+			</Pos>
+			<Dir>52065</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188681</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/assault_squad/as_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>426.898</x>
+				<y>663.412</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188682</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/assault_squad/as_smg_mp40/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>442.283</x>
+				<y>855.866</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188683</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/assault_squad/as_smg_stg44/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>613.676</x>
+				<y>248.082</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7828</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188684</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/at_squad/ats_atrifle_pzb_39/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>604.905</x>
+				<y>386.101</y>
+				<z>0</z>
+			</Pos>
+			<Dir>62987</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188685</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/at_squad/ats_bazooka_panzerfaust/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>615.19</x>
+				<y>543.239</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40960</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188686</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/at_squad/ats_bazooka_panzershreck/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>628.291</x>
+				<y>708.165</y>
+				<z>0</z>
+			</Pos>
+			<Dir>24576</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188687</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/at_squad/ats_rifle_mauser1898/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>787.591</x>
+				<y>233.214</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188688</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/elite_squad/es_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>805.767</x>
+				<y>362.406</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10923</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188689</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/elite_squad/es_smg_fg42/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>802.583</x>
+				<y>503.513</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45875</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188690</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/elite_squad/es_smg_mp41/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>812.263</x>
+				<y>651.011</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4369</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188691</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/elite_squad/es_smg_stg44/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>948.923</x>
+				<y>218.641</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18386</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188692</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1056.34</x>
+				<y>222.539</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48060</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188693</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_mg_mg34/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1062.84</x>
+				<y>371.744</y>
+				<z>0</z>
+			</Pos>
+			<Dir>35863</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188694</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_mg_mg42/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1063.19</x>
+				<y>508.735</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48970</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188695</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1071.85</x>
+				<y>658.133</y>
+				<z>0</z>
+			</Pos>
+			<Dir>63351</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188696</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_rifle_g41/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1091.22</x>
+				<y>773.573</y>
+				<z>0</z>
+			</Pos>
+			<Dir>11833</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188697</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_rifle_mauser1898/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1097.84</x>
+				<y>924.042</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12379</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188698</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_smg_mp40/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1101.89</x>
+				<y>1055.68</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188699</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/main_squad/ms_smg_mp41/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1187.46</x>
+				<y>210.757</y>
+				<z>0</z>
+			</Pos>
+			<Dir>23302</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188700</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/mg_squad/mg_mg_mg34/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1295.5</x>
+				<y>211.486</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19843</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188701</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/snipers/s_sniperrifle_g41_scoped/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1316.97</x>
+				<y>371.277</y>
+				<z>0</z>
+			</Pos>
+			<Dir>43145</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>188702</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/germany/snipers/s_sniperrifle_mauser_scoped/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1578.68</x>
+				<y>155.071</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40050</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190350</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/artillery/sapper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1572.7</x>
+				<y>221.115</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45693</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190352</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/artillery/sm_gunner_sten/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1672.12</x>
+				<y>147.317</y>
+				<z>0</z>
+			</Pos>
+			<Dir>52065</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190353</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/assault_squad/as_mg_bren/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1682.38</x>
+				<y>206.827</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190354</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/assault_squad/as_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1688.38</x>
+				<y>262.497</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190355</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/assault_squad/as_smg_sten/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1696.71</x>
+				<y>329.487</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7828</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190356</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/assault_squad/as_smg_sten_iii/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1706.61</x>
+				<y>395.866</y>
+				<z>0</z>
+			</Pos>
+			<Dir>62987</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190357</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/assault_squad/as_smg_sten_iv/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1784.47</x>
+				<y>135.155</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40960</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190358</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/at_squad/ats_atrifle_ptrboisa/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1799.7</x>
+				<y>209.369</y>
+				<z>0</z>
+			</Pos>
+			<Dir>24576</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190359</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/at_squad/ats_bazooka/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1808.67</x>
+				<y>280.309</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190360</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/at_squad/ats_piat/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1816.21</x>
+				<y>355.458</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10923</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190361</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/at_squad/ats_rifle_enfield/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1824.95</x>
+				<y>453.52</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45875</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190362</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/at_squad/ats_smg_sten/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1915.72</x>
+				<y>149.085</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4369</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190363</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/commando/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1923.69</x>
+				<y>206.071</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18386</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190364</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/es_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1931.68</x>
+				<y>267.682</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48060</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190365</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/es_rifle_delizl/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1942.65</x>
+				<y>334.994</y>
+				<z>0</z>
+			</Pos>
+			<Dir>35863</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190366</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/es_smg_11_43m3/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1946.96</x>
+				<y>392.939</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48970</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190367</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/es_smg_sten_silenced/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1956.82</x>
+				<y>466.282</y>
+				<z>0</z>
+			</Pos>
+			<Dir>63351</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190368</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/elite_squad/paratrooper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2002.65</x>
+				<y>138.016</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12379</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190370</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2077.2</x>
+				<y>130.456</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40050</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190372</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/as_smg_sten/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2107.33</x>
+				<y>200.604</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7282</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190373</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/as_smg_sten_iii/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2116.61</x>
+				<y>269.504</y>
+				<z>0</z>
+			</Pos>
+			<Dir>47878</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190374</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/as_smg_sten_iv/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2125.63</x>
+				<y>336.956</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18022</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190375</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/ms_mg_bren/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2134.42</x>
+				<y>413.91</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45693</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190376</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/ms_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2135.63</x>
+				<y>481.274</y>
+				<z>0</z>
+			</Pos>
+			<Dir>52065</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190377</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/main_squad/ms_rifle_enfield/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2177.11</x>
+				<y>136.911</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190378</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/snipers/s_sniperrifle_enfield_l39/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2187.32</x>
+				<y>184.689</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190379</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/greatbritain/snipers/s_sniperrifle_enfield_l42/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2281.94</x>
+				<y>144.403</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40050</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190439</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/animals/dog/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2335.66</x>
+				<y>132.486</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7282</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190440</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/australia/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2401.65</x>
+				<y>133.953</y>
+				<z>0</z>
+			</Pos>
+			<Dir>47878</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190441</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/france/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2425.62</x>
+				<y>215.345</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18022</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190442</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/france/officer/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2498.89</x>
+				<y>149.935</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45693</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190443</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/italy/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2492.37</x>
+				<y>208.408</y>
+				<z>0</z>
+			</Pos>
+			<Dir>52065</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190444</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/italy/officer/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2687.41</x>
+				<y>262.627</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190445</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/artillery/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2689.29</x>
+				<y>328.652</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190446</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/artillery/sapper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2753.22</x>
+				<y>239.447</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7828</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190447</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/assault_squad/as_mg_bar/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2757.49</x>
+				<y>318.83</y>
+				<z>0</z>
+			</Pos>
+			<Dir>62987</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190448</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/assault_squad/as_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2757.18</x>
+				<y>389.838</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40960</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190449</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/assault_squad/as_rifle_m1a1garand/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2768.15</x>
+				<y>466.997</y>
+				<z>0</z>
+			</Pos>
+			<Dir>24576</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190450</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/assault_squad/as_rifle_m1garand/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2770.37</x>
+				<y>549.108</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33314</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190451</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/assault_squad/as_smg_11_43thompson/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2838.68</x>
+				<y>248.523</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10923</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190452</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/at_squad/ats_bazooka/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2903.79</x>
+				<y>253.309</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45875</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190453</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/elite_squad/es_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2909.09</x>
+				<y>310.152</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4369</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190454</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/elite_squad/es_smg_11_43m3/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2929.42</x>
+				<y>380.46</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18386</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190455</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/elite_squad/es_smg_11_43thompson/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2971.54</x>
+				<y>250.25</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48060</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190456</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3073.7</x>
+				<y>233.402</y>
+				<z>0</z>
+			</Pos>
+			<Dir>35863</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190457</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/main_squad/ms_mg_bar/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3088.46</x>
+				<y>304.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48970</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190458</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/main_squad/ms_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3096.19</x>
+				<y>401.76</y>
+				<z>0</z>
+			</Pos>
+			<Dir>63351</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190459</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/main_squad/ms_rifle_m1a1garand/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3099.56</x>
+				<y>509.462</y>
+				<z>0</z>
+			</Pos>
+			<Dir>11833</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190460</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/main_squad/ms_rifle_m1garand/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3217.62</x>
+				<y>263.869</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12379</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190461</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/snipers/s_sniperrifle_m1a1_scoped/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3223.73</x>
+				<y>356.158</y>
+				<z>0</z>
+			</Pos>
+			<Dir>364</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190462</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/usa/snipers/s_sniperrifle_springfield_scoped/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3482.02</x>
+				<y>251.811</y>
+				<z>0</z>
+			</Pos>
+			<Dir>23302</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190463</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/artillery/gunner/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3498.85</x>
+				<y>313.135</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19843</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190464</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/artillery/sapper/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3593.91</x>
+				<y>231.362</y>
+				<z>0</z>
+			</Pos>
+			<Dir>43145</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190465</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/assault_squad/as_mg_7.62dp/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3588.36</x>
+				<y>311.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53885</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190466</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/assault_squad/as_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3576.34</x>
+				<y>387.719</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50244</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190467</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/assault_squad/as_smg_ppd/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3580.16</x>
+				<y>480</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48606</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190468</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/assault_squad/as_smg_pps/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3569.02</x>
+				<y>564.491</y>
+				<z>0</z>
+			</Pos>
+			<Dir>55342</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190469</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/assault_squad/as_smg_ppsh/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3670.89</x>
+				<y>246.362</y>
+				<z>0</z>
+			</Pos>
+			<Dir>61713</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190470</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/at_squad/ats_atrifle_ptrd/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3669.44</x>
+				<y>319.754</y>
+				<z>0</z>
+			</Pos>
+			<Dir>33496</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190471</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/at_squad/ats_atrifle_ptrs41/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3678.4</x>
+				<y>401.041</y>
+				<z>0</z>
+			</Pos>
+			<Dir>31130</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190472</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/at_squad/ats_atrifle_ptrs42/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3665.89</x>
+				<y>513.941</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4733</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190473</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/at_squad/ats_bazooka_panzerfaust/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3783.03</x>
+				<y>265.8</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48606</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190474</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/elite_squad/es_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3775.29</x>
+				<y>370.779</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25304</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190475</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/elite_squad/es_smg_11_43thompson/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3783.81</x>
+				<y>455.018</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40232</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190476</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/elite_squad/es_smg_pps/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3865.1</x>
+				<y>280.953</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19297</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190477</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3945.49</x>
+				<y>274.913</y>
+				<z>0</z>
+			</Pos>
+			<Dir>61167</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190478</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_mg_7.62dp/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3963.09</x>
+				<y>359.796</y>
+				<z>0</z>
+			</Pos>
+			<Dir>20753</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190479</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_officer_pistol/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3972.08</x>
+				<y>450.784</y>
+				<z>0</z>
+			</Pos>
+			<Dir>64808</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190480</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_rifle_mosin/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3958.91</x>
+				<y>521.485</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58072</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190481</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_rifle_svt40/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3958.66</x>
+				<y>600.201</y>
+				<z>0</z>
+			</Pos>
+			<Dir>54249</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190482</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_smg_pps/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>3951.99</x>
+				<y>696.818</y>
+				<z>0</z>
+			</Pos>
+			<Dir>39504</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190483</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/main_squad/ms_smg_ppsh/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>4064.29</x>
+				<y>264.913</y>
+				<z>0</z>
+			</Pos>
+			<Dir>22574</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190484</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/ussr/snipers/s_sniperrifle_mosin_scoped/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1538.6</x>
+				<y>422.185</y>
+				<z>0</z>
+			</Pos>
+			<Dir>40050</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190859</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/animals/dog/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1584.53</x>
+				<y>481.174</y>
+				<z>0</z>
+			</Pos>
+			<Dir>7282</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190860</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/animals/dog/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1618.89</x>
+				<y>526.097</y>
+				<z>0</z>
+			</Pos>
+			<Dir>47878</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190861</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/animals/dog/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1536.43</x>
+				<y>474.729</y>
+				<z>0</z>
+			</Pos>
+			<Dir>18022</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>190862</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/test/testsquads/art_test/melkov/single_units_squads/animals/dog/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+	</Objects>
+	<HiddenObjectType href=""/>
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_MORNING</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments/>
+	<Bridges/>
+	<ScenarioObjects/>
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data/>
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href=""/>
+	<ScriptAreas/>
+	<startCommandsList/>
+	<reservePositionsList/>
+	<soundsList/>
+	<ForestCircleSound href=""/>
+	<ForestAmbientSounds href=""/>
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects/>
+	<Bonuses/>
+	<EditAreas/>
+	<MiniMap href="/scene/texandmats/all/maps/test/melkov/germanysummer/minimap_material.xdb#xpointer(/Material)"/>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<LoadingPicture href=""/>
+	<LoadingDescription href=""/>
+	<CameraPositions/>
+	<ScriptCameraPlacements/>
+	<Objectives/>
+	<Music href=""/>
+	<MPInfo>
+		<GameTypes/>
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects/>
+</MapInfo>

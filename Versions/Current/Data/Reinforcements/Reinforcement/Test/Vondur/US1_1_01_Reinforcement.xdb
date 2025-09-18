@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1402">
+	<Type>RT_TANKS</Type>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<Entries>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/germany/assault_squad/german_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/ships/assaultboat/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href=""/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

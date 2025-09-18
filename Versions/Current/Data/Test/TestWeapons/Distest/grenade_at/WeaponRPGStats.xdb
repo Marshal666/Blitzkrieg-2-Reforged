@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="500">
+	<KeyName>AT Grenade</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments>dont foget to setup BrokeTrackProbability</Comments>
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>1</Dispersion>
+	<AimingTime>0.2</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>10</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>90</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>150</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>10</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>2</Area>
+			<Area2>4</Area2>
+			<Speed>1</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_GRENADE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/machineryhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/hits/reflectionhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/hits/reflectionhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/explosions/grenadeexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>10</FireRate>
+			<RelaxTime>3</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href="/other/text/localizedweaponsname/infantry/grenade_at/text.xdb#xpointer(/Text)"/>
+</WeaponRPGStats>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="22">
+	<Action>USER_ACTION_ENGINEER_REPAIR</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>false</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>false</Passive>
+	<Slot>7</Slot>
+	<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+	<Tooltip href="" />
+	<TooltipFileRef href="/ui/game/mission/actions/repair.txt" />
+	<Icon href="/Scene/TexAndMats/Game/Mission/NewActionButtons/Repair/Normal_Texture.xdb#xpointer(/Texture)" />
+	<IconDisabled href="/Scene/TexAndMats/Game/Mission/NewActionButtons/Repair/Disabled_Texture.xdb#xpointer(/Texture)" />
+	<ForegroundIcon href="/Scene/TexAndMats/Game/Mission/NewActionButtons/Repair/NormalFg_Texture.xdb#xpointer(/Texture)" />
+	<ForegroundIconDisabled href="/Scene/TexAndMats/Game/Mission/NewActionButtons/Repair/DisabledFg_Texture.xdb#xpointer(/Texture)" />
+	<PressEffect>false</PressEffect>
+	<HotkeyCmd>user_action_repair</HotkeyCmd>
+</ActionButtonInfo>

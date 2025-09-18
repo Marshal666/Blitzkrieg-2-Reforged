@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UISB2Move ObjectRecordID="23">
+	<ClassTypeID>0</ClassTypeID>
+	<pShared href="" />
+	<Offset>
+		<x>0</x>
+		<y>-1</y>
+	</Offset>
+	<AccelCoeff>
+		<x>0</x>
+		<y>5</y>
+	</AccelCoeff>
+	<MoveTime>300</MoveTime>
+	<OffsetBounce>
+		<x>0</x>
+		<y>-3</y>
+	</OffsetBounce>
+	<AccelCoeffBounce>
+		<x>0</x>
+		<y>5</y>
+	</AccelCoeffBounce>
+	<MoveTimeBounce>50</MoveTimeBounce>
+	<ElementToMove>InfoPanel</ElementToMove>
+	<Border>false</Border>
+	<MaxMoveTime>300</MaxMoveTime>
+</UISB2Move>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="1000153">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="HeaderLabel_WindowTextViewShared.xdb#xpointer(/WindowTextViewShared)" />
+	<Name>HeaderLabel</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="TTHeaderLabel_Text.txt" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>17</x>
+				<y>19</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>500</x>
+				<y>22</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Text href="" />
+	<TextFileRef href="HeaderLabel_Text.txt" />
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<TextFormat href="/UI/Game/Common/Header2_center_TextFormat.xdb#xpointer(/TextFormat)" />
+</WindowTextView>

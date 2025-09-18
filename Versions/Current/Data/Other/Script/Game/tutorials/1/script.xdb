@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000002">
+	<FileName />
+	<ScriptText>tanks = {};
+tanks[1] = GetObjectList( 1 );
+tanks.n = 1;
+tanks.concat = function( array )
+	tanks = ConcatArray( tanks, array );
+end;
+
+function StartObjective( func )
+	proto = function( )
+	while 1 do
+		Wait( 1 );
+		if ( %func() ~= nil ) then 
+			break;
+		end;
+	end;
+	end;
+	StartThread( proto );
+end;
+
+function GiveObjectiveTutorial( obj )
+	GiveObjective( obj );
+	GameMesage( &quot;show_objectives&quot;, 0, 0 );	
+end;
+
+function Objective0()
+	while 1 do
+		Wait( 1 );
+		if (GetIGlobalVar(&quot;Mission.Current.ObjectiveShown&quot;,0) == 0) then
+			break;
+		end;
+	end;
+end;
+
+function Objective1()
+	if ( GetIGlobalVar( &quot;temp.TutorialOnly.SelectedUnits&quot;, 0 ) == 1 ) then
+		CompleteObjective( 1 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 2 );
+		DamageScriptObject( 302, 10 );
+		StartObjective( Objective2 );
+		return 1;
+	end;
+end;
+
+function Objective2()
+	if ( IsSomeUnitInArea( 0, &quot;obj2&quot; ) == 1 ) then
+		DamageScriptObject( 302, 0 );
+		CompleteObjective( 2 );
+		Cmd( ACT_STOP, 1 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 3 );
+		DamageScriptObject( 303, 10 );
+		StartObjective( Objective3 );		
+		return 1;
+	end;
+end;
+
+function Objective3()
+	if ( IsSomeUnitInArea( 0, &quot;obj3&quot; ) == 1) then
+		DamageScriptObject( 303, 0 );
+		CompleteObjective( 3 );
+		Cmd( ACT_STOP, 1 );
+		Wait( 1 );
+		--StartThread( Objective4 );
+		GiveObjectiveTutorial( 10 );
+		StartObjective( Objective10 );
+		return 1;
+	end;
+end;
+
+function Objective4()
+	--ChangePlayerForScriptGroup( 2, 0 );
+	--Cmd( ACT_MOVE, 2, 0, GetScriptAreaParams( &quot;p1&quot; ) );
+	--QCmd( ACT_MOVE, 2, 0, GetScriptAreaParams( &quot;p2&quot; ) );
+	--QCmd( ACT_MOVE, 2, 0, GetScriptAreaParams( &quot;obj3&quot; ) );
+	--Wait( 10 );
+	GiveObjectiveTutorial( 4 );
+	while 1 do
+		Wait( 1 );
+		if ( GetIGlobalVar( &quot;temp.TutorialOnly.SelectedUnits&quot;, 0 ) == 2 ) then
+			break;
+		end;
+	end;
+	CompleteObjective( 4 );
+	Wait( 3 );
+	GiveObjectiveTutorial( 5 );
+	StartObjective( Objective5 );
+	DamageScriptObject( 305, 10 );
+end;
+
+function stopem()
+	CmdArray( ACT_STOP, tanks );
+end;
+
+function Objective5()
+	if ( IsSomeUnitInArea( 0, &quot;obj5&quot; ) == 1 ) then
+		DamageScriptObject( 305, 0 );
+		CompleteObjective( 5 );
+		stopem();
+		Wait( 3 );
+		for i = 0, 4 do
+			ObjectiveChanged( i, 0 );
+		end;
+		GiveObjectiveTutorial( 6 );
+		DamageScriptObject( 306, 10 );
+		StartObjective( Objective6 );		
+		return 1;
+	end;
+end;
+
+function check_escape()
+	if ( PlayerCanSee( 0, GetObjectList( 10 ) ) == 1 ) then
+		Sleep( Random( 10 ) );
+		Cmd( ACT_MOVE, 10, 0, &quot;a1&quot; );
+		for i = 2, 4 do
+			QCmd( ACT_MOVE, 10, 0, &quot;a&quot; .. i );
+		end;
+		return 1;
+	end;
+end;
+
+function Objective6()
+	if ( IsSomeUnitInArea( 0, &quot;obj6&quot; ) == 1 ) then
+		DamageScriptObject( 306, 0 );
+		CompleteObjective( 6 );
+		stopem();
+		Wait( 3 );
+		GiveObjectiveTutorial( 7 );
+		StartObjective( Objective7 );
+		StartObjective( check_escape );
+		return 1;
+	end;
+end;
+
+function Objective7()
+	if ( IsSomeBodyAlive( 1, 10 ) == 0 ) then
+		CompleteObjective( 7 );
+		stopem();
+		Wait( 3 );
+		GiveObjectiveTutorial( 8 );
+		StartObjective( FictiveObjective0 );		
+		return 1;
+	end;
+end;
+
+function GetScriptUnitState( sid )
+local state = GetUnitState( GetObjectList( sid ) );
+	return state;
+end;
+
+function FictiveObjective0()
+	for i = 1, tanks.n do
+	if GetUnitState( tanks[i] ) == STATE_SWARM then
+		LandReinforcementFromMap( 1, &quot;prey&quot;, 0, 11 );
+		Wait( 1 );
+		StartObjective( Objective8 );
+		return 1;
+	end;
+	end;
+end;
+
+function Objective8()
+	if ( IsSomeBodyAlive( 1, 11 ) == 0 ) then
+		CompleteObjective( 8 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 9 );
+		StartThread( FictiveObjective1 );		
+		return 1;
+	end;
+end;
+
+function FictiveObjective1()
+	for i = 1, tanks.n do
+		if GetUnitState( tanks[i] ) == STATE_REST then
+			Cmd( ACT_MOVE, 1, GetScriptAreaParams( &quot;obj6&quot; ) );
+			Cmd( ACT_MOVE, 2, GetScriptAreaParams( &quot;obj6&quot; ) );
+			break;
+		end;
+	end;
+	Wait( 1 );
+	StartObjective( Objective9 );
+end;
+
+function Objective9()
+	for i = 1, tanks.n do
+		if GetUnitState( tanks[i] ) ~= STATE_REST then
+			return
+		end;
+	end;
+	CompleteObjective( 9 );
+	Wait( 3 );
+	for i = 5, 7 do
+		ObjectiveChanged( i, 0 );
+	end;
+	--EnablePlayerReinforcement( RT_TANKS, 1 );
+	--GiveObjectiveTutorial( 10 );
+	--StartObjective( Objective10 );
+	
+	GiveObjectiveTutorial( 11 );
+	StartObjective( Objective11 );
+	DamageScriptObject( 311, 10 );
+	return 1;
+end;
+
+function Objective10()
+--	if ( ( GetNUnitsInArea( 0, &quot;reinf&quot;, 0 ) - GetNScriptUnitsInArea( 1, &quot;reinf&quot; ) - GetNScriptUnitsInArea( 2, &quot;reinf&quot; ) ) &gt; 0 ) then
+	if ( ( GetNUnitsInArea( 0, &quot;reinf&quot;, 0 ) - GetNScriptUnitsInArea( 1, &quot;reinf&quot; ) ) &gt; 0 ) then
+		CompleteObjective( 10 );
+		tanks.concat( DeleteElement( GetUnitListInAreaArray( 0, &quot;reinf&quot;, 0 ), tanks[1] ) );
+		Wait( 3 );
+		--GiveObjectiveTutorial( 11 );
+		--DamageScriptObject( 311, 10 );
+		--StartObjective( Objective11 );
+		
+		StartThread( Objective4 );
+		return 1;
+	end;
+end;
+
+function Objective11()
+	if ( IsSomeUnitInArea( 0, &quot;obj11&quot; ) == 1 ) then
+		DamageScriptObject( 311, 0 );
+		CompleteObjective( 11 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 12 );
+		StartThread( Objective12 );		
+		return 1;
+	end;
+end;
+
+function Objective12()
+	Wait( 3 );
+	CompleteObjective( 12 );
+	Wait( 3 );
+	--EnablePlayerReinforcement( RT_BOMBERS, 1 );
+	GiveObjectiveTutorial( 13 );
+	StartObjective( Objective13 );
+end;
+
+function Objective13()
+	if ( IsSomeBodyAlive( 1, 12 ) == 0 ) then
+		CompleteObjective( 13 );
+		Wait( 3 );
+		Win( 0 );		
+		return 1;
+	end;
+end;
+
+RT_TANKS = 9;
+RT_BOMBERS = 14;
+-----------------------------------
+--EnablePlayerReinforcement( RT_TANKS, 0 );
+--EnablePlayerReinforcement( RT_BOMBERS, 0 );
+SetCheatDifficultyLevel( 1 );
+SetIGlobalVar( &quot;temp.nogeneral_sript&quot;, 1 );
+Wait( 4 );
+GiveObjectiveTutorial( 1 );
+StartObjective( Objective1 );
+</ScriptText>
+</Script>

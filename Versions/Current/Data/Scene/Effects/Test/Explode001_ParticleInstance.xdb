@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="4">
+	<SrcName> </SrcName>
+	<Light>L_LIT</Light>
+	<Particle href="/scene/effects/test/explode001_particle.xdb#xpointer(/Particle)"/>
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>0</Scale>
+	<Speed>0</Speed>
+	<Offset>0</Offset>
+	<EndCycle>0</EndCycle>
+	<CycleCount>0</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/01_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/02_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/03_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/04_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/05_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/06_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/07_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/08_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/09_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/10_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/11_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/12_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/13_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/14_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/15_texture.xdb#xpointer(/Texture)"/>
+		<Item href="/scene/texandmats/test/oldtest/particles/exp001/16_texture.xdb#xpointer(/Texture)"/>
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

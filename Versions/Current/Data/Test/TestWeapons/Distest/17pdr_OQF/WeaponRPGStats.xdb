@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="502">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments>gun for Sherman Firefly</Comments>
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>2.7</Dispersion>
+	<AimingTime>0.55</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>45</RangeMax>
+	<RangeMin>4</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>140</Piercing>
+			<DamageRandom>1</DamageRandom>
+			<DamagePower>30</DamagePower>
+			<PiercingRandom>15</PiercingRandom>
+			<Area>0.67</Area>
+			<Area2>2.69</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/cannon_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/machineryhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/hits/reflectionhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/hits/reflectionhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/explosions/groundexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/explosions/waterexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href=""/>
+			<Craters href="/other/craterset/all/shellhole/medium/craterset.xdb#xpointer(/CraterSet)"/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>32.07</FireRate>
+			<RelaxTime>1.87</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href="/other/text/localizedweaponsname/technics/gb/17pdr_oqf/text.xdb#xpointer(/Text)"/>
+</WeaponRPGStats>

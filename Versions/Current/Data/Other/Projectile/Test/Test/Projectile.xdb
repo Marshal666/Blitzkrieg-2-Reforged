@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Projectile ObjectRecordID="1">
+	<Model href="/scene/geoms/all/units/weapons/bombs/50kg_model.xdb#xpointer(/Model)"/>
+	<SmokyExhaustEffect href="/scene/effects/all/exhaust/dusttrail_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<SmokyEffectLocator>model</SmokyEffectLocator>
+	<SmokyExhaustEffectInterval>2</SmokyExhaustEffectInterval>
+	<AttachedEffect href="/scene/effects/all/shots/flamethrower_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<AttachedEffectLocator>model</AttachedEffectLocator>
+</Projectile>

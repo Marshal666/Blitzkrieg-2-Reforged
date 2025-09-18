@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="579">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Chat_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Main/Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Main/CustomGame_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Main/BeginGame_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Main/Cancel_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/Common/HeaderPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Main/LadderStats_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="HeaderPanel/HeaderLobby_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="Clients_WindowListCtrl.xdb#xpointer(/WindowListCtrl)" />
+		<Item href="ClientInfo/ClientInfoBgr_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="WaitForLadder_WindowTextView.xdb#xpointer(/WindowTextView)" />
+	</Children>
+	<Background href="/UI/Game/Menu/MPCommon/defaultbackground_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>30</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

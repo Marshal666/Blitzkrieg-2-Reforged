@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MineRPGStats ObjectRecordID="4">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_MINE</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="/scene/geoms/all/objects/simpleobjects/common/mine_visobj.xdb#xpointer(/VisObj)"/>
+	<IconTexture href="/scene/texandmats/all/ui/mission/icons/objects/simpleobjects/mine_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/localizedobjectsname/mines/charge/text.xdb#xpointer(/Text)"/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>0</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href=""/>
+	<EffectDeath href=""/>
+	<EffectDisappear href=""/>
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href=""/>
+	<StaticDebris>
+		<Debris href=""/>
+		<Masks/>
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href=""/>
+		<Masks/>
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data/>
+	</passability>
+	<PassProfile>
+		<polygons/>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>0</x>
+		<y>0</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data/>
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<CanFall>false</CanFall>
+	<ObjectHeight>1</ObjectHeight>
+	<FallEffect href=""/>
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<Weapon href="/weapons/mines/charge/weaponrpgstats.xdb#xpointer(/WeaponRPGStats)"/>
+	<type>MT_CHARGE</type>
+	<Weight>0</Weight>
+	<FlagModel> </FlagModel>
+	<TriggerRange>0</TriggerRange>
+	<RangeDetonator>false</RangeDetonator>
+</MineRPGStats>

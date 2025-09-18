@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="519">
+	<KeyName>mine AT</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments>plane explosion on ground</Comments>
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="" />
+	<Dispersion>0.2</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>1</RangeMax>
+	<RangeMin>1</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>0</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>1000</Piercing>
+			<DamageRandom>200</DamageRandom>
+			<DamagePower>1500</DamagePower>
+			<PiercingRandom>5</PiercingRandom>
+			<Area>1</Area>
+			<Area2>6</Area2>
+			<Speed>10000</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>1.5</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>100</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Destructions/PlaneCrashFatality_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Destructions/PlaneCrashFatality_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Destructions/PlaneCrashFatality_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Destructions/PlaneCrashFatality_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosionBig_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/verybig.xdb#xpointer(/CraterSet)" />
+			<FireRate>10</FireRate>
+			<RelaxTime>1</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="" />
+</WeaponRPGStats>

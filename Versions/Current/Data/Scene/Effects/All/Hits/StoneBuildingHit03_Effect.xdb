@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="97">
+	<Instances>
+		<Item href="StoneBuildingHit03_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="StoneBuildingHit03FallDust_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="ReflectionHit_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Small_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

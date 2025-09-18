@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Model ObjectRecordID="361">
+	<Materials>
+		<Item href="/scene/texandmats/test/programmers_test/galata/summer/soldier_material.xdb#xpointer(/Material)"/>
+	</Materials>
+	<Geometry href="/scene/geoms/test/programmers_test/galata/summer/soldier_geometry.xdb#xpointer(/Geometry)"/>
+	<Skeleton href="/scene/geoms/test/programmers_test/galata/summer/soldier_skeleton.xdb#xpointer(/Skeleton)"/>
+	<Animations>
+		<Item href="/scene/geoms/test/programmers_test/galata/use_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/galata/move_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/galata/death_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/galata/death_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/galata/use_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/galata/fatality_animb2.xdb#xpointer(/AnimB2)"/>
+	</Animations>
+	<WindPower>1</WindPower>
+</Model>

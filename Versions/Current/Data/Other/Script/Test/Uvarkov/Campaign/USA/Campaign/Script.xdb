@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="22">
+	<FileName />
+	<ScriptText>function StartCampaign()
+	SetPlayerRank( GetUserPlayer(), 2 );
+end;
+
+StartCampaign();
+</ScriptText>
+</Script>

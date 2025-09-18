@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScrollBar ObjectRecordID="17">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/common/scrollbar_windowscrollbarshared.xdb#xpointer(/WindowScrollBarShared)"/>
+	<Name> </Name>
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First />
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First />
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<Effects>
+		<Commands/>
+		<Reversable>false</Reversable>
+	</Effects>
+</WindowScrollBar>

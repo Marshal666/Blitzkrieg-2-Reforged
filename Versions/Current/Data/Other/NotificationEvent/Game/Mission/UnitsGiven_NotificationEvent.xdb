@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="1000000">
+	<Type>NEVT_UNITS_GIVEN</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/Reinf_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="NotifyUnitsGiven.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="TTNotifyUnitsGiven.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Common/Info1_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>false</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="/Other/Notification/Game/Mission/UnitsGiven_Notification.xdb#xpointer(/Notification)" />
+	<NoDupArea>300</NoDupArea>
+	<NoDupTime>10</NoDupTime>
+</NotificationEvent>

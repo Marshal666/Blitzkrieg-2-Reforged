@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="320">
+	<KeyName>20mm Flakvierling</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/AntiTankGun_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>2.74</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>3</AmmoPerBurst>
+	<RangeMax>40</RangeMax>
+	<RangeMin>2</RangeMin>
+	<Ceiling>1700</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>24</Piercing>
+			<DamageRandom>10</DamageRandom>
+			<DamagePower>25</DamagePower>
+			<PiercingRandom>6</PiercingRandom>
+			<Area>0.5</Area>
+			<Area2>1.5</Area2>
+			<Speed>800</Speed>
+			<TraceSpeedCoeff>1</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<TraceLength>400</TraceLength>
+			<TraceWidth>3.5</TraceWidth>
+			<TraceMaterial href="/Scene/TexAndMats/All/Units/Weapons/HeavyAA_shot_trace.xdb#xpointer(/Material)" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/AntiAircraftGun_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Cannons/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Hits/GroundHit2_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>480</FireRate>
+			<RelaxTime>0.24</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>24</Piercing>
+			<DamageRandom>10</DamageRandom>
+			<DamagePower>25</DamagePower>
+			<PiercingRandom>6</PiercingRandom>
+			<Area>2</Area>
+			<Area2>3</Area2>
+			<Speed>800</Speed>
+			<TraceSpeedCoeff>1</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<TraceLength>400</TraceLength>
+			<TraceWidth>3.5</TraceWidth>
+			<TraceMaterial href="/Scene/TexAndMats/All/Units/Weapons/HeavyAA_shot_trace.xdb#xpointer(/Material)" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/AntiAircraftGun_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Cannons/Hits/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Hits/GroundHit2_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>480</FireRate>
+			<RelaxTime>0.12</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

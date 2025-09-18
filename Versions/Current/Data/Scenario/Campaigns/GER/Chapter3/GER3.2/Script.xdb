@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000040">
+	<FileName />
+	<ScriptText>-- Konvoy
+function Objective0()
+	SetIGlobalVar( &quot;temp.nogeneral_sript&quot;, 1 ); --end AI
+	Wait(3);
+	ObjectiveChanged(0, 1); 
+	SetIGlobalVar( &quot;temp.objective.0&quot;, 1 );
+	StartThread( CompleteObjective0 );
+end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if GetNScriptUnitsInArea(500, &quot;Objective&quot;, 0) &gt; 1 then
+			ObjectiveChanged(0, 2); 
+			SetIGlobalVar( &quot;temp.objective.0&quot;, 2 );
+			Win (0);
+			Wait( 1 );
+			break;
+		end;
+	end;
+end;
+--Zasada--
+function Zasada1()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInArea(0, &quot;Zasada1&quot;, 0) &gt; 0 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,2,200);
+			Wait(1);
+			StartThread( AttackZasada1 );
+			break;
+		end;
+	end;
+end;
+function AttackZasada1()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInScriptGroup(200, 1) &gt; 0 then
+			Cmd(ACT_SWARM,200,100,GetScriptObjCoord(500));
+			Wait(5);
+		else	break;
+		end;
+	end;
+end;
+function Zasada2()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInArea(0, &quot;Zasada2&quot;, 0) &gt; 0 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,2,300);
+			LandReinforcementFromMap(1,&quot;1145&quot;,1,300);
+			Wait(1);
+			StartThread( AttackZasada2 );
+			break;
+		end;
+	end;
+end;
+function AttackZasada2()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInScriptGroup(300, 1) &gt; 0 then
+			Cmd(ACT_SWARM,300,100,GetScriptObjCoord(500));
+			Wait(5);
+		else	break;
+		end;
+	end;
+end;
+function Zasada3()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInArea(0, &quot;Zasada3&quot;, 0) &gt; 0 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,0,400);
+			LandReinforcementFromMap(1,&quot;1145&quot;,1,400);
+			Wait(1);
+			StartThread( AttackZasada3 );
+			break;
+		end;
+	end;
+end;
+function AttackZasada3()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInScriptGroup(400, 1) &gt; 0 then
+			Cmd(ACT_SWARM,400,100,GetScriptObjCoord(500));
+			Wait(5);
+		else	break;
+		end;
+	end;
+end;
+--END_ZASADA--
+function Loose()
+	while 1 do
+		Wait( 3 );
+        if  (GetNUnitsInScriptGroup(500, 0) &lt; 2 or GetScriptObjectHPs(901) &lt;= 0 or GetScriptObjectHPs(902) &lt;= 0) then
+			FailObjective ( 0 );
+			Win(1);
+			break;
+		end;
+	end;
+end;
+function Bridge()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInArea(1, &quot;Attack1&quot;, 0) &gt; 0 then
+			DamageScriptObject(900,0);
+			StartThread( AttackObjective );
+			break;
+		end;
+	end;
+end;
+function Reinforce()
+local a;
+	while 1 do
+		a = Random(3);
+		Wait(90);
+		if a == 1 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,1,100);
+			StartThread( Attack );
+			--Wait(2);
+		end;
+		if a == 2 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,2,100);
+			StartThread( Attack3 );
+			--Wait(2);
+		end;
+		if a == 3 then
+			LandReinforcementFromMap(1,&quot;1145&quot;,0,101);
+			StartThread( AttackObjective );
+			--Wait(2);
+		end;
+		
+	end;
+end;
+function Attack()
+	Wait(3);
+	Cmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack2&quot;));
+	QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack1&quot;));
+	QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack3&quot;));
+end;
+function AttackObjective()
+	Wait(3);
+	Cmd(ACT_SWARM,101,100,GetScriptAreaParams(&quot;Objective&quot;));
+end;
+function Attack3()
+	Wait(3);
+	Cmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack3&quot;));
+	QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack2&quot;));
+	QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack1&quot;));
+end;
+function Prikol()
+	while 1 do
+		Wait( 3 );
+		if GetNScriptUnitsInArea(500, &quot;Zasada1&quot;, 0) &gt; 0 then
+			LandReinforcementFromMap(2,&quot;1340&quot;,0,600);
+			Wait(3);
+			Cmd(ACT_SWARM,600,100,GetScriptAreaParams(&quot;Attack1&quot;));
+			Wait(12);
+			LandReinforcementFromMap(2,&quot;320&quot;,0,700);
+			Cmd(ACT_SWARM,700,100,GetScriptAreaParams(&quot;Attack1&quot;));
+			break;
+		end;
+	end;
+end;
+------------------------
+StartThread( Objective0 );
+StartThread( Loose );
+StartThread( Bridge );
+StartThread( Reinforce );
+StartThread( Zasada1 );
+StartThread( Zasada2 );
+StartThread( Zasada3 );
+StartThread( Prikol );</ScriptText>
+</Script>

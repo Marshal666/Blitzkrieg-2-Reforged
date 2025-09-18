@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="19">
+	<FileName />
+	<ScriptText>-- deploy templates id consts
+Deploy_Tanks = 9;
+Deploy_MainInf = 11;
+Deploy_TD = 10;
+Deploy_GA = 12;
+Deploy_Fighters = 13;
+
+-- player reinf id consts
+Reinf_Player_Tanks = 59;
+Reinf_Player_Artillery = 48;
+
+-- enemy reinf id consts
+Reinf_Enemy_Tanks = 67;
+Reinf_Enemy_TD = 69;
+Reinf_Enemy_Inf = 72;
+Reinf_Enemy_GA = 75;
+
+--areas
+UK_area1 = &quot;UK_reinf1&quot;;
+UK_area2 = &quot;UK_reinf2&quot;;
+Ger_area1 = &quot;Ger_reinf1&quot;;
+Ger_area2 = &quot;Ger_reinf2&quot;;
+Italian_area = &quot;Italian_reinf&quot;;
+Attack_5_area=&quot;Attack_5&quot;;
+Attack_3_area=&quot;Attack_3&quot;;
+Attack_5_1_area=&quot;Attack_5_1&quot;;
+Attack_5_2_area=&quot;Attack_5_2&quot;;
+Attack_3_1_area=&quot;Attack_3_1&quot;;
+Attack_3_2_area=&quot;Attack_3_2&quot;;
+
+--Global array
+Attack_3_array={};
+Attack_3_array=GetUnitListInAreaArray( 1, Ger_area1 );
+Attack_5_array={};
+Attack_5_array=GetUnitListInAreaArray( 1, Ger_area2 );
+
+--var and const
+DISPERSION=400;
+EnemyReinf_3_5_Placed=0;
+Combat_5=0;
+Combat_3=0;
+Func_start=0;
+Attack_3_Placed=0;
+Attack_5_Placed=0;
+a=0;
+b=0;
+HoleEnemy=0; 		-- HoleEnemy=0 - position is our
+Pos1=0; 		        -- Pos1=0 - position 1 is enemy
+Pos4=0; 		        -- Pos4=0 - position 4 is enemy
+
+--script groups
+PzV = 500;
+PzV_units = {};
+PzV_units = GetObjectListArray ( PzV );
+
+Wespe = 300;
+Wespe_units = {};
+Wespe_units = GetObjectListArray ( Wespe );
+
+headquarters={};
+headquarters=GetObjectListArray ( 200 );
+depot={};
+depot=GetObjectListArray ( 100 );
+
+--functions
+
+--Hill hold 3
+function PzV_action()
+	for i=1, PzV_units.n do
+		UnitCmd ( ACT_SWARM, PzV_units[i],  9333, 13961);
+		UnitQCmd ( ACT_ROTATE, PzV_units[i], GetScriptAreaParams ( Attack_3_area ) );
+	end;
+end;
+
+--Hill hold 3
+function Wespe_action()
+	for i=1, Wespe_units.n do
+		UnitCmd ( ACT_SWARM, Wespe_units[i],  9185, 13464);
+		UnitQCmd ( ACT_ROTATE, Wespe_units[i], GetScriptAreaParams ( Attack_5_2_area ) );
+	end;
+end;
+
+function RevealObjective0()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.0&quot;, 0 ) ~= 1 ) then
+	ObjectiveChanged(0, 1);
+      Trace(&quot;Objective0 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.0&quot;, 1 );
+    end;
+end;
+
+function RevealObjective1()
+while 1 do
+   if HoleEnemy==0 then
+      local k=0;
+
+      while k&lt;3 do
+         if GetNUnitsInCircle ( 1,  9185, 13464, 500 )&gt;0 then
+            k=k+1;
+         else
+            k=0
+         end;
+         Wait(10);
+      end;
+      HoleEnemy=1;
+      Trace(&quot;HoleEnemy&quot;);
+   end;
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.1&quot;, 0 ) ~= 1 ) then
+   ObjectiveChanged(1, 1);
+      Trace(&quot;Objective1 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.1&quot;, 1 );
+      return 1;
+   end;
+Wait(3);
+end;
+end;
+
+function RevealObjective2()
+   ObjectiveChanged(2, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.2&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective2 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.2&quot;, 1 );
+   end;
+end;
+
+function RevealObjective3()
+   ObjectiveChanged(3, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.3&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective3 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.3&quot;, 1 );
+   end;
+end;
+
+function RevealObjective4()
+   ObjectiveChanged(4, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.4&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective4 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.4&quot;, 1 );
+   end;
+end;
+
+function RevealObjective5()
+   ObjectiveChanged(5, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.5&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective5 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.5&quot;, 1 );
+   end;
+end;
+
+function RevealObjective6()
+   ObjectiveChanged(2, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.6&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective6 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.6&quot;, 1 );
+   end;
+end;
+
+function RevealObjective7()
+   ObjectiveChanged(7, 1);
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.7&quot;, 0 ) ~= 1 ) then
+      Trace(&quot;Objective7 is reveal&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.7&quot;, 1 );
+   end;
+end;
+
+function CompleteObjective0()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.0&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(0, 2);
+      Trace(&quot;Objective0 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.0&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective1()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.1&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(1, 2);
+      Trace(&quot;Objective1 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.1&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective2()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.2&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(2, 2);
+      Trace(&quot;Objective2 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.2&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective3()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.3&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(3, 2);
+      Trace(&quot;Objective3 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.3&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective4()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.4&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(4, 2);
+      Trace(&quot;Objective4 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.4&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective5()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.5&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(5, 2);
+      Trace(&quot;Objective5 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.5&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective6()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.6&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(6, 2);
+      Trace(&quot;Objective6 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.6&quot;, 2 );
+   end;
+end;
+
+function CompleteObjective7()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.7&quot;, 0 ) ~= 2 ) then
+   	ObjectiveChanged(7, 2);
+      Trace(&quot;Objective7 is complete&quot;);
+      SetIGlobalVar ( &quot;MonteCassino.objective.7&quot;, 2 );
+   end;
+end;
+
+-- repell enemy attack
+function Objective0()
+--Trace( &quot;MonteCassino.objective.0=%g &quot;, GetIGlobalVar( &quot;MonteCassino.objective.0&quot;, 0 ));
+--Trace( &quot;EnemyReinf_3_5_Placed=%g &quot;, EnemyReinf_3_5_Placed );
+if ( GetIGlobalVar( &quot;MonteCassino.objective.0&quot;, 0 ) == 1) and ( EnemyReinf_3_5_Placed==1 ) then
+		a=NumUnitsAliveInArray( Attack_3_array );
+		b=NumUnitsAliveInArray( Attack_5_array );
+		if (  a&lt;=0  ) and (  b&lt;=0) then
+			Trace(&quot;Quantity alive units in Attack_3_array=%g&quot;,a);
+	      		Trace(&quot;Quantity alive units in Attack_5_array=%g&quot;,b);
+		       	CompleteObjective0();
+			return 1;
+		end;
+      if GetNUnitsInArea ( 1, Attack_5_area ) &gt;0 and Combat_5==0 then
+        Combat_5=1;
+      end;
+      if GetNUnitsInArea ( 1, Attack_3_area ) &gt;0 and Combat_3==0 then
+         Combat_3=1;
+      end;
+--      if ( Combat_3==1) and ( Combat_5==1 ) and ( Func_start==0 ) then
+--         Func_start=1;
+--         StartThread( Obj0ExtraCheck );
+--      end;
+end;
+end;
+
+function Obj0ExtraCheck()
+   Wait(300);
+   local GerUnitsInArea3={}; GerUnitsInArea3=GetUnitListInArea ( 1, Attack_3_area );
+   local GerUnitsInArea5={}; GerUnitsInArea5=GetUnitListInArea ( 1, Attack_5_area );
+   local UKUnitsInArea3={}; UKUnitsInArea3=GetUnitListInArea ( 0, Attack_3_area );
+   local UKUnitsInArea5={}; UKUnitsInArea5=GetUnitListInArea ( 0, Attack_5_area );
+   local c=NumUnitsAliveInArray( GerUnitsInArea3 );
+   local d=NumUnitsAliveInArray( GerUnitsInArea5 );
+   local e=NumUnitsAliveInArray( UKUnitsInArea3);
+   local f=NumUnitsAliveInArray( UKUnitsInArea5 );
+   if (a&gt;Attack_3_array.n/2) and (b&gt;Attack_5_array.n/2)and (c&lt;e) and (d&lt;f) then
+      CompleteObjective0();
+      Func_start=0;
+      return 1;
+   end;
+end;
+
+--return hill
+function Objective1()
+   if ( GetIGlobalVar( &quot;MonteCassino.objective.1&quot;, 0 ) == 1) and ( HoleEnemy==1 ) then
+      local k=0;
+
+      while k&lt;3 do
+         if GetNUnitsInCircle ( 1,  9185, 13464, 500 )&lt;=0 and GetNUnitsInCircle ( 0,  9185, 13464, 1000 )&gt;0 then
+            k=k+1;
+         else
+            k=0
+         end;
+         Wait(10);
+      end;
+      Trace(&quot;function Objective1 return 1&quot;);
+      return 1;
+    end;
+end;
+
+function Objective5()
+        if Pos1==1 then
+--         CompleteObjective5();
+	    return 1;
+      end;
+   Wait(3);
+end;
+
+function Objective7()
+      if Pos4==1 and Pos1==1 then
+         return 1;
+      end;
+   Wait(3);
+end;
+
+function Reinf_Attack_3_array( k )
+local Templates = { Deploy_Tanks, Deploy_TD, Deploy_MainInf, Deploy_GA };
+local Reinfs = { Reinf_Enemy_Tanks, Reinf_Enemy_TD, Reinf_Enemy_Inf, Reinf_Enemy_GA };
+
+	if ( k == nil ) then
+		Trace(&quot;Reinf_Attack called without parameters&quot;);
+		return 0;
+	end;
+
+	LandReinforcement( 1, Reinfs[k], Templates[k], 5 );
+  	Trace ( &quot;Attack_3_array called&quot; );
+	Wait ( 1 );
+	Attack_3_array = GetUnitListInAreaArray( 1, Ger_area1 );
+	Trace(&quot;Attack_3_array.n=%g&quot;,Attack_3_array.n);
+	Wait( Random(20) );
+	CmdArrayDisp( ACT_SWARM, Attack_3_array, DISPERSION, GetScriptAreaParams( Attack_3_area ) );
+        QCmdArrayDisp( ACT_ROTATE, Attack_3_array, 0, GetScriptAreaParams( Attack_3_2_area ) );
+        Attack_3_Placed=1;
+	Trace(&quot;Attack_3_area.x=%g Attack_3_area.y=%g&quot;,GetScriptAreaParams( Attack_3_area ));
+end;
+
+function Reinf_Attack_5_array( k )
+local Templates = { Deploy_Tanks, Deploy_TD, Deploy_MainInf, Deploy_GA };
+local Reinfs = { Reinf_Enemy_Tanks, Reinf_Enemy_TD, Reinf_Enemy_Inf, Reinf_Enemy_GA };
+
+	if ( k == nil ) then
+		Trace(&quot;Reinf_Attack called without parameters&quot;);
+		return 0;
+	end;
+	LandReinforcement( 1, Reinfs[k], Templates[k], 17 );
+   Trace(&quot;Attack_5_array called&quot;);
+	Wait( 1 );
+	Attack_5_array = GetUnitListInAreaArray( 1, Ger_area2 );
+	Trace(&quot;Attack_5_array.n=%g&quot;,Attack_5_array.n);
+	Wait( Random(20) );
+	CmdArrayDisp( ACT_SWARM, Attack_5_array, DISPERSION, GetScriptAreaParams( Attack_5_area ) );
+	QCmdArrayDisp( ACT_ROTATE, Attack_5_array, 0, GetScriptAreaParams( Attack_5_2_area ) );
+        Attack_5_Placed=1;
+	Trace(&quot;Attack_5_area.x=%g Attack_5_area.y=%g&quot;,GetScriptAreaParams( Attack_5_area ));
+end;
+
+function Enemy_AI_Action()
+ 	Trace(&quot;Enemy_AI_Action Run&quot;);
+while 1 do
+if ( GetIGlobalVar( &quot;MonteCassino.objective.0&quot;, 0 ) == 1) then
+		StartThread( Reinf_Attack_3_array, 1 );
+		StartThread( Reinf_Attack_5_array, 1 );
+      Wait(1);
+      while 1 do
+         if Attack_3_Placed==1 and Attack_5_Placed==1 then
+            EnemyReinf_3_5_Placed=1;
+            Trace(&quot;EnemyReinf_3_5_Placed=1&quot;);
+
+            Wait(2);
+
+            if Random(2)==1 then
+               QCmdArrayDisp( ACT_SWARM, Attack_5_array, DISPERSION, GetScriptAreaParams( Attack_5_1_area ) );
+               Trace(&quot;Group 5 Attack to Attack_5_1_area&quot;);
+               QCmdArrayDisp( ACT_SWARM, Attack_5_array, DISPERSION, GetScriptAreaParams( Attack_5_2_area ) );
+--               QCmdArray(  ACT_ATTACKOBJECT, Attack_5_array, 200 );
+		StartThread( AttackObject, Attack_5_array, 200 );
+            else
+               QCmdArrayDisp( ACT_SWARM, Attack_5_array, DISPERSION, GetScriptAreaParams( Attack_5_2_area ) );
+               Trace(&quot;Group 5 Attack to Attack_5_2_area&quot;);
+--               QCmdArray(  ACT_ATTACKOBJECT, Attack_5_array, 200 );
+		StartThread( AttackObject, Attack_5_array, 200 );
+            end;
+            if Random(2)==1 then
+               QCmdArrayDisp( ACT_SWARM, Attack_3_array, DISPERSION, GetScriptAreaParams( Attack_3_1_area ) );
+               Trace(&quot;Group 3 Attack to Attack_3_1_area&quot;);
+               QCmdArrayDisp( ACT_SWARM, Attack_3_array, DISPERSION, GetScriptAreaParams( Attack_3_2_area ) );
+--               QCmdArray(  ACT_ATTACKOBJECT, Attack_3_array, 100 );
+		StartThread( AttackObject, Attack_3_array, 100 );
+            else
+               QCmdArrayDisp( ACT_SWARM, Attack_3_array, DISPERSION, GetScriptAreaParams( Attack_3_2_area ) );
+               Trace(&quot;Group 3 Attack to Attack_3_2_area&quot;);
+--               QCmdArray(  ACT_ATTACKOBJECT, Attack_3_array, 100 );
+		StartThread( AttackObject, Attack_3_array, 100 );
+            end;
+            Wait(100+Random(50));
+            PzV_action();
+            Wespe_action();
+            return 1;
+         end;
+      Wait(3);
+      end;
+end;
+Wait(5);
+end;
+end;
+
+function AttackObject (array, objarray, objScriptID)
+	Cmd( ACT_SWARM, array, ObjectGetCoord( objarray ) );
+	Wait( 1 );
+	while ( GetUnitState( array ) ~= STATE_REST ) do
+		Wait( 1 );
+	end;
+	Trace(&quot;Rest&quot;);
+	Cmd( ACT_ATTACKOBJECT, array, objScriptID );
+	while ( GetScriptObjectHPs( objScriptID ) &gt; 0 ) do
+		if ( GetNUnitsNearScriptObj( 0, array, 500 ) &gt; 0) then
+		Cmd( ACT_STOP, array );
+			while ( GetNUnitsNearScriptObj( 0, array, 500 ) &gt; 0 ) do
+				Wait( 2 );
+			end;
+		Cmd( ACT_ATTACKOBJECT, array, objScriptID );
+		end;
+		Wait( 1 );
+	end;
+end;
+
+
+function LoseCheck()
+	while 1 do
+--      headquarters=GetObjectListArray ( 200 );
+--      depot=GetObjectListArray ( 100 );
+                if NumUnitsAliveInArray( headquarters )&lt;=0 or NumUnitsAliveInArray( depot )&lt;=0 then
+         Trace(&quot;Lose:(((((((((((((((((((((((((((((((((((((((((((((((((((((((&quot;);
+			Lose(0);
+         return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+function WinCheck()
+	while 1 do
+      if ( Pos1 == 1) and  ( Pos4 == 1) then
+         Trace(&quot;Win!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;);
+			Win (0);
+         return 1;
+      end;
+   Wait(5);
+	end;
+end;
+
+function CheckPos1()
+   while 1 do
+      local k=0;
+
+      while k&lt;3 do
+         if GetNUnitsInCircle ( 1,  6648, 8660, 1000 )&lt;=0 and GetNUnitsInCircle ( 0,  6648, 8660, 1000 )&gt;0 then   -- check position (1) for 1-2 player&apos;s
+            k=k+1;
+         else
+            k=0;
+            Pos1=0;
+         end;
+         Wait(10);
+      end;
+      Pos1=1;
+      if Pos1==1 then
+         Trace(&quot;Position 1 is our&quot;);
+      else
+         Trace(&quot;Position 1 is enemy&quot;);
+   	end;
+   Wait(5);
+	end;
+end;
+
+function CheckPos4()
+   while 1 do
+      local k=0;
+
+      while k&lt;3 do
+         if GetNUnitsInCircle ( 1,  2035, 14866, 1000 )&lt;=0 and GetNUnitsInCircle ( 0,  2035, 14866, 1000 )&gt;0 then   -- check position (1) for 1-2 player&apos;s
+            k=k+1;
+         else
+            k=0;
+            Pos4=0;
+         end;
+         Wait(10);
+      end;
+      Pos4=1;
+      if Pos4==1 then
+         Trace(&quot;Position 4 is our&quot;);
+      else
+         Trace(&quot;Position 4 is enemy&quot;);
+   	end;
+   Wait(5);
+   end;
+end;
+
+function StartMission()
+	Trace(&quot;StartMission Run&quot;);
+	RevealObjective0();
+	return 1;
+end;
+
+
+
+function TraceUnits()
+--	Trace( &quot;Ger_units %g&quot;, GetNUnitsInParty ( 1 ) );
+--	Trace( &quot;UK_units %g&quot;, GetNUnitsInParty ( 0 ) );
+--	Trace(&quot;GerUnits in Attack_5_area%g&quot;, GetUnitListInArea ( 1, Attack_5_area ));
+--	Trace(&quot;GerUnits in Attack_3_area%g&quot;, GetUnitListInArea ( 1, Attack_3_area ));
+--	Trace(&quot;Quantity alive units in Attack_3_array=%g&quot;,a);
+--	Trace(&quot;Quantity alive units in Attack_5_array=%g&quot;,b);
+	Trace(&quot;Quantity alive obj in depot=%g&quot;, NumUnitsAliveInArray1( depot ));
+	Trace(&quot;depot.n=%g&quot;, depot.n );
+	Trace(&quot;HP obj in depot=%g&quot;, GetObjectHPs (GetObjectList(100)));
+end;
+
+function TraceUnits1()
+--	Trace( &quot;Ger_units %g&quot;, GetNUnitsInParty ( 1 ) );
+--	Trace( &quot;UK_units %g&quot;, GetNUnitsInParty ( 0 ) );
+--	Trace(&quot;GerUnits in Attack_5_area%g&quot;, GetUnitListInArea ( 1, Attack_5_area ));
+--	Trace(&quot;GerUnits in Attack_3_area%g&quot;, GetUnitListInArea ( 1, Attack_3_area ));
+--	Trace(&quot;Quantity alive units in Attack_3_array=%g&quot;,a);
+--	Trace(&quot;Quantity alive units in Attack_5_array=%g&quot;,b);
+	Trace(&quot;Quantity alive obj in headquarters=%g&quot;, NumUnitsAliveInArray1( headquarters ));
+	Trace(&quot;headquarters.n=%g&quot;, headquarters.n );
+	Trace(&quot;HP obj in headquarters=%g&quot;, GetObjectHPs (headquarters[1] ));
+end;
+
+function NumUnitsAliveInArray1( array ) 
+	local tmp_array={};
+	local n=0;
+		tmp_array.n=array.n;Trace(&quot;tmp_array.n=%g&quot;,tmp_array.n);
+		tmp_array=array;
+	for i=1, tmp_array.n do
+		if (GetObjectHPs ( tmp_array[i] )&gt;=0 ) then
+			n=n+1;Trace(&quot;n=%g&quot;,n);
+			Trace(&quot;HP tmp_array[%g]=%g&quot;,i,GetObjectHPs ( tmp_array[i] ));
+		end;
+	end;
+
+	if ( n&gt;tmp_array.n ) then
+		Trace(&quot;Error in NumUnitsAliveInArray n&gt;tmp_array.n&quot;);
+	end;
+
+	Trace(&quot;result_n%g&quot;,n);
+	return n;
+end;
+
+--Main
+StartThread( WinCheck );
+StartThread( LoseCheck );
+StartThread( Enemy_AI_Action );
+StartThread( CheckPos1 );
+StartThread( CheckPos4 );
+StartThread( StartMission );
+StartThread( RevealObjective1 );
+StartThread( RevealObjective5 );
+StartThread( RevealObjective7 );
+Trigger( Objective0, CompleteObjective0 );
+Trigger( Objective1, CompleteObjective1 );
+Trigger( Objective5, CompleteObjective5 );
+Trigger( Objective7, CompleteObjective7 );
+
+
+
+
+
+
+
+
+</ScriptText>
+</Script>

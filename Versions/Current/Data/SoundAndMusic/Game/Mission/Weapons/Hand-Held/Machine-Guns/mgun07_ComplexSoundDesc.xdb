@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="263">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Hand-Held/Machine-Guns/shot07_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>20</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Hand-Held/Machine-Guns/shot17_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>20</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

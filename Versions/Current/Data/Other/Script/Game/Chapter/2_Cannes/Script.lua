@@ -1,0 +1,227 @@
+-- deploy templates id consts
+Deploy_Tanks = 9;
+Deploy_MainInf = 11;
+Deploy_TD = 10;
+Deploy_GA = 12;
+Deploy_Fighters = 13;
+Deploy_Artillery = 14;
+Deploy_HeavyArtillery = 15;
+
+-- player reinf id consts
+Reinf_Player_Tanks = 59;
+Reinf_Player_Artillery = 48;
+Reinf_Player_MainInf = 57;
+Reinf_Player_HeavyArtillery = 55;
+Reinf_Player_Fighters = 53;
+Reinf_Player_GA = 54;
+Reinf_Player_TD = 58;
+
+
+-- enemy reinf id consts
+Reinf_Enemy_Tanks = 67;
+Reinf_Enemy_TD = 69;
+Reinf_Enemy_Inf = 72;
+Reinf_Enemy_GA = 75;
+
+
+--Areas
+
+French = "French";
+
+-- other
+
+DISPERSION = 400;
+
+
+function RevealObjective0()
+	Wait(5);
+    Trace("StartMission Caen Run.");
+    Wait(5);
+	ObjectiveChanged(0, 1);
+    Trace("Objective0 is reveal_Station in the south");
+end;
+
+function Objective0()
+	if ((GetNUnitsInArea(0, "Station_main") > 0) and (GetNUnitsInArea(1, "Station_main") < 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective0()
+	ObjectiveChanged(0, 2);
+	Trace("Objective0 complete_Station in the south");
+	Wait(5);
+	StartThread( GReinf_Attack1 );
+	StartThread( GReinf_Attack2 );
+	StartThread( RevealObjective1 );
+	Wait(180);
+	Trigger( Objective1, CompleteObjective1 );
+end;
+
+
+
+function RevealObjective1()
+    Wait(5);
+	ObjectiveChanged(1, 1);
+    Trace("Objective1 is reveal_Reflect attacks of the enemy");
+end;
+
+function Objective1()
+	if (GetNUnitsInArea(1, "Station_main") < 1) then 
+        return 1;
+    end;
+end;
+
+function CompleteObjective1()
+	ObjectiveChanged(1, 2);
+	Win(0);
+	Trace("Objective1 complete_Reflect attacks of the enemy");
+end;
+
+
+
+function GReinf_Attack1( k )
+local Attack_Group = {};
+	Wait( 8 );
+	Trace("Enemy attack1 run");
+	LandReinforcement( 1, 67, 9, 1 );
+	StartThread( Defense_failure );
+	Wait( 2 );
+	Attack_Group = GetUnitListInAreaArray( 1, "GER_reinf1" );
+	CmdArrayDisp( ACT_SWARM, Attack_Group, DISPERSION, GetScriptAreaParams( "Station_main" ) );
+end;
+
+
+function GReinf_Attack2( k )
+local Attack_Group = {};
+	Wait( 5 );
+	Trace("Enemy attack2 run");
+	LandReinforcement( 1, 72, 11, 2 );
+	StartThread( Defense_failure );
+	Wait( 2 );
+	Attack_Group = GetUnitListInAreaArray( 1, "GER_reinf2" );
+	CmdArrayDisp( ACT_SWARM, Attack_Group, DISPERSION, GetScriptAreaParams( "Station_main" ) );
+end;
+
+
+
+
+function Defense_failure()
+        while 1 do
+            if ((GetNUnitsInArea(0, "Station_main") < 1) and (GetNUnitsInArea(1, "Station_main") > 0)) then
+            ObjectiveChanged(1, 3);
+			Wait(2);
+            Loose(0);
+         return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+
+
+function Winner()
+	while 1 do
+      if (GetNUnitsInArea(0, "Station_main") > 0) then
+		Win(0);
+        return 1;
+      end;
+   Wait(5);
+	end;
+end;
+
+------------------------------Other_Obj_s
+
+function RevealObjective2()
+    Wait(15);
+	ObjectiveChanged(2, 1);
+    Trace("Objective2 is reveal_Station_second");
+end;
+
+function Objective2()
+	if ((GetNUnitsInArea(0, "Station_second") > 0) and (GetNUnitsInArea(1, "Station_second") < 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective2()
+	ObjectiveChanged(2, 2);
+	Trace("Objective2 complete_Station_second");
+	LandReinforcement( 0, 65, 9, 1 );
+end;
+
+
+
+function RevealObjective3()
+    Wait(25);
+	ObjectiveChanged(3, 1);
+    Trace("Objective3 is reveal_Radar");
+end;
+
+function Objective3()
+	if ((GetNUnitsInArea(0, "Radar") > 0) and (GetNUnitsInArea(1, "Radar") < 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective3()
+	ObjectiveChanged(3, 2);
+	Trace("Objective3 complete_Radar");
+	LandReinforcement( 0, 59, 9, 2 );
+end;
+
+
+
+function LoseCheck()
+        while 1 do
+            if ( GetNUnitsInParty(0) < 1) then
+                Loose(0);
+			return 1;
+		end;
+	Wait(5);
+    end;
+end;
+
+function LoseStaff()
+        while 1 do
+            if ((GetNUnitsInArea(0, "Staff") < 1) and (GetNUnitsInArea(1, "Staff") > 0)) then
+            Loose(0);
+			return 1;
+		end;
+	Wait(5);
+    end;
+end;
+
+
+function RevealObjective4()
+    Wait(35);
+	ObjectiveChanged(4, 1);
+    Trace("Objective4 is reveal_Franch_City");
+end;
+
+function Objective4()
+	if (GetNUnitsInArea(0, "City") > 0) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective4()
+	ObjectiveChanged(4, 2);
+	Trace("Objective4 complete_French_City");
+	LandReinforcement( 0, 117, 11, 3 );
+	ChangePlayerForScriptGroup (500, 0);
+end;
+
+--Main
+
+ViewZone ( French, 1 );
+StartThread( LoseCheck );
+StartThread( LoseStaff );
+StartThread( RevealObjective0 );
+Trigger( Objective0, CompleteObjective0 );
+StartThread( RevealObjective2 );
+Trigger( Objective2, CompleteObjective2 );
+StartThread( RevealObjective3 );
+Trigger( Objective3, CompleteObjective3 );
+StartThread( RevealObjective4 );
+Trigger( Objective4, CompleteObjective4 );

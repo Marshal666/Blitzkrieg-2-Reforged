@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="712">
+	<Type>RT_MAIN_INFANTRY</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Infantry_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Main_Infantry/Text.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Main_Squad/german_main_4/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/AT_Squad/german_at_8/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/AT_Squad/german_at_8/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/12_cm_sgrwr_42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/12_cm_sgrwr_42/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/sdkfz_251_ausf_d_hanomag/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/sdkfz_251_ausf_d_hanomag/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Germany/Snipers/german_sniper_5/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Main_Infantry/Text.txt" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

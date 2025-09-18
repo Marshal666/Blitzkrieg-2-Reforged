@@ -1,0 +1,62 @@
+missionend = 0;
+
+function Descent()
+local passanger;
+local k = 0;
+	LandReinforcementFromMap( 1, "usa_inf", 1, 10 );
+	local inf = GetObjectListArray( 10 );
+	local transport = GetObjectListArray( 1 );
+	UnitCmd( ACT_LOAD, inf[1], transport[1] );
+	UnitCmd( ACT_LOAD, inf[2], transport[2] );
+	Wait( 2 );
+	ChangeFormation( 10, 3 );
+	while k < 2 do
+		k = 0;
+		for i = 1, transport.n do
+			if GetPassangers( transport[i], 2 ) then
+				k = k + 1;
+			end;
+		end;
+		Wait( 3 );
+	end;
+	Wait( 3 );
+	Cmd( ACT_UNLOAD, 1, 50, GetScriptAreaParams( "descent" ) );
+	Wait( 1 );
+	WaitWhileStateArray( inf, STATE_IN_TRANSPORT );
+	Cmd( ACT_SWARM, 10, 100, GetScriptObjCoord( 502 ) );
+	local x, y = GetScriptObjCoordMedium( 1 );	
+	StartThread( Boat, x, y );
+end;
+
+function Boat( x, y )
+	while 1 do
+		Wait( 2 );
+		if ( IsSomeUnitInArea( 0, x, y, 200, 0 ) > 0 ) and 
+		   ( IsSomeUnitInArea( 1, x, y, 200, 0 ) == 0 ) then
+			ChangePlayerForScriptGroup( 1, 0 );
+			break;
+		end;
+	end;
+end;
+
+function Objective0()
+	if ( GetNUnitsInScriptGroup( 501, 0 ) == 1 ) then
+		CompleteObjective( 0 );
+		return 1;
+	end;
+end;
+
+----------------------------------
+Objectives = { Objective0 };
+Objectives_Count = 1;
+
+StartAllObjectives( Objectives, Objectives_Count );
+
+Wait( 1 );
+GiveObjective( 0 );
+StartThread( LooseCheck );
+StartThread( WinCheck );
+Wait( 60 + Random( 30 ) );
+StartThread( Descent );
+--Trigger( CheckSupport, ArtillerySupport );
+

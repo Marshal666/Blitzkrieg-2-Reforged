@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="530">
+	<KeyName>mosin</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_RIFLE</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/Rifle_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>0</Dispersion>
+	<AimingTime>1</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>35</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>200</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>5</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>10</DamagePower>
+			<PiercingRandom>1</PiercingRandom>
+			<Area>0</Area>
+			<Area2>0</Area2>
+			<Speed>865</Speed>
+			<TraceSpeedCoeff>0.5</TraceSpeedCoeff>
+			<TraceProbability>0.5</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Weapons/Hand-Held/Rifles/rifle03_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="/Scene/Effects/All/Weapons/Hand-Held/Riccos/Light/Soft_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Weapons/Hand-Held/Riccos/Light/Soft_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>12</FireRate>
+			<RelaxTime>1</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="/Weapons/Infantry/Rifle/Carb38/rifle_visobj.xdb#xpointer(/VisObj)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

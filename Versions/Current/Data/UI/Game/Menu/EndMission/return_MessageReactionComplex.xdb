@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="72">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/UI/Game/Menu/HideEndMission_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+					<Item href="/UI/Game/Menu/Escape/ShowEscapeMenu_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+				</data>
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/UI/Game/Menu/check_escape_enabled_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data />
+	</commonAfter>
+</MessageReactionComplex>

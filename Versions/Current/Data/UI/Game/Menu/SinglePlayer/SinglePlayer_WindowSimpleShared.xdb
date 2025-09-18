@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="75">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CustomCampaign_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CustomMission_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="LoadGame_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="PlayGame_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="ProfileManager_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Tutorial_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/Escape/parts/EscMenu_Bgr_2_3_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Header_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>-15</x>
+				<y>65</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>290</x>
+				<y>470</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

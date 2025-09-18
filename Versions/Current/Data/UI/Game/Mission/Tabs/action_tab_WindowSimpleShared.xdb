@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="1">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Mission/Actions/Attack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Move_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Stop_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Hold_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/MissionTabs/ability_slot_1_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Mission/MissionTabs/ability_slot_2_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Mission/MissionTabs/ability_slot_3_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Mission/MissionTabs/ability_slot_4_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Mission/Actions/LoadInf_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/UnloadAll_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/EntrenchSelf_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/GunHook_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/GunDeploy_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Formation_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/GroundAttack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/EntrenchBuild_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/FenceBuild_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Repair_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Resupply_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/Rotate_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/SpyGlass_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/LoadMech_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/PlaceMine_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Mission/Actions/ClearMine_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

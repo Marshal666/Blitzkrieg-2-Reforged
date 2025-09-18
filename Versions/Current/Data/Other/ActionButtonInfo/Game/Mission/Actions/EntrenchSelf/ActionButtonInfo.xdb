@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="14">
+	<Action>USER_ACTION_ENTRENCH_SELF</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>false</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>false</Passive>
+	<Slot>5</Slot>
+	<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+	<Tooltip href="/other/text/game/tooltips/mission/actions/entrenchself/text.xdb#xpointer(/Text)"/>
+	<Icon href="/scene/texandmats/game/mission/newactionbuttons/entrench/normal_texture.xdb#xpointer(/Texture)"/>
+	<IconDisabled href="/scene/texandmats/game/mission/newactionbuttons/entrench/disabled_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIcon href="/scene/texandmats/game/mission/newactionbuttons/entrench/normalfg_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIconDisabled href="/scene/texandmats/game/mission/newactionbuttons/entrench/disabledfg_texture.xdb#xpointer(/Texture)"/>
+	<PressEffect>true</PressEffect>
+	<HotkeyCmd>user_action_entrench</HotkeyCmd>
+</ActionButtonInfo>

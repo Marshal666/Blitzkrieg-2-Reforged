@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="2">
+	<Type>NEVT_OBJECTIVE_RECEIVED</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/Objective_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/ObjectiveReceived/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTObjectiveReceived/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Objectives/Recieved_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>60</AutoRemoveTime>
+	<Notification href="/Other/Notification/Game/Mission/objectivereceived.xdb#xpointer(/Notification)" />
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

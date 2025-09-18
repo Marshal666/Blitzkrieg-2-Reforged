@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="166">
+		<FileName />
+		<ScriptText>-- 1101 - retreat group. (Blockpost)
+-- 1110 - City defence group. (Without artillery)
+-- 1111 - Pass defence group. (Without artillery)
+-- 1102 - British tanks reinforcements group
+-- 1103 - British infantry reinforcements group
+
+
+
+---------------- OBJECTIVE 0 ------------------ begin
+---- Destroy post
+function RevealObjective0()
+	SetIGlobalVar(&quot;hz&quot;, 0);
+    Wait(1);
+	ObjectiveChanged(0, 1);
+	StartThread( lose );
+	StartThread(Retr);
+end;
+
+function Objective0_1()
+	if (GetNUnitsInScriptGroup(1101, 1) &lt; 1 and GetIGlobalVar(&quot;hz&quot;, 0) == 0) then
+		return 1;
+    end;
+end;
+
+function Objective0_2()
+	if (GetNScriptUnitsInArea(1101, &quot;Remove&quot;, 0) &gt; 0) then
+		SetIGlobalVar(&quot;hz&quot;, 1);
+		return 1;
+    end;
+end;
+
+function CompleteObjective0_1()
+	--remove pass Defence
+	RemoveScriptGroup(1111);
+	ObjectiveChanged(0, 2);
+	Wait(1);
+	StartThread( RevealObjective1 );
+	Trigger( Objective1, CompleteObjective1 );
+end;
+
+function CompleteObjective0_2()
+	--remove city Defence
+	RemoveScriptGroup(1110);
+	--remove retreat group
+	RemoveScriptGroup(1101);
+	ObjectiveChanged(0, 2);
+	Wait(1);
+	StartThread( RevealObjective2 );
+	Trigger( Objective2, CompleteObjective2 );
+end;
+---------------- OBJECTIVE 0 ------------------ end
+
+---------------- OBJECTIVE 1 ------------------ begin
+---- capture city
+function RevealObjective1()
+    Wait(2);
+    Trace(GetIGlobalVar(&quot;hz&quot;, 0));
+	ObjectiveChanged(1, 1);
+	StartThread(Reinforcements_Objective1_tanks);
+end;
+
+
+function Objective1()
+	if ( GetNUnitsInArea(1, &quot;Objective_1&quot;, 0) &lt; 1) then
+        return 1;
+    end;
+end;
+
+
+function CompleteObjective1()
+	Wait(5);
+	ObjectiveChanged(1, 2);
+	Wait(3);
+	Win(0);
+end;
+---------------- OBJECTIVE 1 ------------------ end
+
+---------------- OBJECTIVE 2 ------------------ begin
+---- Capture pass
+function RevealObjective2()
+    Wait(2);
+    Trace(GetIGlobalVar(&quot;hz&quot;, 0));
+	ObjectiveChanged(2, 1);
+	StartThread(Reinforcements_Objective2_tanks);
+	StartThread(Reinforcements_Objective2_infantry);
+end;
+
+
+function Objective2()
+	if ( GetNUnitsInArea(1, &quot;Objective_2&quot;, 0) &lt; 1) then
+        return 1;
+    end;
+end;
+
+
+function CompleteObjective2()
+	Wait(5);
+	ObjectiveChanged(2, 2);
+	Wait(3);
+	Win(0);
+end;
+---------------- OBJECTIVE 2 ------------------ end
+
+------------ REINFORCEMENTS OBJECTIVE 1 ------- begin
+-- City reinforcements:
+-- if gun with Script ID 1121 destroyed
+function Reinforcements_Objective1_tanks()
+	while 1 do 
+	Wait(1);
+			if (GetNUnitsInScriptGroup(1121, 1) &lt; 1) then
+			LandReinforcementFromMap(1, &quot;tanks&quot;, 0, 1102);
+			Wait(1);
+			StartThread(city_tank);
+			break;
+		end;
+	end;
+end;
+------------ REINFORCEMENTS OBJECTIVE 1 ------- end
+
+------------ REINFORCEMENTS OBJECTIVE 2 ------- begin
+-- Pass Reinforcements
+-- if one of 3 guns with ScriptID 1123 destroyed
+function Reinforcements_Objective2_tanks()
+	Trace(&quot;Thread Objective2 Reinforcement tanks started&quot;);
+	while 1 do 
+	Wait(1);
+		if (GetNUnitsInScriptGroup(1123, 1) &lt; 2) then
+			LandReinforcementFromMap(1, &quot;tanks&quot;, 0, 1102);
+			Wait(1);
+			StartThread(pass_tank);
+		break;
+		end;
+	end;
+end;
+
+-- if one of 2 guns with ScriptID 1124 on the road destroyed
+function Reinforcements_Objective2_infantry()
+	Trace(&quot;Thread Objective2 Reinforcement infantry started&quot;);
+	while 1 do 
+	Wait(1);
+		if (GetNUnitsInScriptGroup(1124, 1) &lt; 2) then
+			LandReinforcementFromMap(1, &quot;infantry&quot;, 1, 1103);
+			Wait(1);
+			Cmd(ACT_SWARM, 1103, 1000, 2926, 2941);
+		break;
+		end;
+	end;
+end;
+------------ REINFORCEMENTS OBJECTIVE 2 ------- end
+
+---------------- RETREAT ---------------------- begin
+function Retr()
+	while 1 do 
+	Wait(1);
+		if (GetNUnitsInArea(0, &quot;Blockpost&quot;, 0) &gt; 0) then
+			Cmd(ACT_MOVE, 1101, 1, 6367, 7070)
+			break;
+		end;
+	end;
+end;
+---------------- RETREAT ----------------------- end
+---------------- TANKS SWARM ------------------- begin
+function city_tank()
+	while 1 do 
+	Wait(1);
+		if (GetNUnitsInScriptGroup(1102, 1) &gt; 0) then
+			Cmd(ACT_SWARM, 1102, 1, 1045, 6235);
+			Wait(10);
+		end;
+	end;
+end;
+
+function pass_tank()
+	while 1 do
+	Wait(1);
+		if (GetNUnitsInScriptGroup(1102, 1) &gt; 0) then
+			Cmd(ACT_SWARM, 1102, 1, 2224, 2631);
+			Wait(10);
+		end;
+	end;
+end;
+---------------- TANKS SWARM ------------------- end
+---------------- LOOSE ------------------------- begin
+function lose()
+	while 1 do
+        if ( GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft(0) &lt; 1) then
+				Wait(2);
+				Loose(0);
+        return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+---------------- LOOSE ------------------------ end
+function GroundAttackPlane()
+	while 1 do
+		Wait(1);
+		if (GetGameTime() == 180) then
+			LandReinforcementFromMap(1, &quot;gap&quot;, 1, 1104);
+			Cmd(ACT_MOVE, 1104, 1, 3928, 3968);
+		end;
+	end;
+end;
+
+--main
+StartThread(RevealObjective0);
+StartThread(GroundAttackPlane);
+--StartThread(test);
+Trigger(Objective0_1, CompleteObjective0_1);
+Trigger(Objective0_2, CompleteObjective0_2);</ScriptText>
+	</Script>

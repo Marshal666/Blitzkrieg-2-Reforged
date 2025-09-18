@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000006">
+		<FileName />
+		<ScriptText>
+--------------------------------------------------------------0
+function RevealObjective0()
+	Wait( 1 );
+	GiveObjective( 0 );
+	StartThread( Objective0 );
+end;
+
+
+function Objective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;ART&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;ART&quot;, 0) &lt; 1)) then
+			Wait( 2 );
+			CompleteObjective( 0 );
+			SetIGlobalVar( &quot;temp.objective0&quot;, 2 );
+			break;
+		end;	
+	end;
+end;
+---------------------------------------------------------------1
+function RevealObjective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;PORT&quot;, 0) &gt; 0) or (GetIGlobalVar(&quot;temp.objective0&quot;, 1) == 2)) then
+			Wait( 1 );
+			GiveObjective( 1 );
+			StartThread( Objective1 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;PORT&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;PORT&quot;, 0) &lt; 1)) then
+			SetIGlobalVar( &quot;temp.objective1&quot;, 2 );
+			Wait( 2 );
+			CompleteObjective( 1 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+----------------------------------------------------------------2
+function RevealObjective2()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;AIRF&quot;, 0) &gt; 0) or (GetIGlobalVar(&quot;temp.objective1&quot;, 1) == 2)) then
+			Wait( 1 );
+			GiveObjective( 1 );
+			StartThread( Objective2 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective2()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;AIRF&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;AIRF&quot;, 0) &lt; 1)) then
+			SetIGlobalVar( &quot;temp.objective2&quot;, 2 );
+			Wait( 1 );
+			CompleteObjective( 2 );
+			break;
+		end;	
+	end;
+end;
+------------------------------------------------------------------------Win
+function Winners()
+	while 1 do
+		Wait( 3 );
+		if ((GetIGlobalVar(&quot;temp.objective1&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.objective2&quot;, 1) == 2)) then
+			Wait( 2 );
+			Win( 0 );
+			break;
+		end;	
+	end;
+end;
+
+function Defead()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(3);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+-------------------------------------------------MAIN
+
+StartThread( RevealObjective0 );
+StartThread( RevealObjective1 );
+StartThread( RevealObjective2 );
+
+StartThread( Winners );
+StartThread(  Defead );
+</ScriptText>
+	</Script>

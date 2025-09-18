@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="1000025">
+	<FileName/>
+	<ScriptText>function zd0()
+
+	if ( GetNUnitsInArea( 1, "ob0", 0 ) &lt; 2) then
+		 Wait( 1 );  		
+		CompleteObjective( 0 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.0", 1);
+	return 1;
+    end;
+end
+
+-----------------------------------------------------
+function zd1()
+
+	if ( GetNUnitsInArea( 1, "ob1", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 1 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.1", 1);
+	return 1;
+    end;
+end
+-----------------------------------------------------
+function zd2()
+	if ( GetNUnitsInArea( 1, "ob2", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 2 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.2", 1);
+	return 1;
+    end;
+end
+-----------------------------------------------------
+function zd3()
+
+	if ( GetNUnitsInArea( 1, "ob3", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 3 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.3", 1);
+	return 1;
+    end;
+end
+-----------------------------------------------------
+function victory()
+	while 1 do
+		Wait( 3 );
+	if ((GetIGlobalVar("temp.rus1_0.objective.0", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.1", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.2", 0) 
+		* GetIGlobalVar("temp.rus1_0.objective.3", 0)) == 1) then
+		Wait( 1 );
+		Win(0);
+		break;
+	end;
+	end;
+end;
+---------------------------------------------------------------------------------
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft( 0 ) == 0) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+---------------------------------------------------------------------------------
+function user()
+	while 1 do
+		Wait( 3 );
+		xe1, ye1 = GetScriptObjCoord ( 200 )
+		Wait( 1 );
+		Cmd ( ACT_REPAIR, 25 , 256, xe1, ye1 )
+		Wait( 15 );
+	end;
+end;
+
+function Reinf()
+		Wait( 75 );
+		LandReinforcementFromMap( 0, 'engineering', 0, 25 );
+		Wait( 180 );
+		LandReinforcementFromMap( 0, 'engineering', 0, 25 );			
+		Wait( 240 );
+		LandReinforcementFromMap( 0, 'engineering', 0, 25 );			
+		return 1;
+end;
+-----------------------------------------------------------------------------
+Objectives = { zd0, zd1, zd2, zd3};
+Objectives_Count = 4;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+Wait( 3 );
+GiveObjective( 1 );
+Wait( 3 );
+GiveObjective( 2 );
+Wait( 3 );
+GiveObjective( 3 );
+
+---------------------------------------------------------------------------------
+--StartThread( Reinf );
+--StartThread( user );
+StartThread( victory );
+StartThread( zd3 );
+StartThread( zd2 );
+StartThread( zd1 );
+StartThread( zd0 );
+StartThread( Unlucky );</ScriptText>
+</Script>

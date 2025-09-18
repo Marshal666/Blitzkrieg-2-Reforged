@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UnitSpecialAblityDesc ObjectRecordID="47">
+	<Name>ABILITY_CAMOFLAGE_MODE</Name>
+	<RefreshTime>20000</RefreshTime>
+	<WorkTime>0</WorkTime>
+	<SwitchOnTime>5000</SwitchOnTime>
+	<SwitchOffTime>5000</SwitchOffTime>
+	<GroupID>ABILITY_GROUP_NOGROUP</GroupID>
+	<DisableGroupTime>0</DisableGroupTime>
+	<StatsBonus href="/other/unitstatsmodifier/testmodifiers/stas/camouflage100/unitstatsmodifier.xdb#xpointer(/UnitStatsModifier)"/>
+	<Parameter>1</Parameter>
+	<Description />
+	<StopCurrentAction>true</StopCurrentAction>
+	<LocalizedName href=""/>
+	<LocalizedDesc href=""/>
+</UnitSpecialAblityDesc>

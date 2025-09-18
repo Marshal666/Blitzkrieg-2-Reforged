@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="47">
+	<KeyName>17cm_k_18</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>20.16</Dispersion>
+	<AimingTime>5.1</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>420</RangeMax>
+	<RangeMin>5</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>420</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>245</Piercing>
+			<DamageRandom>220</DamageRandom>
+			<DamagePower>440</DamagePower>
+			<PiercingRandom>45</PiercingRandom>
+			<Area>2</Area>
+			<Area2>8</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/cannon_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/machineryhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href="/scene/effects/all/hits/groundhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/hits/waterhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>14</FireRate>
+			<RelaxTime>4.3</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>43</Piercing>
+			<DamageRandom>220</DamageRandom>
+			<DamagePower>440</DamagePower>
+			<PiercingRandom>43</PiercingRandom>
+			<Area>4</Area>
+			<Area2>8</Area2>
+			<Speed>80</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_HOWITZER</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/cannon_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/machineryhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href="/scene/effects/all/hits/groundhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/hits/waterhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>10.3</FireRate>
+			<RelaxTime>5.82</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

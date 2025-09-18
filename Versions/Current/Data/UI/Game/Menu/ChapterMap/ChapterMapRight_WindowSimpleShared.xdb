@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="77">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="parts/CallsLeft_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="ChapterReinfCallLeftPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="parts/MissionInfo/Name_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="parts/MissionInfo/CallsRecommended_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="parts/MissionInfo/MissionReinfCallLeftPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="parts/MissionInfo/Grids/ReinfTitle_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="parts/MissionInfo/Grids/ReinfGrid_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="parts/MissionInfo/Grids/BonusTitte_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="parts/MissionInfo/Grids/BonusGrid_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="parts/MissionInfo/Grids/bonusgrid_flag_windowsimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="parts/MissionInfo/missionenabled_windowsimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="parts/ChapterMapRight_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

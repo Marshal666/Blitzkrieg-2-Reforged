@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Model ObjectRecordID="134">
+	<Materials>
+		<Item href="/scene/texandmats/test/programmers_test/yuri/soldier_material.xdb#xpointer(/Material)"/>
+	</Materials>
+	<Geometry href="/scene/geoms/test/programmers_test/yuri/soldier_geometry.xdb#xpointer(/Geometry)"/>
+	<Skeleton href="/scene/geoms/test/programmers_test/yuri/soldier_skeleton.xdb#xpointer(/Skeleton)"/>
+	<Animations>
+		<Item href="/scene/geoms/test/programmers_test/test/fuck_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/test/jump_animb2.xdb#xpointer(/AnimB2)"/>
+	</Animations>
+	<WindPower>1</WindPower>
+</Model>

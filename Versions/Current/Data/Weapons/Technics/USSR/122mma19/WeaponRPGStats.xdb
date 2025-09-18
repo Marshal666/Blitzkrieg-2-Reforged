@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="334">
+	<KeyName>122mmA19</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/HeavyCannon_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>16.32</Dispersion>
+	<AimingTime>3</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>306</RangeMax>
+	<RangeMin>5</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>306</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>143</Piercing>
+			<DamageRandom>95</DamageRandom>
+			<DamagePower>190</DamagePower>
+			<PiercingRandom>28</PiercingRandom>
+			<Area>1.21</Area>
+			<Area2>4.85</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0.5</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/Cannon_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Hits/MachineryHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/GroundExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/big.xdb#xpointer(/CraterSet)" />
+			<FireRate>19</FireRate>
+			<RelaxTime>3.15</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>52</Piercing>
+			<DamageRandom>95</DamageRandom>
+			<DamagePower>190</DamagePower>
+			<PiercingRandom>26</PiercingRandom>
+			<Area>1.21</Area>
+			<Area2>4.85</Area2>
+			<Speed>50</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0.5</DetonationPower>
+			<trajectory>TRAJECTORY_CANNON</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/Cannon_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Hits/MachineryHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Hits/ReflectionHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/GroundExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/WaterExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="/Other/CraterSet/All/ShellHole/big.xdb#xpointer(/CraterSet)" />
+			<FireRate>12.1</FireRate>
+			<RelaxTime>4.94</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Heavy/CannonGrenade/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+		<Item>
+			<DamageType>DAMAGE_FOG</DamageType>
+			<Piercing>7</Piercing>
+			<DamageRandom>1000</DamageRandom>
+			<DamagePower>9000</DamagePower>
+			<PiercingRandom>26</PiercingRandom>
+			<Area>5</Area>
+			<Area2>4.85</Area2>
+			<Speed>50</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_CANNON</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/Cannon_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>12.1</FireRate>
+			<RelaxTime>4.94</RelaxTime>
+			<visProjectile href="/Other/Projectile/All/Units/Weapons/Heavy/CannonGrenade/Projectile.xdb#xpointer(/Projectile)" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

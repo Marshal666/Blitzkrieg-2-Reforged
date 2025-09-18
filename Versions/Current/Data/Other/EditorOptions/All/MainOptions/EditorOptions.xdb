@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<EditorOptions ObjectRecordID="1">
+	<MapInfo>
+		<Item>
+			<Season>SEASON_SUMMER</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/summer/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/summer/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+		<Item>
+			<Season>SEASON_WINTER</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/winter/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/winter/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/winter/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/winter/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/winter/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/winter/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/winter/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/winter/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/winter_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/winter/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+		<Item>
+			<Season>SEASON_AFRICA</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/africa/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/africa/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/africa/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/africa/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/africa/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/africa/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/africa/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/africa/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/africa_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/africa/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+		<Item>
+			<Season>SEASON_ASIA</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/summer/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/asia_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/asia/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+		<Item>
+			<Season>SEASON_SPRING</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/spring/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/spring/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/spring/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/spring/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/spring/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/spring/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/spring/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/spring/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/spring_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/spring/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+		<Item>
+			<Season>SEASON_AUTUMN</Season>
+			<DayTimes>
+				<Item>
+					<DayTime>DAY_MORNING</DayTime>
+					<Light href="/scene/lights/all/autumn/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/autumn/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_DAY</DayTime>
+					<Light href="/scene/lights/all/autumn/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/autumn/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_EVENING</DayTime>
+					<Light href="/scene/lights/all/autumn/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/autumn/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+				<Item>
+					<DayTime>DAY_NIGHT</DayTime>
+					<Light href="/scene/lights/all/autumn/moon_light_ambientlight.xdb#xpointer(/AmbientLight)"/>
+					<PreLight href="/terrain/prelight/all/autumn/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+				</Item>
+			</DayTimes>
+			<Tileset href="/terrain/tgterraset/sets/autumn_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+			<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+			<Minimap href="/other/minimap/minimaps/autumn/minimap.xdb#xpointer(/Minimap)"/>
+		</Item>
+	</MapInfo>
+	<VSO>
+		<Road>
+			<SamplingStep>64</SamplingStep>
+		</Road>
+		<Crag>
+			<SamplingStep>32</SamplingStep>
+		</Crag>
+		<River>
+			<SamplingStep>32</SamplingStep>
+		</River>
+		<Coast>
+			<SamplingStep>64</SamplingStep>
+		</Coast>
+	</VSO>
+	<Backgrounds>
+		<Item>
+			<Season>SEASON_SUMMER</Season>
+			<Map href="/maps/editor/effects_background/new_object/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<Anchor>
+				<x>81</x>
+				<y>74</y>
+				<z>0</z>
+			</Anchor>
+		</Item>
+		<Item>
+			<Season>SEASON_WINTER</Season>
+			<Map href="/test/testmaps/arttest/new/winter/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<Anchor>
+				<x>44</x>
+				<y>44</y>
+				<z>0</z>
+			</Anchor>
+		</Item>
+	</Backgrounds>
+	<Builders>
+		<HumanSkeleton href=""/>
+	</Builders>
+	<UtilityModels>
+		<CameraModel href="/scene/geoms/editor/scriptcamera/1_model.xdb#xpointer(/Model)"/>
+	</UtilityModels>
+	<Misc>
+		<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	</Misc>
+</EditorOptions>

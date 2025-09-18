@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000062">
+	<FileName href="" />
+	<ScriptText>OBJ = 0;
+
+---------------------------------------------------------JapanLanding
+
+function JapanAtak1()
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left7&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left2&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left6&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left3&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left8&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left1&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left6&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left3&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left7&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left2&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 3 , 1000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 1001 );
+	Cmd ( 3 , 1000 , 0 , GetScriptAreaParams&quot;Left8&quot; );
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Left1&quot; );
+	Wait ( 25 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 1 , 1002 );
+	Cmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;Left4&quot; );
+end;
+
+function Player1()
+	StartThread (JapanAtak1);
+	StartThread (JapanAtak0);
+	Wait ( 120 );
+	StartThread (JapanAtak1);
+	Wait ( 20 );
+	StartThread (JapanArt);
+	Wait ( 120 );
+	StartThread (JapanAtak1);
+end;
+
+function Player()
+	StartThread (JapanAtak2);
+	Wait ( 60 );
+	StartThread (JapanAtak2);
+	Wait ( 60 );
+	StartThread (JapanAtak2);
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	Wait ( 60 );
+	StartThread (JapanAtak2);
+	Wait ( 60 );
+	StartThread (JapanAtak3);
+	Wait ( 60 );
+	StartThread (JapanAtak2);
+end;
+
+function JapanAtak2()
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2001 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2002 );
+	Cmd ( 3 , 2000 , 0 , GetScriptAreaParams&quot;Left12&quot; );
+	Cmd ( 3 , 2001 , 0 , GetScriptAreaParams&quot;Left11&quot; );
+	Cmd ( 3 , 2002 , 0 , GetScriptAreaParams&quot;Left14&quot; );
+	Wait ( 7 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 2001 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2002 );
+	Cmd ( 3 , 2000 , 0 , GetScriptAreaParams&quot;Left12&quot; );
+	Cmd ( 3 , 2001 , 0 , GetScriptAreaParams&quot;Left11&quot; );
+	Cmd ( 3 , 2002 , 0 , GetScriptAreaParams&quot;Left14&quot; );
+	Wait ( 8 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 2000 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2001 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 2002 );
+	Cmd ( 3 , 2000 , 0 , GetScriptAreaParams&quot;Left12&quot; );
+	Cmd ( 3 , 2001 , 0 , GetScriptAreaParams&quot;Left11&quot; );
+	Cmd ( 3 , 2002 , 0 , GetScriptAreaParams&quot;Left14&quot; );
+end;
+
+function JapanAtak3()
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 2000 );
+	Cmd ( 3 , 2000 , 0 , GetScriptAreaParams&quot;Left12&quot; );
+	Wait ( 15 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 2001 );
+	Cmd ( 3 , 2001 , 0 , GetScriptAreaParams&quot;Left11&quot; );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 2002 );
+	Cmd ( 3 , 2002 , 0 , GetScriptAreaParams&quot;Left14&quot; );
+end;
+
+function JapanAtak0()
+	Wait ( 10 );
+	Cmd ( 3 , 307 , 0 , GetScriptAreaParams&quot;Left7&quot; );
+	Cmd ( 3 , 302 , 0 , GetScriptAreaParams&quot;Left2&quot; );
+	Cmd ( 3 , 305 , 0 , GetScriptAreaParams&quot;Left5&quot; );
+	Cmd ( 3 , 304 , 0 , GetScriptAreaParams&quot;Left4&quot; );
+	Cmd ( 3 , 308 , 0 , GetScriptAreaParams&quot;Left8&quot; );
+	Cmd ( 3 , 301 , 0 , GetScriptAreaParams&quot;Left1&quot; );
+	Cmd ( 3 , 306 , 0 , GetScriptAreaParams&quot;Left6&quot; );
+	Cmd ( 3 , 303 , 0 , GetScriptAreaParams&quot;Left3&quot; );
+end;
+
+function JapanArt()
+	Wait ( 10 );
+	LandReinforcementFromMap ( 1 , &quot;3&quot; , 1 , 1003 );
+	LandReinforcementFromMap ( 1 , &quot;3&quot; , 3 , 1004 );
+end;
+
+-----------------------Objective 
+
+function Objective()
+	GiveObjective ( 0 );
+	StartThread( CompleteObjective0 );
+	StartThread( CompleteObjective01 );
+end;
+
+function CompleteObjective0()
+	while OBJ == 0 do
+		Wait( 1 );
+		if (IsSomeUnitInArea ( 1 , &quot;zone1&quot; , 0 ) &gt; 0 and IsSomeUnitInArea ( 0 , &quot;zone1&quot; , 0 ) &lt; 1) and IsSomeUnitInArea ( 2 , &quot;zone1&quot; , 0 ) &lt; 1 then
+			OBJ = 1;
+			CompleteObjective ( 0 );
+			DamageScriptObject ( 9, 100 );
+			Wait ( 1 );
+			GiveObjective ( 1 );
+			StartThread (Objective1);
+			ViewZone ( &quot;OBJ&quot; , 1 );
+			Sleep ( 1 );
+			DamageScriptObject ( 10 , 10 );
+			Sleep ( 1 );
+			break;
+		end;	
+	end;
+end;
+
+function Timer()
+	Time = 0;	while 1 do		Wait( 2 );		Time = Time + 1;
+	end;end;
+
+function CompleteObjective01()
+	while OBJ == 0 do
+		Wait( 1 );
+		if Time  &gt; 300 then
+			CompleteObjective ( 0 );
+			DamageScriptObject ( 9, 100 );
+			OBJ = 2;
+			Wait ( 1 );
+			StartThread (Objective2);
+			GiveObjective ( 2 );
+			ViewZone ( &quot;OBJ&quot; , 1 );
+			Sleep ( 1 );
+			DamageScriptObject ( 10 , 10 );
+			Sleep ( 1 );
+			break;
+		end;	
+	end;
+end;
+
+------------------------WIn_Loose
+
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+---------------------------------------------------------
+StartThread (Objective);
+
+StartThread (Unlucky);
+
+StartThread (Player);
+StartThread (Timer);
+
+--StartThread (Player1);</ScriptText>
+</Script>

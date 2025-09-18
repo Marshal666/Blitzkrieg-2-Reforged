@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="1000004">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="PlayerName_WindowTextViewShared.xdb#xpointer(/WindowTextViewShared)" />
+	<Name>PlayerNameView</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="ttplayername.txt" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>29</x>
+				<y>29</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>450</x>
+				<y>42</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>30</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>30</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Text href="" />
+	<TextFileRef href="test.txt" />
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<TextFormat href="/UI/Game/Common/Header2_center_TextFormat.xdb#xpointer(/TextFormat)" />
+</WindowTextView>

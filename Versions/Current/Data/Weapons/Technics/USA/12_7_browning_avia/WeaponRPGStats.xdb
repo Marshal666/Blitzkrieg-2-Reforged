@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="1000066">
+	<KeyName>12.7 Browning</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/HeavyMachineGun_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>15</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>2</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>1</RangeMin>
+	<Ceiling>1000</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>12</Piercing>
+			<DamageRandom>5</DamageRandom>
+			<DamagePower>6</DamagePower>
+			<PiercingRandom>4</PiercingRandom>
+			<Area>1</Area>
+			<Area2>2</Area2>
+			<Speed>800</Speed>
+			<TraceSpeedCoeff>1</TraceSpeedCoeff>
+			<TraceProbability>0.7</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/MachineGun_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>800</FireRate>
+			<RelaxTime>3</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Weapons/Technics/USA/12_7mm_browning/name.txt" />
+</WeaponRPGStats>

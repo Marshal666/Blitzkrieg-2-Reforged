@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000060">
+	<FileName href="" />
+	<ScriptText>-----------------------Objective 
+
+function Objective()
+	GiveObjective ( 0 );
+	StartThread( CompleteObjective0 );
+end;
+
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if IsSomeUnitInArea ( 0 , &quot;Base_22&quot; , 0 ) &gt; 0 then
+			CompleteObjective ( 0 );
+			DamageScriptObject ( 9 , 100 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			StartThread( Objective1 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective1()
+	GiveObjective ( 1 );
+	Cmd ( 0 , 100 , 100 , &quot;Base_33&quot;);
+	QCmd ( 1007 , 100 );
+	ViewZone ( &quot;OBJ&quot; , 1 );
+	Sleep ( 1 );
+	DamageScriptObject ( 10 , 10 );
+	Sleep ( 1 );
+	ViewZone ( &quot;OBJ&quot; , 0 );
+	StartThread( CompleteObjective1 );
+	LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 201 );
+	Cmd ( 0 , 201 , 0 , &quot;Step_1&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_2&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_3&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_4&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_5&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_6&quot;);
+	QCmd ( 0 , 201 , 0 , &quot;Step_7&quot;);
+	QCmd ( 24 , 201 , 200 , &quot;Base_22&quot;);
+	Wait ( 5 );
+	ChangePlayerForScriptGroup( 201 , 0 );
+end;
+
+function CompleteObjective1()
+	while 1 do
+		Wait( 1 );
+		if GetNScriptUnitsInArea ( 200 , &apos;Base_11&apos;, 0 ) &gt; 0 then
+			Win ( 0 );
+			break;
+		end;	
+	end;
+end;
+
+------------------------WIn_Loose
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+---------------------------------------------------------
+StartThread (Objective);
+
+StartThread (Unlucky);</ScriptText>
+</Script>

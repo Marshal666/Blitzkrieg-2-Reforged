@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000508">
+	<Type>RT_LIGHT_AAA</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/AA_Light_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Light_AA/Text.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/SPG/M13_GMC_USSR/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/SPG/M13_GMC_USSR/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Light_AA/Text.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="" />
+</Reinforcement>

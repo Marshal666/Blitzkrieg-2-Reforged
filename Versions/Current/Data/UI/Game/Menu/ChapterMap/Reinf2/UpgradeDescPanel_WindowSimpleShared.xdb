@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="1000358">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="ReinfIconPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="UpgradeHeaderView_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="PreviousLabel_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="UpgradedLabel_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="UnitInfoBlock_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="UpgradeContainerArea_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="VertLine_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="/UI/Game/Menu/EscapeMenu/EscMenu_Bgr_2_3_Scroll_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ReinforcementChange ObjectRecordID="9">
+	<MissionToApply href="/other/mission/game/gb/3/monte_cassino/mission.xdb#xpointer(/Mission)"/>
+	<MapToApply href="/test/testmaps/alpha/monte-cassino/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<TextDesc href="/other/text/game/chapters/bonuses/bonus/text.xdb#xpointer(/Text)"/>
+	<Player>0</Player>
+	<ReinforcementToChange>RT_HEAVY_ARTILLERY</ReinforcementToChange>
+	<HumanPlayer>false</HumanPlayer>
+	<NewReinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/upgrade/upgrade_heavy_artillery_reinforcement.xdb#xpointer(/Reinforcement)"/>
+</ReinforcementChange>

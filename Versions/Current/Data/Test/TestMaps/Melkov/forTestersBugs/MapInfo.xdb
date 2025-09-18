@@ -1,0 +1,1482 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="831">
+	<NumPatchesX>10</NumPatchesX>
+	<NumPatchesY>10</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<MapFilesPath>Maps\Test\Melkov\forTestersBugs\</MapFilesPath>
+	<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)"/>
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)"/>
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href=""/>
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)"/>
+	<Roads/>
+	<Rivers/>
+	<Crags/>
+	<Spots/>
+	<Lakes/>
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)"/>
+		<points/>
+		<ControlPoints/>
+		<VSOID>0</VSOID>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>A6786CE6-F6C4-4DF9-8596-8475397C6B6C</uid>
+	<MapDesigner href=""/>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/gb_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs/>
+				<parcels/>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/test/ussr_partydependentinfo.xdb#xpointer(/PartyDependentInfo)"/>
+			<ReinforcementPoints/>
+			<ReinforcementTypes/>
+			<DefaultRank href=""/>
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href=""/>
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements/>
+			<ScriptReinforcementsTextID/>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>1913.81</x>
+				<y>2237.01</y>
+				<z>0</z>
+			</Pos>
+			<Dir>9615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>2</FrameIndex>
+			<Link>
+				<LinkID>241335</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1880.98</x>
+				<y>2195.38</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241336</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1816.92</x>
+				<y>2110.93</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241337</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1752.86</x>
+				<y>2026.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241338</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1688.79</x>
+				<y>1942.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241339</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1624.73</x>
+				<y>1857.58</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241340</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1560.66</x>
+				<y>1773.13</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241341</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1523.39</x>
+				<y>1715.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45114</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241342</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1519.52</x>
+				<y>1684.82</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50575</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241343</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1541.33</x>
+				<y>1619.73</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241344</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1582.43</x>
+				<y>1522.02</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241345</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1623.54</x>
+				<y>1424.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241346</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1664.64</x>
+				<y>1326.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241347</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1705.74</x>
+				<y>1228.91</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241348</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1746.85</x>
+				<y>1131.2</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241349</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1787.95</x>
+				<y>1033.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241350</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1829.06</x>
+				<y>935.788</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241351</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1870.16</x>
+				<y>838.082</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241352</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1901.45</x>
+				<y>776.977</y>
+				<z>0</z>
+			</Pos>
+			<Dir>56036</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241353</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1926.07</x>
+				<y>758.296</y>
+				<z>0</z>
+			</Pos>
+			<Dir>61498</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241354</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1956.74</x>
+				<y>754.431</y>
+				<z>0</z>
+			</Pos>
+			<Dir>1423</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241355</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2021.83</x>
+				<y>776.237</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4154</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241356</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2119.54</x>
+				<y>817.341</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4154</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241357</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2217.24</x>
+				<y>858.445</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4154</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241358</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2314.95</x>
+				<y>899.549</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4154</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241359</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2412.65</x>
+				<y>940.653</y>
+				<z>0</z>
+			</Pos>
+			<Dir>4154</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241360</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2473.76</x>
+				<y>971.937</y>
+				<z>0</z>
+			</Pos>
+			<Dir>6884</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241361</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2492.44</x>
+				<y>996.563</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12346</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241362</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2506.1</x>
+				<y>1063.84</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241363</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2519.36</x>
+				<y>1169.01</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241364</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2532.61</x>
+				<y>1274.17</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241365</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2545.87</x>
+				<y>1379.34</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241366</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2559.13</x>
+				<y>1484.51</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241367</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2562.58</x>
+				<y>1553.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>17807</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241368</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2550.6</x>
+				<y>1581.56</y>
+				<z>0</z>
+			</Pos>
+			<Dir>23268</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241369</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2499.17</x>
+				<y>1627.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25999</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241370</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2414.72</x>
+				<y>1691.09</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25999</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241371</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2330.27</x>
+				<y>1755.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25999</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241372</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2245.82</x>
+				<y>1819.22</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25999</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241373</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2188.17</x>
+				<y>1856.5</y>
+				<z>0</z>
+			</Pos>
+			<Dir>28730</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241374</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2157.51</x>
+				<y>1860.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>34191</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241375</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2129.01</x>
+				<y>1848.38</y>
+				<z>0</z>
+			</Pos>
+			<Dir>39652</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241376</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2083.55</x>
+				<y>1796.95</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241377</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2019.48</x>
+				<y>1712.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241378</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1955.42</x>
+				<y>1628.05</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241379</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1891.35</x>
+				<y>1543.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>42383</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241380</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1854.08</x>
+				<y>1485.95</y>
+				<z>0</z>
+			</Pos>
+			<Dir>45114</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241381</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1850.21</x>
+				<y>1455.28</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50575</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241382</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1872.02</x>
+				<y>1390.19</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241383</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1913.12</x>
+				<y>1292.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241384</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1954.23</x>
+				<y>1194.78</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241385</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1995.33</x>
+				<y>1097.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53306</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241386</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2026.61</x>
+				<y>1035.97</y>
+				<z>0</z>
+			</Pos>
+			<Dir>56036</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241387</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2051.24</x>
+				<y>1017.29</y>
+				<z>0</z>
+			</Pos>
+			<Dir>61498</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241388</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2081.91</x>
+				<y>1013.42</y>
+				<z>0</z>
+			</Pos>
+			<Dir>1423</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241389</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2110.4</x>
+				<y>1025.41</y>
+				<z>0</z>
+			</Pos>
+			<Dir>6884</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241390</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2155.87</x>
+				<y>1076.84</y>
+				<z>0</z>
+			</Pos>
+			<Dir>9615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241391</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2219.93</x>
+				<y>1161.29</y>
+				<z>0</z>
+			</Pos>
+			<Dir>9615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241392</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2283.99</x>
+				<y>1245.74</y>
+				<z>0</z>
+			</Pos>
+			<Dir>9615</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241393</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2321.27</x>
+				<y>1303.38</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12346</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>3</FrameIndex>
+			<Link>
+				<LinkID>241394</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2334.93</x>
+				<y>1370.66</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241395</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2348.19</x>
+				<y>1475.83</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>0</FrameIndex>
+			<Link>
+				<LinkID>241396</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+		<Item>
+			<Pos>
+				<x>2353.82</x>
+				<y>1528.53</y>
+				<z>0</z>
+			</Pos>
+			<Dir>15076</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>2</FrameIndex>
+			<Link>
+				<LinkID>241397</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/entrenchments/trench/entrenchmentrpgstats.xdb#xpointer(/EntrenchmentRPGStats)"/>
+			<ConstructorProfile href=""/>
+		</Item>
+	</Objects>
+	<HiddenObjectType href=""/>
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_MORNING</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments>
+		<Item>
+			<sections>
+				<Item>
+					<data>
+						<Item>241335</Item>
+						<Item>241336</Item>
+						<Item>241337</Item>
+						<Item>241338</Item>
+						<Item>241339</Item>
+						<Item>241340</Item>
+						<Item>241341</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241342</Item>
+						<Item>241343</Item>
+						<Item>241344</Item>
+						<Item>241345</Item>
+						<Item>241346</Item>
+						<Item>241347</Item>
+						<Item>241348</Item>
+						<Item>241349</Item>
+						<Item>241350</Item>
+						<Item>241351</Item>
+						<Item>241352</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241353</Item>
+						<Item>241354</Item>
+						<Item>241355</Item>
+						<Item>241356</Item>
+						<Item>241357</Item>
+						<Item>241358</Item>
+						<Item>241359</Item>
+						<Item>241360</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241361</Item>
+						<Item>241362</Item>
+						<Item>241363</Item>
+						<Item>241364</Item>
+						<Item>241365</Item>
+						<Item>241366</Item>
+						<Item>241367</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241368</Item>
+						<Item>241369</Item>
+						<Item>241370</Item>
+						<Item>241371</Item>
+						<Item>241372</Item>
+						<Item>241373</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241374</Item>
+						<Item>241375</Item>
+						<Item>241376</Item>
+						<Item>241377</Item>
+						<Item>241378</Item>
+						<Item>241379</Item>
+						<Item>241380</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241381</Item>
+						<Item>241382</Item>
+						<Item>241383</Item>
+						<Item>241384</Item>
+						<Item>241385</Item>
+						<Item>241386</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241387</Item>
+						<Item>241388</Item>
+						<Item>241389</Item>
+						<Item>241390</Item>
+						<Item>241391</Item>
+						<Item>241392</Item>
+						<Item>241393</Item>
+					</data>
+				</Item>
+				<Item>
+					<data>
+						<Item>241394</Item>
+						<Item>241395</Item>
+						<Item>241396</Item>
+						<Item>241397</Item>
+					</data>
+				</Item>
+			</sections>
+		</Item>
+	</Entrenchments>
+	<Bridges/>
+	<ScenarioObjects/>
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data/>
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href=""/>
+	<ScriptAreas/>
+	<startCommandsList/>
+	<reservePositionsList/>
+	<soundsList/>
+	<ForestCircleSound href=""/>
+	<ForestAmbientSounds href=""/>
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects/>
+	<Bonuses/>
+	<EditAreas/>
+	<MiniMap href="/scene/texandmats/all/maps/test/melkov/fortestersbugs/minimap_material.xdb#xpointer(/Material)"/>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<LoadingPicture href=""/>
+	<LoadingDescription href=""/>
+	<CameraPositions/>
+	<ScriptCameraPlacements/>
+	<Objectives/>
+	<Music href=""/>
+	<MPInfo>
+		<GameTypes/>
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects/>
+</MapInfo>

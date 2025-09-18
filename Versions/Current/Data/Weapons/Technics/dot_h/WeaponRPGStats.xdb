@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="184">
+	<KeyName>DOT_H</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="" />
+	<Dispersion>1</Dispersion>
+	<AimingTime>0.2</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>36</RangeMax>
+	<RangeMin>1</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>20</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>198</Piercing>
+			<DamageRandom>61</DamageRandom>
+			<DamagePower>121</DamagePower>
+			<PiercingRandom>39</PiercingRandom>
+			<Area>0.73</Area>
+			<Area2>2.91</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="" />
+			<EffectHitWater href="" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>60</FireRate>
+			<RelaxTime>0.5</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="" />
+</WeaponRPGStats>

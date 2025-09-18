@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="3209">
+	<SrcName href="/Units/Technics/Japan/Artillery/47mm ATG/2.mb" />
+	<uid>3216C9F7-D47A-4EAB-B2A4-C99CCBDA17C3</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>271</FirstFrame>
+	<LastFrame>290</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>25</x>
+			<y>-16</y>
+			<z>20.5659</z>
+		</Center>
+		<HalfSize>
+			<x>87</x>
+			<y>71</y>
+			<z>37.6635</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>25</x>
+			<y>-16</y>
+			<z>6.87435</z>
+		</Center>
+		<HalfSize>
+			<x>87</x>
+			<y>69</y>
+			<z>23.972</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

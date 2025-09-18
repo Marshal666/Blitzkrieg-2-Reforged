@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="559">
+	<KeyName>AT Grenade</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments>dog bite (laser)</Comments>
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/scene/texandmats/game/mission/weapontypetextures/new/flamethrower_texture.xdb#xpointer(/Texture)"/>
+	<Dispersion>1</Dispersion>
+	<AimingTime>0.2</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>20</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>11800</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>5</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>200</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>1</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>0</Area>
+			<Area2>0</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/rifle_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href="/scene/effects/all/shots/machinegun_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitDirect href=""/>
+			<EffectHitMiss href=""/>
+			<EffectHitReflect href=""/>
+			<EffectHitGround href=""/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>30</FireRate>
+			<RelaxTime>0.5</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href="/other/text/localizedweaponsname/infantry/jaws/text.xdb#xpointer(/Text)"/>
+</WeaponRPGStats>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="173">
+	<FileName />
+	<ScriptText>
+-------------------------------------------objective
+
+function RevealObjective()
+	GiveObjective( 0 );
+end;
+--------------------------------------------Lose condition
+function Caput()
+    while 1 do
+        if ( GetNUnitsInParty(0) &lt; 1) then
+		Wait(2);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+-----------------------------------------------check for player presence in the zone
+function Village()
+	while 1 do
+		Wait( 10 );
+		if ( GetNUnitsInArea ( 0, &quot;zone1&quot; ) &gt; 0 )then
+			Wait( 2 );
+			Cmd( 0, 200, 0, 5351, 5233 );
+			QCmd( 3, 200, 0, 5172, 1517 );
+			break;
+		end;	
+	end;
+end;
+---------------------------------------------------------Win condition and objective complete
+function Winn() 
+	while 1 do
+		Wait( 2 );
+			if ( GetNUnitsInScriptGroup( 200 ) &lt; 1 ) then
+				Wait( 2 );
+				CompleteObjective( 0 );
+				Wait( 2 );
+				Win (0);
+			break;
+		end;
+	end;
+end;
+
+
+
+
+
+--------------------------------------------------Run functions
+StartThread( RevealObjective );
+StartThread( Caput );
+StartThread( Village );
+StartThread( Winn );</ScriptText>
+</Script>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="33">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>50</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedNameFileRef href="/Objects/SimpleObjects/EColumns/Column_2/name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects>
+		<Item>
+			<LocatorName>LEffect01</LocatorName>
+			<Pos>
+				<x>0.003823</x>
+				<y>0</y>
+				<z>4.07191</z>
+			</Pos>
+			<Rot>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>1</w>
+			</Rot>
+			<FlarePos>
+				<x>-0.02727</x>
+				<y>-0.0198</y>
+				<z>0.034518</z>
+			</FlarePos>
+			<FlareSize>4.57925</FlareSize>
+			<PointLightPos>
+				<x>0.570147</x>
+				<y>0</y>
+				<z>0</z>
+			</PointLightPos>
+			<PointLightSize>6</PointLightSize>
+			<ConeLength>0</ConeLength>
+			<ConeSize>0</ConeSize>
+			<Colour>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Colour>
+			<AdditionalEffect href="" />
+			<OnAtDay>false</OnAtDay>
+			<OnAtNight>true</OnAtNight>
+			<ConeTexture href="" />
+			<FlareTexture href="" />
+		</Item>
+	</LightEffects>
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-1</x>
+				<y>0</y>
+				<z>37.5076</z>
+			</Pos>
+			<Orient>
+				<x>4e-006</x>
+				<y>-0.704965</y>
+				<z>0</z>
+				<w>0.709242</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1</x>
+				<y>0</y>
+				<z>37.5076</z>
+			</Pos>
+			<Orient>
+				<x>0.610488</x>
+				<y>0.352463</y>
+				<z>0</z>
+				<w>0.709277</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>25</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="" />
+	<EffectDeath href="/Scene/Effects/All/MoveOver_Crashes/TownPost_Lamp_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>-5</x>
+						<y>-9</y>
+					</Item>
+					<Item>
+						<x>5</x>
+						<y>-9</y>
+					</Item>
+					<Item>
+						<x>11</x>
+						<y>0</y>
+					</Item>
+					<Item>
+						<x>5</x>
+						<y>9</y>
+					</Item>
+					<Item>
+						<x>-5</x>
+						<y>9</y>
+					</Item>
+					<Item>
+						<x>-10</x>
+						<y>0</y>
+					</Item>
+					<Item>
+						<x>-5</x>
+						<y>-9</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>6.875</x>
+		<y>8.5</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data>
+			<Item>
+				<data>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>true</CanFall>
+	<ObjectHeight>34</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>1200</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SpecificJoints />
+	<HideForPerformance>false</HideForPerformance>
+</ObjectRPGStats>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="260">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels>
+		<Item>
+			<DamageHP>0.5</DamageHP>
+			<VisObj href="/Objects/SimpleObjects/Flagstaff/GB/Flagstaff/whole.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="" />
+		</Item>
+	</DamageLevels>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>500</ArmorMin>
+			<ArmorMax>500</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<IconTexture href="/Objects/SimpleObjects/Flagstaff/Japan/Flagstaff/icon_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Objects/SimpleObjects/Flagstaff/Japan/Flagstaff/name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>31</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="" />
+	<EffectDeath href="" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>false</HasPassability>
+	<passability>
+		<data />
+	</passability>
+	<PassProfile>
+		<polygons />
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>0</x>
+		<y>0</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data>
+			<Item>
+				<data>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>27</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SpecificJoints />
+	<HideForPerformance>false</HideForPerformance>
+</ObjectRPGStats>

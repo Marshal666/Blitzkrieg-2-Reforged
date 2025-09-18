@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000045">
+	<FileName />
+	<ScriptText>function ArtAction()
+	Wait ( 5 );
+	local k=GetObjectList ( 701 );
+	local c=GetObjectList ( 702 );
+	Wait ( 2 );
+	while 1 do 
+		if ( UnitCanSee ( k, 400, 0 ) == 1 ) or ( UnitCanSee ( c, 400, 0 ) == 1 ) then
+			Wait ( 1 );
+			Cmd( ACT_SUPPRESS, 160, 500, 4595, 6966 );
+			Trace (&quot;Art_Action&quot;)
+			Wait (5);
+		return 1;
+		end;
+		Wait (3);
+	end;
+end;</ScriptText>
+</Script>

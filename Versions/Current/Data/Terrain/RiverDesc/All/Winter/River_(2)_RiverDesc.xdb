@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RiverDesc ObjectRecordID="11">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>0</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>0</MiniMapCenterColor>
+	<MiniMapBorderColor>0</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<BottomMaterial href=""/>
+	<PrecipiceMaterial href=""/>
+	<WaterMaterial href=""/>
+	<StreamSpeed>0.1</StreamSpeed>
+	<BorderRand>0.5</BorderRand>
+	<Depth>0.15</Depth>
+	<DepthRand>0.6</DepthRand>
+	<RandX>0.25</RandX>
+	<RandY>0.65</RandY>
+	<RidgeTexGeomScale>50</RidgeTexGeomScale>
+	<WaterLayers>
+		<Item>
+			<CenterOpacity>1</CenterOpacity>
+			<BorderOpacity>1</BorderOpacity>
+			<TilingStep>0.1</TilingStep>
+			<RelWidth>0</RelWidth>
+			<Disturbance>0.3</Disturbance>
+			<NumCells>4</NumCells>
+			<Materials>
+				<Item href=""/>
+			</Materials>
+			<UseFromPixel>0</UseFromPixel>
+			<UseToPixel>0</UseToPixel>
+			<StreamSpeed>0.1</StreamSpeed>
+		</Item>
+	</WaterLayers>
+	<HasPeak>true</HasPeak>
+	<DefaultWidth>256</DefaultWidth>
+	<DefaultOpacity>1</DefaultOpacity>
+</RiverDesc>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1176">
+	<Type>RT_FIGHTERS</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/planefighters_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/fighters/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/aviation/me_262_schwalbe/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/aviation/me_262_schwalbe/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/fighters/text.xdb#xpointer(/Text)"/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

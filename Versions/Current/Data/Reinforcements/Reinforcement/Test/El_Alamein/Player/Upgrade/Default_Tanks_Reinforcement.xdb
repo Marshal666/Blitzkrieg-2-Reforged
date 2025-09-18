@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="175">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/tankheavy_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/mission/reinforcement/type/tanks/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/gb/tanks/infantry_mkiii_valentine_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/gb/tanks/m3_grant_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/gb/tanks/m3_grant_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/medium_tanks/text.xdb#xpointer(/Text)"/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

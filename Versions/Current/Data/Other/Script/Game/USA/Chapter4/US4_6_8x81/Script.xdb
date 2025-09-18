@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="160">
+	<FileName />
+	<ScriptText>-----------------------------------------------Artillery fire1
+
+function ArtAction160()
+	local x = 7300;
+	local y = 4700;
+	Wait( 35 );
+		while x &gt; 6290 do 
+			Cmd( ACT_SUPPRESS, 160, 5, x, y );
+			Wait( 35 );
+			x = x - 200;
+			y = y + 100;
+		end;
+	Trace(&quot;Kannon1Complete&quot;);
+	Cmd( ACT_STOP, 160 );
+end;
+
+-----------------------------------------------Artillery fire2
+
+function ArtAction161()
+	local x = 6090;
+	local y = 4050;
+		Wait( 35 );
+	while x &gt; 5090 do 
+		Cmd( ACT_SUPPRESS, 161, 5, x, y );
+		Wait( 35 );
+		x = x - 200;
+		y = y + 100;
+	end;
+	Trace(&quot;Kannon2Complete&quot;);
+	Cmd( ACT_STOP, 161 );
+end;
+
+-----------------------------------------------Artillery fire3
+
+function ArtAction162()
+	local x = 1209;
+	local y = 5252;
+		Wait( 35 );
+		while y &lt; 7100 do 
+		Cmd( ACT_SUPPRESS, 162, 100, x, y );
+		Wait( 25 );
+		x = x - 10;
+		y = y + 200;
+	end;
+	Trace(&quot;Kannon3Complete&quot;);
+	Cmd( ACT_STOP, 162 );
+end;
+
+-----------------------------------------------Artillery fire4
+
+function ArtAction163()
+	local x = 1209;
+	local y = 5252;
+		Wait( 35 );
+	while y &lt; 7100 do 
+		Cmd( ACT_SUPPRESS, 163, 100, x, y );
+		Wait( 35 );
+		x = x - 10;
+		y = y + 200;
+	end;
+	Trace(&quot;Kannon4Complete&quot;);
+	Cmd( ACT_STOP, 163 );
+end;
+
+-----------------------------------------------Enemies Attack
+
+function Attack_GO()
+	Wait ( 5 );
+	QCmd(ACT_SWARM, 104, 0, 3882, 7250);
+	Wait ( 5 );
+end;
+
+function Attack_1_GO()
+	Wait ( 5 );
+	QCmd(ACT_SWARM, 102, 0, 3882, 7250);
+	Wait ( 5 );
+end;
+
+function Attack_2_GO()
+	Wait( 15 );
+	while 1 do
+		Wait (1);
+		QCmd ( ACT_SWARM, 111, 0, 961, 6280 );
+		Wait (15);
+	end;
+end;
+
+function Attack_3_GO()
+	Wait( 1 );
+	while 1 do
+	Wait (1);
+		QCmd ( ACT_SWARM, 110, 50, 3721, 6729 );
+	Wait (5);
+	end
+end;
+
+function Attack_4_GO()
+	Wait (2);
+	while 1 do
+	Wait (1);
+		QCmd(ACT_SWARM, 500, 0, 7505, 7427);
+	Wait (5);
+	end
+end;
+
+function Attack_5_GO()
+	Wait (2);
+	while 1 do
+	Wait (1);
+		QCmd(ACT_SWARM, 510, 0, 3721, 6729);
+	Wait (5);
+	end
+end;
+
+function Attack_6_GO()
+	Wait (2);
+	while 1 do
+	Wait (1);
+		QCmd(ACT_SWARM, 511, 0, 830, 5977);
+	Wait (5);
+	end
+end;
+------------------------------------------------------Attack_Wawe2
+function Wawe2()
+	while 1 do
+	Wait (1);
+        if ( GetNUnitsInScriptGroup( 102 ) &lt;= 0 ) and ( GetNUnitsInScriptGroup( 104 ) &lt;= 0 ) then
+            Wait(5);
+			StartThread( Attack_2_GO );
+			StartThread( Attack_3_GO );
+			Trace(&quot;Second_Wawe&quot;);
+			return 1;
+		end	
+		Wait( 2 );
+	end;
+end;
+
+------------------------------------------------------Attack_Wawe3
+function Wawe3()
+	while 1 do
+		Wait ( 1 );
+        if ( GetNUnitsInScriptGroup ( 110 ) &lt;= 1 ) and ( GetNUnitsInScriptGroup( 111 ) &lt;= 1 ) then
+            Wait (2);
+			StartThread ( Attack_4_GO );
+			StartThread ( Attack_5_GO );
+			StartThread ( Attack_6_GO );
+			Trace (&quot;Third_Wawe&quot;);
+			return 1;
+		end	
+		Wait( 2 );
+	end;
+end;
+
+------------------------------------------------------Defeat1
+function LooseCheck()
+	local missionend = 0
+	while ( missionend == 0 ) do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 1, &quot;HQ&quot;, 0 ) &gt;= 1 ) and ( GetNUnitsInArea( 0, &quot;HQ&quot;, 0 ) &lt;= 0 ) then
+			missionend = 1;
+			Wait( 3 );
+			Trace( &quot;mission failed EnemyInCity=%g&quot;, GetNUnitsInArea( 1, &quot;HQ&quot;, 0 ));
+			Win( 1 );
+			return 1;
+		end;
+	end;
+end;
+
+------------------------------------------------------Defeat2
+function LooseCheck2()
+	local missionend = 0
+	while ( missionend == 0 ) do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 1, &quot;Store&quot;, 0 ) &gt;= 1 ) and ( GetNUnitsInArea( 0, &quot;Store&quot;, 0 ) &lt;= 0 ) then
+			missionend = 1;
+			Wait( 3 );
+			Trace( &quot;mission failed EnemyInCity=%g&quot;, GetNUnitsInArea( 1, &quot;Store&quot;, 0 ));
+			Win( 1 );
+			return 1;
+		end;
+	end;
+end;
+-----------------------------------------------------Defeat3
+function LooseCheck3()
+	local missionend = 0
+	while ( missionend == 0 ) do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 1, &quot;Store2&quot;, 0 ) &gt;= 1 ) and ( GetNUnitsInArea( 0, &quot;Store2&quot;, 0 ) &lt;= 0 ) then
+			missionend = 1;
+			Wait( 3 );
+			Trace( &quot;mission failed EnemyInCity=%g&quot;, GetNUnitsInArea( 1, &quot;Store2&quot;, 0 ));
+			Win( 1 );
+			return 1;
+		end;
+	end;
+end;
+
+-----------------------------------------------------Defend
+
+function CompleteObjective0()
+	while 1 do
+        if ( GetNUnitsInParty ( 1 ) &lt;= 13 ) then
+            Wait(3);
+			CompleteObjective( 0 );
+			Trace(&quot;Win!&quot;);
+			Win( 0 );
+			return 1;
+		end	
+		Wait( 6 );
+	end;
+end;
+
+------------------------------------------------------Main
+GiveObjective ( 0 );
+StartThread( ArtAction160 );
+StartThread( ArtAction161 );
+StartThread( ArtAction162 );
+StartThread( ArtAction163 );
+StartThread( Attack_GO );
+StartThread( Attack_1_GO );
+StartThread( Wawe2 );
+StartThread( Wawe3 );
+StartThread( CompleteObjective0 );
+StartThread( LooseCheck );
+StartThread( LooseCheck2 );
+StartThread( LooseCheck3 );
+</ScriptText>
+</Script>

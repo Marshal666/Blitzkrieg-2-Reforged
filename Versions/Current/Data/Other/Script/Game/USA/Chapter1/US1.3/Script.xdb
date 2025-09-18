@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="183">
+	<FileName />
+	<ScriptText>CO1 = 0;
+CO2 = 0;
+
+------------------------------------------- panic
+
+function Panika1()
+ 	while 1 do 
+		Wait( 1 ); 
+		if GetNUnitsInArea ( 0 , &apos;Out&apos;, 0 ) &gt; 0 then
+			Cmd ( 7 , 206 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 206 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 206 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Cmd ( 7 , 200 , 200 , GetScriptAreaParams &quot;Out&quot; );
+			Wait ( 5 );
+			Cmd ( 7 , 201 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 201 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 201 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Wait ( 4 );
+			Cmd ( 7 , 202 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 202 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 3 , 202 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Cmd ( 7 , 203 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 203 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 203 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Wait ( 4 );
+			Cmd ( 7 , 204 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 204 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 204 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Wait ( 6 );
+			Cmd ( 7 , 205 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 205 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			QCmd ( 0 , 205 , 400 , GetScriptAreaParams &quot;Out&quot; );
+			Wait ( 30 );
+			Cmd ( 56 , 206 , 150 );
+			Wait ( 30 );
+			Cmd ( 56 , 206 , 150 );
+			Wait ( 30 );
+			Cmd ( 56 , 206 , 150 );
+			Wait ( 30 );
+			Cmd ( 56 , 206 , 150 );
+			break;
+ 		end;
+	end;
+end;
+
+
+function Panika()
+ 	while 1 do 
+		Wait( 1 ); 
+		if GetNUnitsInArea ( 0 , &apos;Out1&apos;, 0 ) &gt; 0 then
+			Cmd ( 7 , 311 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 311 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 311 , 0 , GetScriptAreaParams &quot;Tank1&quot; );
+			Cmd ( 7 , 312 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 312 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 312 , 0 , GetScriptAreaParams &quot;Tank2&quot; );
+			Cmd ( 7 , 313 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 313 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 313 , 0 , GetScriptAreaParams &quot;Tank3&quot; );
+			Cmd ( 7 , 314 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 314 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 314 , 0 , GetScriptAreaParams &quot;Tank4&quot; );
+			Wait ( 5 );
+			Cmd ( 7 , 300 , 300 , GetScriptAreaParams &quot;Out1&quot; );
+			QCmd ( 0 , 300 , 500 , GetScriptAreaParams &quot;Out1&quot; );
+			Wait ( 5 );
+			Cmd ( 56 , 300 , 100 );
+			Wait ( 30 );
+			Cmd ( 56 , 300 , 100 );
+			Wait ( 30 );
+			Cmd ( 56 , 300 , 100 );
+			break;
+ 		end;
+	end;
+end;
+
+function Panika2()
+ 	while 1 do 
+		Wait( 1 ); 
+		if GetNUnitsInArea ( 0 , &apos;Out2&apos;, 0 ) &gt; 0 then
+			Cmd ( 7 , 555 , 0 , GetScriptAreaParams &quot;Out2&quot; );
+			QCmd ( 0 , 555 , 300 , GetScriptAreaParams &quot;Out2&quot; );
+			break;
+ 		end;
+	end;
+end;
+
+------------------------------------------------Tank crews check
+
+function Tank1()
+ 	while 1 do 
+		Sleep( 1 ); 
+		if GetNScriptUnitsInArea ( 311 , &apos;Tank1&apos;, 0 ) &gt; 0 then
+			Cmd ( 1007 , 311 );
+			ChangePlayerForScriptGroup( 301 , 1 );
+			break;
+ 		end;
+	end;
+end;
+
+function Tank2()
+ 	while 1 do 
+		Sleep( 1 ); 
+		if GetNScriptUnitsInArea ( 312 , &apos;Tank2&apos;, 0 ) &gt; 0 then
+			Cmd ( 1007 , 312 );
+			ChangePlayerForScriptGroup( 302 , 1 );
+			break;
+ 		end;
+	end;
+end;
+
+function Tank3()
+ 	while 1 do 
+		Sleep( 1 ); 
+		if GetNScriptUnitsInArea ( 313 , &apos;Tank3&apos;, 0 ) &gt; 0 then
+			Cmd ( 1007 , 313 );
+			ChangePlayerForScriptGroup( 303 , 1 );
+			break;
+ 		end;
+	end;
+end;
+
+function Tank4()
+ 	while 1 do 
+		Sleep( 1 ); 
+		if GetNScriptUnitsInArea ( 314 , &apos;Tank4&apos;, 0 ) &gt; 0 then
+			Cmd ( 1007 , 314 );
+			ChangePlayerForScriptGroup( 304 , 1 );
+			break;
+ 		end;
+	end;
+end;
+
+------------------------------------------------Objectives
+
+function Objective()
+	GiveObjective ( 0 );
+ 	StartThread( CompleteObjective0 );
+ 	Wait( 1 );
+end; 
+
+function Objective1()
+ 	Wait( 1 ); 
+	GiveObjective ( 1 );
+	DamageScriptObject ( 10 , 10 );
+ 	StartThread( CompleteObjective1 );
+end;
+
+function CompleteObjective0()
+ 	while 1 do 
+		Wait( 1 );
+ 		if GetNUnitsInScriptGroup ( 100  , 2 ) &lt; 1 then 
+			CompleteObjective ( 0 );
+			DamageScriptObject ( 11 , 100 );
+			CO1 = 1;
+			StartThread( Objective1 );
+ 			Wait( 1 );
+ 			break;
+ 		end;
+	end;
+end; 
+
+function CompleteObjective1()
+ 	while 1 do 
+		Wait( 1 ); 
+		if GetNUnitsInScriptGroup ( 150 , 2 ) &lt; 1 then 
+			CompleteObjective ( 1 );
+			DamageScriptObject ( 10, 40 );
+			CO2 = 1;
+			Wait( 1 ); 
+			break;
+ 		end;
+	end;
+end;
+
+------------------------------------------------Win/Loose
+
+function Winner()
+	while 1 do
+		Wait( 1 );
+        if (CO2 + CO1) &gt; 1 then
+			Win(0);
+			break;
+		end;
+	end;
+end;
+
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+------------------------------------------------Run functions
+StartThread( Objective );
+StartThread( Unlucky );
+StartThread( Winner );
+ViewZone ( &quot;OBJ&quot; , 1 );
+
+StartThread( Panika1 );
+StartThread( Panika );
+StartThread( Tank1 );
+StartThread( Tank2 );
+StartThread( Tank3 );
+StartThread( Tank4 );</ScriptText>
+</Script>

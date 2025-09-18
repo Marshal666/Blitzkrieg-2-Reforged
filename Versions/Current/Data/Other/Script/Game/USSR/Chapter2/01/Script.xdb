@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="194">
+	<FileName />
+	<ScriptText>Objective0 = 0
+Objective1 = 0
+function Patrol ()
+	while 1 do
+		Wait( 5 );
+		if ( GetNScriptUnitsInArea(111, &quot;A1&quot;, 0) &gt; 0 ) then
+		Wait( 2 );
+		Cmd(3, 111, 50, GetScriptAreaParams(&quot;A2&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A3&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A4&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A5&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A6&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A7&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A8&quot;));
+		end;
+		Wait( 1 );
+		if ( GetNScriptUnitsInArea(111, &quot;A8&quot;, 0) &gt; 0 ) then
+		Wait( 2 );
+		Cmd(3, 111, 50, GetScriptAreaParams(&quot;A7&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A6&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A5&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A4&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A3&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A2&quot;));
+		QCmd(3, 111, 50, GetScriptAreaParams(&quot;A1&quot;));
+		end;
+	end;
+end;
+function Alarm ()
+	while 1 do
+		Wait( 4 );
+		if ( GetNUnitsInArea(0, &quot;Alarm&quot;, 0) &gt; 0 and Objective0 == 0) then
+		Wait( 2 );
+		LandReinforcementFromMap( 1, &quot;Ship&quot;, 0, 300 );
+		LandReinforcementFromMap( 1, &quot;Bomb&quot;, 0, 301 );
+		Wait(3);
+		Cmd(3, 300, 50, GetScriptAreaParams(&quot;Alarm&quot;));
+		Cmd(3, 301, 50, GetScriptAreaParams(&quot;Alarm&quot;));
+		break;
+		end;
+	end;
+end;
+
+---------------------------------------Alarm
+function Attack ()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( 100, 1 ) &lt; 9 ) then
+			Wait( 2 );
+			Cmd(3, 110, 50, GetScriptAreaParams(&quot;Mayak&quot;));
+			break;	
+		end;
+	end;
+end;
+---------------------------------------Objective0
+function CompleteObjective0 ()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInArea(1, &quot;Mayak&quot;, 0) &lt; 1 ) then
+			Wait( 2 );
+			CompleteObjective( 0 );
+			Wait ( 2 );
+            Objective0 = 1
+			break;	
+		end;
+	end;
+end;
+
+----------------------------------------Objective1
+function CompleteObjective1 ()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( 200, 1 ) &lt; 1 ) then
+			Wait( 2 );
+			CompleteObjective( 1 );
+			Wait ( 2);
+			Objective1 = 1;
+			break;	
+		end;
+	end;
+end;
+-------------------------------------------Loose conditions 
+function Caput()
+    while 1 do
+        Wait ( 1 );
+        if ( (GetNUnitsInScriptGroup( 1, 0 ) &lt; 1 or GetNUnitsInScriptGroup( 2, 0 ) &lt; 1) and  GetReinforcementCallsLeft( 0 ) == 0 ) then
+		Wait(5);
+		Win(1);
+		return 1;
+		end;
+	end;
+end;
+-------------------------------------------Win conditions
+function Victory ()
+    while 1 do
+        Wait ( 1 );
+        if (Objective0 == 1 and Objective1 == 1) then
+        Wait (5);
+        Win (0);
+        return 1;
+        end;
+    end;
+end;
+-----------------------------------------------
+SetIGlobalVar( &quot;temp.nogeneral_sript&quot;, 1 ); --end AI
+GiveObjective( 0 );
+Wait (3);
+GiveObjective( 1 );
+StartThread( Patrol );
+StartThread( Alarm );
+StartThread( Caput );
+StartThread( Victory );
+StartThread( CompleteObjective0 );
+StartThread( CompleteObjective1 );
+StartThread( Attack );</ScriptText>
+</Script>

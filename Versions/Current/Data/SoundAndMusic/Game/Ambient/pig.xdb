@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1002696">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Ambient/pig/variant01.xdb#xpointer(/SoundDesc)" />
+			<MinDist>20</MinDist>
+			<MaxDist>40</MaxDist>
+			<Probability>50</Probability>
+			<soundType>PEACEFULL</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Ambient/pig/variant02.xdb#xpointer(/SoundDesc)" />
+			<MinDist>20</MinDist>
+			<MaxDist>40</MaxDist>
+			<Probability>50</Probability>
+			<soundType>PEACEFULL</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

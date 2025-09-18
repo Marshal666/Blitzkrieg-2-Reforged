@@ -1,0 +1,1161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="1000029">
+	<FileName/>
+	<ScriptText>
+function s1()
+
+	Wait ( 1 );
+	
+	ViewZone ( 'Viezone', 1 );
+	
+	ViewZone ( 'at0', 1 );
+	
+	ShowMovieBorder ( );
+	
+	Wait ( 1 );
+
+	SCRunTime( "s1f1_1", "s1f1_2", 8);
+	
+	Cmd ( 0 , 100 , 0 , GetScriptAreaParams( "gaz_zone2" ));
+	
+	QCmd ( 0 , 100 , 0 , GetScriptAreaParams( "gaz_zone1" ));
+	
+	QCmd ( 0 , 100 , 0 , GetScriptAreaParams( "gaz_zone0" ));
+	
+	Wait ( 4 );
+	
+	PlayEffect( 0 , 2279, 5789, 0 );
+	
+	Sleep ( 8 );
+	
+	PlayEffect( 0 , 1969, 5809, 0 );
+	
+	Sleep ( 12 );
+	
+	PlayEffect( 0 , 2040, 5509, 0 );
+	
+	Wait ( 2  );
+	
+	Cmd ( 0 , 103 , 0 , GetScriptAreaParams( "go3" ));
+	
+	QCmd ( 0 , 103 , 0 , GetScriptAreaParams( "go1" ));
+	
+	QCmd ( 0 , 103 , 0 , GetScriptAreaParams( "go4" ));
+	
+	QCmd ( 0 , 103 , 0 , GetScriptAreaParams( "go5" ));
+	
+	QCmd ( 0 , 103 , 0 , GetScriptAreaParams( "gaz_zone_1" ));
+	
+	Wait ( 1 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 2267 , 3219 , 0 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 2253 , 3453 , 0 );
+	
+	LandReinforcementFromMap ( 2 , "0" , 0 , 101 );
+	
+	Cmd ( 0 , 101 , 0 , GetScriptAreaParams( "gz2" ));
+	
+	Sleep ( 10 );
+	
+	Cmd ( 0 , 102 , 0 , GetScriptAreaParams( "gz1" ));
+	
+	Wait ( 3 );
+	
+	SCRunTime( "s1f1_2", "s1f1_3", 8);
+	
+	Wait ( 5 );
+	
+	LandReinforcementFromMap ( 2 , "0" , 1 , 104 );
+	
+	Cmd ( 0 , 104 , 0 , GetScriptAreaParams( "gz0" ));
+	
+	QCmd ( ACT_ROTATE , 104 , 0 , GetScriptAreaParams( "gz1" ));
+	
+	LandReinforcementFromMap ( 2 , "1" , 2 , 105 );
+	
+	Cmd ( 0 , 105 , 0 , GetScriptAreaParams( "go5" ));
+	
+	Sleep ( 3 );
+	
+	LandReinforcementFromMap ( 2 , "2" , 3 , 106 );
+	
+	Cmd ( 0 , 106 , 0 , GetScriptAreaParams( "gaz_zone3" ));
+	
+	Wait ( 5 );
+	
+	LandReinforcementFromMap ( 2 , "0" , 4 , 107 );
+	
+	Sleep ( 3 );
+	
+	ChangeFormation ( 107 , 2 );
+	
+	Wait ( 3 );
+	
+	SCRunTime( "s1f1_3", "s1f1_8", 8);
+	
+	Wait ( 5 );
+	
+	PlayEffect( 0 ,  1632 , 1908 , 0 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 968 , 1591, 0 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 1420 , 1139, 0 );
+	
+	Cmd ( 0 , 111 , 0 , GetScriptAreaParams( "go11" ));
+	
+	Cmd ( 0 , 112 , 0 , GetScriptAreaParams( "go12" ));
+	
+	Cmd ( 0 , 113 , 0 , GetScriptAreaParams( "go13" ));
+	
+	Cmd ( 0 , 114 , 0 , GetScriptAreaParams( "go14" ));
+	
+	PlayEffect( 0 , 1632 , 1908, 0 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 968 , 1591, 0 );
+	
+	Sleep ( 10 );
+	
+	PlayEffect( 0 , 1420 , 1139, 0 );
+	
+	Wait ( 1 );
+	
+	Cmd ( 0 , 91 , 0 , GetScriptAreaParams( "nt2" ));
+	
+	Wait ( 1 );
+	
+	Cmd ( 0 , 92 , 0 , GetScriptAreaParams( "np1" ));
+	
+	Cmd ( 0 , 93 , 0 , GetScriptAreaParams( "nt1" ));
+	
+	Wait ( 2 );
+	
+	SCRunTime( "s1f1_8", "s2f1_1", 0);
+	
+	Sleep ( 1 );
+	
+	SCRunTime( "s2f1_1", "s2f1_2", 8 );
+	
+	Wait ( 7 );
+	
+	Cmd ( 0 , 221 , 0 , GetScriptAreaParams( "np4" ));
+	
+	QCmd ( 0 , 221 , 0 , GetScriptAreaParams( "np3" ));
+	
+	QCmd ( 0 , 221 , 0 , GetScriptAreaParams( "nb1" ));
+	
+	Cmd ( 0 , 222 , 0 , GetScriptAreaParams( "np4" ));
+	
+	Cmd ( 0 , 223 , 0 , GetScriptAreaParams( "np2" ));
+	
+	Cmd ( 0 , 224 , 0 , GetScriptAreaParams( "go20" ));
+	
+	Wait ( 1 );
+	
+	SCRunTime( "s2f1_2", "s3f1_1", 0);
+	
+	Wait ( 2 );
+	
+	SCRunTime( "s3f1_1", "s3f2_1", 10);
+	
+	Wait ( 8 );
+	
+	Cmd ( 0 , 301 , 0 , GetScriptAreaParams( "nt3" ));
+	
+	QCmd ( 0 , 301 , 0 , GetScriptAreaParams( "nt3_1" ));
+	
+	Cmd ( 0 , 302 , 0 , GetScriptAreaParams( "np5" ));
+	
+	Cmd ( 0 , 303 , 0 , GetScriptAreaParams( "nt4" ));
+	
+	Cmd ( 0 , 304 , 0 , GetScriptAreaParams( "na1" ));
+	
+	Wait ( 2 );
+	
+	SCRunTime( "s3f2_1" , "s4f1_1", 0);
+	
+	Sleep ( 1 );
+	
+	Wait ( 2 );
+	
+	SCRunTime( "s4f1_1" , "s4f2_1", 9);
+	
+	Wait ( 5 );
+	
+	ChangeFormation ( 304 , 0 );
+	
+	Wait ( 4 );
+	
+	ChangeFormation ( 302 , 0 );
+	
+	SCRunTime( "s4f2_1" , "s4f3_1", 5);
+	
+	Wait ( 4 );
+	
+	RemoveScriptGroup ( 100 );
+	
+	RemoveScriptGroup ( 101 );
+	
+	RemoveScriptGroup ( 102 );
+	
+	RemoveScriptGroup ( 103 );
+	
+	RemoveScriptGroup ( 104 );
+	
+	RemoveScriptGroup ( 106 );
+	
+	RemoveScriptGroup ( 105 );
+	
+	RemoveScriptGroup ( 107 );
+	
+	RemoveScriptGroup ( 511 );
+	
+	Wait ( 1 );
+	
+	LandReinforcementFromMap ( 2 , "3" , 6 , 513 );
+	
+	ChangeFormation ( 513 , 1 );
+	
+	Cmd ( 0 , 513 , 0 , GetScriptAreaParams( "gaz_zone4" ));
+	
+	Wait ( 1 );
+	
+	SCRunTime( "s4f3_1" , "s5f1", 0);
+	
+	LandReinforcementFromMap ( 2 , "1" , 2 , 105 );
+	
+	Cmd ( 0 , 105 , 0 , GetScriptAreaParams( "go5" ));
+	
+	LandReinforcementFromMap ( 2 , "1" , 5 , 512 );
+	
+	Cmd ( 0 , 512 , 0 , GetScriptAreaParams( "gaz_zone0" ));
+	
+	Wait ( 4 )
+	
+	SCRunTime( "s5f1" , "s5f2", 5);
+	
+	Wait ( 1 );
+	
+	ChangeFormation ( 513 , 0 );
+	
+	Cmd ( 9 , 512 );
+	
+	Wait ( 4 );
+	
+	SCRunTime( "s5f2" , "s5f3", 4);
+	
+	Wait ( 5 );
+	
+	SCRunTime( "s5f3" , "s5f4", 3);
+	
+	Wait ( 2 );
+	
+	Cmd ( 0 , 961 , 0 , GetScriptAreaParams( "go61" ));
+	
+	Cmd ( 0 , 962 , 0 , GetScriptAreaParams( "go62" ));
+	
+	Cmd ( 0 , 963 , 0 , GetScriptAreaParams( "go63" ));
+	
+	Wait ( 4 );
+	
+	Cmd ( 9 , 961 );
+	
+	Wait ( 1 );
+	
+	Cmd ( 9 , 962 );
+	
+	Cmd ( 9 , 963 );
+	
+	Wait ( 1 );
+	
+	HideMovieBorder ( );
+	
+	Wait ( 3 );
+
+	SCReset ();
+	
+end;
+
+function Film()
+
+	LandReinforcementFromMap( 1, "pz_iv_ausf_d", 1, 2 ); 
+
+	Wait( 12 );
+
+	SetScriptObjectHPs ( 638, 0 );
+
+	Wait( 3 );
+
+	SetScriptObjectHPs ( 639, 0 );
+
+	Wait( 2 );
+
+	SetScriptObjectHPs ( 640, 0 );
+
+	Wait( 22 );
+
+	SCRunTime( "s1f1_2", "s1f1_3", 15);
+
+	Wait( 15 );
+
+	SCRunTime( "s1f1_3", "s1f1_4", 10);
+
+	ViewZone("at0",1);
+
+	Wait( 2 );
+
+	Cmd( ACT_SWARM, 2, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 8 );
+
+	SCRunTime( "s1f1_4", "s1f1_5", 20);
+
+	Wait( 5 );
+
+	StartThread( sk2_1 );
+
+	Wait( 10 );
+
+	StartThread( s2 );
+
+	return 1;
+
+end;
+
+function cam()
+
+ViewZone("vdrz",1);
+
+ChangePlayerForScriptGroup( 12, 2);
+
+
+
+StartThread( s1 );
+
+StartThread( sk1_1 );
+
+StartThread( sk1_2 );
+
+StartThread( sk1_3 );
+
+return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ???? ????? ??????
+
+---------------------------------------------------------------------------------
+
+function gam()
+
+ViewZone("vdrz",0);
+
+StartThread( lse1 );
+
+StartThread( Unlucky );
+
+StartThread( zd1 );
+
+StartThread( Attack0 );
+
+StartThread( vzon1 );
+
+return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--??????? ????????? ???????? ("?? ???? ?? ?????????") 
+
+---------------------------------------------------------------------------------
+
+function Effect()
+
+	while 1 do
+
+		Wait( 3 );
+
+	PlayEffect( "GroundExplosionWinter02", 1736, 4708);
+
+		Wait( 3 );
+
+	PlayEffect( "71", 1736, 4737);
+
+		Wait( 3 );
+
+	PlayEffect( 74, 1736, 4708);
+
+		Wait( 3 );
+
+	PlayEffect( GroundExplosionWinter02, 1736, 4708);
+
+		Wait( 3 );
+
+	PlayEffect( "71", GetScriptAreaParams( "gz0" ));
+
+		Wait( 3 );
+
+	PlayEffect( 74, GetScriptAreaParams( "gz0" ));
+
+		Wait( 3 );
+
+	PlayEffect( "GroundExplosionWinter02", GetScriptAreaParams( "gz0" ));
+
+		Wait( 3 );
+
+	PlayEffect( GroundExplosionWinter02, GetScriptAreaParams( "gz0" ));
+
+		end;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ????? ?1 ?????? + ??????? (???????? ????? ????????? ??? ?????)
+
+---------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------
+
+--?????? ?????? ????? N1 
+
+---------------------------------------------------------------------------------
+
+function sk1_1()
+
+	Wait( 5 );
+
+	ChangeFormation (312, 0);
+
+ 	Cmd( ACT_MOVE, 412, 50, GetScriptAreaParams( "gaz_zone2") );
+
+	Wait( 2 );
+
+	Cmd( ACT_MOVE, 412, 50, GetScriptAreaParams( "gaz_zone1" ) );
+
+	Wait( 3 );
+
+	Cmd( ACT_MOVE, 412, 50, GetScriptAreaParams( "gaz_zone0" ) );
+
+	Wait( 9 );
+
+	Cmd( ACT_UNLOAD, 412, 1, GetScriptAreaParams( "gaz_zone0" ) );
+
+	Wait( 3 );
+
+	Cmd( ACT_MOVE, 312, 1, GetScriptAreaParams( "gz0" ) );
+
+	Wait( 5 );
+
+	--Cmd ( ACT_ROTATE, 312, 50, GetScriptAreaParams( "a1" ) );
+
+	Wait( 1 );
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ?????? ????? N2 
+
+---------------------------------------------------------------------------------
+
+function sk1_2()
+
+	Wait( 23 );
+
+	ChangeFormation (310, 0);
+
+	Cmd( ACT_MOVE, 410, 50, GetScriptAreaParams( "gaz_zone_1" ) );
+
+	Wait( 3 );
+
+	SetScriptObjectHPs ( 642, 0 );
+
+	Wait( 3 );
+
+	Cmd( ACT_UNLOAD, 410, 1, GetScriptAreaParams( "gaz_zone_1" ) );
+
+	Wait( 1 );
+
+	Cmd( ACT_MOVE, 310, 1, GetScriptAreaParams( "gz1" ) );
+
+	Wait( 5 );
+
+	--Cmd ( ACT_ROTATE, 310, 50, GetScriptAreaParams( "a1" ) );
+
+	Wait( 1 );
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ?????? ????? N3 + ???? ??2  
+
+---------------------------------------------------------------------------------
+
+function sk1_3()
+
+	Wait( 24 );
+
+	ChangeFormation (311, 2);
+
+	Cmd( ACT_MOVE, 411, 5, GetScriptAreaParams( "gaz_zone3" ) );
+
+	Wait( 14 );
+
+	Cmd( ACT_MOVE, 510, 5, GetScriptAreaParams( "t_kv2" ) );
+
+	Wait( 6 );
+
+	Cmd( ACT_MOVE, 411, 1, GetScriptAreaParams( "gaz_zone3" ) );
+
+	Wait( 1 );
+
+	Cmd( ACT_UNLOAD, 411, 1, GetScriptAreaParams( "gaz_zone4" ) );
+
+	SetScriptObjectHPs ( 641, 0 );
+
+	Wait( 1 );
+
+	SetScriptObjectHPs ( 411, 0 );
+
+	SetScriptObjectHPs ( 311, 1 );
+
+	Wait( 1 );
+
+	Cmd( ACT_MOVE, 311, 1, GetScriptAreaParams( "gz2" ) );
+
+	--ChangeFormation (311, 2);
+
+	Cmd ( ACT_ROTATE, 310, 50, GetScriptAreaParams( "gaz_zone3" ) );
+
+	Cmd ( ACT_ROTATE, 312, 50, GetScriptAreaParams( "gaz_zone3" ) );
+
+	Wait( 2 );
+
+	--SetScriptObjectHPs ( 311, 0 );
+
+	Wait( 1 );
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ????? ?2 ?????? (?????? ???????  ??????? N2)
+
+---------------------------------------------------------------------------------
+
+function s2()
+
+	SCRunTime( "s2f1_1", "s2f1_1", 5)
+
+	Wait( 5 );
+
+	SCRunTime( "s2f1_1", "s2f1_2", 20)
+
+	Wait( 20 );
+
+	SCRunTime( "s2f1_2", "s3f1_1", 20)
+
+	Wait( 20 );
+
+	SCRunTime( "s3f1_1", "s3f1_1", 20)
+
+	Wait( 10 );
+
+	SCRunTime( "s3f1_1", "s3f2_1", 20)
+
+	Wait( 20 );
+
+	StartThread( sk3_1 );
+
+	StartThread( s3 );
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ????? ?2 ?????? (?????? ???????  ??????? N2)
+
+---------------------------------------------------------------------------------
+
+function sk2_1()
+
+ChangePlayerForScriptGroup( 752, 1); -- 1
+
+ChangePlayerForScriptGroup( 753, 1); -- 1
+
+--ChangePlayerForScriptGroup( 754, 1);
+
+--ChangePlayerForScriptGroup( 755, 1);
+
+ChangePlayerForScriptGroup( 798, 1); -- 1
+
+ChangePlayerForScriptGroup( 799, 1); -- 1
+
+--ChangePlayerForScriptGroup( 800, 1);
+
+
+
+	Cmd( ACT_MOVE, 754, 50, GetScriptAreaParams( "np1" ) );
+
+	Wait( 1 );
+
+	Cmd( ACT_MOVE, 800, 50, GetScriptAreaParams( "nt1" ) );
+
+	Wait( 1 );
+
+	Cmd( ACT_MOVE, 755, 50, GetScriptAreaParams( "np2" ) );
+
+	Wait( 15 );
+
+	Cmd( ACT_MOVE, 752, 50, GetScriptAreaParams( "np3" ) );
+
+	Cmd( ACT_MOVE, 753, 50, GetScriptAreaParams( "np4" ) );
+
+	Wait( 7 );
+
+	Cmd( ACT_MOVE, 798, 50, GetScriptAreaParams( "np1" ) );
+
+	Wait( 3 );
+
+	Cmd( ACT_MOVE, 799, 50, GetScriptAreaParams( "nt2" ) );
+
+	Wait( 8 );
+
+	Cmd( ACT_MOVE, 798, 50, GetScriptAreaParams( "nb1" ) );
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ????? ?3 ?????? (?????? ???????  ??????? N3)
+
+---------------------------------------------------------------------------------
+
+function s3()
+
+	SCRunTime( "s4f1_1", "s4f1_1", 15)
+
+	Wait( 15 );
+
+	SCRunTime( "s4f1_1", "s4f2_1", 25)
+
+	Wait( 25 );
+
+	SCRunTime( "s4f2_1", "s4f3_1", 30, 1, 200 )
+
+	Wait( 30 );
+
+	Wait( 3 );
+
+	SCRunTime( "game_cam", "game_cam", 3)
+
+	Wait( 3 );
+
+	SCReset()
+
+	Wait( 1 );
+
+	StartThread( gam );
+
+return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--?????? ????? ?3 ?????? (?????? ???????  ??????? N3)
+
+---------------------------------------------------------------------------------
+
+function sk3_1()
+
+--ChangePlayerForScriptGroup( 910, 1);
+
+--ChangePlayerForScriptGroup( 914, 1);
+
+ChangePlayerForScriptGroup( 915, 1);
+
+ChangePlayerForScriptGroup( 916, 1);
+
+ChangePlayerForScriptGroup( 917, 1);
+
+ChangePlayerForScriptGroup( 918, 1);
+
+
+
+	Cmd( ACT_MOVE, 910, 1, GetScriptAreaParams( "nt3" ) );
+
+	Wait( 5 );
+
+	Cmd( ACT_MOVE, 918, 1, GetScriptAreaParams( "nt3" ) );
+
+	Wait( 1 );
+
+	Cmd( ACT_MOVE, 917, 1, GetScriptAreaParams( "nt3" ) );
+
+	Wait( 4 );
+
+	Cmd( ACT_MOVE, 916, 1, GetScriptAreaParams( "nt4" ) );
+
+	Cmd( ACT_MOVE, 915, 1, GetScriptAreaParams( "np5" ) );
+
+	Wait( 2 );
+
+	Cmd( ACT_MOVE, 910, 1, GetScriptAreaParams( "na1" ) );
+
+	Wait( 6 );
+
+	Cmd( ACT_MOVE, 918, 1, GetScriptAreaParams( "nt3_1" ) );
+
+
+
+	Wait( 30 );
+
+	Cmd ( ACT_ROTATE, 910, 1, GetScriptAreaParams( "nt1" ) );
+
+	Cmd ( ACT_ROTATE, 918, 1, GetScriptAreaParams( "nt1" ) );
+
+	Cmd ( ACT_ROTATE, 917, 1, GetScriptAreaParams( "nt1" ) );
+
+
+
+	return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--??????? ????? ? ???? ?????????  ???? ?????? ??????? 
+
+---------------------------------------------------------------------------------
+
+function vzon1()
+
+	ViewZone("a2",1);
+
+        --ChangePlayerForScriptGroup( 10, 2);
+
+        --ChangePlayerForScriptGroup( 11, 2);
+
+        --ChangePlayerForScriptGroup( 12, 2);
+
+	--ChangePlayerForScriptGroup( 510, 2);
+
+         GiveObjective( 0 );
+
+         Wait( 5 );
+
+	StartThread( zd0 );
+
+	    return 1;
+
+end;
+
+
+
+---------------------------------------------------------------------------------
+
+--???????? ????????? ??????? + ??????? ?????????? ???????? ???????? 
+
+---------------------------------------------------------------------------------
+
+function zd0()
+
+
+
+	if ( GetNUnitsInArea( 0, "a1", 0 ) &gt; 0 ) then
+
+                Wait( 3 );
+
+				ChangePlayerForScriptGroup( 10, 0);
+
+				ChangePlayerForScriptGroup( 11, 0);
+
+				ChangePlayerForScriptGroup( 12, 0);
+
+				ChangePlayerForScriptGroup( 510, 0);
+
+				ChangePlayerForScriptGroup( 410, 0);
+
+				ChangePlayerForScriptGroup( 310, 0);
+
+				ChangePlayerForScriptGroup( 411, 0);
+
+				ChangePlayerForScriptGroup( 311, 0);
+
+				ChangePlayerForScriptGroup( 412, 0);
+
+				ChangePlayerForScriptGroup( 312, 0);
+
+		StartThread( mt1 );
+
+		StartThread( mt2 );
+
+		ViewZone("a2",0);   
+
+		 Wait( 3 );
+
+		CompleteObjective( 0 );
+
+		 Wait( 3 );  		
+
+        GiveObjective( 1 );
+
+	    return 1;  
+
+    end;
+
+end;
+
+---------------------------------------------------------------------------------
+
+-- ????? ?? ????????? 
+
+---------------------------------------------------------------------------------
+
+
+
+function Attack0()
+
+--LandReinforcementFromMap( 0, "t_34_76", 1, 120 ); 
+
+LandReinforcementFromMap( 1, "pz_ii_ausf_f", 1, 19 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 1, 19 );
+
+--LandReinforcementFromMap( 1, "german_main_1", 1, 18 );
+
+
+
+	Wait( 3 );
+
+	Cmd( ACT_SWARM, 18, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 30 );
+
+	Cmd( ACT_SWARM, 19, 256, GetScriptAreaParams( "a1" ) ); 
+
+	StartThread( Attack1 );
+
+	    return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+function Attack1()
+
+	Wait( 20 );
+
+LandReinforcementFromMap( 1, "pz_iv_ausf_d", 0, 20 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 0, 24 );
+
+--LandReinforcementFromMap( 1, "german_main_1", 0, 24 );
+
+	Wait( 30 );
+
+	Cmd( ACT_SWARM, 20, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 10 );
+
+	Cmd( ACT_SWARM, 24, 256, GetScriptAreaParams( "a1" ) );      
+
+	StartThread( Attack2 );
+
+	    return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+function Attack2()
+
+	Wait( 20 );
+
+--LandReinforcementFromMap( 1, "pz_iv_ausf_d", 1, 21 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 1, 25 );
+
+LandReinforcementFromMap( 1, "pz_ii_ausf_f", 1, 25 );
+
+--LandReinforcementFromMap( 1, "german_main_1", 1, 25 );
+
+	Wait( 30 );
+
+	Cmd( ACT_SWARM, 21, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 10 );
+
+	Cmd( ACT_SWARM, 25, 256, GetScriptAreaParams( "a1" ) );
+
+
+
+	StartThread( Attack3 );
+
+	    return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+function Attack3()
+
+	Wait( 20 );
+
+LandReinforcementFromMap( 1, "pz_iv_ausf_d", 0, 22 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 0, 26 );
+
+--LandReinforcementFromMap( 1, "german_main_1", 0, 26 );
+
+--LandReinforcementFromMap( 1, "pz_ii_ausf_f", 0, 26 );
+
+	Wait( 30 );
+
+	Cmd( ACT_SWARM, 22, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 10 );  
+
+    Cmd( ACT_SWARM, 26, 256, GetScriptAreaParams( "a1" ) );
+
+	StartThread( Attack4 );
+
+	    return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+function Attack4()
+
+	Wait( 60 );
+
+--LandReinforcementFromMap( 1, "pz_iv_ausf_d", 0, 23 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 0, 23 );
+
+--LandReinforcementFromMap( 1, "german_main_1", 0, 23 );
+
+--LandReinforcementFromMap( 1, "pz_iv_ausf_d", 1, 23 ); 
+
+--LandReinforcementFromMap( 1, "german_main_2", 1, 27);
+
+--LandReinforcementFromMap( 1, "german_main_1", 1, 23 );
+
+LandReinforcementFromMap( 1, "pz_ii_ausf_f", 1, 27 );
+
+	Wait( 30 );
+
+	Cmd( ACT_SWARM, 23, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 30 );
+
+    Cmd( ACT_SWARM, 27, 256, GetScriptAreaParams( "a1" ) );
+
+	Wait( 30 );
+
+	StartThread( Attack0 );
+
+	    return 1;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--????? ??????
+
+---------------------------------------------------------------------------------
+
+function mt1()
+
+	while 1 do
+
+
+
+		Wait( 5 );
+
+
+
+  	    	if (GetNUnitsInArea( 1, 'mst1', 0 ) &lt; 1) then
+
+		Wait( 3 );
+
+		LandReinforcementFromMap( 1, "pz_iv_ausf_d", 3, 91 ); 
+
+		Wait( 3 );
+
+		Cmd( ACT_SWARM, 91, 256, GetScriptAreaParams( "mst1" ) );
+
+		Wait( 3 );
+
+		SetScriptObjectHPs ( 110, 0 );
+
+		break;	
+
+		end;
+
+	end;
+
+end;
+
+
+
+function mt2()
+
+	while 1 do
+
+
+
+		Wait( 5 );
+
+
+
+  	    	if (GetNUnitsInArea( 1, 'mst2', 0 ) &lt; 1) then
+
+		Wait( 3 );
+
+		LandReinforcementFromMap( 1, "pz_iv_ausf_d", 2, 91 ); 
+
+		Wait( 3 );
+
+		Cmd( ACT_SWARM, 92, 256, GetScriptAreaParams( "mst2" ) );
+
+		Wait( 3 );
+
+		SetScriptObjectHPs ( 120, 0 );
+
+		Wait( 3 );
+
+		break;	
+
+		end;
+
+
+
+
+
+	end;
+
+end;
+
+
+
+---------------------------------------------------------------------------------
+
+--???????? ????????? ??????? 2 
+
+---------------------------------------------------------------------------------
+
+function zd1()
+
+
+
+z1 = GetNScriptUnitsInArea( 10, "ext1", 0 );
+
+z2 = GetNScriptUnitsInArea( 10, "ext", 0 );
+
+z3 = GetNScriptUnitsInArea( 510, "ext1", 0 );
+
+z4 = GetNScriptUnitsInArea( 510, "ext", 0 );
+
+
+
+zone = (z1 + z2 + z3 + z4)
+
+
+
+	if ( zone &gt; 4) then
+
+		CompleteObjective( 1 );	
+
+		Wait( 3 );
+
+	        Win( 0 );
+
+	    return 1;  
+
+    end;
+
+end;
+
+---------------------------------------------------------------------------------
+
+--Game Over (???? ???????? ?? ????????)
+
+---------------------------------------------------------------------------------
+
+
+
+function lse1()
+
+	while 1 do
+
+		Wait( 3 );
+
+        if (GetNUnitsInScriptGroup( 10 ) + GetNUnitsInScriptGroup( 510 ) &lt; 5)  then
+
+			Win(1);
+
+			break;
+
+		end;
+
+	end;
+
+end;
+
+
+
+
+
+function Unlucky()
+
+	while 1 do
+
+		Wait( 3 );
+
+        if (GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft( 0 )) then
+
+			Win(1);
+
+			break;
+
+		end;
+
+	end;
+
+end;
+
+StartThread( s1 );
+</ScriptText>
+</Script>

@@ -1,0 +1,184 @@
+function RevealObjective()
+    DisplayTrace("StartMission");
+    Wait(5);
+	GiveObjective(0);
+	Wait(10);
+	GiveObjective(1);
+end;
+
+function Recon() 	
+	Wait ( 3 )
+	CmdMultiple(ACT_SWARM, 12000, 2300, 1185)
+	QCmd(ACT_SWARM, 12000, 2633, 3676)
+	QCmd(ACT_SWARM, 12000, 2630, 5051)
+	QCmd(ACT_SWARM, 12000, 5443, 5841)
+	QCmd(ACT_SWARM, 12000, 3366, 3819)
+	QCmd(ACT_SWARM, 12000, 1566, 3109)
+	QCmd(ACT_SWARM, 12000, 2300, 1185)
+	Wait ( 5 );	
+end;
+
+function Recon_Go()
+	while 1 do
+		Wait(5)
+		if((GetNUnitsInArea(1 , "SP") >=1) and (GetNUnitsInScriptGroup( 12000 ) >0)) then
+		Wait(3)
+		StartThread( Recon )
+		Wait(1)
+		end;
+	end;
+end;
+
+function Air_Recon()
+	while 1 do	
+		Wait(5)
+		if(GetNUnitsInArea(0, "Factory") >=1) then
+		Wait(5)
+		LandReinforcement(696, 1, 2548, 6403)
+		break
+		end;
+	end;
+end;
+
+function CObjective0()
+	while 1 do
+		Wait(3)
+		if(GetNUnitsInScriptGroup(2000, 1) <= 1) then
+		Wait(3)
+		CompliteObjective(0)
+		break
+		end;
+		Wait(1)	
+	end;
+end;
+
+
+
+function Evil_General()
+	while 1 do
+		Wait(3)
+		if((GetNUnitsInArea(0, "City") >= 1) and (tmpold == { 1, 1 }) and (tmpold1 == { 1, 1 })) then
+		Wait (5)
+		LandReinforcement(1, 695, 0, 3000)
+		Wait (5)
+		Cmd(ACT_SWARM, 3000, 6177, 848)
+		Wait (1)
+		QCmd(ACT_SWARM, 3000, 6221, 2381)
+		Wait (1)
+		QCmd(ACT_SWARM, 3000, 7237, 2464)
+		Wait (1)
+		QCmd(ACT_SWARM, 3000, 7502, 322)		
+			if(GetNUnitsInArea(0, "City") <= 0) then
+			Wait(1)
+			Cmd(ACT_REST, 3000, 6206, 893)
+			Wait(1)
+			end;
+		break
+		end;
+		Wait (1)
+	end;
+end;
+
+----------///Win//------------
+
+function Winner()
+	while 1 do
+		Wait(3)
+		if ((GetNUnitsInScriptGroup(2000, 1) <= 0) and (GetNUnitsInScriptGroup(8000, 1) <= 0) and (GetNUnitsInScriptGroup(3000, 1))) then
+		Wait ( 5 )
+		CompliteObjective(1)
+		Win ( 0 )
+		break
+		end;
+		Wait(1)
+	--return 1 
+	end;	
+end;
+
+-------------//Loose//-----------------
+
+function Looser()
+	while 1 do
+		Wait(3)
+		if ((GetNUnitsInParty(0) <= 0) and (GetReinforcementCallsLeft(0) == 0)) then
+		Wait ( 5 )
+		Win ( 1 )
+		break
+		end;
+		Wait(1)
+	--return 1 
+	end;	
+end;
+
+function Bridge_Kaput()
+	while 1 do
+		Wait(3)
+		if((GetNUnitsInScriptGroup(1000) <= 0) and (GetNUnitsInScriptGroup(1500) <=0 ))then
+		Wait ( 5 )
+		Win ( 1 )
+		break
+		end;
+		Wait(1)
+	--return 1 
+	end;
+end;
+
+-------------------//Key Building//--------------
+
+function KeyBuilding_Flag()
+local tmpold = { 1, 1 };
+local tmp;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 1 do
+		if ( GetNUnitsInScriptGroup( i + 500, 0 ) == 1 ) then
+			tmp = 0;
+		elseif ( ( GetNUnitsInScriptGroup( i + 500, 1 ) + GetNUnitsInScriptGroup( i + 500, 2 ) ) == 1 ) then
+			tmp = 1;
+		end;
+		if ( tmp ~= tmpold[i] ) then
+			if ( tmp == 0 ) then
+				DamageScriptObject( 700 + i, 50 );
+			else
+				DamageScriptObject( 700 + i, -50 );
+			end;
+			tmpold[i] = tmp;
+		end;
+	end;
+	end;
+end;
+
+-------------------------
+
+function KeyBuilding_Flag1()
+local tmpold1 = { 1, 1 };
+local tmp1;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 1 do
+		if ( GetNUnitsInScriptGroup( i + 501, 0 ) == 1 ) then
+			tmp1 = 0;
+		elseif ( ( GetNUnitsInScriptGroup( i + 501, 1 ) + GetNUnitsInScriptGroup( i + 501, 2 ) ) == 1 ) then
+			tmp1 = 1;
+		end;
+		if ( tmp1 ~= tmpold1[i] ) then
+			if ( tmp1 == 0 ) then
+				DamageScriptObject( 701 + i, 50 );
+			else
+				DamageScriptObject( 701 + i, -50 );
+			end;
+			tmpold1[i] = tmp1;
+		end;
+	end;
+	end;
+end;
+
+StartThread( RevealObjective )
+StartThread( Recon_Go )
+StartThread( CObjective0 )
+StartThread( Evil_General )
+StartThread( Winner )
+StartThread( Looser )
+StartThread( Bridge_Kaput )
+StartThread( KeyBuilding_Flag )
+StartThread( KeyBuilding_Flag1 )

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000046">
+	<FileName />
+	<ScriptText>
+
+function RevealObjective0()
+	Wait(1);
+	GiveObjective( 0 );
+	StartThread( Objective0 );
+end;
+
+
+function Objective0() 
+	while 1 do
+		Wait( 2 );
+			if ( GetNUnitsInScriptGroup( 500, 1 ) &lt; 2 ) then
+			Wait( 1 );
+			CompleteObjective( 0 );
+			SetIGlobalVar( &quot;temp.Objective0&quot;, 2 );
+			StartThread( RevealObjective1 );
+			break;
+		end;
+	end;
+end;
+
+------------------------------------
+
+function RevealObjective1()
+	Wait(1);
+	GiveObjective( 1 );
+	StartThread( Objective1 );
+end;
+
+function Objective1() 
+	while 1 do
+		Wait( 2 );
+			if ((GetNUnitsInArea(1, &quot;BASE&quot;,0) &lt; 1) and (GetNUnitsInArea(0, &quot;BASE&quot;,0) &gt; 0 )) then
+			Wait( 1 );
+			CompleteObjective( 1 );
+			SetIGlobalVar( &quot;temp.Objective1&quot;, 2 );
+			StartThread( RevealObjective2 );
+			StartThread( Defead );
+			break;
+		end;
+	end;
+end;
+
+-----------------------------------
+
+function RevealObjective2()
+	Wait(1);
+	GiveObjective( 2 );
+	StartThread( Objective2 );
+end;
+
+function Objective2() 
+	while 1 do
+		Wait( 2 );
+			if (GetNUnitsInArea(1, &quot;RUS_LOCATION&quot;,0) &lt; 1) then
+			Wait( 1 );
+			CompleteObjective( 2 );
+			SetIGlobalVar( &quot;temp.Objective1&quot;, 2 );
+			CompleteObjective( 2 );
+			Wait( 1 );
+			Win( 0 );
+			break;
+		end;
+	end;
+end;
+
+------------------------------Defeats
+
+function Sniper_dead() 
+	while 1 do
+		Wait( 2 );
+			if (( GetNUnitsInScriptGroup( 111, 0 ) &lt; 1 ) and (GetIGlobalVar(&quot;temp.Objective0&quot;, 1) ~= 2) and (GetIGlobalVar(&quot;temp.Objective1&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			Win( 1 );
+			break;
+		end;
+	end;
+end;
+
+function Defead()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(3);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+---------------------------------------------
+
+function All_art() 
+	while 1 do
+		Wait( 2 );
+			if (GetNScriptUnitsInArea(111, &quot;ART&quot;) &gt; 0) then
+			Wait( 1 );
+			Cmd (32, 211, 0, 6642, 700 );
+			Cmd (32, 212, 0, 6830, 731 );
+			Cmd (32, 213, 0, 7068, 743 );
+			break;
+		end;
+	end;
+end;
+
+-----------------------------------------------
+
+function Oficers() 
+	while 1 do
+		Wait( 2 );
+			if (GetNScriptUnitsInArea(500, &quot;ART_2&quot;) &lt; 5) then
+			Wait( 1 );
+			Cmd (4, 47, 55 );
+			Cmd (4, 46, 55 );
+			StartThread( Oficers_2 );
+			break;
+		end;
+	end;
+end;
+
+function Oficers_2() 
+	Wait( 4 );
+	Cmd( 0, 55, 800, GetScriptAreaParams( &quot;RUS_LOCATION&quot; ) );
+end;
+
+function Oficers_3() 
+	while 1 do
+		Wait( 2 );
+			if ( GetNUnitsInScriptGroup( 88 ) &lt; 1 ) then
+			Wait( 1 );
+			Cmd( 3, 89, 100, GetScriptAreaParams( &quot;P2&quot; ) );
+			break;
+		end;
+	end;
+end;
+
+-----------------------------------------------
+
+function Patrol() 
+	while 1 do
+		Wait( 2 );
+			if ( GetNUnitsInScriptGroup( 93 ) &gt; 0 ) then
+			Wait( 2 );
+			StartThread( P_go );
+			break;
+		end;
+	end;
+end;
+
+function P_go () 
+	Cmd( 3, 93, 100, GetScriptAreaParams( &quot;P1&quot; ) );
+	QCmd( 3, 93, 100, GetScriptAreaParams( &quot;P2&quot; ) );
+	QCmd( 3, 93, 100, GetScriptAreaParams( &quot;P3&quot; ) );
+	Wait( 50 );
+	StartThread( Patrol );
+end;
+
+-----------------------------------------------
+
+function All_SUP_1() 
+	while 1 do
+		Wait( 2 );
+			if (GetIGlobalVar(&quot;temp.Objective1&quot;, 1) == 2) then
+			Wait( 3 );
+			Cmd( ACT_SUPPRESS, 211, 100, 2325, 2779 );
+			Cmd( ACT_SUPPRESS, 212, 100, 2325, 2779 );
+			Cmd( ACT_SUPPRESS, 213, 100, 2325, 2779 );
+			Wait( 50 );
+			StartThread( All_SUP_2 );
+			break;
+		end;
+	end;
+end;
+
+function All_SUP_2() 
+	Cmd( ACT_SUPPRESS, 211, 100, 4160, 2576 );
+	Cmd( ACT_SUPPRESS, 212, 100, 4160, 2576 );
+	Cmd( ACT_SUPPRESS, 213, 100, 4160, 2576 );
+	Wait( 50 );
+	StartThread( All_STOP );
+end;
+
+function All_STOP() 
+	StartThread( All_ATTACK_1 );
+	Cmd( ACT_ROTATE, 211, 100, 2738, 6602 );
+	Cmd( ACT_ROTATE, 212, 100, 2738, 6602 );
+	Cmd( ACT_ROTATE, 213, 100, 2738, 6602 );
+end;
+
+------------------------------------------------
+
+function All_ATTACK_1() 
+	LandReinforcementFromMap( 2, &quot;INF1&quot;, 0, 801 );
+	LandReinforcementFromMap( 2, &quot;INF1&quot;, 1, 802 );
+	LandReinforcementFromMap( 2, &quot;INF1&quot;, 2, 803 );
+	ChangeFormation( 801, 3 );
+	ChangeFormation( 802, 3 );
+	ChangeFormation( 803, 3 );
+	Wait( 5 );
+	Cmd( 3, 801, 0, GetScriptAreaParams( &quot;A1&quot; ) );
+	Cmd( 3, 802, 0, GetScriptAreaParams( &quot;A2&quot; ) );
+	Cmd( 3, 803, 0, GetScriptAreaParams( &quot;A3&quot; ) );
+	QCmd( 3, 801, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	QCmd( 3, 802, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	QCmd( 3, 803, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	StartThread( All_ATTACK_2 );
+end;
+
+function All_ATTACK_2() 
+	Wait( 10 );
+	LandReinforcementFromMap( 2, &quot;T1&quot;, 0, 804 );
+	LandReinforcementFromMap( 2, &quot;T1&quot;, 1, 805 );
+	LandReinforcementFromMap( 2, &quot;T1&quot;, 2, 806 );
+	Wait( 5 );
+	LandReinforcementFromMap( 1, &quot;RUS_IL&quot;, 0, 9061 );
+	Cmd( 3, 9061, 0, GetScriptAreaParams( &quot;A2&quot; ) );
+	Cmd( 3, 804, 0, GetScriptAreaParams( &quot;A1&quot; ) );
+	Cmd( 3, 805, 0, GetScriptAreaParams( &quot;A2&quot; ) );
+	Cmd( 3, 806, 0, GetScriptAreaParams( &quot;A3&quot; ) );
+	QCmd( 3, 804, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	QCmd( 3, 805, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	QCmd( 3, 806, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+end;
+
+----------------------------------------
+
+function Air_Attack() 
+	while 1 do
+		Wait( 2 );
+			if (GetNUnitsInArea(0, &quot;RUS_LOCATION&quot;,0) &gt; 1) then
+			Wait( 1 );
+			LandReinforcementFromMap( 1, &quot;RUS_IL&quot;, 0, 9062 );
+			Cmd( 3, 9061, 0, GetScriptAreaParams( &quot;RUS_LOCATION&quot; ) );
+			break;
+		end;
+	end;
+end;
+
+-------------------------------------------Main
+
+StartThread( All_art );
+StartThread( RevealObjective0 );
+StartThread( Sniper_dead );
+StartThread( All_SUP_1 );
+StartThread( Oficers );
+StartThread( Oficers_3 );
+StartThread( Patrol );
+StartThread( Air_Attack );
+
+
+
+
+
+</ScriptText>
+</Script>

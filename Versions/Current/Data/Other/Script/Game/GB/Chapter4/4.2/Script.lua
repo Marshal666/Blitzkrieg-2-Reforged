@@ -1,0 +1,441 @@
+missionend = 0;
+BridgeEnemy = 1;
+Para = 200;  -- script ID
+Para1 = 201; -- script ID
+Dot = 111;
+Disp = 50;
+USA_Para = '0' --1010 reinforcement ID
+Tiger = 137;
+
+function Bridge_flag()
+local k=0;
+	while 1 do
+		if BridgeEnemy then
+			while k<3 do
+			 if ( GetNUnitsInArea ( 0, "Bridge", 0)>0 ) and ( GetNUnitsInArea ( 1, "Bridge", 0 )<=0 ) then
+				k=k+1;
+				Trace("BridgeEnemy");
+			 else
+				k=0;
+			 end;
+			 Wait(10);
+			end;
+			BridgeEnemy = 0;
+			Trace("BridgeEnemy = 0");
+		else
+			while k<3 do
+			 if  ( GetNUnitsInArea ( 1, "Bridge", 0)>0 ) and ( GetNUnitsInArea ( 0, "Bridge", 0 )<=0 ) then
+				k=k+1;
+				Trace("BridgeOurs");
+			 else
+				k=0;
+			 end;
+			 Wait(10);
+			end;
+			BridgeEnemy = 1;
+			Trace("BridgeEnemy = 1");
+		end;
+		k=0;
+		Wait(3);
+	end;
+end;
+
+function Objective0()
+	if ( BridgeEnemy == 0 ) and ( GetIGlobalVar( "temp.objective.0", 0 ) == 1 ) then
+		CompleteObjective( 0 );
+		Wait( 3 );
+		if ( GetIGlobalVar( "temp.objective.1", 0 ) ~= 1 ) then
+			GiveObjective( 1 );
+		end;
+	end;
+	
+	if BridgeEnemy == 1 and ( GetIGlobalVar( "temp.objective.0", 0 ) == 2 ) then
+		Wait( 3 );
+		GiveObjective( 0 );
+	end;
+	
+	if ( GetNUnitsInScriptGroup( 1111 ) == 0 ) then -- bridge is destroyed
+		FailObjective( 0 );
+		return 1;
+	end;
+end;
+
+function Objective1()
+local k=0;
+	while k<15 do
+		if ( GetNUnitsInArea( 1, "Defence", 0 ) < 1 ) and ( GetIGlobalVar( "temp.objective.1", 0 ) == 1 ) then
+			k=k+1;
+		else
+			k=0;
+		end;
+		Wait(10);
+    end;
+    
+    CompleteObjective( 1 );
+	missionend = 1;
+	Wait( 3 );
+	return 1;
+end;
+
+function WinCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( GetIGlobalVar( "temp.objective.1", 0 ) == 2 ) then
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			missionend = 1;
+		end;
+	end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( ( GetNUnitsInParty( 0 ) <= 0 ) and ( GetReinforcementCallsLeft( 0 ) == 0 ) ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 1 );
+			return
+		end;
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) == 3 ) then
+				missionend = 1;
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				return
+			end;
+		end;
+	end;
+end;
+
+function PDrop1()
+while 1 do
+	if ( GetIGlobalVar( "temp.objective.0", 0 ) == 1 ) then
+		Wait(5);
+		LandReinforcementFromMap(2, USA_Para, 0, Para);
+		Wait(Random(3));
+		Trace("Cmd at %g",GetGameTime());
+		Cmd( 5, Para, 0, GetScriptAreaParams( "ParaArea" ) );
+			local combat_area = "P1_2"
+			local units = GetObjectListArray( Para );
+			local infantry = GetUnitsByParam( units, PT_TYPE, TYPE_INF );
+			Wait( 60 );
+			Trace("ChangeFormation to 2 at %g",GetGameTime());
+			ChangeFormation( Para, 2 );
+			Wait( 20 );
+			CmdArrayDisp( ACT_SWARM, infantry, Disp, 1200, 5608 );
+			ChangeFormation( Para, 1 );
+
+			Wait( RandomInt( 5 ) + 20 );
+				
+				StartThread( Formation, Para, combat_area );
+				
+			QCmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "P1_1" ) );
+
+			Wait( RandomInt( 5 ) + 20 );
+			QCmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "P1_2" ) );
+			while GetNScriptUnitsInArea( Para, "P1_2", 0 ) <=3 or GetNUnitsInArea( 1, "P1_2", 0 ) > 0 do
+				CmdArrayDisp( ACT_SWARM, infantry, 300, GetScriptAreaParams( "P1_2" ) );
+				Wait(20);
+			end;
+			if GetNUnitsInScriptGroup(Dot, 1) == 1 then
+				Cmd( ACT_ENTER, Para, Dot );
+				Trace("Para entering to the Dot");
+			end;
+		return 1;
+	end;
+	Wait(2);
+end;
+end;
+
+function PDrop2()
+while 1 do
+	if ( GetIGlobalVar( "temp.objective.0", 0 ) == 1 ) then
+		Wait( RandomInt( 10 ) + 20 );
+		LandReinforcementFromMap(2, USA_Para, 0, Para1);
+		Wait(Random(3));
+		Cmd( 5, Para1, 0, GetScriptAreaParams( "ParaArea" ) );
+			local combat_area = "P2_3"
+			local units = GetObjectListArray( Para1 );
+			local infantry = GetUnitsByParam( units, PT_TYPE, TYPE_INF );
+			Wait( 40 );
+			Trace("ChangeFormation to 2 at %g",GetGameTime());
+			ChangeFormation( Para1, 2 );
+			Wait( 15 );
+
+			CmdArrayDisp( ACT_SWARM, infantry, Disp, 1200, 5608 );
+			ChangeFormation( Para1, 1 );
+
+			Wait( RandomInt( 5 ) + 20 );
+				
+				StartThread( Formation, Para1, combat_area );
+				
+			QCmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "P2_1" ) );
+			Wait( RandomInt( 5 ) + 20 );
+
+			QCmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "P2_2" ) );
+
+			Wait( RandomInt( 5 ) + 20 );
+			QCmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "P2_3" ) );
+			while GetNScriptUnitsInArea( Para1, "P2_3", 0 ) <=3 or GetNUnitsInArea( 1, "P2_3", 0 ) > 0 do
+				Wait(10);
+			end;
+			if GetNUnitsInScriptGroup(Dot, 1) == 1 and GetNScriptUnitsInArea( Para, "Defence", 0 ) < 1 then
+				CmdArray( ACT_SWARM, infantry, GetScriptAreaParams( "Defence" ) );
+				while GetNUnitsInArea( 1, "Defence", 0 ) > 10 do
+					Trace("Enemy forces in DefenceArea = %g", GetNUnitsInArea( 1, "Defence", 0 ));
+					Wait(10);
+				end;
+				Cmd( ACT_ENTER, Para1, Dot );
+				Trace("Para1 entering to the Dot");
+			else
+				Cmd( ACT_ENTER, Para1, 155 );
+				Trace("Para1 entering to the church");
+			end;
+		return 1;
+	end;
+	Wait(2);
+end;
+end;
+
+function Unload( id )
+	while 1 do
+		local unload_inf = {};
+		local units = GetObjectListArray( id );
+		local attackers = GetUnitsByParam( units, PT_TYPE, TYPE_MECH );
+			unload_inf[1], unload_inf[2] = ObjectGetCoord ( attackers[ Random( attackers.n ) ] );
+		if GetNUnitsInCircle ( 0,  unload_inf[1], unload_inf[2], 1184 ) > 0 or GetNUnitsInCircle ( 2,  unload_inf[1], unload_inf[2], 1000 ) > 0 then
+			Trace("ours units near attackers = %g",GetNUnitsInCircle ( 0,  unload_inf[1], unload_inf[2], 1184 ));
+			for i = 1, attackers.n do
+				unload_inf[1], unload_inf[2] = ObjectGetCoord ( attackers[ i ] );
+				UnitCmd( ACT_UNLOAD, attackers[ i ], 0, unload_inf[1], unload_inf[2] );
+			end;
+			Wait(4);
+			ChangeFormation( id, 0 );
+			Wait(1);
+			Cmd( ACT_SWARM, id, Disp, GetScriptAreaParams( "Defence" ) );
+			Trace("ScriptID=%g unloaded and swarming to Defence", id);
+			return 1;
+		end;
+		Wait(1);
+	end;
+end;
+
+function Formation( infantry_id, script_area )
+	while ( GetNUnitsInScriptGroup( infantry_id ) > 0 ) do
+		if ( GetNScriptUnitsInArea( infantry_id, script_area, 0 ) > 0) then
+			ChangeFormation(infantry_id, 0);
+			Trace("InfID %g Formation 0",infantry_id);
+			return 1;
+		end;
+		Wait( 5 );
+	end;
+end;
+
+function EnemyAction()
+	while 1 do
+		if ( GetIGlobalVar( "temp.objective.1", 0 ) == 1 ) then
+			SetIGlobalVar("temp.nogeneral_sript", 1);
+			Wait(Random(3));
+			LandReinforcementFromMap( 1, 0, 0, 100 );
+			Wait(1);
+			LandReinforcementFromMap( 1, 0, 0, 100 );
+			Wait(RandomInt(2));
+			StartThread( Unload, 100 );
+			Cmd( ACT_SWARM, 100, 0, GetScriptAreaParams( "UnloadGerInf" ) );
+			Wait(2);
+			while GetNScriptUnitsInArea( 100, "UnloadGerInf", 0 ) <=2 do
+				Wait(2);
+			end;
+			Cmd( ACT_SWARM, 100, 0, GetScriptAreaParams( "Defence" ) );
+--			local units = GetObjectListArray( 100 );
+--			local infantry = GetUnitsByParam( units, PT_TYPE, TYPE_INF );
+--			CmdArray(ACT_SWARM, infantry, GetScriptAreaParams( "Defence" ));
+			Trace("Attack to defence!");
+			while GetNScriptUnitsInArea( 100, "Defence", 0 ) <=10 or ( GetNUnitsInArea ( 0, "Defence", 0) > 0 ) or ( GetNUnitsInArea ( 2, "Defence", 0) > 0 ) do
+				Wait(5);
+			end;
+			if GetNUnitsInScriptGroup(Dot, 1) == 0 then
+				Cmd( ACT_ENTER, 100, Dot );
+				Trace("Enemy entering to the Dot");
+			end;
+			return 1;
+		end;
+		Wait(3);
+	end;
+end;
+
+function Patrol( id, action )
+local k = 1;
+	while k <= 8 do
+		Cmd( action, id, 0, GetScriptAreaParams( "Patrol" .. k ) );
+		WaitForGroupAtArea( id, "Patrol" .. k );
+		k = k + 1;
+		if id == 125 then
+			Wait( RandomInt( 1 ) );
+		end;
+	end;
+	
+	if id == 125 then
+		Cmd( action, id, 0, GetScriptAreaParams( "Bicycle" ));
+--		Trace("ScriptID=%g going to Bicycle", id);
+	end;
+	
+	if id == 124 then
+		Cmd( action, id, 0, GetScriptAreaParams( "Patrol124" ));
+		WaitForGroupAtArea( id, "Patrol124");
+--		Trace("ScriptID=%g going to Patrol124", id);
+	end;
+	
+	if id == 123 then
+		Cmd( ACT_UNLOAD, id, 0, GetScriptAreaParams( "Patrol123" ));
+		WaitForGroupAtArea( id, "Patrol123");
+--		Trace("ScriptID=%g going to Patrol123", id);
+		Wait( RandomInt(3) );
+		Cmd(ACT_ENTER, 122, 150); -- infantry with 122 id enter in the watchtower with 150 id
+--		Trace("ScriptID=122 entering to watchtower");
+	end;
+	
+end;
+
+function DamageNeutral( id )
+	local tiger = {};
+	local elite = {};
+	local barrel = {};
+	local HP = 0;
+	local coord = {};
+	local temp_coord = {};
+	ChangeFormation( 138, 2 );
+	ChangePlayerForScriptGroup( id, 1 );
+	tiger = GetArray( GetObjectList ( id ) );
+	elite = GetArray( GetObjectList ( 138 ) );
+	barrel = GetArray( GetObjectList ( 139 ) );
+	
+		StartThread( Explosion, elite, tiger );
+	
+--	DamageObject( elite[1], 100 );
+	HP = GetObjectHPs ( tiger[1] );
+	Trace("TigerHP=%g", HP);
+	DamageObject( tiger[1], Random( HP / 4 ) + HP / 4 );
+	Trace("TigerHP=%g", GetObjectHPs ( tiger[1] ) );
+	Wait(1);
+	ChangePlayerForScriptGroup( 137, 3 );
+	coord[1], coord[2] = ObjectGetCoord(tiger[1]);
+	while GetNUnitsInCircle ( 0,  coord[1], coord[2], 1184 ) < 1 do
+		Wait(2);
+	end;
+	Trace( "ours units near tiger = %g", GetNUnitsInCircle ( 0,  coord[1], coord[2], 1184 ) );
+	if NumUnitsAliveInArray( elite ) > 0 then
+		local x = Random(2);
+		if GetNUnitsInCircle ( 0, 5785, 6827, 1184 ) < 1 and GetNUnitsInCircle ( 0, 6353, 6470, 1184 ) < 1 then
+			if x == 1 then
+				coord[1] = 5785; coord[2] = 6827;
+			else
+				coord[1] = 6353; coord[2] = 6470;
+			end;
+		elseif GetNUnitsInCircle ( 0, 6353, 6470, 1184 ) < 1 then
+			coord[1] = 6353; coord[2] = 6470;
+		elseif GetNUnitsInCircle ( 0, 5785, 6827, 1184 ) < 1 then
+			coord[1] = 5785; coord[2] = 6827;
+		end;
+		ChangePlayerForScriptGroup(138,1);
+		ChangeFormation( 138, 1 );
+		Cmd( ACT_MOVE, 138, 0, coord[1], coord[2] );
+		Wait(5);
+		Trace("Fatality1");
+		DamageObject( barrel[1], 0 );
+		DamageObject( barrel[2], 0 );
+		Wait(Random(2));
+		DamageObject( tiger[1], 0 );
+		DamageObject( barrel[3], 0 );
+		while NumUnitsAliveInArray( elite ) > 0 do
+			temp_coord[1], temp_coord[2] = ObjectGetCoord(elite[1]);
+			if len( temp_coord[1] - coord[1], temp_coord[2] - coord[2] ) < 100 then
+				RemoveArray( elite );
+			end;
+			Wait(2);
+		end;
+	end;
+end;
+
+function Explosion( inf_array, mech_array )
+	while 1 do
+		if NumUnitsAliveInArray( inf_array ) == 0  and NumUnitsAliveInArray( mech_array ) > 0 then
+			Trace("elite alive n=%g",NumUnitsAliveInArray( inf_array ));
+			Trace("tiger alive n=%g",NumUnitsAliveInArray( mech_array ));
+			DamageObject( mech_array[1], 0 );
+			Trace("Fatality2");
+			return 1;
+		end;
+		if NumUnitsAliveInArray( inf_array ) == 0  and NumUnitsAliveInArray( mech_array ) == 0 then
+			return 1;
+		end;
+		Wait(1);
+	end;
+end;
+
+function BuildingCrash( id )
+	local building = {};
+	local barrel = {};
+	local group_barrel = {};
+	local coord = {};
+	local temp = 0;
+	group_barrel = GetArray( GetObjectList ( 1020 ) );
+	temp = group_barrel.n
+	building = GetArray( GetObjectList ( id ) );
+	barrel = GetArray( GetObjectList ( id + 10 ) );
+	coord[1], coord[2] = ObjectGetCoord( building[1] );
+	while NumUnitsAliveInArray( building ) > 0 do
+		if GetNUnitsInCircle ( 0,  coord[1], coord[2], 1184 ) > 0 then
+			group_barrel = GetArray( GetObjectList ( 1020 ) );
+			temp = NumUnitsAliveInArray( GetArray( GetObjectList ( 1020 ) ) );
+--			Trace("Barrels = %g", NumUnitsAliveInArray( GetArray( GetObjectList ( 1020 ) ) ));
+			while GetNUnitsInCircle ( 0,  coord[1], coord[2], 1184 ) > 0 do
+				if temp ~= NumUnitsAliveInArray( GetArray( GetObjectList ( 1020 ) ) ) then
+					Trace("Barrels has destroyed");
+					for i = 1, group_barrel.n do
+						DamageObject( group_barrel[i], 0 );
+					end;
+					Wait(Random(2));
+					DamageObject( barrel[1], 0 );
+					Wait(1);
+					DamageObject( building[1], 2500 );
+					Trace("BildingID = %g, HP = %g", id, GetObjectHPs ( building[1] )); 
+					return 1;
+				end;
+				Wait(2);
+			end;
+		end;
+		Wait( 1 );
+	end;
+	DamageObject( barrel[1], 0 );
+end;
+
+function Check()
+	Trace("Barrels = %g", NumUnitsAliveInArray( GetArray( GetObjectList ( 1020 ) ) ));
+end;
+
+Objectives = { Objective0, Objective1 };
+Objectives_Count = 2;
+
+StartAllObjectives( Objectives, Objectives_Count );
+GiveObjective( 0 );
+StartThread( BuildingCrash, 1000 );
+StartThread( BuildingCrash, 1001 );
+StartThread( BuildingCrash, 1002 );
+StartThread( BuildingCrash, 1003 );
+StartThread( BuildingCrash, 1004 );
+StartThread( LooseCheck );
+StartThread( WinCheck );
+StartThread( Bridge_flag );
+StartThread( PDrop1 );
+Wait(1);
+StartThread( PDrop2 );
+StartThread( EnemyAction );
+StartThread( DamageNeutral, 137 );
+Wait( RandomInt( 7 ) + 7 );
+StartThread( Patrol, 125, 3 );
+Wait(2);
+StartThread( Patrol, 124, 0 );
+Wait(2);
+StartThread( Patrol, 123, 0 );

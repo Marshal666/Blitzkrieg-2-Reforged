@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="888">
+	<Type>RT_PARATROOPS</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/planegroundattack_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/ground_attack_planes/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/aviation/hs_129b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/aviation/hs_129b/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/ground_attack_planes/text.xdb#xpointer(/Text)"/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

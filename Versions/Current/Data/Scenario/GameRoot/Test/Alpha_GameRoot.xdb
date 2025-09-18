@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameRoot ObjectRecordID="5">
+	<Consts href="/consts/game/gamecontst_gameconsts.xdb#xpointer(/GameConsts)"/>
+	<Campaigns>
+		<Item href="/scenario/campaign/game/germany_campaign.xdb#xpointer(/Campaign)"/>
+		<Item href="/scenario/campaign/game/greatbritain_campaign.xdb#xpointer(/Campaign)"/>
+		<Item href="/scenario/campaign/game/usa_campaign.xdb#xpointer(/Campaign)"/>
+		<Item href="/scenario/campaign/game/ussr_campaign.xdb#xpointer(/Campaign)"/>
+	</Campaigns>
+	<CustomMissions>
+		<Item href="/test/testmaps/designer_test/kami/small4_2/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/designer_test/kami/small4_1/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/designer_test/kami/tsmall4/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href=""/>
+		<Item href="/test/testmaps/progtests/stas/small/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/designer_test/kami/small4/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/custom/missions/4x4/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/progtests/uvarkov/small/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/progtests/uvarkov/test/mapinfo.xdb#xpointer(/MapInfo)"/>
+		<Item href="/test/testmaps/progtests/veselov/4x4/mapinfo.xdb#xpointer(/MapInfo)"/>
+	</CustomMissions>
+	<ScreenVideoPlayer href=""/>
+	<Screens>
+		<Item>
+			<Screen href="/ui/game/mission/mission_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>Mission</Type>
+			<HelpHeader href="/other/text/game/help/screensinfo/missionheader/text.xdb#xpointer(/Text)"/>
+			<HelpDesc href="/other/text/game/help/screensinfo/missiondesc/text.xdb#xpointer(/Text)"/>
+			<HelpNoMultiplayer>true</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mainmenu_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MainMenu</Type>
+			<HelpHeader href="/other/text/game/help/screensinfo/mainmenuheader/text.xdb#xpointer(/Text)"/>
+			<HelpDesc href="/other/text/game/help/screensinfo/mainmenudesc/text.xdb#xpointer(/Text)"/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/escmenu_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MissionEscMenu</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/optionsmenu_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>OptionsMenu</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/messagebox/messagebox_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MessageBoxScreen</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/campaignselection_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>CampaignSelectionMenu</Type>
+			<HelpHeader href="/other/text/game/help/screensinfo/campaignselectionheader/text.xdb#xpointer(/Text)"/>
+			<HelpDesc href="/other/text/game/help/screensinfo/campaignselectiondesc/text.xdb#xpointer(/Text)"/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/chaptermap_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>ChapterMapMenu</Type>
+			<HelpHeader href="/other/text/game/help/screensinfo/chaptermapheader/text.xdb#xpointer(/Text)"/>
+			<HelpDesc href="/other/text/game/help/screensinfo/chaptermapdesc/text.xdb#xpointer(/Text)"/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/armymanagerold/armymanager_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>ArmyManagerMenu</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/armymanagerold/medalinfo_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MedalInfo</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/armymanagerold/reinforcementinfo_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>ReinforcementInfo</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/saveloadmenu_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>SaveLoadMenu</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/mission/objectives_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MissionObjectives</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/profilemanager_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>ProfileManager</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mpgameslist_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MPGamesList</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/winloosedialogs_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>WinLooseDialog</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mpcreategame_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MPCreateGame</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/gamesessionstatistic_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>GameSessionStatistic</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/rewards_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>Rewards</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/loadingsingle_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>LoadingSingle</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mpstagingroom_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MPStagingRoom</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/multiplayer_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>Multiplayer</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mpnivalnet_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MPNivalNet</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/help/help_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>Help</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/videoplayer_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>InterMission</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/mpwaitplayers_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MPWaitPlayers</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/mission/objectivenotify_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>ObjectiveNotify</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/mission/movieborder_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>MissionMovieBorder</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/test/uvarkov/testscreen/test_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>TestScreen</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+		<Item>
+			<Screen href="/ui/game/menu/custommissions_windowscreen.xdb#xpointer(/WindowScreen)"/>
+			<Type>CustomMissions</Type>
+			<HelpHeader href=""/>
+			<HelpDesc href=""/>
+			<HelpNoMultiplayer>false</HelpNoMultiplayer>
+		</Item>
+	</Screens>
+	<Texts>
+		<Item>
+			<Text href="/other/text/game/menu/mainmenu/exitquestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_MAIN_MENU_EXIT_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/escmenu/exitwindowsquestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_ESCAPE_MENU_EXIT_WINDOWS_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/escmenu/exitmainmenuquestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_ESCAPE_MENU_EXIT_MAIN_MENU_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/escmenu/restartmissionquestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_ESCAPE_MENU_RESTART_MISSION_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/options/restorequestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_OPTIONS_MENU_RESTORE_DEFAULTS_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/saveload/deletequestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVELOAD_MENU_DELETE_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/saveload/overwritequestion/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVELOAD_MENU_OVERWRITE_QUESTION</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/saveload/missiondesc/campaignprefix/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVELOAD_MENU_MISSION_DESC1</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/saveload/missiondesc/chapterprefix/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVELOAD_MENU_MISSION_DESC2</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/saveload/missiondesc/missionprefix/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVELOAD_MENU_MISSION_DESC3</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/profilemanager/emptyname/text.xdb#xpointer(/Text)"/>
+			<TextID>T_PROFILE_MANAGER_EMPTY_NAME</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/profilemanager/alreadyexists/text.xdb#xpointer(/Text)"/>
+			<TextID>T_PROFILE_MANAGER_ALREADY_EXISTS</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/profilemanager/nodeletecurrent/text.xdb#xpointer(/Text)"/>
+			<TextID>T_PROFILE_MANAGER_DELETE_CURRENT</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/menu/profilemanager/nodeletedefault/text.xdb#xpointer(/Text)"/>
+			<TextID>T_PROFILE_MANAGER_DELETE_DEFAULT</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/gamespeedchanged/text.xdb#xpointer(/Text)"/>
+			<TextID>T_GAME_SPEED_CHANGED</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/gamespeedchangedmin/text.xdb#xpointer(/Text)"/>
+			<TextID>T_GAME_SPEED_CHANGED_MIN</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/gamespeedchangedmax/text.xdb#xpointer(/Text)"/>
+			<TextID>T_GAME_SPEED_CHANGED_MAX</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/reinfavailable/text.xdb#xpointer(/Text)"/>
+			<TextID>T_REINF_AVAILABLE</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/reinfavailablerepeat/text.xdb#xpointer(/Text)"/>
+			<TextID>T_REINF_AVAILABLE_REPEAT</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/reinfopen/text.xdb#xpointer(/Text)"/>
+			<TextID>T_REINF_OPEN</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/objectivesnotifyrepeat/text.xdb#xpointer(/Text)"/>
+			<TextID>T_OBJECTIVES_NOTIFY_REPEAT</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/saving/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVING</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/savedone/text.xdb#xpointer(/Text)"/>
+			<TextID>T_SAVE_DONE</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/loading/text.xdb#xpointer(/Text)"/>
+			<TextID>T_LOADING</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/loaddone/text.xdb#xpointer(/Text)"/>
+			<TextID>T_LOAD_DONE</TextID>
+		</Item>
+		<Item>
+			<Text href="/other/text/game/mission/misc/reinfcantcall/text.xdb#xpointer(/Text)"/>
+			<TextID>T_REINF_CANT_CALL</TextID>
+		</Item>
+	</Texts>
+	<TextEntries/>
+	<Sounds>
+		<Item>
+			<Type>SOUND_OBJECTIVE_RECEIVED</Type>
+			<Sound href="/soundandmusic/test/uvarkov/groundheavy1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_OBJECTIVE_COMPLETED</Type>
+			<Sound href="/soundandmusic/test/uvarkov/waterheavy_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_OBJECTIVE_FAILED</Type>
+			<Sound href="/soundandmusic/test/uvarkov/armor_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_CAPTURE_KEY_OBJECT</Type>
+			<Sound href="/soundandmusic/test/uvarkov/armor_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_LOSS_KEY_OBJECT</Type>
+			<Sound href="/soundandmusic/test/uvarkov/armor_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_CANT_PERFORM_COMMAND</Type>
+			<Sound href="/soundandmusic/test/uvarkov/failed_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+		<Item>
+			<Type>SOUND_REINF_AVAILABLE</Type>
+			<Sound href="/soundandmusic/test/uvarkov/armor_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+		</Item>
+	</Sounds>
+	<Textures>
+		<Item>
+			<TextID>TX_MINIMAP_OBJECTIVE_NORMAL</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/arrowobjectivenormal_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_OBJECTIVE_SELECTED</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/arrowobjectiveselected_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_BLANK_MINIMAP_BORDER</TextID>
+			<Texture href="/scene/texandmats/test/progtest/blankminimap_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_NEUTRAL</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/keyobjectneutral_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_FRIEND</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/keyobjectfriend_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_ENEMY</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/keyobjectenemy_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+		<Item>
+			<TextID>TX_MINIMAP_KEY_OBJECT_FRIEND_SELECTED</TextID>
+			<Texture href="/scene/texandmats/all/ui/mission/minimap/keyobjectfriendselected_texture.xdb#xpointer(/Texture)"/>
+		</Item>
+	</Textures>
+	<GameOptions href="/other/optionsystem/all/test/optionsystem.xdb#xpointer(/OptionSystem)"/>
+	<MainMenuBackground>
+		<Map href="/test/testmaps/alpha/interface_scene/test1_withobjects/mapinfo.xdb#xpointer(/MapInfo)"/>
+	</MainMenuBackground>
+	<Notifications>
+		<Item href="/other/notification/game/mission/objectivereceived/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/objectivecompleted/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/objectivefailed/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/keyobjectcaptured/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/keyobjectlost/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/enemyartillery/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/enemyaa/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/reinforcementarrived/notification.xdb#xpointer(/Notification)"/>
+		<Item href="/other/notification/game/mission/objectivesnotifyrepeat/notification.xdb#xpointer(/Notification)"/>
+	</Notifications>
+	<NotificationEvents/>
+	<IntroMovie>Movies\intro.xml</IntroMovie>
+	<EncyclopediaMechUnits/>
+</GameRoot>

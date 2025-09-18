@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000059">
+	<Type>RT_LIGHT_TANKS</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankLight_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Units/Technics/ScriptMovieUnits/willys_fast/name.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/auto/willys_mb_lend_lease/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="" />
+	<TooltipFileRef href="/Units/Technics/ScriptMovieUnits/willys_fast/name.txt" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

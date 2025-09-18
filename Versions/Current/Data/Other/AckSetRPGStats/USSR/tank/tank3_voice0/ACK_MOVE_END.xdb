@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1004369">
+	<sounds>
+		<Item>
+			<PathName href="tank3-19-1.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+		<Item>
+			<PathName href="tank3-19-2.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

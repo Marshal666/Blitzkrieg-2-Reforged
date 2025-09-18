@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000007">
+	<FileName />
+	<ScriptText>lastcommand = 0;
+art = {};
+ammosum = 0;
+
+function StartObjective( func )
+	proto = function( )
+	while 1 do
+		Wait( 1 );
+		if ( %func() ~= nil ) then
+			break;
+		end;
+	end;
+	end;
+	StartThread( proto );
+end;
+
+function GiveObjectiveTutorial( obj )
+	GiveObjective( obj );
+	GameMesage( &quot;show_objectives&quot;, 0, 0 );
+end;
+
+function meta( ... )
+	return function( x )
+		value = x;
+		for i = %arg.n, 1, -1 do
+			value = %arg[ i ]( value );
+		end;
+		return value;
+	end;
+end;
+
+GetScriptUnitState = meta( GetUnitState, GetObjectList );
+IsScriptUnitImmobilized = meta( IsImmobilized, GetObjectList );
+IsScriptUnitAlive = meta( IsAlive, GetObjectList );
+
+function Objective0() -- move gun
+	if ( IsSomeUnitInArea( 0, &quot;gun1&quot; ) == 1 ) then
+		DamageScriptObject( 301, 0 );
+		CompleteObjective( 0 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 1 );
+		DamageScriptObject( 302, 10 );
+		StartObjective( Objective1 );
+		return 1;
+	end;
+end;
+
+function Objective1() -- rotate gun
+local angle = GetFrontDir( GetUnitsByParam( GetObjectListArray( 1 ), PT_TYPE, TYPE_MECH )[1] );
+	if ( angle &lt; 4000 ) or ( angle &gt; 61000 ) then
+		DamageScriptObject( 302, 0 );
+		CompleteObjective( 1 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 2 );
+		StartObjective( Objective2 );
+		return 1;
+	end;
+end;
+
+function Objective2() -- entrench gun
+	if ( IsEntrenched( 1 ) == 1 ) then
+		CompleteObjective( 2 );
+		Wait( 3 );
+		lastcommand = 0;
+		GiveObjectiveTutorial( 3 );
+		StartObjective( Objective3 );
+		return 1;
+	end;
+end;
+
+function Objective3() -- ambush
+	if ( lastcommand == ACT_AMBUSH ) then
+		Wait( 5 );
+		CompleteObjective( 3 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 4 );
+		Cmd( ACT_SWARM, 10, 0, GetScriptAreaParams( &quot;gun1&quot; ) );
+		StartObjective( Objective4 );
+		return 1;
+	end;
+end;
+
+function Objective4() -- destroy enemy
+	if ( IsSomeBodyAlive( 1, 10 ) == 0 ) then
+		CompleteObjective( 4 );
+		Wait( 3 );
+		SCRunTime( &quot;cam&quot;, &quot;art&quot;, 2 );
+		Wait( 3 );
+		SCReset();
+		Wait( 1 );
+		for i = 0, 4 do
+			ObjectiveChanged( i, 0 );
+		end;
+		GiveObjectiveTutorial( 5 );
+		StartObjective( Objective5 );
+		return 1;
+	end;
+end;
+
+function Objective5() -- transport gun
+	if ( GetScriptUnitState( 2 ) == STATE_TOWED ) then
+		CompleteObjective( 5 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 6 );
+		StartObjective( Objective6 );
+		Wait( 5 );
+		LandReinforcementFromMap( 1, &quot;recon&quot;, 0, 1001 );
+		Cmd( ACT_MOVE, 1001, 0, GetScriptAreaParams( &quot;gun1&quot; ) );		
+		return 1;
+	end;
+end;
+
+function Objective6() -- deploy gun
+	if ( IsUnitInArea( 0, &quot;aagun&quot;, GetObjectList( 2 ) ) == 1) and ( GetScriptUnitState( 2 ) ~= STATE_TOWED ) then
+		CompleteObjective( 6 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 7 );
+		StartObjective( Objective7 );
+		return 1;
+	end;
+end;
+
+function Objective7() -- destroy recon
+	if ( IsSomeBodyAlive( 1, 1001 ) == 0 ) then
+		CompleteObjective( 7 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 8 );
+		StartObjective( FictiveObjective0 );
+		return 1;
+	end;
+end;
+
+function FictiveObjective0() -- heavy artillery
+art = GetUnitsByParam( GetUnitListInAreaArray( 0, &quot;reinf&quot;, 0 ), PT_CLASS, CLASS_FIELD_ARTILLERY );
+	if ( art.n &gt; 0 ) then
+		StartObjective( Objective8 );
+		return 1;
+	end;
+end;
+
+function Objective8() -- deploy artillery
+	WaitWhileStateArray( art, STATE_TOWED );
+	CompleteObjective( 8 );
+	Wait( 3 );
+	for i = 5, 8 do
+		ObjectiveChanged( i, 0 );
+	end;
+	GiveObjectiveTutorial( 9 );
+	StartObjective( Objective9 );
+	return 1;
+end;
+
+function Objective9() -- group assignment
+	Wait( 4 );
+	CompleteObjective( 9 );
+	Wait( 3 );
+	GiveObjectiveTutorial( 10 );
+	StartObjective( Objective10 );
+	return 1;
+end;
+
+function Objective10() -- recon
+	if ( IsSomeUnitInArea( 0, &quot;recon&quot;, 1 ) == 1 ) then
+		CompleteObjective( 10 );
+		Wait( 3 );
+		God( 0, 4 );
+		GiveObjectiveTutorial( 11 );
+		StartObjective( checkart );
+		return 1;
+	end;
+end;
+
+function checkart() -- check to deploy enemy artillery
+	if ( GetNUnitsInScriptGroup( 11 ) &lt;= 2 ) then
+		LandReinforcementFromMap( 1, &quot;artillery&quot;, 1, 1002 );
+		Cmd( ACT_SUPPRESS, 1002, 200, GetScriptAreaParams( &quot;aagun&quot; ) );
+		Wait( 10 );
+		StartThread( Objective11 );
+		return 1;
+	end;
+end;
+
+function Objective11() -- suppressive fire
+	CompleteObjective( 11 );
+	CmdArray( ACT_STOP, art );
+	Wait( 3 );
+	GiveObjectiveTutorial( 12 );
+	StartObjective( Objective12 );
+	Wait( 10 );
+	ViewZone( &quot;view_art&quot;, 1 );
+	return 1;
+end;
+
+function Objective12() -- counter artillery
+	if ( IsSomeBodyAlive( 1, 1002 ) == 0 ) then
+		CompleteObjective( 12 );
+		ViewZone( &quot;view_art&quot;, 0 );
+		CmdArray( ACT_STOP, art );
+		Wait( 3 );
+		for i = 1, art.n do
+			ammosum = ammosum + GetAmmo( art[i] );
+		end;		
+		GiveObjectiveTutorial( 13 );
+		StartObjective( Objective13 );
+		return 1;
+	end;
+end;
+
+function Objective13() -- resupply
+local newammosum = 0;
+	for i = 1, art.n do
+		newammosum = newammosum + GetAmmo( art[i] );
+	end;
+	if ( ( newammosum - ammosum ) &gt;= 6 ) then
+		CompleteObjective( 13 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 14 );
+		StartObjective( Objective14 );
+		ViewZone( &quot;house&quot;, 1 );
+		return 1;
+	end;
+end;
+
+function Objective14() -- spg
+	if ( IsSomeBodyAlive( 1, 15 ) ~= 1 ) then
+		CompleteObjective( 14 );
+		ViewZone( &quot;house&quot;, 0 );
+		Wait( 3 );
+		Win( 0 );
+		return 1;
+	end;
+end;
+
+function OnRegisteredCommand( nCommand )
+	lastcommand = nCommand;
+end;
+
+RegisterCommandObserver( ACT_AMBUSH );
+--RegisterCommandObserver( ACT_PATROL );
+RT_TANKS = 9;
+RT_BOMBERS = 14;
+-----------------------------------
+--EnablePlayerReinforcement( RT_TANKS, 0 );
+--EnablePlayerReinforcement( RT_BOMBERS, 0 );
+SetCheatDifficultyLevel( 1 );
+God( 0, 1 );
+SetIGlobalVar( &quot;temp.nogeneral_sript&quot;, 1 );
+Wait( 4 );
+DamageScriptObject( 301, 10 );
+GiveObjectiveTutorial( 0 );
+StartObjective( Objective0 );
+</ScriptText>
+</Script>

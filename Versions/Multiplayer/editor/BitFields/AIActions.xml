@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Alexey Mamontov (Nival Interactive) -->
+<Base>
+	<Fields>
+		<Item>
+			<Name>Move to point</Name>
+			<Value>0</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_MOVE_TO-->
+		</Item>
+		<Item>
+			<Name>Attack unit</Name>
+			<Value>1</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_ATTACK_UNIT-->
+		</Item>
+		<Item>
+			<Name>Attack object</Name>
+			<Value>2</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_ATTACK_OBJECT-->
+		</Item>
+		<Item>
+			<Name>Swarm to point</Name>
+			<Value>3</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_SWARM_TO-->
+		</Item>
+		<Item>
+			<Name>Load to truck</Name>
+			<Value>4</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_LOAD-->
+		</Item>
+		<Item>
+			<Name>Unload from truck</Name>
+			<Value>5</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_UNLOAD-->
+		</Item>
+		<Item>
+			<Name>Enter to building</Name>
+			<Value>6</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_ENTER-->
+		</Item>
+		<Item>
+			<Name>Leave from building</Name>
+			<Value>7</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_LEAVE-->
+		</Item>
+		<Item>
+			<Name>Rotate to point</Name>
+			<Value>8</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_ROTATE_TO-->
+		</Item>
+		<Item>
+			<Name>Stop all actions</Name>
+			<Value>9</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_STOP-->
+		</Item>
+		<Item>
+			<Name>Infantry can change formation</Name>
+			<Value>10</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_PARADE-->
+		</Item>
+		<Item>
+			<Name>Place mine on point</Name>
+			<Value>11</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_PLACEMINE-->
+		</Item>
+		<Item>
+			<Name>Clear mines in area</Name>
+			<Value>12</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_CLEARMINE-->
+		</Item>
+		<Item>
+			<Name>Guard area</Name>
+			<Value>13</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_GUARD-->
+		</Item>
+		<Item>
+			<Name>Ambush mode</Name>
+			<Value>14</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_AMBUSH-->
+		</Item>
+		<Item>
+			<Name>Range area (artillery)</Name>
+			<Value>15</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_RANGE_AREA-->
+		</Item>
+		<Item>
+			<Name>Suppressive fire (artillery)</Name>
+			<Value>16</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_ART_BOMBARDMENT-->
+		</Item>
+		<Item>
+			<Name>Paradrop</Name>
+			<Value>22</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_PARADROP-->
+		</Item>
+		<Item>
+			<Name>Resupply with ammo</Name>
+			<Value>23</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_RESUPPLY-->
+		</Item>
+		<Item>
+			<Name>Repair damaged units</Name>
+			<Value>24</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_REPAIR-->
+		</Item>
+		<Item>
+			<Name>Build fences</Name>
+			<Value>26</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_BUILD_FENCE_BEGIN-->
+		</Item>
+		<Item>
+			<Name>Build entrenchments</Name>
+			<Value>27</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_ENTRENCH_BEGIN-->
+		</Item>
+		<Item>
+			<Name>Use spyglasses</Name>
+			<Value>29</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_USE_SPYGLASS-->
+		</Item>
+		<Item>
+			<Name>Hook artillery</Name>
+			<Value>31</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_TAKE_ARTILLERY-->
+		</Item>
+		<Item>
+			<Name>Deplay artillery</Name>
+			<Value>32</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_DEPLOY_ARTILLERY-->
+		</Item>
+		<Item>
+			<Name>Place anti-tank defence</Name>
+			<Value>33</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_PLACE_ANTITANK-->
+		</Item>
+		<Item>
+			<Name>Follow target</Name>
+			<Value>39</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_FOLLOW-->
+		</Item>
+		<Item>
+			<Name>Change shell type (artillery)</Name>
+			<Value>46</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_CHANGE_SHELLTYPE-->
+		</Item>
+		<Item>
+			<Name>Repair object</Name>
+			<Value>47</Value>
+			<NeedTargetUnit>1</NeedTargetUnit>
+			<!--ACTION_COMMAND_REPEAR_OBJECT-->
+		</Item>
+		<Item>
+			<Name>Build bridge</Name>
+			<Value>48</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_BUILD_BRIDGE-->
+		</Item>
+		<Item>
+			<Name>Stand ground</Name>
+			<Value>50</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_STAND_GROUND-->
+		</Item>
+		<Item>
+			<Name>Heal infantry</Name>
+			<Value>51</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_HEAL_INFANTRY-->
+		</Item>
+		<Item>
+			<Name>Change movement mode</Name>
+			<Value>53</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_CHANGE_MOVEMENT-->
+		</Item>
+		<Item>
+			<Name>Fill resource units</Name>
+			<Value>54</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_FILL_RU-->
+		</Item>
+		<Item>
+			<Name>Move to regular grid</Name>
+			<Value>55</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_MOVE_TO_GRID-->
+		</Item>
+		<Item>
+			<Name>Capture artillery</Name>
+			<Value>56</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_CATCH_ARTILLERY-->
+		</Item>
+		<Item>
+			<Name>Enter mech unit</Name>
+			<Value>106</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_MECH_ENTER-->
+		</Item>
+		<Item>
+			<Name>Wait</Name>
+			<Value>105</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_WAIT-->
+		</Item>
+		<Item>
+			<Name>Entrench Self</Name>
+			<Value>45</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_ENTRENCH_SELF-->
+		</Item>
+		<Item>
+			<Name>Patrol</Name>
+			<Value>75</Value>
+			<NeedTargetUnit>0</NeedTargetUnit>
+			<!--ACTION_COMMAND_PATROL-->
+		</Item>
+	</Fields>
+</Base>

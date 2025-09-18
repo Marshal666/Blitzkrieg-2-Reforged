@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="52">
+	<FileName />
+	<ScriptText>
+DISPERSION = 400;
+
+Eng_ScriptId = 2712;
+
+----------------------------------CAMERA
+function RevealObjective0()
+	SetIGlobalVar( &quot;HoldHelpScreen&quot;, 1 );	
+	StartSequence ( )
+	CameraMove ( 2,0 );
+	Wait(3);
+	CameraMove ( 3,20000 );
+    Wait(35);
+    RemoveScriptGroup( 100 );
+    EndSequence ( )
+    Wait(2);
+	ObjectiveChanged(0, 1);
+    Wait(2);
+    ObjectiveChanged(0, 0);
+    Wait(2);
+    StartThread( RevealObjective1 );
+	Trigger( Objective1, CompleteObjective1 );
+end;
+
+---------------------------------1_GB_POST
+
+function RevealObjective1()
+	LandReinforcement( 0, 142, 9, 1 );
+	CameraMove ( 0,1000 );
+	Wait(2);
+	StartThread( Lose );
+	ObjectiveChanged(1, 1);
+    Trace(&quot;Objective1 is reveal&quot;);
+end;
+
+function Objective1()
+	if ((GetNUnitsInArea(0, &quot;Post&quot;) &gt; 0) and (GetNUnitsInArea(2, &quot;Post&quot;) &lt; 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective1()
+	Wait(2);
+	ObjectiveChanged(1, 2);
+	SetIGlobalVar( &quot;temp.objective1&quot;, 2 );
+	Trace(&quot;Objective1 complete&quot;);
+	Wait(5);
+	StartThread( RevealObjective2 );
+	Trigger( Objective2, CompleteObjective2 );
+end;
+
+---------------------------------2_DE_DEFENSE
+
+function RevealObjective2()
+	LandReinforcement( 0, 143, 9, 2 );
+	Wait(3);
+	ObjectiveChanged(2, 1);
+    Trace(&quot;Objective2 is reveal&quot;);
+end;
+
+function Objective2()
+	if ((GetNUnitsInArea(0, &quot;G_post&quot;) &gt; 0) and (GetNUnitsInArea(2, &quot;G_post&quot;) &lt; 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective2()
+	Wait(2);
+	ObjectiveChanged(2, 2);
+	SetIGlobalVar( &quot;temp.objective2&quot;, 2 );
+	Trace(&quot;Objective2 complete&quot;);
+	Wait(5);
+	StartThread( RevealObjective3 );
+	Trigger( Objective3, CompleteObjective3 );
+end;
+
+---------------------------------3_REPAIR_BASE
+
+function RevealObjective3()
+	LandReinforcement( 0, 143, 9, 2 );
+	Wait(4);
+	ObjectiveChanged(3, 1);	
+end;
+
+function Objective3()
+	if ((GetNUnitsInArea(0, &quot;Base&quot;) &gt; 0) and (GetNUnitsInArea(2, &quot;Base&quot;) &lt; 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective3()
+	Wait(2);
+	ObjectiveChanged(3, 2);
+	SetIGlobalVar( &quot;temp.objective3&quot;, 2 );
+	Trace(&quot;Objective3 complete&quot;);
+	Wait(3);
+	StartThread( Lose2 );
+	StartThread( RevealObjective4 );
+	Trigger( Objective4, CompleteObjective4 );
+	StartThread( CheckTanks );
+	Wait(20);
+	StartThread( RevealObjective5 );
+	Wait(30);
+	CmdMultiple( ACT_MOVE, 391, 2333,2697 );
+	QCmdMultiple( ACT_MOVE, 391, 2173,8379 );
+	QCmdMultiple( ACT_DEPLOY, 391, 1870,8933 );
+end;
+
+--------------------------------4_MATILDES
+
+function RevealObjective4()
+	Wait(1);
+	LandReinforcement( 0, 149, 9, 4);
+	LandReinforcement2( 0, 145, 9, 4, Eng_ScriptId );
+	StartThread( CheckTrucks );
+	ObjectiveChanged(4, 1)
+    Trace(&quot;Objective4 is reveal&quot;);
+end;
+
+function Objective4()
+	if ((GetScriptObjectHPs(111)&gt;=80) or (GetScriptObjectHPs(112)&gt;=80))then
+        return 1;
+    end;
+end;
+
+function CompleteObjective4()
+	ObjectiveChanged(4, 2);
+	SetIGlobalVar( &quot;temp.repair&quot;, 2 );
+	StartThread( Attack );
+	Trace(&quot;Objective4 complete&quot;);
+	ChangePlayerForScriptGroup( 111, 0 );
+	ChangePlayerForScriptGroup( 112, 0 );
+end;
+
+-------------------------------5_GUNS
+
+function RevealObjective5()
+	ObjectiveChanged(5, 1);
+	Trace(&quot;Objective5 is reveal&quot;);
+		Wait(2);
+		ViewZone( &quot;Amb&quot;, 1 );
+    StartThread( Art );
+end;
+
+function Art()
+	while 1 do
+		Wait( 10 );
+		if (( GetNUnitsInScriptGroup( 311 )&lt;=0 ) or (GetNUnitsInScriptGroup(391)&lt;=0)) then
+			Wait(2);
+			ObjectiveChanged(5, 2);
+			Trace(&quot;Objective5 complete&quot;);
+			StartThread( RevealObjective6 );
+			Trigger( Objective6, CompleteObjective6 );
+			break;
+		end;
+		if ( GetNScriptUnitsInArea( 311, &quot;City&quot; ) &gt;= 1 ) then
+			Wait(2);
+			ObjectiveChanged(5, 3);
+			Trace(&quot;Objective5 fall&quot;);
+			StartThread( RevealObjective6 );
+			Trigger( Objective6, CompleteObjective6 );
+			break;
+		end;
+	end;
+end;
+
+---------------------------------6_FINAL_CITY
+
+function RevealObjective6()
+	ViewZone( &quot;Amb&quot;, 0 );
+	Wait(4);
+	ObjectiveChanged(6, 1);
+    Trace(&quot;Objective7 is reveal&quot;);
+    Wait(4);
+    LandReinforcement( 0, 144, 11, 4 );
+end;
+
+function Objective6()
+	if ((GetNUnitsInArea(0, &quot;City&quot;) &gt; 0) and (GetNUnitsInArea(2, &quot;City&quot;) &lt; 1)) then
+        return 1;
+    end;
+end;
+
+function CompleteObjective6()
+	Wait(3);
+	ObjectiveChanged(6, 2);
+	Trace(&quot;Objective6 complete&quot;);
+	Wait(3);
+	Win (0);
+end;
+
+--------------------------------Lose
+
+function Lose()
+        while 1 do
+            if ( GetNUnitsInParty(0) &lt;= 3) and GetIGlobalVar(&quot;temp.objective3&quot;, 1) ~= 2 then
+	Wait(3);
+        StartThread( Reinf );
+        return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+function Reinf()
+	LandReinforcement( 0, 142, 9, 1 );
+	Wait(3);
+	StartThread( Lose );
+end;
+
+------------------------------ Lose2
+
+function Lose2()
+        while 1 do
+            if ( GetNUnitsInParty(0) &lt;= 6) then
+	Wait(3);
+        StartThread( Reinf2 );
+        return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+function Reinf2()
+	LandReinforcement( 0, 142, 9, 4 );
+	Wait(3);
+	StartThread( Lose2 );
+end;
+
+-------------------------------Attack
+
+function Attack()
+    CmdMultipleDisp( ACT_SWARM, 891,DISPERSION, 5748,4824 );
+    QCmdMultipleDisp( ACT_SWARM, 891,DISPERSION, 9511,8641 );
+end;
+
+--------------------------------Matador
+
+function CheckTrucks()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, 145, 9, 4, Eng_ScriptId );
+		end;
+	end;
+end;
+
+------------------------------CheckTanks
+function CheckTanks()
+	while 1 do
+		Wait( 2 );
+		if ((GetScriptObjectHPs(111)&lt;=0) and (GetScriptObjectHPs(112)&lt;=0) and (GetIGlobalVar(&quot;temp.repair&quot;, 1) ~= 2)) then
+        ObjectiveChanged(4, 3);
+        break;
+        end;
+    end;
+end;
+
+---------Main
+StartThread( RevealObjective0 );
+</ScriptText>
+</Script>

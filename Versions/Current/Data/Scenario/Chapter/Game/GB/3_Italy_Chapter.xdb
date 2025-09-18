@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="25">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="/other/text/game/chapters/gb3_name/text.xdb#xpointer(/Text)" />
+	<LocalizedDate href="/other/text/game/chapters/gb3_date/text.xdb#xpointer(/Text)" />
+	<LocalizedDescription href="/other/text/game/chapters/gb3_description/text.xdb#xpointer(/Text)" />
+	<MissionPath>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.0/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>395</x>
+				<y>319</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/8.8_cm_flak18/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/squads/germany/main_squad/german_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/spg/wespe_sdkfz124/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>28</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_RAIN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>104</MainStrikeAngle>
+			<MainStrikePower>2.5</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.1/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>452</x>
+				<y>415</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/1/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/7.5_cm_pak40/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.2/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>218</x>
+				<y>439</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/2/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/2/2_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/8.8_cm_flak18/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iii_ausf_e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>50</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.3/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>316</x>
+				<y>497</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/3/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/7.5_cm_pak40/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/coastgun/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/spg/semovente_75_46_italian/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>4</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>50</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.4/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>485</x>
+				<y>295</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/4/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/assault_squad/german_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/15_cm_k39/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/sdkfz_231/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>4</RecommendedCalls>
+			<PotentialIncomplete>-5</PotentialIncomplete>
+			<PotentialComplete>20</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.5/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>523</x>
+				<y>169</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/5/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>2</RecommendedCalls>
+			<PotentialIncomplete>-5</PotentialIncomplete>
+			<PotentialComplete>30</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.6/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>143</x>
+				<y>379</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/6/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/6/2_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/artillery/15_cm_k39/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>60</PotentialIncomplete>
+			<PotentialComplete>50</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter3/gb3.7/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>318</x>
+				<y>361</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/7/1_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/scenario/chapterbonus/game/gb/chapter3_1/7/2_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/" />
+					<Squad href="/squads/germany/main_squad/german_main_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iii_ausf_j/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_iv_ausf_g/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+				<Item>
+					<MechUnit href="/units/technics/german/tanks/pz_vi_tiger_ausf_a_h/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="/" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>-5</PotentialIncomplete>
+			<PotentialComplete>20</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+		</Item>
+	</MissionPath>
+	<ScriptFile href="/" />
+	<ScriptFileName />
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/main_squad_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/anti_tank_art_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/assault_squad_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/field_artillery_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/mobile_assault_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/fighter_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/bomber_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/recon_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/tank_light_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/tank_medium_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/player/aa_light_reinforcement.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+		<Item>
+			<Reinforcements>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/aa_heavy_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/main_squad_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/assault_squad_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/tank_light_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/tank_medium_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/fighter_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/gap_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_3/enemy/field_artillery_reinforcement.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_fighters_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_assault_spg_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_ga_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_light_tanks_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_main_infantry_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="/" />
+			<Squad href="/" />
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_tanks_reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href="/scene/texandmats/game/menu/chaptermap/1_chapter/3.0_texture.xdb#xpointer(/Texture)" />
+	<SeaNoiseMask>UI\Campaigns\GB\3_Monte_Cassino\chapter_map_mask.tga</SeaNoiseMask>
+	<DifferentColourMap>UI\Campaigns\GB\3_Monte_Cassino\chapter_map_S.tga</DifferentColourMap>
+	<PositiveColour>-12550016</PositiveColour>
+	<NegativeColour>-11327232</NegativeColour>
+	<MainStrikeAngle>0</MainStrikeAngle>
+	<MainStrikePower>0</MainStrikePower>
+	<ReinforcementCalls>28</ReinforcementCalls>
+	<DetailsMap href="/scenario/campaigns/gb/chapter3/gbchapter3/mapinfo.xdb#xpointer(/MapInfo)" />
+	<ArrowTextures>
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/0_arrow_own_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/1_arrow_enemy_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/2_defence_own_texture.xdb#xpointer(/Texture)" />
+		<Item href="/scene/texandmats/game/menu/chaptermap/arrows/3_defence_enemy_texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+</Chapter>

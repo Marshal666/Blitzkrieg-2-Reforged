@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OptionSystem ObjectRecordID="2">
+	<Categories>
+		<Item>
+			<Name href="/other/text/test/optionsystemtest/categories/testcategory1/text.xdb#xpointer(/Text)"/>
+			<Tooltip href="/other/text/test/optionsystemtest/categories/testcategory1/text.xdb#xpointer(/Text)"/>
+			<Options>
+				<Item>
+					<ProgName>Option.Test1.test11</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test11/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test11/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href=""/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>foo</DefaultValue>
+					<ModeFlags>6</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test1.test12</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test12/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test12/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href=""/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>bar</DefaultValue>
+					<ModeFlags>6</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test1.test13</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test13/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test13/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href="/other/text/test/optionsystemtest/states/state131/text.xdb#xpointer(/Text)"/>
+							<Tooltip href="/other/text/test/optionsystemtest/states/state131/text.xdb#xpointer(/Text)"/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/test/optionsystemtest/states/state132/text.xdb#xpointer(/Text)"/>
+							<Tooltip href="/other/text/test/optionsystemtest/states/state132/text.xdb#xpointer(/Text)"/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/test/optionsystemtest/states/state133/text.xdb#xpointer(/Text)"/>
+							<Tooltip href="/other/text/test/optionsystemtest/states/state133/text.xdb#xpointer(/Text)"/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/test/optionsystemtest/categories/testcategory3/text.xdb#xpointer(/Text)"/>
+			<Tooltip href="/other/text/test/optionsystemtest/tooltips/testcat3/text.xdb#xpointer(/Text)"/>
+			<Options>
+				<Item>
+					<ProgName>Option.Test3.test31</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test31/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test31/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test3.test32</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test32/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test32/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test3.test33</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test33/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test33/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test3.test34</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test34/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test34/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test3.test35</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test35/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/test/optionsystemtest/test35/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/game/options/filters/filters/text.xdb#xpointer(/Text)"/>
+			<Tooltip href=""/>
+			<Options>
+				<Item>
+					<ProgName>UserProfile.MPFilters.MapType</ProgName>
+					<Name href="/other/text/game/options/filters/maptype/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/ttmaptype/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href="/other/text/game/options/filters/maptype/all/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maptype/flagcontrol/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maptype/deathmatch/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>UserProfile.MPFilters.MapSize</ProgName>
+					<Name href="/other/text/game/options/filters/mapsize/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/ttmapsize/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href="/other/text/game/options/filters/mapsize/all/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/mapsize/small/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/mapsize/medium/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/mapsize/large/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/mapsize/huge/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>UserProfile.MPFilters.MaxPlayers</ProgName>
+					<Name href="/other/text/game/options/filters/maxplayers/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/ttmaxplayers/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/all/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/max2/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/max4/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/max6/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/max8/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/maxplayers/max16/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>UserProfile.MPFilters.Started</ProgName>
+					<Name href="/other/text/game/options/filters/timecreation/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/tttimecreation/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_EDITNUMBER</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>UserProfile.MPFilters.Observers</ProgName>
+					<Name href="/other/text/game/options/filters/observers/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/ttobservers/text.xdb#xpointer(/Text)"/>
+					<States>
+						<Item>
+							<Name href="/other/text/game/options/filters/observers/all/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/observers/observerson/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+						<Item>
+							<Name href="/other/text/game/options/filters/observers/observersoff/text.xdb#xpointer(/Text)"/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>UserProfile.MPFilters.PasswordRequired</ProgName>
+					<Name href="/other/text/game/options/filters/passwordrequired/text.xdb#xpointer(/Text)"/>
+					<Tooltip href="/other/text/game/options/filters/ttpasswordrequired/text.xdb#xpointer(/Text)"/>
+					<States/>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>8</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/test/optionsystemtest/categories/testcategory2/text.xdb#xpointer(/Text)"/>
+			<Tooltip href=""/>
+			<Options>
+				<Item>
+					<ProgName>Option.Test2.test22</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test21/text.xdb#xpointer(/Text)"/>
+					<Tooltip href=""/>
+					<States>
+						<Item>
+							<Name href=""/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_CHECKBOX</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>4</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test2.test21</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test22/text.xdb#xpointer(/Text)"/>
+					<Tooltip href=""/>
+					<States>
+						<Item>
+							<Name href=""/>
+							<Tooltip href=""/>
+							<Value />
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>blah</DefaultValue>
+					<ModeFlags>4</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Option.Test2.test23</ProgName>
+					<Name href="/other/text/test/optionsystemtest/test23/text.xdb#xpointer(/Text)"/>
+					<Tooltip href=""/>
+					<States/>
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.2</DefaultValue>
+					<ModeFlags>4</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+	</Categories>
+</OptionSystem>

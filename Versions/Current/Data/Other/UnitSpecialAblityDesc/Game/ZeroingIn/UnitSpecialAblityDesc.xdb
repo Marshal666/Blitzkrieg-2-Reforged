@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitSpecialAblityDesc ObjectRecordID="23">
+	<Name>ABILITY_ZEROING_IN</Name>
+	<RefreshTime>0</RefreshTime>
+	<WorkTime>0</WorkTime>
+	<SwitchOnTime>0</SwitchOnTime>
+	<SwitchOffTime>0</SwitchOffTime>
+	<GroupID>ABILITY_GROUP_NOGROUP</GroupID>
+	<DisableGroupTime>0</DisableGroupTime>
+	<StatsBonus href="/other/unitstatsmodifier/game/abilities/active/zeroingin/unitstatsmodifier.xdb#xpointer(/UnitStatsModifier)"/>
+	<Parameter>35000</Parameter>
+	<Description>Радиус зоны пристрелки</Description>
+	<StopCurrentAction>true</StopCurrentAction>
+	<LocalizedName href=""/>
+	<LocalizedDesc href=""/>
+</UnitSpecialAblityDesc>

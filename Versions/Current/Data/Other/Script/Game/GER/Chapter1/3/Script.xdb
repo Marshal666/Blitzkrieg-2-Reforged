@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="135">
+	<FileName />
+	<ScriptText>OX = {};OY = {};
+-----------------------Minefunction Ata()	while 1 do		Wait( 1 );		if (GetNUnitsInArea ( 0 , &quot;Ata&quot; , 0 ) &gt; 0)  then			StartThread( Timer );		end;	end;end;
+function Mine()	while 1 do		Wait( 10 );		if (GetNUnitsInArea ( 0 , &quot;Go1&quot; , 0 ) &gt; 0)  then			Wait( 20 );			Cmd ( 11 , 101 , 0 , GetScriptAreaParams &quot;mine1&quot;);
+			Cmd ( 11 , 100 , 0 , GetScriptAreaParams &quot;mine5&quot;);
+			Wait( 20 );			Cmd ( 11 , 101 , 0 , GetScriptAreaParams &quot;mine2&quot;);
+			Cmd ( 11 , 100 , 0 , GetScriptAreaParams &quot;mine6&quot;);
+			Wait( 20 );			Cmd ( 11 , 101 , 0 , GetScriptAreaParams &quot;mine3&quot;);
+			Cmd ( 11 , 100 , 0 , GetScriptAreaParams &quot;mine7&quot;);
+			Wait( 20 );			Cmd ( 11 , 101 , 0 , GetScriptAreaParams &quot;mine4&quot;);
+			Cmd ( 11 , 100 , 0 , GetScriptAreaParams &quot;mine8&quot;);			break;		end;	end;end;
+function Mine0()	while 1 do		Wait( 10 );		if (GetNUnitsInArea ( 0 , &quot;Go2&quot; , 0 ) &gt; 0)  then			Wait( 20 );			Cmd ( 11 , 102 , 0 , GetScriptAreaParams &quot;mine9&quot;);
+			Cmd ( 11 , 103 , 0 , GetScriptAreaParams &quot;mine11&quot;);
+			Wait( 20 );			Cmd ( 11 , 102 , 0 , GetScriptAreaParams &quot;mine10&quot;);
+			Cmd ( 11 , 103 , 0 , GetScriptAreaParams &quot;mine12&quot;);
+			break;		end;	end;end
+function Mine00()	while 1 do		Wait( 10 );		if (GetNUnitsInArea ( 0 , &quot;Go3&quot; , 0 ) &gt; 0)  then			Wait( 20 );			Cmd ( 11 , 104 , 0 , GetScriptAreaParams &quot;mine13&quot;);
+			Cmd ( 11 , 105 , 0 , GetScriptAreaParams &quot;mine16&quot;);
+			Wait( 20 );			Cmd ( 11 , 104 , 0 , GetScriptAreaParams &quot;mine14&quot;);
+			Cmd ( 11 , 100 , 0 , GetScriptAreaParams &quot;mine17&quot;);
+			Wait( 20 );			Cmd ( 11 , 104 , 0 , GetScriptAreaParams &quot;mine15&quot;);
+			Cmd ( 11 , 105 , 0 , GetScriptAreaParams &quot;mine18&quot;);
+			Wait( 20 );			break;		end;	end;end;
+function Repair()	while 1 do
+		Wait ( 1 );
+		if IsSomeUnitInArea ( 0 , &apos;Repair&apos;, 0 ) &gt; 0 then
+			ChangePlayerForScriptGroup( 110, 0 );
+			Cmd ( 12 , 110 , 0 , GetScriptAreaParams &quot;mine16&quot;);
+			Wait ( 3 );
+			LandReinforcementFromMap ( 0 , &quot;0&quot; , 1 , 911 );
+			Cmd ( 3 , 911 , 0 , GetScriptAreaParams &quot;Repair&quot;);
+			break;
+		end;
+	endend;
+
+function Shtab()	while 1 do
+		Wait ( 1 );
+		if IsSomeUnitInArea ( 0 , &apos;Shtab&apos;, 0 ) &gt; 0 then
+			Cmd( 7 , 600 , 0 , GetScriptAreaParams &quot;Shtab&quot;);
+			break;
+		end;
+	endend;
+function Timer()
+	Time = 0;	while 1 do		Wait( 2 );		if GetGameTime (  ) &gt; 1800 then
+			Time = Time + 1;
+			if Time &gt; 150 then				LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 700 );				Cmd ( 3 , 700 , 300 , GetScriptAreaParams &quot;town&quot;);
+			break;
+			end;		end;		end;end;
+-----------------------Objective
+function Objective()	ObjectiveChanged(0, 1); 	SetIGlobalVar( &quot;temp.objective0&quot;, 1 );	StartThread( CompleteObjective0 );
+	Wait( 3 );end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 104 ) &lt; 1) and (GetNUnitsInScriptGroup ( 105 ) &lt; 1) then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.objective0&quot;, 2 );
+			StartThread( Repair );
+			
+			DamageScriptObject ( 1000 , 100 );
+			
+			StartThread( Objective1 );
+			Wait( 3 );
+			break;
+		end;	
+	end;
+end;
+function Objective1()
+	ObjectiveChanged(1, 1); 
+	SetIGlobalVar( &quot;temp.objective1&quot;, 1 );
+	
+	DamageScriptObject ( 1001 , 10 );
+	StartThread( CompleteObjective1 );
+	Wait( 3 );
+end;
+function CompleteObjective1()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea ( 1, &quot;town&quot; , 0 ) &lt; 1) then
+			ObjectiveChanged(1, 2);
+			SetIGlobalVar( &quot;temp.objective1&quot;, 2 );
+			Wait( 3 );
+			break;
+		end;	
+	end;
+end;
+------------------------WIn_Loose
+function Winner()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea ( 1, &quot;town&quot; , 0 ) &lt; 1) then
+			Wait( 5 );
+			Win(0);
+			break;
+		end;
+	end;
+
+end;
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Wait( 3 );
+			Win(1);
+			break;
+		end;
+	end;
+end;
+-------------------------------------------  MAIN
+StartThread( Unlucky );StartThread( Winner );StartThread( Objective );StartThread( Shtab );
+
+StartThread( Mine );
+StartThread( Mine0 );
+StartThread( Mine00 );</ScriptText>
+</Script>

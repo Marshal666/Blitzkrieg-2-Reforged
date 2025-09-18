@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="158">
+	<SrcName />
+	<Light>L_NORMAL</Light>
+	<Particle href="IceExplosion_Particle.xdb#xpointer(/Particle)" />
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>1</Scale>
+	<Speed>1.1</Speed>
+	<Offset>0</Offset>
+	<EndCycle>2.5</EndCycle>
+	<CycleCount>1</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/WaterExplosion/Ice0_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/WaterExplosion/Ice1_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/WaterExplosion/Ice2_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/Glass/Glass3_Texture.xdb#xpointer(/Texture)" />
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

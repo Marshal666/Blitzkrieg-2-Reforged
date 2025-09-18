@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="1000044">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HIDED</WeaponType>
+	<WeaponTypeTexture href="" />
+	<Dispersion>0</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>0</AmmoPerBurst>
+	<RangeMax>35</RangeMax>
+	<RangeMin>10</RangeMin>
+	<Ceiling>2000</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>180</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>0</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>0</DamagePower>
+			<PiercingRandom>0</PiercingRandom>
+			<Area>0</Area>
+			<Area2>0</Area2>
+			<Speed>800</Speed>
+			<TraceSpeedCoeff>0</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="" />
+			<EffectHitWater href="" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>60</FireRate>
+			<RelaxTime>0.1</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="" />
+</WeaponRPGStats>

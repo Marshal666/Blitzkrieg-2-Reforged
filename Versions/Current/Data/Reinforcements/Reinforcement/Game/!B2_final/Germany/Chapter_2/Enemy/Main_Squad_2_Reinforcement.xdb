@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="586">
+	<Type>RT_MAIN_INFANTRY</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Infantry_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Great_Britain/Main_Squad/gb_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Great_Britain/Main_Squad/gb_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Great_Britain/Main_Squad/gb_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/GB/artillery/3inch_mortar_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>3</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Great_Britain/AT_Squad/gb_at_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/GB/auto/aec_matador_cargo_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/GB/auto/Universal_Carrier_MKI_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/GB/auto/Universal_Carrier_MKI_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>3</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="" />
+			<Squad href="/Squads/Great_Britain/Snipers/gb_sniper_1/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>3</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

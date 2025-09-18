@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="323">
+	<Type>RT_LIGHT_AAA</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/aa_light_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/light_aa/text.xdb#xpointer(/Text)" />
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/artillery/2_cm_flak30_38/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/artillery/2_cm_flak30_38/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/auto/opel_blitz_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/auto/opel_blitz_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/light_aa/text.xdb#xpointer(/Text)" />
+	<Transports />
+	<LocalizedDesc href="" />
+</Reinforcement>

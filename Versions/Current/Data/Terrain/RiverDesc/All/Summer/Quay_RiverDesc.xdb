@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RiverDesc ObjectRecordID="6">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>7</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>-13805754</MiniMapCenterColor>
+	<MiniMapBorderColor>-13472929</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<BottomMaterial href="/Scene/TexAndMats/All/Terrain/Water/Summer/Bottom_Material.xdb#xpointer(/Material)" />
+	<PrecipiceMaterial href="/Scene/TexAndMats/All/Terrain/Water/Summer/Quay_Material.xdb#xpointer(/Material)" />
+	<WaterMaterial href="/Scene/TexAndMats/All/Terrain/Water/Summer/Water_Material.xdb#xpointer(/Material)" />
+	<StreamSpeed>0.2</StreamSpeed>
+	<BorderRand>0</BorderRand>
+	<Depth>0</Depth>
+	<DepthRand>0.05</DepthRand>
+	<RandX>0</RandX>
+	<RandY>0</RandY>
+	<RidgeTexGeomScale>15</RidgeTexGeomScale>
+	<WaterLayers>
+		<Item>
+			<CenterOpacity>0.8</CenterOpacity>
+			<TilingStep>0.1</TilingStep>
+			<Disturbance>0.3</Disturbance>
+			<NumCells>8</NumCells>
+			<Materials>
+				<Item href="/Scene/TexAndMats/All/Terrain/Water/Summer/Water_Material.xdb#xpointer(/Material)" />
+			</Materials>
+			<UseFromPixel>0</UseFromPixel>
+			<UseToPixel>0</UseToPixel>
+			<StreamSpeed>0.1</StreamSpeed>
+		</Item>
+		<Item>
+			<CenterOpacity>0.5</CenterOpacity>
+			<TilingStep>0.1</TilingStep>
+			<Disturbance>0.3</Disturbance>
+			<NumCells>8</NumCells>
+			<Materials>
+				<Item href="/Scene/TexAndMats/All/Terrain/Water/Summer/Water2_Material.xdb#xpointer(/Material)" />
+			</Materials>
+			<UseFromPixel>0</UseFromPixel>
+			<UseToPixel>0</UseToPixel>
+			<StreamSpeed>0.2</StreamSpeed>
+		</Item>
+	</WaterLayers>
+	<HasPeak>false</HasPeak>
+	<DefaultWidth>256</DefaultWidth>
+	<DefaultOpacity>1</DefaultOpacity>
+</RiverDesc>

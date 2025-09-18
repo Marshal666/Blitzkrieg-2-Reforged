@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1263">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankMedium_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Medium_Tanks/Text.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Medium_Tanks/Text.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+	<TemplateOverride href="" />
+</Reinforcement>

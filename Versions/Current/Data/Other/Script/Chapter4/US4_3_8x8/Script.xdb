@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="178">
+	<FileName />
+	<ScriptText>--objective1 = 0;
+-------------------------------------------Loose conditions
+function Caput()
+    while 1 do
+        if ( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then
+		Wait(2);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+---------------------------------------Alarm
+function Warning () 
+while 1 do
+		Wait( 3 );
+		if ( GetNUnitsInArea ( 0, &quot;Start&quot; ) &gt; 0 )then
+			Wait( 2 );
+			Cmd( 3, 400, 100, 2092, 1220 );
+			break;
+		end;	
+	end;
+end;
+--------------------------------------- Artillery destruction
+function Artillery ()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( 1500, 1 ) &lt; 1 ) then
+			Wait( 2 );
+			CompleteObjective( 0 );
+			--objective1 = 1;
+			Wait( 2 );
+			GiveObjective ( 1 );
+			break;	
+		end;
+	end;
+end;
+
+function Check()
+	Trace(&quot;Units in script group = %g&quot;,GetNUnitsInCircle( 2, 3868, 539, 500 )); 
+end;
+-----------------------------------------Command center capture and victory 
+function Command_Center()
+	while 1 do
+		Wait( 2 );
+			if ( GetNUnitsInArea ( 1, &quot;JHQ&quot; ) &lt; 1 ) then --and ( objective1 == 1) then 
+				Wait( 5 );
+				CompleteObjective( 1 );
+				Wait( 3 );
+				Win (0);
+			break;
+		end;
+	end;
+end;
+----------------------------------------- Naval transport
+function Ship ()
+    Wait ( 1 );
+    Cmd  ( 0, 500, 300, 3868, 539 );
+    Wait ( 3 )
+    QCmd  ( 0, 500, 300, 7316, 450 );
+    QCmd  ( ACT_DISAPPEAR, 500 );
+    while 1 do
+    Wait ( 2 );
+	    if GetNUnitsInCircle( 2, 3868, 539, 500 ) &gt; 0 then
+			LandReinforcementFromMap( 2, &quot;Squad&quot;, 0, 600 );
+			Wait(1);
+			LandReinforcementFromMap (2, &quot;Tanks&quot;, 0, 600);
+			Wait(1);
+            ChangePlayerForScriptGroup ( 600, 0 );
+			return 1;
+		end;
+    end;
+end;
+----------------------------------------Alarm 2
+function Warning2 ()
+while 1 do
+		Wait( 1 );
+		if ( GetNUnitsInArea ( 0, &quot;ALZ&quot; ) &gt; 0 )then
+			Wait( 3 );
+			--Cmd (0 , 1100, 100, 3321, 6476 );
+            --QCmd (3, 1100, 100, 4260, 6124);
+			Cmd ( 3, 1100, 200, 4631, 4527 );
+			break;
+		end;	
+	end;
+end;
+
+-----------------------------------------Functions start
+GiveObjective( 0 );
+StartThread( Caput );
+StartThread( Warning )
+StartThread( Artillery );
+StartThread( Command_Center );
+StartThread( Ship );
+StartThread( Warning2 );
+
+
+
+</ScriptText>
+</Script>

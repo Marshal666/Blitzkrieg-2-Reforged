@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1643">
+	<Type>RT_ASSAULT_INFANTRY</Type>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/auto/opel_blitz_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/germany/assault_squad/german_assault_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href=""/>
+			<Squad href="/squads/germany/assault_squad/german_assault_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)"/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href=""/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

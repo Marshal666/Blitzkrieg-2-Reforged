@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<InfantryRPGStats ObjectRecordID="305">
+	<KeyName />
+	<ParentName />
+	<StatsType>Infa</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments />
+	<MaxHP>10</MaxHP>
+	<DamageLevels />
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="/Units/Infantry/Germany/Assault_Squad/AS_smg_MP41/icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_SOLDIER</DBtype>
+	<M1UnitTargetType href="" />
+	<M1UnitSpecific href="" />
+	<M1UnitActions href="" />
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescription href="" />
+	<FullDescriptionFileRef href="" />
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>4</AIPassabilityClass>
+	<AcksNames>
+		<Item href="" />
+	</AcksNames>
+	<Sight>20</Sight>
+	<SightPower>1</SightPower>
+	<Speed>1</Speed>
+	<RotateSpeed>0</RotateSpeed>
+	<Passability>1</Passability>
+	<Priority>0</Priority>
+	<Camouflage>0.2</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>0</BoundTileRadius>
+	<Weight>1</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>7</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>11</x>
+		<y>15</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>18.6011</Radius>
+		<IsRound>true</IsRound>
+	</BoundCircle>
+	<aabb_as />
+	<aabb_ds />
+	<animdescs>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="infantrysystem_paratrooper_idle_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1233</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="infantrysystem_paratrooper_use_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>500</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="infantrysystem_paratrooper_use_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>0</SmallAABBCoeff>
+	<Actions href="/Other/UnitActions/Game/Units/Infantry/gunner.xdb#xpointer(/UnitActions)" />
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href="/Other/ArmorPattern/Game/infantry.xdb#xpointer(/ArmorPattern)" />
+	<ExpPrice>1</ExpPrice>
+	<guns />
+	<CanAttackUp>true</CanAttackUp>
+	<CanAttackDown>true</CanAttackDown>
+	<RunSpeed>1</RunSpeed>
+	<CrawlSpeed>1</CrawlSpeed>
+	<animtimes />
+	<Armor>0</Armor>
+	<GunBoneName>ArmJoint</GunBoneName>
+</InfantryRPGStats>

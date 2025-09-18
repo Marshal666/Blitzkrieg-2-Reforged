@@ -1,0 +1,34 @@
+function Camera()
+	ViewZone( "All", 1 );
+	CameraMove ( 0,0 );
+	StartThread( Starts );
+end;
+
+
+function Starts()
+	StartThread( Reinf_Attack );
+	Cmd( ACT_MOVE, 100, 3242,3991 );
+	QCmd( ACT_ROTATE, 100, 3242,3795 );
+	QCmd( ACT_MOVE, 100, 3235,3020 );
+	QCmd( ACT_ROTATE, 100, 3444,3028 );
+	QCmd( ACT_ROTATE, 100, 2833,3055 );
+	QCmd( ACT_ROTATE, 100, 3225,2795 );
+	QCmd( ACT_MOVE, 100, 3254,1870 );
+	QCmd( ACT_ROTATE, 100, 3229,2170 );
+	QCmd( ACT_MOVE, 100, 3240,3982 );
+	QCmd( ACT_MOVE, 100, 3644,4001 );
+	QCmd( ACT_ROTATE, 100, 3250,4015 );
+end;
+
+function Reinf_Attack( k )
+local Tigra = {};
+if (GetNUnitsInArea(0, "zone3") > 0) then
+	LandReinforcement( 0, 156, 9, 1 );
+	Wait( 1 );
+	Tigra = GetUnitListInAreaArray( 0, "zone1" );
+	CmdArray(ACT_MOVE , Tigra, GetScriptAreaParams( "zone2" ) );
+	end;
+end;
+
+
+StartThread( Camera );

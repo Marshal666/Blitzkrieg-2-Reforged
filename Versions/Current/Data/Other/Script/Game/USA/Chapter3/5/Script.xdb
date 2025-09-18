@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="185">
+		<FileName />
+		<ScriptText>-----------------------Shuher
+function Shuher()
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 110 );
+	LandReinforcementFromMap ( 1 , &quot;0&quot; , 1 , 111 );
+	LandReinforcementFromMap ( 1 , &quot;4&quot; , 3 , 112 );
+	LandReinforcementFromMap ( 1 , &quot;3&quot; , 2 , 113 );
+	Wait( 1 );
+	Cmd( 16 , 110 , 200 , GetScriptAreaParams &quot;mine1&quot; );
+	Cmd( 16 , 111 , 200 , GetScriptAreaParams &quot;mine2&quot; );
+	Cmd( 3 , 112 , 0 , GetScriptAreaParams &quot;vic&quot; );
+	QCmd( 3 , 112 , 0 , GetScriptAreaParams &quot;vic1&quot; );
+	QCmd( 3 , 112 , 0 , GetScriptAreaParams &quot;vic2&quot; );
+	QCmd( 3 , 112 , 0 , GetScriptAreaParams &quot;vic&quot; );
+	Cmd( 3 , 113 , 0 , GetScriptAreaParams &quot;mash&quot; );
+	QCmd( 3 , 113 , 0 , GetScriptAreaParams &quot;mash1&quot; );
+	QCmd( 3 , 113 , 0 , GetScriptAreaParams &quot;vic&quot; );
+	Wait( 3 );
+	StartThread( minefhrowers );
+	Wait ( 30 );
+	LandReinforcementFromMap ( 1 , &quot;2&quot; , 4 , 114 );
+	Cmd( 3 , 114 , 0 , GetScriptAreaParams &quot;mash&quot; );
+	QCmd( 3 , 114 , 0 , GetScriptAreaParams &quot;vic&quot; );
+	Wait ( 10 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 4 , 115 );
+	Cmd( 3 , 115 , 0 , GetScriptAreaParams &quot;mash&quot; );
+	QCmd( 3 , 115 , 0 , GetScriptAreaParams &quot;vic&quot; );
+end;
+function minefhrowers()
+	vremy = RandomInt ( 20 );
+	Wait ( vremy );
+	Cmd( 16 , 110 , 200 , GetScriptAreaParams &quot;mine1&quot; );
+	Cmd( 16 , 111 , 200 , GetScriptAreaParams &quot;mine2&quot; );
+	if GetNAmmo ( 110 ) + GetNAmmo ( 111 ) &gt; 0 then
+		StartThread( minefhrowers );
+	end;
+end;
+-----------------------Objective
+function Objective()
+	ObjectiveChanged(0, 1); 
+	SetIGlobalVar( &quot;temp.objective0&quot; , 1 );
+	StartThread( CompleteObjective0 );
+	Wait( 3 );
+end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if  IsSomeUnitInArea ( 0 , &apos;mash&apos; , 0 ) &gt; 0 and IsSomeUnitInArea ( 1 , &apos;mash&apos; , 0 ) &lt; 1 then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.objective0&quot; , 2 );
+			ChangePlayerForScriptGroup( 100, 0 );
+			Wait( 3 );
+			StartThread( Objective1 );
+			StartThread( Shuher );
+			break;
+		end;	
+	end;
+end;
+function Objective1()
+	ObjectiveChanged(1, 1); 
+	SetIGlobalVar( &quot;temp.objective1&quot; , 1 );
+	StartThread( CompleteObjective1 );
+	Wait( 3 );
+end;
+function CompleteObjective1()
+	while 1 do
+		Wait( 3 );
+		if  GetNScriptUnitsInArea ( 100 , &apos;vic&apos; , 0 ) == 4 then
+			ObjectiveChanged(1 , 2);
+			SetIGlobalVar( &quot;temp.objective1&quot; , 2 );
+			Win ( 0 );
+			Wait( 3 );
+			break;
+		end;	
+	end;
+end;
+------------------------WIn_Loose
+function Looser()
+	while 1 do
+		Wait( 3 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Wait( 3 );
+			Win(1);
+			break;
+		end;	
+	end;
+end;
+function Looser1()
+	while 1 do
+		Wait( 3 );
+        if ( GetNUnitsInScriptGroup ( 100 ) &lt; 4) then
+			Wait( 3 );
+			Win(1);
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------  MAIN
+StartThread( Objective );
+StartThread( Looser );
+StartThread( Looser1 );</ScriptText>
+	</Script>

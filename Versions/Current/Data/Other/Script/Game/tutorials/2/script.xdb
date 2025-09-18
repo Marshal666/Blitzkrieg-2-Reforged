@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000004">
+	<FileName />
+	<ScriptText>lastcommand = 0;
+
+function StartObjective( func )
+	proto = function( )
+	while 1 do
+		Wait( 1 );
+		if ( %func() ~= nil ) then
+			break;
+		end;
+	end;
+	end;
+	StartThread( proto );
+end;
+
+function meta_sid_check( checkfunc )
+	return function( sid, checkparam, any, notcheck )
+		local units = GetObjectListArray( sid )
+		for i = 1, units.n do
+			if ( %checkfunc( units[i] ) == checkparam ) then
+				if any ~= nil then
+					return 1;
+				elseif notcheck ~= nil then
+					return 0;
+				end;
+			else
+				if notcheck == nil then
+					return 0;
+				end;
+			end;
+		end;
+		return 1;
+	end;
+end;
+
+IsScriptUnitImmobilized = meta_sid_check( IsImmobilized );
+IsScriptUnitHPs = meta_sid_check( GetObjectHPs );
+
+function GiveObjectiveTutorial( obj )
+	GiveObjective( obj );
+	GameMesage( &quot;show_objectives&quot;, 0, 0 );
+end;
+
+function GetScriptUnitState( sid )
+local state = GetUnitState( GetObjectList( sid ) );
+	return state;
+end;
+
+function Objective0()
+	if ( IsSomeBodyAlive( 1, 10 ) == 0 ) then
+		CompleteObjective( 0 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 1 );
+		Cmd( ACT_SWARM, 11, 0, GetScriptAreaParams( &quot;attack1&quot; ) );
+		StartObjective( Objective1 );
+		return 1;
+	end;
+end;
+
+function Objective1()
+	if ( IsSomeBodyAlive( 1, 11 ) == 0 ) then
+		CompleteObjective( 1 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 2 );
+		StartObjective( Objective2 );
+		return 1;
+	end;
+end;
+
+function Objective2()
+	if ( IsSomeBodyAlive( 3, 12 ) == 0 ) then
+		CompleteObjective( 2 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 3 ); -- 2a
+		DamageScriptObject( 301, 10 );
+		StartObjective( Objective3 );
+		return 1;
+	end;
+end;
+
+function Objective3()
+	if ( IsSomeUnitInArea( 0, &quot;prep2&quot; ) == 1 ) then
+		DamageScriptObject( 301, 0 );
+		CompleteObjective( 3 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 4 );
+		StartObjective( FictiveObjective0 );
+		return 1;
+	end;
+end;
+
+function FictiveObjective0() -- stand ground
+	if ( IsStandGround( 1 ) == 1 ) and ( IsStandGround( 2 ) == 1 ) then
+		Cmd( ACT_SWARM, 13, 0, GetScriptAreaParams( &quot;attack2&quot; ) );
+		StartObjective( Objective4 );
+		return 1;
+	end;
+end;
+
+function Objective4()
+	if ( IsSomeBodyAlive( 1, 13 ) == 0 ) then
+		CompleteObjective( 4 );
+		Wait( 3 );
+		for i = 0, 3 do
+			ObjectiveChanged( i, 0 );
+		end;
+		Sleep( 1 );		
+		GiveObjectiveTutorial( 5 );
+		StartObjective( Objective5 );
+		return 1;
+	end;
+end;
+
+function Objective5() -- entrench
+	if ( IsEntrenched( 1 ) == 1 ) and ( IsEntrenched( 2 ) == 1 ) then
+		CompleteObjective( 5 );
+		Wait( 3 );
+		lastcommand = 0;
+		GiveObjectiveTutorial( 6 );
+		StartObjective( Objective6 );
+		return 1;
+	end;
+end;
+
+function Objective6() -- ambush
+	if ( lastcommand == ACT_AMBUSH ) then
+		Wait( 5 );
+		CompleteObjective( 6 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 7 );
+		Cmd( ACT_SWARM, 14, 0, GetScriptAreaParams( &quot;attack2&quot; ) );
+		StartObjective( Objective7 );
+		return 1;
+	end;
+end;
+
+function Objective7() -- fend off a tank attack
+	if ( IsSomeBodyAlive( 1, 14 ) == 0 ) then
+		CompleteObjective( 7 );
+		Wait( 3 );
+		lastcommand = 0;
+		GiveObjectiveTutorial( 8 );
+		StartObjective( Objective8 );
+		return 1;
+	end;
+end;
+
+function Objective8() -- patrol
+	if ( lastcommand == ACT_PATROL ) then
+		CompleteObjective( 8 );
+		Wait( 3 );
+		for i = 4, 8 do
+			ObjectiveChanged( i, 0 );
+		end;
+		Sleep( 1 );
+		GiveObjectiveTutorial( 9 );
+		LandReinforcementFromMap( 1, &quot;bomber&quot;, 0, 1001 );
+		Cmd( ACT_MOVE, 1001, 0, GetScriptAreaParams( &quot;attack2&quot; ) );
+		Wait( 1 );
+		StartObjective( Objective9 );
+		return 1;
+	end;
+end;
+
+function Objective9() -- shoot down bomber
+	if ( IsSomeBodyAlive( 1, 1001 ) == 0 ) then
+		CompleteObjective( 9 );
+		Wait( 3 );
+		God( 0, 4 );
+		LandReinforcementFromMap( 2, &quot;jeep&quot;, 0, 2005 );
+		Cmd( ACT_MOVE, 2005, 20, &quot;mines&quot; );
+		Wait( 5 );
+		LandReinforcementFromMap( 0, &quot;eng&quot;, 1, 911 );
+		GiveObjectiveTutorial( 10 );
+		StartObjective( Objective10 );
+		return 1;
+	end;
+end;
+
+function Objective10() -- move to point
+	if ( IsScriptUnitImmobilized( 2005, 1, 1 ) == 1 ) then
+		Cmd( ACT_STAND, 1 );
+		Cmd( ACT_STAND, 2 );
+		Cmd( ACT_STAND, 2005 );
+		CompleteObjective( 10 );
+		Cmd( ACT_MOVE, 911, 0, GetScriptAreaParams( &quot;truck&quot; ) );
+		Wait( 3 );
+		GiveObjectiveTutorial( 11 );
+		StartObjective( Objective11 );
+		return 1;
+	end;
+end;
+
+function Objective11() -- demine
+	if ( GetNMinesInScriptArea( &quot;mines&quot; ) &lt;= 5 ) then
+		CompleteObjective( 11 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 12 );
+		StartObjective( Objective12 );
+		return 1;
+	end;
+end;
+
+function Objective12() -- repair
+	if ( IsScriptUnitHPs( 2005, HP_MAX3 ) == 1 ) then
+		ChangePlayerForScriptGroup( 2005, 0 );
+		CompleteObjective( 12 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 13 );
+		StartObjective( Objective13 );
+		return 1;
+	end;
+end;
+
+function Objective13() -- tanks vs infantry
+	if ( IsSomeBodyAlive( 1, 15 ) == 0 ) then
+		CompleteObjective( 13 );
+		Wait( 3 );
+		GiveObjectiveTutorial( 14 );
+		ChangePlayerForScriptGroup( 16, 1 );
+		StartObjective( Objective14 );
+		return 1;
+	end;
+end;
+
+function Objective14() -- gap vs artillery
+	if ( (IsSomeBodyAlive( 1, 16 ) + IsSomeBodyAlive( 1, 17 )) == 0 ) then
+		CompleteObjective( 14 );
+		Wait( 3 );
+		Win( 0 );
+		return 1;
+	end;
+end;
+
+function OnRegisteredCommand( nCommand )
+	lastcommand = nCommand;
+end;
+
+RegisterCommandObserver( ACT_AMBUSH );
+RegisterCommandObserver( ACT_PATROL );
+HP_MAX1 = GetScriptObjectHPs( 1 );
+HP_MAX2 = GetScriptObjectHPs( 2 );
+HP_MAX3 = 50;
+RT_TANKS = 9;
+RT_BOMBERS = 14;
+-----------------------------------
+--EnablePlayerReinforcement( RT_TANKS, 0 );
+--EnablePlayerReinforcement( RT_BOMBERS, 0 );
+ChangePlayerForScriptGroup( 16, 3 );
+SetCheatDifficultyLevel( 1 );
+God( 0, 1 );
+SetIGlobalVar( &quot;temp.nogeneral_sript&quot;, 1 );
+Wait( 4 );
+GiveObjectiveTutorial( 0 );
+StartObjective( Objective0 );
+</ScriptText>
+</Script>

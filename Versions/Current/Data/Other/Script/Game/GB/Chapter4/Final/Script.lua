@@ -1,0 +1,280 @@
+missionend = 0;
+Reinf_1 = 0;
+Reinf_2 = 1;
+Attack22_Flag = 0;
+
+function Attack1()
+	Wait( 10 + Random( 20 ) );
+	Cmd( ACT_SWARM, 10, 128, GetScriptAreaParams( "A1" ) );
+	QCmd( ACT_SWARM, 10, 128, GetScriptAreaParams( "A2" ) );
+	QCmd( ACT_SWARM, 10, 128, GetScriptAreaParams( "A3" ) );
+	Cmd( ACT_SWARM, 11, 128, GetScriptAreaParams( "B1" ) );
+	QCmd( ACT_SWARM, 11, 128, GetScriptAreaParams( "B2" ) );
+	Wait( 40 );
+	ChangeFormation( 11, 3 );
+	Cmd( ACT_ENTER, 11, 502 );
+end;
+
+function Attack2()
+	Wait( 10 + Random( 20 ) );
+	Cmd( ACT_SWARM, 30, 128, GetScriptAreaParams( "C1" ) );
+	QCmd( ACT_SWARM, 30, 128, GetScriptAreaParams( "C2" ) );
+	QCmd( ACT_SWARM, 30, 128, GetScriptAreaParams( "C3" ) );
+	Cmd( ACT_SWARM, 40, 128, GetScriptAreaParams( "D1" ) );
+	QCmd( ACT_SWARM, 40, 128, GetScriptAreaParams( "D2" ) );
+	QCmd( ACT_SWARM, 40, 128, GetScriptAreaParams( "D3" ) );
+end;
+
+function Attack11()
+	Wait( 5 + Random( 10 ) );
+	Cmd( ACT_SWARM, 20, 128, GetScriptAreaParams( "A1" ) );
+	QCmd( ACT_SWARM, 20, 128, GetScriptAreaParams( "A2" ) );
+	QCmd( ACT_SWARM, 20, 128, GetScriptAreaParams( "A31" ) );
+	QCmd( ACT_SWARM, 20, 128, GetScriptAreaParams( "A32" ) );
+	Cmd( ACT_SWARM, 21, 128, GetScriptAreaParams( "B11" ) );
+	QCmd( ACT_SWARM, 21, 128, GetScriptAreaParams( "B21" ) );
+	QCmd( ACT_SWARM, 21, 128, GetScriptAreaParams( "A3" ) );
+	
+	Wait( 120 + Random( 30 ) );
+	Cmd( ACT_SWARM, 31, 128, GetScriptAreaParams( "C11" ) );
+	QCmd( ACT_SWARM, 31, 128, GetScriptAreaParams( "C21" ) );
+	QCmd( ACT_SWARM, 31, 128, GetScriptAreaParams( "D3" ) );
+	Cmd( ACT_SWARM, 41, 128, GetScriptAreaParams( "D1" ) );
+	QCmd( ACT_SWARM, 41, 128, GetScriptAreaParams( "D2" ) );
+	QCmd( ACT_SWARM, 41, 128, GetScriptAreaParams( "C3" ) );
+end;
+
+function Attack22()
+	LandReinforcementFromMap( 1, Reinf_1, 4, 50 );
+	LandReinforcementFromMap( 1, Reinf_2, 5, 51 );
+	Attack22_Flag = 1;
+	Wait( 1 );
+	Cmd( ACT_SWARM, 50, 128, GetScriptAreaParams( "C11" ) );
+	QCmd( ACT_SWARM, 50, 128, GetScriptAreaParams( "C21" ) );
+	QCmd( ACT_SWARM, 50, 128, GetScriptAreaParams( "D3" ) );
+	Cmd( ACT_SWARM, 51, 128, GetScriptAreaParams( "D1" ) );
+	QCmd( ACT_SWARM, 51, 128, GetScriptAreaParams( "D2" ) );
+	QCmd( ACT_SWARM, 51, 128, GetScriptAreaParams( "C3" ) );
+end;
+
+function CheckAttack11()
+	for i = 1, 5 do
+	if ( IsSomeUnitInArea( 0, "CheckA" .. i, 0 ) > 0 ) then
+		return 1;
+	end;
+	end;
+end;
+
+function CheckAttack22()
+	if ( IsSomeUnitInArea( 0, "CheckB", 0 ) > 0 ) then
+		return 1;
+	end;
+end;
+
+function CheckObj0And1()
+	if ( GetIGlobalVar( "temp.objective.0", 0 ) == 2 ) and ( GetIGlobalVar( "temp.objective.1", 0 ) == 2 ) then
+		return 1;
+	end;
+end;
+
+function CheckObj3And4()
+	if ( GetIGlobalVar( "temp.objective.3", 0 ) == 2 ) and ( GetIGlobalVar( "temp.objective.4", 0 ) == 2 ) then
+		return 1;
+	end;
+end;
+
+function GiveObj3And4()
+	GiveObjective( 3 );
+	GiveObjective( 4 );
+end;
+
+function GiveObj5()
+	GiveObjective( 5 );
+end;
+
+function MakeAIDefenceAA()
+local ReinfScriptId = 20000;
+local ReinfId = 2;
+	Wait( Random( 10 ) );
+	LandReinforcementFromMap( 1, ReinfId, 2, ReinfScriptId );
+	Wait( 2 );
+	reinf = GetObjectListArray( ReinfScriptId );
+	--guns = GetUnitsByParam( reinf, PT_CLASS, CLASS_HEAVY_AA_GUN );
+	trucks = GetUnitsByParam( reinf, PT_CLASS, CLASS_APC );
+	CmdArrayDisp( ACT_DEPLOY, trucks, 512, GetScriptObjCoord( 502 ) );
+	Wait( 100 );
+	CmdArrayDisp( ACT_RESUPPLY, trucks, 512, GetScriptObjCoordMedium( 490 ) );
+end;
+
+function MakeAIDefenceInf()
+local ReinfScriptId = 20001;
+local ReinfId = 3;
+	Wait( 10 + Random( 10 ) );
+	LandReinforcementFromMap( 1, ReinfId, 2, ReinfScriptId );
+	Wait( 2 );
+	Cmd( ACT_ENTER, ReinfScriptId, 502 );
+end;
+
+function Objective0()
+local inf1 = {};
+	if ( IsSomeBodyAlive( 2, 801 ) == 0 ) then
+		FailObjective( 0 );
+		StartThread( MakeAIDefenceAA );
+		StartThread( MakeAIDefenceInf );
+		return 1;
+    end;
+    if ( IsSomeBodyAlive( 1, 10 ) + IsSomeBodyAlive( 1, 11 ) +
+		IsSomeBodyAlive( 1, 20 ) + IsSomeBodyAlive( 1, 21 ) ) == 0 then
+		CompleteObjective( 0 );
+		inf1 = GetPassangersArray( 502, 2 );
+		Cmd( ACT_LEAVE, 801, 64, GetScriptObjCoord( 702 ) );
+		Wait( 5 );
+		Cmd( ACT_STOP, 801 );
+		Sleep( 5 );
+		CmdArrayDisp( ACT_SWARM, inf1, 64, GetScriptObjCoord( 702 ) );
+		ChangePlayerForScriptGroup( 801, 0 );
+		ChangePlayerForScriptGroup( 502, 0 );
+		return 1;
+	end;
+end;
+
+function Objective1()
+local inf1 = {};
+	if ( IsSomeBodyAlive( 2, 802 ) == 0 ) then
+		FailObjective( 1 );
+		return 1;
+    end;
+    if ( ( IsSomeBodyAlive( 1, 30 ) + IsSomeBodyAlive( 1, 40 ) +
+		IsSomeBodyAlive( 1, 31 ) + IsSomeBodyAlive( 1, 41 ) ) == 0 ) 
+		and ( Attack22_Flag == 1 ) and ( IsSomeBodyAlive( 1, 50 ) + 
+		IsSomeBodyAlive( 1, 51 ) == 0 ) then
+		CompleteObjective( 1 );
+		inf1 = GetPassangersArray( 503, 2 );
+		Cmd( ACT_LEAVE, 802, 64, GetScriptObjCoord( 703 ) );
+		Wait( 5 );
+		Cmd( ACT_STOP, 802 );
+		Sleep( 5 );
+		CmdArrayDisp( ACT_SWARM, inf1, 64, GetScriptObjCoord( 703 ) );
+		ChangePlayerForScriptGroup( 802, 0 );
+		ChangePlayerForScriptGroup( 503, 0 );
+		return 1;
+	end;
+end;
+
+function Objective2()
+	if ( ( IsSomeBodyAlive( 0, 1901 ) + IsSomeBodyAlive( 0, 1902 ) ) == 0 ) then
+		FailObjective( 2 );
+		return 1;
+	end;
+	if ( ( IsSomeUnitInArea( 1, "Bridge1", 0 ) == 0 ) and 
+		( IsSomeUnitInArea( 0, "Bridge1", 0 ) > 0 ) ) or 
+		( ( IsSomeUnitInArea( 1, "Bridge2", 0 ) == 0 ) and 
+		( IsSomeUnitInArea( 0, "Bridge2", 0 ) > 0 ) ) then
+		CompleteObjective( 2 );
+		return 1;
+    end;
+end;
+
+function Objective3()
+	if ( GetNUnitsInScriptGroup( 505, 0 ) == 1 ) then
+		CompleteObjective( 3 );
+		return 1;
+    end;
+end;
+
+function Objective4()
+	if ( IsSomeBodyAlive( 1, 490 ) == 0 ) then
+		CompleteObjective( 4 );
+		return 1;
+    end;
+end;
+
+function Objective5()
+	if ( GetNUnitsInScriptGroup( 504, 0 ) == 1 ) then
+		CompleteObjective( 5 );
+		return 1;
+    end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( ( IsSomePlayerUnit( 0 ) == 0 ) and ( ( GetReinforcementCallsLeft( 0 ) == 0 )
+			or ( IsReinforcementAvailable( 0 ) == 0 ) ) ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 1 );
+			return
+		end;
+		for u = 1, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) == 3 ) then
+				missionend = 1;
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				return
+			end;
+		end;
+	end;
+end;
+
+function WinCheck()
+local obj;
+	while ( missionend == 0 ) do
+		obj = 1;
+		Wait( 2 );
+		for u = 1, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) ~= 2 ) then
+				obj = 0;
+				break;
+			end;
+		end;
+		if ( obj == 1 ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			return
+		end
+	end;
+end;
+
+-----
+function KeyBuilding_Flag()
+local tmpold = { 0, 0, 0, 1, 1, 1 };
+local tmp;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 6 do
+		if ( ( GetNUnitsInScriptGroup( i + 500, 0 ) + GetNUnitsInScriptGroup( i + 500, 2 ) ) == 1 ) then
+			tmp = 0;
+		elseif ( GetNUnitsInScriptGroup( i + 500, 1 ) == 1 ) then
+			tmp = 1;
+		end;
+		if ( tmp ~= tmpold[i] ) then
+			if ( tmp == 0 ) then
+				SetScriptObjectHPs( 700 + i, 50 );
+			else
+				SetScriptObjectHPs( 700 + i, 100 );
+			end;
+			tmpold[i] = tmp;
+		end;
+	end;
+	end;
+end;
+-----
+
+Objectives = { Objective0, Objective1, Objective2, Objective3, Objective4, Objective5 };
+Objectives_Count = 6;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+GiveObjective( 1 );
+StartThread( LooseCheck );
+StartThread( WinCheck );
+StartThread( Attack1 );
+StartThread( Attack2 );
+Trigger( CheckAttack11, Attack11 );
+Trigger( CheckAttack22, Attack22 );
+Trigger( CheckObj0And1, GiveObj3And4 );
+Trigger( CheckObj3And4, GiveObj5 );
+StartThread( KeyBuilding_Flag );

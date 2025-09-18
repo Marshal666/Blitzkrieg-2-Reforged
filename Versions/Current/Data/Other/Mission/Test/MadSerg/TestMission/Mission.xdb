@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="25">
+	<Map href="/test/testmaps/designer_test/madserg/objectivestest/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses/>
+	<LocalizedName href="/other/text/test/designertest/testmission/new_object/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/test/designertest/testmission/new_object/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>100</x>
+		<y>100</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>1</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

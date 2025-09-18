@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="1000044">
+	<FileName/>
+	<ScriptText>function at()
+	while 1 do
+	Wait( 3 );
+	StartThread( at1 );	
+	StartThread( at1_1 );	
+	StartThread( at1_2 );	
+	StartThread( at2_1 );
+	StartThread( at2_2 );
+	StartThread( at2_3 );
+	StartThread( avz1 );
+	StartThread( sh1 );
+	Wait( 120 );
+	end;
+end;
+
+function sh1()
+Wait( 30 );
+--LandReinforcementFromMap ( 1 , "schnellboot" , 0 , 761 );
+--Cmd ( 3, 761 , 0, GetScriptAreaParams( "atx1" ) );
+Cmd ( 3, 760 , 0, GetScriptAreaParams( "atx1" ) );
+return 1
+end;
+
+function avz1()
+	Wait( 1 );
+LandReinforcementFromMap ( 1 , "junkers_ju87g" , 0 , 241 );
+	Wait( 1 );
+Cmd ( 3 , 241 , 1024 , GetScriptAreaParams( "ob0" ));
+QCmd ( 3 , 241 , 1024 , GetScriptAreaParams( "ob2" ));
+QCmd ( 3 , 241 , 1024 , GetScriptAreaParams( "ob1" ));
+	Wait( 5 );
+LandReinforcementFromMap ( 1 , "messer_bf_109_g" , 0 , 242 );
+	Wait( 1 );
+Cmd ( 3 , 242 , 1024 , GetScriptAreaParams( "ob0" ));
+QCmd ( 3 , 242 , 1024 , GetScriptAreaParams( "ob1" ));
+QCmd ( 3 , 242 , 1024 , GetScriptAreaParams( "ob2" ));
+	Wait( 5 );
+LandReinforcementFromMap ( 1 , "he_111_heinkel" , 0 , 243 );
+	Wait( 1 );
+Cmd ( 3 , 243 , 1024 , GetScriptAreaParams( "ob1" ));
+QCmd ( 3 , 243 , 1024 , GetScriptAreaParams( "ob2" ));
+QCmd ( 3 , 243 , 1024 , GetScriptAreaParams( "ob0" ));
+return 1;
+end
+
+function at1()
+Wait( 5 );
+Cmd ( 16, 300 , 0, GetScriptAreaParams( "ob0" ) );
+Wait( 5 ); 
+Cmd ( 16, 300 , 0, GetScriptAreaParams( "ob0_3" ) );
+Wait( 5 ); 
+Cmd ( 16, 300 , 128, GetScriptAreaParams( "at1" ) );
+Wait( 5 ); 
+return 1
+end;
+
+function at1_1()
+
+Wait( 5 );
+Cmd ( 16, 301 , 1024, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+Cmd ( 16, 301 , 512, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+Cmd ( 16, 301 , 128, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+return 1
+end;
+
+
+function at1_2()
+Wait( 5 );
+Cmd ( 16, 302 , 1024, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+Cmd ( 16, 302 , 512, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+Cmd ( 16, 302 , 128, GetScriptAreaParams( "ob2" ) );
+Wait( 5 ); 
+return 1
+end;
+
+
+function at1_3()
+Wait( 5 );
+Cmd ( 16, 303 , 1024, GetScriptAreaParams( "ob1" ) );
+Wait( 5 ); 
+Cmd ( 16, 303 , 512, GetScriptAreaParams( "ob1" ) );
+Wait( 5 ); 
+Cmd ( 16, 303 , 128, GetScriptAreaParams( "ob1" ) );
+Wait( 5 ); 
+return 1
+end;
+
+
+function at2_1()
+if ( GetNUnitsInScriptGroup ( 521 ) &lt; 1) then
+Wait( 3 );
+LandReinforcementFromMap ( 1 , "german_main" , 1 , 521 );
+LandReinforcementFromMap ( 1 , "sdkfz_222" , 1 , 521 );
+
+Wait( 1 );
+Cmd ( 3, 521 , 1024, GetScriptAreaParams( "ob1" ) );
+return 1;
+end
+end
+
+function at2_2()
+if ( GetNUnitsInScriptGroup ( 522 ) &lt; 1) then
+Wait( 3 );
+LandReinforcementFromMap ( 1 , "german_main" , 2 , 522 );
+LandReinforcementFromMap ( 1 , "sdkfz_222" , 2 , 522 );
+Wait( 1 );
+Cmd ( 3, 522 , 1024, GetScriptAreaParams( "ob2" ) );
+return 1;
+end
+end
+
+function at2_3()
+if ( GetNUnitsInScriptGroup ( 523 ) &lt; 1 
+and GetNUnitsInScriptGroup ( 524 ) &lt; 1 ) then
+Wait( 3 );
+LandReinforcementFromMap ( 1 , "german_main" , 1 , 523 );
+LandReinforcementFromMap ( 1 , "german_main" , 2 , 524 );
+LandReinforcementFromMap ( 1 , "sdkfz_222" , 1 , 523 );
+LandReinforcementFromMap ( 1 , "sdkfz_222" , 2 , 524 );
+Wait( 1 );
+Cmd ( 3, 521 , 1024, GetScriptAreaParams( "ob0" ) );
+Cmd ( 3, 522 , 1024, GetScriptAreaParams( "ob0" ) );
+return 1;
+end
+end
+------------------------------------------------------
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 
+		and GetReinforcementCallsLeft( 0 ) == 0) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+------------------------------------------------------
+function gameover()
+Wait( 5 ); 
+Win(1);
+return 1
+end;
+------------------------------------------------------
+function victory()
+	while 1 do
+		Wait( 3 );
+	if ((GetIGlobalVar("temp.rus1_0.objective.0", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.1", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.2", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.3", 0) 
+		* GetIGlobalVar("temp.rus1_0.objective.4", 0)) == 1) then
+		Wait( 1 );
+		Win(0);
+		break;
+	end;
+	end;
+end;
+------------------------------------------------------
+function zd0()
+	Wait( 180 );
+	if ( GetNUnitsInScriptGroup ( 111 ) &gt; 0) then
+		 Wait( 1 );  		
+		CompleteObjective ( 0 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.0", 1);
+		return 1;
+	else
+		Wait( 1 );  		
+		FailObjective ( 0 );
+		SetIGlobalVar("temp.rus1_0.objective.0", 0);
+		StartThread( gameover );
+		return 1;
+    end;
+end
+------------------------------------------------------
+function zd1()
+	if ( GetIGlobalVar("temp.rus1_0.objective.0", 0) == 1) then
+	Wait( 1500 );
+	if ( GetNUnitsInArea( 1, "ob1", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective ( 1 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.1", 1);
+	return 1;
+    end;
+    end;
+end
+
+function zd1_1()
+	while 1 do
+	Wait( 300 );
+	if ( GetNUnitsInArea( 1, "ob1", 0 ) &gt; 0
+	and GetNUnitsInArea( 0, "ob1", 0 ) &lt; 1) then
+		FailObjective ( 1 );
+		SetIGlobalVar("temp.rus1_0.objective.1", 0);
+		Wait( 1 ); 
+		StartThread( gameover );	
+	break;
+	end;
+	end;
+end
+------------------------------------------------------
+------------------------------------------------------
+function zd2()
+	if ( GetIGlobalVar("temp.rus1_0.objective.0", 0) == 1) then
+	Wait( 1500 );
+	if ( GetNUnitsInArea( 1, "ob2", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective ( 2 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.2", 1);
+	return 1;
+    end;
+    end;
+end
+
+function zd2_1()
+	while 1 do
+	Wait( 300 );
+	if ( GetNUnitsInArea( 1, "ob2", 0 ) &gt; 0
+	and GetNUnitsInArea( 0, "ob2", 0 ) &lt; 1) then
+		FailObjective ( 2 );
+		SetIGlobalVar("temp.rus1_0.objective.2", 0);
+		Wait( 1 ); 
+		StartThread( gameover );	
+	break;
+	end;
+	end;
+end
+------------------------------------------------------
+------------------------------------------------------
+function zd3()
+	if ( GetIGlobalVar("temp.rus1_0.objective.1", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.2", 0) == 1) then
+	Wait( 900 );
+	if ( GetNUnitsInArea( 1, "ob0", 0 ) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 3 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.3", 1);
+	return 1;
+    end;
+    end;
+end
+
+function zd3_1()
+	while 1 do
+	Wait( 300 );
+	if ( GetNUnitsInArea( 1, "ob0", 0 ) &gt; 0
+	and GetNUnitsInArea( 0, "ob0", 0 ) &lt; 1) then
+		FailObjective ( 3 );
+		SetIGlobalVar("temp.rus1_0.objective.3", 0);
+		Wait( 1 ); 
+		StartThread( gameover );	
+	break;
+	end;
+	end;
+end
+------------------------------------------------------
+function zd4()
+	if ( GetIGlobalVar("temp.zd4.objective.0", 0)
+		* GetIGlobalVar("temp.zd4.objective.1", 0) == 1) then  
+		CompleteObjective( 4 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus1_0.objective.3", 1);
+	return 1;
+	end;
+end
+
+
+function zd4_1()
+LandReinforcementFromMap ( 2 , "armored_sea_hunter" , 0 , 112 );
+Sleep (20);
+Cmd ( 0 , 112 , 0 , GetScriptAreaParams( "ob0_1" ));
+--Cmd ( 0 , 111 , 0 , GetScriptAreaParams( "ob0_2" ));
+	StartThread( zd4_2 );
+	StartThread( zd4_0_1 );
+return 1;
+end
+
+function zd4_0_1()
+	if ( GetIGlobalVar("temp.zd4.objective.1", 0) == 0 
+	and GetNUnitsInScriptGroup ( 112 ) &lt; 1) then
+		FailObjective ( 4 );
+		SetIGlobalVar("temp.rus1_0.objective.4", 0);
+		Wait( 1 ); 
+		StartThread( gameover );
+	return 1;
+	end;	
+end;
+
+function zd4_2()
+	while 1 do
+	Wait( 3 );
+	if ( GetNScriptUnitsInArea( 112, "ob0_2", 0 ) &gt;0 
+	and GetNScriptUnitsInArea( 111, "ob0_2", 0 ) &gt;0) then
+	SetIGlobalVar("temp.zd4.objective.0", 1);
+	Sleep (20);
+	RemoveScriptGroup ( 111 );
+	Cmd ( 0 , 112 , 0 , GetScriptAreaParams( "ob0_4" ));
+	StartThread( zd4_4 );
+	break;
+	end;
+	end
+end
+
+function zd4_4()
+	while 1 do
+	Wait( 3 );
+	if ( GetNScriptUnitsInArea( 112, "ob0_4", 0 ) &gt;0) then
+	SetIGlobalVar("temp.zd4.objective.1", 1);
+	Sleep (20);
+	RemoveScriptGroup ( 112 );
+	break;
+	end;
+	end
+end
+
+function zd4_0()
+	Sleep (20);
+	if ( GetIGlobalVar("temp.zd4.objective.0", 0) == 0 
+	and GetNUnitsInScriptGroup ( 111 ) &lt; 1) then
+		FailObjective ( 0 );
+		FailObjective ( 4 );
+		SetIGlobalVar("temp.rus1_0.objective.0", 0);
+		SetIGlobalVar("temp.rus1_0.objective.4", 0);
+		Wait( 1 ); 
+		StartThread( gameover );
+	return 1;
+	end;	
+end;
+
+------------------------------------------------------
+------------------------------------------------------
+function Objective0()
+	while 1 do
+	Wait( 3 );
+	if ( GetIGlobalVar("temp.rus1_0.objective.0", 0) == 0) then     
+	GiveObjective( 0 );
+	break;
+	end;
+	end;	
+end;
+------------------------------------------------------
+------------------------------------------------------
+function Objective1()
+	while 1 do
+	Wait( 3 );
+	if ( GetIGlobalVar("temp.rus1_0.objective.0", 0) == 1) then     
+	GiveObjective( 1 );
+	break;
+	end;
+	end;	
+end;
+------------------------------------------------------
+------------------------------------------------------
+function Objective2()
+	while 1 do
+	Wait( 3 );
+	if ( GetIGlobalVar("temp.rus1_0.objective.0", 0) == 1) then     
+	GiveObjective( 2 );
+	break;
+	end;
+	end;	
+end;
+------------------------------------------------------
+------------------------------------------------------
+function Objective3()
+	while 1 do
+	Wait( 3 );
+	if ( GetIGlobalVar("temp.rus1_0.objective.1", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.2", 0) == 1) then  
+	GiveObjective( 3 );
+	break;
+	end;
+	end;	
+end;
+------------------------------------------------------
+------------------------------------------------------
+function Objective4()
+	while 1 do
+	Wait( 3 );
+	if ( GetIGlobalVar("temp.rus1_0.objective.1", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.2", 0)
+		* GetIGlobalVar("temp.rus1_0.objective.3", 0) == 1) then 
+	StartThread( zd4_1 );   
+	GiveObjective( 4 );
+	break;
+	end;
+	end;	
+end;
+------------------------------------------------------
+Objectives = { zd0, zd1, zd2, zd3, zd4};
+Objectives_Count = 5;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+--GiveObjective( 0 );
+--GiveObjective( 1 );
+--GiveObjective( 2 );
+--GiveObjective( 3 );
+--GiveObjective( 4 );
+------------------------------------------------------
+StartThread( Unlucky );
+StartThread( victory );
+StartThread( Objective0 );
+StartThread( Objective1 );
+StartThread( Objective2 );
+StartThread( Objective3 );
+StartThread( Objective4 );
+StartThread( zd1_1 );
+StartThread( zd2_1 );
+StartThread( zd3_1 );
+StartThread( zd4_0 );
+--StartThread( zd4_1 );
+StartThread( at );
+--StartThread( at2 );
+------------------------------------------------------</ScriptText>
+</Script>

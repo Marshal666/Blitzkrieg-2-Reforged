@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="271">
+	<KeyName>RPD</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_MACHINEGUN</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/MachineGun_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>4.5</Dispersion>
+	<AimingTime>0.75</AimingTime>
+	<AmmoPerBurst>6</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>1</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>4</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>8</DamagePower>
+			<PiercingRandom>2</PiercingRandom>
+			<Area>1</Area>
+			<Area2>2.5</Area2>
+			<Speed>735</Speed>
+			<TraceSpeedCoeff>0.4</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Weapons/Hand-Held/Machine-Guns/mgun09_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Weapons/Hand-Held/Riccos/Heavy/Hard_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Weapons/Hand-Held/Riccos/Heavy/Soft_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Weapons/Hand-Held/Riccos/Heavy/Soft_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>750</FireRate>
+			<RelaxTime>0.75</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="/Weapons/Infantry/MG/dp27_pd/mg42_visobj.xdb#xpointer(/VisObj)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+</WeaponRPGStats>

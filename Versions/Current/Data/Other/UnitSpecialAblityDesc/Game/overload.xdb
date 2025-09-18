@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UnitSpecialAblityDesc ObjectRecordID="36">
+	<Name>ABILITY_OVERLOAD_MODE</Name>
+	<RefreshTime>0</RefreshTime>
+	<WorkTime>10000</WorkTime>
+	<SwitchOnTime>20000</SwitchOnTime>
+	<SwitchOffTime>0</SwitchOffTime>
+	<GroupID>ABILITY_GROUP_NOGROUP</GroupID>
+	<DisableGroupTime>0</DisableGroupTime>
+	<StatsBonus href="/Other/UnitStatsModifier/Game/Abilities/Active/overload.xdb#xpointer(/UnitStatsModifier)" />
+	<Parameter>0</Parameter>
+	<Description />
+	<StopCurrentAction>false</StopCurrentAction>
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Overload_name.txt" />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</UnitSpecialAblityDesc>

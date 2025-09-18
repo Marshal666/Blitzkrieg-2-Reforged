@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="260">
+	<SrcName href="/Units/Technics/Germany/Tanks/Pz_V_Panther_Ausf_G/1.mb" />
+	<uid>17486CE9-D6B8-4099-8986-1655CFC5E604</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>90</FirstFrame>
+	<LastFrame>109</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-40</x>
+			<y>0</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>89</x>
+			<y>93</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-40</x>
+			<y>0</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>89</x>
+			<y>93</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

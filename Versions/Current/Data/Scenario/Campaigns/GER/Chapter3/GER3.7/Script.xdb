@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000043">
+	<FileName />
+	<ScriptText>------------------------------------------------Starts
+
+function RevealObjective0()
+	Wait(1);
+	GiveObjective( 0 );
+	StartThread( Objective0 );
+	StartThread( Boom_1 );
+	Wait(15);
+	StartThread( Start_attack );
+end;
+
+
+function Objective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;GSM&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;GSM&quot;, 0) &lt; 1)) then
+			Wait( 2 );
+			CompleteObjective( 0 );
+			SetIGlobalVar( &quot;temp.Objective0&quot;, 2 );
+			Wait( 2 );
+			StartThread( RevealObjective1 );
+			StartThread( GSM_gef );
+			Wait( 120 );
+			StartThread( RevealObjective2 );
+			break;
+		end;	
+	end;
+end;
+
+-------------------------------------------------
+
+function RevealObjective1()
+	Wait(1);
+	GiveObjective( 1 );
+	StartThread( Boom_2 );
+end;
+
+-------------------------------------------------
+
+function RevealObjective2()
+	Wait(1);
+	GiveObjective( 2 );
+	Wait(10);
+	LandReinforcementFromMap( 1, &quot;RUS_1&quot;, 1, 211 ); 
+	LandReinforcementFromMap( 1, &quot;RUS_2&quot;, 1, 212 );
+	StartThread( Objective2 );
+	StartThread( Rus_final );
+	StartThread( Rus_go_1 );
+	Wait(3);
+	StartThread( Rus_go_2 );
+end;
+
+function Objective2() 
+	while 1 do
+		Wait( 3 );
+			if ( GetNUnitsInScriptGroup( 212 ) &lt; 1 ) then
+			Wait( 2 );
+			CompleteObjective( 2 );
+			Wait( 2 );
+			CompleteObjective( 1 );
+			Wait( 1 );
+			Win( 0 );
+			break;
+		end;
+	end;
+end;
+
+---------------------------------------------
+
+function Rus_go_1()
+	Cmd( 3, 211, 0, 6829, 2369 );
+	QCmd( 3, 211, 0, 6997, 4859 );
+	QCmd( 3, 211, 0, 6508, 7654 );
+end;
+
+function Rus_go_2()
+	Cmd( 0, 212, 0, 6829, 2369 );
+	QCmd( 0, 212, 0, 6997, 4859 );
+	QCmd( 0, 212, 0, 6508, 7654 );
+end;
+
+function Rus_final() 
+	while 1 do
+		Wait( 3 );
+			if (GetNScriptUnitsInArea(212, &quot;Exit&quot;) &gt; 0) then
+			Wait( 1 );
+			StartThread( T_Exit );
+			break;
+		end;
+	end;
+end;
+
+function T_Exit()
+	RemoveScriptGroup( 212 );
+	FailObjective( 2 );
+	Wait( 2 );
+	Win( 1 );
+end;
+
+
+----------------------------------------------
+
+function Boom_1() 
+	while 1 do
+		Wait( 3 );
+			if (( GetNUnitsInScriptGroup ( 111 ) &lt; 200 ) and (GetIGlobalVar(&quot;temp.Objective0&quot;, 1) ~= 2)) then
+			Wait( 2 );
+			FailObjective( 0 );
+			Wait( 2 );
+			Win( 1 );
+			break;
+		end;
+	end;
+end;
+
+function Boom_2() 
+	while 1 do
+		Wait( 3 );
+			if ( GetNUnitsInScriptGroup ( 111 ) &lt; 200 ) then
+			Wait( 2 );
+			FailObjective( 1 );
+			Wait( 2 );
+			Win( 1 );
+			break;
+		end;
+	end;
+end;
+
+
+
+function Defead()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(3);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+function GSM_gef()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;GSM&quot;, 0) &lt; 1) and (GetNUnitsInArea(1, &quot;GSM&quot;, 0) &gt; 0)) then
+			Wait( 1 );
+			FailObjective( 1 );
+			Wait( 1 );
+			Win(1);
+			break;
+		end;	
+	end;
+end;
+
+
+--------------------------------
+
+function Attack_fuel() 
+	while 1 do
+		Wait( 3 );
+			if (GetIGlobalVar(&quot;temp.Objective0&quot;, 1) == 2) then
+			Wait( 2 );
+			LandReinforcementFromMap( 1, &quot;R_SPG&quot;, 2, 310 );
+			Wait( 3 );
+			Cmd( 3, 310, 100, GetScriptAreaParams( &quot;RU1&quot; ) );
+			QCmd( 3, 310, 100, GetScriptAreaParams( &quot;RU2&quot; ) );
+			QCmd( 3, 310, 100, GetScriptAreaParams( &quot;RU3&quot; ) );
+			QCmd( 3, 310, 100, GetScriptAreaParams( &quot;RU4&quot; ) );
+			break;
+		end;
+	end;
+end;
+
+function Start_attack()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea(0, &quot;Start_lok&quot;, 0) &gt; 3 ) then
+			Wait( 2 );
+			Cmd( 3, 16, 0, 1035, 1481 );
+		else
+			Cmd( 3, 15, 0, 1035, 1481 );
+			break;
+		end;	
+	end;
+end;
+
+-----------------------------------AT
+
+function Armortr_1() 
+	while 1 do
+		Wait( 3 );
+			if ((GetNScriptUnitsInArea(400, &quot;AT1&quot;) &gt; 0) and ( GetNUnitsInScriptGroup ( 400 ) &gt; 2 )) then
+			Wait( 10 );
+			Cmd( 0, 400, 0, GetScriptAreaParams( &quot;AT2&quot; ) );
+			StartThread( Armortr_2 );
+			break;
+		end;
+	end;
+end;
+
+function Armortr_2() 
+	while 1 do
+		Wait( 3 );
+			if ((GetNScriptUnitsInArea(400, &quot;AT2&quot;) &gt; 0) and ( GetNUnitsInScriptGroup ( 400 ) &gt; 2 )) then
+			Wait( 10 );
+			Cmd( 0, 400, 0, GetScriptAreaParams( &quot;AT1&quot; ) );
+			StartThread( Armortr_1 );
+			break;
+		end;
+	end;
+end;
+
+----------------------------------
+
+function Rus_avia() 
+	while 1 do
+		Wait( 3 );
+			if (GetNUnitsInArea(0, &quot;Aviation&quot;,0) &gt; 0) then
+			Wait( 1 );
+			LandReinforcementFromMap( 1, &quot;AVIA&quot;, 0, 433 );
+			Cmd( 3, 433, 0, GetScriptAreaParams( &quot;RU3&quot; ) );
+			break;
+		end;
+	end;
+end;
+
+--------------------------------MAIN--
+
+StartThread( RevealObjective0 );
+StartThread( Defead );
+StartThread( Attack_fuel );
+StartThread( Armortr_1 );
+StartThread( Rus_avia );
+
+
+</ScriptText>
+</Script>

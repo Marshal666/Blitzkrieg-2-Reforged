@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UISSendUIMessage ObjectRecordID="13">
+	<ClassTypeID>0</ClassTypeID>
+	<pShared href=""/>
+	<szMessageID>
+		<First>UI_SHOW_WINDOW</First>
+		<Second>true</Second>
+	</szMessageID>
+	<szParam>
+		<First />
+		<Second>false</Second>
+	</szParam>
+	<nForwardParam>
+		<First>1</First>
+		<Second>true</Second>
+	</nForwardParam>
+	<nBackParam>
+		<First>0</First>
+		<Second>true</Second>
+	</nBackParam>
+</UISSendUIMessage>

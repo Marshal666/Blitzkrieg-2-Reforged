@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="63">
+	<FileName />
+	<ScriptText>a=&quot;&apos;;x(b..a..b..a)&quot;;b=&apos;a=&quot;&apos;;Trace(b..a..b..a)
+
+LandReinforcementFromMap( 1, &quot;bigass&quot;, 0, 100 );
+Cmd( ACT_UNLOAD, 100, 0, GetScriptAreaParams( &quot;a&quot; ) );
+</ScriptText>
+</Script>

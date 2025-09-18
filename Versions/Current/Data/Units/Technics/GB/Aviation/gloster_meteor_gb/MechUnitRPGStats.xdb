@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MechUnitRPGStats ObjectRecordID="90">
+	<KeyName>Gloster Meteor</KeyName>
+	<ParentName />
+	<StatsType>Mech</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments>no texture</Comments>
+	<MaxHP>120</MaxHP>
+	<DamageLevels />
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="/UI/Game/Mission/MuliselectUnitBg/Aviation/GB_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>0.9</SelectionScale>
+	<SelectionType>SELECTION_TYPE_AIR</SelectionType>
+	<LightEffects>
+		<Item>
+			<LocatorName>LEffect01</LocatorName>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Rot>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>1</w>
+			</Rot>
+			<FlarePos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</FlarePos>
+			<FlareSize>0</FlareSize>
+			<PointLightPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</PointLightPos>
+			<PointLightSize>0</PointLightSize>
+			<ConeLength>0</ConeLength>
+			<ConeSize>0</ConeSize>
+			<Colour>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Colour>
+			<AdditionalEffect href="/Scene/Effects/All/Exhaust/jetsmoke_complexeffect.xdb#xpointer(/ComplexEffect)" />
+			<OnAtDay>true</OnAtDay>
+			<OnAtNight>true</OnAtNight>
+			<ConeTexture href="" />
+			<FlareTexture href="" />
+		</Item>
+		<Item>
+			<LocatorName>LEffect02</LocatorName>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Rot>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>1</w>
+			</Rot>
+			<FlarePos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</FlarePos>
+			<FlareSize>0</FlareSize>
+			<PointLightPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</PointLightPos>
+			<PointLightSize>0</PointLightSize>
+			<ConeLength>0</ConeLength>
+			<ConeSize>0</ConeSize>
+			<Colour>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Colour>
+			<AdditionalEffect href="/Scene/Effects/All/Exhaust/jetsmoke_complexeffect.xdb#xpointer(/ComplexEffect)" />
+			<OnAtDay>true</OnAtDay>
+			<OnAtNight>true</OnAtNight>
+			<ConeTexture href="" />
+			<FlareTexture href="" />
+		</Item>
+	</LightEffects>
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-5</x>
+				<y>-46</y>
+				<z>1.22695</z>
+			</Pos>
+			<Orient>
+				<x>0.0639831</x>
+				<y>-0.206006</y>
+				<z>0</z>
+				<w>0.976457</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-5</x>
+				<y>110</y>
+				<z>1.22695</z>
+			</Pos>
+			<Orient>
+				<x>-0.102451</x>
+				<y>-0.236216</y>
+				<z>0</z>
+				<w>0.966285</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>86</x>
+				<y>-24</y>
+				<z>5.67075</z>
+			</Pos>
+			<Orient>
+				<x>0.119903</x>
+				<y>-0.0309934</y>
+				<z>0</z>
+				<w>0.992302</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>86</x>
+				<y>26</y>
+				<z>5.67075</z>
+			</Pos>
+			<Orient>
+				<x>-0.398415</x>
+				<y>0.0483119</y>
+				<z>0</z>
+				<w>0.915932</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>-137</y>
+				<z>35.4156</z>
+			</Pos>
+			<Orient>
+				<x>-0.283767</x>
+				<y>-0.529269</y>
+				<z>0</z>
+				<w>0.799594</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1</x>
+				<y>-137</y>
+				<z>35.4156</z>
+			</Pos>
+			<Orient>
+				<x>-0.283767</x>
+				<y>0.529269</y>
+				<z>0</z>
+				<w>0.799594</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-5</x>
+				<y>-136</y>
+				<z>22.8558</z>
+			</Pos>
+			<Orient>
+				<x>0.0325437</x>
+				<y>-0.61674</y>
+				<z>0</z>
+				<w>0.786494</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>-136</y>
+				<z>22.8558</z>
+			</Pos>
+			<Orient>
+				<x>0.0325437</x>
+				<y>0.61674</y>
+				<z>0</z>
+				<w>0.786494</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-6</x>
+				<y>-113</y>
+				<z>26.2665</z>
+			</Pos>
+			<Orient>
+				<x>0.0228394</x>
+				<y>-0.59278</y>
+				<z>0</z>
+				<w>0.805041</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>-113</y>
+				<z>26.2665</z>
+			</Pos>
+			<Orient>
+				<x>0.0228394</x>
+				<y>0.592779</y>
+				<z>0</z>
+				<w>0.805041</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>-61</y>
+				<z>11.5609</z>
+			</Pos>
+			<Orient>
+				<x>0.0250985</x>
+				<y>-0.644328</y>
+				<z>0</z>
+				<w>0.764337</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>11</x>
+				<y>-61</y>
+				<z>11.5609</z>
+			</Pos>
+			<Orient>
+				<x>0.0250985</x>
+				<y>0.644328</y>
+				<z>0</z>
+				<w>0.764337</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>-23</y>
+				<z>19.084</z>
+			</Pos>
+			<Orient>
+				<x>0.0110283</x>
+				<y>-0.66367</y>
+				<z>0</z>
+				<w>0.747944</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>11</x>
+				<y>-23</y>
+				<z>19.084</z>
+			</Pos>
+			<Orient>
+				<x>0.0110283</x>
+				<y>0.66367</y>
+				<z>0</z>
+				<w>0.747944</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-12</x>
+				<y>6</y>
+				<z>21.6725</z>
+			</Pos>
+			<Orient>
+				<x>0.0225209</x>
+				<y>-0.655431</y>
+				<z>0</z>
+				<w>0.754919</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>12</x>
+				<y>6</y>
+				<z>21.6725</z>
+			</Pos>
+			<Orient>
+				<x>0.0225209</x>
+				<y>0.655431</y>
+				<z>0</z>
+				<w>0.754919</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-13</x>
+				<y>55</y>
+				<z>10.5427</z>
+			</Pos>
+			<Orient>
+				<x>-0.033923</x>
+				<y>-0.654979</y>
+				<z>0</z>
+				<w>0.754885</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>14</x>
+				<y>55</y>
+				<z>10.5427</z>
+			</Pos>
+			<Orient>
+				<x>-0.033923</x>
+				<y>0.654979</y>
+				<z>0</z>
+				<w>0.754885</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-5</x>
+				<y>66</y>
+				<z>33.0783</z>
+			</Pos>
+			<Orient>
+				<x>-0.00134632</x>
+				<y>-0.283769</y>
+				<z>0</z>
+				<w>0.958892</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>5</x>
+				<y>66</y>
+				<z>33.0783</z>
+			</Pos>
+			<Orient>
+				<x>-0.00134632</x>
+				<y>0.283769</y>
+				<z>0</z>
+				<w>0.958892</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>97</y>
+				<z>-3.84767</z>
+			</Pos>
+			<Orient>
+				<x>-0.0479491</x>
+				<y>-0.239068</y>
+				<z>0</z>
+				<w>0.969818</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1</x>
+				<y>97</y>
+				<z>-3.84767</z>
+			</Pos>
+			<Orient>
+				<x>-0.047949</x>
+				<y>0.239068</y>
+				<z>0</z>
+				<w>0.969818</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_AVIA_FIGHTER</DBtype>
+	<M1UnitTargetType href="" />
+	<M1UnitSpecific href="" />
+	<M1UnitActions href="" />
+	<PoliticalSide>POLITICAL_SIDE_ALLIES</PoliticalSide>
+	<FullDescriptionFileRef href="description.txt" />
+	<EncyclopediaFilterUnitType>EFUT_AIR</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>0</AIPassabilityClass>
+	<AcksNames>
+		<Item href="/Other/AckSetRPGStats/GB/avia/avia2_voice0/AckSetRPGStats.xdb#xpointer(/AckSetRPGStats)" />
+	</AcksNames>
+	<Sight>0</Sight>
+	<SightPower>1</SightPower>
+	<Speed>75</Speed>
+	<RotateSpeed>20</RotateSpeed>
+	<Passability>1</Passability>
+	<Priority>1</Priority>
+	<Camouflage>0</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>4</BoundTileRadius>
+	<Weight>1</Weight>
+	<Price>2</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>-26</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>131</x>
+		<y>156</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>203.708</Radius>
+		<IsRound>true</IsRound>
+	</BoundCircle>
+	<aabb_as />
+	<aabb_ds />
+	<animdescs>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>33</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>0.3</SmallAABBCoeff>
+	<Actions href="/Other/UnitActions/Game/Units/Aviation/fighter.xdb#xpointer(/UnitActions)" />
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href="/Other/ArmorPattern/Game/aviation.xdb#xpointer(/ArmorPattern)" />
+	<ExpPrice>5</ExpPrice>
+	<UnitType>Fighter</UnitType>
+	<platforms>
+		<Item>
+			<RecoilShakeAngle>0</RecoilShakeAngle>
+			<HorizontalRotationSpeed>0</HorizontalRotationSpeed>
+			<VerticalRotationSpeed>0</VerticalRotationSpeed>
+			<ModelPart>0</ModelPart>
+			<constraint>
+				<Min>0</Min>
+				<Max>0</Max>
+			</constraint>
+			<constraintVertical>
+				<Min>0</Min>
+				<Max>0</Max>
+			</constraintVertical>
+			<GunCarriageParts>0</GunCarriageParts>
+			<RotatePoint>Basis</RotatePoint>
+			<AIRotatePointPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</AIRotatePointPos>
+			<AttachedPlatformVisObj href="" />
+			<AttachedPlatformLocator />
+			<ParentPlatform>-1</ParentPlatform>
+			<guns>
+				<Item>
+					<Weapon href="/Weapons/Technics/GB/20mm_british_hispano/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+					<AttachedGunVisObj href="" />
+					<AttachedGunLocator />
+					<ShootPointOffset>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</ShootPointOffset>
+					<ShootEffectInvert>false</ShootEffectInvert>
+					<Priority>1</Priority>
+					<IsPrimary>true</IsPrimary>
+					<Ammo>120</Ammo>
+					<Direction>65535</Direction>
+					<ReloadCost>1</ReloadCost>
+					<TargetAAOnly>false</TargetAAOnly>
+					<ShootPoint>LMachineGun_Cannon01</ShootPoint>
+					<AIShootPointPos>
+						<x>-11</x>
+						<y>91</y>
+						<z>16.476</z>
+					</AIShootPointPos>
+					<Recoil>false</Recoil>
+					<RecoilLength>0</RecoilLength>
+					<recoilTime>0</recoilTime>
+					<RecoilShakeTime>0</RecoilShakeTime>
+					<RecoilShakeAngle>0</RecoilShakeAngle>
+					<RecoilPoint />
+					<RotatePoint />
+					<ModelPart>0</ModelPart>
+				</Item>
+				<Item>
+					<Weapon href="/Weapons/Technics/GB/20mm_british_hispano/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+					<AttachedGunVisObj href="" />
+					<AttachedGunLocator />
+					<ShootPointOffset>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</ShootPointOffset>
+					<ShootEffectInvert>false</ShootEffectInvert>
+					<Priority>1</Priority>
+					<IsPrimary>true</IsPrimary>
+					<Ammo>120</Ammo>
+					<Direction>65535</Direction>
+					<ReloadCost>1</ReloadCost>
+					<TargetAAOnly>false</TargetAAOnly>
+					<ShootPoint>LMachineGun_Cannon02</ShootPoint>
+					<AIShootPointPos>
+						<x>-11</x>
+						<y>91</y>
+						<z>9.37296</z>
+					</AIShootPointPos>
+					<Recoil>false</Recoil>
+					<RecoilLength>0</RecoilLength>
+					<recoilTime>0</recoilTime>
+					<RecoilShakeTime>0</RecoilShakeTime>
+					<RecoilShakeAngle>0</RecoilShakeAngle>
+					<RecoilPoint />
+					<RotatePoint />
+					<ModelPart>0</ModelPart>
+				</Item>
+				<Item>
+					<Weapon href="/Weapons/Technics/GB/20mm_british_hispano/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+					<AttachedGunVisObj href="" />
+					<AttachedGunLocator />
+					<ShootPointOffset>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</ShootPointOffset>
+					<ShootEffectInvert>false</ShootEffectInvert>
+					<Priority>1</Priority>
+					<IsPrimary>true</IsPrimary>
+					<Ammo>120</Ammo>
+					<Direction>65535</Direction>
+					<ReloadCost>1</ReloadCost>
+					<TargetAAOnly>false</TargetAAOnly>
+					<ShootPoint>LMachineGun_Cannon03</ShootPoint>
+					<AIShootPointPos>
+						<x>11</x>
+						<y>91</y>
+						<z>16.476</z>
+					</AIShootPointPos>
+					<Recoil>false</Recoil>
+					<RecoilLength>0</RecoilLength>
+					<recoilTime>0</recoilTime>
+					<RecoilShakeTime>0</RecoilShakeTime>
+					<RecoilShakeAngle>0</RecoilShakeAngle>
+					<RecoilPoint />
+					<RotatePoint />
+					<ModelPart>0</ModelPart>
+				</Item>
+				<Item>
+					<Weapon href="/Weapons/Technics/GB/20mm_british_hispano/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+					<AttachedGunVisObj href="" />
+					<AttachedGunLocator />
+					<ShootPointOffset>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</ShootPointOffset>
+					<ShootEffectInvert>false</ShootEffectInvert>
+					<Priority>1</Priority>
+					<IsPrimary>true</IsPrimary>
+					<Ammo>120</Ammo>
+					<Direction>65535</Direction>
+					<ReloadCost>1</ReloadCost>
+					<TargetAAOnly>false</TargetAAOnly>
+					<ShootPoint>LMachineGun_Cannon04</ShootPoint>
+					<AIShootPointPos>
+						<x>11</x>
+						<y>91</y>
+						<z>9.37296</z>
+					</AIShootPointPos>
+					<Recoil>false</Recoil>
+					<RecoilLength>0</RecoilLength>
+					<recoilTime>0</recoilTime>
+					<RecoilShakeTime>0</RecoilShakeTime>
+					<RecoilShakeAngle>0</RecoilShakeAngle>
+					<RecoilPoint />
+					<RotatePoint />
+					<ModelPart>0</ModelPart>
+				</Item>
+			</guns>
+		</Item>
+	</platforms>
+	<slots />
+	<armors>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+		<Item>
+			<Min>0</Min>
+			<Max>0</Max>
+		</Item>
+	</armors>
+	<TowingForce>0</TowingForce>
+	<Crew>4</Crew>
+	<Passangers>0</Passangers>
+	<TurnRadius>20</TurnRadius>
+	<exhaustPoints />
+	<damagePoints>
+		<Item>LSmoke01</Item>
+		<Item>LSmoke02</Item>
+	</damagePoints>
+	<peoplePointIndices />
+	<FatalitySmokePoint>0</FatalitySmokePoint>
+	<ShootDustPoint>0</ShootDustPoint>
+	<TowPoint>
+		<x>0</x>
+		<y>0</y>
+	</TowPoint>
+	<EntrancePoint>
+		<x>0</x>
+		<y>0</y>
+	</EntrancePoint>
+	<PeoplePoints />
+	<AmmoPoint>
+		<x>0</x>
+		<y>0</y>
+	</AmmoPoint>
+	<Gunners>
+		<Item>
+			<gunners>
+				<Item>
+					<x>0</x>
+					<y>0</y>
+				</Item>
+			</gunners>
+		</Item>
+		<Item>
+			<gunners>
+				<Item>
+					<x>0</x>
+					<y>0</y>
+				</Item>
+			</gunners>
+		</Item>
+		<Item>
+			<gunners>
+				<Item>
+					<x>0</x>
+					<y>0</y>
+				</Item>
+			</gunners>
+		</Item>
+	</Gunners>
+	<HookPoint>
+		<x>0</x>
+		<y>0</y>
+	</HookPoint>
+	<FrontWheel>
+		<x>0</x>
+		<y>0</y>
+	</FrontWheel>
+	<BackWheel>
+		<x>0</x>
+		<y>0</y>
+	</BackWheel>
+	<EffectDiesel href="" />
+	<EffectWheelDust href="" />
+	<EffectWheelSplash href="" />
+	<EffectSmoke href="/Scene/Effects/All/Destructions/MachineryCombustion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectFatality href="/Scene/Effects/All/Destructions/PlaneCrashFatality_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<SmokeTrails>
+		<Item>
+			<LocatorName>Basis</LocatorName>
+			<Interval>2</Interval>
+			<Effect href="/Scene/Effects/All/Exhaust/PlaneFall_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+	</SmokeTrails>
+	<EffectShootDust href="" />
+	<EffectEntrenching href="" />
+	<EffectDisappear href="" />
+	<jx>
+		<Period1>0</Period1>
+		<Period2>0</Period2>
+		<Amp1>0</Amp1>
+		<Amp2>0</Amp2>
+		<Phaze1>0</Phaze1>
+		<Phaze2>0</Phaze2>
+	</jx>
+	<jy>
+		<Period1>0</Period1>
+		<Period2>0</Period2>
+		<Amp1>0</Amp1>
+		<Amp2>0</Amp2>
+		<Phaze1>0</Phaze1>
+		<Phaze2>0</Phaze2>
+	</jy>
+	<jz>
+		<Period1>0</Period1>
+		<Period2>0</Period2>
+		<Amp1>0</Amp1>
+		<Amp2>0</Amp2>
+		<Phaze1>0</Phaze1>
+		<Phaze2>0</Phaze2>
+	</jz>
+	<LeavesTracks>false</LeavesTracks>
+	<TrackWidth>0.15</TrackWidth>
+	<TrackOffset>0.15</TrackOffset>
+	<TrackStart>0.2</TrackStart>
+	<TrackEnd>0.2</TrackEnd>
+	<TrackIntensity>0.7</TrackIntensity>
+	<TrackLifetime>10000</TrackLifetime>
+	<TrackFrequency>0.5</TrackFrequency>
+	<SoundMoveStart href="" />
+	<SoundMoveCycle href="/SoundAndMusic/Game/Mission/Units/Aviation/Propelled/Light/Light_Prop_3/cycle_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<SoundMoveStop href="" />
+	<SoundIdle href="" />
+	<SoundDive href="" />
+	<MaxHeight>35</MaxHeight>
+	<DivingAngle>45</DivingAngle>
+	<ClimbAngle>45</ClimbAngle>
+	<TiltAngle>28</TiltAngle>
+	<TiltRatio>2</TiltRatio>
+	<TiltAcceleration>180</TiltAcceleration>
+	<TiltSpeed>360</TiltSpeed>
+	<GAPAirAttackModifier href="" />
+	<deathCraters href="" />
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<Fuel>1000</Fuel>
+	<AllowedPlaneManuvers />
+	<AnimableModel href="" />
+	<TransportableModel href="" />
+	<ShipEffects>
+		<BoardSideEffect href="" />
+		<BoardSideLocators />
+		<RastrumEffect href="" />
+		<RastrumLocators />
+	</ShipEffects>
+	<BoardedMechUnitPosition />
+	<DestructableCorpse>true</DestructableCorpse>
+	<InnerUnitBonus href="" />
+	<CameraPlacementIconShot>
+		<Anchor>
+			<x>44.0997</x>
+			<y>43.363</y>
+			<z>1.7934</z>
+		</Anchor>
+		<Distance>136.167</Distance>
+		<Pitch>30.0001</Pitch>
+		<Yaw>223.8</Yaw>
+		<Fov>54</Fov>
+	</CameraPlacementIconShot>
+</MechUnitRPGStats>

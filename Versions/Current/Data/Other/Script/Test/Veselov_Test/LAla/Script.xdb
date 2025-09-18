@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="6">
+	<FileName />
+	<ScriptText>SetFGlobalVar( &quot;aaa&quot;, 0.111 );
+
+DisplayTrace( &quot;0 seconds passed&quot;, 0 );
+Wait(10);
+DisplayTrace( &quot;10 seconds passed&quot;, 0 );
+--AskClient( &quot;map 474&quot; );</ScriptText>
+</Script>

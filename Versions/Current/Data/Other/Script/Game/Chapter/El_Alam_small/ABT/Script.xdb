@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="84">
+	<FileName />
+	<ScriptText>
+DISPERSION = 200
+
+function RevealObjective()
+    DisplayTrace(&quot;StartMission&quot;);
+    Wait(3);
+	ObjectiveChanged(0, 1);
+end;
+
+-----------------------//GerAttack//--------------------------
+
+function GerAttack() 
+	while 1 do	
+		if (GetNUnitsInArea(0, &quot;GBOutpost&quot;, 0) &lt; 1) then
+			Wait ( 5 )
+			GetNUnitsInScriptGroup( 6000 )
+			Wait ( 5 )
+			CmdMultiple(ACT_SWARM, 6000, 2206, 7559)
+		end;
+	end;	
+end;
+
+function GerAttack1() 
+	while 1 do	
+		if (GetNUnitsInArea(0, &quot;GBOutpost&quot;, 0) &lt; 1) then
+			Wait ( 5 )
+			GetNUnitsInScriptGroup( 6100 )
+			Wait ( 5 )
+			CmdMultiple(ACT_SWARM, 6100, 2206, 7559)
+		end;
+	end;	
+end;
+
+---------------------//AFVAttack//----------------------
+
+function AFV_Attack() 
+	while 1 do	
+		if (GetNUnitsInArea(1, &quot;GBOutpost&quot;, 0) &gt;= 1) then
+			Wait ( 5 )
+			GetNUnitsInScriptGroup ( 7000 )
+			Wait ( 5 )
+			CmdMultiple(ACT_SWARM, 7000, 8799, 7113)
+			Wait ( 5 )
+			QCmd(ACT_SWARM, 7000, 7387, 7156)
+			Wait ( 5 )
+			QCmd(ACT_SWARM, 7000, 6330, 8370)
+			Wait ( 5 )
+			QCmd(ACT_SWARM, 7000, 8312, 8737)
+			Wait ( 5 );
+		end;
+	end;	
+end;
+
+--------------------------//TriggerParameters//--------------------------
+
+function Condition() 
+		if ((GetNUnitsInArea(1, &quot;GBOutpost&quot;, 0) &gt;= 1) and (tmpold == { 1, 1 }) and (tmpold1 == { 1, 1 })) then
+			return 1;
+		end;
+end;
+
+function Condition1()
+        if ((GetNUnitsInParty(0, 0) &lt;= 0) and (GetNUnitsInArea(1, &quot;GBOutpost&quot;, 0) &gt; 1) and (GetReinforcementCallsLeft(0) &lt; 1)) then
+            Wait ( 5 )            
+			Loose(0);
+		end;
+end;
+
+------------------------
+
+function Condition2()
+		if ((GetNUnitsInArea(1, &quot;GBOutpost&quot;, 0) &lt;= 0) and (tmpold == { 0, 0 }) and (tmpold1 == { 0, 0 })) then
+			return 1;
+		end;
+end;
+
+function Condition3()
+        if ((GetNUnitsInArea(0, &quot;GBOutpost&quot;) &gt; 1) and (GetNUnitsInParty(1, 0) &lt;= 0) and (GetReinforcementCallsLeft(1) &lt; 1)) then
+            Wait ( 5 )
+			Win(0);
+		end;
+end;
+
+-------------------//Waves//--------------
+
+function Wave_1()
+	Wait( 110 );
+	LandReinforcement( 1, 865, 0, 5000 ); 
+	Wait( 5 );
+	CmdMultipleDisp( ACT_SWARM, 5000, DISPERSION, 4950, 7231 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 5000, DISPERSION, 8294, 8161 );
+end;
+
+function Wave_2()
+	Wait( 200 );
+	LandReinforcement( 1, 864, 1, 5100 ); 
+	Wait( 5 );
+	CmdMultipleDisp( ACT_SWARM, 5100, DISPERSION, 6983, 6079 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 5100, DISPERSION, 7446, 8083 );
+end;
+
+-----------------------
+
+function Wave_3()
+	Wait( 250 );
+	LandReinforcement( 1, 863, 1, 6000 ); 
+	Wait( 5 );
+	CmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 2285, 6166 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_ENTRENCH, 6000, DISPERSION, 2285, 6166 );
+end;
+
+function Wave_4()
+	Wait( 280 );
+	LandReinforcement( 1, 865, 0, 6100 ); 
+	Wait( 5 );
+	CmdMultipleDisp( ACT_SWARM, 6100, DISPERSION, 913, 3635 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 6100, DISPERSION, 8294, 8161 );
+end;
+
+-----------------------
+
+function Wave_5()
+	Wait( 300 );
+	LandReinforcement( 1, 864, 1, 6000 ); 
+	Wait( 18 );
+	CmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 7446, 8083 );
+end;
+
+function Wave_6()
+	Wait( 350 );
+	LandReinforcement( 1, 860, 0, 6100 ); 
+	Wait( 18 );
+	CmdMultipleDisp( ACT_SWARM, 6100, DISPERSION, 8294, 8161 );
+end;
+
+-------------------//Key Building//--------------
+
+function KeyBuilding_Flag()
+local tmpold = { 0, 0 };
+local tmp;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 1 do
+		if ( GetNUnitsInScriptGroup( i + 500, 0 ) == 1 ) then
+			tmp = 0;
+		elseif ( ( GetNUnitsInScriptGroup( i + 500, 1 ) + GetNUnitsInScriptGroup( i + 500, 2 ) ) == 1 ) then
+			tmp = 1;
+		end;
+		if ( tmp ~= tmpold[i] ) then
+			if ( tmp == 0 ) then
+				DamageScriptObject( 700 + i, 50 );
+			else
+				DamageScriptObject( 700 + i, -50 );
+			end;
+			tmpold[i] = tmp;
+		end;
+	end;
+	end;
+end;
+
+-------------------------
+
+function KeyBuilding_Flag1()
+local tmpold1 = { 0, 0 };
+local tmp1;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 1 do
+		if ( GetNUnitsInScriptGroup( i + 501, 0 ) == 1 ) then
+			tmp1 = 0;
+		elseif ( ( GetNUnitsInScriptGroup( i + 501, 1 ) + GetNUnitsInScriptGroup( i + 501, 2 ) ) == 1 ) then
+			tmp1 = 1;
+		end;
+		if ( tmp1 ~= tmpold1[i] ) then
+			if ( tmp1 == 0 ) then
+				DamageScriptObject( 701 + i, 50 );
+			else
+				DamageScriptObject( 701 + i, -50 );
+			end;
+			tmpold1[i] = tmp1;
+		end;
+	end;
+	end;
+end;
+
+---------------------//Test//---------------------
+
+function Winner()
+    while 1 do
+        if (( GetNUnitsInParty( 1 ) &lt; 1) and ( GetReinforcementCallsLeft( 1 ) == 0 ) and (tmpold == { 0, 0 })) then
+		Wait(3);
+        Win(0);
+        return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+---------------------//ST//---------------------------
+
+StartThread( RevealObjective );
+Trigger(Condition, Condition1, 1 )
+Trigger(Condition2, Condition3, 1 )
+--StartThread( Test );
+StartThread( Wave_1 );
+StartThread( Wave_2 );
+StartThread( Wave_3 );
+StartThread( Wave_4 );
+StartThread( Wave_5 );
+StartThread( Wave_6 );
+StartThread( AFV_Attack );
+StartThread( GerAttack1 );
+StartThread( GerAttack );
+StartThread( KeyBuilding_Flag );
+StartThread( KeyBuilding_Flag1 );</ScriptText>
+</Script>

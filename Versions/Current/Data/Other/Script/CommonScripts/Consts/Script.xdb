@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="29">
+	<FileName />
+	<ScriptText>-- For &lt;float&gt; use SetFGlobalVar
+-- obsolete
+-- these consts are in consts.cfg now
+
+function GeneralConsts()
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToForgetAntiArtillery&quot;, 20000 );
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToForgetUnit&quot;, 60000 );
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToArtilleryFire&quot;, 0 );
+	SetFGlobalVar( &quot;AI.General.Artillery.ProbabilityToShootAfterArtilleryFire&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.General.Artillery.ShootsOfArtilleryFire&quot;, 10 );
+	SetIGlobalVar( &quot;AI.General.Artillery.MinWeightToArtilleryFire&quot;, 3 ); --was 50
+	SetIGlobalVar( &quot;AI.General.TimeDontSeeTheEnemyBeforeForget&quot;, 30000 );
+	SetFGlobalVar( &quot;AI.General.PlayerForceMultiply&quot;, 2.0 );
+end;
+
+function AIconsts()
+	---- COMMON ----
+
+	--SetIGlobalVar( &quot;AI.Common.MaxFireRangeToShootByLine&quot;, 1056 );
+	--SetIGlobalVar( &quot;AI.Common.NumToScanInSegm&quot;, 50 );
+	--SetIGlobalVar( &quot;AI.Common.BehUpdateDuration&quot;, 1500 );
+	--SetIGlobalVar( &quot;AI.Common.SoldierBehUpdateDuration&quot;, 2000 );
+	SetIGlobalVar( &quot;AI.Common.DeadSeeTime&quot;, 1000 ); -- dead continue see for this time (ticks)
+	SetIGlobalVar( &quot;AI.Common.TimeToReturnGun&quot;, 4000 ); -- time before turret must be rotated to the default direction
+	SetIGlobalVar( &quot;AI.Common.MinRotateAngle&quot;, 35 ); -- minimal base rotation angle for targeting
+	SetIGlobalVar( &quot;AI.Common.NumToScanInSegm&quot;, 50 );
+	SetIGlobalVar( &quot;AI.Common.TimeBeforeCamouflage&quot;, 5000 );
+	SetIGlobalVar( &quot;AI.Common.RadiusOfHitNotify&quot;, 160 );
+	SetIGlobalVar( &quot;AI.Common.TimeOfHitNotify&quot;, 1000 );
+	SetIGlobalVar( &quot;AI.Common.CallForHelpRadius&quot;, 500 ); -- player units&apos; call for help radius (ai points)
+	SetIGlobalVar( &quot;AI.Common.AICallForHelpRadius&quot;, 2000 ); -- ai units&apos; call for help radius (ai points)
+	SetIGlobalVar( &quot;AI.Common.GuardStateRadius&quot;, 960 );
+	SetFGlobalVar( &quot;AI.Common.GoodAttackProbability&quot;, 0.4 );
+	SetFGlobalVar( &quot;AI.Common.AreaDamageCoeff&quot;, 0.3 );
+	SetIGlobalVar( &quot;AI.Common.TankTrackHitPoints&quot;, 20 ); -- HP of tracks for repairing
+	SetIGlobalVar( &quot;AI.Common.FenceSegmentRuPrice&quot;, 2000 );
+	SetIGlobalVar( &quot;AI.Common.TrenchSegmentRuPrice&quot;, 1000 );
+	SetFGlobalVar( &quot;AI.Common.TrajectoryLineRatio&quot;, 0.7 );
+	SetFGlobalVar( &quot;AI.Common.TrajectoryBombG&quot;, 0.0001 );
+	SetFGlobalVar( &quot;AI.Common.AmbushBeginAttackCriteria&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.Common.CoeffForRandomDelay&quot;, 1.2 );
+	SetFGlobalVar( &quot;AI.Common.HeightForVisRadiusInc&quot;, 10.0 );
+	SetFGlobalVar( &quot;AI.Common.DamageForMassiveDamageFatality&quot;, 0.8 );
+	SetFGlobalVar( &quot;AI.Common.MassiveDamageFatalityProbability&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.Common.HpPercentageToWaitMedic&quot;, 0.5 ); -- HP condition for acks set
+	SetFGlobalVar( &quot;AI.Common.TankPitCover&quot;, 0.6 ); -- common AABBCoeff (silhoette) multipliyer
+	SetIGlobalVar( &quot;AI.Common.UnitEntrenchTime&quot;, 1500 ); -- entrench time per 1 ai tile (ms)
+	--SetIGlobalVar( &quot;AI.Common.TimeOfPreDisappearNotify&quot;, 500 );
+	SetIGlobalVar( &quot;AI.Common.ArmorForAreaDamage&quot;, 300 ); -- maximum armor that can be penetrated by area damage
+	
+	---- INFANTRY ----
+
+	SetIGlobalVar( &quot;AI.Infantry.SpyGlassRadius&quot;, 1600 ); -- ai points
+	SetIGlobalVar( &quot;AI.Infantry.SpyGlassAngle&quot;, 45 ); -- degrees
+	SetFGlobalVar( &quot;AI.Infantry.LyingSoldierCover&quot;, 0.6 ); -- common
+	SetFGlobalVar( &quot;AI.Infantry.LyingSpeedFactor&quot;, 0.4 ); -- common speed multipliyer
+	SetIGlobalVar( &quot;AI.Infantry.RadiusOfFormation&quot;, 960 ); -- ai points
+	SetIGlobalVar( &quot;AI.Infantry.TimeOfLyingUnderFire&quot;, 5000 ); -- ticks
+	SetIGlobalVar( &quot;AI.Infantry.StandLieRandomDelay&quot;, 2500 ); -- ticks
+	SetIGlobalVar( &quot;AI.Infantry.SquadMemberLeaveInterval&quot;, 500 ); -- delay between infantry leaving container (ms)
+	SetIGlobalVar( &quot;AI.Infantry.MaxDistanceToThrowGrenade&quot;, 320 ); -- ai points
+	SetIGlobalVar( &quot;AI.Infantry.FullHealthTime&quot;, 4000 ); -- healing time
+	
+	---- ENGINEERS ----
+
+	SetIGlobalVar( &quot;AI.Engineers.MineVisRadius&quot;, 96 );
+	SetIGlobalVar( &quot;AI.Engineers.MineClearRadius&quot;, 224 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerRepearPerQuant&quot;, 213 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerFenceLenghtPerQuant&quot;, 15 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerEntrenchLenghtPerQuant&quot;, 15 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerResupplyPerQuant&quot;, 320 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerFenceLenghtPerQuant&quot;, 15 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerMineCheckPeriod&quot;, 1000 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerLoadRuPerQuant&quot;, 320 );
+	SetIGlobalVar( &quot;AI.Engineers.TimeQuant&quot;, 160 );
+	SetFGlobalVar( &quot;AI.Engineers.EngineerAntitankHealthPerQuant&quot;, 1.1 );
+	SetIGlobalVar( &quot;AI.Engineers.MineAPersRuPrice&quot;, 1000 );
+	SetIGlobalVar( &quot;AI.Engineers.MineATankRuPrice&quot;, 1500 );
+	SetIGlobalVar( &quot;AI.Engineers.EngineerRuCarryWeight&quot;, 5000 );
+	SetIGlobalVar( &quot;AI.Engineers.RepairCostAdjust&quot;, 175 );
+	
+	---- AVIATION ----
+
+	SetIGlobalVar( &quot;AI.Aviation.DiveBeforeExplodeTime&quot;, 5000 );
+	SetIGlobalVar( &quot;AI.Aviation.DiveAfterExplodeTime&quot;, 150 );
+	SetIGlobalVar( &quot;AI.Aviation.PlaneGuardStateRadius&quot;, 2560 );
+	SetIGlobalVar( &quot;AI.Aviation.ShturmovikApproachRadius&quot;, 640 );
+	SetIGlobalVar( &quot;AI.Aviation.PlaneMinHeight&quot;, 300 );
+	SetFGlobalVar( &quot;AI.Aviation.PlanesBombHeight&quot;, 0.8 );
+	SetIGlobalVar( &quot;AI.Aviation.GroundAttack.MechNuberToDropBombs&quot;, 1 );
+	SetIGlobalVar( &quot;AI.Aviation.GroundAttack.InfantryNuberToDropBombs&quot;, 20 );
+	
+	---- ARTILLERY ----
+
+	SetIGlobalVar( &quot;AI.Artillery.ThresholdInstallTime&quot;, 0 );
+	SetIGlobalVar( &quot;AI.Artillery.ShootsToRange&quot;, 4 );
+	SetFGlobalVar( &quot;AI.Artillery.RandgedDispersionRadiusBonus&quot;, 0.7 );
+	SetIGlobalVar( &quot;AI.Artillery.RangedAreaRadius&quot;, 716 );
+	SetIGlobalVar( &quot;AI.Artillery.MaxAntiArtilleryRadius&quot;, 6400 );
+	SetIGlobalVar( &quot;AI.Artillery.MinAntiArtilleryRadius&quot;, 384 );
+	SetIGlobalVar( &quot;AI.Artillery.ShotsToMinimizeLocationRadius&quot;, 13 );
+	SetIGlobalVar( &quot;AI.Artillery.RevealCirclePeriod&quot;, 3000 );
+	SetIGlobalVar( &quot;AI.Artillery.RadiusToStartAntiartilleryFire&quot;, 640 );
+	SetIGlobalVar( &quot;AI.Artillery.RelocationRadius&quot;, 160 );
+	SetIGlobalVar( &quot;AI.Artillery.AudibilityTime&quot;, 20000 );
+	SetIGlobalVar( &quot;AI.Artillery.ArtilleryRevealCoefficient&quot;, 1000 );
+	-- dispersion --
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.LineMin&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.LineMax&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.HowitserMin&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.HowitserMax&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.BombMin&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.BombMax&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.CannonMin&quot;, 3.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.CannonMax&quot;, 3.5 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.RocketMin&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.RocketMax&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.GrenadeMin&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Artillery.DispersionRatio.GrenadeMax&quot;, 1.0 );
+
+	---- BUILDINGS ----
+
+	SetFGlobalVar( &quot;AI.Buildings.DefaultFireplaceCoverage&quot;, 0.25 ); -- result cover = const_cover * fireplace_cover
+	SetFGlobalVar( &quot;AI.Buildings.CureSpeedInBuilding&quot;, 0.005 );
+	SetIGlobalVar( &quot;AI.Buildings.TimeOfBuildingAlarm&quot;, 8000 );
+	SetIGlobalVar( &quot;AI.Buildings.CampingTime&quot;, 2000 ); -- time to wait inside building before storming it (ticks)
+	SetFGlobalVar( &quot;AI.Buildings.InsideObjWeaponFactor&quot;, 0.5 ); -- weapon range inside building
+	SetIGlobalVar( &quot;AI.Buildings.InsideObjCombatPeriod&quot;, 500 ); -- time of two soldiers combat (ticks)
+	SetFGlobalVar( &quot;AI.Buildings.BurningSpeed&quot;, 0.0002 );
+	SetFGlobalVar( &quot;AI.Buildings.HPPercentToEscapeFromBuilding&quot;, 0.1 );
+	
+	---- FOLLOW ----
+	
+	SetIGlobalVar( &quot;AI.Follow.StopRadius&quot;, 288 );
+	SetIGlobalVar( &quot;AI.Follow.EqualizeSpeedRadius&quot;, 384 );
+	SetIGlobalVar( &quot;AI.Follow.GoRadius&quot;, 352 );
+	SetIGlobalVar( &quot;AI.Follow.WaitRadius&quot;, 768 );
+	
+	---- TRANSPORT AND RESUPPLY ----
+	
+	SetIGlobalVar( &quot;AI.TransportAndResupply.MainStorageHealingSpeed&quot;, 50 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.ResupplyRadius&quot;, 640 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.TransportRuCapacity&quot;, 35000 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.TransportLoadTime&quot;, 3000 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.TransportLoadRuDistance&quot;, 400 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.ResupplyOffset&quot;, 200 );
+	SetFGlobalVar( &quot;AI.TransportAndResupply.ResupplyBalanceCoeff&quot;, 0.0000001 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.ResupplyMaxPathLenght&quot;, 232 );
+	--SetIGlobalVar( &quot;AI.TransportAndResupply.SoldierRUPrice&quot;, 3500 ); -- obsolete
+	SetIGlobalVar( &quot;AI.TransportAndResupply.TakeStorageOwnershipRadius&quot;, 300 );
+	SetIGlobalVar( &quot;AI.TransportAndResupply.LandDistance&quot;, 50 );
+	
+	---- ANTIAVIATION ARTILLERY ----
+
+	SetIGlobalVar( &quot;AI.AntiAviationArtillery.AimIterations&quot;, 1 );
+	
+	---- PARATROOPERS ----
+	
+	SetFGlobalVar( &quot;AI.Paratroopers.ParatrooperFallSpeed&quot;, 0.05 );
+	SetIGlobalVar( &quot;AI.Paratroopers.ParadropSpread&quot;, 4 );
+	SetIGlobalVar( &quot;AI.Paratroopers.PlaneParadropInterval&quot;, 80 );
+	SetIGlobalVar( &quot;AI.Paratroopers.PlaneParadropIntervalPerpMin&quot;, 20 );
+	SetIGlobalVar( &quot;AI.Paratroopers.PlaneParadropIntervalPerpMax&quot;, 50 );
+	SetIGlobalVar( &quot;AI.Paratroopers.ParatrooperGroundScanPeriod&quot;, 200 );
+	
+	---- COMBAT SITUATION ----
+	
+	SetIGlobalVar( &quot;AI.CombatSituation.Damage&quot;, 1500 );
+	SetIGlobalVar( &quot;AI.CombatSituation.TimeDamage&quot;, 10000 );
+	SetIGlobalVar( &quot;AI.CombatSituation.MovingEnemyMechNumber&quot;, 2 );
+	SetIGlobalVar( &quot;AI.CombatSituation.MovingEnemyInfantryNumber&quot;, 20 );
+
+	---- REVEAL INFO ---- check for unit etype string names
+	
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_light.Query&quot;, 0.1 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_light.MovingOff&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_light.Distance&quot;, 64 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_light.Time&quot;, 1000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_medium.Query&quot;, 1.0 ); -- 0.2
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_medium.MovingOff&quot;, 0.5 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_medium.Distance&quot;, 128 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_medium.Time&quot;, 2000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_heavy.Query&quot;, 0.3 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_heavy.MovingOff&quot;, 0.4 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_heavy.Distance&quot;, 160 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_heavy.Time&quot;, 3000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_super.Query&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.RevealInfo.arm_super.MovingOff&quot;, 0.2 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_super.Distance&quot;, 192 );
+	SetIGlobalVar( &quot;AI.RevealInfo.arm_super.Time&quot;, 5000 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_antitank.Query&quot;, 0.2 );
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_antitank.MovingOff&quot;, 0.5 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_antitank.Distance&quot;, 128 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_antitank.Time&quot;, 2000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_assault.Query&quot;, 0.3 );
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_assault.MovingOff&quot;, 0.4 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_assault.Distance&quot;, 160 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_assault.Time&quot;, 3000 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_aagun.Query&quot;, 0.1 );
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_aagun.MovingOff&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_aagun.Distance&quot;, 64 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_aagun.Time&quot;, 1000 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_super.Query&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.RevealInfo.spg_super.MovingOff&quot;, 0.2 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_super.Distance&quot;, 192 );
+	SetIGlobalVar( &quot;AI.RevealInfo.spg_super.Time&quot;, 5000 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.art_gun.Query&quot;, 0.2 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_gun.MovingOff&quot;, 0.5 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_gun.Distance&quot;, 64 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_gun.Time&quot;, 1500 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.art_mortar.Query&quot;, 0.1 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_mortar.MovingOff&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_mortar.Distance&quot;, 64 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_mortar.Time&quot;, 1000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_rocket.Query&quot;, 0 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_rocket.MovingOff&quot;, 0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_rocket.Distance&quot;, 0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_rocket.Time&quot;, 0 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_heavy_gun.Query&quot;, 0.3 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_heavy_gun.MovingOff&quot;, 0.4 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_heavy_gun.Distance&quot;, 160 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_heavy_gun.Time&quot;, 3000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_super.Query&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_super.MovingOff&quot;, 0.2 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_super.Distance&quot;, 192 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_super.Time&quot;, 5000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_heavy_mg.Query&quot;, 0.1 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_heavy_mg.MovingOff&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_heavy_mg.Distance&quot;, 64 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_heavy_mg.Time&quot;, 1000 );	
+	SetFGlobalVar( &quot;AI.RevealInfo.art_aagun.Query&quot;, 0.2 );
+	SetFGlobalVar( &quot;AI.RevealInfo.art_aagun.MovingOff&quot;, 0.5 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_aagun.Distance&quot;, 128 );
+	SetIGlobalVar( &quot;AI.RevealInfo.art_aagun.Time&quot;, 2000 );
+	SetFGlobalVar( &quot;AI.RevealInfo.train_armor.Query&quot;, 0.3 );
+	SetFGlobalVar( &quot;AI.RevealInfo.train_armor.MovingOff&quot;, 0.4 );
+	SetIGlobalVar( &quot;AI.RevealInfo.train_armor.Distance&quot;, 160 );
+	SetIGlobalVar( &quot;AI.RevealInfo.train_armor.Time&quot;, 3000 );	
+	
+	---- DIFFICULTY LEVELS ----
+	-- easy --
+	SetFGlobalVar( &quot;AI.Levels.Easy.Friends.Silhouette&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Friends.Piercing&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Friends.Damage&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Friends.RotateSpeed&quot;, 2.0 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Friends.Dispersion&quot;, 0.7 );
+	
+	SetFGlobalVar( &quot;AI.Levels.Easy.Enemies.Silhouette&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Enemies.Piercing&quot;, 0.8 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Enemies.Damage&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Enemies.RotateSpeed&quot;, 0.5 );
+	SetFGlobalVar( &quot;AI.Levels.Easy.Enemies.Dispersion&quot;, 1.2 );
+	-- normal --
+	SetFGlobalVar( &quot;AI.Levels.Normal.Friends.Silhouette&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Friends.Piercing&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Friends.Damage&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Friends.RotateSpeed&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Friends.Dispersion&quot;, 1.0 );
+	
+	SetFGlobalVar( &quot;AI.Levels.Normal.Enemies.Silhouette&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Enemies.Piercing&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Enemies.Damage&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Enemies.RotateSpeed&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Normal.Enemies.Dispersion&quot;, 1.0 );
+	-- hard --
+	SetFGlobalVar( &quot;AI.Levels.Hard.Friends.Silhouette&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Friends.Piercing&quot;, 0.8 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Friends.Damage&quot;, 0.8 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Friends.RotateSpeed&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Friends.Dispersion&quot;, 1.0 );
+	
+	SetFGlobalVar( &quot;AI.Levels.Hard.Enemies.Silhouette&quot;, 0.8 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Enemies.Piercing&quot;, 1.2 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Enemies.Damage&quot;, 1.2 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Enemies.RotateSpeed&quot;, 1.0 );
+	SetFGlobalVar( &quot;AI.Levels.Hard.Enemies.Dispersion&quot;, 1.0 );
+
+	---- FLAGS ----
+	
+	SetIGlobalVar( &quot;AI.Flags.Radius&quot;, 320 );
+	SetIGlobalVar( &quot;AI.Flags.PointsSpeed&quot;, 1 );
+	SetIGlobalVar( &quot;AI.Flags.PointsToReinforcement&quot;, 150 );
+	SetIGlobalVar( &quot;AI.Flags.TimeToCapture&quot;, 5000 );
+	SetIGlobalVar( &quot;AI.Flags.PlayerPointsSpeed&quot;, 1 );
+end;
+
+--GeneralConsts();
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToForgetAntiArtillery&quot;, 20000 );
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToForgetUnit&quot;, 60000 );
+	SetIGlobalVar( &quot;AI.General.Artillery.TimeToArtilleryFire&quot;, 0 );
+	SetFGlobalVar( &quot;AI.General.Artillery.ProbabilityToShootAfterArtilleryFire&quot;, 1.0 );
+	SetIGlobalVar( &quot;AI.General.Artillery.ShootsOfArtilleryFire&quot;, 10 );
+	SetIGlobalVar( &quot;AI.General.Artillery.MinWeightToArtilleryFire&quot;, 3 ); --was 50
+	SetIGlobalVar( &quot;AI.General.TimeDontSeeTheEnemyBeforeForget&quot;, 30000 );
+	SetFGlobalVar( &quot;AI.General.PlayerForceMultiply&quot;, 2.0 );
+	Trace( GetIGlobalVar( &quot;AI.General.Artillery.MinWeightToArtilleryFire&quot;, -123 ) ); --was 50
+AIconsts();
+Trace(&quot;Consts loaded.&quot;);</ScriptText>
+</Script>

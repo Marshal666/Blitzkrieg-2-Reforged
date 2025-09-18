@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="14">
+	<Type>NEVT_ENEMY_ART_DETECTED</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/Enemy_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/EnemyArtDetected/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTEnemyArtDetected/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Common/Info1_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="/Other/Notification/Game/Mission/enemyartillery.xdb#xpointer(/Notification)" />
+	<NoDupArea>300</NoDupArea>
+	<NoDupTime>60</NoDupTime>
+</NotificationEvent>

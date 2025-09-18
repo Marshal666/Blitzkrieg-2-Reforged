@@ -1,0 +1,2336 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BuildingRPGStats ObjectRecordID="105">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_BUILDING</GameType>
+	<Comments />
+	<MaxHP>400</MaxHP>
+	<DamageLevels>
+		<Item>
+			<DamageHP>0.8</DamageHP>
+			<VisObj href="damaged01.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="/Scene/Effects/All/Destructions/GlassCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0.5</DamageHP>
+			<VisObj href="damaged02.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="/Scene/Effects/All/Destructions/StHouseCrashWindowDust_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0.3</DamageHP>
+			<VisObj href="damaged03.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="/Scene/Effects/All/Destructions/StHouseCrashWindowDust_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0</DamageHP>
+			<VisObj href="destroyed.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashTotal_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+	</DamageLevels>
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>5</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-57</x>
+				<y>-102</y>
+				<z>24.1907</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-57</x>
+				<y>103</y>
+				<z>24.1907</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-47</x>
+				<y>-102</y>
+				<z>72.4063</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-47</x>
+				<y>103</y>
+				<z>72.4063</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-25</x>
+				<y>-102</y>
+				<z>110.731</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-25</x>
+				<y>103</y>
+				<z>110.731</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-26</x>
+				<y>-102</y>
+				<z>4.43852</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-26</x>
+				<y>103</y>
+				<z>4.43852</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>-102</y>
+				<z>72.4668</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>103</y>
+				<z>72.4668</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-31</x>
+				<y>-102</y>
+				<z>87.8728</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-31</x>
+				<y>103</y>
+				<z>87.8728</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>4</y>
+				<z>151.412</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>23</y>
+				<z>151.412</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>23</x>
+				<y>-102</y>
+				<z>30.5624</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>23</x>
+				<y>103</y>
+				<z>30.5624</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1</x>
+				<y>-102</y>
+				<z>41.056</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>1</x>
+				<y>103</y>
+				<z>41.056</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>16</x>
+				<y>-102</y>
+				<z>109.1</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>16</x>
+				<y>103</y>
+				<z>109.1</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>48</x>
+				<y>-102</y>
+				<z>4.15575</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>48</x>
+				<y>103</y>
+				<z>4.15575</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>47</x>
+				<y>-102</y>
+				<z>60.366</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>-4.8e-005</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>47</x>
+				<y>103</y>
+				<z>60.366</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-96</y>
+				<z>1.18059</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-96</y>
+				<z>1.18059</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-77</y>
+				<z>63.4283</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-77</y>
+				<z>63.4283</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-41</x>
+				<y>-84</y>
+				<z>102.941</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>41</x>
+				<y>-84</y>
+				<z>102.941</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441499</y>
+				<z>0</z>
+				<w>0.897262</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-6</x>
+				<y>-74</y>
+				<z>148.348</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.43392</y>
+				<z>0</z>
+				<w>0.900951</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>7</x>
+				<y>-74</y>
+				<z>148.348</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441955</y>
+				<z>0</z>
+				<w>0.897037</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-40</y>
+				<z>26.9237</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-40</y>
+				<z>26.9237</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-69</y>
+				<z>54.8554</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-69</y>
+				<z>54.8554</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-57</x>
+				<y>-47</y>
+				<z>81.366</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-47</y>
+				<z>81.366</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441499</y>
+				<z>0</z>
+				<w>0.897262</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-27</x>
+				<y>-62</y>
+				<z>122.098</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>27</x>
+				<y>-62</y>
+				<z>122.098</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-25</y>
+				<z>9.72869</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-25</y>
+				<z>9.72869</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>-1</y>
+				<z>56.3092</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>-1</y>
+				<z>56.3092</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-31</x>
+				<y>-9</y>
+				<z>116.447</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>31</x>
+				<y>-9</y>
+				<z>116.447</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-28</x>
+				<y>-5</y>
+				<z>120.954</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>28</x>
+				<y>-5</y>
+				<z>120.954</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>26</y>
+				<z>5.12509</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>26</y>
+				<z>5.12509</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>3</y>
+				<z>48.3524</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>3</y>
+				<z>48.3524</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-55</x>
+				<y>32</y>
+				<z>83.7738</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>56</x>
+				<y>32</y>
+				<z>83.7738</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441499</y>
+				<z>0</z>
+				<w>0.897262</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-25</x>
+				<y>9</y>
+				<z>124.892</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>25</x>
+				<y>9</y>
+				<z>124.892</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-58</x>
+				<y>40</y>
+				<z>7.18893</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>58</x>
+				<y>40</y>
+				<z>7.18893</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-61</x>
+				<y>65</y>
+				<z>76.6453</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>62</x>
+				<y>65</y>
+				<z>76.6453</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441499</y>
+				<z>0</z>
+				<w>0.897262</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-39</x>
+				<y>60</y>
+				<z>106.328</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>39</x>
+				<y>60</y>
+				<z>106.328</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-12</x>
+				<y>39</y>
+				<z>141.371</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.43392</y>
+				<z>0</z>
+				<w>0.900951</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>12</x>
+				<y>39</y>
+				<z>141.371</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.442335</y>
+				<z>0</z>
+				<w>0.89685</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-63</x>
+				<y>79</y>
+				<z>73.6806</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>64</x>
+				<y>79</y>
+				<z>73.6806</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.441499</y>
+				<z>0</z>
+				<w>0.897262</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-36</x>
+				<y>104</y>
+				<z>109.471</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.448761</y>
+				<z>0</z>
+				<w>0.893652</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>36</x>
+				<y>104</y>
+				<z>109.471</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.441293</y>
+				<z>0</z>
+				<w>0.897363</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>94</y>
+				<z>142.585</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.43392</y>
+				<z>0</z>
+				<w>0.900951</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>11</x>
+				<y>94</y>
+				<z>142.585</z>
+			</Pos>
+			<Orient>
+				<x>-8.6e-005</x>
+				<y>0.442335</y>
+				<z>0</z>
+				<w>0.89685</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>31</AIPassabilityClass>
+	<Burn>true</Burn>
+	<EffectExplosion href="/Scene/Effects/All/Explosions/SmokeExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDeath href="/Scene/Effects/All/Destructions/StHouseCrashTotal_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>true</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>58</x>
+						<y>-102</y>
+					</Item>
+					<Item>
+						<x>58</x>
+						<y>103</y>
+					</Item>
+					<Item>
+						<x>-58</x>
+						<y>103</y>
+					</Item>
+					<Item>
+						<x>-58</x>
+						<y>-102</y>
+					</Item>
+					<Item>
+						<x>58</x>
+						<y>-102</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>54.0313</x>
+		<y>103.656</y>
+	</Origin>
+	<UsePassabilityForVisibility>true</UsePassabilityForVisibility>
+	<visibility>
+		<data />
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>217</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<type>TYPE_BULDING</type>
+	<RestSlots>10</RestSlots>
+	<MedicalSlots>0</MedicalSlots>
+	<PrimaryGun href="" />
+	<slots>
+		<Item>
+			<LocatorName>LWindow01</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>-23</x>
+				<y>-102</y>
+				<z>70.1283</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.699746</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.714392</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.801804</x>
+				<y>1.33142</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow02</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>1</x>
+				<y>-102</y>
+				<z>72.7096</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.700369</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.713781</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.801804</x>
+				<y>1.33142</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow03</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>25</x>
+				<y>-102</y>
+				<z>73.1029</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.702968</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.711221</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.801804</x>
+				<y>1.33142</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow04</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>1</x>
+				<y>-102</y>
+				<z>31.6787</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.704984</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.709224</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.32571</x>
+				<y>1.53929</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow05</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>34</x>
+				<y>-102</y>
+				<z>31.2513</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.7083</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.705911</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.32571</x>
+				<y>1.53929</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow06</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>0</x>
+				<y>-103</y>
+				<z>106.166</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.70472</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.709485</w>
+			</Rot>
+			<Direction>179.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.10684</x>
+				<y>1.00534</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow07</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>-58</x>
+				<y>55</y>
+				<z>42.2988</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.50413</x>
+				<y>-0.498781</y>
+				<z>-0.495853</z>
+				<w>0.5012</w>
+			</Rot>
+			<Direction>90.6097</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.42166</x>
+				<y>1.6907</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow08</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>-58</x>
+				<y>-7</y>
+				<z>41.6768</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.507411</x>
+				<y>-0.497296</y>
+				<z>-0.492335</z>
+				<w>0.502829</w>
+			</Rot>
+			<Direction>91.1755</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.42166</x>
+				<y>1.6907</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow09</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>-58</x>
+				<y>-64</y>
+				<z>42.4665</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.49614</x>
+				<y>-0.497442</y>
+				<z>-0.496497</z>
+				<w>0.50979</w>
+			</Rot>
+			<Direction>90.6757</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.42166</x>
+				<y>1.6907</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow10</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>58</x>
+				<y>-67</y>
+				<z>39.5704</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.503911</x>
+				<y>0.490208</y>
+				<z>0.500744</z>
+				<w>0.505</w>
+			</Rot>
+			<Direction>268.962</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.57947</x>
+				<y>1.7421</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow11</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>59</x>
+				<y>-17</y>
+				<z>40.8242</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.489277</x>
+				<y>0.500212</y>
+				<z>0.499559</z>
+				<w>0.510723</w>
+			</Rot>
+			<Direction>269.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.40202</x>
+				<y>1.65505</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow12</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>59</x>
+				<y>20</y>
+				<z>40.1788</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.502629</x>
+				<y>0.497366</y>
+				<z>0.498486</z>
+				<w>0.5015</w>
+			</Rot>
+			<Direction>269.517</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.40202</x>
+				<y>1.65505</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow13</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>33</x>
+				<y>104</y>
+				<z>32.1467</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.001527</x>
+				<y>-0.70809</y>
+				<z>-0.706119</z>
+				<w>0.001532</w>
+			</Rot>
+			<Direction>359.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.286</x>
+				<y>1.71115</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow14</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>2</x>
+				<y>103</y>
+				<z>31.9182</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>6e-005</x>
+				<y>0.709145</y>
+				<z>0.705063</z>
+				<w>6e-005</w>
+			</Rot>
+			<Direction>359.984</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.286</x>
+				<y>1.71115</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow15</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>25</x>
+				<y>103</y>
+				<z>73.0911</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.00407</x>
+				<y>0.703736</y>
+				<z>0.710438</z>
+				<w>0.004032</w>
+			</Rot>
+			<Direction>359.335</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.850588</x>
+				<y>1.40188</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow16</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>1</x>
+				<y>104</y>
+				<z>72.4196</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.00428</x>
+				<y>-0.714286</y>
+				<z>-0.699827</z>
+				<w>0.004368</w>
+			</Rot>
+			<Direction>0.697632</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.850588</x>
+				<y>1.40188</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow17</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>-23</x>
+				<y>105</y>
+				<z>72.4363</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.001592</x>
+				<y>-0.707773</y>
+				<z>-0.706436</z>
+				<w>0.001595</w>
+			</Rot>
+			<Direction>359.995</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>0.850588</x>
+				<y>1.40188</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+		<Item>
+			<LocatorName>LWindow18</LocatorName>
+			<NumFirePlaces>1</NumFirePlaces>
+			<Pos>
+				<x>0</x>
+				<y>104</y>
+				<z>106.283</z>
+			</Pos>
+			<DamageCenter>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</DamageCenter>
+			<Rot>
+				<x>0.006126</x>
+				<y>-0.704305</y>
+				<z>-0.709845</z>
+				<w>0.006078</w>
+			</Rot>
+			<Direction>0.98877</Direction>
+			<Angle>180</Angle>
+			<Coverage>1</Coverage>
+			<Gun>
+				<Weapon href="" />
+				<AttachedGunVisObj href="" />
+				<AttachedGunLocator />
+				<ShootPointOffset>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</ShootPointOffset>
+				<ShootEffectInvert>false</ShootEffectInvert>
+				<Priority>0</Priority>
+				<IsPrimary>false</IsPrimary>
+				<Ammo>0</Ammo>
+				<Direction>0</Direction>
+				<ReloadCost>1</ReloadCost>
+				<TargetAAOnly>false</TargetAAOnly>
+			</Gun>
+			<RotationSpeed>1</RotationSpeed>
+			<Window>
+				<DayObj href="" />
+				<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+				<DestroyedObj href="" />
+				<DestroyEffect href="" />
+				<DayDamageLevels />
+				<NightDamageLevels />
+				<MaxHP>100</MaxHP>
+			</Window>
+			<WindowScale>
+				<x>1.10022</x>
+				<y>1</y>
+			</WindowScale>
+			<SoldierStatsModifier href="" />
+			<SightMultiplier>1</SightMultiplier>
+		</Item>
+	</slots>
+	<DefaultWindow>
+		<DayObj href="" />
+		<NightObj href="/Scene/Geoms/Test/Objects/SimpleObjects/Windows/NightWindow_VisObj.xdb#xpointer(/VisObj)" />
+		<DestroyedObj href="" />
+		<DestroyEffect href="" />
+		<DayDamageLevels />
+		<NightDamageLevels />
+		<MaxHP>100</MaxHP>
+	</DefaultWindow>
+	<entrances>
+		<Item>
+			<Pos>
+				<x>-37</x>
+				<y>-102</y>
+				<z>25.2102</z>
+			</Pos>
+			<Stormable>true</Stormable>
+			<Dir>32767</Dir>
+		</Item>
+		<Item>
+			<Pos>
+				<x>59</x>
+				<y>56</y>
+				<z>25.3643</z>
+			</Pos>
+			<Stormable>true</Stormable>
+			<Dir>49090</Dir>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-35</x>
+				<y>105</y>
+				<z>25.0423</z>
+			</Pos>
+			<Stormable>true</Stormable>
+			<Dir>65481</Dir>
+		</Item>
+	</entrances>
+	<firePoints />
+	<smokePoints>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>24575.6</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>64</y>
+				<z>0</z>
+			</Pos>
+			<Direction>32767.5</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>128</y>
+				<z>0</z>
+			</Pos>
+			<Direction>40959.4</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>64</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>16383.8</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>64</x>
+				<y>128</y>
+				<z>0</z>
+			</Pos>
+			<Direction>49151.3</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>128</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>16383.8</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>128</x>
+				<y>128</y>
+				<z>0</z>
+			</Pos>
+			<Direction>49151.3</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>192</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>8191.88</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>192</x>
+				<y>64</y>
+				<z>0</z>
+			</Pos>
+			<Direction>0</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+		<Item>
+			<Pos>
+				<x>192</x>
+				<y>128</y>
+				<z>0</z>
+			</Pos>
+			<Direction>57343.1</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+	</smokePoints>
+	<dirExplosions />
+	<SightMultiplier>1</SightMultiplier>
+	<SoldierStatsModifier href="/Other/UnitStatsModifier/Game/Buildings/common_small.xdb#xpointer(/UnitStatsModifier)" />
+	<BuildingType>Small</BuildingType>
+	<VisibilitySrink>true</VisibilitySrink>
+	<ArmorPattern href="/Other/ArmorPattern/Game/building.xdb#xpointer(/ArmorPattern)" />
+	<DamageCoeff>0</DamageCoeff>
+</BuildingRPGStats>

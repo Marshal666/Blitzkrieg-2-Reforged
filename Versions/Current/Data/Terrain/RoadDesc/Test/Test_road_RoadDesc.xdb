@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RoadDesc ObjectRecordID="1">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>0.9</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>24</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>-32704</MiniMapCenterColor>
+	<MiniMapBorderColor>-8372224</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<LeftBorder>
+		<CenterOpacity>1</CenterOpacity>
+		<BorderOpacity>1</BorderOpacity>
+		<TilingStep>0.1</TilingStep>
+		<Material href=""/>
+		<UseFromPixel>0</UseFromPixel>
+		<UseToPixel>0</UseToPixel>
+	</LeftBorder>
+	<RightBorder>
+		<CenterOpacity>1</CenterOpacity>
+		<BorderOpacity>1</BorderOpacity>
+		<TilingStep>0.1</TilingStep>
+		<Material href=""/>
+		<UseFromPixel>0</UseFromPixel>
+		<UseToPixel>0</UseToPixel>
+	</RightBorder>
+	<Center>
+		<CenterOpacity>1</CenterOpacity>
+		<BorderOpacity>1</BorderOpacity>
+		<TilingStep>4</TilingStep>
+		<RelWidth>1</RelWidth>
+		<Disturbance>0</Disturbance>
+		<NumCells>1</NumCells>
+		<Materials>
+			<Item href="/scene/texandmats/test/test_road_material.xdb#xpointer(/Material)"/>
+		</Materials>
+		<UseFromPixel>0</UseFromPixel>
+		<UseToPixel>110</UseToPixel>
+		<StreamSpeed>0.1</StreamSpeed>
+	</Center>
+	<DefaultWidth>256</DefaultWidth>
+	<DefaultOpacity>1</DefaultOpacity>
+</RoadDesc>

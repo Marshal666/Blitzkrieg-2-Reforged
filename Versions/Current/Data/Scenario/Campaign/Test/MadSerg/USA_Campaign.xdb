@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Campaign ObjectRecordID="16">
+	<Chapters>
+		<Item href="/scenario/chapter/test/uvarkov/usa/first_chapter.xdb#xpointer(/Chapter)"/>
+	</Chapters>
+	<LocalizedName href="/other/text/test/uvarkov/campaigns/usa/usa/text.xdb#xpointer(/Text)"/>
+	<ScriptFile href="/other/script/test/uvarkov/campaign/usa/campaign/script.xdb#xpointer(/Script)"/>
+	<Screens/>
+	<TextureNotStarted href="/scene/texandmats/game/menu/selectcampaign/usanormal_texture.xdb#xpointer(/Texture)"/>
+	<TextureCompleted href="/scene/texandmats/test/programmers_test/uvarkov/campaigns/usa/completed_texture.xdb#xpointer(/Texture)"/>
+	<TextureNotStartedSelected href=""/>
+	<TextureCompletedSelected href=""/>
+	<TextureMissionCompleted href=""/>
+	<RankExperiences>
+		<Item>
+			<Experience>0</Experience>
+			<Rank href=""/>
+			<AddPromotion>0</AddPromotion>
+		</Item>
+	</RankExperiences>
+	<LeaderRanks/>
+	<LeaderFirstNames/>
+	<LeaderLastNames/>
+	<LeaderPictures/>
+	<DifficultyLevels/>
+	<IntroMovie />
+	<OutroMovie />
+	<ReinforcementTypes href="/reinforcements/reinforcementtypes/game/types_reinforcementtypes.xdb#xpointer(/ReinforcementTypes)"/>
+	<IntermissionMusic href=""/>
+	<SaveLoadFlag href=""/>
+	<ArrowTextures/>
+</Campaign>

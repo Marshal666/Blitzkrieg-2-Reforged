@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="79">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Lan_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="LoadReplay_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="NivalNet_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/SinglePlayer/ProfileManager_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/Escape/parts/EscMenu_Bgr_2_3_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Header_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>-15</x>
+				<y>65</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>290</x>
+				<y>380</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

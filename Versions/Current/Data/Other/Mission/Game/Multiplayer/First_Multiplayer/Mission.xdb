@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="21">
+	<Map href="/test/testmaps/designer_test/igor/first_multiplayer/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses>
+		<Item href=""/>
+		<Item href=""/>
+	</bonuses>
+	<LocalizedName href="/other/text/test/testtextstring/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/test/testtextstring/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>200</x>
+		<y>200</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_FIGHTERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_GROUND_ATTACK_PLANES</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_BOMBERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_PARATROOPS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_LIGHT_TANKS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_GUNS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANK_DESTROYERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ARTILLERY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_HEAVY_ARTILLERY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_INFANTRY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_SQUAD</ReinfType>
+			<Number>20</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

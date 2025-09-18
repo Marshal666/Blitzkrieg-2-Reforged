@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<InfantryRPGStats ObjectRecordID="63">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences/>
+	<visualObject href="/scene/geoms/test/units/programmers_test/yuri/soldier_visobj.xdb#xpointer(/VisObj)"/>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_AIR</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_SOLDIER</DBtype>
+	<M1UnitTargetType href=""/>
+	<M1UnitSpecific href=""/>
+	<M1UnitActions href=""/>
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescription href=""/>
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>4</AIPassabilityClass>
+	<AcksNames/>
+	<Sight>0</Sight>
+	<SightPower>0</SightPower>
+	<Speed>0</Speed>
+	<RotateSpeed>0</RotateSpeed>
+	<Passability>0</Passability>
+	<Priority>0</Priority>
+	<Camouflage>0</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>0</BoundTileRadius>
+	<Weight>0</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>0</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>0</x>
+		<y>0</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>0</Radius>
+		<IsRound>false</IsRound>
+	</BoundCircle>
+	<aabb_as/>
+	<aabb_ds/>
+	<animdescs>
+		<Item>
+			<anims>
+				<Item>
+					<Length>0</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>0</AABB_A>
+					<AABB_D>0</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>0</SmallAABBCoeff>
+	<Actions href="/other/unitactions/game/units/infantry/gunner/unitactions.xdb#xpointer(/UnitActions)"/>
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href=""/>
+	<ExpPrice>1</ExpPrice>
+	<guns/>
+	<CanAttackUp>false</CanAttackUp>
+	<CanAttackDown>false</CanAttackDown>
+	<RunSpeed>0</RunSpeed>
+	<CrawlSpeed>0</CrawlSpeed>
+	<animtimes>
+		<Item>0</Item>
+	</animtimes>
+	<Armor>0</Armor>
+	<GunBoneName>ArmJoint</GunBoneName>
+</InfantryRPGStats>

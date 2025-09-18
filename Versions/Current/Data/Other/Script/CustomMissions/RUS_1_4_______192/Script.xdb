@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="192">
+	<FileName />
+	<ScriptText>---------------------------------------------------------------------------------
+-- MY HELP xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx--
+---------------------------------------------------------------------------------
+-- Reinforcement
+---------------------------------------------------------------------------------
+--playr 0 (c = 0 r = 1 l = 2)
+---------------------------------------------------------------------------------
+--t_34_76
+--T-28e
+--bt_7
+--t_26
+--ussr_main_1
+---------------------------------------------------------------------------------
+--playr 1 (r = 0 l = 1)
+---------------------------------------------------------------------------------
+--pz_ii_ausf_f
+--pz_iv_ausf_d
+--german_main_2
+--german_main_1
+--Hs_129B
+--10.5 cm LeFH18
+---------------------------------------------------------------------------------
+--xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx--
+---------------------------------------------------------------------------------
+function cam()
+	SCReset() 
+	SCRunTime( &quot;cam1&quot;, &quot;cam2&quot;, 8)
+	Wait( 8 );
+	SCRunTime( &quot;cam2&quot;, &quot;cam1&quot;, 25, 1, -300 )
+	Wait( 25 );
+	SCReset()
+	    return 1;
+end;
+
+---------------------------------------------------------------------------------
+function vzon1()
+	ViewZone(&quot;a2&quot;,1);
+        ChangePlayerForScriptGroup( 10, 2);
+        ChangePlayerForScriptGroup( 11, 2);
+        ChangePlayerForScriptGroup( 12, 2);
+         GiveObjective( 0 );
+         Wait( 5 );
+	StartThread( zd0 );
+	    return 1;
+end;
+
+---------------------------------------------------------------------------------
+function bom1()
+
+	if ( GetNUnitsInArea( 0, &quot;b1&quot;, 0 ) &gt; 0 ) then
+                Wait( 70 );
+        LandReinforcementFromMap( 1, &quot;Hs_129B&quot;, 0, 190 ); 
+	Cmd( ACT_SUPPRESS, 190, 256, GetScriptAreaParams( &quot;b1&quot; ) );
+	    return 1;  
+    end;
+end;
+
+function bom2()
+
+	if ( GetNUnitsInArea( 0, &quot;b1&quot;, 0 ) &gt; 0 ) then
+                Wait( 70 );
+        LandReinforcementFromMap( 1, &quot;Hs_129B&quot;, 1, 191 ); 
+	Cmd( ACT_SUPPRESS, 191, 256, GetScriptAreaParams( &quot;b1&quot; ) );
+	    return 1;  
+    end;
+end;
+ 
+---------------------------------------------------------------------------------
+function zd0()
+
+	if ( GetNUnitsInArea( 0, &quot;a1&quot;, 0 ) &gt; 0 ) then
+                Wait( 3 );
+				ChangePlayerForScriptGroup( 10, 0);
+				ChangePlayerForScriptGroup( 11, 0);
+				ChangePlayerForScriptGroup( 12, 0);
+		ViewZone(&quot;a2&quot;,0);   
+		 Wait( 3 );
+		CompleteObjective( 0 );
+		 Wait( 3 );  		
+        GiveObjective( 1 );
+	    return 1;  
+    end;
+end;
+---------------------------------------------------------------------------------
+
+function Attack0()
+LandReinforcementFromMap( 0, &quot;t_34_76&quot;, 1, 120 ); 
+LandReinforcementFromMap( 1, &quot;pz_ii_ausf_f&quot;, 1, 19 ); 
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 1, 19 );
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 1, 18 );
+
+	Wait( 3 );
+	Cmd( ACT_SWARM, 18, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 30 );
+	Cmd( ACT_SWARM, 19, 256, GetScriptAreaParams( &quot;a1&quot; ) ); 
+	StartThread( Attack1 );
+	    return 1;
+end;
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+function Attack1()
+LandReinforcementFromMap( 1, &quot;pz_iv_ausf_d&quot;, 0, 20 ); 
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 0, 24 );
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 0, 24 );
+	Wait( 60 );
+	Cmd( ACT_SWARM, 20, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 60 );
+	Cmd( ACT_SWARM, 24, 256, GetScriptAreaParams( &quot;a1&quot; ) );      
+	StartThread( Attack2 );
+	    return 1;
+end;
+---------------------------------------------------------------------------------
+function Attack2()
+
+LandReinforcementFromMap( 1, &quot;pz_iv_ausf_d&quot;, 0, 21 ); 
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 0, 25 );
+LandReinforcementFromMap( 1, &quot;pz_ii_ausf_f&quot;, 0, 25 );
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 0, 25 );
+
+	Wait( 60 );
+	Cmd( ACT_SWARM, 21, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 60 );
+	Cmd( ACT_SWARM, 25, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+
+	StartThread( Attack3 );
+	    return 1;
+end;
+---------------------------------------------------------------------------------
+function Attack3()
+LandReinforcementFromMap( 1, &quot;pz_iv_ausf_d&quot;, 1, 22 ); 
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 1, 26 );
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 1, 26 );
+LandReinforcementFromMap( 1, &quot;pz_ii_ausf_f&quot;, 1, 26 );
+	Wait( 60 );
+	Cmd( ACT_SWARM, 22, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 60 );  
+    Cmd( ACT_SWARM, 26, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	StartThread( Attack4 );
+	    return 1;
+end;
+---------------------------------------------------------------------------------
+function Attack4()
+LandReinforcementFromMap( 1, &quot;pz_iv_ausf_d&quot;, 0, 23 ); 
+LandReinforcementFromMap( 1, &quot;pz_ii_ausf_f&quot;, 0, 27 );
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 0, 23 );
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 0, 23 );
+LandReinforcementFromMap( 1, &quot;pz_iv_ausf_d&quot;, 1, 23 ); 
+LandReinforcementFromMap( 1, &quot;german_main_2&quot;, 1, 27);
+LandReinforcementFromMap( 1, &quot;german_main_1&quot;, 1, 23 );
+LandReinforcementFromMap( 1, &quot;pz_ii_ausf_f&quot;, 1, 27 );
+	Wait( 60 );
+	Cmd( ACT_SWARM, 23, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 60 );
+    Cmd( ACT_SWARM, 27, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	--StartThread( Attack0 );
+	    return 1;
+end;
+
+---------------------------------------------------------------------------------
+function zd1()
+
+z1 = GetNScriptUnitsInArea( 10, &quot;ext1&quot;, 0 );
+z2 = GetNScriptUnitsInArea( 10, &quot;ext&quot;, 0 );
+
+zone = (z1 + z2)
+
+	if ( zone &gt; 4) then
+		CompleteObjective( 1 );	
+		Wait( 3 );
+	        Win( 0 );
+	    return 1;  
+    end;
+end;
+---------------------------------------------------------------------------------
+
+function lse1()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInScriptGroup( 10 ) &lt; 5)  then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft( 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+---------------------------------------------------------------------------------
+Objectives = { zd0, zd1};
+Objectives_Count = 2;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+---------------------------------------------------------------------------------
+StartThread( cam );
+StartThread( lse1 );
+StartThread( Unlucky );
+--StartThread( zd0 );
+StartThread( zd1 );
+StartThread( Attack0 );
+StartThread( vzon1 );
+--StartThread( bom2 );
+--StartThread( bom1 );</ScriptText>
+</Script>

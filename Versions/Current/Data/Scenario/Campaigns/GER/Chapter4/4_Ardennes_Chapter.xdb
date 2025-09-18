@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="28">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Name.txt" />
+	<LocalizedNameSaveLoad href="" />
+	<LocalizedNameSaveLoadFileRef href="NameSaveLoad.txt" />
+	<LocalizedDate href="" />
+	<LocalizedDateFileRef href="Date.txt" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="Description.txt" />
+	<MissionPath>
+		<Item>
+			<Map href="GER4.0/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>574</x>
+				<y>83</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/US/Artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/spg/m36_slugger_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/USA/Main_Squad/us_main_8/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>35</RecommendedCalls>
+			<PotentialIncomplete>0</PotentialIncomplete>
+			<PotentialComplete>40</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_VERY_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>6</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.1/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>429</x>
+				<y>313</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="GER4.1/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.1/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.1/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/USA/Assault_Squad/usa_assault_8/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>10</PotentialIncomplete>
+			<PotentialComplete>12</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_NIGHT</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.2/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>366</x>
+				<y>230</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="GER4.2/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/USA/AT_Squad/us_at_7/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>5</RecommendedCalls>
+			<PotentialIncomplete>1</PotentialIncomplete>
+			<PotentialComplete>0</PotentialComplete>
+			<Type>EMT_CONVOY_PROTECT</Type>
+			<Difficulty>EMD_VERY_HARD</Difficulty>
+			<Time>EMDT_DAWN</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>4</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.3/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>482</x>
+				<y>158</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="GER4.3/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.3/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.3/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/spg/m36_slugger_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>7</PotentialIncomplete>
+			<PotentialComplete>11</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>1</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.4/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>587</x>
+				<y>207</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="GER4.4/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.4/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.4/3_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/USA/Main_Squad/us_main_7/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m3_general_stuart_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/artillery/105mm_m2a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>0</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>2</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.5/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>380</x>
+				<y>156</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="GER4.5/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.5/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.5/3_chapterbonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m26_general_pershing_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/Artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/artillery/155mm_m1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>7</RecommendedCalls>
+			<PotentialIncomplete>0</PotentialIncomplete>
+			<PotentialComplete>30</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>3</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER4.6/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>566</x>
+				<y>335</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GER4.6/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.6/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER4.6/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/USA/AT_Squad/us_at_7/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/Artillery/76mm_m1a1_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m4a3_76w_general_sherman_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>7</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>20</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_VERY_HARD</Difficulty>
+			<Time>EMDT_DAWN</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>5</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>false</UseMapReinforcements>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_4/Player/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/fau_2.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_Fighters_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_Assault_SPG_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_GA_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_Light_Tanks_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_Main_Infantry_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href="" />
+			<Squad href="" />
+			<Reinforcement href="/Reinforcements/Reinforcement/Test/El_Alamein/Player/Basic/Default_Tanks_Reinforcement.xdb#xpointer(/Reinforcement)" />
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href="chapter_map.xdb#xpointer(/Texture)" />
+	<SeaNoiseMask href="GER_Chapter4_map/chapter_map(mask).tga" />
+	<DifferentColourMap href="GER_Chapter4_map/chapter_map(blue).tga" />
+	<PositiveColour>-928439551</PositiveColour>
+	<NegativeColour>-65536</NegativeColour>
+	<MainStrikeAngle>0</MainStrikeAngle>
+	<MainStrikePower>3</MainStrikePower>
+	<ReinforcementCalls>45</ReinforcementCalls>
+	<DetailsMap href="GER_Chapter4_map/MapInfo.xdb#xpointer(/MapInfo)" />
+	<ArrowTextures>
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/2_Defence_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/3_Defence_Enemy_Texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+	<IntroMovie href="/Movies/Chronicles/GER/4.xml" />
+	<General>
+		<Desc href="" />
+		<DescFileRef href="Ger4_General.txt" />
+		<Portrait href="GER_Chapter4_map/superior_general.xdb#xpointer(/Texture)" />
+		<ReinforcementType>RT_HEAVY_TANKS</ReinforcementType>
+		<StatBonus href="/Other/UnitStatsModifier/Game/Generals/manteuffel.xdb#xpointer(/UnitStatsModifier)" />
+	</General>
+</Chapter>

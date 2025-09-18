@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000016">
+	<FileName />
+	<ScriptText>ReinfEnd = 0;
+-- 1210 - italian tanks
+-- 1200 - italian reinforcement
+-- 1100 + i - british reinforcements
+---------------- ENEMY REINFORCEMENTS --------- BEGIN
+function begin()
+	Wait(2);
+	Cmd(ACT_MOVE,1001,0,5378, 2757);
+	Wait(6);
+	QCmd(ACT_MOVE,1001,0,4655, 2690);
+	Wait(6);
+	QCmd(ACT_MOVE,1001,0,3875, 3092);
+	Wait(6);
+	QCmd(ACT_MOVE,1001,0,3705, 2898);
+	Wait(6);
+	QCmd(ACT_DEPLOY,1001, 0, 3744, 2935);
+end;
+
+
+function enemyreinforcements()
+	Cmd(ACT_ENTRENCH, 1210,1);
+	Wait(90);
+	ReinfArr = {&quot;0&quot;,&quot;1&quot;,&quot;2&quot;,&quot;3&quot;};
+	Trace(&quot;Thread EnemyReinforcements started&quot;);
+	i=0;
+	j=1;
+	while (GetGameTime() &lt; 800) do
+		for i=j,j+3 do
+			local rndm = ReinfArr[1+RandomInt(4)]
+			LandReinforcementFromMap(1, rndm, RandomInt(4), 1100+i);
+			Trace (&quot;Reinforcement number %g has landed&quot;, rndm);
+			Cmd(ACT_SWARM, 1100+i, 1, 4239, 3481);
+			z=i;
+			Wait(9 + RandomInt(10));
+		end;
+		j=z+1;
+		Trace(j);
+		Wait(40 + RandomInt(30));
+	end;
+	ReinfEnd = 1;
+end;
+---------------- ENEMY REINFORCEMENTS --------- end
+
+------------------- SWARM --------------------- BEGIN
+function swarm()
+	for i=1,25 do
+		if (IsAlive(1100+i)==1) then
+			Wait(6);
+			Cmd(ACT_SWARM, 1100+i, 1, 4239, 3481);
+		end;
+	end;
+end;
+
+------------------- SWARM --------------------- end
+
+------------------- ITALIAN REINFORCEMENTS ---- BEGIN
+function italianReinf()	
+		Wait(10);
+		StartThread(swarm);
+		Wait(240);
+		LandReinforcementFromMap(2, &quot;italian&quot;, 0, 1200);
+		Cmd(ACT_SWARM, 1200, 1500, 4239, 3481);
+		Wait(100);
+		LandReinforcementFromMap(2, &quot;italian&quot;, 0, 1201);
+		Cmd(ACT_SWARM, 1201, 600, 2600, 2630);
+		Wait(3);
+		LandReinforcementFromMap(2, &quot;infantry&quot;, 0, 1202);
+		Cmd(ACT_MOVE, 1202, 600, 2600, 2630);
+		Cmd(ACT_SWARM, 1202, 0, 2600, 2630);
+		Wait(200)		LandReinforcementFromMap(2, &quot;infantry&quot;, 0, 1203);
+		Cmd(ACT_MOVE, 1203, 2, 3900, 5100);
+		Cmd(ACT_SWARM, 1203, 2, 3900, 5100);
+		Wait(5);
+		QCmd(ACT_ENTER, 1203, 1298);
+		Wait(150);
+		LandReinforcementFromMap(2, &quot;infantry&quot;, 0, 1204);
+		Cmd(ACT_MOVE, 1204, 500, 4239, 3481);
+		Cmd(ACT_SWARM, 1204, 500, 4239, 3481);
+end;
+
+------------------- ITALIAN REINFORCEMENTS ---- end
+
+---------------- LOOSE ------------------------- begin
+function lose()
+	while 1 do
+        if ( GetNUnitsInArea(2, &quot;DefenceArea&quot;, 0) &lt; 3 and GetNUnitsInArea(1, &quot;DefenceArea&quot;, 0) &gt; 2) then
+				Wait(1);
+				Loose(0);
+        return 1;
+		end;
+	Wait(3);
+	end;
+end;
+
+---------------- LOOSE ------------------------ end
+function win()
+	while 1 do 
+		if (GetNUnitsInParty(1) &lt; 1) then
+			Wait(3);
+			CompleteObjective(1);
+			Wait(3);
+			Win(0);
+			return 1;
+		end;
+	Wait(3);
+	end;
+end;
+function GAP()
+	Wait(90);
+	LandReinforcementFromMap(1,&quot;GAP&quot;,1,1178);
+	Cmd(ACT_MOVE, 1178, 1500, 4000, 4000);
+    Wait(400);
+	LandReinforcementFromMap(1,&quot;GAP&quot;,1,1179);
+	Cmd(ACT_MOVE, 1179, 1500, 4000, 4000);
+end;
+function final_attack()
+	while 1 do
+	Wait(3);
+		if (GetNUnitsInArea(2, &quot;DefenceArea&quot;,0) &gt; 0  and ReinfEnd == 1 and GetNUnitsInParty(1) &lt; 3) then
+			CompleteObjective(0);
+			Wait(4);
+			GiveObjective(1);
+			Trace(&quot;Italian reinforcements has arrived...&quot;);
+			Wait(5);
+			LandReinforcementFromMap(2,&quot;infantry&quot;,0,1205);
+			Cmd(ACT_MOVE,1205,400,3400,1200);
+			Cmd(ACT_SWARM,1205,400,3400,1200);
+			InfantryArray = GetObjectListArray(1205);
+			UnitQCmd(ACT_ENTER,InfantryArray[1],GetObjectList(1500));
+			LandReinforcementFromMap(2,&quot;crew&quot;,0,1230);
+			Cmd(ACT_SWARM,1230,400,3400,1200);
+			QCmd(ACT_TAKE_ARTILLERY,1230,1220);		
+			Wait(10);
+			LandReinforcementFromMap(2,&quot;infantry&quot;,0,1206);
+			Cmd(ACT_MOVE,1206,400, 3209, 2834);
+			Cmd(ACT_SWARM,1206,400, 3209, 2834);
+			InfantryArray = GetObjectListArray(1206);
+			UnitQCmd(ACT_ENTER,InfantryArray[1],GetObjectList(1501));
+			LandReinforcementFromMap(2,&quot;crew&quot;,0,1231);
+			Cmd(ACT_SWARM,1231,400, 3209, 2834);
+			QCmd(ACT_TAKE_ARTILLERY,1231,1221);		
+			Wait(10);
+			LandReinforcementFromMap(2,&quot;infantry&quot;,0,1207);
+			Cmd(ACT_MOVE,1207,400,4178, 4687);
+			Cmd(ACT_SWARM,1207,400,4178, 4687);
+			InfantryArray = GetObjectListArray(1207);
+			UnitQCmd(ACT_ENTER,InfantryArray[1],GetObjectList(1502));
+			LandReinforcementFromMap(2,&quot;crew&quot;,0,1232);
+			Cmd(ACT_SWARM,1232,400,4178, 4687);
+			QCmd(ACT_TAKE_ARTILLERY,1232,1222);		
+			Wait(10);
+			LandReinforcementFromMap(2,&quot;infantry&quot;,0,1208);
+			Cmd(ACT_MOVE,1208,400,5677, 4515);
+			Cmd(ACT_SWARM,1208,400,5677, 4515);
+			InfantryArray = GetObjectListArray(1208);
+			UnitQCmd(ACT_ENTER,InfantryArray[1],GetObjectList(1503));
+			LandReinforcementFromMap(2,&quot;crew&quot;,0,1233);
+			Cmd(ACT_SWARM,1233,400,5677, 4515);
+			QCmd(ACT_TAKE_ARTILLERY,1233,1223);		
+			Wait(10);
+			Trace(&quot;SelfPropelled Guns has arrived...&quot;);
+			LandReinforcementFromMap(0,&quot;spg&quot;,0,1002);
+			Cmd(ACT_SWARM,1002,300,4250,3600);
+			
+			LandReinforcementFromMap(2,&quot;italian&quot;,0,1209);
+			Cmd(ACT_SWARM,1209,300,3358, 2458);
+			Wait(10);
+			LandReinforcementFromMap(2,&quot;italian&quot;,0,1211);
+			Cmd(ACT_SWARM,1211,300,5098, 4375);
+			Wait(3);
+			LandReinforcementFromMap(2,&quot;spg&quot;,0,1211);
+			Cmd(ACT_SWARM,1211,300,4250,3600);
+			Wait(90);
+			ChangeFormation(1205,2);
+			ChangeFormation(1206,2);
+			ChangeFormation(1207,2);
+			ChangeFormation(1208,2);
+			Wait(10);
+			Trace(&quot;Enemy attack!&quot;);
+			LandReinforcementFromMap(1, &quot;0&quot;, 0, 1901);			Cmd(ACT_SWARM, 1901, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;1&quot;, 1, 1902);			Cmd(ACT_SWARM, 1902, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;2&quot;, 2, 1903);			Cmd(ACT_SWARM, 1903, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;3&quot;, 3, 1904);			Cmd(ACT_SWARM, 1904, 1, 4239, 3481);
+			Wait(10);
+			LandReinforcementFromMap(1,&quot;GAP&quot;,1,1179);
+			Cmd(ACT_MOVE, 1179, 1500, 4000, 4000);
+			LandReinforcementFromMap(1, &quot;0&quot;, 3, 1905);			Cmd(ACT_SWARM, 1905, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;1&quot;, 1, 1906);			Cmd(ACT_SWARM, 1906, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;2&quot;, 2, 1907);			Cmd(ACT_SWARM, 1907, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;3&quot;, 0, 1908);			Cmd(ACT_SWARM, 1908, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;matildes&quot;, 0, 1911);			Cmd(ACT_SWARM, 1911, 1, 4239, 3481);
+			Wait(1);
+			LandReinforcementFromMap(1, &quot;matildes&quot;, 3, 1912);			Cmd(ACT_SWARM, 1912, 1, 4239, 3481);
+			Wait(15);
+			LandReinforcementFromMap(1,&quot;GAP&quot;,1,1180);
+			Cmd(ACT_MOVE, 1180, 1500, 4000, 4000);
+			StartThread(win);
+			Trace(&quot;The End...&quot;);
+		break;
+		end;
+	end;
+end;
+
+function time()	while 1 do
+	Wait(1);
+	Trace(GetGameTime());
+	end;
+end;
+--main
+GiveObjective(0);
+StartThread(begin);
+StartThread(GAP);StartThread(lose);StartThread(enemyreinforcements);StartThread(italianReinf);
+StartThread(final_attack);
+--StartThread(time);</ScriptText>
+</Script>

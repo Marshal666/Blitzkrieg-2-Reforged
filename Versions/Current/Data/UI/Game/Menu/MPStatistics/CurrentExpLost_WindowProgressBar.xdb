@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowProgressBar ObjectRecordID="17">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="ExpCurrentLost_WindowProgressBarShared.xdb#xpointer(/WindowProgressBarShared)" />
+	<Name>MissionExpProgressLost</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Menu/MPStatistics/MissionExp/Text.txt" />
+	<Visible>true</Visible>
+	<Priority>110</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>610</x>
+				<y>40</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>300</x>
+				<y>20</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>1</x>
+				<y>2</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>3</x>
+				<y>3</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Progress>0.5</Progress>
+</WindowProgressBar>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="32">
+	<FileName />
+	<ScriptText>function RevealObjective1()
+	Trace(&quot;StartMission DEEL Run!&quot;);
+	Wait(10);
+	ObjectiveChanged(1, 1);
+	StartThread( Lose );
+	StartThread( Winner );
+	Trace(&quot;Objective1 is reveal. Destroy all enemy!.&quot;);
+end;
+
+function Lose()
+        while 1 do
+            if ( GetNUnitsInParty(0) &lt; 1) then
+				Wait(3);
+                Loose(0);
+         return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+function Winner()
+        while 1 do
+            if ( GetNUnitsInParty(1) &lt; 1) then
+				ObjectiveChanged(1, 2);
+				Wait(2);
+				Win (0);
+         return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+
+
+
+--Main
+StartThread( RevealObjective1 );
+
+</ScriptText>
+</Script>

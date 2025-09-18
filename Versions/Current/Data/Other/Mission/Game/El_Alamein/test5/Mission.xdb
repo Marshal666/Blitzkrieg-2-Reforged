@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="34">
+	<Map href="/test/testmaps/designer_test/vinny/african_test/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses>
+		<Item href="/reinforcements/reinforcementdisable/old/el_alamein/mission5_e_reinforcementdisable.xdb#xpointer(/ReinforcementDisable)"/>
+	</bonuses>
+	<LocalizedName href="/other/text/game/missions_description/e3/1/name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/game/missions_description/e3/1/desc/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>250</x>
+		<y>50</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_GROUND_ATTACK_PLANES</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_BOMBERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_PARATROOPS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_FIGHTERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_LIGHT_TANKS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_GUNS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANK_DESTROYERS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ARTILLERY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_HEAVY_ARTILLERY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_MAIN_INFANTRY</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_INFANTRY</ReinfType>
+			<Number>0</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

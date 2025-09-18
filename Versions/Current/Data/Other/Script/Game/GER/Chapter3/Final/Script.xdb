@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="120">
+	<FileName />
+	<ScriptText>--Stalingrad all
+missinend = 0;
+x = 500 + Random(2);
+-----------------------Objective
+function Objective()
+	Wait(10);
+---RND
+	Cmd(ACT_MOVE,400,100,GetScriptAreaParams(&quot;K&quot; .. Random(4))); -- Katya1 rnd
+	Cmd(ACT_MOVE,410,100,GetScriptAreaParams(&quot;Kt&quot; .. Random(4))); -- Katya2 rnd
+---
+	ObjectiveChanged(0, 1); 
+	SetIGlobalVar( &quot;temp.objective.0&quot;, 1 ); -- barrycad
+	StartThread( CompleteObjective0 );
+	Wait(20);
+	ObjectiveChanged(1, 1);
+	SetIGlobalVar( &quot;temp.objective.1&quot;, 1 ); -- CTZ
+	StartThread( CompleteObjective1 );
+	Wait(20);
+	ObjectiveChanged(2, 1);
+	SetIGlobalVar( &quot;temp.objective.2&quot;, 1 ); -- shtab
+	StartThread( CompleteObjective2 );
+--	break;
+end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;barrycad&quot;, 0) &gt; 0) and (GetNUnitsInArea(1,&quot;barrycad&quot;, 0) &lt; 1)) then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.objective.0&quot;, 2 );
+			StartThread( ReturnObjective0 );
+			Wait( 1 );
+			break;
+		end;
+	end;
+end;
+function ReturnObjective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;barrycad&quot;, 0) &lt; 1) and (GetNUnitsInArea(1,&quot;barrycad&quot;, 0) &gt; 0)) then
+			SetIGlobalVar( &quot;temp.objective.0&quot;, 1 );
+			Wait( 1 );
+			ObjectiveChanged(0, 1); 
+			Wait( 1 );
+			StartThread( CompleteObjective0 );
+			break;
+		end;
+	end;
+
+end;
+function CompleteObjective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;CTZ&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;CTZ&quot;, 0) &lt; 1)) then
+			ObjectiveChanged(1, 2);
+			SetIGlobalVar( &quot;temp.objective.1&quot;, 2 );
+			StartThread( ReturnObjective1 );
+			Wait( 1 );
+			break;
+		end;
+	end;
+end;
+function ReturnObjective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;CTZ&quot;, 0) &lt; 1) and (GetNUnitsInArea(1, &quot;CTZ&quot;, 0) &gt; 0)) then
+			SetIGlobalVar( &quot;temp.objective.1&quot;, 1 );
+			Wait( 1 );
+			ObjectiveChanged(1, 1); 
+			Wait( 1 );
+			StartThread( CompleteObjective1 );
+			break;
+		end;
+	end;
+
+end;
+function CompleteObjective2()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;shtab&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;shtab&quot;, 0) &lt; 1)) then
+			ObjectiveChanged(2, 2);
+			SetIGlobalVar( &quot;temp.objective.2&quot;, 2 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Reinforce()
+local a;
+	while 1 do
+		a = Random(2);
+		Wait(200+Random(200));
+		if GetIGlobalVar( &quot;temp.objective.2&quot;, 0 ) ~= 2 then
+			if a == 1 then
+				LandReinforcement(1,1145,0,100);
+				StartThread( Attack1 );
+				Wait(2);
+			else
+				LandReinforcement(1,1145,1,200);
+				StartThread( Attack2 );
+				Wait(2);
+			end;
+		else break;
+		end;
+	end;
+end;
+function Attack1()
+local b = Random(3);
+	if b == 1 then
+		Wait(3);
+		Cmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack10&quot;));
+		QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;barrycad&quot;));
+	end;
+	if b == 2 then
+		Wait(3);
+		Cmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack10&quot;));
+		QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack11&quot;));
+		QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack12&quot;));		
+		QCmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;barrycad&quot;));
+	end;
+	if b == 3 then 
+		Wait(3);
+		Cmd(ACT_SWARM,100,100,GetScriptAreaParams(&quot;Attack2&quot; .. Random(2)));
+	end;
+
+end;
+function Attack2()
+local d = Random(3);
+	if d == 1 then
+		Wait(3);
+		Cmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;Attack10&quot;));
+		QCmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;barrycad&quot;));
+	end;
+	if d == 2 then
+		Wait(3);
+		Cmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;Attack10&quot;));
+		QCmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;Attack11&quot;));
+		QCmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;Attack12&quot;));		
+		QCmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;barrycad&quot;));
+	end;
+	if d == 3 then 
+		Wait(3);
+		Cmd(ACT_SWARM,200,100,GetScriptAreaParams(&quot;Attack2&quot; .. Random(2)));
+	end;
+
+end;
+function Bridge()
+	while 1 do
+		Wait(1);
+		if GetNUnitsInArea(0, &quot;Bridge&quot;, 0) &gt; 0 then
+			DamageScriptObject(900,0);
+			--StartThread( ReinfArt );
+			break
+		end;
+	end;
+end;
+function Art()
+	Wait(10);
+	Cmd(ACT_SUPPRESS, x, 200, GetScriptAreaParams(&quot;Art1&quot; .. x));
+end;
+function EndArt()
+	Wait(30);
+	Cmd(ACT_STOP, x, 0, GetScriptObjCoord(x));
+end;
+-----------------Patrol
+function Patrol1()
+	while 1 do
+		Wait(5);
+		if ( GetNUnitsInScriptGroup( 300, 1) &gt; 0 ) then
+			Wait(3);
+			StartThread( Patrol11 );
+			break
+		end;
+	end;
+end;
+
+function Patrol11 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 300, &quot;P1&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 300, 10, GetScriptAreaParams(&quot;P2&quot;));
+			StartThread( Patrol12 );
+			break
+		end;		
+	end;
+end;
+function Patrol12 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 300, &quot;P2&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 300, 10, GetScriptAreaParams(&quot;P1&quot;));
+			StartThread( Patrol1 );
+			break
+		end;		
+	end;
+end;
+
+function Patrol2()
+	while 1 do
+		Wait(5);
+		if ( GetNUnitsInScriptGroup( 310, 1) &gt; 0 ) then
+			Wait(3);
+			StartThread( Patrol21 );
+			break
+		end;
+	end;
+end;
+
+function Patrol21 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 310, &quot;P3&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 310, 10, GetScriptAreaParams(&quot;P4&quot;));
+			StartThread( Patrol22 );
+			break
+		end;		
+	end;
+end;
+function Patrol22 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 310, &quot;P4&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 310, 10, GetScriptAreaParams(&quot;P3&quot;));
+			StartThread( Patrol2 );
+			break
+		end;		
+	end;
+end;
+function PatrolShip1()
+	while 1 do
+		Wait(5);
+		if ( GetNUnitsInScriptGroup( 910, 1) &gt; 0 ) then
+			Wait(3);
+			StartThread( PatrolShip11 );
+			break
+		end;
+	end;
+end;
+
+function PatrolShip11 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 910, &quot;Ship1&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 910, 10, GetScriptAreaParams(&quot;Ship2&quot;));
+			StartThread( PatrolShip12 );
+			break
+		end;		
+	end;
+end;
+function PatrolShip12 ()
+	while 1 do
+		Wait(3);
+		if ( GetNScriptUnitsInArea ( 910, &quot;Ship2&quot; ) &gt; 0 ) then
+			Wait( 3 + RandomInt( 6 ) );
+			Cmd(ACT_SWARM, 910, 10, GetScriptAreaParams(&quot;Ship1&quot;));
+			StartThread( PatrolShip1 );
+			break
+		end;		
+	end;
+end;
+------------------------WIn_Loose
+function Winner()
+	while 1 do
+		Wait( 3 );
+		if ((GetIGlobalVar(&quot;temp.objective.0&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.objective.1&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.objective.2&quot;, 1) == 2)) then
+			Wait( 3 );
+			missionend = 1;
+			Win(0);
+			break;
+		end;
+	end;
+
+end;
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft( 0 ) == 0 and missionend == 0) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+-------------------------------------------  MAIN
+StartThread( Unlucky );
+StartThread( Winner );
+StartThread( Objective );
+StartThread( Reinforce );
+StartThread( Bridge );
+--StartThread( Art );
+--StartThread( EndArt );
+StartThread( Patrol1 );
+StartThread( Patrol2 );</ScriptText>
+</Script>

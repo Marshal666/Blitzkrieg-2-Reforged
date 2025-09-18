@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="22">
+	<ScenarioUnitsModifiers/>
+	<LocalizedName href="/other/text/game/chapters/gb2_name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDate href="/other/text/game/chapters/gb2_date/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/game/chapters/gb2_description/text.xdb#xpointer(/Text)"/>
+	<MissionPath>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter2/gb2.0/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>45</x>
+				<y>310</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>8</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/test/testmaps/progtests/stas/test/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>513</x>
+				<y>196</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/1/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/1/2_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/test/testmaps/progtests/stas/small/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>225</x>
+				<y>420</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/2/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/2/2_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/2/3_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>2</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/test/testmaps/progtests/stas/test2/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>450</x>
+				<y>208</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/3/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>3</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter2/gb2.4/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>123</x>
+				<y>297</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/4/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/4/2_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>2</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter2/gb2.5/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>140</x>
+				<y>130</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/5/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/5/2_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>2</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/scenario/campaigns/gb/chapter2/gb2.6/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>133</x>
+				<y>180</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward>
+				<Item href="/scenario/chapterbonus/game/gb/chapter2/6/1_chapterbonus.xdb#xpointer(/ChapterBonus)"/>
+			</Reward>
+			<ExpectedEnemy/>
+			<RecommendedCalls>2</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+	</MissionPath>
+	<ScriptFile href="/other/script/game/chapter/el_alamein/script.xdb#xpointer(/Script)"/>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/player/fighter_2_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/player/gap_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/player/tank_light_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/player/main_squad_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/player/anti_tank_art_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/custom/air_hq_reinforcement.xdb#xpointer(/Reinforcement)"/>
+			</Reinforcements>
+		</Item>
+		<Item>
+			<Reinforcements>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/assaultgunger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/fightersger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/groundattackplaneger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/lighttanksger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/mediumtanksger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/game/!b2_final/gb/chapter_2/custom/2.2/heavytanksger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+				<Item href="/reinforcements/reinforcement/test/alpha_el_alamein/alpha_el_alamein/enemy/maininfantryger_reinforcement.xdb#xpointer(/Reinforcement)"/>
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_fighters_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_assault_spg_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_ga_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_light_tanks_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_main_infantry_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/el_alamein/player/basic/default_tanks_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href="/scene/texandmats/game/menu/chapter/africa_texture.xdb#xpointer(/Texture)"/>
+	<SeaNoiseMask />
+	<DifferentColourMap />
+	<PositiveColour>0</PositiveColour>
+	<NegativeColour>0</NegativeColour>
+	<ReinforcementCalls>16</ReinforcementCalls>
+	<DetailsMap href=""/>
+</Chapter>

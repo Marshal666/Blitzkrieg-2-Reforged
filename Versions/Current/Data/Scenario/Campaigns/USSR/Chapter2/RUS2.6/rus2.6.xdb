@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="1000031">
+	<FileName/>
+	<ScriptText>function Film()
+	Wait( 1 );
+	--ShowMovieBorder ( );
+	--ViewZone ( 'vz1', 1 );
+	LandReinforcementFromMap( 2, 'huntership', 0, 5 );
+	LandReinforcementFromMap( 2, 'huntership', 1, 4 );
+	Cmd( ACT_MOVE, 5, 1, GetScriptAreaParams( "x1" ) );	
+	Cmd( ACT_MOVE, 4, 1, GetScriptAreaParams( "x2" ) );	
+	Wait( 3 );
+	SCRunTime( "mov1", "mov2", 5);
+	Wait ( 5 );
+	--ViewZone ( 'vz1', 0 );
+	--HideMovieBorder ( );
+	SCReset ();
+	StartThread( move0 );
+	StartThread( m1 );
+	StartThread( m2 );
+	StartThread( at1 );
+	StartThread( at2 );
+	Wait ( 2 );
+return 1;
+end;
+
+function move0()
+LandReinforcementFromMap( 0, 'elit', 1, 6 );
+LandReinforcementFromMap( 0, 'elit', 2, 6 );
+LandReinforcementFromMap( 0, 'elit', 3, 6 );
+LandReinforcementFromMap( 0, 'elit', 4, 6 );
+	Wait( 1 );	
+return 1;
+end;
+
+
+function m1()
+	while 1 do
+		Wait( 3 );	
+		if ( GetNUnitsInArea( 0, "at1", 0 ) &gt; 0) then
+		Cmd( ACT_MOVE, 101, 512, GetScriptAreaParams( "a1" ) );
+		break;
+		end;
+	end;
+	
+end;
+	
+function m2()
+	while 1 do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 0, "at2", 0 ) &gt; 0) then
+		Wait( 2 );	
+		Cmd( ACT_MOVE, 100, 512, GetScriptAreaParams( "a1" ) );
+		break;
+		end;
+	end;
+end;
+
+function at1()
+	while 1 do
+	Wait( 3 );	
+		if ( GetNScriptUnitsInArea ( 100, 'attack', 0 ) &gt; 0) then
+			StartThread( Reinf1 );
+		break;
+		end;
+	end;
+end;
+
+function at2()	
+	while 1 do
+	Wait( 3 );	
+		if ( GetNScriptUnitsInArea ( 101, 'attack', 0 ) &gt; 0) then
+			StartThread( Reinf2 );
+		break;
+		end;
+	end;
+end;
+
+function zd0()
+		if ( GetNUnitsInScriptGroup ( 120) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 0 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus2_6.objective.0", 1);
+		return 1;
+		end;
+end
+
+function zd1()
+		if ( GetNUnitsInScriptGroup ( 121) &lt; 1) then
+		 Wait( 1 );  		
+		CompleteObjective( 1 );
+		 Wait( 1 );  		
+		SetIGlobalVar("temp.rus2_6.objective.1", 1);
+		return 1;
+		end;
+end
+
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+function victory()
+	while 1 do
+		Wait( 3 );
+	if ( GetIGlobalVar("temp.rus2_6.objective.0", 0) *
+ 		GetIGlobalVar("temp.rus2_6.objective.1", 0) == 1) then
+		Wait( 1 );
+		Wait( 3 );
+		Win(0);
+		break;
+	end;
+	end;
+end;
+
+---------------------------------------------------------------------------------
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 and 
+		GetReinforcementCallsLeft( 0 ) == 0) then
+		    Wait( 1 );
+			Win(1);
+			break;
+		end;
+	end;
+end;
+---------------------------------------------------------------------------------
+function user()
+	while 1 do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 0, "at2", 0 ) &gt; 0) then
+		xe1, ye1 = GetScriptAreaParams( "at2" )
+		end;
+		
+		if ( GetNUnitsInArea( 0, "at1", 0 ) &gt; 0) then
+		xe1, ye1 = GetScriptAreaParams( "at1" )
+		end;
+	end;	
+	
+end;
+
+function Reinf1()
+		Wait( 1 );
+		LandReinforcementFromMap( 1, 'german_main', 0, 126 );
+		LandReinforcementFromMap( 1, 'broneauto', 0, 126 );		
+		Wait( 1);
+		Cmd ( ACT_SWARM, 126 , 512, GetScriptAreaParams( "kill2" ) )
+		LandReinforcementFromMap( 1, 'german_main', 0, 127 );			
+		LandReinforcementFromMap( 1, 'broneauto', 0, 127 );		
+		Wait( 1 );
+		Cmd ( ACT_SWARM, 127 , 512, GetScriptAreaParams( "kill2" ) )
+		LandReinforcementFromMap( 1, 'german_main', 0, 128 );
+		LandReinforcementFromMap( 1, 'broneauto', 0, 128 );		
+		Wait( 1 );
+		Cmd ( ACT_SWARM, 128 , 512, GetScriptAreaParams( "x1" ) )
+		return 1;
+end;
+
+function Reinf2()
+
+		Wait( 1 );
+		LandReinforcementFromMap( 1, 'german_main', 0, 126 );
+		LandReinforcementFromMap( 1, 'broneauto', 0, 126 );
+		Wait( 1);
+		Cmd ( ACT_SWARM, 126 , 512, GetScriptAreaParams( "kill1" ) )
+		LandReinforcementFromMap( 1, 'german_main', 0, 127 );			
+		LandReinforcementFromMap( 1, 'broneauto', 0, 127 );
+		Wait( 1 );
+		Cmd ( ACT_SWARM, 127 , 512, GetScriptAreaParams( "kill1" ) )
+		LandReinforcementFromMap( 1, 'german_main', 0, 128 );
+		LandReinforcementFromMap( 1, 'broneauto', 0, 128 );		
+		Wait( 1 );
+		Cmd ( ACT_SWARM, 128 , 512, GetScriptAreaParams( "x2" ) )
+		return 1;
+end;
+-----------------------------------------------------------------------------
+Objectives = { zd0, zd1};
+Objectives_Count = 2;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+Wait( 1 );
+GiveObjective( 1 );
+---------------------------------------------------------------------------------
+--StartThread( user );
+StartThread( Unlucky );
+StartThread( victory );
+--StartThread( zd0 );
+--StartThread( zd1 );
+StartThread( Film );
+</ScriptText>
+</Script>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="1">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/UI/Game/Tooltips/Mission_WindowTextViewShared.xdb#xpointer(/WindowTextViewShared)" />
+	<Name>TooltipText</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Text href="" />
+	<TextFileRef href="" />
+	<ResizeOnTextSet>true</ResizeOnTextSet>
+	<TextFormat href="" />
+</WindowTextView>

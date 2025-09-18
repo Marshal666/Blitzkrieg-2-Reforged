@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2857">
+	<SrcName href="/Units/Technics/Japan/Auto/Licence_Ford/2.mb" />
+	<uid>0E7932BF-5CB4-4DEA-9551-DBF3E6D1521F</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>100</FirstFrame>
+	<LastFrame>119</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-42</x>
+			<y>-5</y>
+			<z>30.611</z>
+		</Center>
+		<HalfSize>
+			<x>65</x>
+			<y>51</y>
+			<z>33.3948</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-63</x>
+			<y>-7</y>
+			<z>21.9741</z>
+		</Center>
+		<HalfSize>
+			<x>44</x>
+			<y>48</y>
+			<z>22.797</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

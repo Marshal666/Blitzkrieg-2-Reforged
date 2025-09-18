@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="170">
+	<SrcName />
+	<Light>L_NORMAL</Light>
+	<Particle href="GroundExpWinter02_Particle.xdb#xpointer(/Particle)" />
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>0.75</Scale>
+	<Speed>1.1</Speed>
+	<Offset>0.1</Offset>
+	<EndCycle>3.5</EndCycle>
+	<CycleCount>1</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion1_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion2_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion3_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion4_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion5_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion6_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion7_Texture.xdb#xpointer(/Texture)" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Snow0_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Snow1_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Snow3_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Snow4_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Snow5_Texture.xdb#xpointer(/Texture)" />
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

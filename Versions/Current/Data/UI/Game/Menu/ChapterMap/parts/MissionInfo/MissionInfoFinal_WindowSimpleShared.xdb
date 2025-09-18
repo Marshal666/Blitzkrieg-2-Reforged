@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="658">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/ui/game/menu/chaptermap/parts/missioninfo/grids/reinfplaceholderfinal_windowsimple.xdb#xpointer(/WindowSimple)"/>
+		<Item href="/ui/game/menu/chaptermap/parts/missions_windowtextview.xdb#xpointer(/WindowTextView)"/>
+	</Children>
+	<Background href="/ui/game/menu/chaptermap/parts/missioninfo/missioninfofinalbgr_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)"/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>301</x>
+				<y>438</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

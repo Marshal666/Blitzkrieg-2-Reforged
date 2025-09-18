@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="53">
+	<FileName />
+	<ScriptText>Trace(&quot;plane %g %g %g %g %g %g %g&quot;, GetUnitRPGStats( GetObjectList( 1 ) ) );
+Trace(&quot;gun %g %g %g %g %g %g %g&quot;, GetUnitRPGStats( GetObjectList( 2 ) ) );
+Trace(&quot;as %g %g %g %g %g %g %g&quot;, GetUnitRPGStats( GetObjectList( 3 ) ) );
+Trace(&quot;main %g %g %g %g %g %g %g&quot;, GetUnitRPGStats( GetObjectList( 4 ) ) );
+Trace(&quot;snip %g %g %g %g %g %g %g&quot;, GetUnitRPGStats( GetObjectList( 5 ) ) );
+a = {};
+a = GetArray(GetUnitRPGStats(GetObjectList( 5 )));
+Trace(a[2]);
+
+for i = -30, 30 do
+b, c = SinCos( i / 10 );
+Trace( &quot;%g %g&quot;, b * 1000, c * 1000 );
+end
+
+function _AreAllUnitsInDirection( array, mindir, maxdir, innerarc )
+local dir;
+local u;
+	if ( array == nil ) or ( array.n == 0 ) then
+		Trace( &quot;AreAllUnitsInDirection: first parameter is invalid or empty&quot; );
+		return 0;
+	end;
+	for u = 1, array.n do
+		if ( GetObjectHPs( array[u] ) &gt; 0 ) then
+			dir = GetFrontDir( array[u] );
+			Trace( &quot;dir[%g] = %g&quot;, u, dir);
+			if ( ( dir &gt; mindir ) and ( dir &lt; maxdir ) ) then
+				if ( innerarc == 0 ) then
+					return 0;
+				end;
+			else
+				if ( innerarc == 1 ) then
+					return 0;
+				end;
+			end;
+		end;
+	end;
+	return 1;
+end;
+
+
+
+Artillery = {};
+
+local reinfunits = {};
+local mindir = 32000;
+local maxdir = 49000;
+local astates = {};
+local dr = 0;
+Artillery.n = 0;
+	while 1 do
+		Wait( 1 );
+		if ( Artillery.n == 0 ) then
+			reinfunits = GetUnitListInAreaArray( 0, &quot;Player_Reinf&quot; );
+			Artillery = GetUnitsByParam( reinfunits, PT_CLASS, CLASS_ANTITANK_GUN );
+		end;
+		if ( Artillery.n &gt; 0 ) then
+			if ( dr == 0 ) then
+				EnableReinforcementPoint( 0, Point_Artillery, 0 );
+				dr = 1;
+			end;
+			astates = GetUnitArrayStatesArray( Artillery );
+			Trace( &quot;Artillery.n = %g&quot;, Artillery.n );
+			Trace( &quot;OnlyValues = %g&quot;, OnlyValues( astates, {STATE_REST; n = 1} ) );
+			Trace( &quot;AreAllUnitsInDirection = %g&quot;, _AreAllUnitsInDirection( Artillery, mindir, maxdir, 0 ) );
+			Trace( &quot;AreAllUnitsInDirection = %g&quot;, _AreAllUnitsInDirection( Artillery, mindir, maxdir, 1 ) );
+		end;
+	end;
+
+</ScriptText>
+</Script>

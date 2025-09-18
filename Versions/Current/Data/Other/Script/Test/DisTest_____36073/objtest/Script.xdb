@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="75">
+	<FileName />
+	<ScriptText>a = 0;
+b = 0;
+
+function obj1()
+	if ( a == 1 ) then
+		Trace( &quot;a&quot; );
+		return 1;
+	end;
+end;
+
+function obj2()
+	if ( b == 1 ) then
+		Trace( &quot;b&quot; );
+		return 1;
+	end;
+end;
+
+function aa()
+	a = 1;
+end;
+
+function bb()
+	b = 1;
+end;
+
+objectives = { obj1, obj2 };
+
+StartAllObjectives( objectives, 2 );</ScriptText>
+</Script>

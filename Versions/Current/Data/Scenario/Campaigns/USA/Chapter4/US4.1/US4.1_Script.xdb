@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000059">
+	<FileName href="" />
+	<ScriptText>
+function RevealObjective0()
+	Wait(1);
+	ObjectiveChanged(0, 1);
+	Wait(1);
+	StartThread( Objective0 );
+end;
+
+function Objective0() 
+	while 1 do
+		Wait( 2 );
+			if ((GetNUnitsInArea(1, &quot;Battery&quot;,0) &lt; 1) and (GetNUnitsInArea(0, &quot;Battery&quot;,0) &gt; 0)) then
+			Wait( 1 );
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.Objective.0&quot;, 2 );
+			StartThread( Fail_Objective0 );
+			break;
+		end;
+	end;
+end;
+
+function Fail_Objective0() 
+	while 1 do
+		Wait( 2 );
+			if ((GetNUnitsInArea(1, &quot;Battery&quot;,0) &gt; 0) and (GetNUnitsInArea(0, &quot;Battery&quot;,0) &lt; 1)) then
+			Wait( 1 );
+			StartThread( RevealObjective0 );
+			SetIGlobalVar( &quot;temp.Objective.0&quot;, 1 );
+			break;
+		end;
+	end;
+end;
+----------------------------------------------------
+function RevealObjective1()
+	Wait(3);
+	ObjectiveChanged(1, 1);
+	Wait(1);
+	StartThread( Objective1 );
+end;
+
+function Objective1() 
+	while 1 do
+		Wait( 2 );
+			if ((GetNUnitsInArea(1, &quot;Village&quot;,0) &lt; 1) and (GetNUnitsInArea(0, &quot;Village&quot;,0) &gt; 0)) then
+			Wait( 1 );
+			ObjectiveChanged(1, 2);
+			SetIGlobalVar( &quot;temp.Objective.1&quot;, 2 );
+			break;
+		end;
+	end;
+end;
+
+---------------------------------------------------
+function RevealObjective2() 
+	while 1 do
+		Wait( 3 );
+			if ((GetIGlobalVar(&quot;temp.Objective.0&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.Objective.1&quot;, 1) == 2)) then
+			Wait( 1 );
+			GiveObjective( 2 );
+			StartThread( Objective2 );
+			break;
+		end;
+	end;
+end;
+
+function Objective2() 
+	while 1 do
+		Wait( 3 );
+			if ((GetNUnitsInArea(0, &quot;Village&quot;,0) &lt; 1) and (GetNUnitsInArea(1, &quot;Village&quot;,0) &gt; 0)) then
+			Wait( 1 );
+			FailObjective( 2 );
+			Win(1);
+			break;
+		end;
+	end;
+end;
+---------------------------------------------------
+function J_Attack1() 
+	while 1 do
+		Wait( 3 );
+			if (GetIGlobalVar(&quot;temp.Objective.0&quot;, 1) == 2) then
+			StartThread( At_1 );
+			break;
+		end;
+	end;
+end;
+
+function At_1()
+	Wait( 1 );
+	Cmd( 0, 401, 0, GetScriptAreaParams( &quot;A1&quot; ) );
+	Cmd( 0, 402, 0, GetScriptAreaParams( &quot;A1&quot; ) );
+	QCmd( 0, 401, 0, GetScriptAreaParams( &quot;A2&quot; ) );
+	QCmd( 0, 402, 0, GetScriptAreaParams( &quot;A2&quot; ) );
+	QCmd( 0, 401, 0, GetScriptAreaParams( &quot;A3&quot; ) );
+	QCmd( 0, 402, 0, GetScriptAreaParams( &quot;A3&quot; ) );
+	QCmd( 5, 401, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	QCmd( 5, 402, 0, GetScriptAreaParams( &quot;A4&quot; ) );
+	StartThread( J_Go );
+end;
+
+function J_Go() 
+	while 1 do
+		Wait( 3 );
+			if (GetNScriptUnitsInArea(403, &quot;A4&quot;) &gt; 0) or ( GetNUnitsInScriptGroup( 401 ) &lt; 1 ) or ( GetNUnitsInScriptGroup( 402 ) &lt; 1 ) then
+			Wait( 5 );
+			Cmd( 3, 403, 0, GetScriptAreaParams( &quot;A5&quot; ) );
+			break;
+		end;
+	end;
+end;
+-----------------------------------------------------
+function J_Attack2() 
+	while 1 do
+		Wait( 3 );
+			if (GetIGlobalVar(&quot;temp.Objective.1&quot;, 1) == 2) then
+			Wait( 10 );
+			StartThread( Navy );
+			StartThread( Navy_2 );
+			Wait( 20 );
+			StartThread( Winners );
+			break;
+		end;
+	end;
+end;
+
+function Navy()	LandReinforcementFromMap ( 1 , &quot;J_BOAT&quot; , 0 , 901 );
+	Cmd ( 0 , 901 , 0 , &quot;B1&quot; );
+	while 1 do 
+		Wait( 1 );
+        if (GetNScriptUnitsInArea(901, &quot;B1&quot;) &gt; 0) then
+			Wait ( 2 );
+			LandReinforcementFromMap ( 1 , &quot;J_INF&quot; , 2 , 1111 );
+			ChangeFormation( 1111, 2 );
+			Cmd ( 3 , 1111 , 0 , GetScriptAreaParams&quot;Village&quot; );
+ 			break; 
+		end;
+ 	end;end;
+
+function Navy_2()	LandReinforcementFromMap ( 1 , &quot;J_BOAT&quot; , 1 , 801 );
+	Cmd ( 0 , 801 , 0 , &quot;B2&quot; );
+	while 1 do 
+		Wait( 1 );
+        if (GetNScriptUnitsInArea(801, &quot;B2&quot;) &gt; 0) then
+			Wait ( 2 );
+			LandReinforcementFromMap ( 1 , &quot;J_INF&quot; , 3 , 1112 );
+			ChangeFormation( 1112, 3 );
+			Cmd ( 3 , 1112 , 0 , GetScriptAreaParams&quot;C1&quot; );
+			QCmd ( 3 , 1112 , 0 , GetScriptAreaParams&quot;C2&quot; );
+			QCmd ( 3 , 1112 , 0 , GetScriptAreaParams&quot;C3&quot; );
+			QCmd ( 3 , 1112 , 0 , GetScriptAreaParams&quot;C4&quot; );
+ 			break; 
+		end;
+ 	end;end;
+-------------------------------------------------------
+function DZOT() 
+	while 1 do
+		Wait( 2 );
+			if (GetNUnitsInArea(0, &quot;DOT&quot;,0) &gt; 0 ) then
+			Wait( 3 + Random( 10 ) );
+			Cmd ( 7 , 555 , 0, 5290, 6042 );
+			break;
+		end;
+	end;
+end;
+
+-------------------------------------------------------
+function Winners()
+	while 1 do
+		Wait( 1 );
+		if (GetNUnitsInArea(1, &quot;Wins&quot;,0) &lt; 1) then
+			CompleteObjective( 2 );
+			Win ( 0 );
+			break;
+		end;	
+	end;
+end;
+
+function Defead()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(3);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+-----------------------------------Main
+
+StartThread( RevealObjective0 );
+StartThread( RevealObjective1 );
+StartThread( RevealObjective2 );
+StartThread( J_Attack1 );
+StartThread( J_Attack2 );
+StartThread( DZOT );
+StartThread( Defead );
+
+
+
+
+</ScriptText>
+</Script>

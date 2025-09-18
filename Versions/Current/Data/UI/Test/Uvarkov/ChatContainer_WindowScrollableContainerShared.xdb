@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScrollableContainerShared ObjectRecordID="1">
+	<Crap>false</Crap>
+	<Children/>
+	<Background href=""/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<Interval>0</Interval>
+	<ScrollBar href="/ui/test/uvarkov/chatcontainer_windowscrollbar.xdb#xpointer(/WindowScrollBar)"/>
+	<Border href="/ui/test/uvarkov/test01/chatcontainerborder_windowsimple.xdb#xpointer(/WindowSimple)"/>
+	<Selection href=""/>
+	<PreSelection href=""/>
+	<NegativeSelection href=""/>
+</WindowScrollableContainerShared>

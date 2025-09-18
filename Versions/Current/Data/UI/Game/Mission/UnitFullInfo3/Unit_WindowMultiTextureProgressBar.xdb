@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowMultiTextureProgressBar ObjectRecordID="7">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/mission/unitfullinfo3/unit_windowmultitextureprogressbarshared.xdb#xpointer(/WindowMultiTextureProgressBarShared)"/>
+	<Name>HPBarUnit</Name>
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>1</x>
+				<y>1</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>1</x>
+				<y>1</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<Progresses>
+		<Item>0.5</Item>
+	</Progresses>
+	<Solid>true</Solid>
+	<PieceSize>12</PieceSize>
+</WindowMultiTextureProgressBar>

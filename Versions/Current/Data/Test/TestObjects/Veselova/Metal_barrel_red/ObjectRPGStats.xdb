@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="285">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>10</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="/scene/geoms/all/objects/simpleobjects/metallbarrelred/whole_visobj.xdb#xpointer(/VisObj)"/>
+	<IconTexture href="/scene/texandmats/all/ui/mission/icons/objects/simpleobjects/metalbarrelred_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/localizedobjectsname/simpleobjects/metallbarrel/text.xdb#xpointer(/Text)"/>
+	<SelectionScale>1</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>29</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/scene/effects/all/explosions/gasoline_barrel_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<EffectDeath href="/scene/effects/all/explosions/gasoline_barrel_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<EffectDisappear href=""/>
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="/other/burningfuel/test/burningfuel.xdb#xpointer(/BurningFuel)"/>
+	<StaticDebris>
+		<Debris href=""/>
+		<Masks/>
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href=""/>
+		<Masks/>
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>0</x>
+						<y>-11</y>
+					</Item>
+					<Item>
+						<x>1</x>
+						<y>-11</y>
+					</Item>
+					<Item>
+						<x>8</x>
+						<y>-8</y>
+					</Item>
+					<Item>
+						<x>12</x>
+						<y>0</y>
+					</Item>
+					<Item>
+						<x>8</x>
+						<y>8</y>
+					</Item>
+					<Item>
+						<x>7</x>
+						<y>9</y>
+					</Item>
+					<Item>
+						<x>0</x>
+						<y>12</y>
+					</Item>
+					<Item>
+						<x>-8</x>
+						<y>8</y>
+					</Item>
+					<Item>
+						<x>-11</x>
+						<y>0</y>
+					</Item>
+					<Item>
+						<x>-11</x>
+						<y>-1</y>
+					</Item>
+					<Item>
+						<x>-8</x>
+						<y>-8</y>
+					</Item>
+					<Item>
+						<x>0</x>
+						<y>-11</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>8.25</x>
+		<y>8.25</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data>
+			<Item>
+				<data>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<CanFall>false</CanFall>
+	<ObjectHeight>24</ObjectHeight>
+	<FallEffect href=""/>
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SpecificJoints/>
+</ObjectRPGStats>

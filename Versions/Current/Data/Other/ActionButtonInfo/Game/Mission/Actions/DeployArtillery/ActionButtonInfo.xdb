@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="26">
+	<Action>USER_ACTION_DEPLOY_ARTILLERY</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>false</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>false</Passive>
+	<Slot>5</Slot>
+	<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+	<Tooltip href="/other/text/game/tooltips/mission/actions/gundeploy/text.xdb#xpointer(/Text)"/>
+	<Icon href="/scene/texandmats/game/mission/newactionbuttons/gunoperationsunload/normal_texture.xdb#xpointer(/Texture)"/>
+	<IconDisabled href="/scene/texandmats/game/mission/newactionbuttons/gunoperationsunload/disabled_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIcon href="/scene/texandmats/game/mission/newactionbuttons/gunoperationsunload/normalfg_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIconDisabled href="/scene/texandmats/game/mission/newactionbuttons/gunoperationsunload/disabledfg_texture.xdb#xpointer(/Texture)"/>
+	<PressEffect>false</PressEffect>
+	<HotkeyCmd>user_action_deploy</HotkeyCmd>
+</ActionButtonInfo>

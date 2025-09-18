@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1185">
+	<Type>RT_TANK_DESTROYERS</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/tankheavy_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/tank_destroyers/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/german/spg/jagdtiger_sdkfz186/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/german/spg/jagdtiger_sdkfz186/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/tank_destroyers/text.xdb#xpointer(/Text)"/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

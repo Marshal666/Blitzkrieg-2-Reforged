@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="13">
+	<Type>NEVT_ENEMY_AVIA_DETECTED</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/enemy_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/enemyaviadetected/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttenemyaviadetected/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href="/other/notification/game/mission/enemyavia/notification.xdb#xpointer(/Notification)"/>
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

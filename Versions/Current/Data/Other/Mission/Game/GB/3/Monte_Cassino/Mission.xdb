@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="18">
+	<Map href="/test/testmaps/alpha/monte-cassino/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses/>
+	<LocalizedName href="/other/text/game/missions_description/gb/3/montecassino_name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/game/missions_description/gb/3/montecassino_description/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>306</x>
+		<y>222</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_FIGHTERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_GROUND_ATTACK_PLANES</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_BOMBERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_PARATROOPS</ReinfType>
+			<Number>0</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_LIGHT_TANKS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_GUNS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_TANK_DESTROYERS</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ARTILLERY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_HEAVY_ARTILLERY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_MAIN_INFANTRY</ReinfType>
+			<Number>20</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ASSAULT_INFANTRY</ReinfType>
+			<Number>20</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

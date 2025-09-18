@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000055">
+	<FileName href="" />
+	<ScriptText>---------------------------------------------------------JapanLanding
+
+function JapanLanding1()	LandReinforcementFromMap ( 1 , &quot;1&quot; , 3 , 1000 );
+	Cmd ( 0 , 1000 , 0 , &quot;Boat1&quot; );
+	while 1 do 
+		Wait( 1 );
+        if IsSomeUnitInArea ( 1 , &apos;Boat1&apos;, 0 ) &gt; 0 then
+			Wait ( 2 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 2 , 1001 );
+			Cmd ( 0 , 1001 , 0 , GetScriptAreaParams&quot;Squat1&quot; );
+			QCmd ( 0 , 1001 , 0 , GetScriptAreaParams&quot;At1&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1001 , 3 );
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 2 , 1002 );
+			Cmd ( 0 , 1002 , 0 , GetScriptAreaParams&quot;Squat1&quot; );
+			QCmd ( 0 , 1002 , 0 , GetScriptAreaParams&quot;At2&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1002 , 3 );
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 2 , 1003 );
+			Cmd ( 0 , 1003 , 0 , GetScriptAreaParams&quot;Squat1&quot; );
+			QCmd ( 0 , 1003 , 0 , GetScriptAreaParams&quot;At3&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1003 , 3 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 2 , 1004 );
+			Cmd ( 0 , 1004 , 0 , GetScriptAreaParams&quot;Squat1&quot; );
+			Wait( 3 );
+			ChangeFormation ( 1004 , 3 );
+			Cmd ( 0 , 1000 , 0 , &quot;Sea1&quot; );
+			QCmd ( 1007 , 1000 );
+ 			break; 
+		end;
+ 	end;end;
+
+function JapanLanding2()	LandReinforcementFromMap ( 1 , &quot;1&quot; , 1 , 1010 );
+	Cmd ( 0 , 1010 , 0 , &quot;Boat2&quot; );
+	while 1 do 
+		Wait( 1 );
+        if IsSomeUnitInArea ( 1 , &apos;Boat2&apos;, 0 ) &gt; 0 then
+			Wait ( 2 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 1011 );
+			Cmd ( 0 , 1011 , 0 , GetScriptAreaParams&quot;Squat2&quot; );
+			QCmd ( 0 , 1011 , 0 , GetScriptAreaParams&quot;At4&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1011 , 3 );
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 1012 );
+			Cmd ( 0 , 1012 , 0 , GetScriptAreaParams&quot;Squat2&quot; );
+			QCmd ( 0 , 1012 , 0 , GetScriptAreaParams&quot;At5&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1012 , 3 );
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 1013 );
+			Cmd ( 0 , 1013 , 0 , GetScriptAreaParams&quot;Squat2&quot; );
+			QCmd ( 0 , 1013 , 0 , GetScriptAreaParams&quot;At6&quot; );
+ 			Wait( 3 ); 
+			ChangeFormation ( 1013 , 3 );
+			LandReinforcementFromMap ( 1 , &quot;0&quot; , 0 , 1014 );
+			Cmd ( 0 , 1014 , 0 , GetScriptAreaParams&quot;Squat2&quot; );
+			Wait( 3 );
+			ChangeFormation ( 1014 , 3 );
+			Cmd ( 0 , 1010 , 0 , &quot;Sea2&quot; );
+			QCmd ( 1007 , 1010 );
+ 			break; 
+		end;
+ 	end;end;
+
+---------------------------------------------------------Ataka
+
+function Ataka1()
+	ChangeFormation ( 1001 , 0 );
+	ChangeFormation ( 1002 , 0 );
+	ChangeFormation ( 1003 , 0 );
+	ChangeFormation ( 1004 , 0 );
+	ChangeFormation ( 1011 , 0 );
+	ChangeFormation ( 1012 , 0 );
+	ChangeFormation ( 1013 , 0 );
+	ChangeFormation ( 1014 , 0 );
+	Cmd ( 0 , 1001 , 0 , GetScriptAreaParams&quot;Go1&quot; );
+	Cmd ( 0 , 1002 , 0 , GetScriptAreaParams&quot;Go2&quot; );
+	Cmd ( 0 , 1003 , 0 , GetScriptAreaParams&quot;Go3&quot; );
+	Cmd ( 0 , 1004 , 0 , GetScriptAreaParams&quot;Go4&quot; );
+	Cmd ( 0 , 1011 , 0 , GetScriptAreaParams&quot;Go5&quot; );
+	Cmd ( 0 , 1012 , 0 , GetScriptAreaParams&quot;Go6&quot; );
+	Cmd ( 0 , 1013 , 0 , GetScriptAreaParams&quot;Go7&quot; );
+	Cmd ( 0 , 1014 , 0 , GetScriptAreaParams&quot;Go8&quot; );
+	QCmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1003 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1004 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1011 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1012 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1013 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1014 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+end;
+
+function Ataka2()
+	Cmd ( 0 , 1001 , 0 , GetScriptAreaParams&quot;Go1&quot; );
+	Cmd ( 0 , 1002 , 0 , GetScriptAreaParams&quot;Go2&quot; );
+	Cmd ( 0 , 1003 , 0 , GetScriptAreaParams&quot;Go3&quot; );
+	Cmd ( 0 , 1004 , 0 , GetScriptAreaParams&quot;Go4&quot; );
+	Cmd ( 0 , 1011 , 0 , GetScriptAreaParams&quot;Go5&quot; );
+	Cmd ( 0 , 1012 , 0 , GetScriptAreaParams&quot;Go6&quot; );
+	Cmd ( 0 , 1013 , 0 , GetScriptAreaParams&quot;Go7&quot; );
+	Cmd ( 0 , 1014 , 0 , GetScriptAreaParams&quot;Go8&quot; );
+	QCmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1003 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1004 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1011 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1012 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1013 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1014 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+end;
+
+function Ataka3()
+	Cmd ( 0 , 1001 , 0 , GetScriptAreaParams&quot;Go1&quot; );
+	Cmd ( 0 , 1002 , 0 , GetScriptAreaParams&quot;Go2&quot; );
+	Cmd ( 0 , 1003 , 0 , GetScriptAreaParams&quot;Go3&quot; );
+	Cmd ( 0 , 1004 , 0 , GetScriptAreaParams&quot;Go4&quot; );
+	Cmd ( 0 , 1011 , 0 , GetScriptAreaParams&quot;Go5&quot; );
+	Cmd ( 0 , 1012 , 0 , GetScriptAreaParams&quot;Go6&quot; );
+	Cmd ( 0 , 1013 , 0 , GetScriptAreaParams&quot;Go7&quot; );
+	Cmd ( 0 , 1014 , 0 , GetScriptAreaParams&quot;Go8&quot; );
+	Wait ( 10 );
+	ChangeFormation ( 1001 , 2 );
+	ChangeFormation ( 1002 , 2 );
+	ChangeFormation ( 1003 , 2 );
+	ChangeFormation ( 1004 , 2 );
+	ChangeFormation ( 1011 , 2 );
+	ChangeFormation ( 1012 , 2 );
+	ChangeFormation ( 1013 , 2 );
+	ChangeFormation ( 1014 , 2 );
+	QCmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1003 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1004 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1011 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1012 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1013 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1014 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+end;
+
+function Ataka4()
+	Cmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;Go1&quot; );
+	Cmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;Go2&quot; );
+	Cmd ( 3 , 1003 , 0 , GetScriptAreaParams&quot;Go3&quot; );
+	Cmd ( 3 , 1004 , 0 , GetScriptAreaParams&quot;Go4&quot; );
+	Cmd ( 3 , 1011 , 0 , GetScriptAreaParams&quot;Go5&quot; );
+	Cmd ( 3 , 1012 , 0 , GetScriptAreaParams&quot;Go6&quot; );
+	Cmd ( 3 , 1013 , 0 , GetScriptAreaParams&quot;Go7&quot; );
+	Cmd ( 3 , 1014 , 0 , GetScriptAreaParams&quot;Go8&quot; );
+	Wait ( 10 );
+	ChangeFormation ( 1001 , 2 );
+	ChangeFormation ( 1002 , 2 );
+	ChangeFormation ( 1003 , 2 );
+	ChangeFormation ( 1004 , 2 );
+	ChangeFormation ( 1011 , 2 );
+	ChangeFormation ( 1012 , 2 );
+	ChangeFormation ( 1013 , 2 );
+	ChangeFormation ( 1014 , 2 );
+	QCmd ( 3 , 1001 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1002 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1003 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1004 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1011 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1012 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1013 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	QCmd ( 3 , 1014 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+	Wait ( 15 );
+	Cmd ( 3 , 100 , 0 , GetScriptAreaParams&quot;hqzone&quot; );
+end;
+---------------------------------------------------------Recon
+
+function Recon()
+	Wait( 10 ); 
+	LandReinforcementFromMap (  2 , &quot;0&quot; , 0 , 802 );
+	Cmd ( 0 , 802 , 0 , GetScriptAreaParams &quot;Boat1&quot; );
+	QCmd ( 0 , 802 , 0 , GetScriptAreaParams &quot;Boat2&quot; );
+	QCmd ( 0 , 802 , 0 , GetScriptAreaParams &quot;Boat1&quot; );
+	Wait ( 1 );
+end;
+
+-----------------------Objective 
+
+function Objective()
+	GiveObjective ( 0 );
+	StartThread( CompleteObjective0 );
+end;
+
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if IsSomeUnitInArea ( 1 , &quot;hqzone&quot; , 0 ) &gt; 0 and IsSomeUnitInArea ( 0 , &quot;hqzone&quot; , 0 ) &lt; 1 then
+			Win ( 1 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective1()
+	GiveObjective ( 1 );
+	DamageScriptObject ( 9 , 10 );
+	ViewZone ( &quot;OBJ&quot; , 1 );
+	Sleep ( 1 );
+	DamageScriptObject ( 10 , 10 );
+	Sleep ( 1 );
+	ViewZone ( &quot;OBJ&quot; , 0 );
+	StartThread( CompleteObjective1 );
+	Wait ( 240 );
+	StartThread (JapanLanding1);
+end;
+
+function CompleteObjective1()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea ( 1 , &quot;Bech&quot; , 0 ) &lt; 1 then
+			Win ( 0 );
+			break;
+		end;	
+	end;
+end;
+
+------------------------WIn_Loose
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+
+---------------------------------------------------------
+StartThread (Objective);
+
+StartThread (Unlucky);
+
+StartThread (JapanLanding1);
+
+StartThread (JapanLanding2);
+
+StartThread (Recon);
+
+Wait ( 40 );
+
+StartThread (Ataka4);
+
+Wait ( 30 );
+
+StartThread (JapanLanding1);
+
+StartThread (JapanLanding2);
+
+Wait ( 40 );
+
+StartThread (Recon);
+
+StartThread (Ataka4);
+
+Wait ( 30 );
+
+StartThread (JapanLanding1);
+
+StartThread (JapanLanding2);
+
+Wait ( 40 );
+
+StartThread (Ataka4);
+
+Wait ( 30 );
+
+StartThread (JapanLanding1);
+
+StartThread (JapanLanding2);
+
+Wait ( 40 );
+
+StartThread (Recon);
+
+StartThread (Ataka4);
+
+Wait ( 38 );
+
+CompleteObjective ( 0 );
+DamageScriptObject ( 9 , 100 );
+
+Wait ( 2 );
+
+StartThread (Objective1);</ScriptText>
+</Script>
+

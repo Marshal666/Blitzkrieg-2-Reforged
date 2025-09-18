@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="138">
+	<FileName />
+	<ScriptText>wol = 0;
+-----------------------Stop
+function Stop0()
+	Wait ( 5 );
+	StartThread( Attake0 );
+end;
+function Stop1()
+	Wait ( 5 );
+	StartThread( Attake1 );
+end;
+function Stop2()
+	Wait ( 5 );
+	StartThread( Attake2 );
+end;
+function Stop3()
+	Wait ( 5 );
+	StartThread( Attake3 );
+end;
+function Stop4()
+	Wait ( 5 );
+	StartThread( Attake4 );
+end;
+function Stop5()
+	Wait ( 5 );
+	StartThread( Attake5 );
+end;
+function Stop6()
+	Wait ( 5 );
+	StartThread( Attake6 );
+end;
+function Stop7()
+	Wait ( 5 );
+	StartThread( Attake7 );
+end;
+-----------------------Zasada
+function Zasada()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea ( 0 , &quot;Zasada&quot; , 0 ) &gt; 0) then
+			Wait( 3 );
+			Cmd (3 , 100 , 0 , GetScriptAreaParams &quot;Zasada&quot;);
+			Cmd (3 , 101 , 0 , GetScriptAreaParams &quot;Zasada&quot;);
+			Cmd (3 , 102 , 0 , GetScriptAreaParams &quot;Zasada&quot;);
+			break;
+		end;
+	end;
+end;
+-----------------------Souz
+function Souz()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea ( 0 , &quot;Start&quot; , 0 ) &gt; 0) then
+			Wait( 3 );
+			StartThread( Go );
+			break;
+		end;	
+	end;
+end;
+-----------------------Attake
+function Go()
+	Wait( 3 );
+	Cmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go01&quot;);
+	Cmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go11&quot;);
+	Cmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go21&quot;);
+	Cmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go31&quot;);
+	Cmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go51&quot;);
+	Cmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go61&quot;);
+	Cmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go71&quot;);
+	Wait( 15 );
+	StartThread( Move );
+	StartThread( Attake );
+end;
+function Move()
+	Wait( 3 );
+	Cmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go02&quot;);
+	QCmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go03&quot;);
+	QCmd (3 , 200 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go12&quot;);
+	QCmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go13&quot;);
+	QCmd (3 , 201 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go22&quot;);
+	QCmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go23&quot;);
+	QCmd (3 , 202 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go32&quot;);
+	QCmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go33&quot;);
+	QCmd (3 , 203 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go52&quot;);
+	QCmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go53&quot;);
+	QCmd (3 , 205 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go62&quot;);
+	QCmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go63&quot;);
+	QCmd (3 , 206 , 0 , GetScriptAreaParams &quot;Town&quot;);
+	Cmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go72&quot;);
+	QCmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go73&quot;);
+	QCmd (3 , 207 , 0 , GetScriptAreaParams &quot;Town&quot;);
+end;
+function Attake()
+	Wait( 3 );
+	StartThread( Attake0 );
+	StartThread( Attake1 );
+	StartThread( Attake2 );
+	StartThread( Attake3 );
+	StartThread( Attake5 );
+	StartThread( Attake6 );
+	StartThread( Attake7 );
+end;
+function Attake0()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 200 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 200 );
+			Wait ( 3 );
+			Cmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go01&quot;);
+			QCmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go02&quot;);
+			QCmd (3 , 200 , 0 , GetScriptAreaParams &quot;Go03&quot;);
+			QCmd (3 , 200 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop0 );
+			break;
+		end;
+	end;
+end;
+function Attake1()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 201 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 201 );
+			Wait ( 3 );
+			Cmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go11&quot;);
+			QCmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go12&quot;);
+			QCmd (3 , 201 , 0 , GetScriptAreaParams &quot;Go13&quot;);
+			QCmd (3 , 201 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop1 );
+			break;
+		end;
+	end;
+end;
+function Attake2()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 202 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 202 );
+			Wait ( 3 );
+			Cmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go21&quot;);
+			QCmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go22&quot;);
+			QCmd (3 , 202 , 0 , GetScriptAreaParams &quot;Go23&quot;);
+			QCmd (3 , 202 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop2 );
+			break;
+		end;
+	end;
+end;
+function Attake3()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 203 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;1&quot; , 0 , 203 );
+			Wait ( 3 );
+			Cmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go31&quot;);
+			QCmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go32&quot;);
+			QCmd (3 , 203 , 0 , GetScriptAreaParams &quot;Go33&quot;);
+			QCmd (3 , 203 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop3 );
+			break;
+		end;
+	end;
+end;
+function Attake5()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 205 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;2&quot; , 0 , 205 );
+			Wait ( 3 );
+			Cmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go51&quot;);
+			QCmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go52&quot;);
+			QCmd (3 , 205 , 0 , GetScriptAreaParams &quot;Go53&quot;);
+			QCmd (3 , 205 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop5 );
+			break;
+		end;
+	end;
+end;
+function Attake6()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 206 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;2&quot; , 0 , 206 );
+			Wait ( 3 );
+			Cmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go61&quot;);
+			QCmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go62&quot;);
+			QCmd (3 , 206 , 0 , GetScriptAreaParams &quot;Go63&quot;);
+			QCmd (3 , 206 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop6 );
+			break;
+		end;
+	end;
+end;
+function Attake7()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInScriptGroup ( 207 ) &lt; 1) then
+			LandReinforcementFromMap ( 2 , &quot;2&quot; , 0 , 207 );
+			Wait ( 3 );
+			Cmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go71&quot;);
+			QCmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go72&quot;);
+			QCmd (3 , 207 , 0 , GetScriptAreaParams &quot;Go73&quot;);
+			QCmd (3 , 207 , 0 , GetScriptAreaParams &quot;Town&quot;);
+			StartThread( Stop7 );
+			break;
+		end;
+	end;
+end;
+-----------------------Objective
+function Objective()	ObjectiveChanged(0, 1); 	SetIGlobalVar( &quot;temp.objective0&quot;, 1 );	StartThread( CompleteObjective0 );	Wait( 1 );end;
+function CompleteObjective0()	while 1 do		Wait( 1 );		if (GetNUnitsInArea ( 1 , &quot;Town&quot; , 0 ) &lt; 1) then			StartThread( Winner );			Wait ( 1 );			break;		end;	end;end;
+------------------------WIn_Loose
+function Winner()	while 1 do		Wait( 1 );		if (GetNUnitsInArea ( 0 , &quot;Town&quot; , 0 ) &gt; 0) and (wol == 0 ) then			wol = 1;
+			ObjectiveChanged(0, 2);			SetIGlobalVar( &quot;temp.objective0&quot;, 2 );			Wait( 1 );			Win(0);			break;		end;		if (GetNUnitsInArea ( 2 , &quot;Town&quot; , 0 ) &gt; 0) and (wol == 0) then			wol = 1;			Wait( 1 );			Win(1);			break;		end;	end;end;
+function Unlucky()	while 1 do		Wait( 3 );        if ( GetNUnitsInParty( 0 ) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then			Wait( 1 );			Win(1);			break;		end;	end;end;
+-------------------------------------------  MAIN
+StartThread( Objective );StartThread( Unlucky );StartThread( Zasada );StartThread( Souz );</ScriptText>
+</Script>

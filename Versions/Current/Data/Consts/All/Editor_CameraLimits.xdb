@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CameraLimits ObjectRecordID="4">
+	<DistanceLimit>
+		<Min>0</Min>
+		<Max>1000</Max>
+		<Ave>155</Ave>
+		<AutoSpeed>0</AutoSpeed>
+		<ManualSpeed>125</ManualSpeed>
+		<Cyclic>false</Cyclic>
+	</DistanceLimit>
+	<PitchLimit>
+		<Min>0</Min>
+		<Max>89</Max>
+		<Ave>50</Ave>
+		<AutoSpeed>0</AutoSpeed>
+		<ManualSpeed>50</ManualSpeed>
+		<Cyclic>false</Cyclic>
+	</PitchLimit>
+	<YawLimit>
+		<Min>0</Min>
+		<Max>359</Max>
+		<Ave>45</Ave>
+		<AutoSpeed>0</AutoSpeed>
+		<ManualSpeed>90</ManualSpeed>
+		<Cyclic>false</Cyclic>
+	</YawLimit>
+	<FOV>26</FOV>
+</CameraLimits>

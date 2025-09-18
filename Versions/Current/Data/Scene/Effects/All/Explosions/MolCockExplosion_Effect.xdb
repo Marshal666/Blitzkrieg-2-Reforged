@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="45">
+	<Instances>
+		<Item href="MolCockExplosion/MolCockExplosion_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="MolCockExplosion/MolCockExplFlashWaves_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="MolCockExplosion/MolCockExplCombustion_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="MolCockExplosion/FlameCrown_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="MolCockExplosion/Flash_LightInstance.xdb#xpointer(/LightInstance)" />
+		<Item href="MolCockExplosion/Fire_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="176">
+	<FileName />
+	<ScriptText>-----------------------------------------------Patrol
+function Patrol()
+	Wait( 5 );
+	while 1 do
+			QCmd(ACT_SWARM, 600, 100, 7703, 6871);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 7244, 6998);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 6649, 6929);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 6122, 6714);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 5649, 5259);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 5259, 6473);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 5649, 5259);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 6122, 6714);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 6649, 6929);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 7244, 6998);
+			Wait( 15 );
+			QCmd(ACT_SWARM, 600, 100, 7703, 6871);
+			Wait( 15 );
+			if ( GetNUnitsInScriptGroup ( 200 ) &lt;= 0 ) then
+			Trace(&quot;Patrol1_Defeated&quot;);
+			Wait(2)
+			return 1;
+		end;
+	end;
+end;
+-----------------------------------------------Patrol1
+function Patrol1()
+	Wait( 5 );
+	while 1 do
+			QCmd(ACT_SWARM, 200, 0, 3736, 2544);
+			Wait( 2 );
+			QCmd(ACT_SWARM, 200, 0, 4020, 4000);
+			Wait( 2 );
+			QCmd(ACT_SWARM, 200, 0, 3525, 2285);
+			Wait( 2 );
+			QCmd(ACT_SWARM, 200, 0, 4020, 1500);
+			Wait( 5 );
+			if ( GetNUnitsInScriptGroup( 200 ) &lt;= 0 ) then
+			Trace(&quot;Patrol1_Defeated&quot;)
+			Wait(2)
+			return 1;
+		end;
+	end;
+end;
+
+-----------------------------------------------Patrol2
+function Patrol2()
+	Wait( 5 );
+	while 1 do
+			QCmd(ACT_SWARM, 201, 0, 1675, 5024);
+			Wait( 2 );
+			QCmd(ACT_SWARM, 201, 0, 2666, 5294);
+			Wait( 2 );
+			QCmd(ACT_SWARM, 201, 0, 3100, 3818);
+			Wait( 3 );
+			QCmd(ACT_SWARM, 201, 0, 1460, 4475);
+			Wait( 3 );
+			QCmd(ACT_SWARM, 201, 0, 1120, 3888);
+			Wait( 3 );
+			if ( GetNUnitsInScriptGroup( 201 ) &lt;= 0 ) then
+			Trace(&quot;Patrol2_Defeated&quot;)
+			Wait(2)
+			return 1;
+		end;
+	end;
+end;
+-------------------------------------------------Art_Action
+function ArtAction()
+	Wait ( 5 );
+	local k=GetObjectList ( 701 );
+	local c=GetObjectList ( 702 );
+	Wait ( 2 );
+	while 1 do 
+		if ( UnitCanSee ( k, 400, 0 ) == 1 ) or ( UnitCanSee ( c, 400, 0 ) == 1 ) then
+			Wait ( 1 );
+			Cmd( ACT_SUPPRESS, 160, 500, 4595, 6966 );
+			Trace (&quot;Art_Action&quot;)
+			Wait (5);
+		return 1;
+		end;
+		Wait (3);
+	end;
+end;
+
+-----------------------------------------------Bomber Strike
+function Bomb_Strike()
+	local k=0;
+	while k&lt;=5 do
+		if ( IsSomeBodyAlive ( 1, 200 ) == 0 ) or ( IsSomeBodyAlive ( 1, 201 ) == 0 ) then
+			Wait ( 3 );
+			LandReinforcementFromMap (1, &quot;bomber&quot;, 0, 1001 );
+			Wait ( 3 );
+			Cmd (ACT_MOVE, 1001, 500, 7232, 1200 );
+			Trace(&quot;Bombimg_srike&quot;);
+			k=k+1;
+			Wait ( 90 );
+		end;
+		Wait ( 2 );
+	end;
+end;
+-----------------------------------------------Enemies Counter Attack
+
+function CA_GO()
+	while 1 do
+		Wait ( 5 );
+		QCmd(ACT_SWARM, 104, 200, 2500, 3500);
+		Wait ( 15 );
+	end;
+end;
+
+function CA_1_GO()
+	while 1 do
+		Wait ( 5 );
+		QCmd(ACT_SWARM, 102, 200, 2500, 3500);
+		Wait ( 15 );
+	end;
+end;
+
+------------------------------------------------------CAttack
+function Wawe2()
+	while 1 do
+        if ( GetNUnitsInArea( 0, &quot;AZ1&quot;, 0 ) &gt;= 0 ) or ( GetNUnitsInArea( 0, &quot;AZ3&quot;, 0 ) &gt;= 0 )then
+            Wait ( 2 );
+			StartThread( CA_GO );
+			Wait ( 2 );
+			StartThread( CA_1_GO );
+		end	
+		Wait( 2 );
+	end;
+end;
+
+------------------------------------------------------CAttack2
+function Wawe3()
+	while 1 do
+        if ( GetNUnitsInScriptGroup( 200 ) &lt;= 1 ) or ( GetNUnitsInScriptGroup( 201 ) &lt;= 1 )then
+            Wait ( 2 ) ;
+			StartThread( CA_1_GO );
+			Wait ( 2 );
+			StartThread( CA_GO );
+		end	
+		Wait( 2 );
+	end;
+end;
+
+------------------------------------------------------Victory
+function WinCheck()
+	local win = 0	
+	while ( win == 0 ) do
+		Wait( 3 );
+		if ( GetNUnitsInScriptGroup( 400 ) &lt;= 1 ) then
+			win = 1;
+			Wait( 3 );
+			Trace( &quot;mission get win EnemyInCity=%g&quot;, GetNUnitsInArea( 1, &quot;IRCR&quot;, 0 ));
+			CompleteObjective ( 1 );
+			Wait ( 2 );
+			GiveObjective ( 0 );
+			StartThread (WinCheckComplete);
+		end;
+	end;
+end;
+------------------------------------------------------VictoryComplete
+function WinCheckComplete()
+	local win2 = 0
+	while ( win2 == 0 ) do
+		Wait( 3 );
+		if ( GetNUnitsInArea( 0, &quot;IRCR&quot;, 0 ) &gt;= 1 ) and ( GetNUnitsInArea( 1, &quot;IRCR&quot;, 0 ) &lt;= 0 ) then
+			win2 = 1;
+			Wait( 3 );
+			Trace( &quot;mission win complete EnemyInIRCR=%g&quot;, GetNUnitsInArea( 1, &quot;IRCR&quot;, 0 ));
+			CompleteObjective ( 0 );
+			Wait ( 1 );
+			Win ( 0 );
+			return 1;
+		end;
+		Wait (1);
+	end;
+end;
+-----------------------------------------------------LooseCheck
+
+function LooseCheck()
+	while 1 do
+        if ( IsSomePlayerUnit( 0 ) == 0 ) and ( GetReinforcementCallsLeft ( 0 ) &lt;= 0 ) then
+            Wait(3);
+			Trace(&quot;Defeat&quot;);
+			Win( 1 );
+			return 1;
+		end	
+		Wait( 2 );
+	end;
+end;
+-----------------------------------------------------LooseCheck2
+
+function LooseCheck2()
+	while 1 do
+        if ( IsSomeBodyAlive ( 2, 160 ) == 0 ) then
+            Wait(5);
+			Trace(&quot;Defeat&quot;);
+			Win( 1 );
+			return 1;
+		end	
+		Wait( 6 );
+	end;
+end;
+-----------------------------------------------------FailedCheck
+
+function FailedCheck()
+	while 1 do
+        if ( IsSomeBodyAlive ( 0, 701 ) == 0 ) or ( IsSomeBodyAlive ( 0, 702 ) == 0 ) then
+            Wait ( 5 );
+			Trace(&quot;ArtFaile&quot;);
+			Wait ( 1 );
+			FailObjective ( 1 );
+			Wait ( 2 );
+			ChangePlayerForScriptGroup ( 160, 3 );
+			Wait ( 2 );
+			ChangePlayerForScriptGroup ( 190, 3 );
+			Wait ( 2 );
+			RemoveScriptGroup ( 160 );
+			Wait ( 2 );
+			RemoveScriptGroup ( 190 );
+			Wait ( 2 );
+			GiveObjective ( 0 );
+			Wait ( 2 );
+			return 1;
+		end	
+		Wait( 6 );
+	end;
+end;
+------------------------------------------------------Main
+GiveObjective ( 1 );
+StartThread ( Patrol );
+StartThread ( ArtAction );
+StartThread ( Patrol1 );
+StartThread ( Patrol2 );
+StartThread ( Bomb_Strike );
+StartThread ( Wawe2 );
+StartThread ( Wawe3 );
+StartThread ( WinCheck );
+StartThread ( LooseCheck );
+StartThread ( LooseCheck2 );
+--StartThread ( FailedCheck );</ScriptText>
+</Script>

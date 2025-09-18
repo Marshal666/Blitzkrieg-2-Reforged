@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="499">
+	<KeyName>panzershrek</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_SUBMACHINEGUN</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>2</Dispersion>
+	<AimingTime>1</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>12</RangeMax>
+	<RangeMin>2</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>30</Piercing>
+			<DamageRandom>3</DamageRandom>
+			<DamagePower>5</DamagePower>
+			<PiercingRandom>20</PiercingRandom>
+			<Area>1</Area>
+			<Area2>1</Area2>
+			<Speed>15</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_ROCKET</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/flamethrower_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/flamethrowersoldierhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/hits/flamethrowersoldierhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/hits/flamethrowersoldierhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/hits/flamethrowerhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href=""/>
+			<EffectHitAir href=""/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>30</FireRate>
+			<RelaxTime>5</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

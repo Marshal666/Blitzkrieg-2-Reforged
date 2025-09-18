@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1236">
+	<Type>RT_HEAVY_AAA</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/aa_heavy_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/heavy_aa/text.xdb#xpointer(/Text)" />
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/ussr/artillery/85_mm_52_k/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/ussr/auto/zis_5_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/heavy_aa/text.xdb#xpointer(/Text)" />
+	<Transports />
+	<LocalizedDesc href="" />
+</Reinforcement>

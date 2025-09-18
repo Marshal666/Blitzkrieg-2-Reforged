@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Base>
+	<Pathes>
+		<!-- Temporary path to store sources -->
+		<SourcesTempPath>dbcode/</SourcesTempPath>
+		<!-- Project sources root path -->
+		<ProjectSourcesRoot>YOUR_PROJECT_PATH/</ProjectSourcesRoot>
+		<!-- 'Data' path -->
+		<DataStoragePath>YOUR_GAME_PATH/data/</DataStoragePath>
+		<!-- Base for descriptors and temp sources -->
+		<BasePath>YOUR_PROJECT_PATH/</BasePath>
+		<!-- Root path in VSS -->
+		<ProjectVSSRoot>$/NPC/</ProjectVSSRoot>
+		<Solutions>
+			<Item>Game</Item>
+			<Item>B2_MapEditor</Item>			
+		</Solutions>
+	</Pathes>
+</Base>

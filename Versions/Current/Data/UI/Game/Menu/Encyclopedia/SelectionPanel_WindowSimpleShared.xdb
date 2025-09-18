@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="408">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Countries_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="UnitTypes_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="CountryAll_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CountryUS_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CountryUK_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CountryUSSR_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CountryGermany_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="CountryJapan_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesAll_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesArtillery_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesArmor_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesAir_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesSea_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesTransport_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitTypesMisc_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="SelectionPanelTopBg_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="Panels/3DPanelView_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

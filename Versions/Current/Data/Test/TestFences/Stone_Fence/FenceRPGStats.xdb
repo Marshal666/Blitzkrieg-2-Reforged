@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<FenceRPGStats ObjectRecordID="7">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_FENCE</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>40</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href=""/>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>29</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/scene/effects/all/destructions/stoneobjectcrash_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<EffectDeath href="/scene/effects/all/destructions/stoneobjectcrash_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+	<EffectDisappear href=""/>
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href=""/>
+	<stats/>
+	<dirs/>
+	<PlacementType>FENCE_PLACE_STAGGERED</PlacementType>
+	<CenterSegments>
+		<VisObjes>
+			<Item href="/scene/geoms/all/objects/simpleobjects/fence/common/stonefence/1_visobj.xdb#xpointer(/VisObj)"/>
+		</VisObjes>
+		<passability>
+			<data>
+				<Item>
+					<data>
+						<Item>1</Item>
+						<Item>1</Item>
+						<Item>1</Item>
+					</data>
+				</Item>
+			</data>
+		</passability>
+		<PassProfile>
+			<polygons/>
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>true</UsePassabilityForVisibility>
+		<Origin>
+			<x>16</x>
+			<y>16</y>
+		</Origin>
+	</CenterSegments>
+	<DamagedSegments>
+		<VisObjes>
+			<Item href="/scene/geoms/all/objects/simpleobjects/fence/common/stonefence/3_visobj.xdb#xpointer(/VisObj)"/>
+		</VisObjes>
+		<passability>
+			<data>
+				<Item>
+					<data>
+						<Item>1</Item>
+						<Item>1</Item>
+						<Item>1</Item>
+					</data>
+				</Item>
+			</data>
+		</passability>
+		<PassProfile>
+			<polygons/>
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>16</x>
+			<y>16</y>
+		</Origin>
+	</DamagedSegments>
+	<DamagedSegmentsOtherSide>
+		<VisObjes/>
+		<passability>
+			<data/>
+		</passability>
+		<PassProfile>
+			<polygons/>
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>0</x>
+			<y>0</y>
+		</Origin>
+	</DamagedSegmentsOtherSide>
+	<DestroyedSegments>
+		<VisObjes>
+			<Item href="/scene/geoms/all/objects/simpleobjects/fence/common/stonefence/2_visobj.xdb#xpointer(/VisObj)"/>
+		</VisObjes>
+		<passability>
+			<data>
+				<Item>
+					<data>
+						<Item>0</Item>
+						<Item>0</Item>
+						<Item>0</Item>
+					</data>
+				</Item>
+			</data>
+		</passability>
+		<PassProfile>
+			<polygons/>
+			<Fake>0</Fake>
+		</PassProfile>
+		<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+		<Origin>
+			<x>16</x>
+			<y>16</y>
+		</Origin>
+	</DestroyedSegments>
+	<FenceHeight>100</FenceHeight>
+</FenceRPGStats>

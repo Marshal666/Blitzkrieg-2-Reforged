@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PlayList ObjectRecordID="1000135">
+	<StillOrder>
+		<Item href="/SoundAndMusic/Game/Germany/German_Combat_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/GB/English_Combat_Composition.xdb#xpointer(/Composition)" />
+	</StillOrder>
+	<RandomOrder>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Common_Combat4_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Confrontations/Germany_vs_England_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+	</RandomOrder>
+	<FadeIn href="/Other/Fade/Game/instant_fade_in.xdb#xpointer(/Fade)" />
+	<FadeOut href="/Other/Fade/Game/instant_fade_out.xdb#xpointer(/Fade)" />
+</PlayList>

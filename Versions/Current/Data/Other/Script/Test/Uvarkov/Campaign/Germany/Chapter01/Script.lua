@@ -1,0 +1,4 @@
+function FirstStart()
+end;
+
+FirstStart();

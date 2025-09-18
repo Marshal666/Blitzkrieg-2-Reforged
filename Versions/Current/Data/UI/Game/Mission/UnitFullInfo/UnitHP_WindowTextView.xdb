@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="74">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/mission/unitfullinfo/unithp_windowtextviewshared.xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>HPView</Name>
+	<Tooltip href="/other/text/game/tooltips/mission/unitfullinfo/hp/text.xdb#xpointer(/Text)"/>
+	<Visible>true</Visible>
+	<Priority>200</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>95</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>100</x>
+				<y>10</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>5</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>5</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<Text href=""/>
+	<ResizeOnTextSet>true</ResizeOnTextSet>
+	<TextFormat href=""/>
+</WindowTextView>

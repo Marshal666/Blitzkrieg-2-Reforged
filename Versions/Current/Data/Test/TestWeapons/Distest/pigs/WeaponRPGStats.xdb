@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="586">
+	<KeyName>250kg Bomb</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/scene/texandmats/game/mission/weapontypetextures/bomb_texture.xdb#xpointer(/Texture)"/>
+	<Dispersion>40</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>20</AmmoPerBurst>
+	<RangeMax>200</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>2000</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>360</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>50</Piercing>
+			<DamageRandom>50</DamageRandom>
+			<DamagePower>500</DamagePower>
+			<PiercingRandom>20</PiercingRandom>
+			<Area>4</Area>
+			<Area2>7</Area2>
+			<Speed>10</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_BOMB</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href=""/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/weapons/cannons/hits/hard_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/weapons/cannons/riccos_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/weapons/cannons/riccos_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/shots/cannondust_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/explosions/waterexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href=""/>
+			<Craters href="/other/craterset/all/shellhole/big/craterset.xdb#xpointer(/CraterSet)"/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>300</FireRate>
+			<RelaxTime>0</RelaxTime>
+			<visProjectile href="/other/projectile/test/pig/projectile.xdb#xpointer(/Projectile)"/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href="/other/text/localizedweaponsname/bombs/250kg_bomb/text.xdb#xpointer(/Text)"/>
+</WeaponRPGStats>

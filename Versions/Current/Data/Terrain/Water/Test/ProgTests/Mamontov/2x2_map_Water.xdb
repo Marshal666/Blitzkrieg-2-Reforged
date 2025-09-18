@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Water ObjectRecordID="20">
+	<Waves>
+		<Item>
+			<Amplitude>1.4</Amplitude>
+			<Period>0.3</Period>
+			<PeriodVariation>0.15</PeriodVariation>
+			<InvPeriod>0</InvPeriod>
+			<DeepWaveNumber>0.1</DeepWaveNumber>
+			<PhaseOffset>0</PhaseOffset>
+		</Item>
+	</Waves>
+	<WaterSet href=""/>
+	<Light href=""/>
+	<DepthNoise href=""/>
+	<DepthNoiseCoeff>0</DepthNoiseCoeff>
+	<TilesNumPerWaterTexture>6</TilesNumPerWaterTexture>
+	<UseWaves>true</UseWaves>
+	<HorDeformMinRadius>0</HorDeformMinRadius>
+	<HorDeformMaxRadius>0.5</HorDeformMaxRadius>
+	<HorDeformRadiusSpeed>0.0005</HorDeformRadiusSpeed>
+	<HorDeformRotationSpeedMin>0.000875</HorDeformRotationSpeedMin>
+	<HorDeformRotationSpeedVariation>0.002625</HorDeformRotationSpeedVariation>
+</Water>

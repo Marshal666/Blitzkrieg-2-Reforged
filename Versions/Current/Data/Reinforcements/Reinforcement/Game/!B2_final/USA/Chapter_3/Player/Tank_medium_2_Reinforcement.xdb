@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="498">
+	<Type>RT_TANKS</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankMedium_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Medium_Tanks/Text.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/US/tanks/M4A3_General_Sherman/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/tanks/M4A3_General_Sherman/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/US/tanks/M4A3_General_Sherman/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Medium_Tanks/Text.txt" />
+	<Transports>
+		<Item href="/Units/Technics/GB/ships/LST_LSI_gb/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+	</Transports>
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

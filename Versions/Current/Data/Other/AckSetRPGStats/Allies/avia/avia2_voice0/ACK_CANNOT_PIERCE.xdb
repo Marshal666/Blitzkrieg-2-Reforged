@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1002401">
+	<sounds>
+		<Item>
+			<PathName href="avia2-9-1.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+		<Item>
+			<PathName href="avia2-9-2.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+		<Item>
+			<PathName href="avia2-9-3.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

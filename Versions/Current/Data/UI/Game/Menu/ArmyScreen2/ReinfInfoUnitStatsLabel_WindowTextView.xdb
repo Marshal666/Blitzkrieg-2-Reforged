@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="482">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/armyscreen2/reinfinfounitstatslabel_windowtextviewshared.xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>ReinfInfoUnitStatsLabel</Name>
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>221</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>20</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>140</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>20</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<Text href="/other/text/game/menu/armyscreen2/reinfinfounitstatslabel/text.xdb#xpointer(/Text)"/>
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<TextFormat href="/ui/game/menu/common/courierbold_17pt_color_ffcecfce_center_textformat.xdb#xpointer(/TextFormat)"/>
+</WindowTextView>

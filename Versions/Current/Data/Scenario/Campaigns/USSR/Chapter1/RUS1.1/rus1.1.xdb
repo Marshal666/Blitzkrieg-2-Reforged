@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000026">
+	<FileName />
+	<ScriptText>function Init()
+	MainTankScriptID = 1;
+end;
+
+
+function Attack()
+	while 1 do
+		Wait( 3 );
+		if ( GetNUnitsInArea ( 1, &apos;at1&apos;, 0 ) &lt; 1) then
+			StartThread( Attack0 );
+		end;
+		Wait( 3 );
+		Wait( 120 );
+		if ( GetNUnitsInArea ( 1, &apos;at2&apos;, 0 ) &lt; 1) then
+			StartThread( Attack1 );
+		end;
+		Wait( 120 );
+	end;
+end;
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+function Attack0()
+	if ( GetIGlobalVar(&quot;temp.rus1_1.objective.0&quot;, 0) == 0) then  
+	LandReinforcementFromMap( 1, &apos;pz_iv_ausf_d&apos;, 0, 14 );
+	Wait( 1 );
+	Cmd( ACT_SWARM, 14, 256, GetScriptAreaParams( &quot;a1&quot; ) ); 
+	Wait( 60 );
+	LandReinforcementFromMap( 1, &apos;pz_ii_ausf_f&apos;, 0, 15 ); 
+	Wait( 1 );
+	Cmd( ACT_SWARM, 15, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	Wait( 1 );
+	LandReinforcementFromMap( 1, &apos;german_main&apos;, 0, 13 ); 
+	Wait( 1 );
+	Cmd( ACT_SWARM, 13, 256, GetScriptAreaParams( &quot;a1&quot; ) );
+	return 1;
+	end;
+end;
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+function Attack1()
+	if ( GetIGlobalVar(&quot;temp.rus1_1.objective.1&quot;, 0) == 0) then  
+	
+	LandReinforcementFromMap( 1, &apos;pz_iv_ausf_d&apos;, 1, 16 ); 
+	Wait( 1 );
+	Cmd( ACT_SWARM, 16, 256, GetScriptAreaParams( &quot;a2&quot; ) );
+	Wait( 60 );
+	LandReinforcementFromMap( 1, &apos;pz_ii_ausf_f&apos;, 1, 17 ); 
+	Wait( 1 );
+	Cmd( ACT_SWARM, 17, 256, GetScriptAreaParams( &quot;a2&quot; ) );
+	Wait( 1 );
+	LandReinforcementFromMap( 1, &apos;german_main&apos;, 1, 18 ); 
+	Wait( 1 );
+	Cmd( ACT_SWARM, 18, 256, GetScriptAreaParams( &quot;a2&quot; ) );
+	return 1;
+	end;
+end;
+---------------------------------------------------------------------------------
+
+function zd0()
+	Wait( 1000 );
+	while 1 do
+		if ( GetNUnitsInArea( 0, &quot;at1&quot;, 0 ) &lt; 1) then
+			 Wait( 1 );  		
+			CompleteObjective( 0 );
+			 Wait( 1 );  		
+			SetIGlobalVar(&quot;temp.rus1_1.objective.0&quot;, 1);
+		break;
+		end;
+    end;
+end
+
+---------------------------------------------------------------------------------
+function zd1()
+		Wait( 1000 );
+		Wait( 3 );
+	while 1 do
+	if ( GetNUnitsInArea ( 1, &quot;at2&quot;, 0 ) &lt; 1) then
+			 Wait( 3 ); 
+		CompleteObjective( 1 );
+		 Wait( 1 );  		
+		SetIGlobalVar(&quot;temp.rus1_1.objective.1&quot;, 1);	   
+	break;
+	end;  
+    end;
+end;
+---------------------------------------------------------------------------------
+function victory()
+	while 1 do
+		Wait( 3 );
+	if ((GetIGlobalVar(&quot;temp.rus1_1.objective.0&quot;, 0) 
+		* GetIGlobalVar(&quot;temp.rus1_1.objective.1&quot;, 0)) == 1) then
+		Wait( 1 );
+		Win(0);
+		break;
+	end;
+	end;
+end;
+---------------------------------------------------------------------------------
+function Unlucky()
+	while 1 do
+		Wait( 3 );
+        if (GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft( 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+---------------------------------------------------------------------------------
+function AutoRepairing()
+	while 1 do
+		Wait( 3 );
+		if IsAlive( MainTankScriptID ) == 1 then
+			local x, y = GetScriptObjCoord ( MainTankScriptID )
+			Wait( 1 );
+			Cmd ( ACT_REPAIR, 25 , 256, x, y )
+			Wait( 15 );
+		end;
+	end;
+end;
+
+function Reinf()
+		Wait( 75 );
+		LandReinforcementFromMap( 0, &apos;engineering&apos;, 0, 25 );
+		Wait( 180 );
+		LandReinforcementFromMap( 0, &apos;engineering&apos;, 0, 25 );			
+		Wait( 240 );
+		LandReinforcementFromMap( 0, &apos;engineering&apos;, 0, 25 );			
+		return 1;
+end;
+-----------------------------------------------------------------------------
+
+function Start()
+	Objectives = { zd0, zd1};
+	Objectives_Count = 2;
+	
+	StartAllObjectives( Objectives, Objectives_Count );
+	Wait( 1 );
+	GiveObjective( 0 );
+	Wait( 2 );
+	GiveObjective( 1 );
+end;
+
+---------------------------------------------------------------------------------
+
+Init();
+Start();
+
+StartThread( Reinf );
+StartThread( AutoRepairing );
+StartThread( victory );
+StartThread( zd1 );
+StartThread( zd0 );
+StartThread( Unlucky );
+StartThread( Attack ); </ScriptText>
+</Script>

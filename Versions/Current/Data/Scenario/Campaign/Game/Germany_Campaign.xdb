@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Campaign ObjectRecordID="12">
+	<Chapters>
+		<Item href="/scenario/chapter/game/germany/1_france_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/germany/2_africa_42_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/germany/3_stalingrad_chapter.xdb#xpointer(/Chapter)" />
+		<Item href="/scenario/chapter/game/germany/4_ardennes_chapter.xdb#xpointer(/Chapter)" />
+	</Chapters>
+	<LocalizedName href="/other/text/game/campaigns/germany/text.xdb#xpointer(/Text)" />
+	<ScriptFile href="/other/script/test/campaign/germany/script.xdb#xpointer(/Script)" />
+	<Screens />
+	<TextureNotStarted href="/scene/texandmats/game/menu/selectcampaign/germanpressed_texture.xdb#xpointer(/Texture)" />
+	<TextureCompleted href="/scene/texandmats/game/menu/selectcampaign/germanpressed_texture.xdb#xpointer(/Texture)" />
+	<TextureNotStartedSelected href="/scene/texandmats/game/menu/selectcampaign/germannormal_texture.xdb#xpointer(/Texture)" />
+	<TextureCompletedSelected href="/scene/texandmats/game/menu/selectcampaign/germannormal_texture.xdb#xpointer(/Texture)" />
+	<TextureMissionCompleted href="/scene/texandmats/game/menu/chaptermap/sides/targetcompletedgermany_texture.xdb#xpointer(/Texture)" />
+	<TextureChapterFinishBonus href="/scene/texandmats/game/menu/chaptermap/sides/finalbonusgermany_texture.xdb#xpointer(/Texture)" />
+	<RankExperiences>
+		<Item>
+			<Experience>0</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/oberleutnant.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>5100</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/hauptmann.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>13600</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/major.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>28900</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/oberstleutnant.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>51000</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/oberst.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>76500</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/generalmajor.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>103700</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/generalleutnant.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>134300</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/generalderinfanterie.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>170000</Experience>
+			<Rank href="/scenario/playerrank/game/ger_ranks/generaloberst.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>0</AddPromotion>
+		</Item>
+	</RankExperiences>
+	<LeaderRanks>
+		<Item>
+			<RankName href="/other/text/ranks/ger_0/leutnant.xdb#xpointer(/Text)" />
+			<ExpNeeded>0</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/ranks/ger_1/oberleutnant.xdb#xpointer(/Text)" />
+			<ExpNeeded>930</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/ranks/ger_2/hauptmann.xdb#xpointer(/Text)" />
+			<ExpNeeded>2335</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="/other/text/ranks/ger_3/major.xdb#xpointer(/Text)" />
+			<ExpNeeded>4600</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+	</LeaderRanks>
+	<LeaderFirstNames>
+		<Item href="/other/text/game/leaders/gb/firstnames/first1/text.xdb#xpointer(/Text)" />
+	</LeaderFirstNames>
+	<LeaderLastNames>
+		<Item href="/other/text/game/leaders/gb/lastnames/last1/text.xdb#xpointer(/Text)" />
+	</LeaderLastNames>
+	<LeaderPictures>
+		<Item href="/scene/texandmats/game/leaders/gb/picture2_texture.xdb#xpointer(/Texture)" />
+	</LeaderPictures>
+	<DifficultyLevels>
+		<Item href="/scenario/difficultylevel/game/easy_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/scenario/difficultylevel/game/normal_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/scenario/difficultylevel/game/hard_difficultylevel.xdb#xpointer(/DifficultyLevel)" />
+	</DifficultyLevels>
+	<IntroMovie />
+	<OutroMovie>Movies\test_outro2.xml</OutroMovie>
+	<ReinforcementTypes href="/reinforcements/reinforcementtypes/game/types_reinforcementtypes.xdb#xpointer(/ReinforcementTypes)" />
+	<IntermissionMusic href="" />
+	<SaveLoadFlag href="/scene/texandmats/game/menu/selectcampaign/saveload/german_texture.xdb#xpointer(/Texture)" />
+	<ArrowTextures />
+</Campaign>

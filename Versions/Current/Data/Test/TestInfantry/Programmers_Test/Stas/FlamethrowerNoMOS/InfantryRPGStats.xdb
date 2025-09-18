@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<InfantryRPGStats ObjectRecordID="308">
+	<KeyName />
+	<ParentName />
+	<StatsType>Infa</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href=""/>
+	<IconTexture href="/scene/texandmats/all/ui/mission/icons/units/soldier_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/localizedinfantryname/b2/gb/zold/assault_sapper_flamethrower/text.xdb#xpointer(/Text)"/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_AIR</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_SOLDIER</DBtype>
+	<M1UnitTargetType href=""/>
+	<M1UnitSpecific href=""/>
+	<M1UnitActions href=""/>
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescription href=""/>
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>4</AIPassabilityClass>
+	<AcksNames>
+		<Item href="/other/acksetrpgstats/allies/infantry/infantry1_voice0/acksetrpgstats.xdb#xpointer(/AckSetRPGStats)"/>
+	</AcksNames>
+	<Sight>30</Sight>
+	<SightPower>1</SightPower>
+	<Speed>6</Speed>
+	<RotateSpeed>0</RotateSpeed>
+	<Passability>0</Passability>
+	<Priority>0</Priority>
+	<Camouflage>40</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>0</BoundTileRadius>
+	<Weight>1</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>0</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>13</x>
+		<y>21</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>0</Radius>
+		<IsRound>false</IsRound>
+	</BoundCircle>
+	<aabb_as/>
+	<aabb_ds/>
+	<animdescs>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>3700</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3700</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>800</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>800</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>600</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>600</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>933</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>933</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2233</Length>
+					<Action>1033</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2233</Length>
+					<Action>1033</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1500</Length>
+					<Action>733</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1500</Length>
+					<Action>733</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1733</Length>
+					<Action>1133</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1733</Length>
+					<Action>1133</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2733</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>5533</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2733</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>5533</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1766</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1766</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>3300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>4666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>2666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>6333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>6333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>6200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>6200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href=""/>
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+		<Item>
+			<anims/>
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>1</SmallAABBCoeff>
+	<Actions href="/other/unitactions/test/programmers/stas/gunnernomos/unitactions.xdb#xpointer(/UnitActions)"/>
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href="/other/armorpattern/game/infantry/armorpattern.xdb#xpointer(/ArmorPattern)"/>
+	<ExpPrice>1</ExpPrice>
+	<guns>
+		<Item>
+			<Weapon href="/weapons/infantry/flame_throwers/fl_thower_eng/weaponrpgstats.xdb#xpointer(/WeaponRPGStats)"/>
+			<AttachedGunVisObj href=""/>
+			<AttachedGunLocator />
+			<ShootPointOffset>
+				<x>0.000884</x>
+				<y>-0.975369</y>
+				<z>-0.007611</z>
+			</ShootPointOffset>
+			<ShootEffectInvert>false</ShootEffectInvert>
+			<Priority>1</Priority>
+			<IsPrimary>true</IsPrimary>
+			<Ammo>100</Ammo>
+			<Direction>0</Direction>
+			<ReloadCost>50</ReloadCost>
+			<TargetAAOnly>false</TargetAAOnly>
+			<Fake>0</Fake>
+		</Item>
+	</guns>
+	<CanAttackUp>true</CanAttackUp>
+	<CanAttackDown>true</CanAttackDown>
+	<RunSpeed>7</RunSpeed>
+	<CrawlSpeed>3.5</CrawlSpeed>
+	<animtimes/>
+	<Armor>1000</Armor>
+	<GunBoneName>ArmJoint</GunBoneName>
+</InfantryRPGStats>

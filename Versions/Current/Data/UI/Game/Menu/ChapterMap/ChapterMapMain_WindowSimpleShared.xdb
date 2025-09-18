@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="401">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="ChapterMapRight_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="ChapterMapLeft_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Save_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="ArmyManager_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="PlayerInfo_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Play_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="parts/MissionInfo/MissionDesc_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="Main_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

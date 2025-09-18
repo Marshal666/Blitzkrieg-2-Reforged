@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="47">
+	<Instances>
+		<Item href="IncendiaryExplosion/IncendiaryExpDust_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="IncendiaryExplosion/IncendiaryExpFallingDust_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="IncendiaryExplosion/IncendiaryExpFireFlash_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="IncendiaryExplosion/IncendiaryExpFlash_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="IncendiaryExplosion/IncendiaryExplosion_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Med_Long_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

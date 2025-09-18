@@ -1,0 +1,66 @@
+setvar NivalNetIP = YOUR_SERVER_IP
+setvar NivalNetPort = 4200
+setvar NetGameVersion = 1
+setvar new_lock = 1
+setvar adjust_group_speed = 1
+setvar use_round_units = 1
+//setvar display_selection_ids = 3
+//setvar unload_tries_markers = 1
+//setvar use_round_turns = 1
+
+setvar deep_map_load = 1
+setvar count_checksum = 1
+setvar checksumperiod = 1
+//setvar light_checksum_count = 1
+setvar pause_on_async = 1
+setvar save_on_async = 1 
+//setvar checksum_overwrite = 1 
+setvar one_sum_per_segment = 1
+
+setvar camera_quake_power_coeff = 0.3
+setvar camera_quake_max_radius = 50
+
+setvar camera_far_plane = 400
+setvar camera_near_plane = 40
+
+setvar multiplayer_flag_calls_bonus = 1
+
+// demo stuff
+//setvar time_input_inactive = 60
+//setvar input_inactive_command = "@NoInput()"
+//setvar input_active_again_command = "@ActiveInput()"
+setvar disable_reinforcement_report = 1
+
+setvar xray_mode = 1
+setvar cursor_fade_mode = 1
+
+setvar campaign_autostart_mission = 1
+
+setvar show_all_objects_info = 0
+setvar show_buildings_info = 1
+
+setvar KRI_DEMO = 0
+setvar KRI_DEMO_MISSION_1 = "mission 1000002 0 1 0"
+setvar KRI_DEMO_MISSION_2 = "mission 1000002 0 0 0"
+setvar KRI_DEMO_MISSION_1_1 = "mission 1000002 0 1 1"
+setvar KRI_DEMO_MISSION_2_1 = "mission 1000002 0 0 1"
+setvar KRI_DEMO_MISSION_1_2 = "mission 1000002 0 1 2"
+setvar KRI_DEMO_MISSION_2_2 = "mission 1000002 0 0 2"
+
+
+setvar LANTEST.Server = 0
+setvar LANTEST.SessionName = LANTEST
+setvar LANTEST.TechLevel = 0
+setvar LANTEST.TimeLimit = 30
+setvar LANTEST.GameSpeed = 1
+setvar LANTEST.UnitExp = 0
+setvar LANTEST.CaptureTime = 15
+setvar LANTEST.Players = 2
+setvar LANTEST.PlayerName = Player
+setvar LANTEST.ExecuteOnEnd = c:\your_game_path\lantest_end.bat
+setvar LANTEST.ExecuteOnAsync = c:\your_game_path\lantest_async.bat
+
+
+menu -1
+
+lan_test

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TooltipContext ObjectRecordID="1">
+	<Window href="Mission_WindowTooltip.xdb#xpointer(/WindowTooltip)" />
+	<AppearCommands>
+		<Item href="TooltipAppearCommand/Mission_UISSendUIMessage.xdb#xpointer(/UISSendUIMessage)" />
+	</AppearCommands>
+	<MouseMaxOffsetToAppear>3</MouseMaxOffsetToAppear>
+	<AppearDelay>500</AppearDelay>
+	<SingleLineWidth>500</SingleLineWidth>
+	<HorisontalToVerticalRatio>3</HorisontalToVerticalRatio>
+</TooltipContext>

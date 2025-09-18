@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CragDesc ObjectRecordID="9">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>31</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>0</MiniMapCenterColor>
+	<MiniMapBorderColor>0</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<BorderRand>0</BorderRand>
+	<Depth>0</Depth>
+	<DepthRand>0</DepthRand>
+	<RandX>0</RandX>
+	<RandY>0</RandY>
+	<HasPeak>false</HasPeak>
+	<RidgeMaterial href="/scene/texandmats/all/objects/crags/stonepier/ridge_material.xdb#xpointer(/Material)"/>
+	<FootMaterial href=""/>
+	<LeftSided>true</LeftSided>
+	<RidgeTexGeomScale>7</RidgeTexGeomScale>
+	<DefaultWidth>128</DefaultWidth>
+	<DefaultHeight>128</DefaultHeight>
+</CragDesc>

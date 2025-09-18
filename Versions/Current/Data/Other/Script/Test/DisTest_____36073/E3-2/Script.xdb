@@ -1,0 +1,1225 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="51">
+	<FileName />
+	<ScriptText>-- deploy templates id consts
+Deploy_Tanks = 9;
+Deploy_MainInf = 11;
+Deploy_TD = 10;
+Deploy_GA = 12;
+Deploy_Fighters = 13;
+Deploy_Artillery = 14;
+Deploy_HeavyArtillery = 15;
+Deploy_AssaultSPG = 17;
+Deploy_LightTanks = 19;
+Deploy_AssaultInf = 18;
+Deploy_SingleShip = 20;
+Deploy_Support = 22;
+
+-- player reinf id consts
+Reinf_Player_Tanks = 133;
+Reinf_Player_Artillery = 132;
+Reinf_Player_MainInf = 137;
+Reinf_Player_HeavyArtillery = 136;
+Reinf_Player_Fighters = 139;
+Reinf_Player_GA = 138;
+Reinf_Player_TD = 134;
+Reinf_Player_AssaultInf = 49; -- obsolete
+Reinf_Player_AssaultSPG = 140;
+Reinf_Player_LightTanks = 135;
+Reinf_Player_Eng = 141; -- engineers
+Reinf_Player_Support = 148; -- support truck
+
+Reinf_Allies_GA = 54;
+Reinf_Allies_MainInf = 154;
+Reinf_Allies_TD = 58;
+Reinf_Allies_Tanks = 65;
+
+Point_GA = 1;
+Point_Fighters = 2;
+Point_Bombers = 3;
+Point_Paratroops = 4;
+Point_Tanks = 5;
+Point_LightTanks = 6;
+Point_AssaultGuns = 7;
+Point_TD = 8;
+Point_Artillery = 9;
+Point_HeavyArtillery = 10;
+Point_MainInf = 11;
+Point_AssaultInf = 12;
+
+Tanks, TD, MainInf, Artillery, HeavyArtillery, Fighters, GA = 1, 2, 3, 4, 5, 6, 7;
+
+ReinfIDs = { Reinf_Player_Tanks, Reinf_Player_TD, Reinf_Player_MainInf, Reinf_Player_Artillery, 
+	Reinf_Player_HeavyArtillery, Reinf_Player_Fighters, Reinf_Player_GA };
+
+PReinfs = { Reinf_Player_Tanks, Reinf_Player_LightTanks, Reinf_Player_TD, Reinf_Player_MainInf,
+	Reinf_Player_Artillery, Reinf_Player_AssaultSPG, Reinf_Player_HeavyArtillery, Reinf_Player_Fighters,
+	Reinf_Player_GA };
+
+DeployIDs = { Deploy_Tanks, Deploy_TD, Deploy_MainInf, Deploy_Artillery, Deploy_HeavyArtillery, 
+	Deploy_Fighters, Deploy_GA };
+
+-- enemy reinf id consts
+Reinf_Enemy_Tanks = 151;
+Reinf_Enemy_TD = 152;
+Reinf_Enemy_MainInf = 155;
+Reinf_Enemy_GA = 75;
+Reinf_Enemy_Fighters = 76;
+Reinf_Enemy_AssaultInf = 68;
+Reinf_Enemy_Artillery = 66;
+Reinf_Enemy_HeavyArtillery = 71;
+Reinf_Enemy_LightTanks = 70;
+Reinf_Enemy_AssaultSPG = 77;
+
+-- map objects scriptid
+Erebus_ScriptId = 2000;
+Radar_ScriptId = 501;
+Docks_ScriptId = 502;
+Station_ScriptId = 503;
+Bridge_ScriptId = 200;
+Barrels_ScriptId = 505;
+Warehouse_ScriptId = 506;
+Town_Units_ScriptId = 504;
+Artillery_ScriptId = 1004;
+AAGuns_ScriptId = 1003;
+Dock_Units_ScriptId = 1001;
+Ambush_ScriptId = 1002;
+Defence_ScriptId = 1005;
+GA_ScriptId = 1006;
+Attack_Units_ScriptId = 1007;
+Player_Troops_ScriptId = 10000;
+Eng_ScriptId = 2712;
+Support_ScriptId = 2713;
+Tanks2_ScriptId = 1010;
+
+ReinfArt = 153;
+DeployArt = 24;
+PointArt = 10;
+
+Allies_id = 19100;
+Enemy_id = 19200;
+Allies_cnt = 0;
+Enemy_cnt = 0;
+
+--sounds
+S_Alarm = 150;
+S_SeeTarget = 153;
+S_Confirm1 = 151;
+S_Confirm2 = 152;
+S_Destroyed1 = 154;
+S_Destroyed2 = 155;
+
+--Barrels_Total = GetNUnitsInScriptGroup( Barrels_ScriptId );
+--Warehouses_Total = GetNUnitsInScriptGroup( Warehouse_ScriptId );
+--Town_Units_Total = GetNUnitsInScriptGroup( Town_Units_ScriptId, 2 );
+mines1_total = GetNMinesInScriptArea( &quot;Minefield1&quot; );
+mines2_total = GetNMinesInScriptArea( &quot;Minefield2&quot; );
+mines3_total = GetNMinesInScriptArea( &quot;Minefield3&quot; );
+
+Keybuildings = {};
+Keybuildings[501] = 2;
+Keybuildings[502] = 2;
+Keybuildings[503] = 2;
+Infantry = {};
+Artillery = {};
+
+-- other
+MINRADIUS = 50;
+SIGHTRANGE = 37 * 32;
+RADIUS = 512;
+DISPERSION = 1024;
+delay_attacks = 0;
+stop_attacks = 0;
+stop_allies_attacks = 0;
+reinf_called = 0;
+player_called_aviation = 0;
+planes = {};
+planes2 = {};
+missionend = 0;
+objective12given = 0;
+stop_attacks_ai = 0;
+truck_hp = 40;
+gun_hp = 50;
+End_Of_Rampage = 0;
+check = {};
+giveall = 0;
+demoplaying = 0;
+issequence = 0;
+lasttime = 0;
+
+DeployTable = {};
+DeployTable[ Reinf_Player_Tanks ] = Deploy_Tanks;
+DeployTable[ Reinf_Player_Artillery ] = Deploy_Artillery;
+DeployTable[ Reinf_Player_MainInf ] = Deploy_MainInf;
+DeployTable[ Reinf_Player_HeavyArtillery ] = Deploy_HeavyArtillery;
+DeployTable[ Reinf_Player_Fighters ] = Deploy_Fighters;
+DeployTable[ Reinf_Player_GA ] = Deploy_GA;
+DeployTable[ Reinf_Player_TD ] = Deploy_TD;
+DeployTable[ Reinf_Player_AssaultInf ] = Deploy_AssaultInf;
+DeployTable[ Reinf_Player_AssaultSPG ] = Deploy_AssaultSPG;
+DeployTable[ Reinf_Player_LightTanks ] = Deploy_LightTanks;
+
+PointsTable = {};
+PointsTable[ Reinf_Player_Tanks ] = 1;
+PointsTable[ Reinf_Player_Artillery ] = 2;
+PointsTable[ Reinf_Player_MainInf ] = 5;
+PointsTable[ Reinf_Player_HeavyArtillery ] = 6;
+PointsTable[ Reinf_Player_Fighters ] = 3;
+PointsTable[ Reinf_Player_GA ] = 4;
+PointsTable[ Reinf_Player_TD ] = 7;
+PointsTable[ Reinf_Player_AssaultInf ] = 10;
+PointsTable[ Reinf_Player_AssaultSPG ] = 9;
+PointsTable[ Reinf_Player_LightTanks ] = 8;
+
+function ArtilleryPlayer()
+local art = {};
+local i = 0;
+	art = GetObjectListArray( Artillery_ScriptId );
+	while ( i &lt; art.n ) do
+		i = i + 2;
+		ChangePlayer( art[i], 4 );
+	end;
+end;
+
+function KillHs129( planes, mintime )
+local times = {};
+local snds = {};
+	snds[2] = S_Destroyed1;
+	snds[3] = S_Destroyed2;
+	for i = 1, planes.n do
+		times[i] = i * mintime * 20 - RandomInt( 2 * 20) - 2 * 20;
+	end;
+	for i = planes.n, 2, -1 do
+		times[i] = times[i] - times[i - 1];
+	end;
+	for i = 1, planes.n do
+		if ( i &gt; 1 ) then
+			Sleep( times[i] - 20 );
+			if ( IsAlive( planes[ i ] ) == 1 ) then
+			StartSound( snds[i], 0, 0, 0, 3, 2 );
+			end;
+			Sleep( 20 );
+		else
+			Sleep( times[i] );
+		end;
+		if ( IsAlive( planes[ i ] ) == 1 ) then
+		DamageObject( planes[i], 0 );
+		end;
+	end;
+end;
+
+function NewSequence()
+local erebus_target = { 4790, 1700 };
+local Reinf_Sequence_3xHs129 = 150;
+local Deploy_Sequence_3xHs129 = 23;
+local Hs129_ScriptId = 31415;
+local Hs129_ScriptId2 = 314159;
+local cds = {0, 450, -450};
+local erebuspos_x, erebuspos_y = GetScriptObjCoord( Erebus_ScriptId );
+
+	StartSequence();
+	Sleep( 5 );
+	CameraMove( 11, 0 );
+	Sleep( 10 );
+	--Cmd( 0, Erebus_ScriptId, erebus_target[1], erebus_target[2] );
+	CameraMove( 14, 3000 );
+	Wait( 3 );
+	ViewZone( &quot;Sequence&quot;, 1 );
+
+	LandReinforcement2( 3, Reinf_Sequence_3xHs129, Deploy_Sequence_3xHs129, Point_GA, Hs129_ScriptId );
+	hs129planes = GetObjectListArray( Hs129_ScriptId );
+	Sleep( 10 );
+	for i = 1, 3 do
+	UnitCmd( ACT_MOVE, hs129planes[i], erebuspos_x + cds[i] + 100, erebuspos_y );
+	end;
+
+	Wait( 1 );
+	CameraMove( 4, 0 );
+	Sleep( 5 );
+	CameraMove( 5, 7000 );
+	Wait( 2 );
+	StartSound( S_SeeTarget, 0, 0, 0, 3, 2 );
+	Wait( 2 );
+	StartSound( S_Confirm1, 0, 0, 0, 3, 2 );
+	Sleep( 30 );
+	StartSound( S_Confirm2, 0, 0, 0, 3, 2 );
+	Sleep( 10 );
+
+	LandReinforcement2( 3, Reinf_Sequence_3xHs129, Deploy_Sequence_3xHs129, 2, Hs129_ScriptId2 );
+	hs129planes = GetObjectListArray( Hs129_ScriptId2 );
+	Sleep( 10 );
+	for i = 1, 3 do
+	UnitCmd( ACT_MOVE, hs129planes[i], erebuspos_x + cds[i], erebuspos_y + 600 );
+	end;
+
+	Sleep( 10 );
+	CameraMove( 6, 0 );
+	ViewZone( &quot;Sequence&quot;, 0 );
+	RemoveScriptGroup( Hs129_ScriptId );
+	Sleep( 10 );
+	StartThread( KillHs129, hs129planes, 6 );
+	CameraMove( 12, 9000 );
+	--Wait( 9 );
+	--StartThread( KillHs129, hs129planes, 7 );
+	Wait( 9 );
+	CameraMove( 13, 9000 );
+	Wait( 9 );
+	ViewZone( &quot;Sequence&quot;, 0 );
+	CameraMove( 7, 7000 );
+	Wait( 1 );
+	ViewZone( &quot;Docks&quot;, 1 );
+	StartThread( Erebus_Rampages );
+	Wait( 7 );
+
+	CameraMove( 2, 0 );
+	Wait( 1 );
+	CameraMove( 3, 19000 );
+	Wait( 21 );
+	
+	EndSequence();
+end;
+
+function CameraOperations()
+	StartSequence();
+	Sleep( 5 );
+	CameraMove( 4, 0 );
+	--Wait( 1 );
+	Sleep( 10 );
+	CameraMove( 5, 14000 );
+	Wait( 14 );
+	ViewZone( &quot;Sequence&quot;, 0 );
+	CameraMove( 6, 0 );
+	--Wait( 3 );
+	--CameraMove( 3, 6000 );
+	Wait( 20 );
+	CameraMove( 7, 9000 );
+	Sleep( 180 );
+	
+	CameraMove( 2, 0 );
+	Wait( 3 );
+	CameraMove( 3, 7000 );
+	Wait( 9 );
+	EndSequence();
+end;
+
+
+function _CameraOperations() -- old
+	StartSequence();
+	Sleep( 5 );
+	CameraMove( 0, 0 );
+	Wait( 1 );
+	CameraMove( 1, 11500 );
+	Sleep( 230 ); -- 11.5 sec
+	CameraMove( 2, 0 );
+	Wait( 3 );
+	CameraMove( 3, 6000 );
+	Wait( 8 );
+	EndSequence();
+end;
+
+function Sequence()
+	while ( demoplaying == 1 ) do
+		Wait( 1 );
+	end;
+	issequence = 1;
+	NewSequence();
+	--StartThread( CameraOperations );
+	--Wait( 36 );
+	--StartThread( Erebus_Rampages );
+end;
+
+function Erebus_Rampages()
+local Pos1 = { 10100, 4500 };
+local Pos2 = { 10800, 4100 };
+local Pos3 = { 10600, 4800 };
+--	Wait( 1 );
+--	StartThread( CameraOperations );
+--	Wait( 3 );
+	Cmd( ACT_SUPPRESS, Erebus_ScriptId, Pos1[1], Pos1[2] );
+	Wait( 20 );
+	Cmd( ACT_SUPPRESS, Erebus_ScriptId, Pos2[1], Pos2[2] );
+	Wait( 15 );
+	Cmd( ACT_SUPPRESS, Erebus_ScriptId, Pos3[1], Pos3[2] );
+	Wait( 15 );
+	Cmd( ACT_STOP, Erebus_ScriptId );
+	Wait( 3 );
+	End_Of_Rampage = 1;
+	issequence = 0;
+end;
+
+function CheckTrucks()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+		end;
+		if ( GetNScriptUnitsInArea( Eng_ScriptId, &quot;Defence&quot; ) &gt; 0 ) then
+			GiveSecObjective( 1 );
+			break;
+		end;
+	end;
+end;
+
+function CheckMinefield()
+local units = {};
+	while 1 do
+		Wait( 1 );
+		units = GetUnitListInAreaArray( 0, &quot;Minefield1&quot; );
+		if ( units.n == 0 ) then
+		units = GetUnitListInAreaArray( 0, &quot;Minefield2&quot; );
+		end;
+		if ( units.n == 0 ) then
+		units = GetUnitListInAreaArray( 0, &quot;Minefield3&quot; );
+		end;
+		if ( units.n &gt; 0 ) then
+		if ( ( GetUnitsByParam( units, PT_CLASS, CLASS_FIGHTER ).n == 0 ) and 
+			 ( GetUnitsByParam( units, PT_CLASS, CLASS_GROUND_ATTACK ).n == 0 ) ) then
+			CmdArray( ACT_STOP, units );
+			GiveSecObjective( 7 );
+			break;
+		end;
+		end;
+	end;
+end;
+
+function CheckInArea()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInArea( 0, &quot;Barrage_Area&quot; ) &gt; 1 ) then
+			LandReinforcement2( 2, Reinf_Enemy_LightTanks, Deploy_LightTanks, Point_LightTanks, Tanks2_ScriptId );
+			Wait( 1 );
+			Cmd( ACT_SWARM, Tanks2_ScriptId, GetScriptAreaParams( &quot;Barrage_Area&quot; ) );
+			break;
+		end;
+	end;
+end;
+
+function CheckNearTrucks()
+local trucks = GetObjectListArray( 9009 );
+local truck = GetObjectList( 9010 );
+local units = {};
+	while 1 do
+		Wait( 2 );
+		units = GetUnitListInAreaArray( 0, &quot;NearTrucks&quot; );
+		if ( units.n &gt; 0 ) then
+		if ( ( GetUnitsByParam( units, PT_CLASS, CLASS_FIGHTER ).n == 0 ) and 
+			 ( GetUnitsByParam( units, PT_CLASS, CLASS_GROUND_ATTACK ).n == 0 ) ) then
+			CmdArray( ACT_MOVE, trucks, GetScriptAreaParams( &quot;P1&quot; ) );
+			for i = 2, 11 do
+			QCmdArray( ACT_MOVE, trucks, GetScriptAreaParams( &quot;P&quot; .. i ) );
+			end;
+			UnitCmd( ACT_MOVE, truck, GetScriptAreaParams( &quot;P1&quot; ) );
+			for i = 2, 3 do
+			UnitQCmd( ACT_MOVE, truck, GetScriptAreaParams( &quot;P&quot; .. i ) );
+			end;
+			UnitQCmd( ACT_UNLOAD, truck, GetScriptAreaParams( &quot;P4&quot; ) );
+			for i = 5, 11 do
+			UnitQCmd( ACT_MOVE, truck, GetScriptAreaParams( &quot;P&quot; .. i ) );
+			end;
+			break;
+		end;
+		end;
+	end;
+end;
+
+function FirstAttack()
+local infantry = {};
+local tanks = {};
+local units = {};
+local x, y = GetScriptAreaParams( &quot;Defence&quot; );
+local attackend = 0;
+local coords = {};
+local DISP = 256;
+	units = GetObjectListArray( Attack_Units_ScriptId );
+	Trace(&quot;units.n = %g&quot;, units.n);
+	infantry = GetUnitsByParam( units, PT_TYPE, TYPE_INF );
+	Trace(&quot;infantry.n = %g&quot;, infantry.n);
+	tanks = GetUnitsByParam( units, PT_TYPE, TYPE_MECH );
+	Trace(&quot;tanks.n = %g&quot;, tanks.n);
+--	coords = GetArrayObjCoordArray( tanks );
+--	Trace(&quot;coords.n = %g&quot;, coords.n);
+	Trace( &quot;%g %g&quot;, x, y );
+	CmdArrayDisp( ACT_SWARM, infantry, DISP, x, y );
+	Wait( 45 );
+	CmdArrayDisp( ACT_SWARM, tanks, DISP, x, y );
+	-- tra la la
+--	for i = 1, tanks.n do
+--		check[ tanks[ i ] ] = 0;
+--	end;
+--	check.n = 0;
+--	while ( check.n &lt; 4 ) do
+--		Wait( 1 );
+--		for i = 1, tanks.n do
+--			if ( check[ tanks[ i ] ] == 0 ) then
+--			if ( IsAlive( tanks[ i ]) == 0 ) then
+--				check[ tanks[ i ] ] = 1;
+--				check.n = check.n + 1;			
+--			elseif ( ( GetObjectHPs( tanks[i] ) * 2 ) &lt; GetUnitRPGStats( tanks[i] ) ) then
+--				check[ tanks[ i ] ] = 1;
+--				check.n = check.n + 1;
+--				StartThread( Retreat, tanks[i], coords[i].x, coords[i].y );
+--			end;
+--			end;
+--		end;
+--	end;
+end;
+
+function SecondAttack()
+local gaplanes = {};
+	LandReinforcement2( 2, Reinf_Enemy_GA, Deploy_GA, Point_GA, GA_ScriptId );
+	Wait( 3 );
+	Cmd( ACT_SWARM, GA_ScriptId, GetScriptAreaParams( &quot;Defence&quot; ) );
+end;
+
+function Patrol( group )
+	while ( NumUnitsAliveInArray( group ) &gt; 0 ) do
+		CmdArrayDisp( ACT_SWARM, group, DISPERSION / 4, GetScriptAreaParams( &quot;Town3_1&quot; ) );
+		WaitForArrayAtArea( 2, &quot;Town3_1&quot;, group );
+		Wait( 10 );
+		CmdArrayDisp( ACT_SWARM, group, DISPERSION / 4, GetScriptAreaParams( &quot;Town3_2&quot; ) );
+		WaitForArrayAtArea( 2, &quot;Town3_2&quot;, group );
+		Wait( 10 );
+		CmdArrayDisp( ACT_SWARM, group, DISPERSION / 4, GetScriptAreaParams( &quot;Town3_3&quot; ) );
+		WaitForArrayAtArea( 2, &quot;Town3_3&quot;, group );
+		Wait( 10 );
+		CmdArrayDisp( ACT_SWARM, group, DISPERSION / 4, GetScriptAreaParams( &quot;Town3_2&quot; ) );
+		WaitForArrayAtArea( 2, &quot;Town3_2&quot;, group );
+		Wait( 10 );
+	end;
+end;
+
+-- MOCHILOVO
+function Mochilovo_Allies( allies_type )
+local Coords = { { 14700, 14600 }, { 10800, 14200 }, { 8100, 14000 } };
+local Allies_Group = {};
+local AlliesTemplates = { Deploy_GA, Deploy_Tanks, Deploy_TD, Deploy_MainInf };
+local AlliesReinfs = { Reinf_Allies_GA, Reinf_Allies_Tanks, Reinf_Allies_TD, Reinf_Allies_MainInf };
+local AlliesPoints = { 1, 5, 8, 12 };
+local Allies_id = 9100;
+	Trace(&quot;Mochilovo: Allies reinf %g landed&quot;, allies_type );
+	LandReinforcement2( 1, AlliesReinfs[allies_type], AlliesTemplates[allies_type], AlliesPoints[allies_type], Allies_id );
+	Sleep( 5 );
+	Allies_Group = GetObjectListArray( Allies_id );--GetUnitListInAreaArray( 1, &quot;Player1_Mochilovo&quot; );
+	Trace( &quot;Allies_Group.n = %g&quot;, Allies_Group.n );
+	if ( ( allies_type == 2 ) or ( allies_type == 3 ) ) then -- tanks and tank destroyers
+		CmdArrayDisp( ACT_SWARM, Allies_Group, 500, Coords[1][1], Coords[1][2] );
+		QCmdArrayDisp( ACT_SWARM, Allies_Group, 500, Coords[2][1], Coords[2][2] );
+		QCmdArrayDisp( ACT_SWARM, Allies_Group, 500, Coords[3][1], Coords[3][2] );
+	elseif ( allies_type == 4 ) then -- infantry
+		--trucks = GetUnitsByParam( Allies_Group, PT_TYPE, TYPE_MECH );
+		inf = GetUnitsByParam( Allies_Group, PT_TYPE, TYPE_INF );
+		CmdArrayDisp( ACT_SWARM, inf, 500, Coords[1][1], Coords[1][2]);
+		QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[2][1], Coords[2][2]);
+		QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[3][1], Coords[3][2]);
+		--CmdArrayDisp( ACT_UNLOAD, trucks, 200, Coords[2][1], Coords[2][2]);
+	elseif ( allies_type == 1 ) then -- ground attack
+		Wait( 5 );
+		CmdArrayDisp( ACT_SWARM, Allies_Group, DISPERSION, Coords[2][1], Coords[2][2] );
+	end;
+end;
+
+function Mochilovo_Enemy( enemy_type )
+local Coords = { { 9100, 14000 }, { 10800, 14200 }, { 14700, 14600 } };
+local Enemy_Group = {};
+local EnemyTemplates = { Deploy_Tanks, Deploy_LightTanks, Deploy_TD, Deploy_MainInf };
+local EnemyReinfs = { Reinf_Enemy_Tanks, Reinf_Enemy_LightTanks, Reinf_Enemy_TD, Reinf_Enemy_MainInf };
+local EnemyPoints = { 13, 14, 16, 18 };
+local Enemy_id = 9200;
+	Trace(&quot;Mochilovo: Enemy reinf %g landed&quot;, enemy_type );
+	LandReinforcement2( 2, EnemyReinfs[enemy_type], EnemyTemplates[enemy_type], EnemyPoints[enemy_type], Enemy_id );
+	Sleep( 5 );
+	--ChangePlayerForScriptGroup( Enemy_id, 3 );
+	Enemy_Group = GetObjectListArray( Enemy_id );--GetUnitListInAreaArray( 2, &quot;Player2_Mochilovo&quot; );
+	Trace( &quot;Enemy_Group.n = %g&quot;, Enemy_Group.n );
+	if ( ( enemy_type &gt;= 1 ) or ( enemy_type &lt;= 3 ) ) then -- tanks and tank destroyers
+		CmdArrayDisp( ACT_SWARM, Enemy_Group, 500, Coords[1][1], Coords[1][2]);
+		QCmdArrayDisp( ACT_SWARM, Enemy_Group, 500, Coords[2][1], Coords[2][2]);
+		QCmdArrayDisp( ACT_SWARM, Enemy_Group, 500, Coords[3][1], Coords[3][2]);
+	elseif ( enemy_type == 4 ) then -- infantry
+		--trucks = GetUnitsByParam( Enemy_Group, PT_TYPE, TYPE_MECH );
+		inf = GetUnitsByParam( Enemy_Group, PT_TYPE, TYPE_INF );
+		CmdArrayDisp( ACT_SWARM, inf, 500, Coords[1][1], Coords[1][2]);
+		QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[2][1], Coords[2][2]);
+		QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[3][1], Coords[3][2]);
+		--CmdArrayDisp( ACT_UNLOAD, trucks, 200, Coords[2][1], Coords[2][2]);
+	end;
+end;
+
+function MochilovoManager()
+	Trace(&quot;Mochilovo Manager started&quot;);
+	Wait( 15 );
+	while( missionend == 0 ) do
+		StartThread( Mochilovo_Allies, Random( 4 ) );
+		StartThread( Mochilovo_Enemy, Random( 4 ) );
+		Wait( 180 + RandomInt( 60 ) );
+	end;
+end;
+
+function CompletePriObjective( objnum )
+	ObjectiveChanged( objnum, 2 );
+	SetIGlobalVar( &quot;temp.objective.p&quot; .. objnum, 2 );
+end;
+
+function CompleteSecObjective( objnum )
+	ObjectiveChanged( objnum + Primary_Objectives_Count, 2 );
+	SetIGlobalVar( &quot;temp.objective.s&quot; .. objnum, 2 );
+end;
+
+function FailPriObjective( objnum )
+	ObjectiveChanged( objnum, 3 );
+	SetIGlobalVar( &quot;temp.objective.p&quot; .. objnum, 3 );
+end;
+
+function FailSecObjective( objnum )
+	ObjectiveChanged( objnum + Primary_Objectives_Count, 3 );
+	SetIGlobalVar( &quot;temp.objective.s&quot; .. objnum, 3 );
+end;
+
+function GivePriObjective( objnum )
+	ObjectiveChanged( objnum, 1 );
+	SetIGlobalVar( &quot;temp.objective.p&quot; .. objnum, 1 );
+	StartThread( PriObjectives[ objnum ] );
+end;
+
+function GiveSecObjective( objnum )
+	ObjectiveChanged( objnum + Primary_Objectives_Count, 1 );
+	SetIGlobalVar( &quot;temp.objective.s&quot; .. objnum, 1 );
+	StartThread( SecObjectives[ objnum ] );
+end;
+
+function PriObjective1() -- Erebus Rampage
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Player_Troops_ScriptId ) &lt;= 0 ) then
+			FailPriObjective( 1 );
+			break;
+		end;
+		if ( End_Of_Rampage == 1 ) then
+			CompletePriObjective( 1 );
+			ViewZone( &quot;Docks&quot;, 0 );
+			Wait( 5 );
+			DamageScriptObject( Dock_Units_ScriptId, 0 );
+			ObjectiveChanged( 1, 0 );
+			GivePriObjective( 2 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective2() -- secure the docks area
+local t_coords_x, t_coords_y = GetScriptAreaParams( &quot;Defence&quot; );
+	while 1 do
+		Wait( 2 );
+		if ( ( GetNUnitsInScriptGroup( Dock_Units_ScriptId, 2 ) + GetNUnitsInScriptGroup( Ambush_ScriptId, 2 ) ) &lt;= 0 ) then
+			CompletePriObjective( 2 );
+			Wait( 5 );
+			ObjectiveChanged( 2, 0 );
+			GivePriObjective( 3 );
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+			Sleep( 5 );
+			Cmd( ACT_MOVE, Eng_ScriptId, t_coords_x + 300, t_coords_y - 400 );
+			StartThread( CheckTrucks );
+			StartThread( CheckMinefield );
+			break;
+		end;
+		if ( GetNUnitsInScriptGroup( Player_Troops_ScriptId ) &lt;= 0 ) then
+			FailPriObjective( 2 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective3() -- build defence
+local res;
+	while 1 do
+		Wait( 2 );
+		for u = 1, 6 do
+			res = GetIGlobalVar( &quot;temp.objective.s&quot; .. u, 0 );
+			if ( res ~= 2 ) then
+				break;
+			end;
+		end;
+		if ( res == 2 ) then
+			CompletePriObjective( 3 );
+			StartThread( FirstAttack );
+			Wait( 5 );
+			ObjectiveChanged( 3, 0 );
+			ObjectiveChanged( 10, 0 );
+			ObjectiveChanged( 11, 0 );
+			ObjectiveChanged( 12, 0 );
+			ObjectiveChanged( 14, 0 );
+			ObjectiveChanged( 15, 0 );
+			GivePriObjective( 4 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective4() -- repell attacks
+local res;
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Attack_Units_ScriptId ) &lt;= 0 ) then
+		--if ( check.n == 4 ) then
+			CompletePriObjective( 4 );
+			Wait( 5 );
+			--ObjectiveChanged( 3, 0 );
+			EnableReinforcementPoint( 0, Point_Fighters + 12, 1 );
+			StartThread( SecondAttack );
+			GivePriObjective( 5 );
+			break;
+		end;
+		if ( ( GetNUnitsInArea( 0, &quot;Defence&quot; ) &lt;= 0 ) and ( GetNUnitsInArea( 2, &quot;Defence&quot; ) &gt; 0 ) ) then
+			FailPriObjective( 4 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective5() -- take down GA
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( GA_ScriptId ) &lt;= 0 ) then
+			CompletePriObjective( 5 );
+			EnableReinforcementPoint( 0, Point_Fighters + 12, 0 );
+			EnableReinforcementPoint( 0, Point_LightTanks + 12, 1 );
+			EnableReinforcementPoint( 0, Point_Tanks + 12, 1 );
+			LandReinforcement2( 2, ReinfArt, DeployArt, PointArt, Artillery_ScriptId );
+			Wait( 5 );
+			ObjectiveChanged( 5, 0 );
+			GivePriObjective( 6 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective6() -- destroy aa guns
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( AAGuns_ScriptId, 2 ) &lt;= 0 ) then
+			CompletePriObjective( 6 );
+			EnableReinforcementPoint( 0, Point_LightTanks + 12, 0 );
+			EnableReinforcementPoint( 0, Point_Tanks + 12, 0 );
+			EnableReinforcementPoint( 0, Point_GA + 12, 1 );
+			Wait( 5 );
+			ObjectiveChanged( 6, 0 );
+			GivePriObjective( 7 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective7() -- destroy heavy artillery
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Artillery_ScriptId, 2 ) &lt;= 0 ) then
+			CompletePriObjective( 7 );
+			EnableReinforcementPoint( 0, Point_GA + 12, 0 );
+			EnableReinforcementPoint( 0, Point_HeavyArtillery + 12, 1 );
+			EnableReinforcementPoint( 0, Point_LightTanks + 12, 1 );
+			if ( GetNUnitsInScriptGroup( Player_Troops_ScriptId ) &lt;= 0 ) then
+				LandReinforcement( 0, Reinf_Player_Tanks, Deploy_Tanks, Point_Tanks + 12 );
+			end;
+			Wait( 5 );
+			ViewZone( &quot;Barrage_Area&quot;, 1 );
+			ObjectiveChanged( 7, 0 );
+			StartThread( MochilovoManager );
+			GivePriObjective( 8 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective8() -- destroy enemy defence
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Defence_ScriptId, 2 ) &lt;= 0 ) then
+			CompletePriObjective( 8 );
+			EnableReinforcementPoint( 0, Point_HeavyArtillery + 12, 0 );
+			EnableReinforcementPoint( 0, Point_LightTanks + 12, 1 );
+			EnableReinforcementPoint( 0, Point_Tanks + 12, 1 );
+			EnableReinforcementPoint( 0, Point_AssaultGuns + 12, 1 );
+			EnableReinforcementPoint( 0, Point_TD + 12, 1 );
+			EnableReinforcementPoint( 0, Point_GA + 12, 1 );
+			EnableReinforcementPoint( 0, Point_MainInf + 12, 1 );
+			ViewZone( &quot;Barrage_Area&quot;, 0 );
+			Wait( 5 );
+			StartThread( CheckInArea );
+			GivePriObjective( 9 );
+			break;
+		end;
+	end;
+end;
+
+function PriObjective9() -- secure the town
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( Town_Units_ScriptId, 2 ) &lt;= 1 ) then
+			CompletePriObjective( 9 );
+			break;
+		end;
+	end;
+end;
+
+function SecObjective1() -- building trenches
+	while 1 do
+		Wait( 2 );
+		if ( GetNTrenchesInScriptArea( &quot;Defence&quot; ) &gt; 3 ) then
+			CompleteSecObjective( 1 );
+			Wait( 3 );
+			GiveSecObjective( 2 );
+			break;
+		end;
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+		end;
+	end;
+end;
+
+function SecObjective2() -- building obstacles
+	while 1 do
+		Wait( 2 );
+		if ( ( GetNAPFencesInScriptArea( &quot;Defence&quot; ) + GetNAntitankInScriptArea( &quot;Defence&quot; ) &gt; 5 ) ) then
+			CompleteSecObjective( 2 );
+			Wait( 3 );
+			GiveSecObjective( 3 );
+			break;
+		end;
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+		end;
+	end;
+end;
+
+function SecObjective3() -- placing mines
+	while 1 do
+		Wait( 2 );
+		if ( GetNMinesInScriptArea( &quot;Defence&quot; ) &gt;= 8 ) then
+			CompleteSecObjective( 3 );
+			Wait( 3 );
+			ObjectiveChanged( 1 + Primary_Objectives_Count, 0 );
+			ObjectiveChanged( 2 + Primary_Objectives_Count, 0 );
+			ObjectiveChanged( 3 + Primary_Objectives_Count, 0 );
+			GiveSecObjective( 4 );
+			EnableReinforcementPoint( 0, Point_MainInf + 12, 1 );
+			break;
+		end;
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+		end;
+	end;
+end;
+
+function SecObjective4() -- calling reinforcements
+local reinfunits = {};
+	while 1 do
+		Wait( 1 );
+		reinfunits = GetUnitListInAreaArray( 0, &quot;Player_Reinf&quot; );
+		Trace( &quot;reinfunits.n = %g&quot;, reinfunits.n );
+		if ( reinfunits.n &gt; 0 ) then
+			Infantry = GetUnitsByParam( reinfunits, PT_TYPE, TYPE_INF );
+			if ( Infantry.n &gt; 0 ) then
+				Trace( &quot;Infantry.n = %g&quot;, Infantry.n );
+				CompleteSecObjective( 4 );
+				EnableReinforcementPoint( 0, Point_MainInf + 12, 0 );
+				Wait( 3 );
+				GiveSecObjective( 5 );
+				break;
+			end;
+		end;
+	end;
+end;
+
+function SecObjective5() -- placing infantry in trenches and buildings
+local reinfunits = {};
+local istates = {};
+	while 1 do
+		Wait( 1 );
+		istates = GetUnitArrayStatesArray( Infantry );
+		Trace(CountMatchingValues( istates, {STATE_REST_ENTRENCHMENT, STATE_REST_BUILDING; n = 2} ));
+		if ( CountMatchingValues( istates, {STATE_REST_ENTRENCHMENT, STATE_REST_BUILDING; n = 2} ) &gt; 2 ) then
+			CompleteSecObjective( 5 );
+			
+			Wait( 3 );
+			EnableReinforcementPoint( 0, Point_Artillery + 12, 1 );
+			GiveSecObjective( 6 );
+			break;
+		end;
+		if ( GetNUnitsInArray( Infantry ) == 0 ) then
+			LandReinforcement( 0, Reinf_Player_MainInf, Deploy_MainInf, Point_MainInf + 12 );
+			Sleep( 5 );
+			reinfunits = GetUnitListInAreaArray( 0, &quot;Player_Reinf&quot; );
+			Infantry = GetUnitsByParam( reinfunits, PT_TYPE, TYPE_INF );
+		end;
+	end;
+end;
+
+function SecObjective6() -- deploying artillery
+local reinfunits = {};
+local mindir = 1000;
+local maxdir = 12000;
+local astates = {};
+local dr = 0;
+Artillery.n = 0;
+	while 1 do
+		Wait( 1 );
+		if ( Artillery.n == 0 ) then
+			reinfunits = GetUnitListInAreaArray( 0, &quot;Player_Reinf&quot; );
+			if ( reinfunits.n &gt; 0 ) then
+				Artillery = GetUnitsByParam( reinfunits, PT_CLASS, CLASS_ANTITANK_GUN );
+			end;
+		end;
+		if ( Artillery.n &gt; 0 ) then
+			if ( dr == 0 ) then
+				EnableReinforcementPoint( 0, Point_Artillery + 12, 0 );
+				dr = 1;
+			end;
+			astates = GetUnitArrayStatesArray( Artillery );
+			if ( ( OnlyValues( astates, {STATE_REST; n = 1} ) == 1 ) and ( GetNUnitsInDirection( Artillery, mindir, maxdir, 1 ) &gt; 0 ) and
+			--	( IsGroupInArea( 0, &quot;Defence2&quot;, Artillery ) == 1 ) ) then
+			GetNArrayUnitsInArea( 0, &quot;Defence2&quot;, Artillery ) &gt; 0 ) then
+				CompleteSecObjective( 6 );
+				break;
+			end;
+		end;
+	end;
+end;
+
+function SecObjective7() -- demining
+local factor1, factor2, factor3;
+	while 1 do
+		Wait( 2 );
+		factor1 = GetNMinesInScriptArea( &quot;Minefield1&quot; ) / mines1_total;
+		factor2 = GetNMinesInScriptArea( &quot;Minefield2&quot; ) / mines2_total;
+		factor3 = GetNMinesInScriptArea( &quot;Minefield3&quot; ) / mines3_total;
+		if ( ( factor1 &lt; 0.6 ) or ( factor2 &lt; 0.6 ) or ( factor3 &lt; 0.6 ) ) then
+			CompleteSecObjective( 7 );
+			break;
+		end;
+		if ( GetNUnitsInScriptGroup( Eng_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Eng, Deploy_Support, Point_Tanks + 12, Eng_ScriptId );
+		end;
+		if ( GetNUnitsInScriptGroup( Support_ScriptId ) &lt;= 0 ) then
+			LandReinforcement2( 0, Reinf_Player_Support, Deploy_Support, Point_Tanks + 12, Support_ScriptId );
+		end;
+	end;
+end;
+
+-----
+function KeybuildingCheck()
+local enable, rnf1, rnf2;
+	while ( missionend == 0 ) do
+	Wait( 5 );
+	for i = 501, 503 do
+		local tmp1 = -1;
+		local tmp2 = -1;
+		local x, y = GetScriptObjCoord( i );
+		--Trace( &quot;num1 = %g&quot;, GetNUnitsInCircle( 0, x, y, RADIUS ) );
+		--if ( GetNUnitsInCircle( 0, x, y, RADIUS * 1.5 ) &gt; 0 ) then
+		if ( GetNUnitsInScriptGroup( i, 0 ) == 1 ) then
+			tmp1 = 0;
+		end;
+		--Trace( &quot;num2 = %g&quot;, GetNUnitsInCircle( 2, x, y, RADIUS ) +
+		--	GetNUnitsInCircle( 3, x, y, RADIUS ) );
+		--if ( ( GetNUnitsInCircle( 2, x, y, RADIUS * 1.5 ) &gt; 0 ) or
+		--	( GetNUnitsInCircle( 3, x, y, RADIUS * 1.5 ) &gt; 0 ) ) then
+		if ( ( GetNUnitsInScriptGroup( i, 2 ) + GetNUnitsInScriptGroup( i, 3 ) ) == 1 ) then
+			tmp2 = 2;
+		end;
+		tmp = tmp1 + tmp2 + 1;
+		if ( tmp == 0 ) then
+			enable = 1;
+		elseif ( tmp ~= 0 ) then
+			enable = 0;
+		end;
+		if ( i == Docks_ScriptId ) then
+			--rnf1 = Reinf_Player_AssaultSPG;
+			rnf1 = Point_AssaultGuns;
+			rnf2 = 0;
+		elseif ( i == Station_ScriptId ) then
+			--rnf1 = Reinf_Player_AssaultInf;
+			rnf1 = Point_AssaultInf;
+			rnf2 = Point_HeavyArtillery;
+			--rnf2 = Reinf_Player_HeavyArtillery;
+		elseif ( i == Radar_ScriptId ) then
+			--rnf1 = Reinf_Player_GA;
+			rnf1 = Point_GA;
+			rnf2 = 0;
+		end;
+		if ( tmp &gt;= 0 ) and ( tmp &lt;= 2 ) then
+		if ( Keybuildings[i] ~= tmp ) then
+			Trace( &quot;build = %g, player = %g&quot;, i, tmp );
+			Keybuildings[i] = tmp;
+			--EnableReinforcement( 0, rnf1, enable );
+			EnableReinforcementPoint( 0, rnf1, enable );
+			if ( rnf2 ~= 0 ) then
+				--EnableReinforcement( 0, rnf2, enable );
+				EnableReinforcementPoint( 0, rnf2, enable );
+			end;
+		end;
+		end;
+	end;
+	end;
+end;
+-----
+
+function WinCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( GetIGlobalVar( &quot;temp.objective.p9&quot;, 0 ) == 2 ) then
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			missionend = 1;
+		end;
+	end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		for u = 1, Primary_Objectives_Count do
+			if ( GetIGlobalVar( &quot;temp.objective.p&quot; .. u, 0 ) == 3 ) then
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				break;
+			end;
+		end;
+		for u = 1, Secondary_Objectives_Count do
+			if ( GetIGlobalVar( &quot;temp.objective.s&quot; .. u, 0 ) == 3 ) then
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				break;
+			end;
+		end;
+	end;
+end;
+
+-- DEMO strikes
+function Demo_Allies( allies_type )
+--local Coords = { { 14000, 14300 }, { 10800, 14200 }, { 8100, 14000 } };
+local Coords = { { 2500, 5900 }, { 10800, 14200 }, { 8100, 14000 } };
+local Allies_Group = {};
+local AlliesTemplates = { Deploy_GA, Deploy_Tanks, Deploy_TD, Deploy_MainInf };
+local AlliesReinfs = { Reinf_Allies_GA, Reinf_Allies_Tanks, Reinf_Allies_TD, Reinf_Allies_MainInf };
+local AlliesPoints = { 13, 16, 20, 24 };
+	Allies_cnt = Allies_cnt + 1;
+local id1 = Allies_id + Allies_cnt;
+	Trace(&quot;Demo: Allies reinf %g landed&quot;, allies_type );
+	LandReinforcement2( 1, AlliesReinfs[allies_type], AlliesTemplates[allies_type], AlliesPoints[allies_type], id1 );
+	Sleep( 5 );
+	Allies_Group = GetObjectListArray( id1 );--GetUnitListInAreaArray( 1, &quot;Player1_Mochilovo&quot; );
+	Trace( &quot;Allies_Group.n = %g&quot;, Allies_Group.n );
+	if ( ( allies_type == 2 ) or ( allies_type == 3 ) ) then -- tanks and tank destroyers
+		CmdArrayDisp( ACT_SWARM, Allies_Group, 400, Coords[1][1], Coords[1][2] );
+		--QCmdArrayDisp( ACT_SWARM, Allies_Group, 500, Coords[2][1], Coords[2][2] );
+		--QCmdArrayDisp( ACT_SWARM, Allies_Group, 500, Coords[3][1], Coords[3][2] );
+	elseif ( allies_type == 4 ) then -- infantry
+		--trucks = GetUnitsByParam( Allies_Group, PT_TYPE, TYPE_MECH );
+		--inf = GetUnitsByParam( Allies_Group, PT_TYPE, TYPE_INF );
+		CmdArrayDisp( ACT_SWARM, Allies_Group, 200, Coords[1][1], Coords[1][2]);
+		--QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[2][1], Coords[2][2]);
+		--CmdArrayDisp( ACT_UNLOAD, trucks, 200, Coords[2][1], Coords[2][2]);
+	elseif ( allies_type == 1 ) then -- ground attack
+		Wait( 3 );
+		CmdArrayDisp( ACT_SWARM, Allies_Group, 200, Coords[1][1], Coords[1][2] );
+		--CmdArrayDisp( ACT_SWARM, Allies_Group, DISPERSION, Coords[2][1], Coords[2][2] );
+	end;
+end;
+
+function Demo_Enemy( enemy_type )
+--local Coords = { { 14000, 14300 }, { 10800, 14200 }, { 14700, 14600 } };
+local Coords = { { 2600, 6400 }, { 10800, 14200 }, { 14700, 14600 } };
+local Enemy_Group = {};
+local EnemyTemplates = { Deploy_Tanks, Deploy_LightTanks, Deploy_TD, Deploy_MainInf };
+local EnemyReinfs = { Reinf_Enemy_Tanks, Reinf_Enemy_LightTanks, Reinf_Enemy_TD, Reinf_Enemy_MainInf };
+local EnemyPoints = { 5, 6, 8, 11 };
+	Enemy_cnt = Enemy_cnt + 1;
+local id1 = Enemy_id + Enemy_cnt;
+	Trace(&quot;Demo: Enemy reinf %g landed&quot;, enemy_type );
+	LandReinforcement2( 3, EnemyReinfs[enemy_type], EnemyTemplates[enemy_type], EnemyPoints[enemy_type], id1 );
+	Sleep( 5 );
+	--ChangePlayerForScriptGroup( Enemy_id, 3 );
+	Enemy_Group = GetObjectListArray( id1 );--GetUnitListInAreaArray( 2, &quot;Player2_Mochilovo&quot; );
+	Trace( &quot;Enemy_Group.n = %g&quot;, Enemy_Group.n );
+	if ( ( enemy_type &gt;= 1 ) or ( enemy_type &lt;= 3 ) ) then -- tanks and tank destroyers
+		CmdArrayDisp( ACT_SWARM, Enemy_Group, 400, Coords[1][1], Coords[1][2]);
+		--QCmdArrayDisp( ACT_SWARM, Enemy_Group, 500, Coords[2][1], Coords[2][2]);
+		--QCmdArrayDisp( ACT_SWARM, Enemy_Group, 500, Coords[3][1], Coords[3][2]);
+	elseif ( enemy_type == 4 ) then -- infantry
+		--trucks = GetUnitsByParam( Enemy_Group, PT_TYPE, TYPE_MECH );
+		--inf = GetUnitsByParam( Enemy_Group, PT_TYPE, TYPE_INF );
+		CmdArrayDisp( ACT_SWARM, Enemy_Group, 200, Coords[1][1], Coords[1][2]);
+		--QCmdArrayDisp( ACT_SWARM, inf, 500, Coords[2][1], Coords[2][2]);
+		--CmdArrayDisp( ACT_UNLOAD, trucks, 200, Coords[2][1], Coords[2][2]);
+	end;
+end;
+
+function StartDemo()
+local period = 60 * 2;
+	Allies_cnt = 0;
+	Enemy_cnt = 0;
+	CameraMove( 10, 0 );
+	ViewZone( &quot;Demo&quot;, 1 );
+	Trace(&quot;Demo started&quot;);
+	Sleep( 10 );
+	while( demoplaying == 1 ) do
+		local a = Random(4);
+		if ( a == 4 ) then
+			StartThread( Demo_Allies, a );
+			StartThread( Demo_Enemy, a );
+		else
+			StartThread( Demo_Allies, Random( 3 ) );
+			StartThread( Demo_Enemy, Random( 3 ) );
+		end;
+		t = period;
+		while ( ( demoplaying == 1 ) and ( t &gt; 0 ) ) do
+			Sleep( 10 );
+			t = t - 1;
+		end;
+	end;
+	for i = 1, Allies_cnt do
+		RemoveScriptGroup( Allies_id + i );
+	end;
+	for i = 1, Enemy_cnt do
+		RemoveScriptGroup( Enemy_id + i );
+	end;
+	CameraMove( 9, 0 );
+	ViewZone( &quot;Demo&quot;, 0 );
+end;
+
+function DemoModeManager()
+local secondtime = 230;
+local t = secondtime;
+	StartThread( StartDemo );
+	while ( t &gt; 0 ) do
+		Wait( 1 );
+		t = t - 1;
+		if ( demoplaying == 0 ) then
+			return 0;
+		end;
+	end;
+	SetIGlobalVar( &quot;DemoRestart&quot;, 1 );
+	AskClient( &quot;mission 7 0 1&quot; );
+end;
+
+function CheckRestart()
+	if ( ( GetIGlobalVar( &quot;ActiveInput&quot;, 0 ) == 1 ) or ( GetIGlobalVar( &quot;DemoRestart&quot;, 0 ) == 0 ) ) then
+		SetIGlobalVar( &quot;DemoRestart&quot;, 0 );
+		SetIGlobalVar( &quot;ActiveInput&quot;, 0 );
+		StartThread( CheckNoInputEvent );
+		return 0;
+	end;
+	demoplaying = 1;
+	StartThread( CheckActiveInputEvent );
+	DemoModeManager();
+end;
+
+function GiveAll()
+	EnableReinforcementPoint( 0, Point_GA, 1 );
+	EnableReinforcementPoint( 0, Point_Fighters, 1 );
+	EnableReinforcementPoint( 0, Point_Tanks, 1 );
+	EnableReinforcementPoint( 0, Point_LightTanks, 1 );
+	EnableReinforcementPoint( 0, Point_AssaultGuns, 1 );
+	EnableReinforcementPoint( 0, Point_TD, 1 );
+	EnableReinforcementPoint( 0, Point_Artillery, 1 );
+	EnableReinforcementPoint( 0, Point_HeavyArtillery, 1 );
+	EnableReinforcementPoint( 0, Point_MainInf, 1 );
+	giveall = 1;
+	SetReinforcementRecycleTime( 0, -1, 1000 );
+	ChangePlayerForScriptGroup( Erebus_ScriptId, 0 );
+end;
+
+function CheckNoInputEvent()
+local firsttime = 60;
+local seqtime = 0;
+	while ( GetIGlobalVar( &quot;NoInput&quot;, 0 ) == 0 ) do
+		Wait( 1 );
+	end;
+	SetIGlobalVar( &quot;NoInput&quot;, 0 );
+local t = firsttime - GetGameTime();
+	demoplaying = 1;
+	StartThread( CheckActiveInputEvent );
+	while ( ( t &gt; 0 ) and ( demoplaying == 1 ) ) do
+		Wait( 1 );
+		t = t - 1;
+	end;
+	if ( issequence == 1 ) then
+		seqtime = 1;
+	end;
+	while ( ( issequence == 1 ) and ( demoplaying == 1 ) ) do
+		Wait( 1 );
+	end;
+	if ( seqtime == 1 ) then
+		t = 60;
+	else
+		t = 0;
+	end;
+	while ( ( t &gt; 0 ) and ( demoplaying == 1 ) ) do
+		Wait( 1 );
+		t = t - 1;
+	end;
+	if ( demoplaying == 1 ) then
+		DemoModeManager();
+	end;
+end;
+
+function CheckActiveInputEvent()
+	while ( GetIGlobalVar( &quot;ActiveInput&quot;, 0 ) == 0 ) do
+		Sleep( 10 );
+	end;
+	demoplaying = 0;
+	--CameraMove( 9, 0 );
+	SetIGlobalVar( &quot;DemoRestart&quot;, 0 );
+	SetIGlobalVar( &quot;ActiveInput&quot;, 0 );
+	SetIGlobalVar( &quot;NoInput&quot;, 0 );
+	StartThread( CheckNoInputEvent );
+end;
+
+function NoInput()
+	SetIGlobalVar( &quot;NoInput&quot;, 1 );
+end;
+
+function ActiveInput()
+	SetIGlobalVar( &quot;ActiveInput&quot;, 1 );
+end;
+
+-- Main Script --
+PriObjectives = { PriObjective1, PriObjective2, PriObjective3, PriObjective4, PriObjective5, PriObjective6,
+				PriObjective7, PriObjective8, PriObjective9 };
+SecObjectives = { SecObjective1, SecObjective2, SecObjective3, SecObjective4, SecObjective5, SecObjective6,
+				SecObjective7 };
+Primary_Objectives_Count = 9;
+Secondary_Objectives_Count = 7;
+
+for u = 1, 12 do
+	DisableReinforcement( 0, u );
+end;
+
+for u = 1, 9 do
+	SetReinforcement( 0, PReinfs[u] );
+end;
+
+for u = 1, 24 do
+	EnableReinforcementPoint( 0, u, 0 );
+end;
+
+ViewZone( &quot;Erebus&quot;, 1 );
+
+-- DEMO features
+CheckRestart();
+--
+
+Wait( 3 );
+ObjectiveChanged( 0, 1 );
+Sleep( 5 );
+ObjectiveChanged( 0, 0 );
+Wait( 3 );
+
+GivePriObjective( 1 );
+Sleep( 10 );
+--StartThread( Erebus_Rampages );
+StartThread( Sequence );
+StartThread( WinCheck );
+StartThread( LooseCheck );
+StartThread( CheckNearTrucks );</ScriptText>
+</Script>

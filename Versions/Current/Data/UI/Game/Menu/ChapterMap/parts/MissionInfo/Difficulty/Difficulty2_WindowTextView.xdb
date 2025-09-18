@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="193">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/chaptermap/missioninfo/base_windowtextviewshared.xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>Difficulty2</Name>
+	<Tooltip href=""/>
+	<Visible>false</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>45</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>100</x>
+				<y>20</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>45</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="/ui/game/common/templates/topleft/courierbold_20pt_color_ffcecfce_foregroundtextstring.xdb#xpointer(/ForegroundTextString)"/>
+	<Text href="/other/text/game/menu/chaptermap/missioninfo/difficulty/difficulty2/text.xdb#xpointer(/Text)"/>
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<TextFormat href=""/>
+</WindowTextView>

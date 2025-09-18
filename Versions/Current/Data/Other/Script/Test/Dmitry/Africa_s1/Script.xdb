@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="69">
+	<FileName />
+	<ScriptText>
+
+function RevealObjectives()
+	Wait(3);
+	ObjectiveChanged(0, 1);
+	Wait(12);
+	ObjectiveChanged(1, 1);
+	StartThread( Sity );
+	StartThread( Oil );
+end;
+
+function Sity()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;Sity&quot;) &gt;= 1) and (GetNUnitsInArea(1, &quot;Sity&quot;) &lt;=0)) then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.Sity,objective&quot;, 2 );   
+			break;
+		end;	
+	end;
+end;
+
+function Oil()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;Oil&quot;) &gt;= 1) and (GetNUnitsInArea(1, &quot;Oil&quot;) &lt;=0)) then
+			ObjectiveChanged(1, 2);
+			SetIGlobalVar( &quot;temp.Oil,objective&quot;, 2 );   
+			break;
+		end;	
+	end;
+end;
+
+-------------------------------------
+
+function Casual_winner()
+	while 1 do
+		Wait( 3 );
+		if ((GetIGlobalVar(&quot;temp.Sity,objective&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.Oil,objective&quot;, 1) == 2)) then
+		Wait(3);
+		Win(0);
+		break;
+		end;
+	end;
+end;
+
+function Casual_caput()
+        while 1 do
+            if (( GetNUnitsInParty(0) &lt; 1) and  ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+				Wait(3);
+                Win(1);
+         return 1;
+	end;
+	Wait(5);
+	end;
+end;
+
+--Main
+
+StartThread( Casual_winner );
+StartThread( Casual_caput );
+StartThread( RevealObjectives );
+
+</ScriptText>
+</Script>

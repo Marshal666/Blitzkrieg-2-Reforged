@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="22">
+	<Type>NEVT_ENGINEERING_INTERRUPTED</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/Engineering_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/EngineeringInterrupted/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTEngineeringInterrupted/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Common/Info1_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="" />
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

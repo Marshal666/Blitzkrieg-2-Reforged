@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="198">
+	<FileName />
+	<ScriptText>missionend = 0;
+function Objective0()
+	if ( IsSomeBodyAlive( 0, 502 ) ~= 0 ) then
+		CompleteObjective( 0 );
+		Wait( 3 );
+		GiveObjective( 1 );
+		return 1;
+	end;
+end;
+function Objective1()
+	if ( IsSomeBodyAlive( 0,503 ) ~= 0 ) then
+		CompleteObjective( 1 );
+		Wait( 3 );
+		GiveObjective( 2 );
+		return 1;
+	end;
+end;
+function Objective2()
+	if ( IsSomeBodyAlive( 1, 111 ) == 0 ) then
+		CompleteObjective( 2 );
+		Wait( 3 );
+		GiveObjective( 3 );
+		return 1;
+	end;
+end;
+function Objective3()
+	if ( IsSomeBodyAlive( 0, 504 ) ~= 0 ) then
+		CompleteObjective( 3 );
+		Wait( 3 );
+		GiveObjective( 4 );
+		return 1;
+	end;
+end;
+function Objective4()	if ( IsSomeBodyAlive( 0, 505 ) ~= 0 ) then
+		CompleteObjective( 4 );
+		Wait( 3 );
+		Win( 0 );
+		return 1;
+	end;
+end;
+function Objective5()
+	if ( IsSomeBodyAlive( 0, 506 ) ~= 0 ) then
+		CompleteObjective( 5 );
+		Wait( 3 );
+		GiveObjective( 1 );
+		return 1;
+	end;
+end;
+----------------------------------
+Objectives = { Objective0, Objective1, Objective2, Objective3, Objective4 };
+Objectives_Count = 5;
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+StartThread( LooseCheck );
+StartThread( WinCheck );</ScriptText>
+</Script>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="7">
+	<Type>NEVT_PLAYER_ELIMINATED</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/objective_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/playereliminated/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttplayereliminated/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>false</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href=""/>
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

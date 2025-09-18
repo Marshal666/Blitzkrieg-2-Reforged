@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="100">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/commonheader/header6_windowtextviewshared.xdb#xpointer(/WindowTextViewShared)"/>
+	<Name />
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>500</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>-1</x>
+				<y>-1</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>120</x>
+				<y>25</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<Text href="/other/text/game/menu/mainmenu/headerlight/text.xdb#xpointer(/Text)"/>
+	<ResizeOnTextSet>true</ResizeOnTextSet>
+	<TextFormat href=""/>
+</WindowTextView>

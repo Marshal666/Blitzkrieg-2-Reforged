@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="6">
+	<Map href="/test/testmaps/progtests/uvarkov/test/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers>
+		<Item>
+			<UnitType>DB_RPG_TYPE_ARM_HEAVY</UnitType>
+			<Type>RT_TANKS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/uvarkov/campaigns/tank_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType>DB_RPG_TYPE_SOLDIER</UnitType>
+			<Type>RT_ARTILLERY</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/uvarkov/campaigns/misc_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+	</ContextModifiers>
+	<bonuses/>
+	<LocalizedName href="/other/text/test/uvarkov/campaigns/germany/chapter01/mission01/name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/test/uvarkov/campaigns/germany/chapter01/mission01/desc/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>100</x>
+		<y>100</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>2</Number>
+		</Item>
+		<Item>
+			<ReinfType>RT_ARTILLERY</ReinfType>
+			<Number>3</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

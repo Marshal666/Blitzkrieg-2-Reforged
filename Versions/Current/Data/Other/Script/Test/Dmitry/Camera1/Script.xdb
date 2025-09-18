@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="151">
+	<FileName />
+	<ScriptText>function Drive()
+	StartSequence ( )
+end;
+
+
+function Camera()
+	while 1 do
+		Wait( 1 );
+		SCRunTime ( &quot;100&quot;, &quot;200&quot;, 5 );
+		Wait( 5 );
+		SCRunTime ( &quot;200&quot;, &quot;300&quot;, 5 );
+		Wait( 5 );
+		SCRunTime ( &quot;300&quot;, &quot;400&quot;, 5 );
+		Wait( 5 );
+		SCRunTime ( &quot;400&quot;, &quot;100&quot;, 5 );
+		Wait( 5 );
+	end;
+end;
+----------------------------
+StartThread(Drive);
+StartThread(Camera);</ScriptText>
+</Script>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TGTerraType ObjectRecordID="95">
+	<Material href="/Scene/TexAndMats/All/Terrain/Sets/Summer/Light_Field_Material.xdb#xpointer(/Material)" />
+	<AIProperty>
+		<Passability>0.8</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>0</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>17</SoilType>
+	</AIProperty>
+	<Color>-1259417</Color>
+	<PeakMaterial href="/Scene/TexAndMats/All/Terrain/Sets/Summer/Peaks/Light_Field_Material.xdb#xpointer(/Material)" />
+	<ScaleCoeff>1</ScaleCoeff>
+	<Sound href="/SoundAndMusic/Game/Ambient/Field_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<CycledSound href="/SoundAndMusic/Game/Ambient/field_circle.xdb#xpointer(/ComplexSoundDesc)" />
+</TGTerraType>

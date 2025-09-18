@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BuildingRPGStats ObjectRecordID="274">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_BUILDING</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels>
+		<Item>
+			<DamageHP>0</DamageHP>
+			<VisObj href="destroyed.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="/Scene/Effects/All/Destructions/GlassCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/WoodenObjectCrash_Stuff_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+	</DamageLevels>
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>4</ArmorMin>
+			<ArmorMax>4</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>4</x>
+				<y>-14</y>
+				<z>51.8785</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>4</x>
+				<y>14</y>
+				<z>51.8785</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>-14</y>
+				<z>46.82</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>14</y>
+				<z>46.82</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-14</x>
+				<y>0</y>
+				<z>37.6704</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>15</x>
+				<y>0</y>
+				<z>37.6704</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>29</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/Scene/Effects/All/Destructions/WoodenObjectCrash_Stuff_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDeath href="/Scene/Effects/All/Destructions/WoodenObjectCrash_Stuff_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>true</LeaveCorpse>
+	<DestructableCorpse>false</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks>
+			<Item>
+				<Material href="/Scene/TexAndMats/All/Terrain/DynamicDebris/274_1_Material.xdb#xpointer(/Material)" />
+				<Origin>
+					<x>-15.3564</x>
+					<y>-14.0378</y>
+				</Origin>
+				<Size>
+					<x>0</x>
+					<y>0</y>
+				</Size>
+				<Season>SEASON_SUMMER</Season>
+				<Width>10</Width>
+			</Item>
+			<Item>
+				<Material href="/Scene/TexAndMats/All/Terrain/DynamicDebris/274_0_Material.xdb#xpointer(/Material)" />
+				<Origin>
+					<x>-10.3564</x>
+					<y>-9.03785</y>
+				</Origin>
+				<Size>
+					<x>0</x>
+					<y>0</y>
+				</Size>
+				<Season>SEASON_WINTER</Season>
+				<Width>5</Width>
+			</Item>
+		</Masks>
+		<NeedDebris>true</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>-22</x>
+						<y>-25</y>
+					</Item>
+					<Item>
+						<x>23</x>
+						<y>-25</y>
+					</Item>
+					<Item>
+						<x>23</x>
+						<y>33</y>
+					</Item>
+					<Item>
+						<x>-22</x>
+						<y>33</y>
+					</Item>
+					<Item>
+						<x>-22</x>
+						<y>-25</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>15.8125</x>
+		<y>22.6563</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data />
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>58</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<type>TYPE_BULDING</type>
+	<RestSlots>4</RestSlots>
+	<MedicalSlots>0</MedicalSlots>
+	<PrimaryGun href="" />
+	<slots />
+	<DefaultWindow>
+		<DayObj href="" />
+		<NightObj href="" />
+		<DestroyedObj href="" />
+		<DestroyEffect href="" />
+		<DayDamageLevels />
+		<NightDamageLevels />
+		<MaxHP>100</MaxHP>
+	</DefaultWindow>
+	<entrances />
+	<firePoints />
+	<smokePoints>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>24575.6</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+	</smokePoints>
+	<dirExplosions />
+	<SightMultiplier>1</SightMultiplier>
+	<SoldierStatsModifier href="/Other/UnitStatsModifier/Game/Buildings/common_small.xdb#xpointer(/UnitStatsModifier)" />
+	<BuildingType>BUILDING_TYPE_UNKNOWN</BuildingType>
+	<VisibilitySrink>true</VisibilitySrink>
+	<ArmorPattern href="/Other/ArmorPattern/Game/building.xdb#xpointer(/ArmorPattern)" />
+	<DamageCoeff>0</DamageCoeff>
+</BuildingRPGStats>

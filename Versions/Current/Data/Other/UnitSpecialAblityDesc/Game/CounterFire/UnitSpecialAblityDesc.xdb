@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UnitSpecialAblityDesc ObjectRecordID="17">
+	<Name>ABILITY_ANTIATRILLERY_FIRE</Name>
+	<RefreshTime>0</RefreshTime>
+	<WorkTime>20000</WorkTime>
+	<SwitchOnTime>6000</SwitchOnTime>
+	<SwitchOffTime>0</SwitchOffTime>
+	<GroupID>ABILITY_GROUP_NOGROUP</GroupID>
+	<DisableGroupTime>0</DisableGroupTime>
+	<StatsBonus href="/other/unitstatsmodifier/game/abilities/active/counterfire/unitstatsmodifier.xdb#xpointer(/UnitStatsModifier)"/>
+	<Parameter>10000</Parameter>
+	<Description>Радиус поиска целей при одиночном использовании</Description>
+	<StopCurrentAction>true</StopCurrentAction>
+	<LocalizedName href=""/>
+	<LocalizedDesc href=""/>
+</UnitSpecialAblityDesc>

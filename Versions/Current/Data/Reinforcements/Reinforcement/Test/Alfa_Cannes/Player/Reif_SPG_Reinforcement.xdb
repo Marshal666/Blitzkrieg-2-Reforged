@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="167">
+	<Type>RT_ASSAULT_GUNS</Type>
+	<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/artillery_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/game/tooltips/reinforcements/types/assault_guns/text.xdb#xpointer(/Text)"/>
+	<Entries>
+		<Item>
+			<MechUnit href="/units/technics/gb/spg/sexton_ii_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/units/technics/gb/spg/sexton_ii_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)"/>
+			<Squad href=""/>
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/other/text/game/tooltips/reinforcements/types/assault_guns/text.xdb#xpointer(/Text)"/>
+	<Transports/>
+	<LocalizedDesc href=""/>
+</Reinforcement>

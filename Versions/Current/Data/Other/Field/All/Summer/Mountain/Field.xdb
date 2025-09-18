@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Field ObjectRecordID="24">
+	<TileShells>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>15</Value>
+					<Weight>12</Weight>
+				</Item>
+				<Item>
+					<Value>0</Value>
+					<Weight>4</Weight>
+				</Item>
+				<Item>
+					<Value>11</Value>
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value>9</Value>
+					<Weight>3</Weight>
+				</Item>
+			</Tiles>
+			<Width>512</Width>
+		</Item>
+	</TileShells>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<ObjectShells>
+		<Item>
+			<Objects/>
+			<Width>2</Width>
+			<BetweenDistance>0</BetweenDistance>
+			<Ratio>1</Ratio>
+		</Item>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/objects/flora/bush01/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/flora/bush02/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/flora/bush03/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>2</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/flora/brushwood/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>2</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/rocks/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/rocks/2/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/rocks/3/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/rocks/4/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/bigstone01/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/bigstone02/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/bigstone03/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/bigstone04/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/bigstone05/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+			</Objects>
+			<Width>512</Width>
+			<BetweenDistance>4</BetweenDistance>
+			<Ratio>0.4</Ratio>
+		</Item>
+	</ObjectShells>
+	<ProfileFileName>J:\Versions\Current\Editor\profile.tga</ProfileFileName>
+	<Height>0.5</Height>
+	<PatternSize>
+		<Min>3</Min>
+		<Max>5</Max>
+	</PatternSize>
+	<PositiveRatio>0.6</PositiveRatio>
+</Field>

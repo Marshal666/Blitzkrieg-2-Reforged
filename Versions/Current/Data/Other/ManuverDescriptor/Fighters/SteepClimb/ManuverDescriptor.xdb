@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ManuverDescriptor ObjectRecordID="1">
+	<Conditions>
+		<EnemyDirection href=""/>
+		<SelfDirection href=""/>
+		<SpeedAngle href=""/>
+		<Distance href=""/>
+		<SelfHeight href=""/>
+		<HeightDifference href=""/>
+		<SelfSpeed href=""/>
+		<EnemySpeed href=""/>
+	</Conditions>
+	<ManuverID>DB_EMID_STEEP_CLIMB</ManuverID>
+	<Destination>EMD_MANUVER_DEPENDENT</Destination>
+	<Attitude>EPA_ATTACK</Attitude>
+</ManuverDescriptor>

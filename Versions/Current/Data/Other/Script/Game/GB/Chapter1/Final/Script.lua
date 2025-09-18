@@ -1,0 +1,256 @@
+missionend = 0;
+total_mines = GetNMinesInScriptArea( "Mines" );
+mines_criteria = 10;
+
+function Attack1()
+	Wait( 60 + Random( 120 ) );
+	Cmd( ACT_SWARM, 101, 256, GetScriptAreaParams( "attack1" ) );
+end;
+
+function Attack2()
+	Wait( 60 + Random( 120 ) );
+	Cmd( ACT_SWARM, 102, 256, GetScriptAreaParams( "attack2" ) );
+end;
+
+function DeployMines()
+local i;
+local cx, cy;
+local lx, ly = 0, -800;
+local mines_total = 8;
+local dx = lx / mines_total;
+local dy = ly / mines_total;
+local defaultx, defaulty = GetScriptObjCoord( 987 );
+	cx, cy = GetScriptAreaParams( "mines" );
+	cx = cx - lx;
+	cy = cy - ly;
+	Wait( Random( 5 ) + 5 );
+	Cmd( ACT_PLACE_MINE, 987, 20, cx , cy );
+	for i = 1, mines_total do
+		cx = cx + dx;
+		cy = cy + dy;
+		QCmd( ACT_PLACE_MINE, 987, 20, cx, cy );
+	end;
+	QCmd( ACT_MOVE, 987, 0, defaultx, defaulty );
+end;
+
+function Attacks()
+local R_cnt1 = 17000;
+local R_cnt2 = 16000;
+local a, num, i;
+local units = {};
+	Wait( 20 );
+	while ( GetNUnitsInScriptGroup( 503, 1 ) == 1 ) do
+		R_cnt1 = R_cnt1 + 1;
+		LandReinforcementFromMap( 1, Random( 2 ), 0, R_cnt1 );
+		Wait( 1 );
+		
+		a = Random( 2 );		
+		Cmd( ACT_SWARM, R_cnt1, 200, GetScriptAreaParams( "P" .. a ) );
+		QCmd( ACT_SWARM, R_cnt1, 200, GetScriptAreaParams( "attack" .. a ) );
+		
+		num = 0;
+		for i = 16001, R_cnt2 do
+			num = num + GetNUnitsInScriptGroup( i );
+		end;
+		if ( num < 4 ) then
+			R_cnt2 = R_cnt2 + 1;
+			LandReinforcementFromMap( 2, 1, 1, R_cnt2 );
+			Wait( 1 );
+			Cmd( ACT_SWARM, R_cnt2, 200, GetScriptAreaParams( "defence" .. a ) );
+			QCmd( ACT_ROTATE, R_cnt2, 200, GetScriptAreaParams( "P" .. a ) );
+		else
+			num = 0;
+			for i = 16001, R_cnt2 do
+				num = num + GetNScriptUnitsInArea( i, "defence" .. a );
+			end;
+			if ( num == 0 ) then
+				units = GetUnitListFromGroups( 16001, R_cnt2 );
+			end;
+			for i = 1, 2 do
+				UnitCmd( ACT_SWARM, units[i], 300, GetScriptAreaParams( "defence" .. a ) );
+				UnitQCmd( ACT_ROTATE, units[i], 300, GetScriptAreaParams( "P" .. a ) );
+			end;
+		end;
+		Wait( 90 + Random( 20 ) );
+	end;
+end;
+
+function AviaAttacksDelay()
+	Wait( 120 );
+	AviaAttacks();
+end;
+
+function AviaAttacks()
+local R_cnt1 = 18000;
+local R_cnt2 = 19000;
+local units = {};
+local fighters = {};
+local bombers = {};
+local a;
+	while ( GetNUnitsInScriptGroup( 502, 1 ) == 1 ) do
+		R_cnt1 = R_cnt1 + 1;
+		LandReinforcementFromMap( 1, 0, 3, R_cnt1 );
+		units = GetObjectListArray( R_cnt1 );
+		bombers = GetUnitsByParam( units, PT_CLASS, CLASS_BOMBER );
+		fighters = GetUnitsByParam( units, PT_CLASS, CLASS_FIGHTER );
+		a = Random( 2 );
+		CmdArrayDisp( ACT_SWARM, fighters, 200, GetScriptAreaParams( "BombHere" .. a ) );
+		CmdArrayDisp( ACT_MOVE, bombers, 200, GetScriptAreaParams( "BombHere" .. a ) );
+		Wait( 5 );
+
+		R_cnt2 = R_cnt2 + 1;
+		LandReinforcementFromMap( 2, 0, 0, R_cnt2 );
+		Cmd( ACT_SWARM, R_cnt2, 200, GetScriptAreaParams( "BombHere" .. a ) );
+		
+		Wait( 180 + Random( 30 ) );
+	end;
+end;
+
+function Objective0()
+local _tmp;
+	if ( GetNUnitsInScriptGroup( 501, 0 ) < 1 ) then
+		FailObjective( 0 );
+		return 1;
+    end;
+    _tmp = 1;
+    for i = 1, Objectives_Count - 1 do
+	if ( GetIGlobalVar( "temp.objective." .. i, 0 ) ~= 2 ) then
+		_tmp = 0;
+		break;
+    end;
+    end;
+  	if ( _tmp == 1 ) then
+		CompleteObjective( 0 );
+		return 1;
+    end;
+end;
+
+function Objective1()
+	if ( ( total_mines - GetNMinesInScriptArea( "Mines" ) ) > mines_criteria ) then
+		CompleteObjective( 1 );
+		Wait( 3 );
+		GiveObjective( 2 );
+		return 1;
+    end;
+end;
+
+function Objective2()
+	if ( GetNUnitsInScriptGroup( 502, 0 ) == 1 ) then
+		CompleteObjective( 2 );
+		Wait( 3 );
+		GiveObjective( 3 );
+		return 1;
+    end;
+end;
+
+function Objective3()
+	if ( GetNUnitsInScriptGroup( 100, 1 ) == 0 ) then
+		CompleteObjective( 3 );
+		Wait( 3 );
+		GiveObjective( 4 );
+		return 1;
+    end;
+end;
+
+function Objective4()
+	if ( GetNUnitsInScriptGroup( 503, 0 ) == 1 ) then
+		CompleteObjective( 4 );
+		return 1;
+    end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( ( GetNUnitsInPlayerUF( 0 ) <= 0 ) and ( (  GetReinforcementCallsLeft( 0 ) == 0 )
+			or ( IsReinforcementAvailable( 0 ) == 0 ) ) ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 1 );
+			return
+		end;
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) == 3 ) then
+				missionend = 1;
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				return
+			end;
+		end;
+	end;
+end;
+
+function WinCheck()
+local obj;
+	while ( missionend == 0 ) do
+		obj = 1;
+		Wait( 2 );
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) ~= 2 ) then
+				obj = 0;
+				break;
+			end;
+		end;
+		if ( obj == 1 ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			return
+		end
+	end;
+end;
+
+-----
+function KeyBuilding_Flag()
+local tmpold = { 0, 1, 1 };
+local tmp;
+	while ( 1 ) do
+	Wait( 1 );
+	for i = 1, 3 do
+		if ( GetNUnitsInScriptGroup( i + 500, 0 ) == 1 ) then
+			tmp = 0;
+		elseif ( GetNUnitsInScriptGroup( i + 500, 1 ) == 1 ) then
+			tmp = 1;
+		end;
+		if ( tmp ~= tmpold[i] ) then
+			if ( tmp == 0 ) then
+				SetScriptObjectHPs( 700 + i, 50 );
+			else
+				SetScriptObjectHPs( 700 + i, 100 );
+			end;
+			tmpold[i] = tmp;
+		end;
+	end;
+	end;
+end;
+-----
+
+function VillageAttack()
+local Reinf_1 = 3;
+local R_cnt = 20000;
+	while ( GetNUnitsInScriptGroup( 502, 1 ) == 1 ) do
+		LandReinforcementFromMap( 1, Reinf_1 + RandomInt( 2 ), 0, R_cnt );
+		Wait( 1 );
+		--Cmd( ACT_SWARM, R_cnt, 200, GetScriptAreaParams( "P2" ) );
+		Cmd( ACT_SWARM, R_cnt, 200, GetScriptAreaParams( "village" ) );
+		Wait( 180 + Random( 30 ) );
+		R_cnt = R_cnt + 1;
+	end;
+end;
+
+Objectives = { Objective0, Objective1, Objective2, Objective3, Objective4 };
+Objectives_Count = 5;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+GiveObjective( 1 );
+StartThread( LooseCheck );
+StartThread( WinCheck );
+StartThread( Attack1 );
+StartThread( Attack2 );
+StartThread( Attacks );
+StartThread( VillageAttack );
+StartThread( KeyBuilding_Flag );
+StartThread( AviaAttacksDelay );
+StartThread( DeployMines );

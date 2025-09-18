@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="8">
+	<Type>NEVT_REINF_NEW_TYPE</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/reinf_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/reinfnewtype/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttreinfnewtype/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>false</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href=""/>
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

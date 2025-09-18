@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScrollableContainer ObjectRecordID="13">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/mpcreategame/maplist_windowscrollablecontainershared.xdb#xpointer(/WindowScrollableContainerShared)"/>
+	<Name>MapsList</Name>
+	<Tooltip href=""/>
+	<Visible>false</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>50</x>
+				<y>336</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>530</x>
+				<y>330</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>11</x>
+				<y>200</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>500</x>
+				<y>135</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<OnSelection>
+		<Commands>
+			<Item href="/ui/game/menu/mpcommon/selection_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+	<OnDoubleClick>
+		<Commands/>
+		<Reversable>false</Reversable>
+	</OnDoubleClick>
+</WindowScrollableContainer>

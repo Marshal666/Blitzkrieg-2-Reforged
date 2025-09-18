@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimple ObjectRecordID="624">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/UI/Game/Menu/Escape/parts/EscMenu_Bgr_1_WindowSimpleShared.xdb#xpointer(/WindowSimpleShared)" />
+	<Name>EscMenu_Bgr_1</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>-2</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>-7</x>
+				<y>2</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+</WindowSimple>

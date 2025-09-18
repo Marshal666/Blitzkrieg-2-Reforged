@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="18">
+	<Type>NEVT_UNIT_BLOWUP_AT_MINE</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/attacked_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/unitblowupatmine/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttunitblowupatmine/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href=""/>
+	<NoDupArea>300</NoDupArea>
+	<NoDupTime>20</NoDupTime>
+</NotificationEvent>

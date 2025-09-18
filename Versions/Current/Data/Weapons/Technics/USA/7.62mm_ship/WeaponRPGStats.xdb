@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="1000051">
+	<KeyName>7.62mm Broning M1919A4</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/HeavyMachineGun_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>2.47</Dispersion>
+	<AimingTime>0.5</AimingTime>
+	<AmmoPerBurst>3</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>4</RangeMin>
+	<Ceiling>1300</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>10</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>10</Piercing>
+			<DamageRandom>5</DamageRandom>
+			<DamagePower>5</DamagePower>
+			<PiercingRandom>5</PiercingRandom>
+			<Area>0</Area>
+			<Area2>1.5</Area2>
+			<Speed>700</Speed>
+			<TraceSpeedCoeff>0.9</TraceSpeedCoeff>
+			<TraceProbability>1</TraceProbability>
+			<TraceLength>100</TraceLength>
+			<TraceWidth>2</TraceWidth>
+			<TraceMaterial href="/Scene/TexAndMats/All/Units/Weapons/HMG_shot_trace.xdb#xpointer(/Material)" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/MachineGun_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitMiss href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitReflect href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitGround href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="/Scene/Effects/All/Explosions/AirExplosion_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<Craters href="" />
+			<FireRate>550</FireRate>
+			<RelaxTime>0.852</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Weapons/Technics/USA/7_62mm_browning_m1919a4/name.txt" />
+</WeaponRPGStats>

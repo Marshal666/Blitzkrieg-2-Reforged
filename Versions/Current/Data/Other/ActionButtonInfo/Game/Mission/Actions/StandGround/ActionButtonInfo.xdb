@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="15">
+	<Action>USER_ACTION_STAND_GROUND</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>false</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>false</Passive>
+	<Slot>4</Slot>
+	<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+	<Tooltip href="/other/text/game/tooltips/mission/actions/hold/text.xdb#xpointer(/Text)"/>
+	<Icon href="/scene/texandmats/game/mission/newactionbuttons/hold/normal_texture.xdb#xpointer(/Texture)"/>
+	<IconDisabled href="/scene/texandmats/game/mission/newactionbuttons/hold/disabled_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIcon href="/scene/texandmats/game/mission/newactionbuttons/hold/normalfg_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIconDisabled href="/scene/texandmats/game/mission/newactionbuttons/hold/disabledfg_texture.xdb#xpointer(/Texture)"/>
+	<PressEffect>true</PressEffect>
+	<HotkeyCmd>user_action_hold</HotkeyCmd>
+</ActionButtonInfo>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SquadRPGStats ObjectRecordID="528">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_SQUAD</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="/scene/geoms/all/units/infantry/usa/us_officer/us_officer_pistol_visobj.xdb#xpointer(/VisObj)"/>
+	<IconTexture href=""/>
+	<LocalizedName href=""/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<SquadType>SQUAD_TYPE_UNKNOWN</SquadType>
+	<Icon> </Icon>
+	<type>RIFLEMANS</type>
+	<members>
+		<Item href="/units/infantry/usa/elite_squad/es_officer_pistol/infantryrpgstats.xdb#xpointer(/InfantryRPGStats)"/>
+	</members>
+	<formations>
+		<Item>
+			<type>DEFAULT</type>
+			<order/>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href=""/>
+			<changesByEvent/>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+	</formations>
+	<availCommands>00000000000000000000000000000000</availCommands>
+	<availExposures>00000000000000000000000000000000</availExposures>
+	<availUserActions>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserActions>
+	<availUserExposures>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserExposures>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<EntrenchCover>0.5</EntrenchCover>
+</SquadRPGStats>

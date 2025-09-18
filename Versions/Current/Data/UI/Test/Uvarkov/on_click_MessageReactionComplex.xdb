@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="30">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/ui/test/uvarkov/on_click_1_arsendgamemessage.xdb#xpointer(/ARSendGameMessage)"/>
+				</data>
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/ui/test/uvarkov/on_click_2_arsendgamemessage.xdb#xpointer(/ARSendGameMessage)"/>
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/ui/test/uvarkov/check_button_click_checkiswindowenabled.xdb#xpointer(/CheckIsWindowEnabled)"/>
+	<commonBefore>
+		<data/>
+	</commonBefore>
+	<commonAfter>
+		<data/>
+	</commonAfter>
+</MessageReactionComplex>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowListCtrl ObjectRecordID="30">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/menu/mpgamelobby/contextmenu_windowlistshareddata.xdb#xpointer(/WindowListSharedData)"/>
+	<Name>ContextMenu</Name>
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>900</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>3</x>
+				<y>3</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>220</x>
+				<y>285</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>10</x>
+				<y>10</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href=""/>
+	<OnSelection>
+		<Commands>
+			<Item href="/ui/game/menu/mpgamelobby/main/contextmenuselect_uisrunreaction.xdb#xpointer(/UISRunReaction)"/>
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+	<OnDoubleClick>
+		<Commands/>
+		<Reversable>false</Reversable>
+	</OnDoubleClick>
+</WindowListCtrl>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="638">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="UnitList/UnitButton1_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitList/UnitButton2_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitList/UnitButton3_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitList/UnitButton4_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitList/UnitButton5_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>241</x>
+				<y>46</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>10</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>10</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

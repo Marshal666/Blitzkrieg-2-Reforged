@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="489">
+	<KeyName>8_8cmKwK36L56</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments>Tiger&apos;s main gun</Comments>
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>1.6</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>45</RangeMax>
+	<RangeMin>5</RangeMin>
+	<Ceiling>0</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>0</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>200</Piercing>
+			<DamageRandom>1</DamageRandom>
+			<DamagePower>1000</DamagePower>
+			<PiercingRandom>50</PiercingRandom>
+			<Area>1.73</Area>
+			<Area2>3.91</Area2>
+			<Speed>140</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/cannon_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href=""/>
+			<EffectHitDirect href="/scene/effects/all/hits/machineryhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/explosions/groundexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/hits/reflectionhit_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/explosions/groundexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/explosions/waterexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href=""/>
+			<Craters href="/other/craterset/all/shellhole/big/craterset.xdb#xpointer(/CraterSet)"/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>29.2</FireRate>
+			<RelaxTime>2.05</RelaxTime>
+			<visProjectile href=""/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href=""/>
+</WeaponRPGStats>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="4558">
+	<SrcName href="/Units/Technics/Japan/Artillery/FH150mm_Type96/2.mb" />
+	<uid>0CDFC755-F628-4A84-9AC2-2314594FAF12</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>200</FirstFrame>
+	<LastFrame>219</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>16</x>
+			<y>-42</y>
+			<z>25.7136</z>
+		</Center>
+		<HalfSize>
+			<x>49</x>
+			<y>87</y>
+			<z>25.7136</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>18</x>
+			<y>-43</y>
+			<z>23.8133</z>
+		</Center>
+		<HalfSize>
+			<x>48</x>
+			<y>83</y>
+			<z>23.8133</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

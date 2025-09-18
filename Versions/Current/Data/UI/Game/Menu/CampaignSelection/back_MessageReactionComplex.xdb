@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="63">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/ui/game/menu/hidecampaignselection_arsenduimessage.xdb#xpointer(/ARSendUIMessage)"/>
+					<Item href="/ui/game/menu/showsingleplayer_arsenduimessage.xdb#xpointer(/ARSendUIMessage)"/>
+				</data>
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data/>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/ui/game/menu/check_single_player_enabled_checkiswindowenabled.xdb#xpointer(/CheckIsWindowEnabled)"/>
+	<commonBefore>
+		<data/>
+	</commonBefore>
+	<commonAfter>
+		<data/>
+	</commonAfter>
+</MessageReactionComplex>

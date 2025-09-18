@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="20">
+	<Type>NEVT_ENGINEERING_MINE_DETECTED</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/engineering_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/engineeringminedetected/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttengineeringminedetected/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href="/other/notification/game/mission/minedetected/notification.xdb#xpointer(/Notification)"/>
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>20</NoDupTime>
+</NotificationEvent>

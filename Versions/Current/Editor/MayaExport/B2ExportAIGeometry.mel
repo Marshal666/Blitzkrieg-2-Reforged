@@ -1,0 +1,20 @@
+global proc int B2ExportAIGeometry( string $name, string $dst, string $src, string $meshes[], string $joint, string $settings )
+{
+    sysFile -del $dst;
+    if ($src != `file -q -sceneName`) {
+        file -o -f $src;
+		triangulateAll;
+    }
+    select -r `ls -dag -tr $meshes`;
+    if ($joint != "") {
+        select -add `ls -dag -tr $joint`;
+    }
+	playbackOptions -min 0 -max 1;
+	currentTime 0;
+
+    smoothAllSelected();
+
+    GrannyLoadSettings $settings;
+    GrannyExport -selectionOnly on -showInterface off $dst;
+    return !(`filetest -f $dst`);
+}

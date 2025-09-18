@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScrollableContainer ObjectRecordID="6">
+	<ClassTypeID>386593537</ClassTypeID>
+	<Shared href="ProfileList_WindowScrollableContainerShared.xdb#xpointer(/WindowScrollableContainerShared)" />
+	<Name>ProfileList</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>-13</x>
+				<y>95</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>400</x>
+				<y>250</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>25</x>
+				<y>101</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>12</x>
+				<y>12</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<OnSelection>
+		<Commands>
+			<Item href="SelectionChange_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+	<OnDoubleClick>
+		<Commands />
+		<Reversable>false</Reversable>
+	</OnDoubleClick>
+</WindowScrollableContainer>

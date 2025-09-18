@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000048">
+	<FileName href="" />
+	<ScriptText>obj_1 = 0;
+---------------- OBJECTIVE 0 ------------------ begin
+---- force to Flaks
+function RevealObjective0()
+    Wait(1);
+	ObjectiveChanged(0, 1);
+	Wait(3);
+	StartThread( lose );
+end;
+
+
+function Objective0()
+	if (GetNUnitsInArea(0, &quot;AntiAirArea&quot;,0) &gt; 0 ) then
+		return 1;
+    end;
+end;
+
+function CompleteObjective0()
+	StartThread(Change_player201);	
+	Wait(1);	StartThread(TrucksReinf);
+	Wait(1);
+	StartThread(ArtilleryCrewReinf);
+	ObjectiveChanged(0, 2);	DamageObject(GetObjectList(700),-0.1);
+	Wait(1);
+	StartThread( RevealObjective1 );
+	Trigger( Objective1, CompleteObjective1 );
+	StartThread(attack2);
+	StartThread(intercept);
+end;
+---------------- OBJECTIVE 0 ------------------ end
+
+---------------- OBJECTIVE 1 ------------------ begin
+---- Safe Flaks
+function RevealObjective1()
+    Wait(5);	
+	ObjectiveChanged(1, 1);
+	DamageScriptObject(701,10);
+end;
+
+
+function Objective1()
+	if ( GetNScriptUnitsInArea(201, &quot;KeyArea&quot;, 0) &gt; 1) then
+        return 1;
+    end;
+end;
+
+
+function CompleteObjective1()
+	Wait(5);
+	ObjectiveChanged(1, 2);	DamageObject(GetObjectList(701),-0.1);
+	Wait(3);
+	Win(0);
+end;
+---------------- OBJECTIVE 1 ------------------ end
+---------------- TRUCK       ------------------ begin
+function TrucksReinf()
+	Trace(&quot;Trucks reinforcement has started...&quot;);
+	Wait(3);
+	LandReinforcementFromMap(0, &quot;231&quot;, 0, 10006);
+	Cmd(ACT_MOVE, 10006, 0, 6625, 1471);
+	Wait(3);
+	LandReinforcementFromMap(0, &quot;Trucks&quot;, 0, 10001);
+	Cmd(ACT_MOVE, 10001, 0, 6578, 1278);
+	Wait(3);
+	LandReinforcementFromMap(0, &quot;Trucks&quot;, 0, 10002);
+	Cmd(ACT_MOVE, 10002, 0, 6526, 1055);
+	Wait(3);
+	LandReinforcementFromMap(0, &quot;Trucks&quot;, 0, 10003);
+	Cmd(ACT_MOVE, 10003, 0, 6467, 843);
+	Wait(5);
+	LandReinforcementFromMap(0, &quot;231&quot;, 0, 10004);
+	Cmd(ACT_MOVE, 10004, 0, 6409, 612);
+	--LandReinforcementFromMap(0, &quot;231&quot;, 0, 10007);
+	--Cmd(ACT_MOVE, 10007, 0, 6153, 170);
+	--Wait(3);
+	obj_1 = 1;
+end;
+
+
+function ArtilleryCrewReinf()
+	Trace(&quot;Artillery crew reinforcement has started...&quot;);
+	Wait(1);
+	N = GetNUnitsInScriptGroup(201,0);
+	if (N &lt; 3) then
+		for i = 1,(5 - N) do
+			Wait(1);
+			LandReinforcementFromMap(0, &quot;crew&quot;, 0, 209);
+			Cmd(ACT_MOVE, 209, 800, 6750, 940);
+		end;
+	end;
+end;
+
+---------------- TRUCK       ------------------ end
+
+---------------- ATTACK ----------------------- begin
+function attack1() 
+	while 1 do  
+	Wait(1); 
+		if (GetNUnitsInArea(0, &quot;PlayerApproach&quot;, 0) &gt; 0) then 
+			Wait(1); 
+			Cmd(ACT_SWARM, 114, 1, 4073, 4706);
+			Wait(40);
+			LandReinforcementFromMap(0,&quot;fighter&quot;, 0, 1001);
+			Cmd(ACT_MOVE, 1001, 2000, 4400, 4400);
+			Wait(20); 			
+			LandReinforcementFromMap(1,&quot;GAP&quot;, 0, 110);
+			Cmd(ACT_MOVE, 110, 2000, 4400, 4400);
+			break; 
+		end; 
+	end; 
+end; 
+
+---------------- ATTACK ----------------------- end
+
+---------------- ATTACK_2 --------------------- begin
+function attack2()
+	Wait(15);
+	LandReinforcementFromMap(1,&quot;crusader&quot;,1,1101);
+	LandReinforcementFromMap(1,&quot;infantry&quot;,1,1101);
+	LandReinforcementFromMap(1,&quot;infantry&quot;,1,1101);
+	Cmd(ACT_SWARM, 1101, 1, 5975, 3920);
+	while 1 do 
+	Wait(1);
+		if (GetNScriptUnitsInArea(201, &quot;AntiAirArea&quot;, 0) &lt; 2) then
+			LandReinforcementFromMap(1,&quot;light_tanks&quot;,2,116);
+			Cmd(ACT_SWARM, 113, 1, 5975, 3920);
+			Wait(1);
+			Cmd(ACT_SWARM, 116, 1, 2020, 5815);
+			QCmd(ACT_SWARM, 116, 1, 5975, 3920);
+			Wait(1);
+			StartThread(Reinforcement2);
+			Wait(60);
+			Cmd(ACT_SWARM, 1399, 1, 6639, 1485);
+			break;
+		end;
+	end;
+end;
+---------------- ATTACK_2 --------------------- end
+function Reinforcement2()
+	LandReinforcementFromMap(1, &quot;tanks&quot;, 1, 155);
+	Cmd(ACT_SWARM, 152, 1, 5975, 3920);
+	while 1 do 
+	Wait(1);
+		if (GetNUnitsInScriptGroup(113) &lt; 1 or GetNUnitsInScriptGroup(116) &lt; 1) then
+			LandReinforcementFromMap(1, &quot;infantry&quot;, 1, 152);
+			Cmd(ACT_SWARM, 152, 1, 5975, 3920);
+			break;
+		end;
+	end;
+end;
+
+---------------- LOOSE ------------------------ begin
+function lose()
+	while 1 do
+        if ( (GetNUnitsInParty(0) == 0 and GetReinforcementCallsLeft(0) == 0) or GetNUnitsInScriptGroup(201) &lt; 2 or (GetNUnitsInScriptGroup(10001) == 0 and GetNUnitsInScriptGroup(10002) == 0 and GetNUnitsInScriptGroup(10003) == 0 and obj_1 == 1)) then
+                Trace(&quot;My proigrali!!!&quot;);
+				Wait(2);
+				Loose(0);
+        return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+---------------- LOOSE ------------------------ end
+function Change_player201()
+local Objects = {};
+	Objects = GetObjectListArray( 201 );
+	for i = 1, Objects.n do
+		if (IsAlive(Objects[i]) == 1) then
+			ChangePlayer( Objects[i], 0 );
+		end;
+	end;
+end;
+
+function Change_player202()
+local Objects = {};
+	Objects = GetObjectListArray( 202 );
+	for i = 1, Objects.n do
+		if (IsAlive(Objects[i]) == 1) then
+			ChangePlayer( Objects[i], 0 );
+		end;
+	end;
+end;
+
+
+function intercept()
+	Wait(4);
+	LandReinforcementFromMap(1,&quot;artillery&quot;,0,151);
+	Wait(2);
+	StartThread(intercept_artillery);
+	Wait(10);
+	LandReinforcementFromMap(1,&quot;infantry&quot;,0,154);
+	Wait(2);
+	StartThread(intercept_infantry);
+end;
+
+function intercept_artillery()
+	Cmd(ACT_MOVE, 151, 0, 3071, 907);
+	QCmd(ACT_MOVE, 151, 0, 3816, 1398);
+	QCmd(ACT_MOVE, 151, 0, 4800, 1929);
+	QCmd(ACT_MOVE, 151, 0, 5324, 2782);
+	QCmd(ACT_MOVE, 151, 0, 5262, 4047);
+	QCmd(ACT_DEPLOY, 151, 0, 5975, 3920);
+	QCmd(ACT_ROTATE, 151, 0, 4304, 4615);
+end;
+
+function intercept_infantry()
+	Cmd(ACT_SWARM, 154, 0, 3071, 907);
+	QCmd(ACT_SWARM, 154, 0, 3816, 1398);
+	QCmd(ACT_SWARM, 154, 0, 4800, 1929);
+	QCmd(ACT_SWARM, 154, 0, 5324, 2782);
+	QCmd(ACT_SWARM, 154, 0, 5162, 4147);
+end;
+function attack()
+	while 1 do
+		Wait(1);
+		if (GetNUnitsInArea(0,&quot;attack_1&quot;,0) &gt; 0 or GetNUnitsInArea(0,&quot;attack_2&quot;,0) &gt; 0) then 
+			Cmd(ACT_SWARM, 111,500,2000,5500);
+		end;
+	end;
+end;
+
+
+StartThread(RevealObjective0);
+Trigger( Objective0, CompleteObjective0 );
+StartThread( attack1);
+StartThread(attack);</ScriptText>
+</Script>

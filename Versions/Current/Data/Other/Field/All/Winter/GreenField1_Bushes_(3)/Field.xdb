@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Field ObjectRecordID="46">
+	<TileShells>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>0</Value>
+					<Weight>1</Weight>
+				</Item>
+			</Tiles>
+			<Width>3</Width>
+		</Item>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>18</Value>
+					<Weight>2</Weight>
+				</Item>
+				<Item>
+					<Value>5</Value>
+					<Weight>1</Weight>
+				</Item>
+			</Tiles>
+			<Width>512</Width>
+		</Item>
+	</TileShells>
+	<TerraSet href="/terrain/tgterraset/sets/winter_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<ObjectShells>
+		<Item>
+			<Objects/>
+			<Width>2</Width>
+			<BetweenDistance>0</BetweenDistance>
+			<Ratio>1</Ratio>
+		</Item>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/objects/flora/bush01/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>2</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/flora/bush02/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>2</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/flora/bush03/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+			</Objects>
+			<Width>3</Width>
+			<BetweenDistance>3</BetweenDistance>
+			<Ratio>0.6</Ratio>
+		</Item>
+		<Item>
+			<Objects/>
+			<Width>6</Width>
+			<BetweenDistance>0</BetweenDistance>
+			<Ratio>1</Ratio>
+		</Item>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/objects/simpleobjects/syn/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/objects/simpleobjects/ukrainesyn/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+			</Objects>
+			<Width>512</Width>
+			<BetweenDistance>12</BetweenDistance>
+			<Ratio>0.1</Ratio>
+		</Item>
+	</ObjectShells>
+	<ProfileFileName>J:\Versions\Current\Editor\profile.tga</ProfileFileName>
+	<Height>0.1</Height>
+	<PatternSize>
+		<Min>2</Min>
+		<Max>4</Max>
+	</PatternSize>
+	<PositiveRatio>0.6</PositiveRatio>
+</Field>

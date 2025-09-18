@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="26">
+	<FileName />
+	<ScriptText>GenCarsId = 1;
+
+function Cars_Start_Movement()
+	
+	local i = 1;
+	CmdMultiple( ACT_MOVE, GenCarsId, GetScriptAreaParams( &quot;A&quot; .. i ) );
+	for i = 2, 12 do
+		QCmdMultiple( ACT_MOVE, GenCarsId, GetScriptAreaParams( &quot;A&quot; .. i ) );
+	end;
+end;
+
+Cars_Start_Movement();
+
+--StartThread( )</ScriptText>
+</Script>

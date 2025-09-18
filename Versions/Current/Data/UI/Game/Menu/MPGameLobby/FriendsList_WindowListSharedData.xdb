@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowListSharedData ObjectRecordID="29">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/ui/game/menu/mpgamelobby/friendslist_windowmsbutton.xdb#xpointer(/WindowMSButton)"/>
+	</Children>
+	<Background href="/ui/game/menu/escapemenu/escmenu_bgr_1_backgroundtiledtexture.xdb#xpointer(/BackgroundTiledTexture)"/>
+	<Foreground href=""/>
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First />
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First />
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea/>
+	<IgnoreDblClick>false</IgnoreDblClick>
+	<Interval>5</Interval>
+	<ScrollBar href=""/>
+	<Border href="/ui/game/menu/mpgamelobby/listborder/border_windowsimple.xdb#xpointer(/WindowSimple)"/>
+	<Selection href=""/>
+	<PreSelection href=""/>
+	<NegativeSelection href=""/>
+	<ListItem href="/ui/game/menu/mpgamelobby/user_windowlistitem.xdb#xpointer(/WindowListItem)"/>
+	<ListHeader href=""/>
+</WindowListSharedData>

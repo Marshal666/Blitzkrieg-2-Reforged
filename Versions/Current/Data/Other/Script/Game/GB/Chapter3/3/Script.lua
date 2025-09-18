@@ -1,0 +1,123 @@
+missionend = 0;
+
+function ErebusFire()
+	while ( IsSomeBodyAlive( 2, 10 ) > 0 ) and ( missionend == 0 ) do
+		Cmd( ACT_SUPPRESS, 10, 512, GetScriptAreaParams( "fire" .. Random( 3 ) ) );
+		Wait( 15 );
+		Cmd( ACT_STOP, 10 );
+		Wait( 40 + Random( 20 ) );
+	end;
+end;
+
+function CoastGunFire()
+local x, y;
+local stopped1, stopped2 = 0, 0;
+
+	while ( ( IsSomeBodyAlive( 1, 100 ) + IsSomeBodyAlive( 1, 101 ) ) > 0 ) and 
+		( IsSomeBodyAlive( 2, 10 ) > 0 ) do
+	if ( IsSomeBodyAlive( 1, 100 ) > 0 ) then
+	x, y = GetScriptObjCoordMedium( 100 );
+		if ( IsSomeUnitInArea( 0, x, y, 1400, 0 ) <= 0 ) then
+			Cmd( ACT_SUPPRESS, 100, 500, GetScriptObjCoord( 10 ) );
+			stopped1 = 0;
+		elseif ( stopped1 == 0 ) then
+			Cmd( ACT_STOP, 100 );
+			stopped1 = 1;
+		end;
+	end;
+	if ( IsSomeBodyAlive( 1, 101 ) > 0 ) then
+	x, y = GetScriptObjCoordMedium( 101 );
+		if ( IsSomeUnitInArea( 0, x, y, 1400, 0 ) <= 0 ) then
+			Cmd( ACT_SUPPRESS, 101, 1000, GetScriptObjCoord( 10 ) );
+			stopped2 = 0;
+		elseif ( stopped2 == 0 ) then
+			Cmd( ACT_STOP, 101 );
+			stopped2 = 1;
+		end;
+	end;
+	Wait( 4 );
+	end;
+end;
+
+function Objective0()
+	if ( IsSomeBodyAlive( 1, 100 ) < 1 ) then
+		CompleteObjective( 0 );
+		Wait( 3 );
+		GiveObjective( 1 );
+		Wait( 1 + Random( 2 ) );
+		Cmd( ACT_MOVE, 777, 100, GetScriptAreaParams( "base" ) );
+		return 1;
+    end;
+	if ( IsSomeBodyAlive( 2, 10 ) == 0 ) then
+		SCRunTime( "erebus", "erebus2", 5 );
+		Wait( 3 );
+		FailObjective( 0 );
+		return 1;
+    end;
+end;
+
+function Objective1()
+	if ( IsSomeBodyAlive( 1, 101 ) < 1 ) then
+		CompleteObjective( 1 );
+		return 1;
+    end;
+	if ( IsSomeBodyAlive( 2, 10 ) == 0 ) then
+		if ( GetIGlobalVar( "temp.objective.1", 0 ) == 1 ) then
+			SCRunTime( "erebus", "erebus2", 5 );
+			Wait( 3 );
+			FailObjective( 1 );
+			return 1;
+		end;
+    end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( ( IsSomePlayerUnit( 0 ) == 0 ) and ( GetReinforcementCallsLeft( 0 ) == 0 ) ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 1 );
+			return
+		end;
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) == 3 ) then
+				missionend = 1;
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				return
+			end;
+		end;
+	end;
+end;
+
+function WinCheck()
+local obj;
+	while ( missionend == 0 ) do
+		obj = 1;
+		Wait( 2 );
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) ~= 2 ) then
+				obj = 0;
+				break;
+			end;
+		end;
+		if ( obj == 1 ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			return
+		end
+	end;
+end;
+
+Objectives = { Objective0, Objective1 };
+Objectives_Count = 2;
+
+StartAllObjectives( Objectives, Objectives_Count );
+Wait( 1 );
+GiveObjective( 0 );
+StartThread( LooseCheck );
+StartThread( WinCheck );
+StartThread( CoastGunFire );
+StartThread( ErebusFire );

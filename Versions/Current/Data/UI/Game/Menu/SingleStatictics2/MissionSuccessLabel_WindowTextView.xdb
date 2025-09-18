@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="1000151">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="MissionSuccessLabel_WindowTextViewShared.xdb#xpointer(/WindowTextViewShared)" />
+	<Name>MissionSuccessLabel</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="TTMissionResultView_Text.txt" />
+	<Visible>false</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>6</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>22</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Text href="" />
+	<TextFileRef href="MissionSuccessLabel_Text.txt" />
+	<ResizeOnTextSet>false</ResizeOnTextSet>
+	<TextFormat href="/UI/Game/Common/Header2_center_TextFormat.xdb#xpointer(/TextFormat)" />
+</WindowTextView>

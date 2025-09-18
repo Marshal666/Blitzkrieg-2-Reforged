@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="11">
+	<Type>NEVT_AVIA_AVAILABLE</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/Avia_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/AviaAvailable/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTAviaAvailable/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Common/Info1_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>false</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="" />
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

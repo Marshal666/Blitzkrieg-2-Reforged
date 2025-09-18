@@ -1,0 +1,137 @@
+
+
+function Air_Start()
+	Wait( 1 );
+	LandReinforcementFromMap (2, 0, 0, 519 );	
+	Wait( 1 );
+	Cmd( 5, 519, 0, 1749, 1211 );
+	Wait( 4 );
+	StartThread( Air_2 );
+end;
+
+function Air_2()
+	Wait( 1 );
+	ChangePlayerForScriptGroup( 519, 0 );
+end;
+
+
+function RevealObjective0()
+    Wait(2);
+	ObjectiveChanged(0, 1);
+	Wait(3);
+	StartThread( Casual_caput );
+end;
+
+
+function Objective0()
+	if (GetNUnitsInArea(0, "LZ",0) > 0) then
+        return 1;
+    end;
+end;
+
+
+function CompleteObjective0()
+	Wait(3);
+	ObjectiveChanged(0, 2);
+	Wait(5);
+	StartThread( RevealObjective1 );
+	Trigger( Objective1, CompleteObjective1 );
+end;
+---------------------------------------2
+function RevealObjective1()
+    Wait(5);
+	ObjectiveChanged(1, 1);
+end;
+
+
+function Objective1()
+	if ((GetNUnitsInArea(0, "staff", 0 ) > 0) and (GetNUnitsInArea(1, "staff", 0) < 1)) then
+        return 1;
+    end;
+end;
+
+
+function CompleteObjective1()
+	Wait(5);
+	ObjectiveChanged(1, 2);
+	Wait(3);
+	Win(0);
+	SetIGlobalVar( "temp.HQ,objective1", 2 );
+
+end;
+-------------------------------------loose
+
+function Casual_caput()
+    while 1 do
+        if (( GetNUnitsInParty(0) < 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) and (GetIGlobalVar("temp.HQ,objective1", 1) ~= 2)) then
+		Wait(3);
+        Win(1);
+        return 1;
+	end;
+	Wait(5);
+	end;
+end;
+-------------------------------------Patrol
+function Patrol_Start()
+	while 1 do
+		Wait(3);
+		if (( GetNUnitsInScriptGroup(111) > 0) and (GetNUnitsInArea(1, "pos1", 0) > 0))then
+		Wait( 10 );
+		StartThread( Patrol_GO);
+		break;
+		end;
+	end;
+end;
+
+function Patrol_GO()
+	Wait(10);
+	Cmd(ACT_SWARM, 111, 0, 4917, 4691);
+	Wait( 5 + RandomInt( 10 ) );
+	QCmd(ACT_SWARM, 111 , 0, 5185, 2658);
+	Wait( 5 + RandomInt( 10 ) );
+	QCmd(ACT_SWARM, 111 , 0, 4839, 6213);
+	Wait( 5 + RandomInt( 10 ) );
+	StartThread( Patrol_Start );
+end;
+-------------------------------------Alert
+
+function Alert()
+	while 1 do
+		Wait(3);
+		if (GetNUnitsInArea(0, "border", 0) > 0)then
+		Wait(2);
+		StartThread( Alert1);
+		break;
+		end;
+	end;
+end;
+
+function Alert1()
+	Wait(65);
+	LandReinforcementFromMap (1, 0, 0, 1800 );
+	Wait( 2 );
+	ChangeFormation( 1800, 3 );
+	Cmd( ACT_SWARM, 1800, 0, 1685, 829 );
+	QCmd(ACT_SWARM, 1800 , 0, 2723, 5553);
+	Wait(35);
+	StartThread( Alert2 );
+end;
+
+function Alert2()
+	Wait(2);
+	LandReinforcementFromMap (1, 1, 0, 1850 );
+	Wait( 2 );
+	ChangeFormation( 1850, 3 );
+	Cmd( ACT_SWARM, 1850, 0, 1685, 829 );
+	QCmd(ACT_SWARM, 1850 , 0, 2723, 5553);
+end;
+
+------------------------Main
+
+--StartThread( Patrol_Start );
+StartThread( Air_Start );
+StartThread( Alert );
+StartThread( RevealObjective0 );
+Trigger( Objective0, CompleteObjective0 );
+
+

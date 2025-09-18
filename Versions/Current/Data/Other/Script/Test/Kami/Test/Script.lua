@@ -1,0 +1,104 @@
+
+DISPERSION = 200
+
+function RevealObjective0()
+    DisplayTrace("StartMission");
+    Wait(3);
+	ObjectiveChanged(0, 1);
+end;
+
+
+
+
+--------------------------//Trigger_Parameters//--------------------------
+
+function Condition() 
+		if (GetNUnitsInArea(1, "GBOutpost", 0) >= 1) then
+			return 1;
+		end;
+end;
+
+function Condition1()
+        if (GetNUnitsInParty(0, 0) <= 1) and (GetNUnitsInArea(1, "GBOutpost", 0) > 1) and (GetReinforcementCallsLeft(0) < 1) then
+            Win(1);
+		end;
+end;
+
+------------------------
+
+function Condition2()
+		if (GetNUnitsInArea(1, "GBOutpost", 0) <= 1) then
+			return 1;
+		end;
+end;
+
+function Condition3()
+        if ((GetNUnitsInArea(0, "GBOutpost") > 1) and (GetNUnitsInParty(1, 0) <= 1) and (GetReinforcementCallsLeft(1) < 1)) then
+            Win(0);
+		end;
+end;
+
+-------------------//Waves//--------------
+
+function Wave_1()
+	Wait( 10 );
+	ObjectiveChanged(0, 1);
+	Wait( 110 );
+	LandReinforcement( 1, 865, 0, 5000 ); 
+	Wait( 3 );
+	CmdMultipleDisp( ACT_SWARM, 5000, DISPERSION, 4950, 7231 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 5000, DISPERSION, 8294, 8161 );
+end;
+
+function Wave_2()
+	Wait( 150 );
+	LandReinforcement( 1, 864, 1, 5100 ); 
+	Wait( 3 );
+	CmdMultipleDisp( ACT_SWARM, 5100, DISPERSION, 6983, 6079 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 5000, DISPERSION, 7446, 8083 );
+end;
+-----------------------
+function Wave_3()
+	Wait( 190 );
+	LandReinforcement( 1, 863, 1, 6000 ); 
+	Wait( 3 );
+	CmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 8455, 5094 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 7446, 8083 );
+end;
+
+function Wave_4()
+	Wait( 230 );
+	LandReinforcement( 1, 860, 0, 6100 ); 
+	Wait( 3 );
+	CmdMultipleDisp( ACT_SWARM, 6100, DISPERSION, 913, 3635 );
+	Wait( 15 )
+	QCmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 8294, 8161 );
+end;
+-----------------------
+function Wave_5()
+	Wait( 270 );
+	LandReinforcement( 1, 864, 1, 6000 ); 
+	Wait( 18 );
+	CmdMultipleDisp( ACT_SWARM, 6000, DISPERSION, 7446, 8083 );
+end;
+
+function Wave_6()
+	Wait( 310 );
+	LandReinforcement( 1, 865, 0, 6100 ); 
+	Wait( 18 );
+	CmdMultipleDisp( ACT_SWARM, 6100, DISPERSION, 8294, 8161 );
+end;
+
+---------------------//ST//---------------------------
+StartThread( RevealObjective0 );
+Trigger(Condition, Condition1, 1 )
+Trigger(Condition2, Condition3, 1 )
+StartThread( Wave_1 );
+StartThread( Wave_2 );
+StartThread( Wave_3 );
+StartThread( Wave_4 );
+StartThread( Wave_5 );
+StartThread( Wave_6 );

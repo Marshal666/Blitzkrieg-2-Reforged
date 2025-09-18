@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="5">
+	<ScenarioUnitsModifiers/>
+	<LocalizedName href="/other/text/test/uvarkov/campaigns/germany/chapter01/chaptername/text.xdb#xpointer(/Text)"/>
+	<LocalizedDate href="/other/text/test/uvarkov/campaigns/germany/chapter01/chapterdate/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href=""/>
+	<MissionPath>
+		<Item>
+			<Map href=""/>
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href=""/>
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+	</MissionPath>
+	<ScriptFile href="/other/script/test/uvarkov/campaign/germany/chapter01/script.xdb#xpointer(/Script)"/>
+	<BasePlayerReinforcements/>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType>DB_RPG_TYPE_OFFICER</UnitType>
+			<Type>RT_TANKS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/uvarkov/campaigns/tank_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/uvarkov/campaigns/misc_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href="/scene/texandmats/test/uvarkov/chaptertest_texture.xdb#xpointer(/Texture)"/>
+	<SeaNoiseMask />
+	<DifferentColourMap />
+	<PositiveColour>0</PositiveColour>
+	<NegativeColour>0</NegativeColour>
+	<ReinforcementCalls>0</ReinforcementCalls>
+	<DetailsMap href=""/>
+</Chapter>

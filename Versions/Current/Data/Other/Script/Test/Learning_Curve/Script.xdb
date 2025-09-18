@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="104">
+	<FileName />
+	<ScriptText>DredgeEnemy=1;
+
+function DredgeFlag()
+local k=0;
+	while 1 do
+		if DredgeEnemy == 0 then
+			while k&lt;3 do
+			 if  ( GetNUnitsInArea ( 1, &quot;Dredge&quot;, 0) &gt; 0 ) and ( GetNUnitsInArea ( 0, &quot;Dredge&quot;, 0 )&lt;=0 ) then
+				k=k+1;
+			 else
+				k=0;
+			 end;
+			 Wait(3);
+			end;
+			DredgeEnemy = 1;
+			Trace(&quot;DredgeEnemy = true&quot;);
+		else
+			while k&lt;3 do
+			 if ( GetNUnitsInArea ( 0, &quot;Dredge&quot;, 0)&gt;0 ) and ( GetNUnitsInArea ( 1, &quot;Dredge&quot;, 0 )&lt;=0 ) then
+				k=k+1;
+			 else
+				k=0;
+			 end;
+			 Wait(3);
+			end;
+			DredgeEnemy = 0;
+		end;
+		k=0;
+		Wait(2);
+	end;
+end;
+
+function Objective1()
+	while 1 do
+		if DredgeEnemy == 0 then
+			CompleteObjective( 1 );
+			Trace(&quot;CompleteObjective( 1 )&quot;);
+			Win(0);
+		end;	
+			Wait( 3 );
+			
+		if DredgeEnemy and ( GetIGlobalVar( &quot;temp.objective.1&quot;, 0 ) == 2 ) then
+			Wait( 3 );
+			GiveObjective( 1 );
+		end;
+			
+		if ( GetNUnitsInScriptGroup( 111 ) == 0 ) then -- dredge is destroyed
+			FailObjective( 1 );
+			return 1;
+		end;
+			Wait(5);
+	end;	
+end;
+
+function Objective0()
+	while 1 do
+		if ( GetNUnitsInArea( 0, &quot;War&quot; ) &gt;= 3 ) then
+			CompleteObjective( 0 );
+			Wait( 2 );
+			if ( GetIGlobalVar( &quot;temp.objective.1&quot;, 0 ) == 0 ) then
+				GiveObjective( 1 );
+			end
+			return 1;
+		end;
+		Wait( 2 );
+	end;
+end;
+
+--function WinCheck()
+--	while ( missionend == 0 ) do
+--		Wait( 2 );
+--		if ( GetIGlobalVar( &quot;temp.objective.1&quot;, 0 ) == 2 ) then
+--			Wait( 3 );
+--			Win( 0 ); -- player wins
+--			missionend = 1;
+--		end;
+--	end;
+--end;
+
+
+function CheckAll()
+Trace(&quot;DredgeEnemy=%g&quot;, DredgeEnemy);
+Trace(&quot;OursInDredge=%g&quot;, GetNUnitsInArea ( 0, &quot;Dredge&quot;, 0));  
+Trace(&quot;EnemyInDredge=%g&quot;, GetNUnitsInArea ( 1, &quot;Dredge&quot;, 0 ));
+end;
+
+--Objectives = { Objective0, Objective1 };
+--Objectives_Count = 2;
+
+--StartAllObjectives(Objectives, Objectives_Count);
+StartThread(Objective0);
+GiveObjective(0);
+StartThread(DredgeFlag);
+StartThread(Objective1);</ScriptText>
+</Script>

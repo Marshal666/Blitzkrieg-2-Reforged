@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="130">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Delete_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Save_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Load_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="parts/PicturePanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="HeaderPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="LoadListPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="SaveListPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="DescPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="WaitPopup/WaitBgr_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="MenuBackground_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="360">
+		<NumPatchesX>2</NumPatchesX>
+		<NumPatchesY>2</NumPatchesY>
+		<TerraSet href="/terrain/tgterraset/sets/winter_tgterraset.xdb#xpointer(/TGTerraSet)" />
+		<MapFilesPath>Maps\ProgTests\Stas\</MapFilesPath>
+		<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)" />
+		<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)" />
+		<Weather>
+			<WindDirection>0</WindDirection>
+			<WindForce>0</WindForce>
+			<WeatherPeriod>0</WeatherPeriod>
+			<WeatherPeriodRandom>0</WeatherPeriodRandom>
+			<Visuals href="/terrain/weatherdesc/test/stas/snow100_weatherdesc.xdb#xpointer(/WeatherDesc)" />
+		</Weather>
+		<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)" />
+		<Roads />
+		<Rivers />
+		<Crags />
+		<Spots />
+		<Lakes />
+		<HasCoast>false</HasCoast>
+		<Coast>
+			<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)" />
+			<points />
+			<ControlPoints />
+			<VSOID>0</VSOID>
+		</Coast>
+		<CoastMidPoint>
+			<x>0</x>
+			<y>0</y>
+			<z>0</z>
+		</CoastMidPoint>
+		<uid>3B40312E-AF3F-44F5-A376-E56B2B0DF351</uid>
+		<MapDesigner href="" />
+		<Players>
+			<Item>
+				<Camera>
+					<Anchor>
+						<x>60</x>
+						<y>60</y>
+						<z>0</z>
+					</Anchor>
+					<Yaw>45</Yaw>
+					<Pitch>50</Pitch>
+					<Dist>170</Dist>
+					<UseAnchorOnly>true</UseAnchorOnly>
+				</Camera>
+				<general>
+					<mobileScriptIDs />
+					<parcels />
+				</general>
+				<PartyInfo href="/scenario/partydependentinfo/game/gb_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+				<ReinforcementPoints>
+					<Item>
+						<Position>
+							<x>264.092</x>
+							<y>239.613</y>
+						</Position>
+						<AviationPosition>
+							<x>0</x>
+							<y>0</y>
+						</AviationPosition>
+						<Direction>16915</Direction>
+						<Template href="/reinforcements/deploytemplate/game/alpha/dummy_tanks_deploytemplate.xdb#xpointer(/DeployTemplate)" />
+						<TypedTemplates />
+						<IsDefault>true</IsDefault>
+						<___delete_from_here_to_the_end>false</___delete_from_here_to_the_end>
+						<Type>RT_TANKS</Type>
+						<FactoryID>-1</FactoryID>
+						<PositionID>1</PositionID>
+						<DeployMask>
+							<Positions />
+						</DeployMask>
+						<IsAerial>false</IsAerial>
+						<IsSea>false</IsSea>
+						<IsGround>true</IsGround>
+						<Radius>10</Radius>
+					</Item>
+				</ReinforcementPoints>
+				<ReinforcementTypes>
+					<Item href="/reinforcements/reinforcement/test/stas/train_test_reinforcement.xdb#xpointer(/Reinforcement)" />
+					<Item href="/reinforcements/reinforcement/test/stas/assault_squad_ship_reinforcement.xdb#xpointer(/Reinforcement)" />
+				</ReinforcementTypes>
+				<DefaultRank href="/scenario/playerrank/test/generalissimus_playerrank.xdb#xpointer(/PlayerRank)" />
+				<DiplomacySide>0</DiplomacySide>
+				<RecycleTimeCoefficient>0.01</RecycleTimeCoefficient>
+				<ReinforcementCalls>100</ReinforcementCalls>
+				<LocalizedPlayerName href="" />
+				<MPStartPos>
+					<x>0</x>
+					<y>0</y>
+				</MPStartPos>
+				<ScriptReinforcements />
+				<ScriptReinforcementsTextID />
+			</Item>
+			<Item>
+				<Camera>
+					<Anchor>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</Anchor>
+					<Yaw>0</Yaw>
+					<Pitch>0</Pitch>
+					<Dist>0</Dist>
+					<UseAnchorOnly>true</UseAnchorOnly>
+				</Camera>
+				<general>
+					<mobileScriptIDs />
+					<parcels />
+				</general>
+				<PartyInfo href="/scenario/partydependentinfo/game/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+				<ReinforcementPoints>
+					<Item>
+						<Position>
+							<x>279.37</x>
+							<y>1750.47</y>
+						</Position>
+						<AviationPosition>
+							<x>0</x>
+							<y>0</y>
+						</AviationPosition>
+						<Direction>55118</Direction>
+						<Template href="/reinforcements/deploytemplate/game/alpha/dummy_lighttanks_deploytemplate.xdb#xpointer(/DeployTemplate)" />
+						<TypedTemplates />
+						<IsDefault>true</IsDefault>
+						<___delete_from_here_to_the_end>false</___delete_from_here_to_the_end>
+						<Type>RT_MAIN_INFANTRY</Type>
+						<FactoryID>-1</FactoryID>
+						<PositionID>1</PositionID>
+						<DeployMask>
+							<Positions />
+						</DeployMask>
+						<IsAerial>false</IsAerial>
+						<IsSea>false</IsSea>
+						<IsGround>false</IsGround>
+						<Radius>10</Radius>
+					</Item>
+				</ReinforcementPoints>
+				<ReinforcementTypes>
+					<Item href="/reinforcements/reinforcement/test/stas/enemy_tanks_reinforcement.xdb#xpointer(/Reinforcement)" />
+					<Item href="/reinforcements/reinforcement/test/stas/enemy_inf_reinforcement.xdb#xpointer(/Reinforcement)" />
+				</ReinforcementTypes>
+				<DefaultRank href="/scenario/playerrank/game/alpha/enemy_playerrank.xdb#xpointer(/PlayerRank)" />
+				<DiplomacySide>1</DiplomacySide>
+				<RecycleTimeCoefficient>0.1</RecycleTimeCoefficient>
+				<ReinforcementCalls>0</ReinforcementCalls>
+				<LocalizedPlayerName href="" />
+				<MPStartPos>
+					<x>0</x>
+					<y>0</y>
+				</MPStartPos>
+				<ScriptReinforcements />
+				<ScriptReinforcementsTextID />
+			</Item>
+			<Item>
+				<Camera>
+					<Anchor>
+						<x>0</x>
+						<y>0</y>
+						<z>0</z>
+					</Anchor>
+					<Yaw>0</Yaw>
+					<Pitch>0</Pitch>
+					<Dist>0</Dist>
+					<UseAnchorOnly>true</UseAnchorOnly>
+				</Camera>
+				<general>
+					<mobileScriptIDs />
+					<parcels />
+				</general>
+				<PartyInfo href="/scenario/partydependentinfo/test/unknown_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+				<ReinforcementPoints />
+				<ReinforcementTypes />
+				<DefaultRank href="" />
+				<DiplomacySide>2</DiplomacySide>
+				<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+				<ReinforcementCalls>0</ReinforcementCalls>
+				<LocalizedPlayerName href="" />
+				<MPStartPos>
+					<x>0</x>
+					<y>0</y>
+				</MPStartPos>
+				<ScriptReinforcements />
+				<ScriptReinforcementsTextID />
+			</Item>
+		</Players>
+		<Objects>
+			<Item>
+				<Pos>
+					<x>1842.39</x>
+					<y>294.089</y>
+					<z>0</z>
+				</Pos>
+				<Dir>16099</Dir>
+				<Player>0</Player>
+				<ScriptID>-1</ScriptID>
+				<HP>1</HP>
+				<FrameIndex>-1</FrameIndex>
+				<Link>
+					<LinkID>380158</LinkID>
+					<LinkWith>-1</LinkWith>
+					<Intention>false</Intention>
+				</Link>
+				<Object href="/units/technics/allies/tanks/m26_general_pershing_usa_low______1536/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<ConstructorProfile href="" />
+			</Item>
+			<Item>
+				<Pos>
+					<x>484.309</x>
+					<y>1552.75</y>
+					<z>0</z>
+				</Pos>
+				<Dir>14931</Dir>
+				<Player>1</Player>
+				<ScriptID>-1</ScriptID>
+				<HP>1</HP>
+				<FrameIndex>-1</FrameIndex>
+				<Link>
+					<LinkID>380165</LinkID>
+					<LinkWith>-1</LinkWith>
+					<Intention>false</Intention>
+				</Link>
+				<Object href="/units/technics/german/spg/jagdtiger_sdkfz186/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<ConstructorProfile href="" />
+			</Item>
+			<Item>
+				<Pos>
+					<x>410.904</x>
+					<y>1247.54</y>
+					<z>0</z>
+				</Pos>
+				<Dir>14017</Dir>
+				<Player>1</Player>
+				<ScriptID>-1</ScriptID>
+				<HP>1</HP>
+				<FrameIndex>-1</FrameIndex>
+				<Link>
+					<LinkID>380166</LinkID>
+					<LinkWith>-1</LinkWith>
+					<Intention>false</Intention>
+				</Link>
+				<Object href="/units/technics/german/spg/jagdpanther_sdkfz173/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<ConstructorProfile href="" />
+			</Item>
+			<Item>
+				<Pos>
+					<x>1814.35</x>
+					<y>486.157</y>
+					<z>0</z>
+				</Pos>
+				<Dir>49880</Dir>
+				<Player>0</Player>
+				<ScriptID>-1</ScriptID>
+				<HP>1</HP>
+				<FrameIndex>-1</FrameIndex>
+				<Link>
+					<LinkID>0</LinkID>
+					<LinkWith>-1</LinkWith>
+					<Intention>false</Intention>
+				</Link>
+				<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<ConstructorProfile href="" />
+			</Item>
+			<Item>
+				<Pos>
+					<x>1813.43</x>
+					<y>653.79</y>
+					<z>0</z>
+				</Pos>
+				<Dir>49880</Dir>
+				<Player>0</Player>
+				<ScriptID>-1</ScriptID>
+				<HP>1</HP>
+				<FrameIndex>-1</FrameIndex>
+				<Link>
+					<LinkID>1</LinkID>
+					<LinkWith>-1</LinkWith>
+					<Intention>false</Intention>
+				</Link>
+				<Object href="/units/technics/gb/tanks/sherman_firefly_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<ConstructorProfile href="" />
+			</Item>
+		</Objects>
+		<HiddenObjectType href="" />
+		<Season>SEASON_WINTER</Season>
+		<DayTime>DAY_DAY</DayTime>
+		<Diplomacies>
+			<Item>0</Item>
+			<Item>1</Item>
+			<Item>2</Item>
+		</Diplomacies>
+		<Entrenchments />
+		<Bridges />
+		<ScenarioObjects />
+		<Reinforcements>
+			<infos>
+				<Item>
+					<GroupID>0</GroupID>
+					<GroupsVector>
+						<data />
+					</GroupsVector>
+				</Item>
+			</infos>
+		</Reinforcements>
+		<ScriptFile href="" />
+		<ScriptFileName />
+		<ScriptAreas />
+		<startCommandsList>
+			<Item>
+				<CmdType>45</CmdType>
+				<unitLinkIDs>
+					<Item>380165</Item>
+				</unitLinkIDs>
+				<LinkID>-1</LinkID>
+				<Pos>
+					<x>400.664</x>
+					<y>262.335</y>
+				</Pos>
+				<FromExplosion>false</FromExplosion>
+				<Number>1</Number>
+			</Item>
+			<Item>
+				<CmdType>45</CmdType>
+				<unitLinkIDs>
+					<Item>380166</Item>
+				</unitLinkIDs>
+				<LinkID>-1</LinkID>
+				<Pos>
+					<x>400.664</x>
+					<y>262.335</y>
+				</Pos>
+				<FromExplosion>false</FromExplosion>
+				<Number>1</Number>
+			</Item>
+		</startCommandsList>
+		<reservePositionsList />
+		<soundsList />
+		<ForestCircleSound href="" />
+		<ForestAmbientSounds href="" />
+		<MapType>0</MapType>
+		<AttackingSide>0</AttackingSide>
+		<PlayerBonusObjects />
+		<Bonuses />
+		<EditAreas />
+		<MiniMap href="/scene/texandmats/all/maps/test/progtests/stas/test/minimap_material.xdb#xpointer(/Material)" />
+		<LocalizedName href="" />
+		<LocalizedDescription href="" />
+		<LoadingPicture href="" />
+		<LoadingDescription href="" />
+		<CameraPositions />
+		<ScriptCameraPlacements />
+		<Objectives />
+		<Music href="" />
+		<MPInfo>
+			<GameTypes />
+		</MPInfo>
+		<BorderLockSize>0</BorderLockSize>
+		<BorderCameraSize>0</BorderCameraSize>
+		<ScriptEffects />
+	</MapInfo>

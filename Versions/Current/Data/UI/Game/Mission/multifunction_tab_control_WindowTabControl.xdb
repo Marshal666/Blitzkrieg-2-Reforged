@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTabControl ObjectRecordID="2">
+	<ClassTypeID>285694859</ClassTypeID>
+	<Shared href="multifunction_tab_control_WindowTabControlShared.xdb#xpointer(/WindowTabControlShared)" />
+	<Name>multifunction_tab_control</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>100</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>25</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>361</x>
+				<y>159</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>10</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>10</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<tabs>
+		<Item>
+			<TabContainer href="Misc/Multiselect_WindowSimple.xdb#xpointer(/WindowSimple)" />
+			<ButtonName />
+		</Item>
+		<Item>
+			<TabContainer href="Reinforcement/Info_WindowSimple.xdb#xpointer(/WindowSimple)" />
+			<ButtonName />
+		</Item>
+		<Item>
+			<TabContainer href="UnitFullInfo/InfoCrap_WindowSimple.xdb#xpointer(/WindowSimple)" />
+			<ButtonName />
+		</Item>
+		<Item>
+			<TabContainer href="UnitFullInfo3/Tab_WindowSimple.xdb#xpointer(/WindowSimple)" />
+			<ButtonName />
+		</Item>
+		<Item>
+			<TabContainer href="SuperWeapon/SuperWeaponInfoPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+			<ButtonName />
+		</Item>
+	</tabs>
+</WindowTabControl>

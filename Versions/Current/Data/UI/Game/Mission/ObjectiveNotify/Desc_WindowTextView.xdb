@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="130">
+	<ClassTypeID>0</ClassTypeID>
+	<Shared href="/ui/game/mission/objectivenotify/desc_windowtextviewshared.xdb#xpointer(/WindowTextViewShared)"/>
+	<Name>DescView</Name>
+	<Tooltip href=""/>
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions/>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>90</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="/ui/game/common/templates/center/courierbold_17pt_color_ffcecfce_foregroundtextstring.xdb#xpointer(/ForegroundTextString)"/>
+	<Text href=""/>
+	<ResizeOnTextSet>true</ResizeOnTextSet>
+	<TextFormat href=""/>
+</WindowTextView>

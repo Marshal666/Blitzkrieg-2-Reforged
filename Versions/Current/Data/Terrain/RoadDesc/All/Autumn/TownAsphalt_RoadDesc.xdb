@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RoadDesc ObjectRecordID="52">
+	<Type>1</Type>
+	<Priority>2</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>24</AIPassabilityClass>
+		<CanEntrench>false</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>-9797524</MiniMapCenterColor>
+	<MiniMapBorderColor>-10127257</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<LeftBorder>
+		<CenterOpacity>1</CenterOpacity>
+		<TilingStep>0.1</TilingStep>
+		<Material href="/Scene/TexAndMats/All/Terrain/Roads/Autumn/TownAsphalt_border_Material.xdb#xpointer(/Material)" />
+		<UseFromPixel>0</UseFromPixel>
+		<UseToPixel>10</UseToPixel>
+	</LeftBorder>
+	<RightBorder>
+		<CenterOpacity>1</CenterOpacity>
+		<TilingStep>0.1</TilingStep>
+		<Material href="/Scene/TexAndMats/All/Terrain/Roads/Autumn/TownAsphalt_border_Material.xdb#xpointer(/Material)" />
+		<UseFromPixel>100</UseFromPixel>
+		<UseToPixel>110</UseToPixel>
+	</RightBorder>
+	<Center>
+		<CenterOpacity>1</CenterOpacity>
+		<TilingStep>4</TilingStep>
+		<Disturbance>0</Disturbance>
+		<NumCells>1</NumCells>
+		<Materials>
+			<Item href="/Scene/TexAndMats/All/Terrain/Roads/Autumn/TownAsphalt_Material.xdb#xpointer(/Material)" />
+		</Materials>
+		<UseFromPixel>10</UseFromPixel>
+		<UseToPixel>100</UseToPixel>
+		<StreamSpeed>0.1</StreamSpeed>
+	</Center>
+	<DefaultWidth>256</DefaultWidth>
+	<DefaultOpacity>1</DefaultOpacity>
+</RoadDesc>

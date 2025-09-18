@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="187">
+	<FileName />
+	<ScriptText>function Start1()
+	LandReinforcementFromMap( 0, &quot;St1&quot;, 1, 300 ); 
+	Wait( 2 );
+	Cmd( 3, 300, 0, 1219, 1261 );
+	Wait( 14 );
+	LandReinforcementFromMap( 0, &quot;St2&quot;, 1, 301 );
+	Wait( 26 );
+	LandReinforcementFromMap( 0, &quot;St3&quot;, 1, 302 );
+	StartThread( Defead ); 
+end;
+-------------------------------------------------DEF_TM_180
+function TM_180()
+	while 1 do
+		Wait( 2 );
+		if (( GetNUnitsInScriptGroup( 501 ) &lt; 1 ) and (GetIGlobalVar(&quot;temp.DOT&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			SetIGlobalVar( &quot;temp.TM180&quot;, 2 );
+			FailObjective( 1 );
+			Wait( 1 );
+			Win( 1 );
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------------Obj0
+function RevealObjective0()
+	Wait( 10 );
+	GiveObjective( 0 );
+	StartThread( Objective0 );
+end;
+
+function Objective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;V1&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;V1&quot;, 0) &lt; 1) and (GetIGlobalVar(&quot;temp.TM180&quot;, 1) ~= 2)) then
+			Wait( 2 );
+			ChangePlayerForScriptGroup( 501, 0 );
+			CompleteObjective( 0 );
+			SetIGlobalVar( &quot;temp.V1&quot;, 2 );
+			Wait( 2 );
+			GiveObjective( 1 );
+			StartThread( Objective1 );
+			StartThread( GER_SPG );           ----------------------------GERMAN_SPG
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------------Obj1
+function Objective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetScriptObjectHPs(991) &lt;= 0) and (GetScriptObjectHPs(992) &lt;= 0))then
+			CompleteObjective( 1 );
+			SetIGlobalVar( &quot;temp.DOT&quot;, 2 ); 
+			Wait( 2 );
+			GiveObjective( 2 );
+			StartThread( Objective2 );
+			break;
+		end;	
+	end;
+end;
+------------------------------------------------Obj2
+function Objective2()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(2, &quot;S1&quot;, 1) &gt; 0) and (GetNUnitsInArea(1, &quot;S1&quot;, 0) &lt; 1)) then
+			CompleteObjective( 2 );
+			Wait( 2 );
+			Win( 0 );
+			break;
+		end;	
+	end;
+end;
+------------------------------------------------------------------PART2
+----------------------------------------RUS_TM_ATTACK
+function R_Attack_Rand() 
+	while 1 do
+		Wait( 2 );
+			if ((GetNUnitsInArea(0, &quot;V1&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;V1&quot;, 0) &lt; 2) and (GetIGlobalVar(&quot;temp.DOT&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			StartThread( Rand );
+			break;
+		end;
+	end;
+end;
+
+function Rand()
+local x = RandomInt(2);
+	if x == 0 then
+	StartThread( A1 );
+	end;
+	if x == 1 then
+	StartThread( A2 );
+	end;
+end;
+
+function A1()
+	LandReinforcementFromMap( 1, &quot;R_INF&quot;, 0, 701 );         
+	Wait( 2 );
+	ChangeFormation( 701, 3 );
+	Wait( 3 );
+	Cmd( 3, 701, 50, 2408, 1260 );
+	QCmd( 3, 701, 50, 6633, 968 );
+	Wait( 60 + RandomInt( 30 ) );
+	StartThread( R_Attack_Rand );
+end;
+
+function A2()
+	LandReinforcementFromMap( 1, &quot;R_TANKS&quot;, 0, 702 );  
+	Wait( 2 );
+	Cmd( 3, 702, 50, 2408, 1260 );
+	QCmd( 3, 702, 50, 6633, 968 );
+	Wait( 60 + RandomInt( 30 ) );
+	StartThread( R_Attack_Rand );
+end;
+-------------------------------------------SPG
+function GER_SPG()
+	LandReinforcementFromMap( 2, &quot;G_SPG&quot;, 0, 121 ); 
+	Cmd( 3, 121, 50, 3045, 1580 );
+	QCmd( 8, 121, 50, 2450, 4288 );
+	Wait( 5 );
+	LandReinforcementFromMap( 2, &quot;G_SPG&quot;, 0, 122 ); 
+	Cmd( 3, 122, 100, 3785, 2414 );
+	QCmd( 8, 122, 100, 3072, 3019 );
+	StartThread( GER_SPG_2 );
+end;
+
+function GER_SPG_2()
+	while 1 do
+		Wait( 2 );
+		if (( GetNUnitsInScriptGroup( 121 ) &lt; 1 ) and ( GetNUnitsInScriptGroup( 122 ) &lt; 1 )) then
+			Wait( 20 );
+			StartThread( GER_SPG );
+			break;
+		end;	
+	end;
+end;
+-----------------------------------------GERMAN_TANK_ATTACK_1
+
+function GERMAN_ATTACK_1() 
+	while 1 do
+		Wait( 2 );
+			if ((GetIGlobalVar(&quot;temp.DOT&quot;, 1) == 2) and ( GetNUnitsInScriptGroup( 124 ) == 0 )) then
+			Wait( 2 );
+			StartThread( Rand_G );
+			break;
+		end;
+	end;
+end;
+
+function Rand_G()
+local x = RandomInt(3);
+	if x == 0 then
+	StartThread( Z1 );
+	end;
+	if x == 1 then
+	StartThread( Z2 );
+	end;
+	if x == 2 then
+	StartThread( Z3 );
+	end;
+end;
+
+function Z1()
+	LandReinforcementFromMap( 2, &quot;G_TANKS&quot;, 2, 124 ); 
+	LandReinforcementFromMap( 2, &quot;G_AVIA&quot;, 2, 125 );        
+	Wait( 3 );
+	Cmd( 3, 125, 200, GetScriptAreaParams( &quot;AA1&quot; ) );
+	Cmd( 3, 124, 100, GetScriptAreaParams( &quot;AA1&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;AA2&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;AA3&quot; ) );
+	StartThread( GERMAN_ATTACK_1 );
+end;
+
+function Z2()
+	LandReinforcementFromMap( 2, &quot;G_TANKS&quot;, 2, 124 );  
+	Wait( 3 );
+	Cmd( 3, 124, 100, GetScriptAreaParams( &quot;BB1&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;BB2&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;BB3&quot; ) );
+	StartThread( GERMAN_ATTACK_1 );
+end;
+
+function Z3()
+	LandReinforcementFromMap( 2, &quot;G_TANKS&quot;, 2, 124 );
+	LandReinforcementFromMap( 2, &quot;G_AVIA&quot;, 2, 125 );  
+	Wait( 3 );
+	Cmd( 3, 125, 200, GetScriptAreaParams( &quot;CC3&quot; ) );
+	Cmd( 3, 124, 100, GetScriptAreaParams( &quot;CC1&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;CC2&quot; ) );
+	QCmd( 3, 124, 100, GetScriptAreaParams( &quot;CC3&quot; ) );
+	StartThread( GERMAN_ATTACK_1 );
+end;
+------------------------------------------GERMAN_INFAN_ATTACK
+function GERMAN_INFAN() 
+	while 1 do
+		Wait( 2 );
+			if (GetNUnitsInArea(2, &quot;A1&quot;, 0) &gt; 0) then
+			Wait( 20 );
+			StartThread( GERMAN_INFANGO_2 );
+			break;
+		end;
+	end;
+end;
+
+function GERMAN_INFANGO_2()
+	LandReinforcementFromMap( 2, &quot;G_INF&quot;, 1, 124 ); 
+	Wait( 2 );
+	ChangeFormation( 124, 3 );
+	Wait( 3 );
+	Cmd( 3, 124, 100, 6557, 6771 );
+end;
+------------------------------------------Winners
+function Defead()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(3);
+		Win(1);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+-------------------------------------------Armor_Train
+function A_TR()
+	while 1 do
+		Wait( 2 );
+		if ( GetNUnitsInScriptGroup( 621 ) &gt; 0 ) then
+			StartThread( TRAIN );
+			break;
+		end;	
+	end;
+end;
+
+function TRAIN()
+    Wait( 180 + RandomInt( 120 ) );
+	Cmd( 0, 621, 0, GetScriptAreaParams( &quot;AT&quot; ) );
+end;
+-------------------------------------------------
+StartThread( Start1 );
+StartThread( RevealObjective0 );
+StartThread( TM_180 );
+StartThread( R_Attack_Rand );
+StartThread( GERMAN_ATTACK_1 );
+StartThread( GERMAN_INFAN );
+StartThread( A_TR );
+
+
+
+</ScriptText>
+</Script>

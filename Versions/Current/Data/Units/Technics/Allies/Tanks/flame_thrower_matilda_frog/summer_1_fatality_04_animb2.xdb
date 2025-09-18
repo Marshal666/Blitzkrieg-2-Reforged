@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="3151">
+	<SrcName href="/Units/Technics/Allies/Tanks/MatildaFrog/1.mb" />
+	<uid>656D4AAD-40BC-465F-AA2A-7C4B7AA77319</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>130</FirstFrame>
+	<LastFrame>149</LastFrame>
+	<AABBAName>AABB_A04</AABBAName>
+	<AABBDName>AABB_D04</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-10</x>
+			<y>23</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>44</x>
+			<y>86</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-10</x>
+			<y>23</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>44</x>
+			<y>86</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

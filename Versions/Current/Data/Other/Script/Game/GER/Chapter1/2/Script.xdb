@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="128">
+	<FileName />
+	<ScriptText>n = 1;
+nom = {};
+nom [1] = &quot;1&quot;; nom [2] = &quot;2&quot;; nom [3] = &quot;3&quot;;
+z = 1;
+n1 = 1;
+nom1 = {};
+nom1 [1] = &quot;1&quot;; nom1 [2] = &quot;2&quot;; nom1 [3] = &quot;3&quot;;
+z1 = 1;
+R1 = 0; R2 = 0;
+Dom = GetScriptObjectHPs ( 300 );
+Dom1 = GetScriptObjectHPs ( 302 );
+H39 = 0;
+flagok1 = 100;
+flagok2 = 100;
+
+-----------------------Out
+
+
+function Out1()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea ( 0 , &apos;Out2&apos;, 0 ) &gt; 0 then
+			Wait( 1 );
+			Cmd (7 , 305 , 0 , GetScriptAreaParams &quot;Shtab&quot;);
+			Cmd (7 , 306 , 0 , GetScriptAreaParams &quot;Shtab&quot;);
+			break;
+		end;
+	end;
+end;
+
+-------------------------------------------Recon
+
+function Recon()
+ 	while 1 do 
+		Wait( 10 ); 
+		if IsSomeBodyAlive ( 0 , 802 ) &lt; 1 then 
+			LandReinforcementFromMap (  0 , &quot;0&quot; , 0 , 802 );
+			Cmd ( 0 , 802 , 0 , GetScriptAreaParams &quot;Recon&quot; );
+			Wait ( 1 );
+ 		end;
+	end;
+end;
+
+-----------------------Flag
+
+function Flag2()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea ( 0 , &apos;Windermill&apos;, 0 ) &gt; 0 and IsSomeUnitInArea ( 1 , &apos;Windermill&apos;, 0 ) &lt; 1 then
+			flagok2 = 0;
+			break;
+		end;
+	end;
+end;
+
+-----------------------Reinforcement
+
+function Reinforcement0()
+	while 1 do
+		Wait( 3 );
+		if (GetNUnitsInArea ( 0 , &quot;R1&quot; , 0 ) &gt; 0 ) then
+			StartThread( Reinforcement1 );
+			Wait ( 10 );
+			break;
+		end;
+	end;
+end; 
+
+function Reinforcement1()
+	Wait ( 10 );
+	if flagok2 &gt; 0 then
+		Wait ( 1 );
+		n1 = Random ( 2 );
+		if GetNUnitsInScriptGroup ( 100+z1 , 1 ) &lt; 6 then
+			LandReinforcementFromMap ( 1 , nom[n1] , 1 , 200 + z1);
+			Cmd ( 3 , 200 + z1 , 0 , 4092 , 4587 );
+			z1 = z1 + 1;
+			Sleep ( 1 );
+		end;
+		StartThread( Waiting2 );
+	end;
+end;
+
+-----------------------Waiting 
+
+function Waiting2()
+	Wait ( 30 + Random ( 60) );
+	StartThread( Reinforcement1 );
+end; 
+
+-----------------------Objective 
+
+function Objective()
+	GiveObjective ( 0 );
+	StartThread( CompleteObjective0 );
+end; 
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if IsSomeUnitInArea ( 1 , &quot;Shtab&quot; , 0 ) &lt; 1 and IsSomeUnitInArea ( 0 , &quot;Shtab&quot; , 0 ) &gt; 0 then
+			CompleteObjective ( 0 );
+			Win ( 0 );
+			break;
+		end;	
+	end;
+end;
+
+------------------------WIn_Loose
+
+function Unlucky1()
+	while 1 do
+		Wait( 1 );
+		if (GetNUnitsInParty(1) == GetNUnitsInArea ( 1 , &quot;Shtab&quot; , 0 )) then
+			Wait( 1 );
+			Win(0);
+			break;
+		end;
+	end;
+end; 
+
+function Winner()
+	Wait( 1 );
+	Win(0);
+end; 
+
+function Unlucky()
+	while 1 do
+		Wait( 1 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Win(1);
+			break;
+		end;
+	end;
+end;
+-------------------------------------------  MAIN
+
+StartThread( Unlucky );
+StartThread( Unlucky1 );
+StartThread( Objective );
+StartThread( Out1 );
+StartThread( Flag2 );
+StartThread( Reinforcement0 );
+StartThread( Recon );</ScriptText>
+</Script>

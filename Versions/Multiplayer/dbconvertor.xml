@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Yuri V. Blazhevich (Nival Interactive) -->
+<Base>
+	<DBMain>
+		<Server>B2_BUILD</Server>
+		<DBName>b2</DBName>
+		<Owner>dbo</Owner>
+	</DBMain>
+	<DBLocal>
+		<Server>(local)</Server>
+		<DBName>b2_local</DBName>
+		<Owner>dbo</Owner>
+	</DBLocal>
+	<DBBase>
+		<Server>(local)</Server>
+		<DBName>b2_base</DBName>
+		<Owner>dbo</Owner>
+	</DBBase>
+	<DBCheckoutTemp>YOUR_TEMP_PATH\DbCheckout</DBCheckoutTemp>
+	<DBLogDir>YOUR_LOG_PATH\db-log</DBLogDir>
+	<DBLocalDir>YOUR_GAME_PATH\bin</DBLocalDir>
+	<DBConfig>YOUR_GAME_PATH\DBConfig.xml</DBConfig>
+	<WorkFolder>YOUR_GAME_PATH\data\DB_DATA</WorkFolder>
+	<BinaryFolder>YOUR_GAME_PATH\data\DB_DATA</BinaryFolder>
+	<CopyHeadersFolder>YOUR_PROJECT_PATH</CopyHeadersFolder>
+	<CodePath>YOUR_PROJECT_PATH</CodePath>
+	<SSafeBaseFolder>$/B2new</SSafeBaseFolder>
+	<XSDFolder>YOUR_PROJECT_PATH\DataTypes-2</XSDFolder>
+	<Settings>
+		<LowerLetters>1</LowerLetters>
+		<UsePrefixes>1</UsePrefixes>
+		<NeedCheckSum>0</NeedCheckSum>
+		<NeedStdAfx>1</NeedStdAfx>
+		<SaverName>IBinSaver</SaverName>
+		<RootClass>CResource</RootClass>
+		<InClassMacro>OBJECT_BASIC_METHODS</InClassMacro>
+		<PostClassMacro>REGISTER_DATABASE_CLASS</PostClassMacro>
+	</Settings>
+	<Input>
+		<Item>dbcCommon.xml</Item>
+		<Item>dbcB2M1.xml</Item>
+		<Item>dbcB2.xml</Item>
+	</Input>
+</Base>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000053">
+	<FileName href="" />
+	<ScriptText>b1=0
+b2=0
+p1=0
+i1=0
+i2=0
+i3=0
+i4=0
+
+--------------------------------Loose conditions
+function Caput ()
+
+   while 1 do
+        Wait( 3 );
+        if ( GetNUnitsInScriptGroup (777, 2) &lt; 5 ) or  (( GetNUnitsInPlayerUF ( 0 ) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		  Wait(2);
+		  Win(1);
+		  return 1;
+		end;
+	end;
+end;
+------------------------------Victory
+function Victory ()
+
+    while 1 do
+    Wait (2);
+      if i1 == 3 and i2 == 3 and i3 == 3 and i4 == 3 and b1 == 3 and b2 == 3  and ( GetNUnitsInScriptGroup ( 777, 2 ) &gt; 4 ) and  ( GetNUnitsInPlayerUF ( 1 ) &lt; 2) then
+      Wait (2);
+      CompleteObjective(0);
+      DamageScriptObject (101, 100);
+      Wait (2)
+      Win (0);
+      return 1; 
+      end;
+    end;
+end;
+-----------------------------Ground attack planes
+function GAP1 ()
+
+    while 1 do
+        Wait (5)
+        if ( GetNUnitsInScriptGroup ( 100, 1 ) &lt; 2 ) and b1 &lt; 3 then
+          Wait ( 15+RandomInt (30)) ;
+          LandReinforcementFromMap( 1, &quot;GAP&quot;, 0, 100 );
+          b1 = b1+1
+          Wait ( 1 );
+          Cmd (0, 100, 10, 2320, 5805 );
+        end;
+    end;
+end;
+
+function GAP2 ()
+
+    while 1 do
+        Wait (5)
+        if ( GetNUnitsInScriptGroup ( 200, 1 ) &lt; 2 ) and b2 &lt; 3 then
+          Wait ( 15+RandomInt (30)) ;
+          LandReinforcementFromMap( 1, &quot;GAP&quot;, 1, 200 );
+          b2 = b2+1
+          Wait ( 1 );
+          Cmd (0, 200, 10, 2320, 5805 );
+        end;
+    end;
+end;
+-----------------------------Infantry
+function Infantry1 ()
+    while 1 do
+        Wait (5);
+        if i1 &lt;3 then
+         Wait ( 5+RandomInt (45));
+         LandReinforcementFromMap (1, &quot;Infantry&quot;, 0, 500)
+         i1 = i1+1
+         Wait (1);
+         ChangeFormation (3, 500);
+         Cmd (3, 500, 200, 4316, 7574);
+         QCmd (3, 500, 600, 2346, 5703);
+        end;
+    end;
+end;  
+
+function Infantry2 ()
+      while 1 do
+        Wait (5);
+        if i2 &lt;3 then
+         Wait ( 5+RandomInt (45));
+         LandReinforcementFromMap (1, &quot;Infantry&quot;, 1, 600)
+         i2 = i2+1
+         Wait (1);
+         ChangeFormation (3, 600);
+         Cmd (3, 600, 200, 4678, 3977);
+         QCmd (3, 600, 200, 2410, 5744);
+        end;
+    end;
+end;
+
+function Infantry3 ()
+      while 1 do
+        Wait (5);
+        if i3 &lt;3 then
+         Wait ( 5+RandomInt (45));
+         LandReinforcementFromMap (1, &quot;Infantry&quot;, 0, 700)
+         i3 = i3+1
+         Wait (1);
+         ChangeFormation (3, 700);
+         Cmd (3, 700, 200, 5915, 4981);
+         QCmd (3, 700, 600, 2125, 5810);
+        end;
+    end;
+end;
+
+function Infantry4 ()
+      while 1 do
+        Wait (5);
+        if i4 &lt;3 then
+         Wait ( 5+RandomInt (45));
+         LandReinforcementFromMap (1, &quot;Infantry&quot;, 1, 800)
+         i4 = i4+1
+         Wait (1);
+         ChangeFormation (3, 800);
+         Cmd (3, 800, 200, 2161, 1777);
+         QCmd (3, 800, 600, 2055, 5755);
+        end;
+    end;
+end;
+---------------------------Paratroopers
+function Paratroopers ()
+    while 1 do
+      Wait (5)
+        if b1 == 3 and b2 == 3  then
+         Wait (1);
+         LandReinforcementFromMap (1, &quot;Paratroopers&quot;, 2, 300)
+         Cmd (5, 300, 100, 1875, 5245);
+         break;
+        end;
+    end;
+end;
+  
+----------------------------------------------------------------------------
+GiveObjective(0)
+StartThread (Victory);
+StartThread (Caput);
+StartThread (GAP1);
+StartThread (GAP2);
+StartThread (Infantry1);
+StartThread (Infantry2);
+StartThread (Infantry3);
+StartThread (Infantry4);
+StartThread (Paratroopers);</ScriptText>
+</Script>

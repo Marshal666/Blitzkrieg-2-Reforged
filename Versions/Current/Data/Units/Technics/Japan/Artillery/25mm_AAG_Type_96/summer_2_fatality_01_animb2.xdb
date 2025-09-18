@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="4658">
+	<SrcName href="/Units/Technics/Japan/Artillery/25mm_AAG_Type96/2.mb" />
+	<uid>68CA7071-F3FE-49AD-9A69-B260DAC4E758</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>60</FirstFrame>
+	<LastFrame>79</LastFrame>
+	<AABBAName>AABB_A01</AABBAName>
+	<AABBDName>AABB_D01</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-25</x>
+			<y>-18</y>
+			<z>24.5348</z>
+		</Center>
+		<HalfSize>
+			<x>51</x>
+			<y>60</y>
+			<z>36.6829</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-31</x>
+			<y>-19</y>
+			<z>10.7291</z>
+		</Center>
+		<HalfSize>
+			<x>46</x>
+			<y>59</y>
+			<z>21.3503</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

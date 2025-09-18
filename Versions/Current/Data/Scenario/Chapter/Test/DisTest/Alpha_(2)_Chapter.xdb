@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="19">
+	<ScenarioUnitsModifiers/>
+	<LocalizedName href="/other/text/game/chapters/gb3_name/text.xdb#xpointer(/Text)"/>
+	<LocalizedDate href="/other/text/game/chapters/gb3_date/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href=""/>
+	<MissionPath>
+		<Item>
+			<Map href="/test/testmaps/alpha/e3_demo_1/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>58</x>
+				<y>234</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href="/test/testmaps/alpha/e3-2/mapinfo.xdb#xpointer(/MapInfo)"/>
+			<PlaceOnChapterMap>
+				<x>58</x>
+				<y>234</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+	</MissionPath>
+	<ScriptFile href="/other/script/game/chapter/alpha/script.xdb#xpointer(/Script)"/>
+	<BasePlayerReinforcements/>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType />
+			<Type>RT_TANKS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/upgrade/upgrade_tanks_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_LIGHT_TANKS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_light_tanks_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_ASSAULT_GUNS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/upgrade/upgrade_assault_spg_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_TANK_DESTROYERS</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_tank_destroyers_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_ARTILLERY</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/upgrade/upgrade_artillery_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_HEAVY_ARTILLERY</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_heavy_artillery_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_main_infantry_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type>RT_ASSAULT_INFANTRY</Type>
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_assault_infantry_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_fighters_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/single/gb/3/alpha/player/basic/default_ga_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href="/scene/texandmats/game/menu/chapter/italy_texture.xdb#xpointer(/Texture)"/>
+	<SeaNoiseMask />
+	<DifferentColourMap />
+	<PositiveColour>0</PositiveColour>
+	<NegativeColour>0</NegativeColour>
+	<ReinforcementCalls>0</ReinforcementCalls>
+	<DetailsMap href=""/>
+</Chapter>

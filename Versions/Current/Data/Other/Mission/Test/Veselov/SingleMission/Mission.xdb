@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="4">
+	<Map href="/test/testmaps/progtests/yuri/test/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers/>
+	<bonuses>
+		<Item href="/reinforcements/reinforcementdisable/test/test_reinforcementdisable.xdb#xpointer(/ReinforcementDisable)"/>
+	</bonuses>
+	<LocalizedName href=""/>
+	<LocalizedDescription href=""/>
+	<PlaceOnChapterMap>
+		<x>0</x>
+		<y>0</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility>
+		<Item>
+			<ReinfType>RT_TANKS</ReinfType>
+			<Number>1</Number>
+		</Item>
+	</StartUnitsAvailibility>
+</Mission>

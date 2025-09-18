@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="44">
+	<FileName />
+	<ScriptText>function UnitInParty()
+	if GetNUnitsInParty(0) &gt; 0 then
+		Trace(&quot;GetNUnitsInParty(0) = %g&quot;,GetNUnitsInParty(0));
+		Trace(&quot;IsSomeUnitInParty(0) = %g&quot;, IsSomeUnitInParty(0));
+		if IsSomeUnitInParty(0) == 1 and IsSomeUnitInParty(0) then  -- IsSomeUnitInParty(0) is work
+			Trace(&quot;IsSomeUnitInParty(0) = %g&quot;, IsSomeUnitInParty(0));
+		end;
+	end;
+end;
+
+function UnitInArea()
+	if GetNUnitsInArea(0,&quot;Objective5&quot;,0) &gt; 0 then
+		Trace(&quot;GetNUnitsInArea(0,Objective5,0) = %g&quot;, GetNUnitsInArea(0,&quot;Objective5&quot;,0));
+		Trace(&quot;IsSomeUnitInArea(0,Objective5,0) = %g&quot;, IsSomeUnitInArea(0,&quot;Objective5&quot;,0));
+		if IsSomeUnitInArea(0,&quot;Objective5&quot;,0) == 1 and IsSomeUnitInArea(0,&quot;Objective5&quot;,0) then
+			Trace(&quot;IsSomeUnitInArea(0,Objective5,0) = %g&quot;, IsSomeUnitInArea(0,&quot;Objective5&quot;,0));
+		end;
+	end;
+end;
+
+function NearScriptObject(id)
+	if GetNUnitsNearScriptObj(0,id,1000) &gt; 0 then
+		Trace(&quot;GetNUnitsNearScriptObj(0,%g,1000) = %g&quot;, id, GetNUnitsNearScriptObj(0,id,1000));
+		Trace(&quot;IsUnitNearScriptObject(0,%g,1000) = %g&quot;, id, IsUnitNearScriptObject(0,id,1000));
+		if IsUnitNearScriptObject(0,id,1000) == 1 and IsUnitNearScriptObject(0,id,1000) then
+			Trace(&quot;IsUnitNearScriptObject(0,%g,1000) = %g&quot;, id, IsUnitNearScriptObject(0,id,1000));
+		end;
+	end;
+end;
+
+function BodyAliveUnit(id) -- id 10
+	local array = {};
+	array = GetObjectListArray( id );
+	if NumUnitsAliveInArray(array) &gt; 0 then
+		Trace(&quot;Number units of HP&gt;0 = %g&quot;,NumUnitsAliveInArray(array));
+		Trace(&quot;IsSomeBodyAlive( %g ) = %g&quot;, id, IsSomeBodyAlive( id ));
+		if IsSomeBodyAlive(id) == 1 and IsSomeBodyAlive(id) then
+			Trace(&quot;IsSomeBodyAlive( %g ) = %g&quot;, id, IsSomeBodyAlive( id ));
+		end;
+	end;
+end;
+
+function BodyAliveBuilding( id ) -- 11 - empty ; 12 - isn&apos;t empty ; 13 - destroy
+	local building = {};
+	building = GetObjectListArray( id );
+	if IsAlive( building[1] ) == 1 and NumUnitsAliveInArray(GetArray(GetPassangers( building[1] , 0 ))) &gt; 0  then
+		Trace(&quot;Units is alive = %g Passangers is alive in building = %g&quot;,IsAlive( building[1] ),NumUnitsAliveInArray(GetArray(GetPassangers( building[1] , 0 ))));
+		Trace(&quot;IsSomeBodyAlive( %g ) = %g&quot;, id, IsSomeBodyAlive( id ));
+		if IsSomeBodyAlive(id) == 1 and IsSomeBodyAlive(id) then
+			Trace(&quot;IsSomeBodyAlive( %g ) = %g&quot;, id, IsSomeBodyAlive( id ));
+		end;
+	end;
+end;
+
+function WaitForGroup(id) --id 5, 6, 7, 8, 9, 10
+	for i = 1, 5 do
+		Cmd(ACT_MOVE, id, 0, GetScriptAreaParams(&quot;Objective&quot;..i));
+		WaitForGroupInArea(id,&quot;Objective&quot;..i);
+		Trace(&quot;Area Objective%g is done&quot;,i);
+	end;
+end;
+
+buildingdead = {};
+buildingdead = GetObjectListArray( 13 );
+DamageObject(buildingdead[1], 0);
+CoordsRnd();
+for i = 1, 10 do
+	Trace( &quot;Rnd = %g&quot;,Random(2));
+end;</ScriptText>
+</Script>

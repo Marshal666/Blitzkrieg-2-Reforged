@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Script ObjectRecordID="208" ObjectRecordIDs="">
+	<FileName/>
+	<ScriptText>--VILLAGE
+
+function Alarm()
+
+	while 1 do
+
+		if GetNUnitsInArea(0, "Alarm", 0) &gt; 0 then
+
+			StartThread( Reinforce );
+
+			Wait(300);
+
+		end;
+
+	Wait(3);
+
+	end;
+
+end;
+
+function Reinforce()
+
+a = Random(2);
+
+	if a == 1 then
+
+		LandReinforcementFromMap ( 1, "Reinf", 2, 100 );
+
+		Wait(3);
+
+		Cmd( ACT_SWARM, 100, 50, GetScriptAreaParams ("A2"));
+
+		QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams ("A21"));
+
+		QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams ("A22"));
+
+	else
+
+		LandReinforcementFromMap ( 1, "Reinf", 1, 101 );
+
+		Wait(3);
+
+		Cmd( ACT_SWARM, 101, 50, GetScriptAreaParams ("A1"));
+
+		QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams ("A11"));
+
+		QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams ("A12"));
+
+	end;
+
+end;
+
+function Loose()
+
+    while 1 do
+
+        if ( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then
+
+			Wait(2);
+
+			Win(1);
+
+			return 1;
+
+		end;
+
+	Wait(5);
+
+	end;
+
+end;
+
+function Winner()
+
+    while 1 do
+
+		if (GetNUnitsInArea(0, "Shepitovka", 0) &gt; 0 and GetNUnitsInArea(1, "Shepitovka", 0) &lt; 1) then
+
+			CompleteObjective (0);
+
+			Win(0);
+
+			return 1;
+
+		end;
+
+	Wait(5);
+
+	end;
+
+end;
+
+-------------------------------------------------------Main
+
+Wait(1);
+
+GiveObjective (0);
+
+StartThread( Alarm );
+
+StartThread( Loose );
+
+StartThread( Winner );
+
+
+
+
+
+
+
+
+
+
+
+</ScriptText>
+</Script>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Water ObjectRecordID="21">
+	<Waves>
+		<Item>
+			<Amplitude>3</Amplitude>
+			<Period>0.5</Period>
+			<PeriodVariation>0.3</PeriodVariation>
+			<InvPeriod>0</InvPeriod>
+			<DeepWaveNumber>0.1</DeepWaveNumber>
+			<PhaseOffset>0</PhaseOffset>
+		</Item>
+	</Waves>
+	<WaterSet href="/terrain/waterset/test/vinny/swamp_waterset.xdb#xpointer(/WaterSet)"/>
+	<Light href=""/>
+	<DepthNoise href="/terrain/tgnoise/test/water_depth_tgnoise.xdb#xpointer(/TGNoise)"/>
+	<DepthNoiseCoeff>0.4</DepthNoiseCoeff>
+	<TilesNumPerWaterTexture>4</TilesNumPerWaterTexture>
+	<UseWaves>false</UseWaves>
+	<HorDeformMinRadius>0</HorDeformMinRadius>
+	<HorDeformMaxRadius>1</HorDeformMaxRadius>
+	<HorDeformRadiusSpeed>0.0007</HorDeformRadiusSpeed>
+	<HorDeformRotationSpeedMin>0.0004</HorDeformRotationSpeedMin>
+	<HorDeformRotationSpeedVariation>0</HorDeformRotationSpeedVariation>
+</Water>

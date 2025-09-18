@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="4">
+	<ScenarioUnitsModifiers/>
+	<LocalizedName href=""/>
+	<LocalizedDate href=""/>
+	<LocalizedDescription href=""/>
+	<MissionPath>
+		<Item>
+			<Map href=""/>
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_START</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+		<Item>
+			<Map href=""/>
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_CHAPTER_END</MissionEnableType>
+			<Reward/>
+			<ExpectedEnemy/>
+			<RecommendedCalls>0</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+		</Item>
+	</MissionPath>
+	<ScriptFile href="/other/script/test/madserg_test/chapter_script_started/script.xdb#xpointer(/Script)"/>
+	<BasePlayerReinforcements/>
+	<ReinforcementModifiers>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href="/reinforcements/reinforcement/test/galata/tanks_reinforcement.xdb#xpointer(/Reinforcement)"/>
+		</Item>
+	</ReinforcementModifiers>
+	<MapPicture href=""/>
+	<SeaNoiseMask />
+	<DifferentColourMap />
+	<PositiveColour>0</PositiveColour>
+	<NegativeColour>0</NegativeColour>
+	<ReinforcementCalls>0</ReinforcementCalls>
+	<DetailsMap href=""/>
+</Chapter>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScreen ObjectRecordID="72">
+	<ClassTypeID>285694848</ClassTypeID>
+	<Shared href="MPGameRoom_WindowScreenShared.xdb#xpointer(/WindowScreenShared)" />
+	<Name />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<MessageReactions>
+		<reactions />
+		<ScriptFileRef href="" />
+	</MessageReactions>
+	<CommandSequiences />
+	<TooltipContext>0</TooltipContext>
+	<RelatedTexts>
+		<Item>
+			<Name>DISCONNECT_CONNECT_FAIL</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveDisconnect.txt" />
+		</Item>
+		<Item>
+			<Name>PING_PREFIX</Name>
+			<TextFileRef href="MPGameRoom/TTPingPrefix.txt" />
+		</Item>
+		<Item>
+			<Name>PING_NA</Name>
+			<TextFileRef href="MPGameRoom/TTPingNA.txt" />
+		</Item>
+		<Item>
+			<Name>PING_NO_REPLY</Name>
+			<TextFileRef href="MPGameRoom/TTPingNoReply.txt" />
+		</Item>
+		<Item>
+			<Name>PING_BAD</Name>
+			<TextFileRef href="MPGameRoom/TTPingBad.txt" />
+		</Item>
+		<Item>
+			<Name>PING_AVG</Name>
+			<TextFileRef href="MPGameRoom/TTPingAvg.txt" />
+		</Item>
+		<Item>
+			<Name>PING_GOOD</Name>
+			<TextFileRef href="MPGameRoom/TTPingGood.txt" />
+		</Item>
+		<Item>
+			<Name>DISCONNECT_KICKED</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveKicked.txt" />
+		</Item>
+		<Item>
+			<Name>DISCONNECT_GAME_KILLED</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveGameKilled.txt" />
+		</Item>
+		<Item>
+			<Name>DISCONNECT_GAME_FULL</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveGameFull.txt" />
+		</Item>
+		<Item>
+			<Name>DISCONNECT_CHECKSUM</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveCheckSum.txt" />
+		</Item>
+		<Item>
+			<Name>DISCONNECT_UNKNOWN</Name>
+			<TextFileRef href="MPGameRoom/Text/MsgLeaveServerDead.txt" />
+		</Item>
+		<Item>
+			<Name>COMBO_OPEN</Name>
+			<TextFileRef href="MPGameRoom/Text/ComboOpen.txt" />
+		</Item>
+		<Item>
+			<Name>COMBO_CLOSE</Name>
+			<TextFileRef href="MPGameRoom/Text/ComboClose.txt" />
+		</Item>
+		<Item>
+			<Name>ASK_KICK_PLAYER</Name>
+			<TextFileRef href="MPGameRoom/Text/QuestionKickPlayer.txt" />
+		</Item>
+		<Item>
+			<Name>TT_RANDOM_COUNTRY</Name>
+			<TextFileRef href="MPGameRoom/TTRandomCountry.txt" />
+		</Item>
+	</RelatedTexts>
+</WindowScreen>

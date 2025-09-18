@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="144">
+	<FileName />
+	<ScriptText>--AttackGroupCreate( 1 );
+--AttackGroupAddUnit( 1, 1, -1 );
+--AttackGroupStartAttack( 1, 4000,4000, 2000 );
+function Bomb()
+	LandReinforcementFromMap( 1, &quot;Bomb&quot;, 0, 111 );
+	GiveCommand( 16, 111, 0, 1000,1000 );
+	LandReinforcementFromMap( 0, &quot;Fighter1&quot;, 0, 112 );
+end;</ScriptText>
+</Script>

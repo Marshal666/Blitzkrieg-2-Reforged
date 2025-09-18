@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="1000012">
+	<KeyName>7.62 SHKAS</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href="/Scene/TexAndMats/Game/Mission/WeaponTypeTextures/HeavyMachineGun_Texture.xdb#xpointer(/Texture)" />
+	<Dispersion>12</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>3</AmmoPerBurst>
+	<RangeMax>30</RangeMax>
+	<RangeMin>1</RangeMin>
+	<Ceiling>3000</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>6</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>7</Piercing>
+			<DamageRandom>5</DamageRandom>
+			<DamagePower>7</DamagePower>
+			<PiercingRandom>4</PiercingRandom>
+			<Area>0.3</Area>
+			<Area2>1.5</Area2>
+			<Speed>850</Speed>
+			<TraceSpeedCoeff>0.7</TraceSpeedCoeff>
+			<TraceProbability>0.5</TraceProbability>
+			<TraceLength>0</TraceLength>
+			<TraceWidth>0</TraceWidth>
+			<TraceMaterial href="" />
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_LINE</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound />
+			<EffectGunFire href="/Scene/Effects/All/Shots/MachineGun_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectTrajectory href="" />
+			<EffectHitDirect href="" />
+			<EffectHitMiss href="" />
+			<EffectHitReflect href="" />
+			<EffectHitGround href="/Scene/Effects/All/Hits/MachineGunGroundHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitWater href="/Scene/Effects/All/Hits/WaterHit_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<EffectHitAir href="" />
+			<Craters href="" />
+			<FireRate>800</FireRate>
+			<RelaxTime>6</RelaxTime>
+			<visProjectile href="" />
+		</Item>
+	</shells>
+	<VisObj href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Weapons/Technics/USSR/7_62mm_shkas/name.txt" />
+</WeaponRPGStats>

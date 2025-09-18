@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeaponRPGStats ObjectRecordID="517">
+	<KeyName>10.5 cm FLAK-38</KeyName>
+	<ParentName />
+	<StatsType>Weapon</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNKNOWN</GameType>
+	<Comments />
+	<WeaponType>WEAPON_HEAVY_CANNON</WeaponType>
+	<WeaponTypeTexture href=""/>
+	<Dispersion>100</Dispersion>
+	<AimingTime>0</AimingTime>
+	<AmmoPerBurst>1</AmmoPerBurst>
+	<RangeMax>300</RangeMax>
+	<RangeMin>0</RangeMin>
+	<Ceiling>11800</Ceiling>
+	<RevealRadius>0</RevealRadius>
+	<DeltaAngle>0.1</DeltaAngle>
+	<shells>
+		<Item>
+			<DamageType>DAMAGE_HEALTH</DamageType>
+			<Piercing>400</Piercing>
+			<DamageRandom>0</DamageRandom>
+			<DamagePower>1</DamagePower>
+			<PiercingRandom>26</PiercingRandom>
+			<Area>1</Area>
+			<Area2>2</Area2>
+			<Speed>60</Speed>
+			<TraceSpeedCoeff>0.2</TraceSpeedCoeff>
+			<TraceProbability>0</TraceProbability>
+			<DetonationPower>0</DetonationPower>
+			<trajectory>TRAJECTORY_ROCKET</trajectory>
+			<BrokeTrackProbability>0</BrokeTrackProbability>
+			<FireSound> </FireSound>
+			<EffectGunFire href="/scene/effects/all/shots/antiaircraftgun_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectTrajectory href="/scene/effects/all/exhaust/rocketsmoke_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitDirect href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitMiss href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitReflect href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitGround href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitWater href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<EffectHitAir href="/scene/effects/all/explosions/airexplosion_complexeffect.xdb#xpointer(/ComplexEffect)"/>
+			<Craters href=""/>
+			<flashFire href=""/>
+			<flashExplosion href=""/>
+			<FireRate>60</FireRate>
+			<RelaxTime>0.2</RelaxTime>
+			<visProjectile href="/other/projectile/all/units/weapons/rockets/mlrs/projectile.xdb#xpointer(/Projectile)"/>
+		</Item>
+	</shells>
+	<VisObj href=""/>
+	<LocalizedName href="/other/text/test/stas/torpedo/text.xdb#xpointer(/Text)"/>
+</WeaponRPGStats>

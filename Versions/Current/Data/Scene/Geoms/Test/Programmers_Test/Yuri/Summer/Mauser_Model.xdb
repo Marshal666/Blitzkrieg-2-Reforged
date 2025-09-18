@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Model ObjectRecordID="253">
+	<Materials>
+		<Item href="/scene/texandmats/test/programmers_test/yuri/summer/mauser_material.xdb#xpointer(/Material)"/>
+	</Materials>
+	<Geometry href="/scene/geoms/test/programmers_test/yuri/summer/mauser_geometry.xdb#xpointer(/Geometry)"/>
+	<Skeleton href="/scene/geoms/test/programmers_test/yuri/summer/mauser_skeleton.xdb#xpointer(/Skeleton)"/>
+	<Animations>
+		<Item href="/scene/geoms/test/programmers_test/mauser/death_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/mauser/move_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/mauser/shoot_animb2.xdb#xpointer(/AnimB2)"/>
+		<Item href="/scene/geoms/test/programmers_test/mauser/use_animb2.xdb#xpointer(/AnimB2)"/>
+	</Animations>
+	<WindPower>1</WindPower>
+</Model>

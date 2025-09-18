@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1124">
+		<Type>RT_ASSAULT_INFANTRY</Type>
+		<IconTexture href="/scene/texandmats/game/mission/reinforcement/type/assaultinf_texture.xdb#xpointer(/Texture)" />
+		<LocalizedName href="/other/text/game/tooltips/reinforcements/types/assault_infantry/text.xdb#xpointer(/Text)" />
+		<Entries>
+			<Item>
+				<MechUnit href="/units/technics/gb/auto/universal_carrier_mki_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<Squad href="" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="/units/technics/gb/auto/m3_halftruck_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+				<Squad href="" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="" />
+				<Squad href="/squads/great_britain/at_squad/gb_at_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="" />
+				<Squad href="/squads/great_britain/assault_squad/gb_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="" />
+				<Squad href="/squads/great_britain/assault_squad/gb_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="" />
+				<Squad href="/squads/great_britain/assault_squad/gb_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+			<Item>
+				<MechUnit href="" />
+				<Squad href="/squads/great_britain/assault_squad/gb_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+				<LinkIndex>-1</LinkIndex>
+				<LinkWith>-1</LinkWith>
+			</Item>
+		</Entries>
+		<Tooltip href="/other/text/game/tooltips/reinforcements/types/assault_infantry/text.xdb#xpointer(/Text)" />
+		<Transports>
+			<Item href="/units/technics/gb/ships/lst_lsi_gb/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+		</Transports>
+		<LocalizedDesc href="" />
+	</Reinforcement>

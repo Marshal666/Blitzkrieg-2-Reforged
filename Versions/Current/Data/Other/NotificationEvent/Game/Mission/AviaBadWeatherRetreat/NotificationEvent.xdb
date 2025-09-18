@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="12">
+	<Type>NEVT_AVIA_BAD_WEATHER_RETREAT</Type>
+	<Texture href="/scene/texandmats/all/ui/mission/notifications/avia_texture.xdb#xpointer(/Texture)"/>
+	<Text href="/other/text/game/mission/notificationevents/aviabadweatherretreat/text.xdb#xpointer(/Text)"/>
+	<Tooltip href="/other/text/game/mission/notificationevents/tooltips/ttaviabadweatherretreat/text.xdb#xpointer(/Text)"/>
+	<Sound href="/soundandmusic/game/mission/notification/common/info1_complexsounddesc.xdb#xpointer(/ComplexSoundDesc)"/>
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>20</AutoRemoveTime>
+	<Notification href="/other/notification/game/mission/aviabadweatherretreat/notification.xdb#xpointer(/Notification)"/>
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

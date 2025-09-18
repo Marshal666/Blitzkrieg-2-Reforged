@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="1000020">
+	<NumPatchesX>14</NumPatchesX>
+	<NumPatchesY>14</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/asia_tgterraset.xdb#xpointer(/TGTerraSet)" />
+	<MapFilesPath />
+	<Light href="/scene/lights/all/summer/sun_set_ambientlight.xdb#xpointer(/AmbientLight)" />
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)" />
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href="" />
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)" />
+	<Roads />
+	<Rivers />
+	<Crags />
+	<Spots />
+	<Lakes />
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="" />
+		<points />
+		<ControlPoints />
+		<VSOID>-1</VSOID>
+		<CMArrowType>0</CMArrowType>
+		<CMArrowMission>0</CMArrowMission>
+		<CMArrowMission2>0</CMArrowMission2>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>FD08538D-091B-411A-B94E-A3399E4BCB45</uid>
+	<MapDesigner href="" />
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/usa_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/japan_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/usa_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/usa_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+	</Players>
+	<Objects />
+	<HiddenObjectType href="" />
+	<Season>SEASON_ASIA</Season>
+	<DayTime>DAY_MORNING</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments />
+	<Bridges />
+	<ScenarioObjects />
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data />
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFile href="" />
+	<ScriptFileName />
+	<ScriptAreas />
+	<startCommandsList />
+	<reservePositionsList />
+	<soundsList />
+	<ForestCircleSound href="" />
+	<ForestAmbientSounds href="" />
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects />
+	<Bonuses />
+	<EditAreas />
+	<MiniMap href="minimap_material.xdb#xpointer(/Material)" />
+	<LocalizedName href="" />
+	<LocalizedDescription href="" />
+	<LoadingPicture href="" />
+	<LoadingDescription href="" />
+	<CameraPositions />
+	<ScriptCameraPlacements />
+	<Objectives />
+	<Music href="" />
+	<MPInfo>
+		<GameTypes />
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects />
+</MapInfo>

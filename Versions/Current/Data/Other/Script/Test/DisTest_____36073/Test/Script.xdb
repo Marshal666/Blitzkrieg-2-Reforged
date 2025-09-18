@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="4">
+	<FileName />
+	<ScriptText>Trace( GetNUnitsInArea(1, &quot;ccc&quot; ) );
+Trace( GetNUnitsInArea(2, &quot;ccc&quot; ) );
+Trace( GetNUnitsInArea(3, &quot;ccc&quot; ) );
+Trace( GetNUnitsInArea(4, &quot;ccc&quot; ) );
+
+Trace( GetNUnitsInArea(1, &quot;bbb&quot; ) );
+Trace( GetNUnitsInArea(2, &quot;bbb&quot; ) );
+Trace( GetNUnitsInArea(3, &quot;bbb&quot; ) );
+Trace( GetNUnitsInArea(4, &quot;bbb&quot; ) );
+
+--funcs = {};
+
+--funcs[1] = Trace;
+--funcs[1](&quot;traced&quot;);
+
+--funcs[2] = function ( ... )
+--	Trace( arg[1] );
+--end;
+--funcs[2](&quot;la la&quot;);
+--	Trace()
+--end;
+
+--local troops = {};
+--LandReinforcement(1, 118, 9, 1 );
+--Sleep( 5 );
+--troops = GetUnitListInAreaArray( 1, &quot;ccc&quot; );
+--Trace( troops.n );
+--Sleep( 5 );
+--CmdArray( ACT_MOVE, troops, 4000, 1000 );
+
+--LandReinforcement2(0, 57, 11, 1, 99 );
+--Sleep( 5 );
+--Trace( GetNUnitsInScriptGroup( 99 ) );
+--function A()
+--LandReinforcement(3, 75, 12, 1 );
+--end;
+--function B()
+--LandReinforcement(3, 66, 14, 1);
+--end;
+--function C()
+--LandReinforcement(3, 68, 18, 1);
+--end;
+--function D()
+--LandReinforcement(3, 77, 17, 1);
+--end;
+
+--local ab = 10 / 14;
+--if ( ab &gt; 0.75 ) then
+--Trace( &quot;dssd&quot;);
+--end;
+--f = 0;
+--local aa = {};
+--local trucks = {};
+--local guns = {};
+--local tr_hp = 40;
+--local gun_hp = 50;
+--aa = GetUnitListInAreaArray( 0, &quot;aaa&quot; );
+--Trace( aa.n );
+--trucks = GetUnitListWithHPs( aa, tr_hp );
+--guns = GetUnitListWithHPs( aa, gun_hp );
+
+--Wait( 3 );
+--CmdArray(ACT_DEPLOY, trucks, ObjectGetCoord( trucks[1] ) );
+--local x, y = ObjectGetCoord( trucks[1] );
+--x = x + 200;
+--y = y + 200;
+
+--QCmdArray(ACT_MOVE, trucks, x, y );
+--Wait( 15 );
+--CmdArray(ACT_ROTATE, guns, 1000, 5000 );
+--QCmdArray(ACT_ENTRENCH, guns );
+
+--function abcd()
+--	while 1 do
+--		Wait( 2 );
+--		Trace( &quot;APFence %g&quot;, GetNAPFencesInScriptArea( &quot;aaa&quot; ) );
+--		Trace( &quot;Antitank %g&quot;, GetNAntitankInScriptArea( &quot;aaa&quot; ) );
+--		Trace( &quot;Fence %g&quot;,GetNFencesInScriptArea( &quot;aaa&quot; ) );
+--		Trace( &quot;Mines %g&quot;,GetNMinesInScriptArea( &quot;aaa&quot; ) );
+--	end;
+--end;
+--zzz = GetUnitListInAreaArray( 0, &quot;c&quot; );
+--z = GetUnitsByParam( zzz, PT_TYPE, TYPE_INF );
+--Trace( &quot;zzz.n = %g&quot;, zzz.n );
+--Trace( &quot;z.n = %g&quot;, z.n );
+--StartThread( abcd );
+--ViewZone( &quot;ccc&quot;, 1 );</ScriptText>
+</Script>

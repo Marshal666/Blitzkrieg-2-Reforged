@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SquadRPGStats ObjectRecordID="303">
+	<KeyName> </KeyName>
+	<ParentName> </ParentName>
+	<StatsType> </StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_SQUAD</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels/>
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href=""/>
+	<IconTexture href="/scene/texandmats/all/ui/mission/icons/units/soldier_texture.xdb#xpointer(/Texture)"/>
+	<LocalizedName href="/other/text/localizedmechunitsname/b2/allies/squads/gb_sniper/text.xdb#xpointer(/Text)"/>
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects/>
+	<SurfacePoints/>
+	<IconsSet href=""/>
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<SquadType>Special_Squad</SquadType>
+	<Icon> </Icon>
+	<type>INFANTRY</type>
+	<members>
+		<Item href="/test/testinfantry/distest/superman/infantryrpgstats.xdb#xpointer(/InfantryRPGStats)"/>
+		<Item href="/test/testinfantry/distest/sten_elite/infantryrpgstats.xdb#xpointer(/InfantryRPGStats)"/>
+	</members>
+	<formations>
+		<Item>
+			<type>DEFAULT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>0</x>
+						<y>0</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="/other/unitstatsmodifier/testmodifiers/formations/testsquad/default/unitstatsmodifier.xdb#xpointer(/UnitStatsModifier)"/>
+			<changesByEvent/>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>DEFENSIVE</type>
+			<order/>
+			<LieFlag>2</LieFlag>
+			<StatsModifiers href="/other/unitstatsmodifier/testmodifiers/formations/testsquad/defensive/unitstatsmodifier.xdb#xpointer(/UnitStatsModifier)"/>
+			<changesByEvent/>
+			<SpeedBonus>0.1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+	</formations>
+	<availCommands>00000000000000000000000000000000</availCommands>
+	<availExposures>00000000000000000000000000000000</availExposures>
+	<availUserActions>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserActions>
+	<availUserExposures>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserExposures>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<EntrenchCover>0.5</EntrenchCover>
+</SquadRPGStats>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<RiverDesc ObjectRecordID="7">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>7</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>-13805754</MiniMapCenterColor>
+	<MiniMapBorderColor>-13472929</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href=""/>
+	<CycledSound href=""/>
+	<BottomMaterial href="/scene/texandmats/all/terrain/water/africa/bottom_material.xdb#xpointer(/Material)"/>
+	<PrecipiceMaterial href="/scene/texandmats/all/terrain/water/africa/quay_material.xdb#xpointer(/Material)"/>
+	<WaterMaterial href="/scene/texandmats/all/terrain/water/africa/water_material.xdb#xpointer(/Material)"/>
+	<StreamSpeed>0.2</StreamSpeed>
+	<BorderRand>0</BorderRand>
+	<Depth>0</Depth>
+	<DepthRand>0.05</DepthRand>
+	<RandX>0</RandX>
+	<RandY>0</RandY>
+	<RidgeTexGeomScale>14</RidgeTexGeomScale>
+	<WaterLayers>
+		<Item>
+			<CenterOpacity>1</CenterOpacity>
+			<BorderOpacity>1</BorderOpacity>
+			<TilingStep>0.1</TilingStep>
+			<RelWidth>0</RelWidth>
+			<Disturbance>0.3</Disturbance>
+			<NumCells>6</NumCells>
+			<Materials>
+				<Item href="/scene/texandmats/all/terrain/water/africa/water_material.xdb#xpointer(/Material)"/>
+			</Materials>
+			<UseFromPixel>0</UseFromPixel>
+			<UseToPixel>0</UseToPixel>
+			<StreamSpeed>0.2</StreamSpeed>
+		</Item>
+		<Item>
+			<CenterOpacity>1</CenterOpacity>
+			<BorderOpacity>1</BorderOpacity>
+			<TilingStep>0.1</TilingStep>
+			<RelWidth>0</RelWidth>
+			<Disturbance>0.3</Disturbance>
+			<NumCells>6</NumCells>
+			<Materials>
+				<Item href="/scene/texandmats/all/terrain/water/africa/water2_material.xdb#xpointer(/Material)"/>
+			</Materials>
+			<UseFromPixel>0</UseFromPixel>
+			<UseToPixel>0</UseToPixel>
+			<StreamSpeed>1</StreamSpeed>
+		</Item>
+	</WaterLayers>
+	<HasPeak>false</HasPeak>
+	<DefaultWidth>256</DefaultWidth>
+	<DefaultOpacity>1</DefaultOpacity>
+</RiverDesc>

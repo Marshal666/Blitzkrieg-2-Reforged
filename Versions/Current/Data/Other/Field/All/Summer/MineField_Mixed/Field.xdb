@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Field ObjectRecordID="30">
+	<TileShells/>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)"/>
+	<ObjectShells>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/mines/all/mineap/minerpgstats.xdb#xpointer(/MineRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/mines/all/mineat/minerpgstats.xdb#xpointer(/MineRPGStats)"/>
+					<Weight>1</Weight>
+				</Item>
+			</Objects>
+			<Width>512</Width>
+			<BetweenDistance>3</BetweenDistance>
+			<Ratio>0.5</Ratio>
+		</Item>
+	</ObjectShells>
+	<ProfileFileName />
+	<Height>0</Height>
+	<PatternSize>
+		<Min>0</Min>
+		<Max>0</Max>
+	</PatternSize>
+	<PositiveRatio>0</PositiveRatio>
+</Field>

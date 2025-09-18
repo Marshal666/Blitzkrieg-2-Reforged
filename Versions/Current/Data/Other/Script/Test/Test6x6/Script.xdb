@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="58">
+	<FileName />
+	<ScriptText>function Reif()
+	Wait(4);
+	LandReinforcement( 0, 158, 14, 1 );
+end;
+
+---------Main
+StartThread( Reif );</ScriptText>
+</Script>

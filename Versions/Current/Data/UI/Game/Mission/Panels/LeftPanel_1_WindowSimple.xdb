@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimple ObjectRecordID="425">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="LeftPanel_WindowSimpleShared.xdb#xpointer(/WindowSimpleShared)" />
+	<Name>MissionMinimapPanel</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>150</Priority>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>mission_minimap_panel_minimize_move</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="MinimapMinimize_UISMoveTo.xdb#xpointer(/UISMoveTo)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>mission_minimap_panel_maximize_move</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="MinimapMaximize_UISMoveTo.xdb#xpointer(/UISMoveTo)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>mission_minimap_panel_minimize_move_fast</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="MinimapMinimizeFast_UISMoveTo.xdb#xpointer(/UISMoveTo)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>mission_minimap_panel_maximize_move_fast</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="MinimapMaximizeFast_UISMoveTo.xdb#xpointer(/UISMoveTo)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>240</x>
+				<y>143</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+</WindowSimple>

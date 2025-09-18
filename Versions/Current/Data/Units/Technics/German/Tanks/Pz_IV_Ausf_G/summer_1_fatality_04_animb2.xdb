@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2705">
+	<SrcName href="/Units/Technics/Germany/Tanks/Pz_IV_Ausf_G/1.mb" />
+	<uid>A38CE919-5702-4ED4-A1FF-63334ED2C9D5</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>130</FirstFrame>
+	<LastFrame>149</LastFrame>
+	<AABBAName>AABB_A04</AABBAName>
+	<AABBDName>AABB_D04</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-12</x>
+			<y>24</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>48</x>
+			<y>96</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-12</x>
+			<y>24</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>48</x>
+			<y>96</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

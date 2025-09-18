@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="850">
+	<Type>RT_ARTILLERY</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Artillery_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.xdb#xpointer(/Text)" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/17_cm_k18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/17_cm_k18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/artillery/17_cm_k18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>3</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/opel_blitz_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/opel_blitz_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/auto/opel_blitz_cargo/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>3</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.xdb#xpointer(/Text)" />
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

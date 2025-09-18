@@ -1,0 +1,693 @@
+-- reinforcements
+LightTanks = 1159;
+MainSquad = 1160;
+AssaultSquad = 1163;
+Bomber = 1161;
+Artillery = 1162;
+
+-- variables
+missionend = 0;
+Disp = 50;
+art_busy = 0;
+coords = { { 4182, 11375 }, { 5000, 3990 }, { 5000, 5240 } };
+--coords1 = { { 10000, 4000 }, { 11111, 8000 } };
+coords_changed = 0;
+attack_id = 1000;
+lmin1 = 600;
+lmin2 = 600;
+wave = 1;
+obj0_fail = 0;
+obj1_fail = 0;
+area = { "Objective1", "Objective2", "Objective3", "Objective5" };
+area.n = 4;
+area_state = { 0, 0, 0, 0};
+area_state.n = 4;
+--ScriptID's
+id1 = 160;
+id2 = 170;
+
+function WinCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( GetIGlobalVar( "temp.objective.2", 0 ) == 2 ) then
+			Wait( 3 );
+			Win( 0 ); -- player wins
+			missionend = 1;
+		end;
+	end;
+end;
+
+function LooseCheck()
+	while ( missionend == 0 ) do
+		Wait( 2 );
+		if ( ( IsSomeUnitInParty ( 0 ) == 0 ) and ( IsReinforcementAvailable ( 0 ) == 0 ) ) then
+			missionend = 1;
+			Wait( 3 );
+			Win( 1 );
+			return
+		end;
+		for u = 0, Objectives_Count - 1 do
+			if ( GetIGlobalVar( "temp.objective." .. u, 0 ) == 3 ) and u ~= 1 then
+				missionend = 1;
+				Wait( 3 );
+				Win( 1 ); -- player looses
+				return
+			end;
+		end;
+	end;
+end;
+
+function Obj3Manager()
+	if GetIGlobalVar( "temp.objective.0", 0 ) == 2 and GetIGlobalVar( "temp.objective.3", 0 ) ~= 1 then
+		Wait( Random( 50 ) + 50 );
+		GiveObjective( 3 );
+	end;
+	Wait( 5 );
+end;
+
+function Objective0()
+	if ( ( area_state[1] == 0 ) or ( area_state[2] == 0 ) ) and wave >= 8 and ( GetIGlobalVar( "temp.objective.0", 0 ) == 1 ) then
+		Wait( 3 );
+		CompleteObjective( 0 );
+		if ( GetIGlobalVar( "temp.objective.1", 0 ) ~= 1 ) then
+			GiveObjective( 1 );
+		end;
+		if ( GetIGlobalVar( "temp.objective.2", 0 ) ~= 1 ) then
+			GiveObjective( 2 );
+		end;
+		return 1;
+	elseif ( area_state[1] == 1 ) and ( area_state[2] == 1 ) and ( GetIGlobalVar( "temp.objective.0", 0 ) == 1 ) then
+		FailObjective( 0 );
+		return 1;
+	end;
+end;
+
+function Objective1()
+	if ( area_state[3] == 0 ) and wave >= 16 and ( GetIGlobalVar( "temp.objective.1", 0 ) == 1 ) then
+		Wait( 3 );
+		CompleteObjective( 1 );
+		return 1;
+	elseif ( area_state[3] == 1 ) and ( GetIGlobalVar( "temp.objective.1", 0 ) == 1 ) then
+		FailObjective( 1 );
+		return 1;
+	end;
+end;
+
+function Objective2()
+	if ( area_state[4] == 0 ) and wave >= 16 and ( GetIGlobalVar( "temp.objective.2", 0 ) == 1 ) then
+		Wait( 3 );
+		CompleteObjective( 2 );
+		return 1;
+	elseif ( area_state[4] == 1 ) and ( GetIGlobalVar( "temp.objective.2", 0 ) == 1 ) then
+		FailObjective( 2 );
+		return 1;
+	end;
+end;
+
+function ClearMine( id )
+local rnd = Random( 2 );
+	while 1 do
+		if wave == rnd then
+			
+		end;
+		Wait( 2 );
+	end;
+end;
+
+function LandingSquad()
+local mech = {};
+local coord = { { 4525, 2990}, { 7405, 2800 }, { 8324, 2389 }, { 10500, 3100 } };
+local rnd = Random( 4 );
+local wavernd = { Random( 5 ), Random( 5 ) + 5, Random( 5 ) + 10 };
+local id = 4000;
+	while wave < 16 do
+		if wave == wavernd[1] or wave == wavernd[2] or wave == wavernd[3] then
+			LandReinforcementFromMap( 1, '7', 2, id );
+			Wait(2);
+			mech = GetObjectListArray( id );
+			mech = GetUnitsByParam( mech, PT_TYPE, TYPE_MECH );
+			for i = 1, mech.n do
+				StartThread( PassangersSwarm, mech[i], 5000, 10000 );
+			end;
+			Cmd( ACT_MOVE, id, 200, coord[rnd][1] - 300, coord[rnd][2] - 2300 );
+			QCmd( ACT_UNLOAD, id, 0, coord[rnd][1], coord[rnd][2] );
+			Trace("x=%g y=%g", coord[rnd][1], coord[rnd][2]);
+			rnd = Random( 4 );
+			id = id + 1;
+			for i = 1, 3 do
+				if wavernd[i] == wave then
+					wavernd[i] = 0;
+				end;
+			end;
+		end;
+		Wait(2);
+	end;
+end;
+
+function AssaultGroup()
+local id = 6000;
+local id1 = 6001;
+local array = {};
+local mech = {};
+local x = 10500;
+	LandReinforcementFromMap( 1, "3", 0, id );
+	Wait( 2 );
+	LandReinforcementFromMap( 1, "6", 0, id1 );
+	Wait( 2 );
+		Cmd( ACT_SWARM, id, 100, 10700, 10962 );
+		Cmd( ACT_MOVE, id1, 100, 10500, 10962 );
+		QCmd( ACT_UNLOAD, id1, 100, 10500, 10962 );
+	Wait( Random( 10 ) );
+	array = GetObjectListArray( id1 );
+	mech = GetUnitsByParam( array, PT_TYPE, TYPE_MECH );
+	for i = 1, mech.n do
+		if Random(2)==1 then
+			x = 11400;
+		else
+			x = 10500;
+		end;
+		Cmd( ACT_SWARM, mech[i], 100, x, 10962 );
+		StartThread( PassangersSwarm, mech[i], 10700, 10962 );
+	end;
+end;
+
+function PassangersSwarm( mechunit, x, y )
+	local inf = {};
+	local temp = {};
+	local coord = {};
+	inf = GetPassangersArray ( mechunit, 1 );
+	coord[1], coord[2] = ObjectGetCoord( mechunit );
+	while IsAlive( mechunit ) do
+		temp = GetPassangersArray ( mechunit, 1 );
+		if temp.n <= 0 then
+			UnitCmd( ACT_STOP, mechunit );
+			for i=1, inf.n do
+				UnitCmd( ACT_SWARM, inf[i], 500, x, y );
+			end;
+			Wait( Random( 10 ) + 10 );
+			UnitCmd( ACT_SWARM, mechunit, 500, coord[1], coord[2] );
+			UnitCmd( ACT_MOVE, mechunit, 500, coord[1], coord[2] );
+			UnitQCmd( ACT_DISAPPEAR, mechunit );
+			Trace("MechUnit call back");
+			return 1;
+		end;
+		Wait(1);
+	end;
+end;
+
+function Objective3()
+local trucks = { "0", "1", "2" };
+local array = {};
+local n = 0;
+local iter = 0;
+local id = 3333;
+local coord = {};
+local t = 0; -- for single use n=n+1
+local rnd = Random( 2 );
+
+if GetIGlobalVar( "temp.objective.3", 0 ) == 1  then
+	StartThread( AssaultGroup );
+	while n < 7 and iter < 10 do
+		Wait( Random( 10 ) + 10 );
+		t = 0;
+		LandReinforcementFromMap( 2, trucks[Random( 3 )], 0, id );
+		Wait( 2 );
+		QCmd( ACT_MOVE, id, 10, 11088, 11396 );
+		QCmd( ACT_MOVE, id, 20, 11257, 10962 );
+		QCmd( ACT_MOVE, id, 10, 12000, 10120 );
+		QCmd( ACT_DISAPPEAR, id );
+		array = GetObjectListArray( id );
+		while IsSomeBodyAlive ( 2, id ) == 1 do
+			coord[1], coord[2] = ObjectGetCoord( array[1]);
+			if len( coord[1] - 12000, coord[2] - 10120 ) < 150 and t == 0 then
+				n = n + 1;
+				t = 1;
+			end;
+			Sleep( 10 );
+		end;
+	iter = iter + 1;
+	if iter == rnd then
+		StartThread( AirStrike, 5000, 11257, 10962 );
+	end;
+	Wait( 3 );
+	end;
+	
+	Wait( 5 );
+	if n < 7 then
+		FailObjective( 3 );
+	else
+		CompleteObjective( 3 );
+	end;
+end;
+end;
+
+function AreaManager()
+	for i = 1, area_state.n do
+		StartThread( AreaState, i );
+	end;
+end;
+
+function AreaState( n )
+local k=0;
+	while 1 do
+		if area_state[n] == 1 then
+			while k < 3 do
+			 if GetNUnitsInArea( 0, area[n], 0 ) > 0 and GetNUnitsInArea( 1, area[n], 0  ) <= 0 then
+				k = k + 1;
+			 else
+				k = 0;
+			 end;
+			 Wait(10);
+			end;
+			area_state[n] = 0; 
+			Trace("area_state[%g]=%g - our", n, area_state[n] );
+		else
+			while k < 3 do
+			 if  ( GetNUnitsInArea ( 1, area[n], 0) > 0 ) and ( GetNUnitsInArea ( 0, area[n], 0 ) <= 0 ) then
+				k = k + 1;
+			 else
+				k = 0;
+			 end;
+			 Wait(10);
+			end;
+			area_state[n] = 1; -- 1 = area failed
+			Trace("area_state[%g]=%g - enemy", n, area_state[n] );
+		end;
+		k = 0;
+		Wait( 2 );
+	end;
+end;
+
+function EnemyAction( id, CommonPhase, x, y )
+	local k = 3;
+	while art_busy == 1 do
+		Wait(1);
+	end;
+	art_busy = 1;
+	Wait( Random( 10 ) + 10 );
+	Trace("CommonPhase = %g", CommonPhase );
+	if GetIGlobalVar( "temp.objective.0", 0 ) == 2 then
+		k = 1;
+	end;
+	for i = id, id + 4 do
+		ChangePlayerForScriptGroup(i,k);
+		StartThread( ArtAction, id, i, CommonPhase, x, y );
+		Wait(1);
+	end;
+	Wait( 20 );
+	WaitForState( id );
+	art_busy = 0;
+	AttackAction( CommonPhase, x, y );
+	Wait( Random( 120 ) );
+end;
+
+function WaitForShoot( id )
+	local ammo = 0;
+	local ammo1 = 0;
+	local temp = 0;
+	local temp1 = 0;
+	local art = {};
+	art = GetObjectListArray( id );
+	ammo, ammo1 = GetNAmmo( id );
+	temp, temp1 = GetNAmmo( id );
+	while temp == ammo and temp1 == ammo1 and IsAlive( art[1] ) do
+		temp, temp1 = GetNAmmo( id );
+		if temp == 0 and temp1 == 0 then
+			return 1;
+		end;
+		Sleep( 5 );
+	end;
+end;
+
+function WaitForState( id )
+	local k = 0;
+	local art = {};
+	local art1 = {};
+	local art2 = {};
+	local art3 = {};
+	local art4 = {};
+	art = GetObjectListArray( id );
+	art1 = GetObjectListArray( id + 1 );
+	art2 = GetObjectListArray( id + 2 );
+	art3 = GetObjectListArray( id + 3 );
+	art4 = GetObjectListArray( id + 4 );
+	while k < 10 do
+		WaitRest( art,1 );
+		WaitRest( art1,1 );
+		WaitRest( art2,1 );
+		WaitRest( art3,1 );
+		WaitRest( art4,1 );
+		
+		k = k + 1;
+		Wait(1);
+	end;
+end;
+
+function WaitRest( artn, i )
+	while GetUnitState( artn[i] ) ~= 1 and IsAlive( artn[i] ) do
+		Wait(1);
+	end;
+end;
+
+function ArtAction( startid, id, CommonPhase, x, y )
+	local r = 600;
+	local x0 = 0;
+	local y0 = 0;
+	local art = {};
+	local t = 0;
+	art = GetObjectListArray( id );
+	Cmd( ACT_ROTATE, id, Disp, x, y );
+	Wait(5);
+	while GetUnitState( art[1] ) ~= 1 do
+		Sleep(1);
+	end;
+	if id == startid then
+		Cmd( ACT_SUPPRESS, id, 0, x + r, y );
+		WaitForShoot( id );
+		Cmd( ACT_SUPPRESS, id, 0, x - 2*r, y );
+		WaitForShoot( id );
+		Cmd( ACT_STOP, id );
+		Wait( 6 );
+	else
+		WaitForShoot( startid );
+		WaitForShoot( startid );
+		Wait( 6 );
+		Sleep( ( id - startid )*30 );
+	end;
+	
+	if CommonPhase == 1 then
+		x0 = x - r/2;	
+		y0 = y - r + (id - startid)*100;
+		while y0 < ( y + r ) do 
+			Cmd( ACT_SUPPRESS, id, 0, x0, y0 );
+			t = GetGameTime();
+			WaitForShoot( id );
+			y0 = y0 + 200;
+		end;
+		Cmd( ACT_STOP, id );
+	else
+		x0 = x - r/2 + (id - startid)*100;
+		y0 = y;		
+		while x0 < ( x + r ) do 
+			Cmd( ACT_SUPPRESS, id, 0, x0, y0 );
+			t = GetGameTime();
+			WaitForShoot( id );
+			x0 = x0 + 200;
+		end;
+		Cmd( ACT_STOP, id );
+	end;
+end;
+
+function AttackAction( CommonPhase, x, y )
+	local k = 0;
+	local i = '0';
+	local m = '4'
+	local id = attack_id; -- 1000,1001,1002...
+	attack_id = attack_id + 1;
+	if len( x, y - 11000 ) > len( x, y - 4000 ) then 
+		k = 1;
+	end;
+	if CommonPhase == 1 then
+		i = '0';
+	else
+		i = '1';
+	end;
+	LandReinforcementFromMap ( 1, i, k, id );
+	Wait( 2 );
+	if wave == 3 or wave == 4 or wave == 8 then
+		LandReinforcementFromMap ( 1, '3', k, id );
+		Wait( 2 );
+		StartThread( AirStrike, id + 1000, x, y ); -- 2000,2001,2002...
+	end;
+	ChangeFormation( id, 1 );
+	StartThread( MakeFormation, id, x, y );
+	Correction ( id, x, y );
+	StartThread( FinalAttack, id, x, y );
+end;
+
+function FinalAttack( id, x, y  )
+	local coord = {};
+	
+	Wait( 20 + Random( 20 ) );
+	ChangeFormation( id, 1 );
+	coord = GetCoord( x , y );
+	for i = 1, coord.n do
+		QCmd( ACT_SWARM, id, 500, coord[i][1], coord[i][2] );
+	end;
+end;
+
+function AirStrike( id, x, y )
+local k = 0;
+local rnd = Random( 2 );
+local array = {};
+	LandReinforcementFromMap ( 1, '4', k, id );
+	Cmd( ACT_MOVE, id, 100, x, y );
+	array = GetObjectListArray( id );
+	for i = 1, array.n	do
+		StartThread( Strike, array[i], rnd, x, y );
+		if rnd == 1 then
+			rnd = 2;
+		else
+			rnd = 1;
+		end;
+	end;
+end;
+
+function Strike( unit, rnd, x, y )
+local coord = {};
+local xnew = x - 1000;
+local ynew = y - 3000;
+local yend = y - 300;
+local tmpy = y + 3000;
+	if rnd == 1 then
+		if IsInMapBounds ( xnew, tmpy ) == 1 then
+			xnew = x - 1000;
+			ynew = y + 3000;
+			yend = y + 300;
+		end;
+	end;
+	Wait( Random( 10 ) + 10 );
+	UnitCmd( ACT_MOVE, unit, 100, xnew , ynew );
+	Wait( 2 );
+	while IsAlive ( unit ) == 1 do
+		coord[1], coord[2] = ObjectGetCoord( unit );
+		if len( xnew - coord[1] + 1, ynew - coord[2] + 1 ) < 1000 then
+			UnitCmd( ACT_MOVE, unit, 100, x, yend );
+		end;
+		Wait( 1 );
+	end;
+end;
+
+function MakeFormation( id, x, y )
+	local array = GetObjectListArray( id );
+	local tanks = GetUnitsByParam( array, PT_TYPE, TYPE_MECH );
+	local inf = GetUnitsByParam( array, PT_TYPE, TYPE_INF );
+	local dy = 150;
+	local dx = 4000;
+	local temp_coord = {};
+	local newx = 0;
+	local newy = 0;
+
+	if GetNUnitsInScriptGroup ( id ) <= 0 then
+		Trace("ScriptGroup with ID = %g is empty", id);
+		return 1;
+	end;
+	if tanks.n > 0 then
+		for i = 1, tanks.n do
+			UnitCmd( ACT_FOLLOW, tanks[i], inf[i] );
+			StartThread( EndFollow, tanks[i], inf[i], x, y );
+		end;
+	end;
+
+	while dx >= 2000 do
+		dx = dx - 2000;
+		for i = 1, inf.n do
+			newx, newy = NewCoords( x, y, i, dx + Random( 20 ), dy );
+			StartThread( SleepCmd, inf, newx, newy, i );
+		end;
+		if dx < ( Random( 300 ) + 700 ) then
+			ChangeFormation( id, 3 );
+		end;
+		WaitForRest( id );
+	end;
+end;
+
+function WaitForRest( id )
+	local array = GetObjectListArray( id );
+	local states = {};
+	local k = 0;
+	local m = 0;
+	local n = 0;
+
+	while m < 5 and n < 40 do
+		k = 0;
+		states = GetUnitArrayStatesArray ( array );
+		array = GetObjectListArray( id );
+		if array.n == 0 then
+			return 1;
+		end;
+		for i = 1, states.n do
+			if states[i] == 1 then 
+				k = k + 1;
+			else 
+				k = 0;
+			end;
+		end;
+		if k == array.n then
+			m = m + 1;
+		else
+			m = 0;
+			n = n + 1;
+		end;
+		Wait( 1 );
+	end;
+end;
+
+function EndFollow( unit1, unit2, x, y )
+local coord = {};
+	while IsAlive( unit2 ) == 1  do
+		coord[1], coord[2] = ObjectGetCoord( unit2 );
+		if GetNUnitsInCircle ( 0,  coord[1], coord[2], 800 ) > 0 then
+			UnitCmd( ACT_SWARM, unit1, 500, x, y );
+			return 1;
+		end;
+		if IsAlive( unit1 ) ~= 1 then
+			return 1;
+		end;
+		Wait( 1 );
+	end;
+	UnitCmd( ACT_SWARM, unit1, 500, x, y );
+end;
+
+function RndStop( array, i )
+	Sleep( Random( 30 ) + 30 );
+	UnitCmd( ACT_STOP, array[i] );
+end;
+
+function NewCoords( x, y, i, dx, dy )
+	local newx = 0;
+	local newy = 0;
+	if i >= 1 and i <= 3 then
+		newx = x - dx;
+		newy = y + dy * ( i - 1 );
+	end;
+	if i >= 4 and i <= 5 then
+		newx = x - dx;
+		newy = y - dy * ( i - 3 );
+	end;
+	if i >= 6 and i <= 8 then
+		newx = x - dx + 200;
+		newy = y + dy * ( i - 6 );
+	end;
+	if i >= 9 and i <= 10 then
+		newx = x - dx + 200;
+		newy = y - dy * ( i - 8 );
+	end;
+	return newx, newy;
+end;
+
+function GetCoord( x , y )
+	local coord3 = { { 10000, 4000 }, { 10000, 4000 }, { 11111, 8000 } };
+	local coord5 = { { 5182, 11000 }, { 5182, 7000 }, { 11111, 8000 }  };
+	coord3.n = 3;
+	coord5.n = 3;
+	if len( x - 5000 + 1, y - 3990 + 1 ) < len( x - 4182 + 1, y - 11375 + 1 ) then
+		return coord3;
+	else
+		return coord5;
+	end;
+end;
+
+function SleepCmd( array, newx, newy, i )
+	Wait( Random( 2 ) );
+	UnitCmd( ACT_MOVE, array[i], 20, newx , newy );
+	UnitCmd( ACT_SWARM, array[i], 20, newx , newy );
+end;
+
+function Correction( id, x, y )
+	local array = GetObjectListArray( id );
+	local l = 0;
+	local lmin = 0;
+	local time = GetGameTime();
+	local dtime = 0;
+	
+	lmin = lmin1;
+	while GetNUnitsInScriptGroup( id ) > 0 and lmin > 500 and dtime < 200 do
+		local coord = {};
+		for i = 1, array.n do
+			coord[1], coord[2] = ObjectGetCoord( array[ i ] );
+			l = len ( coord[1] - x, coord[2] - y );
+			if l < lmin then 
+				lmin = l;
+			end;
+		end;
+		Wait( 2 );
+		dtime = GetGameTime() - time;
+	end;
+	if len( x - coords[1][1] + 1, y - coords[1][2] + 1 ) < len( x - coords[2][1] + 1, y - coords[2][2] + 1 ) 
+			and len( x - coords[1][1] + 1, y - coords[1][2] + 1 ) < len( x - coords[3][1] + 1, y - coords[3][2] + 1 )  then
+		if lmin1>lmin then
+			coords[1][1] = coords[1][1] + lmin1 - lmin;
+		elseif l > 1500 then
+			coords[1][1] = coords[1][1] + lmin1 - l + 1000;
+		end;
+	elseif len( x - coords[2][1] + 1, y - coords[2][2] + 1 ) < len( x - coords[1][1] + 1, y - coords[1][2] + 1 ) 
+			and len( x - coords[2][1] + 1, y - coords[2][2] + 1 ) < len( x - coords[3][1] + 1, y - coords[3][2] + 1 ) then
+		if lmin1>lmin then
+			coords[2][1] = coords[2][1] + lmin1 - lmin;
+		elseif l > 1500 then
+			coords[2][1] = coords[2][1] + lmin1 - l + 1000;
+		end;
+	elseif len( x - coords[3][1] + 1, y - coords[3][2] + 1 ) < len( x - coords[1][1] + 1, y - coords[1][2] + 1 )
+		and len( x - coords[3][1] + 1, y - coords[3][2] + 1 ) < len( x - coords[2][1] + 1, y - coords[2][2] + 1 ) then
+		if lmin1>lmin then
+			coords[3][1] = coords[3][1] + lmin1 - lmin;
+		elseif l > 1500 then
+			coords[3][1] = coords[3][1] + lmin1 - l + 1000;
+		end;
+	end;
+end;
+
+function CoordsRnd()
+	local rnd = Random( 2 );
+	local coords_temp = { { 5000, 3990 }, { 4182, 11375 }, { 5000, 5240 } };
+	if rnd == 1 then 
+		coords = coords_temp;
+		coords_changed = 1;
+		id1 = 170;
+		id2 = 160;
+		Trace("Coords changed");
+	end;
+end;
+
+function AllAction( id, ix1, ix2, iy1, iy2 )
+	local k = 1;
+	local CommonPhase = 1;
+	while k < 5 do
+		EnemyAction( id, CommonPhase, coords[ix1][ix2], coords[iy1][iy2] );
+		Wait( Random( 30 ) + 30 );
+		k = k + 1;
+		wave = wave + 1;
+		if CommonPhase == 1 then
+			CommonPhase = 0;
+		else
+			CommonPhase = 1;
+		end;
+	end;	
+end;
+
+Objectives = { Objective0, Objective1, Objective2, Objective3, Obj3Manager };
+Objectives_Count = 5;
+
+StartAllObjectives( Objectives, Objectives_Count );
+GiveObjective( 0 );
+CoordsRnd();
+StartThread( LooseCheck );
+StartThread( WinCheck );
+StartThread( AreaManager );
+StartThread( LandingSquad );
+StartThread( AllAction, id1, 1, 1, 1, 2 ); --160 or 170
+Wait( 2 );
+StartThread( AllAction, id2, 2, 1, 2, 2 ); --170 or 160
+Wait( 2 ); 
+StartThread( AllAction, id2, 3, 1, 3, 2 ); --170 or 160

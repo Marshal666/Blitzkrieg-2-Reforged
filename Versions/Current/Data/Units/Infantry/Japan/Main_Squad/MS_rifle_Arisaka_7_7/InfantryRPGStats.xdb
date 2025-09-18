@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<InfantryRPGStats ObjectRecordID="476">
+	<KeyName>MP-40</KeyName>
+	<ParentName />
+	<StatsType>Infa</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments />
+	<MaxHP>10</MaxHP>
+	<DamageLevels />
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="/Units/Infantry/Japan/Assault_Squad/AS_rifle_Arisaka_7_7/whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="/Units/Infantry/Germany/Assault_Squad/AS_smg_MP41/icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_SOLDIER</DBtype>
+	<M1UnitTargetType href="" />
+	<M1UnitSpecific href="" />
+	<M1UnitActions href="" />
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescription href="" />
+	<FullDescriptionFileRef href="" />
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>4</AIPassabilityClass>
+	<AcksNames>
+		<Item href="" />
+	</AcksNames>
+	<Sight>30</Sight>
+	<SightPower>1</SightPower>
+	<Speed>7</Speed>
+	<RotateSpeed>0</RotateSpeed>
+	<Passability>0.6</Passability>
+	<Priority>0</Priority>
+	<Camouflage>0</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>0</BoundTileRadius>
+	<Weight>1</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>7</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>11</x>
+		<y>15</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>18.6011</Radius>
+		<IsRound>true</IsRound>
+	</BoundCircle>
+	<aabb_as />
+	<aabb_ds />
+	<animdescs>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>3166</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>1966</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_03_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>1966</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_04_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_down_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>2333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_idle_down_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>600</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_move_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>600</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_march_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>933</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_walk_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_crawl_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1266</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_lie_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_stand_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1633</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_shoot_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1366</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_shoot_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_shoot_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2100</Length>
+					<Action>1000</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_throw_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1333</Length>
+					<Action>733</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_throw_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1733</Length>
+					<Action>1133</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_throw_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2733</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_death_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>1233</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_death_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>1066</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_death_03_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>1166</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_death_04_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_use_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_use_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_use_lie_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>6200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_binoculars_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>500</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_aiming_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>500</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_aiming_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>500</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/RIFLE_aiming_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>0.9</SmallAABBCoeff>
+	<Actions href="/Other/UnitActions/Game/Units/Infantry/main_soldier_new.xdb#xpointer(/UnitActions)" />
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href="/Other/ArmorPattern/Game/infantry.xdb#xpointer(/ArmorPattern)" />
+	<ExpPrice>0.2</ExpPrice>
+	<guns>
+		<Item>
+			<Weapon href="/Weapons/Infantry/Rifle/7_7_mm_Arisaka/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+			<AttachedGunVisObj href="" />
+			<AttachedGunLocator />
+			<ShootPointOffset>
+				<x>0.000134862</x>
+				<y>-1.13224</y>
+				<z>0.0646892</z>
+			</ShootPointOffset>
+			<ShootEffectInvert>false</ShootEffectInvert>
+			<Priority>1</Priority>
+			<IsPrimary>true</IsPrimary>
+			<Ammo>192</Ammo>
+			<Direction>0</Direction>
+			<ReloadCost>1</ReloadCost>
+			<TargetAAOnly>false</TargetAAOnly>
+			<Fake>0</Fake>
+		</Item>
+		<Item>
+			<Weapon href="/Weapons/Infantry/grenade/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+			<AttachedGunVisObj href="" />
+			<AttachedGunLocator />
+			<ShootPointOffset>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</ShootPointOffset>
+			<ShootEffectInvert>false</ShootEffectInvert>
+			<Priority>0</Priority>
+			<IsPrimary>false</IsPrimary>
+			<Ammo>4</Ammo>
+			<Direction>0</Direction>
+			<ReloadCost>1</ReloadCost>
+			<TargetAAOnly>false</TargetAAOnly>
+			<Fake>0</Fake>
+		</Item>
+	</guns>
+	<CanAttackUp>true</CanAttackUp>
+	<CanAttackDown>true</CanAttackDown>
+	<RunSpeed>7</RunSpeed>
+	<CrawlSpeed>1.8</CrawlSpeed>
+	<animtimes />
+	<Armor>0</Armor>
+	<GunBoneName>ArmJoint</GunBoneName>
+</InfantryRPGStats>

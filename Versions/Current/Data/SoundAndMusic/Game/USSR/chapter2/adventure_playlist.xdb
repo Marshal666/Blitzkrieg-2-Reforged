@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PlayList ObjectRecordID="1000046">
+	<StillOrder>
+		<Item href="/SoundAndMusic/Game/Common/Battle/battle05_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/Common/Common_Ambient_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/Common/Battle/battle07_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/USSR/Russian_Ambient_Composition.xdb#xpointer(/Composition)" />
+	</StillOrder>
+	<RandomOrder>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Battle/battle04_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/USSR/Russian_Ambient_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Battle/battle05_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Seasons/Summer_Composition.xdb#xpointer(/Composition)" />
+			<Weight>0</Weight>
+		</Item>
+	</RandomOrder>
+	<FadeIn href="/Other/Fade/Game/instant_fade_in.xdb#xpointer(/Fade)" />
+	<FadeOut href="/Other/Fade/Game/instant_fade_out.xdb#xpointer(/Fade)" />
+</PlayList>

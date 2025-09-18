@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="14">
+	<FileName />
+	<ScriptText>function Objective10()
+        Trace(&quot;Fucking triggers&quot;);  
+end;
+
+function Complete10()
+        Trace(&quot;Complete Fucking triggers&quot;);  
+end;
+
+
+--Main
+Trigger( Objective10, Complete10 );
+
+</ScriptText>
+</Script>

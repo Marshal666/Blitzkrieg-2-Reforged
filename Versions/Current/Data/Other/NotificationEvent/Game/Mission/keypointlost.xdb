@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="6">
+	<Type>NEVT_KEY_POINT_LOST</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/KeyObject_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/KeyPointLost/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTKeyPointLost/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Keybuildings/Lost_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="/Other/Notification/Game/Mission/keyobjectlost.xdb#xpointer(/Notification)" />
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

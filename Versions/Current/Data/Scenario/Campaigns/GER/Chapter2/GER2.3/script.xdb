@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000032">
+	<FileName href="" />
+	<ScriptText>obj_2_MountPass = 0;
+arr = {};
+Survive = 0;
+Obj1 = 0;
+Obj2 = 0;
+Complete1 = 0;
+Complete2 = 0;
+pass = 0;
+
+-- 1101 - retreat group. (Blockpost) 
+-- 1110 - City defence group. (Without artillery) 
+-- 1111 - Pass defence group. (Without artillery) 
+-- 1102 - British tanks reinforcements group 
+-- 1103 - British infantry reinforcements group 
+ 
+ 
+ 
+---------------- OBJECTIVE 0 ------------------ begin 
+---- Destroy post
+ function officer()
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1140,&quot;jeep&quot;,0)&gt;0) then
+			Wait(1);
+			Cmd(ACT_MOVE,1142,0, 662, 6306);
+			StartThread(willis);
+			break;
+		end;
+	end;
+end;
+
+function willis()
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1142,&quot;jeep&quot;,0) &gt; 0 and GetNScriptUnitsInArea(1140,&quot;jeep&quot;,0) &gt; 0) then
+			Cmd(ACT_DISAPPEAR,1142);
+			Cmd(ACT_MOVE,1140,0,237, 3153);
+			QCmd(ACT_MOVE,1140,0,1446, 2195);
+			QCmd(ACT_DEPLOY,1140,400,2054, 1648);
+			break;
+		end;
+	end;
+end;
+
+function willis_arriving()
+	while 1 do
+		Wait(1);
+		if ((GetNUnitsInScriptGroup(1120) == 0 or GetNUnitsInScriptGroup(1119) == 0 or GetNUnitsInScriptGroup(1122) == 0) and pass == 0) then
+			Wait(1);
+			Trace(&quot;Condition succesful...&quot;);
+			Cmd(ACT_MOVE,1140,0,662, 6306);
+			break;
+		end
+	end;
+end;
+
+
+function poehali()
+	while 1 do
+		Wait(1);
+		if (GetNUnitsInScriptGroup(1143)==0) then
+			pass = 1;
+			ChangePlayer(GetObjectList(1142),1);
+			Cmd(ACT_MOVE,1122,0,269, 5597);
+			QCmd(ACT_MOVE,1122,0,237, 3153);
+			QCmd(ACT_MOVE,1122,0,1446, 2195);
+			QCmd(ACT_DEPLOY,1122,0,2054, 1648);
+			QCmd(ACT_MOVE,1122,400,1643, 1047);
+			Wait(4);
+			Cmd(ACT_MOVE,1119,0,269, 5597);
+			QCmd(ACT_MOVE,1119,0,237, 3153);
+			QCmd(ACT_MOVE,1119,0,1446, 2195);
+			QCmd(ACT_DEPLOY,1119,0,1703, 2402);
+			QCmd(ACT_MOVE,1119,400,1643, 1047);
+			Wait(4);
+			Cmd(ACT_MOVE,1120,0,269, 5597);
+			QCmd(ACT_MOVE,1120,0,237, 3153);
+			QCmd(ACT_MOVE,1120,0,1446, 2195);
+			QCmd(ACT_DEPLOY,1120,0,1490, 2180);
+			QCmd(ACT_MOVE,1120,400,1643, 1047);
+			Wait(38);
+			Cmd(ACT_ROTATE,1130,0,2688, 2890);
+			Cmd(ACT_ROTATE,1131,0,2688, 2890);
+			Cmd(ACT_ROTATE,1132,0,2688, 2890);
+			break;
+		end
+	end;
+end;
+
+function CompleteObjective0()
+	while 1 do
+		Wait(3);
+		if (GetNUnitsInArea(0,&quot;Blockpost&quot;,0) &gt; 0 and GetNUnitsInArea(1,&quot;Blockpost&quot;,0) &lt; 1) then
+			CompleteObjective(0);
+			DamageObject(GetObjectList(700),-0.1);
+			GiveObjective(1);
+			GiveObjective(2);
+			ViewZone(&quot;701&quot;,1);
+			ViewZone(&quot;702&quot;,1);
+			Wait(1);
+			DamageScriptObject(701,10); 			
+			DamageScriptObject(702,10);
+			Wait(1);
+			ViewZone(&quot;701&quot;,0);
+			ViewZone(&quot;702&quot;,0);
+			StartThread(CompleteObjective1);
+			StartThread(CompleteObjective2);
+			break;
+		end;
+	end;
+end; 
+
+
+function CompleteObjective1()
+	while 1 do
+		Wait(3);
+		if (GetNUnitsInArea(0,&quot;Objective_1&quot;,0) &gt; 0 and GetNUnitsInArea(1,&quot;Objective_1&quot;,0) &lt; 1) then
+			CompleteObjective(1);
+			DamageObject(GetObjectList(701),-0.1);
+			Complete1 = 1;
+			break;
+		end;
+	end;
+end; 
+
+function CompleteObjective2()
+	while 1 do
+		Wait(3);
+		if (GetNUnitsInArea(0,&quot;Objective_2&quot;,0) &gt; 0 and GetNUnitsInArea(1,&quot;Objective_2&quot;,0) &lt; 1) then
+			CompleteObjective(2);
+			DamageObject(GetObjectList(702),-0.1);
+			Complete2 = 1;
+			break;
+		end;
+	end;
+end; 
+
+
+ 
+function enemy_survive() 	
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1150,&quot;Remove&quot;,0) &gt; 0) then
+			RemoveScriptGroup(1150);
+			Wait(40);
+			LandReinforcementFromMap(1,&quot;vallentine&quot;,1,1105);
+			Obj1 = GetNUnitsInArea(0,&quot;Objective_1&quot;,0);
+			Obj2 = GetNUnitsInArea(0,&quot;Objective_2&quot;,0);
+			if (Obj2 &gt;= Obj1) then
+				Cmd(ACT_SWARM,1105,500,1500, 2100);
+			else
+				Cmd(ACT_SWARM,1105,500,900,6200);
+			end;
+			Wait(60);
+			LandReinforcementFromMap(1, &quot;tanks&quot;, 0, 1102);
+			Obj1 = GetNUnitsInArea(0,&quot;Objective_1&quot;,0);
+			Obj2 = GetNUnitsInArea(0,&quot;Objective_2&quot;,0);
+			if ( Obj2 &gt;= Obj1) then
+				Cmd(ACT_SWARM,1102,500,1500, 2100);
+				else
+				Cmd(ACT_SWARM,1102,500,900,6200);
+			end;
+			Wait(60);
+			LandReinforcementFromMap(1, &quot;infantry&quot;, 0, 1103);
+			Obj1 = GetNUnitsInArea(0,&quot;Objective_1&quot;,0);
+			Obj2 = GetNUnitsInArea(0,&quot;Objective_2&quot;,0);
+			if ( Obj2 &gt;= Obj1) then
+				Cmd(ACT_SWARM,1103,500,1500, 2100);
+				else
+				Cmd(ACT_SWARM,1103,500,900,6200);
+			end;
+			Survive = 1;
+			break;
+		end;
+	end;
+end;
+ 
+function officer_survive()
+	while 1 do
+		Wait(3);
+		if (GetNScriptUnitsInArea(1140,&quot;Objective_2&quot;,0) &gt; 0) then
+			StartThread(GroundAttackPlane);
+			break;
+		end;
+	end;
+end; 
+
+function officer_captured()
+	while 1 do
+		Wait(3);
+		if (GetNUnitsInScriptGroup(1140) == 0) then
+			GiveObjective(3);
+			DamageScriptObject(703,10);
+			Wait(5);
+			ChangePlayer(GetObjectList(1142),0);
+			StartThread(call_planes);
+			break;
+		end;
+	end;
+end; 
+
+
+function lose() 
+	while 1 do 
+        if ( GetNUnitsInParty(0) &lt; 1 and GetReinforcementCallsLeft(0) &lt; 1) then 
+				Wait(2); 
+				Loose(0); 
+        return 1; 
+		end; 
+	Wait(5); 
+	end; 
+end; 
+
+function GroundAttackPlane()
+	LandReinforcementFromMap(1, &quot;gap&quot;, 1, 1104);
+	Cmd(ACT_MOVE, 1104, 1, 3928, 3968);
+	Wait(80);
+	LandReinforcementFromMap(1, &quot;gap&quot;, 1, 1104);
+	Cmd(ACT_MOVE, 1104, 1, 3928, 3968);
+	Wait(80);
+	LandReinforcementFromMap(1, &quot;gap&quot;, 1, 1104);
+	Cmd(ACT_MOVE, 1104, 1, 3928, 3968);
+end; 
+
+function call_planes()
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1142,&quot;domik&quot;,0) &gt; 0) then
+			CompleteObjective (3);
+			DamageObject(GetObjectList(703),-0.1);
+			Trace(&quot;Enemy Communication center has captured!&quot;);
+			Wait(5);
+			LandReinforcementFromMap(0,&quot;planes&quot;,1,1009);
+			Cmd(ACT_MOVE,1009,500,1600,2300);
+			Wait(25);
+			arr = GetArray(GetObjectList(1009));
+			ChangePlayerForArray(arr,1);
+			Wait(100);
+			LandReinforcementFromMap(1,&quot;planes&quot;,0,1109);
+			Cmd(ACT_MOVE,1109,500,800,6600);
+			break;
+		end;
+	end;
+end; 
+
+function retreat()
+	while 1 do
+		Wait(2);
+		if (GetNUnitsInScriptGroup(1150,1)&lt;3) then	
+			Cmd(ACT_MOVE,1150,0,6300,7100);
+			break;
+		end;
+	end;
+end;
+
+function win()
+	while 1 do
+		Wait(3);
+		if (Complete1 == 1 and Complete2 == 1) then
+			Win(0);
+			break;
+		end;
+	end;
+end;
+
+--main 
+
+GiveObjective(0);
+StartThread(retreat);
+StartThread(CompleteObjective0);
+StartThread(enemy_survive);
+StartThread(poehali); 
+StartThread(officer); 
+StartThread(willis_arriving);
+StartThread(officer_survive);
+StartThread(officer_captured);
+StartThread(lose);
+StartThread(win);</ScriptText>
+</Script>

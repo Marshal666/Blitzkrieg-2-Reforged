@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScreen ObjectRecordID="50">
+	<ClassTypeID>285694848</ClassTypeID>
+	<Shared href="MPNivalNet_WindowScreenShared.xdb#xpointer(/WindowScreenShared)" />
+	<Name />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>768</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<MessageReactions>
+		<reactions />
+		<ScriptFileRef href="" />
+	</MessageReactions>
+	<CommandSequiences />
+	<TooltipContext>0</TooltipContext>
+	<RelatedTexts>
+		<Item>
+			<Name>CONNECT_ERR_UNKNOWN</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/UnknownReason.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_CANT_RESOLVE_ADDRESS</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/CantResolveAddress.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_CONNECTION_LOST</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/ConnectionLost.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_NO_NICK</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/NoLogin.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_BAD_NICK</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/BadNick.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_WRONG_CD_KEY</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/WrongCDKey.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_ALREADY_REGISTERED</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/AlreadyRegistered.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_ALREADY_ONLINE</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/AlreadyOnline.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_NOT_REGISTERED</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/NotRegistered.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_BANNED_NICK</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/BannedNick.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_BANNED_CDKEY</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/BannedCDKey.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_WRONG_PASSWORD</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/WrongPassword.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_KICKED</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/Kicked.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_LOGIN_TIMEOUT</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/LoginTimeout.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_WRONG_NET_VERSION</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/WrongNetVersion.txt" />
+		</Item>
+		<Item>
+			<Name>CONNECT_ERR_CRITICAL_BUSY</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Login/RejectReasons/CriticalBusy.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_UNKNOWN</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectUnknown.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_PASSWORD_TOO_SHORT</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectPasswordTooShort.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_PASSWORDS_DIFFER</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectPasswordsDiffer.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_NICK_TOO_SHORT</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectNickTooShort.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_NO_EMAIL</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectNoEmail.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_BAD_EMAIL</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RegisterBadEmail.txt" />
+		</Item>
+		<Item>
+			<Name>REGISTER_ERR_EMAILS_DIFFER</Name>
+			<TextFileRef href="MPNivalNet/NewControls/Registration/RejectEmailsDiffer.txt" />
+		</Item>
+	</RelatedTexts>
+</WindowScreen>

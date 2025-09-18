@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OptionSystem ObjectRecordID="3">
+	<Categories>
+		<Item>
+			<Name href="/other/text/optionssystem/gfx/name/text.xdb#xpointer(/Text)" />
+			<Tooltip href="/other/text/optionssystem/gfx/tooltip/text.xdb#xpointer(/Text)" />
+			<Options>
+				<Item>
+					<ProgName>gfx_resolution</ProgName>
+					<Name href="/other/text/optionssystem/gfx/resolution/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gfx/resolution/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/resolution/values/1024x768/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/resolution/values/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1024x768</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/resolution/values/1280x960/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/resolution/values/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1280x960</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/resolution/values/1280x1024/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/resolution/values/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1280x1024</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/resolution/values/1600x1200/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/resolution/values/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1600x1200</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1024x768</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>gfx_gamma</ProgName>
+					<Name href="/other/text/optionssystem/gfx/gamma/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gfx/gamma/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>gfx_anisotropic_filter</ProgName>
+					<Name href="/other/text/optionssystem/gfx/texturefilter/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gfx/texturefilter/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/texturefilter/values/linear/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/texturefilter/values/linear/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gfx/texturefilter/values/anisotropic/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gfx/texturefilter/values/anisotropic/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>gfx_depth_tex_resolution</ProgName>
+					<Name href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Name.xdb#xpointer(/Text)" />
+					<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Tooltip.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Name256.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Tooltip256.xdb#xpointer(/Text)" />
+							<Value>256</Value>
+						</Item>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Name512.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Tooltip512.xdb#xpointer(/Text)" />
+							<Value>512</Value>
+						</Item>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Name1024.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Tooltip1024.xdb#xpointer(/Text)" />
+							<Value>1024</Value>
+						</Item>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Name2048.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowsTexture/Tooltip2048.xdb#xpointer(/Text)" />
+							<Value>2048</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1024</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>shadow_on_trees</ProgName>
+					<Name href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Name.xdb#xpointer(/Text)" />
+					<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Tooltip.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Value0.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Tooltip0.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Value1.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/ShadowOnTrees/Tooltip1.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>gfx_tnl_mode</ProgName>
+					<Name href="/Other/Text/OptionsSystem/GFX/TNLMode/Name.xdb#xpointer(/Text)" />
+					<Tooltip href="/Other/Text/OptionsSystem/GFX/TNLMode/Tooltip.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/TNLMode/Name0.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/TNLMode/Tooltip0.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/Other/Text/OptionsSystem/GFX/TNLMode/Name1.xdb#xpointer(/Text)" />
+							<Tooltip href="/Other/Text/OptionsSystem/GFX/TNLMode/Tooltip1.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/optionssystem/gameplay/name/text.xdb#xpointer(/Text)" />
+			<Tooltip href="/other/text/optionssystem/gameplay/tooltip/text.xdb#xpointer(/Text)" />
+			<Options>
+				<Item>
+					<ProgName>profile_name</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/playername/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/playername/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>Player</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>game_difficulty</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/difficulty/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/difficulty/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/difficulty/values/easy/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/difficulty/values/easy/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/difficulty/values/normal/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/difficulty/values/normal/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/difficulty/values/hard/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/difficulty/values/hard/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>2</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>mission_buttons_bind_section</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/keymapping/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/keymapping/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/keymapping/values/classic/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/keymapping/values/classic/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>mission_buttons_classic</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/keymapping/values/original/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/keymapping/values/original/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>mission_buttons_original</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>mission_buttons_original</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>camera_mouse_sensetivity</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/mousesensitivity/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/mousesensitivity/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>camera_mouse_pitch_invert</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/mousepitchinvert/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/mousepitchinvert/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/mousepitchinvert/values/on/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/mousepitchinvert/values/on/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/mousepitchinvert/values/off/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/mousepitchinvert/values/off/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>camera_mouse_zoom_invert</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/mousezoominvert/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/mousezoominvert/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/mousezoominvert/values/on/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/mousezoominvert/values/on/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/mousezoominvert/values/off/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/mousezoominvert/values/off/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>recording_replay</ProgName>
+					<Name href="/other/text/optionssystem/gameplay/replay/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/gameplay/replay/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/replay/values/off/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/replay/values/off/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/gameplay/replay/values/on/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/gameplay/replay/values/on/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/optionssystem/multiplayer/name/text.xdb#xpointer(/Text)" />
+			<Tooltip href="/other/text/optionssystem/multiplayer/tooltip/text.xdb#xpointer(/Text)" />
+			<Options>
+				<Item>
+					<ProgName>Multiplayer.PlayerName</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/playername/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/playername/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>Player</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.ServerName</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/servername/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/servername/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>Nival.net</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.ServerPassword</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/serverpassword/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/serverpassword/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue />
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.PlayerLimit</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/playerlimit/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/playerlimit/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>8</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.TimeToCapture</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/timetocapture/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/timetocapture/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>30</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.FlagScoreLimit</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/flagscorelimit/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/flagscorelimit/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.KillScoreLimit</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/killscorelimit/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/killscorelimit/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.TimeLimit</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/timelimit/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/timelimit/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>15</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Multiplayer.GameSpeed</ProgName>
+					<Name href="/other/text/optionssystem/multiplayer/gamespeed/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/multiplayer/gamespeed/veryslow/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/veryslow/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>-2</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/multiplayer/gamespeed/slow/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/slow/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>-1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/multiplayer/gamespeed/normal/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/normal/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/multiplayer/gamespeed/fast/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/fast/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/multiplayer/gamespeed/veryfast/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/multiplayer/gamespeed/veryfast/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>2</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_EDITLINE</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>0</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<Name href="/other/text/optionssystem/sound/name/text.xdb#xpointer(/Text)" />
+			<Tooltip href="/other/text/optionssystem/sound/tooltip/text.xdb#xpointer(/Text)" />
+			<Options>
+				<Item>
+					<ProgName>Sound.MusicVolume</ProgName>
+					<Name href="/other/text/optionssystem/sound/musicvolume/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/sound/musicvolume/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Sound.SFXVolume</ProgName>
+					<Name href="/other/text/optionssystem/sound/sfxvolume/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/sound/sfxvolume/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Sound.VoiceVolume</ProgName>
+					<Name href="/other/text/optionssystem/sound/ackvolume/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/sound/ackvolume/tooltip/text.xdb#xpointer(/Text)" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+				</Item>
+				<Item>
+					<ProgName>Sound.Use3DSound</ProgName>
+					<Name href="/other/text/optionssystem/sound/use3dsound/name/text.xdb#xpointer(/Text)" />
+					<Tooltip href="/other/text/optionssystem/sound/use3dsound/tooltip/text.xdb#xpointer(/Text)" />
+					<States>
+						<Item>
+							<Name href="/other/text/optionssystem/sound/use3dsound/values/on/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/sound/use3dsound/values/on/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<Name href="/other/text/optionssystem/sound/use3dsound/values/off/name/text.xdb#xpointer(/Text)" />
+							<Tooltip href="/other/text/optionssystem/sound/use3dsound/values/off/tooltip/text.xdb#xpointer(/Text)" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+				</Item>
+			</Options>
+		</Item>
+	</Categories>
+</OptionSystem>

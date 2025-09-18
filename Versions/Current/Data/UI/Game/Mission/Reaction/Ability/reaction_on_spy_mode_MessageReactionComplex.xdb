@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="109">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/UI/Game/Mission/ActionTabControl/switch_cancel_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+					<Item href="/UI/Game/Mission/Ability/set_forced_action_spy_mode_ARSetForcedAction.xdb#xpointer(/ARSetForcedAction)" />
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/UI/Game/Mission/Ability/check_button_spy_mode_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data />
+	</commonAfter>
+</MessageReactionComplex>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="106">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/ui/game/mission/main/toggle_reinforcement_on_arsendgamemessage.xdb#xpointer(/ARSendGameMessage)"/>
+				</data>
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/ui/game/mission/main/toggle_reinforcement_off_arsendgamemessage.xdb#xpointer(/ARSendGameMessage)"/>
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/ui/game/mission/main/togglereinforcement_checkpreprogrammed.xdb#xpointer(/CheckPreprogrammed)"/>
+	<commonBefore>
+		<data/>
+	</commonBefore>
+	<commonAfter>
+		<data/>
+	</commonAfter>
+</MessageReactionComplex>

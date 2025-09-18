@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimple ObjectRecordID="599">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="/UI/Game/Menu/MPCreateCustomGame/InfoArea_WindowSimpleShared.xdb#xpointer(/WindowSimpleShared)" />
+	<Name />
+	<Tooltip href="" />
+	<TooltipFileRef href="/ui/game/menu/mpladdergame/mainwindow/mapinfo.txt" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>-13</x>
+				<y>119</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_HIGH_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>378</x>
+				<y>531</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>610</x>
+				<y>40</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>100</x>
+				<y>434</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+</WindowSimple>

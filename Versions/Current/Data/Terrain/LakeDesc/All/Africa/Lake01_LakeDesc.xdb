@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LakeDesc ObjectRecordID="7">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>31</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>64</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>-12353115</MiniMapCenterColor>
+	<MiniMapBorderColor>-2133993756</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href="" />
+	<CycledSound href="/SoundAndMusic/Game/Ambient/Water_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<WaterParams href="/Terrain/Water/Game/Africa/Water_Water.xdb#xpointer(/Water)" />
+	<IsLake>true</IsLake>
+	<MiniMapGradientWidth>20</MiniMapGradientWidth>
+	<DefaultWidth>256</DefaultWidth>
+</LakeDesc>

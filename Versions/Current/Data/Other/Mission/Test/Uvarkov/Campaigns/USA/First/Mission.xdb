@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Mission ObjectRecordID="8">
+	<Map href="/test/testmaps/alpha/interface_scene/test1_withobjects/mapinfo.xdb#xpointer(/MapInfo)"/>
+	<ContextModifiers>
+		<Item>
+			<UnitType />
+			<Type />
+			<Mech href=""/>
+			<Squad href=""/>
+			<Reinforcement href=""/>
+		</Item>
+	</ContextModifiers>
+	<bonuses/>
+	<LocalizedName href="/other/text/test/uvarkov/chaptermap/mission1/text.xdb#xpointer(/Text)"/>
+	<LocalizedDescription href="/other/text/test/uvarkov/chaptermap/missiondesc1/text.xdb#xpointer(/Text)"/>
+	<PlaceOnChapterMap>
+		<x>100</x>
+		<y>100</y>
+	</PlaceOnChapterMap>
+	<StartUnisAvalabilty/>
+	<StartUnitsAvailibility/>
+</Mission>

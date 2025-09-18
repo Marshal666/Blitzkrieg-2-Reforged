@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="175">
+	<FileName />
+	<ScriptText>a = 0;
+tochka = 6;
+tip = 1;
+marchrut = 1;
+mar = {};
+mar [1] = &quot;go2041&quot;;
+mar [2] = &quot;go2030&quot;;
+mar [3] = &quot;go2031&quot;;
+mar [4] = &quot;go2000&quot;;
+mar [5] = &quot;go2050&quot;;
+mar [6] = &quot;Para3&quot;;
+tips = {};
+tips [1] = &quot;1&quot;;
+tips [2] = &quot;2&quot;;
+tips [3] = &quot;3&quot;;
+tips [4] = &quot;4&quot;;
+-----------------------Trevoga
+function Trevoga()
+	Wait ( 1 );
+	for a = 0 , 5 do
+		Wait ( 1 );
+		LandReinforcementFromMap ( 1 , &quot;0&quot; , a , 300+a );
+		Wait ( 1 );
+		Cmd( 0 , 300+a , 500 , GetScriptAreaParams ( &quot;town&quot; ) );
+		QCmd( 4 , 300+a , 200+a );
+	end;
+	StartThread( Go300 );
+	StartThread( Go301 );
+	StartThread( Go302 );
+	StartThread( Go303 );
+	StartThread( Go304 );
+	StartThread( Go305 );
+end;
+-----------------------Go
+function Go300()
+	while 1 do
+		Wait ( 1 );
+		US300 = GetUnitState ( GetObjectList ( 300 ) );
+		if 	US300 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 200 , 0 , GetScriptAreaParams ( &quot;go2000&quot; ) );
+			QCmd( 5 , 200 , 0 , GetScriptAreaParams ( &quot;go2001&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US300 = GetUnitState ( GetObjectList ( 300 ) );
+				if 	US300 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 200 , 0 , GetScriptAreaParams ( &quot;go2000&quot; ) );
+					Cmd( 3 , 300 , 300 , GetScriptAreaParams ( &quot;para10&quot; ) );
+					QCmd( 3 , 300 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+function Go301()
+	while 1 do
+		Wait ( 1 );
+		US301 = GetUnitState ( GetObjectList ( 301 ) );
+		if 	US301 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 201 , 0 , GetScriptAreaParams ( &quot;go2010&quot; ) );
+			QCmd( 5 , 201 , 0 , GetScriptAreaParams ( &quot;go2011&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US301 = GetUnitState ( GetObjectList ( 301 ) );
+				if 	US301 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 201 , 0 , GetScriptAreaParams ( &quot;go2010&quot; ) );
+					Cmd( 3 , 301 , 300 , GetScriptAreaParams ( &quot;para10&quot; ) );
+					QCmd( 3 , 301 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+function Go302()
+	while 1 do
+		Wait ( 1 );
+		US302 = GetUnitState ( GetObjectList ( 302 ) );
+		if 	US302 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 202 , 0 , GetScriptAreaParams ( &quot;go2010&quot; ) );
+			QCmd( 5 , 202 , 0 , GetScriptAreaParams ( &quot;go2021&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US302 = GetUnitState ( GetObjectList ( 302 ) );
+				if 	US302 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 202 , 0 , GetScriptAreaParams ( &quot;go2010&quot; ) );
+					Cmd( 3 , 302 , 300 , GetScriptAreaParams ( &quot;para20&quot; ) );
+					QCmd( 3 , 302 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+function Go303()
+	while 1 do
+		Wait ( 1 );
+		US303 = GetUnitState ( GetObjectList ( 303 ) );
+		if 	US303 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 203 , 0 , GetScriptAreaParams ( &quot;go2030&quot; ) );
+			QCmd( 5 , 203 , 0 , GetScriptAreaParams ( &quot;go2031&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US303 = GetUnitState ( GetObjectList ( 303 ) );
+				if 	US303 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 203 , 0 , GetScriptAreaParams ( &quot;go2030&quot; ) );
+					Cmd( 3 , 303 , 300 , GetScriptAreaParams ( &quot;para20&quot; ) );
+					QCmd( 3 , 303 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+function Go304()
+	while 1 do
+		Wait ( 1 );
+		US304 = GetUnitState ( GetObjectList ( 304 ) );
+		if 	US304 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 204 , 0 , GetScriptAreaParams ( &quot;go2030&quot; ) );
+			QCmd( 5 , 204 , 0 , GetScriptAreaParams ( &quot;go2041&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US304 = GetUnitState ( GetObjectList ( 304 ) );
+				if 	US304 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 204 , 0 , GetScriptAreaParams ( &quot;go2030&quot; ) );
+					Cmd( 3 , 304 , 300 , GetScriptAreaParams ( &quot;para30&quot; ) );
+					QCmd( 3 , 304 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+function Go305()
+	while 1 do
+		Wait ( 1 );
+		US305 = GetUnitState ( GetObjectList ( 305 ) );
+		if 	US305 == 3 then
+			Wait ( 3 );
+			Cmd( 0 , 205 , 0 , GetScriptAreaParams ( &quot;go2050&quot; ) );
+			QCmd( 5 , 205 , 0 , GetScriptAreaParams ( &quot;go2051&quot; ) );
+			while 1 do
+				Wait ( 1 );
+				US305 = GetUnitState ( GetObjectList ( 305 ) );
+				if 	US305 == 1 then
+					Wait ( 3 );
+					Cmd( 0 , 205 , 0 , GetScriptAreaParams ( &quot;go2050&quot; ) );
+					Cmd( 3 , 305 , 300 , GetScriptAreaParams ( &quot;para30&quot; ) );
+					QCmd( 3 , 305 , 300 , GetScriptAreaParams ( &quot;town&quot; ) );
+				break;
+				end;
+			end;
+		end;
+	end;
+end;
+-----------------------Reinf
+function Reinf()
+	LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 101 );
+	Wait ( 1 );
+	Cmd( 5 , 101 , 0 , GetScriptAreaParams ( &quot;Para2&quot; ) );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 102 );
+	Wait ( 1 );
+	Cmd( 5 , 102 , 0 , GetScriptAreaParams ( &quot;Para1&quot; ) );
+	Wait ( 3 );
+	LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 103 );
+	Wait ( 1 );
+	Cmd( 5 , 103 , 0 , GetScriptAreaParams ( &quot;Para3&quot; ) );
+	StartThread( Perehod1 );
+	StartThread( Perehod2 );
+	StartThread( Perehod3 );
+	StartThread( Recon );
+	StartThread( Trevoga );
+end;
+-----------------------Air
+function Recon()
+	while GetIGlobalVar( &quot;temp.objective0&quot; , 0 ) == 1 do
+		Wait ( 1 );
+		LandReinforcementFromMap ( 2 , &quot;1&quot; , 0 , 104 );
+		Cmd( 0 , 104 , 0 , GetScriptAreaParams ( &quot;town&quot; ) );
+		StartThread( GA );
+		Wait ( 400 );	
+	end;
+end;
+function GA()
+	Wait ( 50 );
+	LandReinforcementFromMap ( 2 , &quot;2&quot; , 0 , 105 );
+	Cmd( 3 , 105 , 0 , GetScriptAreaParams ( &quot;town&quot; ) );
+end;
+-----------------------Perehod
+function Perehod1()
+	while 1 do
+		Wait( 3 );
+		if  IsSomeUnitInArea ( 0 , &quot;Para1&quot; , 0 ) then
+			ChangePlayerForScriptGroup( 102 , 0 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Perehod2()
+	while 1 do
+		Wait( 3 );
+		if  IsSomeUnitInArea ( 0 , &quot;Para2&quot; , 0 ) then
+			ChangePlayerForScriptGroup( 101 , 0 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Perehod3()
+	while 1 do
+		Wait( 3 );
+		if  IsSomeUnitInArea ( 0 , &quot;Para3&quot; , 0 ) then
+			ChangePlayerForScriptGroup( 103 , 0 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+-----------------------Ataka
+function Ataka()
+	Wait( 90 );
+	Numatt = 1;
+	StartThread( Ataka1 );
+end;
+function Ataka1()
+	if Numatt &lt; 5 then
+		Wait( 3 );
+		nomer = 200;
+		tochka = RandomInt ( 1 ) + 6;
+		tip = RandomInt ( 4 ) + 1;
+		marchrut = RandomInt ( 2 ) + 1;
+		if tochka == 6 then
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , tips [tip] , tochka , nomer );
+			Wait ( 3 );
+			Cmd( 3 , nomer , 200 , GetScriptAreaParams ( mar [marchrut] ));
+			QCmd( 3 , nomer , 300 , GetScriptAreaParams ( &apos;town&apos; ));
+			nomer = nomer + 1;
+		else
+			Wait ( 1 );
+			LandReinforcementFromMap ( 1 , tips [tip] , tochka , nomer );
+			Wait ( 3 );
+			Cmd( 3 , nomer , 200 , GetScriptAreaParams ( mar [marchrut+3] ));
+			QCmd( 3 , nomer , 300 , GetScriptAreaParams ( &apos;town&apos; ));
+			nomer = nomer + 1;
+		end;
+	else
+		Wait ( 90 );
+		StartThread( CompleteObjective1 );
+	end;
+	Wait ( 60 );
+	Numatt = Numatt + 1;
+	StartThread( Ataka1 );
+end;
+-----------------------Objective
+function Objective()
+	ObjectiveChanged(0, 1); 
+	SetIGlobalVar( &quot;temp.objective0&quot; , 1 );
+	StartThread( CompleteObjective0 );
+	Wait( 3 );
+end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if  GetNUnitsInArea ( 0 , &apos;town&apos;, 0 ) &gt; 0 and GetNUnitsInArea ( 1 , &apos;town&apos;, 0 ) &lt; 1 then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.objective0&quot; , 2 );
+			Wait( 3 );
+			StartThread( Objective1 );
+			StartThread( Looser1 );
+			StartThread( Ataka );
+			break;
+		end;	
+	end;
+end;
+function Objective1()
+	ObjectiveChanged(1, 1); 
+	SetIGlobalVar( &quot;temp.objective1&quot; , 1 );
+	Wait( 3 );
+end;
+function CompleteObjective1()
+	while 1 do
+		Wait( 3 );
+		ObjectiveChanged(1, 2);
+		SetIGlobalVar( &quot;temp.objective1&quot; , 2 );
+		Wait( 3 );
+		Win ( 0 );
+	end;
+end;
+------------------------WIn_Loose
+function Looser()
+	while 1 do
+		Wait( 3 );
+        if (( IsSomeUnitInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Wait( 3 );
+			Win(1);
+			break;
+		end;	
+	end;
+end;
+function Looser1()
+	while 1 do
+		Wait( 3 );
+		if  GetNUnitsInArea ( 0 , &apos;town&apos;, 0 ) &lt; 1 and GetNUnitsInArea ( 1 , &apos;town&apos;, 0 ) &gt; 0 then
+			Wait( 3 );
+			Win (1);
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------  MAIN
+StartThread( Objective );
+StartThread( Looser );
+
+StartThread( Reinf );</ScriptText>
+</Script>

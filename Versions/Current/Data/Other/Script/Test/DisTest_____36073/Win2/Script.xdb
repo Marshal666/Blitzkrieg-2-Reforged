@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="66">
+	<FileName />
+	<ScriptText>type = 0;
+CallReinforcement( 0, type, 0);
+Wait( 1 );
+CallReinforcement( 0, type, 0);
+Wait( 1 );
+SetIGlobalVar( &quot;Bonus.El_Alamein.2&quot;, 1 );
+Win( 0 );</ScriptText>
+</Script>

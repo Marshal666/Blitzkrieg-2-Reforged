@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SquadRPGStats ObjectRecordID="568">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_SQUAD</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="" />
+	<infoVisualObject href="" />
+	<IconTexture href="/Units/Infantry/USA/FlameThrower/icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<SquadType>Assault_Squad</SquadType>
+	<Icon />
+	<type>INFANTRY</type>
+	<members>
+		<Item href="/Units/Infantry/USA/FlameThrower/Flamethrower/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+	</members>
+	<formations>
+		<Item>
+			<type>DEFAULT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-32.6683</x>
+						<y>10.8894</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>MOVEMENT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-17.6777</x>
+						<y>7.77802</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Main_Squad/marching.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>DEFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>28.8397</x>
+						<y>-31.8839</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Main_Squad/defensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>OFFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-52.9458</x>
+						<y>0.487061</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Main_Squad/offensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+	</formations>
+	<availCommands>00000000000000000000000000000000</availCommands>
+	<availExposures>00000000000000000000000000000000</availExposures>
+	<availUserActions>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserActions>
+	<availUserExposures>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserExposures>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<EntrenchCover>0.5</EntrenchCover>
+</SquadRPGStats>

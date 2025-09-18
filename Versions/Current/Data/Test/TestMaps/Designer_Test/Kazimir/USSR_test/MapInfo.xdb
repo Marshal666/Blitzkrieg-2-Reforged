@@ -1,0 +1,2575 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="926">
+	<NumPatchesX>6</NumPatchesX>
+	<NumPatchesY>6</NumPatchesY>
+	<TerraSet href="/terrain/tgterraset/sets/summer_tgterraset.xdb#xpointer(/TGTerraSet)" />
+	<MapFilesPath>Maps\Test\Designer_Test\Kazimir\USSR_test\</MapFilesPath>
+	<Light href="/scene/lights/all/summer/daylight_ambientlight.xdb#xpointer(/AmbientLight)" />
+	<PreLight href="/terrain/prelight/all/summer/pre-light_prelight.xdb#xpointer(/PreLight)" />
+	<Weather>
+		<WindDirection>10</WindDirection>
+		<WindForce>2</WindForce>
+		<WeatherPeriod>120</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href="/terrain/weatherdesc/test/kazimir/rain-01_weatherdesc.xdb#xpointer(/WeatherDesc)" />
+	</Weather>
+	<OceanWater href="/terrain/water/game/summer/1_water.xdb#xpointer(/Water)" />
+	<Roads />
+	<Rivers />
+	<Crags />
+	<Spots />
+	<Lakes />
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/terrain/coastdesc/all/summer/coast01_coastdesc.xdb#xpointer(/CoastDesc)" />
+		<points />
+		<ControlPoints />
+		<VSOID>0</VSOID>
+		<CMArrowType>0</CMArrowType>
+		<CMArrowMission>0</CMArrowMission>
+		<CMArrowMission2>0</CMArrowMission2>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>75093EE5-B983-4EB7-8F39-5A47543524B5</uid>
+	<MapDesigner href="" />
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/ussr_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints>
+				<Item>
+					<Position>
+						<x>739.42</x>
+						<y>680.726</y>
+					</Position>
+					<AviationPosition>
+						<x>739.42</x>
+						<y>680.726</y>
+					</AviationPosition>
+					<Direction>56758</Direction>
+					<Template href="/reinforcements/deploytemplate/game/common_deploytemplate.xdb#xpointer(/DeployTemplate)" />
+					<TypedTemplates />
+					<IsDefault>true</IsDefault>
+					<___delete_from_here_to_the_end>false</___delete_from_here_to_the_end>
+					<Type>RT_MAIN_INFANTRY</Type>
+					<FactoryID>-1</FactoryID>
+					<PositionID>1</PositionID>
+					<DeployMask>
+						<Positions />
+					</DeployMask>
+					<IsAerial>false</IsAerial>
+					<IsSea>false</IsSea>
+					<IsGround>false</IsGround>
+					<Radius>10</Radius>
+				</Item>
+			</ReinforcementPoints>
+			<ReinforcementTypes>
+				<Item href="/reinforcements/reinforcement/test/designer_test/kazimir/bomber_ussr_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/test/designer_test/kazimir/fighter_ussr_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/test/designer_test/kazimir/gap_ussr_reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/reinforcements/reinforcement/test/designer_test/kazimir/recon_ussr_reinforcement.xdb#xpointer(/Reinforcement)" />
+			</ReinforcementTypes>
+			<DefaultRank href="" />
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>50</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/germany_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/scenario/partydependentinfo/game/neutral_(not_final)_partydependentinfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>882.991</x>
+				<y>798.683</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271855</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/100_mm_bs_3/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>881.235</x>
+				<y>1077.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271856</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/120_mm_38/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>889.357</x>
+				<y>1349.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271857</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/122_mm_a_19/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>938.969</x>
+				<y>1655.66</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271858</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/122_mm_m_30/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>928.421</x>
+				<y>1936.65</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271859</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/12_7_mm_dshk/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>921.761</x>
+				<y>2252.81</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271860</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/130mmcoastgun/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>919.258</x>
+				<y>2658.76</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271861</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/152_mm_d1/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>914.605</x>
+				<y>2984.65</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271862</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/152_mm_ml_20/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>930.142</x>
+				<y>3313.08</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271863</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/37_mm_61_k/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>939.327</x>
+				<y>3664.39</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271864</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/45_mm_m_37/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>973.629</x>
+				<y>3949.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271865</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/57_mm_zis_2/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1287.8</x>
+				<y>791.393</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271866</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/76_2mm_f22/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1269.53</x>
+				<y>1090.98</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271867</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/76_mm_zis_3/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1270.39</x>
+				<y>1376.39</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271868</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/82_mm_37/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1271</x>
+				<y>1642.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271869</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/85_mm_52_k/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1280.62</x>
+				<y>2007.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271870</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/85_mm_72_k/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1303.68</x>
+				<y>2371.38</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271871</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/bm_13/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1292.26</x>
+				<y>2684.19</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271872</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/bm_31_12/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1293.27</x>
+				<y>2970.45</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271873</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/artillery/bm_8_48/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1690.28</x>
+				<y>808.555</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271874</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/studebaker_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1696.95</x>
+				<y>1145.96</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271875</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/studebaker_engineering/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1694.18</x>
+				<y>1424.71</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271876</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/voroshilovets/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1689.69</x>
+				<y>1657.74</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271877</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/willys_mb_lend_lease/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1705.99</x>
+				<y>1865.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271878</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/zis_5_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1699.13</x>
+				<y>965.012</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271879</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/auto/studebaker_cargo/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1977.81</x>
+				<y>823.419</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271880</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/jsu_152/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2021.9</x>
+				<y>1460.94</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271881</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su_100/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2036.71</x>
+				<y>1692.14</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271882</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su_122/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2034.35</x>
+				<y>1940.96</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271883</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su_152/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2058.37</x>
+				<y>2170.19</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271884</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su_76/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2039.57</x>
+				<y>2449.02</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271885</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su_85/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2420.89</x>
+				<y>842.597</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271886</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/ba10/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2396.19</x>
+				<y>1001.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271887</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/ba20/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2416.01</x>
+				<y>1193</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271888</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/ba64/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2427.66</x>
+				<y>1358.82</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271889</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/bt_7/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2431.84</x>
+				<y>1519.56</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271890</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/js_2/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2429.38</x>
+				<y>1706.4</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271891</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/js_3/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2420.08</x>
+				<y>1914.4</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271892</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/kv_1/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2418.25</x>
+				<y>2116.91</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271893</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/kv_1c/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2438.2</x>
+				<y>2293.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271894</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/kv_2/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2428.46</x>
+				<y>2508.4</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271895</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/kv_85/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2434.64</x>
+				<y>2715.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271896</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/m3_grant_lend_lease/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2417.69</x>
+				<y>2925.33</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271897</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/m4a2_sherman_lend_lease/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2415.27</x>
+				<y>3118.78</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271898</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/mkiii_valentine_lend_lease/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2814.32</x>
+				<y>1101.03</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271900</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t-28e/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2820.11</x>
+				<y>1311.41</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271901</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t-35/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2873.65</x>
+				<y>1543.05</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271902</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t_26/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2886.7</x>
+				<y>1741.24</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271903</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t_34/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2868.85</x>
+				<y>1961.63</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271904</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t_34_76/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2867.14</x>
+				<y>2182.28</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271905</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t_34_85/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2857.81</x>
+				<y>2425.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48552</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271906</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/tanks/t_70/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2027.61</x>
+				<y>1129.35</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48423</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>271924</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/spg/su-100y/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3120.39</x>
+				<y>810.473</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276620</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3136.03</x>
+				<y>1042.32</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276621</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_2/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3164.73</x>
+				<y>1290.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276622</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3166.4</x>
+				<y>1539.56</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276623</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3186.66</x>
+				<y>1779.53</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276624</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3207.34</x>
+				<y>2023.11</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276625</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_6/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3204.83</x>
+				<y>2270.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276626</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_7/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3220.27</x>
+				<y>2543.12</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276627</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/assault_squad/ussr_assault_8/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3325.63</x>
+				<y>812.452</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276628</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/at_squad/ussr_at_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3357.64</x>
+				<y>1032.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276629</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/at_squad/ussr_at_2/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3396.33</x>
+				<y>1278.69</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276630</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/at_squad/ussr_at_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3379.78</x>
+				<y>1540.84</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276631</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/at_squad/ussr_at_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3552.89</x>
+				<y>809.798</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276632</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/elite_squad/ussr_elite_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3578.79</x>
+				<y>1065.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276633</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/elite_squad/ussr_elite_2/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3606.88</x>
+				<y>1312.63</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276634</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/elite_squad/ussr_elite_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3624.91</x>
+				<y>1531.95</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276635</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/elite_squad/ussr_elite_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3803.96</x>
+				<y>791.428</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276637</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3798.61</x>
+				<y>1081.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276638</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_2/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3803.95</x>
+				<y>1361.23</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276639</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3826.03</x>
+				<y>1619.38</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276640</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3844</x>
+				<y>1929.76</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276641</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3843.03</x>
+				<y>2209.92</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276642</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_6/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3843.13</x>
+				<y>2535.69</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276643</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_7/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3862.92</x>
+				<y>2800.3</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276644</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/main_squad/ussr_main_8/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3439.89</x>
+				<y>2071.82</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276645</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/snipers/ussr_sniper_3/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3484.95</x>
+				<y>2240.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>49239</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>276646</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/snipers/ussr_sniper_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3566.36</x>
+				<y>1779.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272157</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/great_britain/assault_squad/gb_assault_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3503.14</x>
+				<y>2464.96</y>
+				<z>0</z>
+			</Pos>
+			<Dir>5825</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272159</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/great_britain/assault_squad/gb_assault_4/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2968.64</x>
+				<y>3898.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12379</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272164</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/sheep/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3064.91</x>
+				<y>3870.8</y>
+				<z>0</z>
+			</Pos>
+			<Dir>14564</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272165</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/sheep/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2762.25</x>
+				<y>4084.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25304</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272166</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/dog/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2726.88</x>
+				<y>3965.14</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58982</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272167</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/dog/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2634.44</x>
+				<y>4039.71</y>
+				<z>0</z>
+			</Pos>
+			<Dir>31130</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272168</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/dog/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2591.6</x>
+				<y>3897.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>32404</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272169</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/dog/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2430.32</x>
+				<y>4094.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>55524</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272170</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2422.19</x>
+				<y>4020.56</y>
+				<z>0</z>
+			</Pos>
+			<Dir>38411</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272171</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2310.42</x>
+				<y>4064.27</y>
+				<z>0</z>
+			</Pos>
+			<Dir>41324</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272172</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2318.33</x>
+				<y>3983.37</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8192</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272173</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/1/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2165.95</x>
+				<y>4074.1</y>
+				<z>0</z>
+			</Pos>
+			<Dir>60803</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272174</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/2/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2185.55</x>
+				<y>3971.16</y>
+				<z>0</z>
+			</Pos>
+			<Dir>16566</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272175</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/2/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2067.58</x>
+				<y>4033.89</y>
+				<z>0</z>
+			</Pos>
+			<Dir>56616</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272176</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/2/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2063.02</x>
+				<y>3881.52</y>
+				<z>0</z>
+			</Pos>
+			<Dir>13653</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272177</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/objects/simpleobjects/cow/2/objectrpgstats.xdb#xpointer(/ObjectRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2737.07</x>
+				<y>2710.15</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272178</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2744.08</x>
+				<y>2774.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>3277</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272179</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2805.7</x>
+				<y>2747.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>5825</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272180</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2779.15</x>
+				<y>2630.58</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50244</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272181</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2825.12</x>
+				<y>2677.14</y>
+				<z>0</z>
+			</Pos>
+			<Dir>64080</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272182</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2879.72</x>
+				<y>2724.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19297</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272226</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2849.04</x>
+				<y>2811.15</y>
+				<z>0</z>
+			</Pos>
+			<Dir>546</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272227</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2802.13</x>
+				<y>2835.36</y>
+				<z>0</z>
+			</Pos>
+			<Dir>38229</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272228</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2897.88</x>
+				<y>2603.18</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12379</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272229</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2911.59</x>
+				<y>2809.48</y>
+				<z>0</z>
+			</Pos>
+			<Dir>23302</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272230</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2917.73</x>
+				<y>2699.21</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25304</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272231</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2850.89</x>
+				<y>2635.89</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58982</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272232</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2826.14</x>
+				<y>2599.07</y>
+				<z>0</z>
+			</Pos>
+			<Dir>31130</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272233</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2744.05</x>
+				<y>2884</y>
+				<z>0</z>
+			</Pos>
+			<Dir>24212</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272234</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/pig/pig/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1994.08</x>
+				<y>2738.51</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272235</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2048.21</x>
+				<y>2777.52</y>
+				<z>0</z>
+			</Pos>
+			<Dir>3277</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272236</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2049.53</x>
+				<y>2672.14</y>
+				<z>0</z>
+			</Pos>
+			<Dir>5825</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272237</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2148.92</x>
+				<y>2729.59</y>
+				<z>0</z>
+			</Pos>
+			<Dir>50244</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272238</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2121.34</x>
+				<y>2885.71</y>
+				<z>0</z>
+			</Pos>
+			<Dir>64080</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272239</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1935.26</x>
+				<y>2872.75</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19297</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272240</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/animals/dog/dog_1/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2674.37</x>
+				<y>3675.64</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272251</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/germany/assault_squad/german_assault_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2640.81</x>
+				<y>3832.06</y>
+				<z>0</z>
+			</Pos>
+			<Dir>3277</Dir>
+			<Player>2</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>272252</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/germany/assault_squad/german_assault_5/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1503.17</x>
+				<y>3666.61</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>1</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/trains/armoured_tender_ussr/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1603.69</x>
+				<y>3934.09</y>
+				<z>0</z>
+			</Pos>
+			<Dir>11908</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>2</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/trains/armoured_train_ussr/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1832.31</x>
+				<y>3832.58</y>
+				<z>0</z>
+			</Pos>
+			<Dir>44922</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>3</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/units/technics/ussr/trains/armoured_wagon_ussr/mechunitrpgstats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1951.49</x>
+				<y>3338.31</y>
+				<z>0</z>
+			</Pos>
+			<Dir>10194</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>4</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/buildings/common/portwarehouse/whole/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3400.05</x>
+				<y>1813.8</y>
+				<z>0</z>
+			</Pos>
+			<Dir>19297</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>5</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3632.68</x>
+				<y>2052.08</y>
+				<z>0</z>
+			</Pos>
+			<Dir>546</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>6</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3364.73</x>
+				<y>1943.35</y>
+				<z>0</z>
+			</Pos>
+			<Dir>38229</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>7</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/squads/ussr/flamethrower/flamethrower/squadrpgstats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+	</Objects>
+	<HiddenObjectType href="" />
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_DAY</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments />
+	<Bridges />
+	<ScenarioObjects />
+	<Reinforcements>
+		<infos />
+	</Reinforcements>
+	<ScriptFile href="" />
+	<ScriptFileName />
+	<ScriptAreas />
+	<startCommandsList />
+	<reservePositionsList />
+	<soundsList />
+	<ForestCircleSound href="" />
+	<ForestAmbientSounds href="" />
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects />
+	<Bonuses />
+	<EditAreas />
+	<MiniMap href="/scene/texandmats/all/maps/test/designer_test/kazimir/ussr_test/minimap_material.xdb#xpointer(/Material)" />
+	<LocalizedName href="" />
+	<LocalizedDescription href="" />
+	<LoadingPicture href="" />
+	<LoadingDescription href="" />
+	<CameraPositions />
+	<ScriptMovies>
+		<ScriptCameraPlacements>
+			<Item>
+				<Name />
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<FOV>0</FOV>
+			</Item>
+			<Item>
+				<Name />
+				<Position>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Position>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<FOV>0</FOV>
+			</Item>
+		</ScriptCameraPlacements>
+		<ScriptMovieSequences />
+	</ScriptMovies>
+	<Objectives />
+	<Music href="" />
+	<MPInfo>
+		<GameTypes />
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects />
+</MapInfo>

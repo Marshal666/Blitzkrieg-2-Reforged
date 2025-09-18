@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="170">
+		<FileName />
+		<ScriptText>fr1 = 0;
+fr2 = 0;
+fr3 = 0;
+-----------------------Reinf
+function Reinf()
+	Wait ( 120 );
+	LandReinforcementFromMap ( 1 , &apos;0&apos; , 0 , 300 );
+	Wait ( 1 );
+	Cmd( 3 , 300 , 0 , GetScriptAreaParams ( &quot;Town&quot; ) );
+	Wait ( 20 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 150 );
+	Wait ( 1 );
+	Cmd( 3 , 150 , 0 , GetScriptAreaParams ( &quot;Town&quot; ) );
+	Wait ( 10 );
+	LandReinforcementFromMap ( 1 , &quot;2&quot; , 0 , 150 );
+	Wait ( 1 );
+	Cmd( 3 , 150 , 0 , GetScriptAreaParams ( &quot;Town&quot; ) );
+	Wait ( 10 );
+	LandReinforcementFromMap ( 1 , &quot;1&quot; , 0 , 150 );
+	Wait ( 1 );
+	Cmd( 3 , 150 , 0 , GetScriptAreaParams ( &quot;Town&quot; ) );
+	StartThread( CompleteObjective1 );
+end;
+-----------------------Boat
+function Viewboat()
+	Wait ( 1 );
+	ViewZone ( &quot;boat1&quot;, 0 );
+	ViewZone ( &quot;boat2&quot;, 0 );
+end;
+function Findboat()
+	while 1 do
+		Wait( 1 );
+		if GetNUnitsInArea( 0 , &quot;boat&quot; , 0 ) &gt; 0 then
+			ChangePlayerForScriptGroup( 55 , 0 );
+			ViewZone ( &quot;boat1&quot;, 1 );
+			ViewZone ( &quot;boat2&quot;, 1 );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+-----------------------Patrol
+function Patrol()
+	Wait ( 1 );
+	Cmd( 3 , 100 , 0 , GetScriptAreaParams ( &quot;p11&quot; ) );
+	QCmd( 3 , 100 , 0 , GetScriptAreaParams ( &quot;p12&quot; ) );
+	QCmd( 3 , 100 , 0 , GetScriptAreaParams ( &quot;p13&quot; ) );
+	QCmd( 3 , 100 , 0 , GetScriptAreaParams ( &quot;p14&quot; ) );
+	Wait ( 60 );
+	StartThread( Patrol );
+end;
+function Patrol2()
+	Wait ( 1 );
+	Cmd( 3 , 102 , 0 , GetScriptAreaParams ( &quot;p21&quot; ) );
+	QCmd( 3 , 102 , 0 , GetScriptAreaParams ( &quot;p22&quot; ) );
+	QCmd( 3 , 102 , 0 , GetScriptAreaParams ( &quot;p23&quot; ) );
+	Wait ( 60 );
+	StartThread( Patrol2 );
+end;
+function Patrol3()
+	Wait ( 1 );
+	Cmd( 3 , 103 , 0 , GetScriptAreaParams ( &quot;p31&quot; ) );
+	QCmd( 3 , 103 , 0 , GetScriptAreaParams ( &quot;p32&quot; ) );
+	Wait ( 60 );
+	StartThread( Patrol3 );
+end;
+-----------------------Find
+function Find1()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea ( 0 , &apos;fr1&apos;, 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 0 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr1 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find2()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr2&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 1 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr1 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find3()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr3&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 2 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr1 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find4()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr4&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 3 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr1 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find12()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr5&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 4 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr2 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find22()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr6&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 5 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr2 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find32()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr7&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 6 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr2 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find42()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr8&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 7 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr2 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find13()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr9&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 8 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr3 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Find23()
+	while 1 do
+		Wait( 1 );
+		if IsSomeUnitInArea( 0 , &quot;fr10&quot; , 0 ) &gt; 0 then
+			Sleep ( 1 );
+			LandReinforcementFromMap ( 2 , &quot;0&quot; , 9 , 200 );
+			Wait( 1 );
+			ChangePlayerForScriptGroup( 200 , 0 );
+			fr3 = 1;
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+-----------------------Objective
+function Objective()
+	ObjectiveChanged(0, 1); 
+	SetIGlobalVar( &quot;temp.objective0&quot; , 1 );
+	StartThread( CompleteObjective0 );
+	Wait( 3 );
+end;
+function CompleteObjective0()
+	while 1 do
+		Wait( 3 );
+		if  fr1 + fr2 + fr3 == 3 then
+			ObjectiveChanged(0, 2);
+			SetIGlobalVar( &quot;temp.objective0&quot; , 2 );
+			Wait( 3 );
+			StartThread( Objective1 );
+			StartThread( Unlucky2 );
+			StartThread( Reinf );
+			Wait( 1 );
+			break;
+		end;	
+	end;
+end;
+function Objective1()
+	ObjectiveChanged(1, 1); 
+	SetIGlobalVar( &quot;temp.objective1&quot; , 1 );
+	Wait( 3 );
+end;
+function CompleteObjective1()
+	while 1 do
+		Wait( 3 );
+		if  IsSomeBodyAlive ( 1 , 150 ) == 0 then
+			Wait( 1 );
+			ObjectiveChanged(0, 2);
+			Win(0);
+			break;
+		end;	
+	end;
+end;
+------------------------WIn_Loose
+function Unlucky1()
+	while 1 do
+		Wait( 1 );
+        if  (IsSomeBodyAlive ( 0 , 199 ) + IsSomeBodyAlive ( 0 , 200 )) &lt; 1 then
+			Win(1);
+			Wait( 1 );
+			break;
+		end;
+	end;
+end;
+function Unlucky2()
+	while 1 do
+		Wait( 1 );
+        if  (GetNScriptUnitsInArea ( 150, &apos;Town&apos;, 0 )) &gt; 0 then
+			Win(1);
+			Wait( 1 );
+			break;
+		end;
+	end;
+end;
+-------------------------------------------  MAIN
+StartThread( Objective );
+StartThread( Unlucky1 );
+
+StartThread( Find1 );
+StartThread( Find2 );
+StartThread( Find3 );
+StartThread( Find4 );
+StartThread( Find12 );
+StartThread( Find22 );
+StartThread( Find32 );
+StartThread( Find42 );
+StartThread( Find13 );
+StartThread( Find23 );
+
+StartThread( Findboat )
+
+StartThread( Patrol );
+StartThread( Patrol2 );
+StartThread( Patrol3 );
+
+Wait ( 10 );
+StartThread( Viewboat );</ScriptText>
+	</Script>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="27">
+	<Action>USER_ACTION_FORMATION_0</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>false</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>false</Passive>
+	<Slot>6</Slot>
+	<Panel>ACTION_BTN_PANEL_FORMATIONS</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+	<Tooltip href="/other/text/game/tooltips/formations/basic/text.xdb#xpointer(/Text)"/>
+	<Icon href="/scene/texandmats/game/mission/newactionbuttons/formationbasic/normal_texture.xdb#xpointer(/Texture)"/>
+	<IconDisabled href="/scene/texandmats/game/mission/newactionbuttons/formationbasic/disabled_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIcon href="/scene/texandmats/game/mission/newactionbuttons/formationbasic/normalfg_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIconDisabled href="/scene/texandmats/game/mission/newactionbuttons/formationbasic/disabledfg_texture.xdb#xpointer(/Texture)"/>
+	<PressEffect>false</PressEffect>
+	<HotkeyCmd>user_action_formation_standard</HotkeyCmd>
+</ActionButtonInfo>

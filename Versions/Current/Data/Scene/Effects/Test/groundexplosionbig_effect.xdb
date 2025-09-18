@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="1000009">
+	<Instances>
+		<Item href="groundexpdust_particleinstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="groundexpfallingdust_particleinstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="groundexpfireflash_particleinstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Nuke_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

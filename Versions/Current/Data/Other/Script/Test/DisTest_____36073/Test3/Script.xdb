@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="54">
+	<FileName />
+	<ScriptText>units = {};
+tanks = {};
+units = GetObjectListArray( 1 );
+tanks = GetUnitsByParam( units, PT_TYPE, TYPE_MECH );
+Trace( &quot;tanks.n = %g&quot;, tanks.n );
+CmdArrayDisp( ACT_SWARM, tanks, 256, 5000, 5000 );
+
+</ScriptText>
+</Script>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Campaign ObjectRecordID="9">
+	<Chapters>
+		<Item href="Chapter1/1_Bataan_Chapter.xdb#xpointer(/Chapter)" />
+		<Item href="Chapter2/2_Gwadal_Chanel.xdb#xpointer(/Chapter)" />
+		<Item href="Chapter3/3_Philippines_Chapter.xdb#xpointer(/Chapter)" />
+		<Item href="Chapter4/4_Europe_Chapter.xdb#xpointer(/Chapter)" />
+	</Chapters>
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Name.txt" />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="Description_Text.txt" />
+	<ScriptFileRef href="Script.lua" />
+	<Screens />
+	<TextureNotStarted href="/Scene/TexAndMats/Game/Menu/SelectCampaign/USANormal_Texture.xdb#xpointer(/Texture)" />
+	<TextureCompleted href="/Scene/TexAndMats/Game/Menu/SelectCampaign/USACompleted_Texture.xdb#xpointer(/Texture)" />
+	<TextureNotStartedSelected href="" />
+	<TextureCompletedSelected href="" />
+	<TextureMissionCompleted href="/Scene/TexAndMats/Game/Menu/ChapterMap/Sides/TargetCompletedUSA_Texture.xdb#xpointer(/Texture)" />
+	<TextureMenuBackground href="Textures/MenuBackground_Texture.xdb#xpointer(/Texture)" />
+	<TextureMenuIcon href="" />
+	<TextureChapterFinishBonus href="/Scene/TexAndMats/Game/Menu/ChapterMap/Sides/finalbonususa_texture.xdb#xpointer(/Texture)" />
+	<RankExperiences>
+		<Item>
+			<Experience>0</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/lieutenant.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>171</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/captain.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>456</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/major.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>969</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/letcolonel.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>1710</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/colonel.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>2565</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/mgeneral.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>3477</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/lgeneral.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>4503</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/general.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>2</AddPromotion>
+		</Item>
+		<Item>
+			<Experience>5700</Experience>
+			<Rank href="/Scenario/PlayerRank/Game/ajorgeneral/armygeneral.xdb#xpointer(/PlayerRank)" />
+			<AddPromotion>0</AddPromotion>
+		</Item>
+	</RankExperiences>
+	<LeaderRanks>
+		<Item>
+			<RankName href="" />
+			<RankNameFileRef href="/Other/Text/Ranks/0/text.txt" />
+			<ExpNeeded>0</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="" />
+			<RankNameFileRef href="/Other/Text/Ranks/1/Text.txt" />
+			<ExpNeeded>150</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="" />
+			<RankNameFileRef href="/Other/Text/Ranks/2/Text.txt" />
+			<ExpNeeded>300</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+		<Item>
+			<RankName href="" />
+			<RankNameFileRef href="/Other/Text/Ranks/3/Text.txt" />
+			<ExpNeeded>450</ExpNeeded>
+			<StatsBonus href="" />
+		</Item>
+	</LeaderRanks>
+	<Leaders>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/01_Name_Text.txt" />
+			<Picture href="Leaders/01_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/02_Name_Text.txt" />
+			<Picture href="Leaders/02_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/03_Name_Text.txt" />
+			<Picture href="Leaders/03_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/04_Name_Text.txt" />
+			<Picture href="Leaders/04_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/05_Name_Text.txt" />
+			<Picture href="Leaders/05_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/06_Name_Text.txt" />
+			<Picture href="Leaders/06_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/07_Name_Text.txt" />
+			<Picture href="Leaders/07_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/08_Name_Text.txt" />
+			<Picture href="Leaders/08_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/09_Name_Text.txt" />
+			<Picture href="Leaders/09_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/10_Name_Text.txt" />
+			<Picture href="Leaders/10_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/11_Name_Text.txt" />
+			<Picture href="Leaders/11_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/12_Name_Text.txt" />
+			<Picture href="Leaders/12_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/13_Name_Text.txt" />
+			<Picture href="Leaders/13_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/14_Name_Text.txt" />
+			<Picture href="Leaders/14_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/15_Name_Text.txt" />
+			<Picture href="Leaders/15_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/16_Name_Text.txt" />
+			<Picture href="Leaders/16_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+		<Item>
+			<Name href="" />
+			<NameFileRef href="Leaders/17_Name_Text.txt" />
+			<Picture href="Leaders/17_Texture.xdb#xpointer(/Texture)" />
+		</Item>
+	</Leaders>
+	<DifficultyLevels>
+		<Item href="/Scenario/DifficultyLevels/Easy.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/Scenario/DifficultyLevels/Normal.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/Scenario/DifficultyLevels/Hard.xdb#xpointer(/DifficultyLevel)" />
+		<Item href="/Scenario/DifficultyLevels/Very_easy.xdb#xpointer(/DifficultyLevel)" />
+	</DifficultyLevels>
+	<IntroMovie href="/Movies/Chronicles/USA/Campaign.xml" />
+	<OutroMovie href="/Movies/outro_usa.xml" />
+	<ReinforcementTypes href="/Reinforcements/ReinforcementTypes/Game/Types_ReinforcementTypes.xdb#xpointer(/ReinforcementTypes)" />
+	<IntermissionMusic href="/SoundAndMusic/Game/USA/chapter1/Chapter_MapMusic.xdb#xpointer(/MapMusic)" />
+	<SaveLoadFlag href="/Scene/TexAndMats/Game/Menu/SelectCampaign/SaveLoad/US_Texture.xdb#xpointer(/Texture)" />
+	<MedalsForChapter>
+		<Item>
+			<Medal href="Medals/chapter1.xdb#xpointer(/Medal)" />
+			<Parameter>0</Parameter>
+			<StartingChapter>0</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/chapter2.xdb#xpointer(/Medal)" />
+			<Parameter>0</Parameter>
+			<StartingChapter>0</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/chapter3.xdb#xpointer(/Medal)" />
+			<Parameter>0</Parameter>
+			<StartingChapter>0</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/chapter4.xdb#xpointer(/Medal)" />
+			<Parameter>0</Parameter>
+			<StartingChapter>0</StartingChapter>
+		</Item>
+	</MedalsForChapter>
+	<MedalsForKills>
+		<Item>
+			<Medal href="Medals/kills1.xdb#xpointer(/Medal)" />
+			<Parameter>500</Parameter>
+			<StartingChapter>2</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/kills2.xdb#xpointer(/Medal)" />
+			<Parameter>1000</Parameter>
+			<StartingChapter>3</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/kills3.xdb#xpointer(/Medal)" />
+			<Parameter>2000</Parameter>
+			<StartingChapter>4</StartingChapter>
+		</Item>
+	</MedalsForKills>
+	<MedalsForTactics>
+		<Item>
+			<Medal href="Medals/tactics1.xdb#xpointer(/Medal)" />
+			<Parameter>2</Parameter>
+			<StartingChapter>2</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/tactics2.xdb#xpointer(/Medal)" />
+			<Parameter>3</Parameter>
+			<StartingChapter>3</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/tactics3.xdb#xpointer(/Medal)" />
+			<Parameter>4</Parameter>
+			<StartingChapter>4</StartingChapter>
+		</Item>
+	</MedalsForTactics>
+	<MedalsForEconomy>
+		<Item>
+			<Medal href="Medals/economy1.xdb#xpointer(/Medal)" />
+			<Parameter>0</Parameter>
+			<StartingChapter>1</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/economy2.xdb#xpointer(/Medal)" />
+			<Parameter>50</Parameter>
+			<StartingChapter>2</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/economy3.xdb#xpointer(/Medal)" />
+			<Parameter>30</Parameter>
+			<StartingChapter>3</StartingChapter>
+		</Item>
+		<Item>
+			<Medal href="Medals/economy4.xdb#xpointer(/Medal)" />
+			<Parameter>20</Parameter>
+			<StartingChapter>4</StartingChapter>
+		</Item>
+	</MedalsForEconomy>
+	<MedalForMunchkinism href="Medals/levelcaped.xdb#xpointer(/Medal)" />
+</Campaign>

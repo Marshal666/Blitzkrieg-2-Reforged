@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="1000010">
+	<ScenarioUnitsModifiers />
+	<LocalizedNameFileRef href="Name_Text.txt" />
+	<LocalizedNameSaveLoadFileRef href="NameSaveLoad.txt" />
+	<LocalizedDateFileRef href="Date_Text.txt" />
+	<LocalizedDescriptionFileRef href="Description_Text.txt" />
+	<MissionPath>
+		<Item>
+			<Map href="RUS2.0/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>100</x>
+				<y>100</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>40</RecommendedCalls>
+			<PotentialIncomplete>100</PotentialIncomplete>
+			<PotentialComplete>-1000</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>5</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="RUS2.1/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>200</x>
+				<y>100</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="Bomber_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="FieldArtillery_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="TankLight_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>5</RecommendedCalls>
+			<PotentialIncomplete>20</PotentialIncomplete>
+			<PotentialComplete>100</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>4</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="RUS2.2/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>300</x>
+				<y>100</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="AssaultSquad_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="EliteSquad_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="MainSquad_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>7</RecommendedCalls>
+			<PotentialIncomplete>20</PotentialIncomplete>
+			<PotentialComplete>50</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>1</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="RUS2.3/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>400</x>
+				<y>100</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GroundAttackPlane_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="TankDestroyer_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="AntiTankArtillery_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="TankHeavy_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>5</RecommendedCalls>
+			<PotentialIncomplete>20</PotentialIncomplete>
+			<PotentialComplete>100</PotentialComplete>
+			<Type>EMT_CONVOY_PROTECT</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>2</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="RUS2.4/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>500</x>
+				<y>100</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="LightAAA_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="RocketArtillery_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="Fighter_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="TankMedium_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>4</RecommendedCalls>
+			<PotentialIncomplete>-800</PotentialIncomplete>
+			<PotentialComplete>-600</PotentialComplete>
+			<Type>EMT_CONVOY_DESTROY</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>3</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>false</UseMapReinforcements>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USSR/Chapter_2/Player/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers />
+	<MapPicture href="Rus_Chapter2_map/chapter_map.xdb#xpointer(/Texture)" />
+	<SeaNoiseMask href="Rus_Chapter2_map/chapter_map(mask).tga" />
+	<DifferentColourMap href="Rus_Chapter2_map/chapter_map(blue).tga" />
+	<PositiveColour>-928439551</PositiveColour>
+	<NegativeColour>-13754111</NegativeColour>
+	<MainStrikeAngle>15</MainStrikeAngle>
+	<MainStrikePower>-20</MainStrikePower>
+	<ReinforcementCalls>40</ReinforcementCalls>
+	<DetailsMap href="Rus_Chapter2_map/mapinfo.xdb#xpointer(/MapInfo)" />
+	<ArrowTextures>
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/2_Defence_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/3_Defence_Enemy_Texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+	<IntroMovie href="/Movies/Chronicles/USSR/2.xml" />
+	<General>
+		<DescFileRef href="RUS2_General.txt" />
+		<Portrait href="Rus_Chapter2_map/superior_general.xdb#xpointer(/Texture)" />
+		<ReinforcementType>RT_ARTILLERY_ANTITANK</ReinforcementType>
+		<StatBonus href="/Other/UnitStatsModifier/Game/Generals/petrov.xdb#xpointer(/UnitStatsModifier)" />
+	</General>
+</Chapter>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AddReinforcementCalls ObjectRecordID="1">
+	<MissionToApply href="/other/mission/game/el_alamein/test/mission.xdb#xpointer(/Mission)"/>
+	<MapToApply href=""/>
+	<TextDesc href="/other/text/game/chapters/bonuses/additionalreinforcements/text.xdb#xpointer(/Text)"/>
+	<Player>0</Player>
+	<ReinforcementToChange>RT_MAIN_INFANTRY</ReinforcementToChange>
+	<HumanPlayer>true</HumanPlayer>
+	<Calls>3</Calls>
+</AddReinforcementCalls>

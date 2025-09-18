@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000017">
+	<FileName href="" />
+	<ScriptText>NoReinfLeft = 0;
+obj_1 = 0;
+obj_0 = 0;
+BridgeDestroyed = 0;
+StartingAttack = 0; 
+failed = 0;
+Bridge = GetObjectListArray(1101);
+hz = 0;
+
+
+function begin()
+	LandReinforcementFromMap(0,&quot;desant&quot;,1,1001);
+	Cmd(ACT_UNLOAD,1001,0,6400, 3580);
+	StartThread(capture_truck);
+	StartThread(sabotage);
+	StartThread(capture_truck);
+	StartThread(vodila);
+end;
+
+function poteha()
+	while 1 do
+		Wait(2);
+		if (GetNUnitsInScriptGroup(1140) &lt; 1) then
+			Wait(1);
+			PlayEffect(2,4603, 7053,300);
+			DamageScriptObject(1302,100);
+			Wait(1);
+			PlayEffect(2,4611, 6973,300);
+			DamageScriptObject(1303,100);
+			Wait(1);
+			PlayEffect(2,4601, 7151,300);
+			DamageScriptObject(1304,100);
+			Wait(1);
+			PlayEffect(2,4596, 7254,300);
+			DamageScriptObject(1305,100);
+			Wait(1);
+			PlayEffect(2,4603, 7336,300);
+			DamageScriptObject(1306,100);
+			break;
+		end;
+	end;
+end;
+
+
+function capture_truck() 
+	while 1 do
+		Wait(1);
+		if (GetNUnitsInScriptGroup(9999,0) &gt; 0 and GetNUnitsInArea(0,&quot;truck&quot;,0) &gt; 0) then
+			ChangePlayer(GetObjectList(1300),0);
+			break;
+		end;
+	end;
+end;
+
+function sabotage()
+	while 1 do
+		Wait(1);
+		--if (GetNScriptUnitsInArea(1300,&quot;bridge&quot;,0) &gt; 0) then
+		if (GetNScriptUnitsInArea(1300,&quot;bridge&quot;,0) &lt; 1) then
+			--ChangePlayer(GetObjectList(1300),2);
+			Cmd(ACT_MOVE,1300,0,6698, 6833);
+			QCmd(ACT_STAND,1300,0,6698, 6833);
+			break;
+		end;
+	end;
+end;
+
+function vodila()
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1300,&quot;priehali&quot;,0) &gt; 0) then
+			Wait(3);
+			LandReinforcementFromMap(0,&quot;vodila&quot;,2,1301);
+			Cmd(ACT_MOVE,1301,0,5797,6262);
+			break;
+		end;
+	end;
+end;
+
+
+function BridgeCrush()
+	while 1 do
+	Wait(3);
+		if (GetNScriptUnitsInArea(1301,&quot;objective1&quot;,0) &gt; 0) then 
+			PlayEffect(2,6698, 6833,300);
+			Wait(1);
+			DamageScriptObject(1300,100);
+			PlayEffect(2,6678, 6813,300);
+			Wait(1);
+			PlayEffect(2,6452, 6577,0);
+			Wait(1);
+			PlayEffect(2,6603, 6675,0);
+			Wait(1);
+			PlayEffect(2,6688, 6735,0);
+			PlayEffect(2,6802, 6890,0);
+			Wait(1);
+			PlayEffect(3,6903, 6878,0);
+			PlayEffect(2,6903, 6878,0);
+			PlayEffect(2,6961, 6979,0);
+			Wait(1);
+			PlayEffect(2,7119, 7029,0);
+			PlayEffect(2,6395, 6556,0);
+			for i=1,Bridge.n do
+				DamageObject(Bridge[i],4000);
+			end;
+			PlayEffect(0,6700,6800,0);
+			Wait(1);
+			PlayEffect(1,6700,6800,0);
+			Wait(2);
+			PlayEffect(0,6700,6800,0);
+			PlayEffect(2,6452, 6577,0);
+			Wait(1);
+			PlayEffect(2,6603, 6675,0);
+			break;
+		end;
+	end;
+end;
+
+
+
+
+function trucks_retreat()
+	while 1 do
+	Wait(2);
+		if (IsUnitNearScriptObject(0,1112,700) == 1) then
+			StartThread(mg_crew);
+			StartThread(cannon1_crew);
+			StartThread(cannon2_crew);
+			Cmd(ACT_MOVE,1190,0,2209, 7012);
+			QCmd(ACT_MOVE,1190,0,2074, 5788);
+			Cmd(ACT_MOVE,1191,0,1141, 5430);
+			QCmd(ACT_MOVE,1190,0,2074, 5788);
+			Cmd(ACT_MOVE,1192,0,1492, 6120);
+			QCmd(ACT_MOVE,1192,0,2399, 6204);
+			Wait(30);
+			Cmd(ACT_MOVE,1112,0,4746, 4961);
+			QCmd(ACT_MOVE,1112,0,3756, 2693);
+			Cmd(ACT_MOVE,1113,0,1273, 6919);
+			QCmd(ACT_MOVE,1113,0,937, 8113);
+			QCmd(ACT_DISAPPEAR,1113)
+			StartThread(jeep);
+			StartThread(infantry_strike_back);
+			break;
+		end;
+	end;
+end;
+
+function infantry_strike_back()
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1113,&quot;svalil&quot;,0) &gt; 0) then
+			Cmd(ACT_SWARM,1104,1000,2074, 5788);
+			break;
+		end;
+	end;
+end;
+
+function cannon1_crew()	
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1190,&quot;domik&quot;,0) &gt; 0) then
+			Cmd(ACT_LEAVE,1160,0,2209, 7012);
+			Cmd(ACT_TAKE_ARTILLERY,1160,1171);
+			break;
+		end;
+	end;
+end;
+
+function cannon2_crew()	
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1192,&quot;halupa&quot;,0) &gt; 0) then
+			Cmd(ACT_LEAVE,1162,0,1799, 6419);
+			QCmd(ACT_TAKE_ARTILLERY,1162,1172);
+			break;
+		end;
+	end;
+end;
+
+function mg_crew()	
+	while 1 do
+		Wait(1);
+		if (GetNScriptUnitsInArea(1191,&quot;palatka&quot;,0) &gt; 0) then
+			Cmd(ACT_LEAVE,1161,0,1284, 5391);
+			Cmd(ACT_MOVE,1161,100,1284, 5391);
+			QCmd(ACT_TAKE_ARTILLERY,1161,1170);
+			break;
+		end;
+	end;
+end;
+
+
+function jeep()	
+	while 1 do
+		Wait(5);
+		if (GetNScriptUnitsInArea(1112,&quot;Defence&quot;,0) &gt; 0) then
+			Cmd(ACT_SWARM,1114,500,4746, 4961);
+			QCmd(ACT_SWARM,1114,1000,2074, 5788);
+			break;
+		end;
+	end;
+end;
+
+
+function objective2()
+	while 1 do
+		Wait(1);
+		if (obj_1 == 1 or failed == 1) then
+			DamageScriptObject(702,10);
+			GiveObjective(2);
+			StartThread(CompleteObjective2);
+			break;
+		end;
+	end;
+end;
+
+
+function TimeToDeath()
+ 	while 1 do
+  	Wait(4) 		
+		if (GetGameTime() &gt; 550 or BridgeDestroyed == 1) then
+			StartingAttack = 1;
+			ItalianReinf = {&quot;Infantry&quot;,&quot;tanks&quot;,&quot;Infantry&quot;,&quot;tanks&quot;,&quot;tanks&quot;,&quot;Infantry&quot;,&quot;Infantry&quot;,&quot;tanks&quot;};
+			Trace(&quot;20 seconds before attack...&quot;);
+			Wait(10);
+			for i=1,8 do
+				LandReinforcementFromMap(2, ItalianReinf[i], 0, 1200+i);
+				Cmd(ACT_SWARM, 1200+i, 1500, 3800, 2343);
+				Wait(15);
+			end;
+			
+			NoReinfLeft = 1;
+ 			break;
+ 		end;
+ 	end;
+end; 
+ 
+
+function lose()
+ 	while 1 do 
+        if (((GetNUnitsInPlayerUF(2) &lt; 1 and NoReinfLeft == 1) and (GetNUnitsInParty(0) == 0 and GetReinforcementCallsLeft(0) == 0)) or (StartingAttack == 1 and NoReinfLeft == 1 and GetNUnitsInPlayerUF(2) &lt; 1)) then
+ 				Wait(2);
+ 				Loose(0);
+         return 1;
+ 		end;
+ 	Wait(5);
+ 	end;
+end; 
+ 
+function win()
+ 	while 1 do
+ 		Wait(2);
+ 		if (GetNUnitsInArea(2, &quot;Defence&quot;, 0) &gt; 0 and GetNUnitsInArea(1, &quot;Defence&quot;, 0) &lt; 1) then
+ 			Win(0);
+ 		end;
+ 	end;
+end; 
+
+function CompleteObjective0()
+ 	while 1 do
+ 		Wait (2);
+         if (GetNUnitsInScriptGroup(1100, 1) &lt; 1) then
+            Wait (1);
+ 			CompleteObjective (0);
+ 			--DamageScriptObject(700,10);
+ 			DamageObject(GetObjectList(700),-0.1);
+ 			obj_0 = 1;
+			Wait(2);
+			--DamageScriptObject(701,10);
+			ViewZone(&quot;objective1&quot;,1);
+			DamageScriptObject(701,10);
+			GiveObjective(1);
+ 			break;
+ 		end;
+ 	end;
+end;  
+
+
+function CompleteObjective1()
+ 	while 1 do
+ 		Wait (2);
+         if (BridgeDestroyed == 1 and failed == 0) then
+			Trace(&quot;Bridge Destroyed!&quot;);
+            Wait (1);
+ 			CompleteObjective (1);
+ 			ViewZone(&quot;objective2&quot;,1);
+ 			DamageObject(GetObjectList(701),-0.1);
+			obj_1 = 1;
+			StartThread(disappear);
+			--Cmd(ACT_SWARM, 1104, 500, 2146, 5810);
+			break;
+		end;
+ 	end;
+end; 
+
+function disappear()
+	for i=1,12 do
+		if (IsAlive(GetObjectList(1102+i)) == 1) then
+			Cmd(ACT_DISAPPEAR,1102+i);
+		end;
+	end;
+end;
+
+function CompleteObjective2()
+	while 1 do
+ 		Wait (1);
+         if ((GetNUnitsInArea(2, &quot;Defence&quot;, 0) &gt; 0 and GetNUnitsInArea(1, &quot;Defence&quot;, 0) &lt; 1)) then
+            Wait (1);
+ 			CompleteObjective (2);
+			Wait(2);
+			Win(0);
+ 			break;
+ 		end;
+ 	end;
+end; 
+
+
+function pass()
+while 1 do
+		Wait(2);
+		if (GetNUnitsInArea(1,&quot;pass&quot;,0) &gt; 0 and obj_1 == 0) then 
+			Trace(&quot;Objective failed...&quot;);
+			if (obj_0 == 0) then 
+				FailObjective(0);
+				DamageScriptObject(700,-10);
+			end;
+			FailObjective(1);
+			DamageScriptObject(701,-10);
+			failed = 1;
+			break;
+		end;
+	end;
+end;
+
+
+function bridge()
+	while 1 do
+		Wait(2);
+		if (GetNUnitsInScriptGroup( 1101 ) == 0)  then 
+			BridgeDestroyed = 1;
+			break;
+		end;
+	end;
+end;
+
+function EnemyReinf()
+	while 1 do
+		EnemyUnits = {&quot;matildes&quot;,&quot;infantry&quot;,&quot;tanks&quot;,&quot;jeeps&quot;,&quot;infantry&quot;,&quot;infantry&quot;,&quot;infantry&quot;,&quot;matildes&quot;,&quot;infantry&quot;,&quot;matildes&quot;,&quot;infantry&quot;,&quot;infantry&quot;}
+		Wait(1);
+		if (StartingAttack == 1 and BridgeDestroyed == 0) then
+			for i=1,12 do
+				Wait(1);
+				Trace(&quot;number i = %g&quot;,i);
+				if (BridgeDestroyed == 0) then
+					LandReinforcementFromMap(1, EnemyUnits[i], 0, 1102+i);
+					Cmd(ACT_SWARM, 1102+i, 1500, 3500,1800);
+					Wait(7);
+				end;
+			end;
+			break;
+		end;
+	end;
+end;
+
+
+GiveObjective(0);
+StartThread(poteha);
+StartThread(BridgeCrush);
+StartThread(begin);
+StartThread(objective2);
+StartThread(bridge);
+StartThread(trucks_retreat);
+StartThread(pass); 
+StartThread(CompleteObjective0); 
+StartThread(CompleteObjective1); 
+StartThread(TimeToDeath);
+StartThread(EnemyReinf);
+StartThread(lose); 
+StartThread(win);
+</ScriptText>
+</Script>

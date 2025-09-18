@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScreen ObjectRecordID="3">
+	<ClassTypeID>285694848</ClassTypeID>
+	<Shared href="Mission_WindowScreenShared.xdb#xpointer(/WindowScreenShared)" />
+	<Name>MissionScreen</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>reset_forced_action</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Misc/reaction_reset_forced_action_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>close_reinforcement</GameMessage>
+			<LogicalReaction>reaction_on_close_reinforcement</LogicalReaction>
+			<VisualReaction>
+				<Commands />
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>toggle_escape_menu</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Misc/reaction_esc_pressed_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>esc_pressed</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Misc/reaction_esc_pressed_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>enter_chat</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Misc/reaction_enter_chat_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>local_loose</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="WinLoose/ShowWinLoose_Loose_UISDirectRunReaction.xdb#xpointer(/UISDirectRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>local_draw</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="WinLoose/ShowWinLoose_Draw_UISDirectRunReaction.xdb#xpointer(/UISDirectRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>local_win</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="WinLoose/ShowWinLoose_Win_UISDirectRunReaction.xdb#xpointer(/UISDirectRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>enter_pressed</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="EnterPressed_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<MessageReactions>
+		<reactions>
+			<Item>
+				<Name>reaction_on_move</Name>
+				<Reaction href="Reaction/Actions/reaction_on_move_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_attack</Name>
+				<Reaction href="Reaction/Actions/reaction_on_attack_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_stop</Name>
+				<Reaction href="Actions/set_forced_action_stop_ARSetForcedAction.xdb#xpointer(/ARSetForcedAction)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_reset</Name>
+				<Reaction href="ActionTabControl/switch_action_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_cancel</Name>
+				<Reaction href="Reaction/reaction_on_cancel_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_1</Name>
+				<Reaction href="UnitSelecton/select_units_00_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_2</Name>
+				<Reaction href="UnitSelecton/select_units_01_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_3</Name>
+				<Reaction href="UnitSelecton/select_units_02_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_4</Name>
+				<Reaction href="UnitSelecton/select_units_03_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_5</Name>
+				<Reaction href="UnitSelecton/select_units_04_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_hook</Name>
+				<Reaction href="Reaction/Actions/reaction_on_hook_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_deploy</Name>
+				<Reaction href="Reaction/Actions/reaction_on_deploy_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_load</Name>
+				<Reaction href="Reaction/Actions/reaction_on_load_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_unload</Name>
+				<Reaction href="Reaction/Actions/reaction_on_unload_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_hold</Name>
+				<Reaction href="Reaction/Actions/reaction_on_hold_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_entrench</Name>
+				<Reaction href="Reaction/Actions/reaction_on_entrench_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_formation</Name>
+				<Reaction href="ActionTabControl/switch_formation_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_repair</Name>
+				<Reaction href="Reaction/Actions/reaction_on_repair_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_resupply</Name>
+				<Reaction href="Reaction/Actions/reaction_on_resupply_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_formation1</Name>
+				<Reaction href="Reaction/Formations/offensive_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_formation2</Name>
+				<Reaction href="Reaction/Formations/default_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_formation3</Name>
+				<Reaction href="Reaction/Formations/defensive_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_formation4</Name>
+				<Reaction href="Reaction/Formations/movement_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_camoflage_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_camoflage_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_camoflage_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_camoflage_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_spyglass_on</Name>
+				<Reaction href="Reaction/Ability/reaction_on_spyglass_on_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_spyglass_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_spyglass_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_ground_attack</Name>
+				<Reaction href="Reaction/Actions/reaction_on_ground_attack_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_reinforcment</Name>
+				<Reaction href="Reaction/reaction_on_reinforcment_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_reinforcment_off</Name>
+				<Reaction href="Reaction/reaction_on_reinforcment_off_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_1</Name>
+				<Reaction href="Reinforcment/reaction_on_order_1_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_2</Name>
+				<Reaction href="Reinforcment/reaction_on_order_2_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_3</Name>
+				<Reaction href="Reinforcment/reaction_on_order_3_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_call</Name>
+				<Reaction href="Reinforcment/reaction_on_call_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_1</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_1_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_2</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_2_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_3</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_3_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_entrench_build</Name>
+				<Reaction href="Reaction/Actions/reaction_on_entrench_build_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_throw</Name>
+				<Reaction href="Reaction/Ability/reaction_on_throw_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_throw_autocast_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_throw_autocast_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_throw_autocast_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_throw_autocast_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_4</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_4_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_5</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_5_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_6</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_6_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_7</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_7_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_8</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_8_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_9</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_9_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_remove_order_10</Name>
+				<Reaction href="Reinforcment/reaction_on_remove_order_10_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_4</Name>
+				<Reaction href="Reinforcment/reaction_on_order_4_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_5</Name>
+				<Reaction href="Reinforcment/reaction_on_order_5_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_6</Name>
+				<Reaction href="Reinforcment/reaction_on_order_6_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_7</Name>
+				<Reaction href="Reinforcment/reaction_on_order_7_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_8</Name>
+				<Reaction href="Reinforcment/reaction_on_order_8_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_9</Name>
+				<Reaction href="Reinforcment/reaction_on_order_9_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_10</Name>
+				<Reaction href="Reinforcment/reaction_on_order_10_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_11</Name>
+				<Reaction href="Reinforcment/reaction_on_order_11_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_order_12</Name>
+				<Reaction href="Reinforcment/reaction_on_order_12_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_adv_camoflage_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_adv_camoflage_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_adv_camoflage_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_adv_camoflage_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_close_reinforcement</Name>
+				<Reaction href="Reinforcment/reaction_on_close_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_6</Name>
+				<Reaction href="UnitSelecton/select_units_05_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_7</Name>
+				<Reaction href="UnitSelecton/select_units_06_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_8</Name>
+				<Reaction href="UnitSelecton/select_units_07_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_9</Name>
+				<Reaction href="UnitSelecton/select_units_08_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_10</Name>
+				<Reaction href="UnitSelecton/select_units_09_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_11</Name>
+				<Reaction href="UnitSelecton/select_units_10_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_12</Name>
+				<Reaction href="UnitSelecton/select_units_11_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_13</Name>
+				<Reaction href="UnitSelecton/select_units_12_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_14</Name>
+				<Reaction href="UnitSelecton/select_units_13_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_15</Name>
+				<Reaction href="UnitSelecton/select_units_14_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_16</Name>
+				<Reaction href="UnitSelecton/select_units_15_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_17</Name>
+				<Reaction href="UnitSelecton/select_units_16_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_18</Name>
+				<Reaction href="UnitSelecton/select_units_17_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_19</Name>
+				<Reaction href="UnitSelecton/select_units_18_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_20</Name>
+				<Reaction href="UnitSelecton/select_units_19_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_button_21</Name>
+				<Reaction href="UnitSelecton/select_units_20_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_place_mine</Name>
+				<Reaction href="Reaction/Actions/reaction_on_place_mine_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_clear_mine</Name>
+				<Reaction href="Reaction/Actions/reaction_on_clear_mine_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_blasting_charge</Name>
+				<Reaction href="Reaction/Ability/reaction_on_blasting_charge_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_controlled_charge</Name>
+				<Reaction href="Reaction/Ability/reaction_on_controlled_charge_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_detonate_charge</Name>
+				<Reaction href="Reaction/Ability/reaction_on_detonate_charge_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_hold_sector_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_hold_sector_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_track_targeting_on</Name>
+				<Reaction href="Reaction/Ability/reaction_on_track_targeting_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_hold_sector_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_hold_sector_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_track_targeting_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_track_targeting_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>Script_DisableObjectiveChange</Name>
+				<Reaction href="/UI/Game/EscapeMenu/WinDialog/DisableScriptChanges_ARSetGlobalVar.xdb#xpointer(/ARSetGlobalVar)" />
+			</Item>
+			<Item>
+				<Name>OnExitGameMessage</Name>
+				<Reaction href="/UI/Game/Menu/Escape/ExitGame_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>ToggleF10Menu</Name>
+				<Reaction href="Misc/esc_menu_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_esc_pressed</Name>
+				<Reaction href="esc_pressed_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_enter_chat</Name>
+				<Reaction href="enter_chat_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_ambush_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_ambush_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_ambush_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_ambush_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_critical_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_critical_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_critical_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_critical_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_rapid_fire_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_rapid_fire_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_rapid_fire_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_rapid_fire_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_caution_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_caution_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_caution_auto_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_caution_autocast_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_caution_auto_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_caution_autocast_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_moving_fire_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_moving_fire_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_moving_fire_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_moving_fire_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_counter_fire</Name>
+				<Reaction href="Reaction/Ability/reaction_on_counter_fire_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_counter_fire_auto_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_counter_fire_auto_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_counter_fire_auto_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_counter_fire_auto_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_smoke_shots_on</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_smoke_shots_on_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_smoke_shots_off</Name>
+				<Reaction href="/UI/Game/SpecialAbility/set_smoke_shots_off_ARSetSpecialAbility.xdb#xpointer(/ARSetSpecialAbility)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_zeroing_in</Name>
+				<Reaction href="Reaction/Ability/reaction_on_zeroing_in_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_reset_forced_action</Name>
+				<Reaction href="reset_forced_action_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+		</reactions>
+		<Script href="" />
+		<ScriptFileRef href="" />
+	</MessageReactions>
+	<CommandSequiences>
+		<Item>
+			<Name>reaction_on_move</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_move_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_attack</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_attack_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_stop</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_stop_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_reset</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/reaction_on_reset_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_cancel</Name>
+			<Sequence>
+				<Commands>
+					<Item href="Misc/reaction_reset_forced_action_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_hook</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_hook_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_deploy</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_deploy_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_load</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_load_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_unload</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_unload_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_hold</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Actions/reaction_on_hold_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>reaction_on_close_reinforcement</Name>
+			<Sequence>
+				<Commands>
+					<Item href="MainReactions/Reinforcment/reaction_on_close_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+		<Item>
+			<Name>PressActionButtonTemplate</Name>
+			<Sequence>
+				<Commands>
+					<Item href="NewActions/Press_UISButtonSubstate.xdb#xpointer(/UISButtonSubstate)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</Sequence>
+		</Item>
+	</CommandSequiences>
+	<TooltipContext>0</TooltipContext>
+	<RelatedTexts>
+		<Item>
+			<Name>T_CHAT_INPUT_ALL</Name>
+			<Text href="" />
+			<TextFileRef href="ChatInput/All.txt" />
+		</Item>
+		<Item>
+			<Name>T_CHAT_INPUT_TEAM</Name>
+			<Text href="" />
+			<TextFileRef href="ChatInput/Team.txt" />
+		</Item>
+	</RelatedTexts>
+</WindowScreen>

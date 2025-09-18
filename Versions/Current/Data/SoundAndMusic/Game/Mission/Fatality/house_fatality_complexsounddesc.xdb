@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1000001">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Fatality/Sthousefatality/variant1_sounddesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>5</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Fatality/Sthousefatality/variant2_sounddesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Fatality/Sthousefatality/variant3_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Fatality/Sthousefatality/variant4_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Fatality/Sthousefatality/variant5_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>20</MinDist>
+			<MaxDist>80</MaxDist>
+			<Probability>5</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

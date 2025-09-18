@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Model ObjectRecordID="288">
+	<Materials>
+		<Item href="summer_main_material.xdb#xpointer(/Material)" />
+		<Item href="summer_vanes_material.xdb#xpointer(/Material)" />
+	</Materials>
+	<Geometry href="summer_1_geometry.xdb#xpointer(/Geometry)" />
+	<Skeleton href="summer_1_skeleton.xdb#xpointer(/Skeleton)" />
+	<Animations>
+		<Item href="windmill_move_animb2.xdb#xpointer(/AnimB2)" />
+	</Animations>
+	<WindPower>1</WindPower>
+</Model>

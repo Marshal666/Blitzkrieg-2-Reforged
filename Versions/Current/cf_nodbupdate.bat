@@ -1,0 +1,3 @@
+@echo off
+echo Copying All Updated Files...
+xcopy .\*.* c:\b2\*.* /D /E /Y /R /C /EXCLUDE:copyfiles-exclude.txt

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="302">
+	<SrcName />
+	<Light>L_NORMAL</Light>
+	<Particle href="/Scene/Effects/All/Destructions/StoneHouseCrash/Total/StHouseCrTotalDust_Large_Particle.xdb#xpointer(/Particle)" />
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>-0.5</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>1</Scale>
+	<Speed>1.3</Speed>
+	<Offset>0</Offset>
+	<EndCycle>4</EndCycle>
+	<CycleCount>1</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="" />
+		<Item href="/Scene/TexAndMats/All/Effects/Hits/MachineryHit/MachineryHit15_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion2_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Explosions/GroundExplosion/Explosion3_Texture.xdb#xpointer(/Texture)" />
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

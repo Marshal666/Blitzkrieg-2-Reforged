@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="56">
+	<FileName />
+	<ScriptText>--Wait( 10 );
+---Cmd( 3, 1, 900, 100 );
+
+---DisplayTrace( &quot;0 seconds passed&quot;, 0 );
+---Wait(10);
+---DisplayTrace( &quot;10 seconds passed&quot;, 0 );
+
+---SetReinforcement( 0, 151 );
+--Wait(10);
+--DisplayTrace( &quot;20 seconds passed&quot;, 0 );
+---DisableReinforcement( 0, 4 );
+--DisableReinforcement( 0, 4 );
+
+--Wait( 5 );
+
+--LandReinforcement(2, 1009, 0, 2 );
+--Wait( 1 )
+--ChangePlayerForScriptGroup(2,0)
+
+SCRunTime( &quot;a0&quot;, &quot;a1&quot;, 5 );
+Wait( 5 );
+SCRunTime( &quot;a1&quot;,&quot;a2&quot;, 5 );
+Wait( 5 );
+SCRunTime( &quot;a2&quot;, &quot;a3&quot;, 5 );
+Wait( 5 )
+SCRunTime( &quot;a3&quot;, &quot;a4&quot;, 5 );
+Wait( 5 );
+DisplayTrace( &quot;movie sequence finished&quot;, 0 );
+SCReset();
+Wait(5);
+Wait(1);
+</ScriptText>
+</Script>

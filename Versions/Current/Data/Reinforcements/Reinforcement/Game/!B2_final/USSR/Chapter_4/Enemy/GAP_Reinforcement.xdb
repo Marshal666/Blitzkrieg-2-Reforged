@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="849">
+	<Type>RT_GROUND_ATTACK_PLANES</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/PlaneGroundAttack_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="/Other/Text/Game/Tooltips/Reinforcements/Types/Ground_Attack_Planes/Text.xdb#xpointer(/Text)" />
+	<LocalizedNameFileRef href="" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/aviation/me_262_sturmvogel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/German/aviation/me_262_sturmvogel/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/Other/Text/Game/Tooltips/Reinforcements/Types/Ground_Attack_Planes/Text.xdb#xpointer(/Text)" />
+	<TooltipFileRef href="" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

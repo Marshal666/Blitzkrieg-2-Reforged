@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="4161">
+	<SrcName href="/Units/Technics/Japan/Artillery/TA_HA/1.mb" />
+	<uid>F637D794-CF61-4CED-86E1-B202A7AA5619</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>70</FirstFrame>
+	<LastFrame>89</LastFrame>
+	<AABBAName>AABB_A01</AABBAName>
+	<AABBDName>AABB_D01</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-36</x>
+			<y>19</y>
+			<z>50.8176</z>
+		</Center>
+		<HalfSize>
+			<x>66</x>
+			<y>72</y>
+			<z>50.8176</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-36</x>
+			<y>21</y>
+			<z>35.0008</z>
+		</Center>
+		<HalfSize>
+			<x>64</x>
+			<y>68</y>
+			<z>35.0008</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

@@ -1,0 +1,130 @@
+--us1.1
+
+function timer()
+	while 1 do
+		if (GetGameTime() == 900) and (GetNUnitsInArea(1, "hqzone", 0) < 1) then 
+		Win(0);
+		CompleteObjective(0);
+		Wait(1);
+		return 1;
+		end;
+	Wait(1);
+	end
+end
+
+function boatassault()
+	Wait(1)
+	Cmd(ACT_MOVE, 88, 1, 1400, 5700);
+	QCmd(ACT_DISAPPEAR, 88)
+	Wait(20)
+	LandReinforcementFromMap(1, "0", 0, 88)
+	Wait(1)
+	Cmd(ACT_UNLOAD, 88, 50, 1863, 4075)
+	Wait(20)
+	QCmd(3, 88, 50, 2147, 519)
+	Wait(1)
+	QCmd(3, 88, 50, 2147, 519)
+	Wait(1)
+	boatassaultalive_check()
+end
+
+function boatassaultalive_check()
+	Wait(5)
+	while 1 do
+		if GetNUnitsInScriptGroup(88) <= 1 then boatassault()
+		Trace("calling help");
+		Wait (1);
+		return 1;
+		end
+	Wait(1);
+	end
+end
+
+
+function menassault ()
+	Wait(1)
+	Cmd(ACT_SPYGLASS, 33, 2684, 5979)
+	Wait(1)
+	Cmd(ACT_ENTER, 101, 11)
+	Wait(1)
+	Cmd(ACT_ENTER, 202, 22)
+end
+
+function capture_check()
+	while 1 do
+		if (GetNUnitsInArea(1, "hqzone", 0) >= 1) then 
+		Cmd(6, 88, 500)	
+		return 1;
+		end;
+	Wait(1);
+	end;
+end
+
+function hq_captured ()
+	while 1 do
+		if GetNUnitsInScriptGroup(500, 1) > 0 then
+		return 1;
+		end;
+	Wait(1);
+	end;	
+end
+
+function hq_captured_timer()
+local k=0
+	while k<=2 do
+		if (GetNUnitsInScriptGroup(500, 1) > 0) then
+		k=k+1;
+		else
+		k=0
+		Wait(10);
+		Trace("counting...k=%g",k);
+		end;
+	end;
+	FailObjective(0);
+	Loose (0);
+	return 1;
+end
+
+function WinCheck()
+	Wait(5)
+	while 1 do
+		if ((GetNUnitsInParty(1) < 1) and (IsReinforcementAvailable(1) == 0)) then 
+		CompleteObjective(0);
+		Win(0);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+
+function LoseCheck()
+	Wait(5)
+	while 1 do
+		if (( GetNUnitsInParty(0) < 1) and (GetObjectHPs(500) < 1)) then
+		FailObjective(0);
+		Loose(0);
+		return 1;
+		end;
+	Wait(5);
+	end;
+end;
+
+function info()
+	Trace("units in	party 0..%g",GetNUnitsInParty(0))
+	Trace("units in	party 1..%g",GetNUnitsInParty(1))
+end
+
+
+GiveObjective( 0 )
+StartThread( menassault )
+StartThread( boatassault )
+
+Trigger(hq_captured, hq_captured_timer)
+
+StartThread( capture_check )
+StartThread( WinCheck )
+StartThread( LoseCheck )
+StartThread( timer )
+
+

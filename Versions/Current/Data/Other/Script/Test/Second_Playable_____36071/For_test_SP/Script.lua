@@ -1,0 +1,83 @@
+--reinforcements
+Ger_reinf_I = 13;
+Ger_reinf_II = 14;
+Ger_reinf_III = 15;
+
+USA_reinf_I = 16;
+USA_reinf_II = 17;
+USA_reinf_III = 18;
+
+--script group
+humber = 5000;
+USA_units = {};
+USA_units = GetObjectListArray ( humber );
+
+--areas  
+USA_reinf = "USA_reinf";
+Ger_reinf = "Ger_reinf";
+Attack = "Attack";
+GetOut = "GetOut";
+Rest = "Rest"
+
+function hum1()
+	for i=1, USA_units.n do
+		UnitCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( Attack ) );
+	end;
+end;
+
+function hum2()
+	for i=1, USA_units.n do
+		UnitCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( GetOut ) );
+	end;
+end;
+
+function hum3()
+	for i=1, USA_units.n do
+		UnitCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( Ger_reinf ) );
+	end;
+end;
+
+function hum4()
+	for i=1, USA_units.n do
+		UnitCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( USA_reinf ) );
+	end;
+end;
+
+function hum5()
+	for i=1, USA_units.n do
+		UnitQCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( Attack ) );
+	end;
+end;
+
+function hum6()
+	for i=1, USA_units.n do
+		UnitQCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( GetOut ) );
+	end;
+end;
+
+function hum7()
+	for i=1, USA_units.n do
+		UnitQCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( Ger_reinf ) );
+	end;
+end;
+
+function hum8()
+	for i=1, USA_units.n do
+		UnitQCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( USA_reinf ) );
+	end;
+end;
+
+function hum9()
+	for i=1, USA_units.n do
+		UnitQCmd ( ACT_SWARM, USA_units[i], GetScriptAreaParams ( Rest ) );
+	end;
+end;
+
+--main
+ViewZone ( Attack, 1 );
+
+CameraMove ( 6, 0 );
+
+
+
+

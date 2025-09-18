@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Campaign ObjectRecordID="22">
+	<Chapters>
+		<Item href="/scenario/chapter/test/stas/el_alamein_chapter.xdb#xpointer(/Chapter)"/>
+	</Chapters>
+	<LocalizedName href="/other/text/game/campaigns/gb/text.xdb#xpointer(/Text)"/>
+	<ScriptFile href="/other/script/test/campaign/greatbritain/script.xdb#xpointer(/Script)"/>
+	<Screens/>
+	<TextureNotStarted href="/scene/texandmats/game/menu/selectcampaign/gbpressed_texture.xdb#xpointer(/Texture)"/>
+	<TextureCompleted href="/scene/texandmats/game/menu/selectcampaign/gbpressed_texture.xdb#xpointer(/Texture)"/>
+	<TextureNotStartedSelected href="/scene/texandmats/game/menu/selectcampaign/gbnormal_texture.xdb#xpointer(/Texture)"/>
+	<TextureCompletedSelected href="/scene/texandmats/game/menu/selectcampaign/gbnormal_texture.xdb#xpointer(/Texture)"/>
+	<TextureMissionCompleted href=""/>
+	<RankExperiences>
+		<Item>
+			<Experience>0</Experience>
+			<Rank href="/scenario/playerrank/game/alpha/player_playerrank.xdb#xpointer(/PlayerRank)"/>
+			<AddPromotion>0</AddPromotion>
+		</Item>
+	</RankExperiences>
+	<LeaderRanks/>
+	<LeaderFirstNames/>
+	<LeaderLastNames/>
+	<LeaderPictures/>
+	<DifficultyLevels>
+		<Item href="/scenario/difficultylevel/game/easy_difficultylevel.xdb#xpointer(/DifficultyLevel)"/>
+		<Item href="/scenario/difficultylevel/game/normal_difficultylevel.xdb#xpointer(/DifficultyLevel)"/>
+		<Item href="/scenario/difficultylevel/game/hard_difficultylevel.xdb#xpointer(/DifficultyLevel)"/>
+	</DifficultyLevels>
+	<IntroMovie />
+	<OutroMovie>Movies\test_outro1.xml</OutroMovie>
+	<ReinforcementTypes href="/reinforcements/reinforcementtypes/game/types_reinforcementtypes.xdb#xpointer(/ReinforcementTypes)"/>
+	<IntermissionMusic href=""/>
+	<SaveLoadFlag href=""/>
+	<ArrowTextures/>
+</Campaign>

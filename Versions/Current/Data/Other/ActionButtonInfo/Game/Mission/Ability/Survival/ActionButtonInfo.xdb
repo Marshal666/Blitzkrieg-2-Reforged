@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ActionButtonInfo ObjectRecordID="80">
+	<Action>USER_ACTION_SURVIVAL</Action>
+	<NoButton>false</NoButton>
+	<IsAbility>true</IsAbility>
+	<Autocast>false</Autocast>
+	<Passive>true</Passive>
+	<Slot>-1</Slot>
+	<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+	<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+	<Tooltip href="/other/text/game/tooltips/abilities/survival/text.xdb#xpointer(/Text)"/>
+	<Icon href="/scene/texandmats/game/mission/newactionbuttons/survival/normal_texture.xdb#xpointer(/Texture)"/>
+	<IconDisabled href="/scene/texandmats/game/mission/newactionbuttons/survival/disabled_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIcon href="/scene/texandmats/game/mission/newactionbuttons/survival/normalfg_texture.xdb#xpointer(/Texture)"/>
+	<ForegroundIconDisabled href="/scene/texandmats/game/mission/newactionbuttons/survival/disabledfg_texture.xdb#xpointer(/Texture)"/>
+	<PressEffect>false</PressEffect>
+	<HotkeyCmd />
+</ActionButtonInfo>

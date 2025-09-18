@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="53">
+	<Instances>
+		<Item href="TankCrash/TankFatality05_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="TankCrash/TankFatality05Fire_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="TankCrash/MachineryCombustion_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="TankCrash/TankFatality03FlashWaves_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="TankCrash/TankFatality04Flash_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Big_Long_LightInstance.xdb#xpointer(/LightInstance)" />
+		<Item href="/Effects/_Lights/Fires/Med_Long_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

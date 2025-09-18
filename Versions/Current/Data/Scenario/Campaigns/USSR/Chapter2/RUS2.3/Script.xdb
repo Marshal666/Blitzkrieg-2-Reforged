@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="207">
+	<FileName />
+	<ScriptText>--BATAREYA
+--SCRunTime(&quot;01&quot;, &quot;02&quot;, 10, 1, 90);
+function Patrol()
+	while 1 do
+		Cmd( ACT_SWARM, 11, 50, GetScriptAreaParams (&quot;P1&quot;));
+		QCmd( ACT_SWARM, 11, 50, GetScriptAreaParams (&quot;P2&quot;));
+	Wait(15);
+	end;
+end;
+function Move()
+	Cmd( ACT_LEAVE, 5, 50, GetScriptAreaParams (&quot;C1&quot;));
+	Wait(1);
+	ChangeFormation (2, 1);
+	Cmd( ACT_MOVE, 5, 50, GetScriptAreaParams (&quot;C2&quot;));
+	QCmd( ACT_MOVE, 5, 50, GetScriptAreaParams (&quot;C3&quot;));
+	QCmd( ACT_ENTER, 5, 6);
+end;
+function Attack()
+	Cmd( ACT_SWARM, 12, 50, GetScriptAreaParams (&quot;A22&quot;));
+	QCmd( ACT_SWARM, 12, 50, GetScriptAreaParams (&quot;Gun3&quot;));
+	QCmd( ACT_SWARM, 12, 50, GetScriptAreaParams (&quot;Baza&quot;));
+	
+	Cmd( ACT_SWARM, 13, 50, GetScriptAreaParams (&quot;A2&quot;));
+	QCmd( ACT_SWARM, 13, 50, GetScriptAreaParams (&quot;Baza&quot;));
+
+	Cmd( ACT_SWARM, 14, 50, GetScriptAreaParams (&quot;B1&quot;));
+	QCmd( ACT_SWARM, 14, 50, GetScriptAreaParams (&quot;B2&quot;));
+	QCmd( ACT_SWARM, 14, 50, GetScriptAreaParams (&quot;B3&quot;));
+	QCmd( ACT_SWARM, 14, 50, GetScriptAreaParams (&quot;B4&quot;));
+	QCmd( ACT_SWARM, 14, 50, GetScriptAreaParams (&quot;Baza&quot;));
+	StartThread( Attack1 );
+end;
+function Attack1()
+	while 1 do
+	a = Random(2);
+	Wait(300 + Random(180));
+		if a == 1 then
+			LandReinforcementFromMap ( 1, &quot;Attack0&quot;, 0, 100 );
+			Wait(3);
+			Cmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;A1&quot;));
+			QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;A2&quot;));
+			QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;A2&quot; .. Random(2)));
+			QCmd( ACT_SWARM, 100, 50, GetScriptAreaParams (&quot;Baza&quot;));
+		else
+			LandReinforcementFromMap ( 1, &quot;Attack1&quot;, 1, 101 );
+			Wait(3);
+			Cmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;B1&quot;));
+			QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;B2&quot;));
+			QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;B3&quot;));
+			QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;B4&quot;));
+			QCmd( ACT_SWARM, 101, 50, GetScriptAreaParams (&quot;Baza&quot;));
+		end;
+	end;
+	
+end;
+function Loose1()
+	while 1 do
+		if	GetNUnitsInScriptGroup(1) &lt; 1 and GetNUnitsInScriptGroup(3) &lt; 1	then
+			FailObjective(0);
+			--Wait(3);
+			Win(1);
+			return 1;
+		end;
+	Wait(5);
+	end;
+end;
+function Loose()
+    while 1 do
+        if ( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 ) then
+			Wait(2);
+			Win(1);
+			return 1;
+		end;
+	Wait(5);
+	end;
+end;
+function Winner()
+    while 1 do
+		if (GetNUnitsInArea(0, &quot;Shtab&quot;, 0) &gt; 0 and GetNUnitsInArea(1, &quot;Shtab&quot;, 0) &lt; 1) then
+			CompleteObjective (0);
+			CompleteObjective (1);
+			Win(0);
+			return 1;
+		end;
+	Wait(4);
+	end;
+end;
+function ViewZon()
+    while 1 do
+		if GetNUnitsInArea(1, &quot;Baza&quot;, 1) &gt; 0 then
+			ViewZone ( &apos;Baza&apos;, 1 );
+		else
+			ViewZone ( &apos;Baza&apos;, 0 );
+		end;
+	Wait(10);
+	end;
+end;
+-------------------------------------------------------Main
+Wait(1);
+StartThread( Patrol );
+StartThread( Move );
+StartThread( Loose );
+StartThread( Loose1 );
+StartThread( Winner );
+StartThread( ViewZon );
+GiveObjective (0);
+Wait(15);
+GiveObjective (1);
+Wait(120);
+StartThread( Attack );
+Wait(20);
+Cmd( ACT_DISAPPEAR, 10);
+
+
+</ScriptText>
+</Script>

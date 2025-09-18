@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000050">
+	<FileName href="" />
+	<ScriptText>y1 = 0
+--------------------------------------Loose conditions
+function Caput ()
+ 
+   while 1 do
+        Wait( 3 );
+        if (( GetNUnitsInScriptGroup ( 10, 1 ) &gt; 0 ) and ( GetNUnitsInScriptGroup ( 10, 0 ) &lt; 1 )) or  (( GetNUnitsInPlayerUF ( 0 ) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+		Wait(2);
+		Win(1);
+		return 1;
+		end;
+	end;
+end;
+---------------------------------------Victory
+function Victory ()
+
+    while 1 do
+    Wait (2)
+      if y1 == 1 and ( GetNUnitsInScriptGroup ( 10, 1 ) &lt; 1 ) and  ( GetNUnitsInPlayerUF ( 1 ) &lt; 1) then
+      Wait (1);
+      CompleteObjective (0);
+      Wait (1)
+      Win (0);
+      return 1; 
+      end;
+    end;
+end;
+---------------------------------------Repair 
+function Repair ()
+
+    while 1 do
+      Wait (5); 
+      DamageScriptObject (9, -200);
+    end;
+end;
+--------------------------------------Front attacks
+function Attack1A ()
+
+    while 1 do
+        Wait ( 125 ) ;
+        LandReinforcementFromMap( 1, &quot;J1A&quot;, 0, 100 );
+        Wait ( 1 );
+        ChangeFormation ( 100, 3 );
+        Cmd (3, 100, 300, 4384, 4205 );
+        QCmd (3, 100, 300, 7321, 3314 );
+        break;
+    end;
+end;
+
+
+
+function Attack1B ()
+
+    while 1 do
+        Wait ( 225) ;
+        LandReinforcementFromMap( 1, &quot;J1B&quot;, 0, 101 );
+        Wait ( 1 );
+        ChangeFormation ( 101, 3 );
+        Cmd (3, 101, 300, 4384, 4205 );
+        QCmd (3, 101, 300, 7321, 3314 );
+        break;
+    end;
+end;
+
+
+
+function Attack1C ()
+
+    while 1 do
+        Wait ( 325 ) ;
+        LandReinforcementFromMap( 1, &quot;J1C&quot;, 0, 102 );
+        Wait ( 1 );
+        ChangeFormation ( 102, 3 );
+        Cmd (3, 102, 300, 4384, 4205 );
+        QCmd (3, 102, 300, 7321, 3314 );
+        break;
+    end;
+end;
+----------------------------------------Flang attack
+function Attack2A ()
+
+    while 1 do
+        Wait ( 25 ) ;
+        LandReinforcementFromMap( 1, &quot;J2A&quot;, 1, 200 );
+        Wait ( 1 );
+        ChangeFormation ( 200, 3 );
+        Cmd (3, 200, 100, 1194, 5576);
+        QCmd (3, 200, 100, 2206, 5096);
+        QCmd (3, 200, 300, 4384, 4205);
+        QCmd (3, 200, 300, 7321, 3314);
+        break;
+    end;
+end;
+
+
+function Attack2B ()
+
+    while 1 do
+        Wait ( 225 ) ;
+        LandReinforcementFromMap( 1, &quot;J2A&quot;, 1, 201 );
+        Wait ( 1 );
+        ChangeFormation ( 201, 3 );
+        Cmd (3, 201, 100, 1194, 5576 );
+        QCmd (3, 201, 100, 2206, 5096);
+        QCmd (3, 201, 300, 4384, 4205 );
+        QCmd (3, 201, 300, 7321, 3314 );
+        break;
+    end;
+end;
+
+
+function Attack2C ()
+
+    while 1 do
+        Wait ( 425) ;
+        LandReinforcementFromMap( 1, &quot;J2A&quot;, 1, 202 );
+        y1 = y1+1
+        Wait ( 1 );
+        ChangeFormation ( 200, 3 );
+        Cmd (3, 202, 100, 1194, 5576 );
+        QCmd (3, 202, 100, 2206, 5096);
+        QCmd (3, 202, 300, 4384, 4205 );
+        QCmd (3, 202, 300, 7321, 3314 );
+        break;
+    end;
+end;
+------------------------------Ship
+function Boat ()
+ 
+   while 1 do
+       Wait (330)
+       LandReinforcementFromMap( 1, &quot;J3&quot;, 2, 300);
+       Cmd ( 0, 300, 50, 4348, 2088 );
+       QCmd ( 0, 300, 50, 158, 174 );
+       QCmd (ACT_DISAPPEAR, 300);
+       break;
+    end;
+end;
+
+function Unload ()
+
+   while 1 do
+       Wait (1)
+       if GetNScriptUnitsInArea ( 300, &quot;Boat&quot;, 0 ) &gt; 0 then
+       Wait (6);
+         LandReinforcementFromMap ( 1,&quot;J4&quot;, 3, 400 );
+         ChangeFormation ( 400, 3 );
+         Cmd (3, 400, 500, 7321, 3314 );
+          break;
+        end;
+    end;
+end; 
+-------------------------------Run functions
+GiveObjective (0); 
+StartThread( Caput );
+StartThread( Victory );
+StartThread ( Repair );
+StartThread( Attack1A );
+StartThread( Attack1B );
+StartThread( Attack1C );
+StartThread( Attack2A );
+StartThread( Attack2B );
+StartThread( Attack2C );
+StartThread( Boat );
+StartThread ( Unload );</ScriptText>
+</Script>

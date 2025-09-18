@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="124">
+	<FileName />
+	<ScriptText>
+-- 3.6
+
+function cannon()
+	Cmd(ACT_ENTRENCH, 555, 0, 0);
+	Cmd(ACT_ENTRENCH, 100, 0, 0);
+	return 1;
+end
+
+function attack_yanks()
+	Wait(10);
+	Cmd(ACT_SWARM, 20, 50, 7291, 1786);
+	Cmd(ACT_SWARM, 202, 50, 5697, 1544);	
+	Cmd(ACT_SWARM, 31, 50, 7291, 1786);
+	Cmd(ACT_SWARM, 32, 50, 5617, 1675);
+	Trace(&quot;swarming tanks&quot;)
+	Wait(100);
+	--planes
+	LandReinforcementFromMap( 1, &quot;1115&quot;, 0, 10000);
+	Cmd(ACT_SWARM, 10000, 50, 7128, 1559);
+	Trace(&quot;swarming planes&quot;)
+
+	--binocularing
+	Trace(&quot;using binoculars&quot;)
+	Cmd(ACT_SPYGLASS, 31, 50, 7128, 1559)
+	Cmd(ACT_SPYGLASS, 32, 50, 7128, 1559)
+	
+	--Wait(90);
+	
+	--Cmd(ACT_SWARM, 21, 50, 7291, 1786);	
+	--Trace(&quot;swarming tanks 2&quot;)
+	
+
+	--planes
+	LandReinforcementFromMap( 1, &quot;1115&quot;, 0, 20000);
+	Cmd(ACT_SWARM, 20000, 50, 7128, 1559);
+	Trace(&quot;swarming planes 2&quot;)
+end
+
+function Last_Chance ()
+        Wait (90);
+        LandReinforcementFromMap (1, &quot;one&quot;, 1,  1000);
+        Wait (1);
+        LandReinforcementFromMap (1, &quot;two&quot;, 2,  2000);
+        Wait (1);
+        LandReinforcementFromMap (1, &quot;three&quot;, 3, 3000);
+        Wait (1);
+        Cmd(ACT_SWARM, 1000, 100, 7291, 1786);
+        Wait (1);
+        Cmd(ACT_SWARM, 2000, 100, 7291, 1786);
+        Wait (1);
+        Cmd(ACT_SWARM, 3000, 100, 7291, 1786);
+end;
+
+function tanks_failed()
+	while 1 do
+		if GetNUnitsInScriptGroup(444) == 9 or GetNUnitsInScriptGroup(10) == 0 then
+			FailObjective (0);
+			Loose ( 0 );
+			return 1;
+		end;
+		local k = GetNUnitsInScriptGroup(444)
+		Trace(&quot;tanks left...%g&quot;,k)
+		Wait(10);
+	end
+end
+
+
+function WinCheck()
+	Wait(5);
+	while 1 do
+		if (IsSomeUnitInArea(1, &quot;cannon1&quot;, 0) &lt; 1) and (GetNUnitsInScriptGroup(1000) + 
+			GetNUnitsInScriptGroup(2000) + GetNUnitsInScriptGroup(3000) == 0) then
+			CompleteObjective( 0 )
+			Win(0);
+			return 1;
+		end;
+		Wait(10);
+	end;
+end;
+
+
+function LoseCheck()
+	Wait(5);
+        while 1 do
+            if (( GetNUnitsInPlayerUF(2) &lt; 1) or (( GetNUnitsInPlayerUF(0) &lt; 1 ) and (IsReinforcementAvailable(0) == 0))) then
+                Loose(0);
+			return 1;
+			end;
+		Wait(5);
+		end;
+end;
+
+function info()
+	Trace(&quot;units in party 0..%g&quot;,GetNUnitsInParty(0))
+	Trace(&quot;units in party 1..%g&quot;,GetNUnitsInParty(1))
+	Trace(&quot;units in party 2..%g&quot;,GetNUnitsInParty(2))
+end
+
+
+-- main
+
+GiveObjective( 0 )
+SwitchSquadLightFX( 444, 0 )
+StartThread( cannon );
+StartThread( attack_yanks);
+StartThread( Last_Chance );
+StartThread( LoseCheck );
+StartThread( WinCheck );
+StartThread( tanks_failed );
+</ScriptText>
+</Script>
