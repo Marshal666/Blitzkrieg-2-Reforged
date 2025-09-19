@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowListCtrl ObjectRecordID="1000001">
+	<ClassTypeID>285694854</ClassTypeID>
+	<Shared href="ArmyList_WindowListSharedData.xdb#xpointer(/WindowListSharedData)" />
+	<Name>ArmyList</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>-24</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>15</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>13</x>
+				<y>13</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<OnSelection>
+		<Commands>
+			<Item href="ArmyListSelect_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+	<OnDoubleClick>
+		<Commands />
+		<Reversable>false</Reversable>
+	</OnDoubleClick>
+</WindowListCtrl>

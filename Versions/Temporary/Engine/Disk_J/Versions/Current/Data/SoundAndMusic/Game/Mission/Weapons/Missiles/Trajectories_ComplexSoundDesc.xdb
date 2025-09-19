@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="256">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Missiles/Trajectories/trace1_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>25</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Missiles/Trajectories/trace2_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>25</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Missiles/Trajectories/trace3_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>25</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Missiles/Trajectories/trace4_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>25</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

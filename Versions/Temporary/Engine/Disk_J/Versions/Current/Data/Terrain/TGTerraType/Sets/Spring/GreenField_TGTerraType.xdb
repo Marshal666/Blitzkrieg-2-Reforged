@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<TGTerraType ObjectRecordID="127">
+	<Material href="/Scene/TexAndMats/All/Terrain/Sets/Spring/GreenField_Material.xdb#xpointer(/Material)" />
+	<AIProperty>
+		<Passability>0.6</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>0</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>17</SoilType>
+	</AIProperty>
+	<Color>-12233185</Color>
+	<PeakMaterial href="/Scene/TexAndMats/All/Terrain/Sets/Spring/Peaks/GreenField_Material.xdb#xpointer(/Material)" />
+	<ScaleCoeff>1</ScaleCoeff>
+	<Sound href="/SoundAndMusic/Game/Ambient/wind.xdb#xpointer(/ComplexSoundDesc)" />
+	<CycledSound href="" />
+</TGTerraType>

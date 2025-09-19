@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="448">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="FiltersItems/TopPart_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="FiltersHeader_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="FiltersHeaderUnderline_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="MapSize_WindowComboBox.xdb#xpointer(/WindowComboBox)" />
+		<Item href="GameType_WindowComboBox.xdb#xpointer(/WindowComboBox)" />
+		<Item href="NumPlayers_WindowComboBox.xdb#xpointer(/WindowComboBox)" />
+		<Item href="TechLevel_WindowComboBox.xdb#xpointer(/WindowComboBox)" />
+		<Item href="Yes_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="No_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="FiltersItems/MapSize_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="FiltersItems/GameType_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="FiltersItems/NumberOfPlayers_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="FiltersItems/TechLevel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="/UI/Game/Menu/Common/PopupOuterBackground_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>30</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<InfantryRPGStats ObjectRecordID="347">
+	<KeyName>MP-40</KeyName>
+	<ParentName />
+	<StatsType>Infa</StatsType>
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_UNIT</GameType>
+	<Comments />
+	<MaxHP>10</MaxHP>
+	<DamageLevels />
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>40</ArmorMin>
+			<ArmorMax>90</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="/Units/Infantry/USSR/Main_Squad/icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<DBtype>DB_RPG_TYPE_SOLDIER</DBtype>
+	<M1UnitTargetType href="" />
+	<M1UnitSpecific href="" />
+	<M1UnitActions href="" />
+	<PoliticalSide>POLITICAL_SIDE_UNKNOWN</PoliticalSide>
+	<FullDescriptionFileRef href="" />
+	<EncyclopediaFilterUnitType>EFUT_UNKNOWN</EncyclopediaFilterUnitType>
+	<AIPassabilityClass>4</AIPassabilityClass>
+	<AcksNames>
+		<Item href="/Other/AckSetRPGStats/USSR/infantry/infantry2_voice0/AckSetRPGStats.xdb#xpointer(/AckSetRPGStats)" />
+	</AcksNames>
+	<Sight>25</Sight>
+	<SightPower>1</SightPower>
+	<Speed>7</Speed>
+	<RotateSpeed>0</RotateSpeed>
+	<Passability>0.6</Passability>
+	<Priority>0</Priority>
+	<Camouflage>40</Camouflage>
+	<MaxArmor>0</MaxArmor>
+	<MinArmor>0</MinArmor>
+	<BoundTileRadius>0</BoundTileRadius>
+	<Weight>1</Weight>
+	<Price>1</Price>
+	<AABBCenter>
+		<x>0</x>
+		<y>0</y>
+	</AABBCenter>
+	<AABBHalfSize>
+		<x>13</x>
+		<y>21</y>
+	</AABBHalfSize>
+	<BoundCircle>
+		<Radius>0</Radius>
+		<IsRound>false</IsRound>
+	</BoundCircle>
+	<aabb_as />
+	<aabb_ds />
+	<animdescs>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>6266</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>2833</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>2333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_03_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>3500</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_04_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_down_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>2333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_idle_down_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_move_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>766</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_march_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_walk_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>866</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_crawl_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1166</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_lie_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1333</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_stand_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_shoot_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1000</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_shoot_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1166</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_shoot_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2500</Length>
+					<Action>1200</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_throw_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1466</Length>
+					<Action>832</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_throw_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1733</Length>
+					<Action>1133</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_throw_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2766</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>5533</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>4666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_03_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>3900</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_04_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1866</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_down_01_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>3100</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_down_02_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+				<Item>
+					<Length>4700</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_death_down_03_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_use_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>1433</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_use_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>2666</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_use_lie_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>8233</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_binoculars_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>6200</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_binoculars_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>400</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_aiming_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>300</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_aiming_trench_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims>
+				<Item>
+					<Length>466</Length>
+					<Action>0</Action>
+					<FrameIndex>0</FrameIndex>
+					<AABB_A>-1</AABB_A>
+					<AABB_D>-1</AABB_D>
+					<Animation href="/Scene/Geoms/All/Units/Infantry/FLAME_THROWER_aiming_down_00_animb2.xdb#xpointer(/AnimB2)" />
+				</Item>
+			</anims>
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+		<Item>
+			<anims />
+		</Item>
+	</animdescs>
+	<SmallAABBCoeff>0.8</SmallAABBCoeff>
+	<Actions href="/Other/UnitActions/Game/Units/Infantry/flamethrower.xdb#xpointer(/UnitActions)" />
+	<UninstallTransport>0</UninstallTransport>
+	<UninstallRotate>0</UninstallRotate>
+	<ArmorPattern href="/Other/ArmorPattern/Game/infantry.xdb#xpointer(/ArmorPattern)" />
+	<ExpPrice>0.2</ExpPrice>
+	<guns>
+		<Item>
+			<Weapon href="/Weapons/Infantry/Flame_Throwers/fl_thower_rus/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+			<AttachedGunVisObj href="" />
+			<AttachedGunLocator />
+			<ShootPointOffset>
+				<x>-0.00101502</x>
+				<y>-0.849463</y>
+				<z>0.0742516</z>
+			</ShootPointOffset>
+			<ShootEffectInvert>false</ShootEffectInvert>
+			<Priority>1</Priority>
+			<IsPrimary>false</IsPrimary>
+			<Ammo>20</Ammo>
+			<Direction>0</Direction>
+			<ReloadCost>1</ReloadCost>
+			<TargetAAOnly>false</TargetAAOnly>
+			<Fake>0</Fake>
+		</Item>
+		<Item>
+			<Weapon href="/Weapons/Infantry/grenade_at/WeaponRPGStats.xdb#xpointer(/WeaponRPGStats)" />
+			<AttachedGunVisObj href="" />
+			<AttachedGunLocator />
+			<ShootPointOffset>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</ShootPointOffset>
+			<ShootEffectInvert>false</ShootEffectInvert>
+			<Priority>1</Priority>
+			<IsPrimary>false</IsPrimary>
+			<Ammo>4</Ammo>
+			<Direction>0</Direction>
+			<ReloadCost>1</ReloadCost>
+			<TargetAAOnly>false</TargetAAOnly>
+			<Fake>0</Fake>
+		</Item>
+	</guns>
+	<CanAttackUp>true</CanAttackUp>
+	<CanAttackDown>true</CanAttackDown>
+	<RunSpeed>7</RunSpeed>
+	<CrawlSpeed>1.8</CrawlSpeed>
+	<animtimes />
+	<Armor>0</Armor>
+	<GunBoneName>ArmJoint</GunBoneName>
+</InfantryRPGStats>

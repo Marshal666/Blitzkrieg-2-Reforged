@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="44">
+	<SrcName />
+	<Light>L_NORMAL</Light>
+	<Particle href="PlaneCrashExpl_Particle.xdb#xpointer(/Particle)" />
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>1</Scale>
+	<Speed>1</Speed>
+	<Offset>0</Offset>
+	<EndCycle>3.5</EndCycle>
+	<CycleCount>1</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl0_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl1_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl2_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl3_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl4_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl5_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl6_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl7_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl8_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl9_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl10_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl11_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl12_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl13_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl14_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/PlaneCrash/PlaneCrExpl15_Texture.xdb#xpointer(/Texture)" />
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

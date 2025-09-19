@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="111">
+	<Instances>
+		<Item href="GroundExplosion/Desert/GroundExpFlash_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GroundExplosion/Desert/GroundExpDust_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GroundExplosion/GroundExpFireFlash_Bomb_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GroundExplosion/Desert/GroundExpFallingDust_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Med_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

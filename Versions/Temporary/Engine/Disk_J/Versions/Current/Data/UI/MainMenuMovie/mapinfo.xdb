@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="1000505">
+	<NumPatchesX>4</NumPatchesX>
+	<NumPatchesY>4</NumPatchesY>
+	<TerraSet href="/Terrain/TGTerraSet/Sets/Summer_TGTerraSet.xdb#xpointer(/TGTerraSet)" />
+	<MapFilesPath />
+	<Light href="_ambientlight.xdb#xpointer(/AmbientLight)" />
+	<PreLight href="/Terrain/PreLight/All/Summer/pre-light_PreLight.xdb#xpointer(/PreLight)" />
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href="_weatherdesc.xdb#xpointer(/WeatherDesc)" />
+	</Weather>
+	<OceanWater href="/Terrain/Water/Game/Summer/1_Water.xdb#xpointer(/Water)" />
+	<Roads />
+	<Rivers />
+	<Crags />
+	<Spots />
+	<Lakes />
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="" />
+		<points />
+		<ControlPoints />
+		<VSOID>0</VSOID>
+		<CMArrowType>0</CMArrowType>
+		<CMArrowMission>0</CMArrowMission>
+		<CMArrowMission2>0</CMArrowMission2>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>DC6F94B7-EBB4-4DE4-B528-6F49ABB8A671</uid>
+	<MapDesigner href="" />
+	<MapDesignerFileRef href="" />
+	<NorthPoint>
+		<x>0</x>
+		<y>0</y>
+	</NorthPoint>
+	<NortType>0</NortType>
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>22.5857</x>
+					<y>148.558</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>-0.899998</Yaw>
+				<Pitch>9.5</Pitch>
+				<Dist>191.955</Dist>
+				<UseAnchorOnly>false</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/Germany_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>22</x>
+					<y>22</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>45</Yaw>
+				<Pitch>45</Pitch>
+				<Dist>170</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/USSR_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>22</x>
+					<y>22</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>45</Yaw>
+				<Pitch>45</Pitch>
+				<Dist>170</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/Neutral_(Not_Final)_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>2048</x>
+				<y>2048</y>
+				<z>0</z>
+			</Pos>
+			<Dir>0</Dir>
+			<Player>0</Player>
+			<ScriptID>0</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>1</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="World/_buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2048</x>
+				<y>2048</y>
+				<z>0</z>
+			</Pos>
+			<Dir>0</Dir>
+			<Player>0</Player>
+			<ScriptID>1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>2</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="Tank/_1_buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2048</x>
+				<y>2048</y>
+				<z>0</z>
+			</Pos>
+			<Dir>0</Dir>
+			<Player>0</Player>
+			<ScriptID>2</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>2</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="Tank/_2_buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2048</x>
+				<y>2048</y>
+				<z>0</z>
+			</Pos>
+			<Dir>0</Dir>
+			<Player>0</Player>
+			<ScriptID>3</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>2</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="Tank/_3_buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2048</x>
+				<y>2048</y>
+				<z>0</z>
+			</Pos>
+			<Dir>0</Dir>
+			<Player>0</Player>
+			<ScriptID>4</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>2</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="Tank/_4_buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+	</Objects>
+	<HiddenObjectType href="" />
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_DAY</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments />
+	<Bridges />
+	<ScenarioObjects />
+	<Reinforcements>
+		<infos>
+			<Item>
+				<GroupID>0</GroupID>
+				<GroupsVector>
+					<data />
+				</GroupsVector>
+			</Item>
+		</infos>
+	</Reinforcements>
+	<ScriptFileRef href="_.lua" />
+	<ScriptAreas>
+		<Item>
+			<Type>EAT_CIRCLE</Type>
+			<Name>All</Name>
+			<Center>
+				<x>2048</x>
+				<y>2048</y>
+			</Center>
+			<AABBHalfSize>
+				<x>0</x>
+				<y>0</y>
+			</AABBHalfSize>
+			<R>1536</R>
+		</Item>
+	</ScriptAreas>
+	<startCommandsList />
+	<reservePositionsList />
+	<soundsList />
+	<ForestCircleSound href="" />
+	<ForestAmbientSounds href="" />
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects />
+	<Bonuses />
+	<EditAreas />
+	<MiniMap href="minimap_material.xdb#xpointer(/Material)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="" />
+	<LoadingDescription href="" />
+	<LoadingDescriptionFileRef href="" />
+	<LoadingPicture href="" />
+	<CameraPositions />
+	<ScriptMovies>
+		<ScriptCameraPlacements>
+			<Item>
+				<Name>0</Name>
+				<Position>
+					<x>2052.036 </x>
+					<y>1676.193 </y>
+					<z>197.253 </z>
+				</Position>
+				<Yaw>0.4 </Yaw>
+				<Pitch>-2.199 </Pitch>
+				<FOV>52</FOV>
+			</Item>
+			<Item>
+				<Name>0</Name>
+				<Position>
+					<x>2052.036 </x>
+					<y>1676.193 </y>
+					<z>197.253 </z>
+				</Position>
+				<Yaw>0.4 </Yaw>
+				<Pitch>-2.199 </Pitch>
+				<FOV>52</FOV>
+			</Item>
+		</ScriptCameraPlacements>
+		<ScriptMovieSequences>
+			<Item>
+				<posKeys>
+					<Item>
+						<IsTangentIn>false</IsTangentIn>
+						<IsTangentOut>false</IsTangentOut>
+						<KeyParam />
+						<StartTime>0</StartTime>
+						<PositionIndex>0</PositionIndex>
+					</Item>
+					<Item>
+						<IsTangentIn>false</IsTangentIn>
+						<IsTangentOut>false</IsTangentOut>
+						<KeyParam />
+						<StartTime>60</StartTime>
+						<PositionIndex>1</PositionIndex>
+					</Item>
+				</posKeys>
+				<followKeys />
+			</Item>
+		</ScriptMovieSequences>
+	</ScriptMovies>
+	<FinalPositions />
+	<Objectives />
+	<Music href="" />
+	<MusicWin href="" />
+	<MusicLost href="" />
+	<MPInfo>
+		<GameTypes />
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects />
+	<CustomDifficultyLevels />
+</MapInfo>

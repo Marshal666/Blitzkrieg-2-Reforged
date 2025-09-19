@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SceneConsts ObjectRecordID="1">
+	<SelectionMaterials>
+		<Air href="/Scene/TexAndMats/Test/Selection/Selection_Material.xdb#xpointer(/Material)" />
+		<Water href="/Scene/TexAndMats/Test/Selection/Selection_Material.xdb#xpointer(/Material)" />
+		<Ground href="/Scene/TexAndMats/Test/Selection/Selection_Material.xdb#xpointer(/Material)" />
+	</SelectionMaterials>
+	<TrackMaterials>
+		<Track href="/Scene/TexAndMats/Test/Tracks/Track_Material.xdb#xpointer(/Material)" />
+	</TrackMaterials>
+	<ShotTraceMaterial href="/Scene/TexAndMats/All/Units/Weapons/GunShotTrace_Material.xdb#xpointer(/Material)" />
+	<TerraGenConsts>
+		<BorderSmoothNoise href="" />
+		<TextureCombiningNoise href="" />
+		<DebrisMaskNoise href="" />
+	</TerraGenConsts>
+	<IconAIGeometry>
+		<Icon href="Icon_AIGeometry.xdb#xpointer(/AIGeometry)" />
+	</IconAIGeometry>
+	<VisObjIconsSet href="VisObjIconsSet.xdb#xpointer(/VisObjIconsSet)" />
+	<LightFX>
+		<LightConeTexture href="/Scene/TexAndMats/Test/Programmers_Test/Bandures/Flare_Texture.xdb#xpointer(/Texture)" />
+		<FlareTexture href="/Scene/TexAndMats/All/Effects/LightFX/Flare_Texture.xdb#xpointer(/Texture)" />
+		<FlareAppearTime>0.2</FlareAppearTime>
+	</LightFX>
+	<InterfaceLight href="/Scene/Lights/All/Summer/Daylight_AmbientLight.xdb#xpointer(/AmbientLight)" />
+	<DebugMaterials>
+		<RedMaterial href="/Scene/DebugMaterials/Red_Material.xdb#xpointer(/Material)" />
+		<GreenMaterial href="/Scene/DebugMaterials/Green_Material.xdb#xpointer(/Material)" />
+		<BlueMaterial href="/Scene/DebugMaterials/Blue_Material.xdb#xpointer(/Material)" />
+		<BlackMaterial href="/Scene/DebugMaterials/Black_Material.xdb#xpointer(/Material)" />
+		<WhiteMaterial href="/Scene/DebugMaterials/White_Material.xdb#xpointer(/Material)" />
+	</DebugMaterials>
+</SceneConsts>

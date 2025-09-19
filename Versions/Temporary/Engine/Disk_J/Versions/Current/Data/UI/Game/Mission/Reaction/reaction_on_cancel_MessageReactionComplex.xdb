@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="5">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/UI/Game/Mission/Forced_Actions/game_reset_forced_action_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/UI/Game/Mission/Buttons/check_button_cancel_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data />
+	</commonAfter>
+</MessageReactionComplex>

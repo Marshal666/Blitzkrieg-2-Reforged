@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1003148">
+	<sounds>
+		<Item>
+			<PathName href="SPG1-22-1.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+		<Item>
+			<PathName href="SPG1-22-2.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>NORMAL</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

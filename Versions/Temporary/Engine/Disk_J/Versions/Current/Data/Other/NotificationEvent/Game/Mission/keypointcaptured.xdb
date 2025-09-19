@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<NotificationEvent ObjectRecordID="4">
+	<Type>NEVT_KEY_POINT_CAPTURED</Type>
+	<Texture href="/Scene/TexAndMats/All/UI/Mission/Notifications/KeyObject_Texture.xdb#xpointer(/Texture)" />
+	<Text href="" />
+	<TextFileRef href="/Other/Text/Game/Mission/NotificationEvents/KeyPointCaptured/Text.txt" />
+	<Tooltip href="" />
+	<TooltipFileRef href="/Other/Text/Game/Mission/NotificationEvents/Tooltips/TTKeyPointCaptured/Text.txt" />
+	<Sound href="/SoundAndMusic/Game/Mission/Notification/Common/Info2_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<ShowByCamera>true</ShowByCamera>
+	<AutoRemoveTime>10</AutoRemoveTime>
+	<Notification href="/Other/Notification/Game/Mission/keyobjectcaptured.xdb#xpointer(/Notification)" />
+	<NoDupArea>0</NoDupArea>
+	<NoDupTime>0</NoDupTime>
+</NotificationEvent>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Water ObjectRecordID="8">
+	<Waves>
+		<Item>
+			<Amplitude>1.4</Amplitude>
+			<Period>0.3</Period>
+			<PeriodVariation>0.15</PeriodVariation>
+			<InvPeriod>3.33333</InvPeriod>
+			<DeepWaveNumber>0.1</DeepWaveNumber>
+			<PhaseOffset>0</PhaseOffset>
+		</Item>
+	</Waves>
+	<WaterSet href="/Terrain/WaterSet/Lake/Autumn/lake_WaterSet.xdb#xpointer(/WaterSet)" />
+	<Light href="" />
+	<DepthNoise href="/Terrain/TGNoise/Test/Water_depth_TGNoise.xdb#xpointer(/TGNoise)" />
+	<DepthNoiseCoeff>0.4</DepthNoiseCoeff>
+	<TilesNumPerWaterTexture>4</TilesNumPerWaterTexture>
+	<UseWaves>false</UseWaves>
+	<HorDeformMinRadius>0</HorDeformMinRadius>
+	<HorDeformMaxRadius>0.5</HorDeformMaxRadius>
+	<HorDeformRadiusSpeed>0.0001</HorDeformRadiusSpeed>
+	<HorDeformRotationSpeedMin>0.000175</HorDeformRotationSpeedMin>
+	<HorDeformRotationSpeedVariation>0.000325</HorDeformRotationSpeedVariation>
+	<WaterType>WT_LAKE</WaterType>
+</Water>

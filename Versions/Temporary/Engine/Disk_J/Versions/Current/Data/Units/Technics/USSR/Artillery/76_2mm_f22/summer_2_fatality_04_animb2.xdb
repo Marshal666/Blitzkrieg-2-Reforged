@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2568">
+	<SrcName href="2.mb" />
+	<uid>39C75BF2-230A-480B-B76E-CE4413EB860B</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>1300</Length>
+	<Looped>false</Looped>
+	<FirstFrame>440</FirstFrame>
+	<LastFrame>479</LastFrame>
+	<AABBAName>AABB_A04</AABBAName>
+	<AABBDName>AABB_D04</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-4</x>
+			<y>-8</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>48</x>
+			<y>95</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-1</x>
+			<y>-3</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>32</x>
+			<y>94</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

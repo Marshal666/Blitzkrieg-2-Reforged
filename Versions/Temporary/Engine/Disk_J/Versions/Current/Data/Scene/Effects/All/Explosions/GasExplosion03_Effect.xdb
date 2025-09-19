@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Effect ObjectRecordID="41">
+	<Instances>
+		<Item href="GasExplosion/GasExpl03Fire_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GasExplosion/GasExpl02Combustion_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GasExplosion/GasExpl03FlyingFire_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GasExplosion/GasExpl02FlashWaves_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GasExplosion/FlameCrown_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+		<Item href="GasExplosion/GasExpl01FlyingFire_ParticleInstance.xdb#xpointer(/ParticleInstance)" />
+	</Instances>
+	<Lights>
+		<Item href="/Effects/_Lights/Flashes/Med_Long_LightInstance.xdb#xpointer(/LightInstance)" />
+		<Item href="/Effects/_Lights/Fires/Med_Long_LightInstance.xdb#xpointer(/LightInstance)" />
+	</Lights>
+	<Models />
+	<WindAffected>false</WindAffected>
+	<WindPower>1</WindPower>
+	<Duration>2.5</Duration>
+</Effect>

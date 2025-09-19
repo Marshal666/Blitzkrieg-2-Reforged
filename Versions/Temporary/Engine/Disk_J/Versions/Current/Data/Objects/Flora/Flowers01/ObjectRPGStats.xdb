@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="275">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>40</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>10</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedNameFileRef href="/Objects/Flora/Bush02/name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>-3</y>
+				<z>44.0059</z>
+			</Pos>
+			<Orient>
+				<x>0.0965575</x>
+				<y>-0.229625</y>
+				<z>0</z>
+				<w>0.968478</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>9</y>
+				<z>44.0059</z>
+			</Pos>
+			<Orient>
+				<x>-0.228586</x>
+				<y>-0.105763</y>
+				<z>0</z>
+				<w>0.967762</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-8</x>
+				<y>16</y>
+				<z>7.23597</z>
+			</Pos>
+			<Orient>
+				<x>0.118931</x>
+				<y>0.123361</y>
+				<z>0</z>
+				<w>0.985209</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>12</x>
+				<y>16</y>
+				<z>7.23597</z>
+			</Pos>
+			<Orient>
+				<x>0.118931</x>
+				<y>-0.123361</y>
+				<z>0</z>
+				<w>0.985209</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-17</x>
+				<y>51</y>
+				<z>29.4185</z>
+			</Pos>
+			<Orient>
+				<x>0.043652</x>
+				<y>0.0982032</y>
+				<z>0</z>
+				<w>0.994209</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-15</x>
+				<y>51</y>
+				<z>29.4185</z>
+			</Pos>
+			<Orient>
+				<x>0.101165</x>
+				<y>-0.0362641</y>
+				<z>0</z>
+				<w>0.994209</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>24</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/Scene/Effects/All/Destructions/TreeCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDeath href="/Scene/Effects/All/Destructions/WoodenObjectCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>2</x>
+						<y>-53</y>
+					</Item>
+					<Item>
+						<x>56</x>
+						<y>3</y>
+					</Item>
+					<Item>
+						<x>2</x>
+						<y>59</y>
+					</Item>
+					<Item>
+						<x>-51</x>
+						<y>3</y>
+					</Item>
+					<Item>
+						<x>2</x>
+						<y>-53</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>49.7813</x>
+		<y>46.375</y>
+	</Origin>
+	<UsePassabilityForVisibility>true</UsePassabilityForVisibility>
+	<visibility>
+		<data />
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="/SoundAndMusic/Game/Ambient/Field_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+	<CycledSound href="" />
+	<AmbientSounds>
+		<Item>
+			<SoundDesc href="" />
+			<Season>SEASON_AFRICA</Season>
+			<DayTime>0</DayTime>
+		</Item>
+		<Item>
+			<SoundDesc href="" />
+			<Season>SEASON_ASIA</Season>
+			<DayTime>0</DayTime>
+		</Item>
+		<Item>
+			<SoundDesc href="/SoundAndMusic/Game/Ambient/grwind.xdb#xpointer(/ComplexSoundDesc)" />
+			<Season>SEASON_SUMMER</Season>
+			<DayTime>0</DayTime>
+		</Item>
+		<Item>
+			<SoundDesc href="/SoundAndMusic/Game/Ambient/grwind.xdb#xpointer(/ComplexSoundDesc)" />
+			<Season>SEASON_SPRING</Season>
+			<DayTime>0</DayTime>
+		</Item>
+		<Item>
+			<SoundDesc href="/SoundAndMusic/Game/Ambient/grwind.xdb#xpointer(/ComplexSoundDesc)" />
+			<Season>SEASON_AUTUMN</Season>
+			<DayTime>0</DayTime>
+		</Item>
+	</AmbientSounds>
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>112</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SeasonedEffectExplosion href="/Scene/Effects/All/treecrash/treecrash_complexseasonedeffect.xdb#xpointer(/ComplexSeasonedEffect)" />
+	<SeasonedEffectDeath href="/Scene/Effects/All/treecrash/woodenobject_crash_complexseasonedeffect.xdb#xpointer(/ComplexSeasonedEffect)" />
+	<SeasonedFallEffect href="" />
+	<SpecificJoints />
+	<HideForPerformance>false</HideForPerformance>
+</ObjectRPGStats>

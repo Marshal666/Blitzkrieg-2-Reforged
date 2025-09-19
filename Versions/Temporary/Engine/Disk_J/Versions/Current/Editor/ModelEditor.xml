@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Base>
+	<ShowToolbar>true</ShowToolbar>
+	<ShowTool>true</ShowTool>
+	<DrawTerrain>true</DrawTerrain>
+	<DrawAnimations>true</DrawAnimations>
+	<DrawAIGeometry>false</DrawAIGeometry>
+	<DoubleSided>true</DoubleSided>
+	<AnimationsCircle>false</AnimationsCircle>
+	<ShowGrid>true</ShowGrid>
+	<bShowSolidAIGeometry>false</bShowSolidAIGeometry>
+	<DefaultGeometryDBID href="/Editor/Default/__Geometry.xdb" />
+	<DefaultMaterialDBID href="/Editor/Default/__Material.xdb" />
+	<GridSize>32</GridSize>
+	<SceneColor>
+		<x>255</x>
+		<y>255</y>
+		<z>255</z>
+	</SceneColor>
+	<TerrainColor>
+		<x>128</x>
+		<y>128</y>
+		<z>128</z>
+		<w>128</w>
+	</TerrainColor>
+	<MaxAnimationsCount>16</MaxAnimationsCount>
+	<AnimationsCircleDistance>12</AnimationsCircleDistance>
+	<AnimationsBetweenDistance>4</AnimationsBetweenDistance>
+	<GameTimerSpeed>0</GameTimerSpeed>
+</Base>

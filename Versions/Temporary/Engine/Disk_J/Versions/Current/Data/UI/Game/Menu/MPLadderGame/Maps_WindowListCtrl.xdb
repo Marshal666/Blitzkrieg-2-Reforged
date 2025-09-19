@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowListCtrl ObjectRecordID="31">
+	<ClassTypeID>285694854</ClassTypeID>
+	<Shared href="Maps_WindowListSharedData.xdb#xpointer(/WindowListSharedData)" />
+	<Name>Maps</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>13</x>
+				<y>118</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>610</x>
+				<y>531</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>11</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>128</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<OnSelection>
+		<Commands>
+			<Item href="/UI/Game/Menu/MPCreateCustomGame/SelectMap_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+	<OnDoubleClick>
+		<Commands />
+		<Reversable>false</Reversable>
+	</OnDoubleClick>
+</WindowListCtrl>

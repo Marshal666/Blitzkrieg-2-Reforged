@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Field ObjectRecordID="5">
+	<TileShells>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>0</Value>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value>4</Value>
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value>5</Value>
+					<Weight>3</Weight>
+				</Item>
+			</Tiles>
+			<Width>3</Width>
+		</Item>
+		<Item>
+			<Tiles>
+				<Item>
+					<Value>0</Value>
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value>3</Value>
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value>6</Value>
+					<Weight>1</Weight>
+				</Item>
+			</Tiles>
+			<Width>512</Width>
+		</Item>
+	</TileShells>
+	<TerraSet href="/Terrain/TGTerraSet/Sets/Summer_TGTerraSet.xdb#xpointer(/TGTerraSet)" />
+	<ObjectShells>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/Objects/Flora/Bush01/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Bush02/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Bush03/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+			</Objects>
+			<Width>3</Width>
+			<BetweenDistance>3</BetweenDistance>
+			<Ratio>0.3</Ratio>
+		</Item>
+		<Item>
+			<Objects>
+				<Item>
+					<Value href="/Objects/Flora/Bush01/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Bush02/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Saxsaul01/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>1</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/DryTree01/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/DryTree02/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Tree03/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>3</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Tree02/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>0</Weight>
+				</Item>
+				<Item>
+					<Value href="/Objects/Flora/Saxsaul01/ObjectRPGStats.xdb#xpointer(/ObjectRPGStats)" />
+					<Weight>0</Weight>
+				</Item>
+			</Objects>
+			<Width>512</Width>
+			<BetweenDistance>3</BetweenDistance>
+			<Ratio>0.3</Ratio>
+		</Item>
+	</ObjectShells>
+	<ProfileFileName href="/Editor/profile.tga" />
+	<Height>1</Height>
+	<PatternSize>
+		<Min>2</Min>
+		<Max>5</Max>
+	</PatternSize>
+	<PositiveRatio>0.6</PositiveRatio>
+</Field>

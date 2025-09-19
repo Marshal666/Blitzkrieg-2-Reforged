@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="1616">
+	<SrcName href="/Units/Technics/Allies/Tanks/M4A3_76W_General_Sherman_USA/1.mb" />
+	<uid>166DF9A1-D76F-42E4-A3BA-51CEFA123AF5</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>70</FirstFrame>
+	<LastFrame>89</LastFrame>
+	<AABBAName>AABB_A01</AABBAName>
+	<AABBDName>AABB_D01</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>35</x>
+			<y>1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>79</x>
+			<y>72</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>35</x>
+			<y>1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>79</x>
+			<y>72</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SquadRPGStats ObjectRecordID="376">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_SQUAD</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="" />
+	<IconTexture href="/Scene/TexAndMats/All/UI/Mission/Icons/Units/Allies/Soldier_Texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="/UI/Game/Mission/MuliselectUnitBg/GB_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<SquadType>Anti_Tank_Squad</SquadType>
+	<Icon />
+	<type>RIFLEMANS</type>
+	<members>
+		<Item href="/Units/Infantry/Great_Britain/AT_Squad/ATS_rifle_enfield/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+		<Item href="/Units/Infantry/Great_Britain/AT_Squad/ATS_rifle_enfield/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+		<Item href="/Units/Infantry/Great_Britain/AT_Squad/ATS_PIAT/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+	</members>
+	<formations>
+		<Item>
+			<type>DEFAULT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-32.6683</x>
+						<y>10.8894</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>12.5857</x>
+						<y>10.8894</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>57.8407</x>
+						<y>10.8894</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>MOVEMENT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-17.6777</x>
+						<y>7.77802</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>17.6776</x>
+						<y>6.3638</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-16.2635</x>
+						<y>-24.7489</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Infantry/marching.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>2</Item>
+			</changesByEvent>
+			<SpeedBonus>1.5</SpeedBonus>
+			<DispersionBonus>1.5</DispersionBonus>
+			<FireRateBonus>1.5</FireRateBonus>
+			<RelaxTimeBonus>1.5</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>DEFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>7.77808</x>
+						<y>-40.3052</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-75.6605</x>
+						<y>62.9323</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-4.94983</x>
+						<y>60.1039</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>2</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Infantry/defensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>0.7</DispersionBonus>
+			<FireRateBonus>0.7</FireRateBonus>
+			<RelaxTimeBonus>0.7</RelaxTimeBonus>
+			<CoverBonus>0.9</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>OFFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>-111.723</x>
+						<y>49.4973</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-31.8199</x>
+						<y>53.0329</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>36.0623</x>
+						<y>50.2045</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>1</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Infantry/offensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1.2</SpeedBonus>
+			<DispersionBonus>1.2</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>0.5</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+	</formations>
+	<availCommands>00000000000000000000000000000000</availCommands>
+	<availExposures>00000000000000000000000000000000</availExposures>
+	<availUserActions>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserActions>
+	<availUserExposures>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserExposures>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<EntrenchCover>0.5</EntrenchCover>
+</SquadRPGStats>

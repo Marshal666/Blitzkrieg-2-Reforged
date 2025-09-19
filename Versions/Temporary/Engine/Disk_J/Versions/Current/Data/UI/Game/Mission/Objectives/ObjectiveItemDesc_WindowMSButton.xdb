@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowMSButton ObjectRecordID="317">
+	<ClassTypeID>285694855</ClassTypeID>
+	<Shared href="ObjectiveItemDesc_WindowMSButtonShared.xdb#xpointer(/WindowMSButtonShared)" />
+	<Name>ObjectiveItemButton</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="TTObjectiveLine.txt" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>22</x>
+				<y>22</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>30</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<ButtonStates>
+		<Item>
+			<MessageOnEnterState />
+			<CommandsOnEnterState>
+				<Commands>
+					<Item href="SelectObjective_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</CommandsOnEnterState>
+			<CommandsOnRightClick>
+				<Commands />
+				<Reversable>false</Reversable>
+			</CommandsOnRightClick>
+			<commandsOnLDblKlick>
+				<Commands />
+				<Reversable>false</Reversable>
+			</commandsOnLDblKlick>
+			<WaitVisual>false</WaitVisual>
+			<ReverseCommands>false</ReverseCommands>
+			<Name />
+		</Item>
+		<Item>
+			<MessageOnEnterState />
+			<CommandsOnEnterState>
+				<Commands />
+				<Reversable>false</Reversable>
+			</CommandsOnEnterState>
+			<CommandsOnRightClick>
+				<Commands />
+				<Reversable>false</Reversable>
+			</CommandsOnRightClick>
+			<commandsOnLDblKlick>
+				<Commands />
+				<Reversable>false</Reversable>
+			</commandsOnLDblKlick>
+			<WaitVisual>false</WaitVisual>
+			<ReverseCommands>false</ReverseCommands>
+			<Name />
+		</Item>
+	</ButtonStates>
+	<ButtonGroupID>0</ButtonGroupID>
+	<AutoChangeState>false</AutoChangeState>
+	<PushEffect>
+		<Commands />
+		<Reversable>false</Reversable>
+	</PushEffect>
+	<State>0</State>
+	<Text href="" />
+	<TextFileRef href="" />
+	<TextFormat href="" />
+</WindowMSButton>

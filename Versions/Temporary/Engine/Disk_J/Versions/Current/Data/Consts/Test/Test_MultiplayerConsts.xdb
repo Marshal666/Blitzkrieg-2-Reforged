@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MultiplayerConsts ObjectRecordID="1">
+	<TechLevels>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level0/Text.txt" />
+			<DescriptionFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level0_desc/Text.txt" />
+		</Item>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level1/Text.txt" />
+			<DescriptionFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level1_desc/Text.txt" />
+		</Item>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level2/Text.txt" />
+			<DescriptionFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level2_desc/Text.txt" />
+		</Item>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level3/Text.txt" />
+			<DescriptionFileRef href="/Other/Text/Game/Multiplayer/TechLevels/Level3_desc/Text.txt" />
+		</Item>
+	</TechLevels>
+	<Sides>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/Sides/Germany/Text.txt" />
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/Germany_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ListItemIcon href="/UI/Game/Menu/MPGameRoom/Countries/FlagGermany_Texture.xdb#xpointer(/Texture)" />
+			<HistoricalSide>HS_AXIS</HistoricalSide>
+			<TechLevels>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/tank_destroyer.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_1/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_2/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_3/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Tank_destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Tanks_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/Germany/Tech_Level_4/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+			</TechLevels>
+			<LadderRanks>
+				<Item>
+					<Level>0</Level>
+					<NameFileRef href="unknown.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/RankUnknown_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>1</Level>
+					<NameFileRef href="ger_rank_0.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/leutnant_trexture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>5</Level>
+					<NameFileRef href="gar_rank_1.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/oberleutnant_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>10</Level>
+					<NameFileRef href="ger_rank_2.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/hauptmann_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>20</Level>
+					<NameFileRef href="ger_rank_3.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/major_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>30</Level>
+					<NameFileRef href="ger_rank_4.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/oberstleutnant_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>40</Level>
+					<NameFileRef href="ger_rank_5.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/oberst_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>50</Level>
+					<NameFileRef href="ger_rank_6.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/generalmajor_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>60</Level>
+					<NameFileRef href="ger_rank_7.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/generalleutnant_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>80</Level>
+					<NameFileRef href="ger_rank_9.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/generalderinfanterie_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>100</Level>
+					<NameFileRef href="ger_rank_8.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/ger_ranks/generaloberst_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+			</LadderRanks>
+			<Medals>
+				<Item href="/Scenario/Campaigns/GER/Medals/kills1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/kills2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/kills3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/tactics1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/tactics2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/tactics3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/economy1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/economy2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/economy3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/GER/Medals/levelcaped.xdb#xpointer(/Medal)" />
+			</Medals>
+		</Item>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/Sides/USA/Text.txt" />
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/USA_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ListItemIcon href="/UI/Game/Menu/MPGameRoom/Countries/FlagUSA_Texture.xdb#xpointer(/Texture)" />
+			<HistoricalSide>HS_ALLIES</HistoricalSide>
+			<TechLevels>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_1/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_2/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_3/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USA/Tech_Level_4/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+			</TechLevels>
+			<LadderRanks>
+				<Item>
+					<Level>0</Level>
+					<NameFileRef href="unknown.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/RankUnknown_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>1</Level>
+					<NameFileRef href="usa_rank_0.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/secondleutnant_texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>5</Level>
+					<NameFileRef href="usa_rank_1.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/firstlieutenant.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>10</Level>
+					<NameFileRef href="usa_rank_2.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/captains.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>20</Level>
+					<NameFileRef href="usa_rank_3.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/majors.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>30</Level>
+					<NameFileRef href="usa_rank_4.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/let_colonel.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>40</Level>
+					<NameFileRef href="usa_rank_5.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/colonels.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>50</Level>
+					<NameFileRef href="usa_rank_6.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/majorgeneral.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>60</Level>
+					<NameFileRef href="usa_rank_7.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/let_general.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>80</Level>
+					<NameFileRef href="usa_rank_8.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/general.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>100</Level>
+					<NameFileRef href="usa_rank_9.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USA_ranks/armygeneral.xdb#xpointer(/Texture)" />
+				</Item>
+			</LadderRanks>
+			<Medals>
+				<Item href="/Scenario/Campaigns/USA/Medals/kills1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/kills2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/kills3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/tactics1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/tactics2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/tactics3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/economy1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/economy2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/economy3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USA/Medals/levelcaped.xdb#xpointer(/Medal)" />
+			</Medals>
+		</Item>
+		<Item>
+			<NameFileRef href="/Other/Text/Game/Multiplayer/Sides/USSR/Text.txt" />
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/USSR_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ListItemIcon href="/UI/Game/Menu/MPGameRoom/Countries/FlagUSSR_Texture.xdb#xpointer(/Texture)" />
+			<HistoricalSide>HS_ALLIES</HistoricalSide>
+			<TechLevels>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_1/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_2/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_3/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+				<Item>
+					<Reinforcements>
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Recon_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Rocket_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+						<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Engineering.xdb#xpointer(/Reinforcement)" />
+					</Reinforcements>
+					<StartingUnits href="/Reinforcements/Reinforcement/Game/!B2_final/Multiplayer/USSR/Tech_Level_4/Starting_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				</Item>
+			</TechLevels>
+			<LadderRanks>
+				<Item>
+					<Level>0</Level>
+					<NameFileRef href="unknown.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/RankUnknown_Texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>1</Level>
+					<NameFileRef href="ussr_rank_0.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/ml_leutnant_texture.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>5</Level>
+					<NameFileRef href="ussr_rank_1.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/1.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>10</Level>
+					<NameFileRef href="ussr_rank_2.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/2.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>20</Level>
+					<NameFileRef href="ussr_rank_3.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/3.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>30</Level>
+					<NameFileRef href="ussr_rank_4.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/4.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>40</Level>
+					<NameFileRef href="ussr_rank_5.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/5.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>50</Level>
+					<NameFileRef href="ussr_rank_6.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/6.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>60</Level>
+					<NameFileRef href="ussr_rank_7.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/7.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>80</Level>
+					<NameFileRef href="ussr_rank_8.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/8.xdb#xpointer(/Texture)" />
+				</Item>
+				<Item>
+					<Level>100</Level>
+					<NameFileRef href="ussr_rank_9.txt" />
+					<Texture href="/Scenario/PlayerRank/Game/USSR_ranks/9.xdb#xpointer(/Texture)" />
+				</Item>
+			</LadderRanks>
+			<Medals>
+				<Item href="/Scenario/Campaigns/USSR/Medals/kills1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/kills2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/kills3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/tactics1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/tactics2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/tactics3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/economy1.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/economy2.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/economy3.xdb#xpointer(/Medal)" />
+				<Item href="/Scenario/Campaigns/USSR/Medals/levelcaped.xdb#xpointer(/Medal)" />
+			</Medals>
+		</Item>
+	</Sides>
+	<RandomCountryIcon href="/UI/Game/Menu/MPGameRoom/Countries/FlagRandom_Texture.xdb#xpointer(/Texture)" />
+	<DiplomacyInfo>
+		<Item href="/Scenario/PartyDependentInfo/Multiplayer/MultiplayerSide0_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+		<Item href="/Scenario/PartyDependentInfo/Multiplayer/MultiplayerSide1_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+		<Item href="/Scenario/PartyDependentInfo/Multiplayer/MultiplayerSide2_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+	</DiplomacyInfo>
+	<expLevels>
+		<Item href="/Other/AIExpLevel/Multiplayer/AAA_Heavy.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/AAA_Light.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Artillery_Anti_Tank.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Artillery_Field.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Artillery_Rocket.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Infantry_Assault.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Infantry_Elite.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Infantry_Main.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Mobile_Assault.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Plane_Bomber.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Plane_Fighter.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Plane_GAP.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Tank_Destroyer.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Tank_Heavy.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Tank_Light.xdb#xpointer(/AIExpLevel)" />
+		<Item href="/Other/AIExpLevel/Multiplayer/Tank_Medium.xdb#xpointer(/AIExpLevel)" />
+	</expLevels>
+	<PlayerColorInfos>
+		<Item>
+			<Color>45824</Color>
+			<UnitFullInfo href="01_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>4157642</Color>
+			<UnitFullInfo href="02_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>9371905</Color>
+			<UnitFullInfo href="03_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>16708675</Color>
+			<UnitFullInfo href="04_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>15893763</Color>
+			<UnitFullInfo href="05_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>12911221</Color>
+			<UnitFullInfo href="06_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>5310842</Color>
+			<UnitFullInfo href="07_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+		<Item>
+			<Color>309424</Color>
+			<UnitFullInfo href="08_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</Item>
+	</PlayerColorInfos>
+	<ReinfCounterRecycle>
+		<x>40</x>
+		<y>240</y>
+	</ReinfCounterRecycle>
+	<TimeUserMPPause>150</TimeUserMPPause>
+	<TimeUserMPLag>30</TimeUserMPLag>
+</MultiplayerConsts>

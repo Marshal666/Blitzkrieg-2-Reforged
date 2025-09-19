@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CragDesc ObjectRecordID="22">
+	<Type>0</Type>
+	<Priority>0</Priority>
+	<AIProperty>
+		<Passability>1</Passability>
+		<AIClass>0</AIClass>
+		<AIPassabilityClass>31</AIPassabilityClass>
+		<CanEntrench>true</CanEntrench>
+		<SoilType>0</SoilType>
+	</AIProperty>
+	<MiniMapCenterColor>0</MiniMapCenterColor>
+	<MiniMapBorderColor>-16777216</MiniMapBorderColor>
+	<MiniMapCenterWidth>100</MiniMapCenterWidth>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<BorderRand>1</BorderRand>
+	<Depth>0.15</Depth>
+	<DepthRand>0.6</DepthRand>
+	<RandX>0.25</RandX>
+	<RandY>0.65</RandY>
+	<HasPeak>true</HasPeak>
+	<RidgeMaterial href="/Scene/TexAndMats/All/Objects/Crags/Winter/Crag/ridge_Material.xdb#xpointer(/Material)" />
+	<FootMaterial href="/Scene/TexAndMats/All/Objects/Crags/Winter/Crag/foot_Material.xdb#xpointer(/Material)" />
+	<LeftSided>true</LeftSided>
+	<RidgeTexGeomScale>12</RidgeTexGeomScale>
+	<DefaultWidth>128</DefaultWidth>
+	<DefaultHeight>128</DefaultHeight>
+</CragDesc>

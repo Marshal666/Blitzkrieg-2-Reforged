@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UnitSpecialAblityDesc ObjectRecordID="14">
+	<Name>ABILITY_ADRENALINE_RUSH</Name>
+	<RefreshTime>0</RefreshTime>
+	<WorkTime>0</WorkTime>
+	<SwitchOnTime>5000</SwitchOnTime>
+	<SwitchOffTime>5000</SwitchOffTime>
+	<GroupID>ABILITY_GROUP_NOGROUP</GroupID>
+	<DisableGroupTime>0</DisableGroupTime>
+	<StatsBonus href="/Other/UnitStatsModifier/Game/Abilities/Active/adrenalinerush.xdb#xpointer(/UnitStatsModifier)" />
+	<Parameter>0</Parameter>
+	<Description />
+	<StopCurrentAction>false</StopCurrentAction>
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Adrenalin_rush_name.txt" />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</UnitSpecialAblityDesc>

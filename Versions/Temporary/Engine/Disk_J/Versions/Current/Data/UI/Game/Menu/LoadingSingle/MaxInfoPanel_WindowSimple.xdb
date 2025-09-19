@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimple ObjectRecordID="1000546">
+	<ClassTypeID>285700801</ClassTypeID>
+	<Shared href="MaxInfoPanel_WindowSimpleShared.xdb#xpointer(/WindowSimpleShared)" />
+	<Name>MaxInfoPanel</Name>
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>-100</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>512</x>
+				<y>11</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>501</x>
+				<y>660</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>512</x>
+				<y>11</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>11</x>
+				<y>97</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+</WindowSimple>

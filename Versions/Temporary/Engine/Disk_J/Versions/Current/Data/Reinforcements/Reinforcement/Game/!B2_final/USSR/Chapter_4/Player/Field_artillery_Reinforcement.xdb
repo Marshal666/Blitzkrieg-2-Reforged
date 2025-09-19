@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="533">
+	<Type>RT_ARTILLERY</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Artillery_Texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.xdb#xpointer(/Text)" />
+	<LocalizedNameFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/artillery/152_mm_ml_20/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/artillery/152_mm_ml_20/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>2</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/auto/voroshilovets/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/auto/voroshilovets/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>2</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.xdb#xpointer(/Text)" />
+	<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.txt" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

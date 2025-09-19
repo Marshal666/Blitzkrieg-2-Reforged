@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="583">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Text/Text_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="Text/Explanation_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="/UI/Game/Menu/Escape/parts/EscMenu_Bgr_1_Small_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Escape/parts/EscMenu_Bgr_2_3_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Controls/StopWaiting_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>60</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>60</x>
+				<y>95</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

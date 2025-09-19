@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="3372">
+	<SrcName href="/Units/Technics/Allies/Auto/Studebaker_Engineering_USA/2.mb" />
+	<uid>4C977102-C0DA-4C1E-A903-710D97C6D70C</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>100</FirstFrame>
+	<LastFrame>119</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>70</x>
+			<y>20</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>93</x>
+			<y>90</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>96</x>
+			<y>38</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>67</x>
+			<y>72</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

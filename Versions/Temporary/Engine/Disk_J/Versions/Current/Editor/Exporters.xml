@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Base>
+	<textmap>
+		<Item>
+			<Key>ExportAttribs</Key>
+			<Data>B2ExportGeometry("%s", "%s", {"%s"}, "%s", "%s")</Data>
+		</Item>
+		<Item>
+			<Key>ExportGeometry</Key>
+			<Data>B2ExportGeometry("%s", "%s", {"%s"}, "%s", "%s")</Data>
+		</Item>
+		<Item>
+			<Key>ExportAIGeometry</Key>
+			<Data>B2ExportAIGeometry("%s", "%s", "%s", {"%s"}, "%s", "%s")</Data>
+		</Item>
+		<Item>
+			<Key>ExportSkeleton</Key>
+			<Data>B2ExportGeometry("%s", "%s", {"%s"}, "%s", "%s")</Data>
+		</Item>
+		<Item>
+			<Key>ExportAnimation</Key>
+			<Data>B2ExportAnimation("%s", "%s", "%s", %d, %d, "%s")</Data>
+		</Item>
+	</textmap>
+</Base>

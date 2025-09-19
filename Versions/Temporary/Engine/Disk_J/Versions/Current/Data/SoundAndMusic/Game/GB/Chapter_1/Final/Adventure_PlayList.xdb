@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PlayList ObjectRecordID="3">
+	<StillOrder>
+		<Item href="/SoundAndMusic/Game/Common/Battle/battle01_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/Common/Countries/African_Ambient_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/GB/English_Ambient_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/Common/Battle/battle05_Composition.xdb#xpointer(/Composition)" />
+		<Item href="/SoundAndMusic/Game/Common/Common_Ambient_Composition.xdb#xpointer(/Composition)" />
+	</StillOrder>
+	<RandomOrder>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Countries/African_Ambient_Composition.xdb#xpointer(/Composition)" />
+			<Weight>1</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/GB/English_Ambient_Composition.xdb#xpointer(/Composition)" />
+			<Weight>2</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Battle/battle02_Composition.xdb#xpointer(/Composition)" />
+			<Weight>3</Weight>
+		</Item>
+		<Item>
+			<Composition href="/SoundAndMusic/Game/Common/Common_Ambient_Composition.xdb#xpointer(/Composition)" />
+			<Weight>2</Weight>
+		</Item>
+	</RandomOrder>
+	<FadeIn href="" />
+	<FadeOut href="" />
+</PlayList>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="447">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/MPGameRoom/ChatOutput_WindowScrollableContainer.xdb#xpointer(/WindowScrollableContainer)" />
+		<Item href="/UI/Game/Menu/MPGameRoom/ChatInput_WindowEditLine.xdb#xpointer(/WindowEditLine)" />
+		<Item href="/UI/Game/Menu/MPGameRoom/PostMessage_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+	</Children>
+	<Background href="/UI/Game/Menu/MPGameRoom/ChatArea_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>612</x>
+				<y>222</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

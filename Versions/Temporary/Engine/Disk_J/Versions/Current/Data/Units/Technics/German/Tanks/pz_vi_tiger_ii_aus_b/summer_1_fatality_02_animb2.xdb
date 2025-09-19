@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="1758">
+	<SrcName href="/Units/Technics/Germany/Tanks/Pz_VI_Tiger_II_Aus_B/1.mb" />
+	<uid>782D7FDB-D4B7-453D-A024-843606D0952D</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>90</FirstFrame>
+	<LastFrame>109</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>-31</x>
+			<y>1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>93</x>
+			<y>105</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-31</x>
+			<y>1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>93</x>
+			<y>105</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

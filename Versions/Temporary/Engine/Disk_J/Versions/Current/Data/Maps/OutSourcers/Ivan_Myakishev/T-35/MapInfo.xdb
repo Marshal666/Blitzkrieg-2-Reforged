@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MapInfo ObjectRecordID="871">
+	<NumPatchesX>6</NumPatchesX>
+	<NumPatchesY>6</NumPatchesY>
+	<TerraSet href="/Terrain/TGTerraSet/Sets/Summer_TGTerraSet.xdb#xpointer(/TGTerraSet)" />
+	<MapFilesPath>Maps\my\T-35\</MapFilesPath>
+	<Light href="/Scene/Lights/All/Summer/Daylight_AmbientLight.xdb#xpointer(/AmbientLight)" />
+	<PreLight href="/Terrain/PreLight/All/Summer/pre-light_PreLight.xdb#xpointer(/PreLight)" />
+	<Weather>
+		<WindDirection>0</WindDirection>
+		<WindForce>0</WindForce>
+		<WeatherPeriod>0</WeatherPeriod>
+		<WeatherPeriodRandom>0</WeatherPeriodRandom>
+		<Visuals href="" />
+	</Weather>
+	<OceanWater href="/Terrain/Water/Game/Summer/1_Water.xdb#xpointer(/Water)" />
+	<Roads />
+	<Rivers />
+	<Crags />
+	<Spots />
+	<Lakes />
+	<HasCoast>false</HasCoast>
+	<Coast>
+		<Descriptor href="/Terrain/CoastDesc/All/Summer/Coast01_CoastDesc.xdb#xpointer(/CoastDesc)" />
+		<points />
+		<ControlPoints />
+		<VSOID>0</VSOID>
+		<CMArrowType>0</CMArrowType>
+		<CMArrowMission>0</CMArrowMission>
+		<CMArrowMission2>0</CMArrowMission2>
+	</Coast>
+	<CoastMidPoint>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</CoastMidPoint>
+	<uid>865A39B8-4987-4E31-87F4-E2656A87F04D</uid>
+	<MapDesigner href="" />
+	<MapDesignerFileRef href="" />
+	<Players>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/USSR_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>0</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/Germany_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>1</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+		<Item>
+			<Camera>
+				<Anchor>
+					<x>0</x>
+					<y>0</y>
+					<z>0</z>
+				</Anchor>
+				<Yaw>0</Yaw>
+				<Pitch>0</Pitch>
+				<Dist>0</Dist>
+				<UseAnchorOnly>true</UseAnchorOnly>
+			</Camera>
+			<general>
+				<mobileScriptIDs />
+				<parcels />
+				<MaxMobileTanks>20</MaxMobileTanks>
+			</general>
+			<PartyInfo href="/Scenario/PartyDependentInfo/Game/Germany_PartyDependentInfo.xdb#xpointer(/PartyDependentInfo)" />
+			<ReinforcementPoints />
+			<ReinforcementTypes />
+			<DefaultRank href="" />
+			<DiplomacySide>2</DiplomacySide>
+			<RecycleTimeCoefficient>1</RecycleTimeCoefficient>
+			<ReinforcementCalls>0</ReinforcementCalls>
+			<LocalizedPlayerName href="" />
+			<LocalizedPlayerNameFileRef href="" />
+			<MPStartPos>
+				<x>0</x>
+				<y>0</y>
+			</MPStartPos>
+			<ScriptReinforcements />
+			<ScriptReinforcementsTextID />
+			<SuperWeapon>
+				<SuperWeaponType>SUPER_WEAPON_BOMBER</SuperWeaponType>
+				<Count>0</Count>
+				<RecycleTime>5</RecycleTime>
+				<FlyTime>0</FlyTime>
+			</SuperWeapon>
+		</Item>
+	</Players>
+	<Objects>
+		<Item>
+			<Pos>
+				<x>2030.26</x>
+				<y>1516.46</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178382</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/USSR/tanks/T-35/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2047.02</x>
+				<y>1242.27</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178383</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/USSR/tanks/T-35/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1671.71</x>
+				<y>1699.53</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178384</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/USSR/tanks/T-35/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>2024.8</x>
+				<y>1008.1</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178385</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/USSR/tanks/kv_2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1897.94</x>
+				<y>789.016</y>
+				<z>0</z>
+			</Pos>
+			<Dir>48743</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178386</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Squads/USSR/Main_Squad/ussr_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1720.67</x>
+				<y>1395.82</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178387</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Squads/USSR/Main_Squad/ussr_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>1321.46</x>
+				<y>2101.99</y>
+				<z>0</z>
+			</Pos>
+			<Dir>53690</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178388</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Squads/USSR/Main_Squad/ussr_main_3/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>4730.25</x>
+				<y>3075.56</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25557</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178389</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/German/tanks/pz_ii_ausf_f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>4244.03</x>
+				<y>3532.39</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25557</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178390</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/German/tanks/pz_ii_ausf_f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>4866.36</x>
+				<y>2896.35</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25557</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178391</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/German/tanks/pz_ii_ausf_f/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>5003.04</x>
+				<y>2810.89</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25557</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178392</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/German/tanks/pz_38t_ausf_a/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>4375.83</x>
+				<y>3219.77</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25557</Dir>
+			<Player>1</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178393</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Units/Technics/German/tanks/pz_38t_ausf_a/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3190.24</x>
+				<y>3868.47</y>
+				<z>0</z>
+			</Pos>
+			<Dir>58854</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178394</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/house01/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3661.39</x>
+				<y>3697.4</y>
+				<z>0</z>
+			</Pos>
+			<Dir>35032</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178395</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/marketplace/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3163.47</x>
+				<y>3428.98</y>
+				<z>0</z>
+			</Pos>
+			<Dir>25691</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178396</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/FactoryOfice/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3714.84</x>
+				<y>3231.52</y>
+				<z>0</z>
+			</Pos>
+			<Dir>12918</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178397</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/admbuilding/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3751.65</x>
+				<y>3475.49</y>
+				<z>0</z>
+			</Pos>
+			<Dir>17303</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178398</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/pigeonloft/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+		<Item>
+			<Pos>
+				<x>3474.89</x>
+				<y>3697.69</y>
+				<z>0</z>
+			</Pos>
+			<Dir>8618</Dir>
+			<Player>0</Player>
+			<ScriptID>-1</ScriptID>
+			<HP>1</HP>
+			<FrameIndex>-1</FrameIndex>
+			<Link>
+				<LinkID>178399</LinkID>
+				<LinkWith>-1</LinkWith>
+				<Intention>false</Intention>
+			</Link>
+			<Object href="/Buildings/USSR/shed01/buildingrpgstats.xdb#xpointer(/BuildingRPGStats)" />
+			<ConstructorProfile href="" />
+		</Item>
+	</Objects>
+	<HiddenObjectType href="" />
+	<Season>SEASON_SUMMER</Season>
+	<DayTime>DAY_DAY</DayTime>
+	<Diplomacies>
+		<Item>0</Item>
+		<Item>1</Item>
+		<Item>2</Item>
+	</Diplomacies>
+	<Entrenchments />
+	<Bridges />
+	<ScenarioObjects />
+	<Reinforcements>
+		<infos />
+	</Reinforcements>
+	<ScriptFileRef href="" />
+	<ScriptAreas />
+	<startCommandsList />
+	<reservePositionsList />
+	<soundsList />
+	<ForestCircleSound href="" />
+	<ForestAmbientSounds href="" />
+	<MapType>0</MapType>
+	<AttackingSide>0</AttackingSide>
+	<PlayerBonusObjects />
+	<Bonuses />
+	<EditAreas />
+	<MiniMap href="minimap.xdb#xpointer(/Material)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="" />
+	<Citation href="" />
+	<CitationFileRef href="" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="" />
+	<LoadingDescription href="" />
+	<LoadingDescriptionFileRef href="" />
+	<LoadingPicture href="" />
+	<CameraPositions />
+	<ScriptMovies>
+		<ScriptCameraPlacements />
+		<ScriptMovieSequences />
+	</ScriptMovies>
+	<FinalPositions />
+	<Objectives />
+	<Music href="" />
+	<MPInfo>
+		<GameTypes />
+	</MPInfo>
+	<BorderLockSize>0</BorderLockSize>
+	<BorderCameraSize>0</BorderCameraSize>
+	<ScriptEffects />
+</MapInfo>

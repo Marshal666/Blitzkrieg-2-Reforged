@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ParticleInstance ObjectRecordID="91">
+	<SrcName />
+	<Light>L_NORMAL</Light>
+	<Particle href="/Scene/Effects/All/Destructions/TreeFalling_Particle.xdb#xpointer(/Particle)" />
+	<Position>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</Position>
+	<Rotation>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+		<w>1</w>
+	</Rotation>
+	<Scale>1</Scale>
+	<Speed>1.5</Speed>
+	<Offset>0</Offset>
+	<EndCycle>4</EndCycle>
+	<CycleCount>1</CycleCount>
+	<Pivot>
+		<x>0</x>
+		<y>0</y>
+	</Pivot>
+	<Textures>
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs0_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs1_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs2_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs3_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs4_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs5_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs6_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs7_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs8_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs9_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs10_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs11_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs12_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs13_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs14_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Destructions/TreeLeafs/Summer/TreeLeafs15_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Dust0_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/All/Effects/Exhaust/Dust1_Texture.xdb#xpointer(/Texture)" />
+	</Textures>
+	<IsCrown>false</IsCrown>
+	<Static>P_DYNAMIC</Static>
+	<DoesCastShadow>false</DoesCastShadow>
+	<GlueToBone>0</GlueToBone>
+	<LeaveParticlesWhereStarted>false</LeaveParticlesWhereStarted>
+	<Priority>0</Priority>
+</ParticleInstance>

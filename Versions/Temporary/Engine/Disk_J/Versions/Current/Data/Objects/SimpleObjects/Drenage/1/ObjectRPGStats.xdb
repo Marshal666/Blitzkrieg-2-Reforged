@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="286">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>50</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>50</ArmorMin>
+			<ArmorMax>50</ArmorMax>
+			<Silhouette>0.5</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<infoVisualObject href="" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects>
+		<Item>
+			<LocatorName />
+			<Pos>
+				<x>0</x>
+				<y>0.3</y>
+				<z>0.2</z>
+			</Pos>
+			<Rot>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+				<w>1</w>
+			</Rot>
+			<FlarePos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</FlarePos>
+			<FlareSize>0</FlareSize>
+			<PointLightPos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</PointLightPos>
+			<PointLightSize>0</PointLightSize>
+			<ConeLength>0</ConeLength>
+			<ConeSize>0</ConeSize>
+			<Colour>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Colour>
+			<AdditionalEffect href="/Scene/Effects/All/Exhaust/Drenage_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+			<OnAtDay>true</OnAtDay>
+			<OnAtNight>true</OnAtNight>
+			<ConeTexture href="" />
+			<FlareTexture href="" />
+		</Item>
+	</LightEffects>
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>-5</y>
+				<z>8.49114</z>
+			</Pos>
+			<Orient>
+				<x>0.460044</x>
+				<y>0.014379</y>
+				<z>0</z>
+				<w>0.88778</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>-5</y>
+				<z>8.49114</z>
+			</Pos>
+			<Orient>
+				<x>-0.460044</x>
+				<y>-0.014379</y>
+				<z>0</z>
+				<w>0.88778</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>31</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="" />
+	<EffectDeath href="" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>-15</x>
+						<y>-14</y>
+					</Item>
+					<Item>
+						<x>-5.72414</x>
+						<y>-8.13793</y>
+					</Item>
+					<Item>
+						<x>-0.095238</x>
+						<y>-10.9524</y>
+					</Item>
+					<Item>
+						<x>0</x>
+						<y>-14</y>
+					</Item>
+					<Item>
+						<x>0.666667</x>
+						<y>-12</y>
+					</Item>
+					<Item>
+						<x>2</x>
+						<y>-10</y>
+					</Item>
+					<Item>
+						<x>2</x>
+						<y>-9</y>
+					</Item>
+					<Item>
+						<x>5.81035</x>
+						<y>-2.14138</y>
+					</Item>
+					<Item>
+						<x>19</x>
+						<y>-9</y>
+					</Item>
+					<Item>
+						<x>22</x>
+						<y>-8</y>
+					</Item>
+					<Item>
+						<x>12</x>
+						<y>-2.78261</y>
+					</Item>
+					<Item>
+						<x>12</x>
+						<y>2.76923</y>
+					</Item>
+					<Item>
+						<x>14</x>
+						<y>4</y>
+					</Item>
+					<Item>
+						<x>9</x>
+						<y>4</y>
+					</Item>
+					<Item>
+						<x>5.70588</x>
+						<y>1.94118</y>
+					</Item>
+					<Item>
+						<x>1.36364</x>
+						<y>8.45455</y>
+					</Item>
+					<Item>
+						<x>1</x>
+						<y>19</y>
+					</Item>
+					<Item>
+						<x>-1</x>
+						<y>21</y>
+					</Item>
+					<Item>
+						<x>-0.886792</x>
+						<y>18.0566</y>
+					</Item>
+					<Item>
+						<x>-1</x>
+						<y>18</y>
+					</Item>
+					<Item>
+						<x>-0.555249</x>
+						<y>3.76796</y>
+					</Item>
+					<Item>
+						<x>-1</x>
+						<y>4</y>
+					</Item>
+					<Item>
+						<x>-1.53333</x>
+						<y>4</y>
+					</Item>
+					<Item>
+						<x>-9</x>
+						<y>8</y>
+					</Item>
+					<Item>
+						<x>-7</x>
+						<y>5</y>
+					</Item>
+					<Item>
+						<x>-6</x>
+						<y>4</y>
+					</Item>
+					<Item>
+						<x>-1.58824</x>
+						<y>-2.61765</y>
+					</Item>
+					<Item>
+						<x>-15</x>
+						<y>-11</y>
+					</Item>
+					<Item>
+						<x>-15</x>
+						<y>-14</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>9.5</x>
+		<y>15.125</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data>
+			<Item>
+				<data>
+					<Item>0</Item>
+				</data>
+			</Item>
+		</data>
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>20</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SpecificJoints />
+	<HideForPerformance>true</HideForPerformance>
+</ObjectRPGStats>

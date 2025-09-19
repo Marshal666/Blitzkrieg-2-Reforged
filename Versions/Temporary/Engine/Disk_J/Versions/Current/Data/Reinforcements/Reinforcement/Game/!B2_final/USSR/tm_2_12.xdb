@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000756">
+	<Type>RT_SUPER_WEAPON</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/super_texture.xdb#xpointer(/Texture)" />
+	<LocalizedNameFileRef href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Super_weapon.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/USSR/Trains/tm_2_12_super/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<TooltipFileRef href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Super_weapon.txt" />
+	<Transports />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

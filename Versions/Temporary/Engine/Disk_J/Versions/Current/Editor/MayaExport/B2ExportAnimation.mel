@@ -1,0 +1,16 @@
+global proc int B2ExportAnimation( string $dst, string $src, string $joint, int $fromFrame, int $toFrame, string $settings )
+{
+    sysFile -del $dst;
+    if ($src != `file -q -sceneName`) {
+        file -o -f $src;
+    }
+    if ($joint != "") {
+        select -r `ls -dag -tr $joint`;
+    }	
+	// set playback range
+	playbackOptions -min $fromFrame -max $toFrame;
+	//
+    GrannyLoadSettings $settings;
+    GrannyExport -selectionOnly on -showInterface off $dst;
+    return !(`filetest -f $dst`);
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="1023">
+	<SrcName href="/Units/Technics/Allies/Auto/Willys_MB_GB/2.mb" />
+	<uid>94087EB5-CB0B-4BDF-B2E4-EC752CF383F1</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>80</FirstFrame>
+	<LastFrame>99</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>0</x>
+			<y>-3</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>43</x>
+			<y>70</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>-9</x>
+			<y>-5</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>35</x>
+			<y>43</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

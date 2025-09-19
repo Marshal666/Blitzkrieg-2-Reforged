@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<OptionSystem ObjectRecordID="3">
+	<Categories>
+		<Item>
+			<NameFileRef href="Graphics/Name.txt" />
+			<TooltipFileRef href="Graphics/Tooltip.txt" />
+			<Options>
+				<Item>
+					<ProgName>gfx_resolution</ProgName>
+					<NameFileRef href="Graphics/Resolution/Name.txt" />
+					<TooltipFileRef href="Graphics/Resolution/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/Resolution/Value_Name.txt" />
+							<TooltipFileRef href="Graphics/Resolution/Value_Tooltip.txt" />
+							<Value>1024x768</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1024x768</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>gfx_quality</ProgName>
+					<NameFileRef href="Graphics/Quality/Name.txt" />
+					<TooltipFileRef href="Graphics/Quality/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/Quality/VeryLow_Name.txt" />
+							<TooltipFileRef href="Graphics/Quality/Value_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/Quality/Low_Name.txt" />
+							<TooltipFileRef href="Graphics/Quality/Value_Tooltip.txt" />
+							<Value>0.21</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/Quality/Medium_Name.txt" />
+							<TooltipFileRef href="Graphics/Quality/Value_Tooltip.txt" />
+							<Value>0.51</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/Quality/High_Name.txt" />
+							<TooltipFileRef href="Graphics/Quality/Value_Tooltip.txt" />
+							<Value>0.71</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/Quality/VeryHigh_Name.txt" />
+							<TooltipFileRef href="Graphics/Quality/Value_Tooltip.txt" />
+							<Value>0.91</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>-1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues>
+						<Item>
+							<ProgName>gfx_tnl_mode</ProgName>
+							<Values>
+								<Item>1</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>gfx_noshadows</ProgName>
+							<Values>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>gfx_depth_tex_resolution</ProgName>
+							<Values>
+								<Item>512</Item>
+								<Item>512</Item>
+								<Item>512</Item>
+								<Item>512</Item>
+								<Item>1024</Item>
+								<Item>1024</Item>
+								<Item>1024</Item>
+								<Item>1024</Item>
+								<Item>1024</Item>
+								<Item>1024</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>gfx_dynamic_lights</ProgName>
+							<Values>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>gfx_lod_switch_distance</ProgName>
+							<Values>
+								<Item>150</Item>
+								<Item>155</Item>
+								<Item>160</Item>
+								<Item>165</Item>
+								<Item>170</Item>
+								<Item>175</Item>
+								<Item>180</Item>
+								<Item>185</Item>
+								<Item>190</Item>
+								<Item>250</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>shadow_on_trees</ProgName>
+							<Values>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>terrain_blur_treshhold</ProgName>
+							<Values>
+								<Item>100</Item>
+								<Item>90</Item>
+								<Item>80</Item>
+								<Item>70</Item>
+								<Item>60</Item>
+								<Item>50</Item>
+								<Item>40</Item>
+								<Item>30</Item>
+								<Item>15</Item>
+								<Item>0</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>misc_animations_trees</ProgName>
+							<Values>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>misc_max_explosions_per_tile</ProgName>
+							<Values>
+								<Item>2</Item>
+								<Item>2</Item>
+								<Item>3</Item>
+								<Item>3</Item>
+								<Item>4</Item>
+								<Item>5</Item>
+								<Item>6</Item>
+								<Item>7</Item>
+								<Item>8</Item>
+								<Item>12</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>misc_draw_grass</ProgName>
+							<Values>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+							</Values>
+						</Item>
+						<Item>
+							<ProgName>misc_holes_for_entrenchment</ProgName>
+							<Values>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>0</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+								<Item>1</Item>
+							</Values>
+						</Item>
+					</SliderValues>
+				</Item>
+				<Item>
+					<ProgName>gfx_texture_mip</ProgName>
+					<NameFileRef href="Graphics/TextureQuality/Name.txt" />
+					<TooltipFileRef href="Graphics/TextureQuality/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/TextureQuality/Low_Name.txt" />
+							<TooltipFileRef href="Graphics/TextureQuality/Low_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/TextureQuality/Normal_Name.txt" />
+							<TooltipFileRef href="Graphics/TextureQuality/Normal_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>gfx_anisotropic_filter</ProgName>
+					<NameFileRef href="Graphics/TextureFilter/Name.txt" />
+					<TooltipFileRef href="Graphics/TextureFilter/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/TextureFilter/Linear_Name.txt" />
+							<TooltipFileRef href="Graphics/TextureFilter/Linear_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/TextureFilter/Anisotropic_Name.txt" />
+							<TooltipFileRef href="Graphics/TextureFilter/Anisotropic_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>gfx_16bit_mode</ProgName>
+					<NameFileRef href="Graphics/16bit/Name.txt" />
+					<TooltipFileRef href="Graphics/16bit/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/16bit/16bit_Name.txt" />
+							<TooltipFileRef href="Graphics/16bit/16bit_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/16bit/32bit_Name.txt" />
+							<TooltipFileRef href="Graphics/16bit/32bit_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>xray_mode</ProgName>
+					<NameFileRef href="Graphics/XRay/Name.txt" />
+					<TooltipFileRef href="Graphics/XRay/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Graphics/XRay/Off_Name.txt" />
+							<TooltipFileRef href="Graphics/XRay/Off_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Graphics/XRay/On_Name.txt" />
+							<TooltipFileRef href="Graphics/XRay/On_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>scene_gamma</ProgName>
+					<NameFileRef href="Graphics/Gamma/Name.txt" />
+					<TooltipFileRef href="Graphics/Gamma/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>scene_brightness</ProgName>
+					<NameFileRef href="Graphics/Brightness/Name.txt" />
+					<TooltipFileRef href="Graphics/Brightness/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>scene_contrast</ProgName>
+					<NameFileRef href="Graphics/Contrast/Name.txt" />
+					<TooltipFileRef href="Graphics/Contrast/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<NameFileRef href="Gameplay/Name.txt" />
+			<TooltipFileRef href="Gameplay/Tooltip.txt" />
+			<Options>
+				<Item>
+					<ProgName>mission_buttons_bind_section</ProgName>
+					<NameFileRef href="Gameplay/KeyMapping/Name.txt" />
+					<TooltipFileRef href="Gameplay/KeyMapping/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Gameplay/KeyMapping/Classic_Name.txt" />
+							<TooltipFileRef href="Gameplay/KeyMapping/Classic_Tooltip.txt" />
+							<Value>mission_buttons_classic</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Gameplay/KeyMapping/Original_Name.txt" />
+							<TooltipFileRef href="Gameplay/KeyMapping/Original_Tooltip.txt" />
+							<Value>mission_buttons_original</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>mission_buttons_original</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>auto_show_reinf</ProgName>
+					<NameFileRef href="GamePlay/AutoShowReinf/Name.txt" />
+					<TooltipFileRef href="GamePlay/AutoShowReinf/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="GamePlay/AutoShowReinf/Off_Name.txt" />
+							<TooltipFileRef href="GamePlay/AutoShowReinf/Off_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="GamePlay/AutoShowReinf/On_Name.txt" />
+							<TooltipFileRef href="GamePlay/AutoShowReinf/On_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>1</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>game_camera_mouse_pitch_invert</ProgName>
+					<NameFileRef href="Gameplay/MousePitchInvert/Name.txt" />
+					<TooltipFileRef href="Gameplay/MousePitchInvert/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Gameplay/MousePitchInvert/On_Name.txt" />
+							<TooltipFileRef href="Gameplay/MousePitchInvert/On_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Gameplay/MousePitchInvert/Off_Name.txt" />
+							<TooltipFileRef href="Gameplay/MousePitchInvert/Off_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>game_camera_mouse_zoom_invert</ProgName>
+					<NameFileRef href="Gameplay/MouseZoomInvert/Name.txt" />
+					<TooltipFileRef href="Gameplay/MouseZoomInvert/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Gameplay/MouseZoomInvert/On_Name.txt" />
+							<TooltipFileRef href="Gameplay/MouseZoomInvert/On_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Gameplay/MouseZoomInvert/Off_Name.txt" />
+							<TooltipFileRef href="Gameplay/MouseZoomInvert/Off_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>game_camera_mouse_sensetivity</ProgName>
+					<NameFileRef href="Gameplay/MouseSensitivity/Name.txt" />
+					<TooltipFileRef href="Gameplay/MouseSensitivity/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+			</Options>
+		</Item>
+		<Item>
+			<NameFileRef href="Sound/Name.txt" />
+			<TooltipFileRef href="Sound/Tooltip.txt" />
+			<Options>
+				<Item>
+					<ProgName>Sound.Use3DSound</ProgName>
+					<NameFileRef href="Sound/Use3DSound/Name.txt" />
+					<TooltipFileRef href="Sound/Use3DSound/Tooltip.txt" />
+					<States>
+						<Item>
+							<NameFileRef href="Sound/Use3DSound/On_Name.txt" />
+							<TooltipFileRef href="Sound/Use3DSound/On_Tooltip.txt" />
+							<Value>1</Value>
+						</Item>
+						<Item>
+							<NameFileRef href="Sound/Use3DSound/Off_Name.txt" />
+							<TooltipFileRef href="Sound/Use3DSound/Off_Tooltip.txt" />
+							<Value>0</Value>
+						</Item>
+					</States>
+					<EditorType>OPTION_EDITOR_DROPLIST</EditorType>
+					<DefaultValue>0</DefaultValue>
+					<ModeFlags>1</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>Sound.MusicVolume</ProgName>
+					<NameFileRef href="Sound/MusicVolume/Name.txt" />
+					<TooltipFileRef href="Sound/MusicVolume/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>Sound.SFXVolume</ProgName>
+					<NameFileRef href="Sound/SFXVolume/Name.txt" />
+					<TooltipFileRef href="Sound/SFXVolume/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+				<Item>
+					<ProgName>Sound.VoiceVolume</ProgName>
+					<NameFileRef href="Sound/AckVolume/Name.txt" />
+					<TooltipFileRef href="Sound/AckVolume/Tooltip.txt" />
+					<States />
+					<EditorType>OPTION_EDITOR_SLIDER</EditorType>
+					<DefaultValue>0.5</DefaultValue>
+					<ModeFlags>7</ModeFlags>
+					<SliderValues />
+				</Item>
+			</Options>
+		</Item>
+	</Categories>
+</OptionSystem>

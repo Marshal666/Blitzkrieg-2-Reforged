@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScreen ObjectRecordID="29">
+	<ClassTypeID>285694848</ClassTypeID>
+	<Shared href="MainMenu_WindowScreenShared.xdb#xpointer(/WindowScreenShared)" />
+	<Name />
+	<Tooltip href="" />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions>
+		<Item>
+			<GameMessage>main_menu_init</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Main/init_UISDirectRunReaction.xdb#xpointer(/UISDirectRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+		<Item>
+			<GameMessage>single_player_submenu</GameMessage>
+			<LogicalReaction />
+			<VisualReaction>
+				<Commands>
+					<Item href="Main/single_player_submenu_UISDirectRunReaction.xdb#xpointer(/UISDirectRunReaction)" />
+				</Commands>
+				<Reversable>false</Reversable>
+			</VisualReaction>
+			<WaitVisual>true</WaitVisual>
+			<Forward>true</Forward>
+		</Item>
+	</GameMessageReactions>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<MessageReactions>
+		<reactions>
+			<Item>
+				<Name>reaction_on_exit</Name>
+				<Reaction href="Main/exit_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>CRAP_start_map</Name>
+				<Reaction href="/UI/Test/Uvarkov/CRAP_start_map_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_single_player</Name>
+				<Reaction href="Main/single_player_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_single_player_back</Name>
+				<Reaction href="SinglePlayer/back_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_lan</Name>
+				<Reaction href="Multiplayer/mp_games_list_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_profile_manager</Name>
+				<Reaction href="SinglePlayer/profile_manager_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_campaign_selection</Name>
+				<Reaction href="SinglePlayer/campaign_selection_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_chapter_map_main</Name>
+				<Reaction href="ChapterMap/army_manager_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_chapter_map_play</Name>
+				<Reaction href="/UI/Test/Uvarkov/CRAP_start_map_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_options</Name>
+				<Reaction href="Main/options_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_multiplayer_back</Name>
+				<Reaction href="Multiplayer/back_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_credits</Name>
+				<Reaction href="Main/Credits_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+			<Item>
+				<Name>reaction_on_multiplayer</Name>
+				<Reaction href="Main/multiplayer_MessageReactionComplex.xdb#xpointer(/MessageReactionComplex)" />
+			</Item>
+		</reactions>
+		<Script href="" />
+		<ScriptFileRef href="" />
+	</MessageReactions>
+	<CommandSequiences />
+	<TooltipContext>0</TooltipContext>
+	<RelatedTexts>
+		<Item>
+			<Name>T_DEFAULT_PROFILE_NAME</Name>
+			<Text href="" />
+			<TextFileRef href="DefaultProfileName.txt" />
+		</Item>
+	</RelatedTexts>
+</WindowScreen>

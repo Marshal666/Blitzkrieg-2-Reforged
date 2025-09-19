@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="1404">
+	<SrcName href="/Units/Technics/Allies/Tanks/Infantry_MKIII_Valentine_GB/1.mb" />
+	<uid>98576A16-BEDA-4DBD-B433-4F472928FC8C</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>110</FirstFrame>
+	<LastFrame>129</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>10</x>
+			<y>-8</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>44</x>
+			<y>75</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>10</x>
+			<y>-8</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>44</x>
+			<y>75</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

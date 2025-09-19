@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeatherDesc ObjectRecordID="1000010">
+	<Type>WEATHER_RAIN</Type>
+	<PartMaterial href="Rain_Material.xdb#xpointer(/Material)" />
+	<PartSize>0.3</PartSize>
+	<FallHeight>70</FallHeight>
+	<Speed>0.1</Speed>
+	<TrajectoryParameter>10</TrajectoryParameter>
+	<Intensity>40</Intensity>
+	<WindAffected>false</WindAffected>
+	<WeatherLight href="" />
+	<Lightnings />
+	<LightningsPerMinute>0</LightningsPerMinute>
+	<LightningsRandom>0</LightningsRandom>
+	<Water href="" />
+	<AmbientSound>
+		<Item>
+			<AmbientSound href="/SoundAndMusic/Game/Ambient/Rain/rain01_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+			<SoundLength>4.5</SoundLength>
+		</Item>
+		<Item>
+			<AmbientSound href="/SoundAndMusic/Game/Ambient/Rain/rain02_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+			<SoundLength>4</SoundLength>
+		</Item>
+		<Item>
+			<AmbientSound href="/SoundAndMusic/Game/Ambient/Rain/rain03_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+			<SoundLength>3.2</SoundLength>
+		</Item>
+		<Item>
+			<AmbientSound href="/SoundAndMusic/Game/Ambient/Rain/rain04_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+			<SoundLength>3</SoundLength>
+		</Item>
+		<Item>
+			<AmbientSound href="/SoundAndMusic/Game/Ambient/Rain/rain05_ComplexSoundDesc.xdb#xpointer(/ComplexSoundDesc)" />
+			<SoundLength>3</SoundLength>
+		</Item>
+	</AmbientSound>
+	<RandomSounds />
+</WeatherDesc>

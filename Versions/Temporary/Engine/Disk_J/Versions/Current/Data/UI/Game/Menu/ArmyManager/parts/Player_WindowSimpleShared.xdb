@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="110">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/ArmyManagerOld/parts/Strap_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ArmyManagerOld/parts/Rank_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Medals/Medal01_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Medals/Medal02_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Medals/Medal03_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Medals/Medal04_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Medals/Medal05_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="Medals/Medal06_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ArmyManager/PlayerProgress_WindowProgressBar.xdb#xpointer(/WindowProgressBar)" />
+	</Children>
+	<Background href="/UI/Game/Menu/EscapeMenu/EscMenu_Bgr_2_3_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>14</x>
+				<y>14</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>650</x>
+				<y>120</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>50</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>50</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

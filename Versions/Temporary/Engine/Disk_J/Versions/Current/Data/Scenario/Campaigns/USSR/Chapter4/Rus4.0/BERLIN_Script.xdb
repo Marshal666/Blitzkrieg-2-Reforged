@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Script ObjectRecordID="1000090">
+	<FileName href="" />
+	<ScriptText>function RevealObjective0()
+	GiveObjective( 0 );
+	Wait( 1 );
+	GiveObjective( 1 );
+	StartThread( Objective0 );
+	StartThread( Objective1 );
+	StartThread( Brige1 );
+	StartThread( Brige2 );
+	StartThread( Brige3 );
+end;
+
+function Objective0()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(1, &quot;START&quot;, 0) &gt; 0) and (GetNUnitsInArea(0, &quot;START&quot;, 0) &lt; 1)) then
+			FailObjective( 0 );
+			Wait( 1 );
+			Win( 1 );
+			break;
+		end;	
+	end;
+end;
+--------------------------------------------1
+function Objective1()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(1, &quot;STAFF&quot;, 0) &lt; 1) and (GetNUnitsInArea(0, &quot;STAFF&quot;, 0) &gt; 0)) then
+			CompleteObjective( 1 );
+			SetIGlobalVar( &quot;temp.objective1&quot;, 2 );
+			Wait( 2 );
+			GiveObjective( 2 );
+			StartThread( Objective2 );
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------2
+function Objective2()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;B1&quot;, 0) &gt; 0) or (GetNUnitsInArea(0, &quot;B2&quot;, 0) &gt; 0) or (GetNUnitsInArea(0, &quot;B3&quot;, 0) &gt; 0)) then
+			CompleteObjective( 2 );
+			SetIGlobalVar( &quot;temp.objective2&quot;, 2 );
+			Wait( 2 );
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------3
+function RevealObjective3()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;REICH&quot;, 0) &gt; 1) or (GetIGlobalVar(&quot;temp.objective2&quot;, 1) == 2)) then
+			GiveObjective( 3 );
+			Wait( 2 );
+			StartThread( Objective3 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective3()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;REICH&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;REICH&quot;, 0) &lt; 1)) then
+			CompleteObjective( 3 );
+			Wait( 2 );
+			SetIGlobalVar( &quot;temp.objective3&quot;, 2 );
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------4
+function RevealObjective4()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;OFFICE&quot;, 0) &gt; 1) or (GetIGlobalVar(&quot;temp.objective3&quot;, 1) == 2)) then
+			GiveObjective( 4 );
+			Wait( 2 );
+			StartThread( Objective4 );
+			break;
+		end;	
+	end;
+end;
+
+function Objective4()
+	while 1 do
+		Wait( 3 );
+		if ((GetNUnitsInArea(0, &quot;OFFICE&quot;, 0) &gt; 0) and (GetNUnitsInArea(1, &quot;OFFICE&quot;, 0) &lt; 1)) then
+			CompleteObjective( 4 );
+			Wait( 2 );
+			SetIGlobalVar( &quot;temp.objective4&quot;, 2 );
+			break;
+		end;	
+	end;
+end;
+-----------------------------------------------------Winners
+function Winner()
+	while 1 do
+		Wait( 3 );
+		if ((GetIGlobalVar(&quot;temp.objective3&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.objective4&quot;, 1) == 2) and (GetIGlobalVar(&quot;temp.objective1&quot;, 1) == 2)) then
+			Wait( 1 );
+			CompleteObjective( 0 );
+			Wait( 1 );
+			Win(0);
+			break;
+		end;	
+	end;
+end;
+
+function Unlucky()
+    while 1 do
+        if (( GetNUnitsInParty(0) &lt; 1) and ( GetReinforcementCallsLeft( 0 ) == 0 )) then
+			Wait(3);
+			Win(1);
+        return 1;
+	end;
+	Wait(5);
+	end;
+end;
+-----------------------------------------------------
+function Metro_Rand() 
+	while 1 do
+		Wait( 2 );
+			if (GetIGlobalVar(&quot;temp.objective1&quot;, 1) ~= 2) then
+			Wait( 1 );
+			StartThread( Rand );
+			break;
+		end;
+	end;
+end;
+
+function Rand()
+local x = RandomInt(4);
+	if x == 0 then
+	StartThread( A1 );
+	end;
+	if x == 1 then
+	StartThread( A2 );
+	end;
+	if x == 2 then
+	StartThread( A3 );
+	end;
+	if x == 3 then
+	StartThread( A4 );
+	end;
+end;
+
+function A1()
+	LandReinforcementFromMap( 1, &quot;FS&quot;, 1, 401 );         
+	Wait( 1 );
+	ChangeFormation( 401, 3 );
+	Wait( 2 );
+	Cmd(ACT_SWARM, 401, 0, GetScriptAreaParams( &quot;MF&quot; ) );
+	Wait( 40 + RandomInt( 20 ) );
+	StartThread( Metro_Rand );
+end;
+
+function A2()
+	LandReinforcementFromMap( 1, &quot;FS&quot;, 2, 402 );         
+	Wait( 1 );
+	ChangeFormation( 402, 3 );
+	Wait( 2 );
+	Cmd(ACT_SWARM, 402, 0, GetScriptAreaParams( &quot;MF&quot; ) );
+	Wait( 40 + RandomInt( 20 ) );
+	StartThread( Metro_Rand );
+end;
+
+function A3()
+	LandReinforcementFromMap( 1, &quot;FS&quot;, 3, 403 );         
+	Wait( 1 );
+	ChangeFormation( 403, 3 );
+	Wait( 2 );
+	Cmd(ACT_SWARM, 403, 0, GetScriptAreaParams( &quot;MF&quot; ) );
+	Wait( 40 + RandomInt( 20 ) );
+	StartThread( Metro_Rand );
+end;
+
+function A4()
+	LandReinforcementFromMap( 1, &quot;FS&quot;, 4, 404 );         
+	Wait( 1 );
+	ChangeFormation( 404, 3 );
+	Wait( 2 );
+	Cmd(ACT_SWARM, 404, 0, GetScriptAreaParams( &quot;MF&quot; ) );
+	Wait( 40 + RandomInt( 20 ) );
+	StartThread( Metro_Rand );
+end;
+
+---------------------------------------------------
+
+function Brige1()
+	while 1 do
+		Wait( 10 );
+		 if ((GetScriptObjectHPs(5001) &gt; 0) and (GetIGlobalVar(&quot;temp.objective2&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			DamageScriptObject (5001, 40000);
+		end;	
+	end;
+end;
+
+function Brige2()
+	while 1 do
+		Wait( 10 );
+		 if ((GetScriptObjectHPs(5002) &gt; 0) and (GetIGlobalVar(&quot;temp.objective2&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			DamageScriptObject (5002, 40000);
+		end;	
+	end;
+end;
+
+function Brige3()
+	while 1 do
+		Wait( 10 );
+		 if ((GetScriptObjectHPs(5003) &gt; 0) and (GetIGlobalVar(&quot;temp.objective2&quot;, 1) ~= 2)) then
+			Wait( 1 );
+			DamageScriptObject (5003, 40000);
+		end;	
+	end;
+end;
+------------------------------------------
+function Bomb()
+	while 1 do
+		Wait( 3 );
+		if (GetIGlobalVar(&quot;temp.objective1&quot;, 1) == 2) then
+			LandReinforcementFromMap( 1, &quot;BOMB&quot;, 0, 501 );
+			Cmd(0, 501, 500, GetScriptAreaParams( &quot;STAFF&quot; ) );
+			Wait( 2 );
+			LandReinforcementFromMap( 1, &quot;BOMB&quot;, 0, 502 );  
+			Cmd(0, 502, 500, GetScriptAreaParams( &quot;START&quot; ) );
+			break;
+		end;	
+	end;
+end;
+-------------------------------------------
+function D_L()
+	Wait(2);
+	if (GetDifficultyLevel() == 0) then
+	GiveReinforcementCalls ( 1, 10 );
+	end;
+	if (GetDifficultyLevel() == 1) then
+	GiveReinforcementCalls ( 1, 15 );
+	end;
+	if (GetDifficultyLevel() == 2) then
+	GiveReinforcementCalls ( 1, 30 );
+	end;
+end;
+
+function D_L_2()
+	Wait(2);
+	if (GetDifficultyLevel() == 0) then
+		RemoveScriptGroup(1001);
+		RemoveScriptGroup(1002);
+	end;
+	if (GetDifficultyLevel() == 1) then
+		RemoveScriptGroup(1002);
+	end;
+end;
+
+----------------------------------------------------- MAIN
+StartThread( D_L_2 );
+StartThread( D_L );
+StartThread( Bomb );
+StartThread( Winner );
+StartThread( Unlucky );
+StartThread( Metro_Rand );
+StartThread( RevealObjective0 );
+StartThread( RevealObjective3 );
+StartThread( RevealObjective4 );
+</ScriptText>
+</Script>

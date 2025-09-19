@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<SquadRPGStats ObjectRecordID="359">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_SQUAD</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>0</ArmorMin>
+			<ArmorMax>0</ArmorMax>
+			<Silhouette>0</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="" />
+	<infoVisualObject href="" />
+	<IconTexture href="/Scene/TexAndMats/All/UI/Mission/Icons/Units/Germany/Soldier_Texture (2).xdb#xpointer(/Texture)" />
+	<IconFlagBackground href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints />
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<SquadType>Anti_Tank_Squad</SquadType>
+	<Icon />
+	<type>RIFLEMANS</type>
+	<members>
+		<Item href="/Units/Infantry/Germany/AT_Squad/ATS_bazooka_luftfaust/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+		<Item href="/Units/Infantry/Germany/AT_Squad/ATS_bazooka_luftfaust/InfantryRPGStats.xdb#xpointer(/InfantryRPGStats)" />
+	</members>
+	<formations>
+		<Item>
+			<type>DEFAULT</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>4.95068</x>
+						<y>-0.707581</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-49.4973</x>
+						<y>-21.2136</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>0</LieFlag>
+			<StatsModifiers href="" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>1</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>1</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>DEFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>2.82867</x>
+						<y>-0.000549</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>43.8406</x>
+						<y>66.4674</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>2</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Infantry/defensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1</SpeedBonus>
+			<DispersionBonus>0.7</DispersionBonus>
+			<FireRateBonus>0.7</FireRateBonus>
+			<RelaxTimeBonus>0.7</RelaxTimeBonus>
+			<CoverBonus>0.9</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+		<Item>
+			<type>OFFENSIVE</type>
+			<order>
+				<Item>
+					<Pos>
+						<x>0.706665</x>
+						<y>0.707428</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+				<Item>
+					<Pos>
+						<x>-46.6263</x>
+						<y>-4.63196</y>
+					</Pos>
+					<Dir>0</Dir>
+				</Item>
+			</order>
+			<LieFlag>1</LieFlag>
+			<StatsModifiers href="/Other/UnitStatsModifier/Game/Formations/Infantry/offensive.xdb#xpointer(/UnitStatsModifier)" />
+			<changesByEvent>
+				<Item>-1</Item>
+			</changesByEvent>
+			<SpeedBonus>1.2</SpeedBonus>
+			<DispersionBonus>1.2</DispersionBonus>
+			<FireRateBonus>1</FireRateBonus>
+			<RelaxTimeBonus>1</RelaxTimeBonus>
+			<CoverBonus>0.5</CoverBonus>
+			<VisibleBonus>1</VisibleBonus>
+		</Item>
+	</formations>
+	<availCommands>00000000000000000000000000000000</availCommands>
+	<availExposures>00000000000000000000000000000000</availExposures>
+	<availUserActions>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserActions>
+	<availUserExposures>
+		<actions>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+			<Item>0</Item>
+		</actions>
+	</availUserExposures>
+	<ReinforcementPrice>1</ReinforcementPrice>
+	<ReinforcementWeight>1</ReinforcementWeight>
+	<EntrenchCover>0.5</EntrenchCover>
+</SquadRPGStats>

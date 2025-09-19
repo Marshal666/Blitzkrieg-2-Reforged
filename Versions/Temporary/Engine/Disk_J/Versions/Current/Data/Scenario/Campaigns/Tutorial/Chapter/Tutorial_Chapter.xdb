@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="1000000">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<LocalizedNameSaveLoad href="" />
+	<LocalizedNameSaveLoadFileRef href="" />
+	<LocalizedDate href="" />
+	<LocalizedDateFileRef href="" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="description.txt" />
+	<Citation href="" />
+	<CitationFileRef href="" />
+	<MissionPath>
+		<Item>
+			<Map href="tutorial4/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>550</x>
+				<y>280</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m8_greyhound_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/US/tanks/m5_general_stuart_usa/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>10</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>3</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="tutorial1/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>150</x>
+				<y>170</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/German/tanks/pz_iii_ausf_e/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>10</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="tutorial2/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>250</x>
+				<y>300</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="/Units/Technics/German/tanks/pz_iv_ausf_d/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/German/artillery/10.5_cm_LeFH18/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/German/aviation/fi_156_storch/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>10</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>1</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="tutorial3/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>350</x>
+				<y>200</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy>
+				<Item>
+					<MechUnit href="" />
+					<Squad href="/Squads/Germany/Main_Squad/german_main_1/SquadRPGStats.xdb#xpointer(/SquadRPGStats)" />
+				</Item>
+				<Item>
+					<MechUnit href="/Units/Technics/German/tanks/pz_iii_ausf_e/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+					<Squad href="" />
+				</Item>
+			</ExpectedEnemy>
+			<RecommendedCalls>10</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>2</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>true</UseMapReinforcements>
+	<BasePlayerReinforcements />
+	<ReinforcementModifiers />
+	<MapPicture href="" />
+	<SeaNoiseMask href="/UI/Campaigns/German/1_France/chapter_map_mask.tga" />
+	<DifferentColourMap href="/UI/Campaigns/German/1_France/chapter_map_S.tga" />
+	<PositiveColour>-16711936</PositiveColour>
+	<NegativeColour>-65536</NegativeColour>
+	<MainStrikeAngle>0</MainStrikeAngle>
+	<MainStrikePower>0</MainStrikePower>
+	<ReinforcementCalls>10</ReinforcementCalls>
+	<DetailsMap href="" />
+	<ArrowTextures />
+	<IntroMovie href="" />
+</Chapter>

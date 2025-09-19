@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="640">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/ChapterMap/ReinfDesc/ButtonOK_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/ReinfDesc/NewReinfs_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="/UI/Game/Menu/ChapterMap/ReinfDesc/RMRName_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="ReinfArea_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="UnitsArea_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ChapterMap/ReinfDesc/ButtonLeft_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="/UI/Game/Menu/ChapterMap/ReinfDesc/ButtonRight_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="UnitParams_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="/UI/Game/Menu/ChapterMap/ReinfDesc/ReinfDescMultiReinf_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>ERA_CENTER</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>356</x>
+				<y>448</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

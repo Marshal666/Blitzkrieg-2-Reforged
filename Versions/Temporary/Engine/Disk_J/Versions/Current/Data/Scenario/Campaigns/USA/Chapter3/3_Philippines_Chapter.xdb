@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="1000020">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="US3_ChapterNameFileRef.txt" />
+	<LocalizedNameSaveLoad href="" />
+	<LocalizedNameSaveLoadFileRef href="NameSaveLoad.txt" />
+	<LocalizedDate href="" />
+	<LocalizedDateFileRef href="" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="us3Chapter_LocalizedDescriptionFileRef.txt" />
+	<MissionPath>
+		<Item>
+			<Map href="USA3.0_14/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>50</RecommendedCalls>
+			<PotentialIncomplete>-500</PotentialIncomplete>
+			<PotentialComplete>100000</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>6</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA3.2/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/1/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/1/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/1/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-40</PotentialIncomplete>
+			<PotentialComplete>100</PotentialComplete>
+			<Type>EMT_AIR_COVER</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA3.3/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/2/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/2/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/2/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-45</PotentialIncomplete>
+			<PotentialComplete>130</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>2</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA3.4/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/3/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/3/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/3/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>110</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>3</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA3.5/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/4/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/4/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/4/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-20</PotentialIncomplete>
+			<PotentialComplete>50</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>4</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA3.6/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/5/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="/Scenario/ChapterBonus/Game/USA/Chapter3/5/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>20</PotentialIncomplete>
+			<PotentialComplete>100</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>5</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>false</UseMapReinforcements>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Field_artillery_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Mobile_assault_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/Chapter_3/Player/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/USA/b_29_suprfortress.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers />
+	<MapPicture href="us3_ChapterMap.xdb#xpointer(/Texture)" />
+	<SeaNoiseMask href="chapter_map (mask).tga" />
+	<DifferentColourMap href="chapter_map (blue).tga" />
+	<PositiveColour>-928439551</PositiveColour>
+	<NegativeColour>-65536</NegativeColour>
+	<MainStrikeAngle>0</MainStrikeAngle>
+	<MainStrikePower>1.1</MainStrikePower>
+	<ReinforcementCalls>50</ReinforcementCalls>
+	<DetailsMap href="US3_Chapter/mapinfo.xdb#xpointer(/MapInfo)" />
+	<ArrowTextures>
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/2_Defence_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/3_Defence_Enemy_Texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+	<IntroMovie href="/Movies/Chronicles/USA/3.xml" />
+	<General>
+		<Desc href="" />
+		<DescFileRef href="US3_General.txt" />
+		<Portrait href="US3_Chapter/superior_general.xdb#xpointer(/Texture)" />
+		<ReinforcementType>RT_GROUND_ATTACK_PLANES</ReinforcementType>
+		<StatBonus href="/Other/UnitStatsModifier/Game/Generals/krueger.xdb#xpointer(/UnitStatsModifier)" />
+	</General>
+</Chapter>

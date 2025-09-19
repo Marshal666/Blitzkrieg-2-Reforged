@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2656">
+	<SrcName href="/Units/Technics/Allies/Tanks/M3_General_Stuart_USA/1.mb" />
+	<uid>56F13A49-AE0C-4676-9357-8A9B8F3B8185</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>110</FirstFrame>
+	<LastFrame>129</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>6</x>
+			<y>-6</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>34</x>
+			<y>64</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>6</x>
+			<y>-6</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>34</x>
+			<y>64</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

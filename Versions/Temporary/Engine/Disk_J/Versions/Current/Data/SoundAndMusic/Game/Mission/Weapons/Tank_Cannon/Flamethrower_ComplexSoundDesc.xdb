@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1004634">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Tank_Cannon/Flamethrower/variant01_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>80</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Tank_Cannon/Flamethrower/variant02_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>80</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Tank_Cannon/Flamethrower/variant03_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>80</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

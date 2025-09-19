@@ -1,0 +1,1609 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<UIConstsB2 ObjectRecordID="1">
+	<Contexts>
+		<Item href="/UI/Game/Mission_TooltipContext.xdb#xpointer(/TooltipContext)" />
+		<Item href="/UI/Game/ChapterMap_TooltipContext.xdb#xpointer(/TooltipContext)" />
+	</Contexts>
+	<Console href="/UI/Game/Console_WindowConsole.xdb#xpointer(/WindowConsole)" />
+	<DebugInfo href="/UI/Game/Debug/DebugWindow_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	<StatsWindow href="/UI/GameStatsWindow_WindowStatsSystem.xdb#xpointer(/WindowStatsSystem)" />
+	<ButtonClickSound>
+		<Commands>
+			<Item href="/Sounds/ui/buttonclicksound.xdb#xpointer(/UISPlaySound)" />
+		</Commands>
+		<Reversable>false</Reversable>
+	</ButtonClickSound>
+	<ActionButtons>
+		<Item>
+			<Action>USER_ACTION_MOVE</Action>
+			<Button href="/UI/Game/Mission/Actions/Move_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="/UI/Game/Mission/Buttons/Actions/Move/move_normal_texture.xdb#xpointer(/Texture)" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ATTACK</Action>
+			<Button href="/UI/Game/Mission/Actions/Attack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="/UI/Game/Mission/Buttons/Actions/Attack/actions_attack_texture.xdb#xpointer(/Texture)" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_LEAVE</Action>
+			<Button href="/UI/Game/Mission/Actions/UnloadAll_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_BOARD</Action>
+			<Button href="/UI/Game/Mission/Actions/LoadInf_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_HOOK_ARTILLERY</Action>
+			<Button href="/UI/Game/Mission/Actions/GunHook_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_DEPLOY_ARTILLERY</Action>
+			<Button href="/UI/Game/Mission/Actions/GunDeploy_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FORMATION_0</Action>
+			<Button href="/UI/Game/Mission/Formations/FormationBasic_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_FORMATIONS</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FORMATION_1</Action>
+			<Button href="/UI/Game/Mission/Formations/FormationMarch_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_FORMATIONS</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FORMATION_2</Action>
+			<Button href="/UI/Game/Mission/Formations/FormationDefence_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_FORMATIONS</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FORMATION_3</Action>
+			<Button href="/UI/Game/Mission/Formations/FormationAttack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_FORMATIONS</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_STOP</Action>
+			<Button href="/UI/Game/Mission/Actions/Stop_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_CAMOFLAGE</Action>
+			<Button href="/UI/Game/Mission/Abilities/Camouflage_1_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SPYGLASS</Action>
+			<Button href="/UI/Game/Mission/Actions/SpyGlass_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_THROW</Action>
+			<Button href="/UI/Game/Mission/Abilities/ThrowGrenade_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>true</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENTRENCH_SELF</Action>
+			<Button href="/UI/Game/Mission/Actions/EntrenchSelf_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENGINEER_BUILD_ENTRENCHMENT</Action>
+			<Button href="/UI/Game/Mission/Actions/EntrenchBuild_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENGINEER_BUILD_FENCE</Action>
+			<Button href="/UI/Game/Mission/Actions/FenceBuild_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_AMBUSH</Action>
+			<Button href="/UI/Game/Mission/Abilities/Ambush_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FORMATION</Action>
+			<Button href="/UI/Game/Mission/Actions/Formation_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_FORMATIONS</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ADVANCED_CAMOFLAGE</Action>
+			<Button href="/UI/Game/Mission/Abilities/Camouflage_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENGINEER_PLACE_MINES</Action>
+			<Button href="/UI/Game/Mission/Actions/PlaceMine_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENGINEER_CLEAR_MINES</Action>
+			<Button href="/UI/Game/Mission/Actions/ClearMine_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_BLASTING_CHARGE</Action>
+			<Button href="/UI/Game/Mission/Abilities/BlastingCharge_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_CONTROLLED_CHARGE</Action>
+			<Button href="/UI/Game/Mission/Abilities/ControlledCharge_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_DETONATE</Action>
+			<Button href="/UI/Game/Mission/Abilities/Detonate_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_HOLD_SECTOR</Action>
+			<Button href="/UI/Game/Mission/Abilities/HoldSector_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_TRACK_TARGETING</Action>
+			<Button href="/UI/Game/Mission/Abilities/TrackTargeting_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>true</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ENGINEER_REPAIR</Action>
+			<Button href="/UI/Game/Mission/Actions/Repair_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SUPPORT_RESUPPLY</Action>
+			<Button href="/UI/Game/Mission/Actions/Resupply_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SUPPRESS</Action>
+			<Button href="/UI/Game/Mission/Abilities/SupressiveFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ROTATE</Action>
+			<Button href="/UI/Game/Mission/Actions/Rotate_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_STAND_GROUND</Action>
+			<Button href="/UI/Game/Mission/Actions/Hold_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_MECH_BOARD</Action>
+			<Button href="/UI/Game/Mission/Actions/LoadMech_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_CRITICAL_TARGETTING</Action>
+			<Button href="/UI/Game/Mission/Abilities/CriticalTargetting_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FLAMETHROWER</Action>
+			<Button href="/UI/Game/Mission/Abilities/Flamethrower_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_MOBILE_FORTRESS</Action>
+			<Button href="/UI/Game/Mission/Abilities/MobileFortress_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>true</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ADRENALINE_RUSH</Action>
+			<Button href="/UI/Game/Mission/Abilities/AdrenalineRush_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_CAUTION</Action>
+			<Button href="/UI/Game/Mission/Abilities/Caution_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_MOVING_SHOOT</Action>
+			<Button href="/UI/Game/Mission/Abilities/MovingFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_COUNTER_FIRE</Action>
+			<Button href="/UI/Game/Mission/Abilities/CounterFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_RAPID_FIRE</Action>
+			<Button href="/UI/Game/Mission/Abilities/RapidFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_COVER_FIRE</Action>
+			<Button href="/UI/Game/Mission/Abilities/CoverFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_EXACT_SHOT</Action>
+			<Button href="/UI/Game/Mission/Abilities/ExactShot_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_FIRST_AID</Action>
+			<Button href="/UI/Game/Mission/Abilities/FirstAid_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_DROP_BOMB</Action>
+			<Button href="/UI/Game/Mission/Abilities/BombTarget_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SMOKE_SHOTS</Action>
+			<Button href="/UI/Game/Mission/Abilities/SmokeShots_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_ZEROING_IN</Action>
+			<Button href="/UI/Game/Mission/Abilities/ZeroingIn_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_LINKED_GRENADES</Action>
+			<Button href="/UI/Game/Mission/Abilities/LinkedGrenades_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SUPPORT_FIRE</Action>
+			<Button href="/UI/Game/Mission/Abilities/SupportFire_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_PATROL</Action>
+			<Button href="/UI/Game/Mission/Abilities/Patrol_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_SPY_MODE</Action>
+			<Button href="/UI/Game/Mission/Abilities/SpyMode_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_ESC</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_MASTER_OF_STREETS</Action>
+			<Button href="/UI/Game/Mission/Abilities/MasterOfStreets_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_CAPTURE_ARTILLERY</Action>
+			<Button href="/UI/Game/Mission/Abilities/CaptureArtillery_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>true</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>true</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+		<Item>
+			<Action>USER_ACTION_EXACT_BOMBING</Action>
+			<Button href="/UI/Game/Mission/Abilities/ExactBombing_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<NewButton href="" />
+			<IsAbility>false</IsAbility>
+			<Autocast>false</Autocast>
+			<Passive>false</Passive>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+			</Pos>
+			<Tooltip href="" />
+			<TooltipFileRef href="" />
+			<Icon href="" />
+			<ForegroundIcon href="" />
+			<IconDisabled href="" />
+			<ForegroundIconDisabled href="" />
+			<PressEffect>false</PressEffect>
+			<Panel>ACTION_BTN_PANEL_DEFAULT</Panel>
+			<TargetPanel>ACTION_BTN_PANEL_DEFAULT</TargetPanel>
+		</Item>
+	</ActionButtons>
+	<M1ActionButtons />
+	<ActionButtonInfos>
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/ambush.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/attack.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/board.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/builddefence.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/buildentrenchment.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/buildfence.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Special/captureartillery.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/changemovementorder.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/clearmines.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/deployartillery.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/disbandsquad.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/entrenchself.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/fillru.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/follow.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/formation.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/formation0_basic.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/formation1_march.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/formation2_defence.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/formation3_assault.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/formation4.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/formsquad.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/guard.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/hookartillery.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/install.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/leave.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/mechboard.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/move.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/movetogrid.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/placemarker.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/placemines.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/ranging.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/repair.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/resupply.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/rotate.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/spyglass.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/standground.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/stop.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/swarm.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/uninstall.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/useshellagit.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/useshelldamage.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/Misc/useshellsmoke.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/adrenalinerush.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/Misc/advcamouflage.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/blastingcharge.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/camouflage.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/caution.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/controlledcharge.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/counterfire.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/coverfire.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/criticaltargeting.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/detonate.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/dropbomb.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/dropparatroopers.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/exactbombing.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/exactshot.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/firstaid.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/flamethrower.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/holdsector.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/overload.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/landmine.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/linkedgrenades.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/masterofstreets.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/masterpilot.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/mobilefortress.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/movingshoot.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/patrol.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/rapidfire.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/skyguard.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/smokeshots.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/spymode.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/supportfire.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/supressfire.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/survival.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/tankhunter.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/throw.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/tracktargeting.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Ability/zeroingin.xdb#xpointer(/ActionButtonInfo)" />
+		<Item href="/Other/ActionButtonInfo/Game/Mission/Actions/radio_controlled_mode.xdb#xpointer(/ActionButtonInfo)" />
+	</ActionButtonInfos>
+	<PlayersColors>
+		<UserColor>
+			<x>0</x>
+			<y>1</y>
+			<z>0</z>
+		</UserColor>
+		<NeutralColor>
+			<x>0.752941</x>
+			<y>0.752941</y>
+			<z>0.752941</z>
+		</NeutralColor>
+		<FriendColors>
+			<Item>
+				<x>0</x>
+				<y>0</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>0</x>
+				<y>0.752941</y>
+				<z>0.752941</z>
+			</Item>
+			<Item>
+				<x>0</x>
+				<y>0.501961</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>0.117647</x>
+				<y>0.67451</y>
+				<z>0.858824</z>
+			</Item>
+		</FriendColors>
+		<EnemyColors>
+			<Item>
+				<x>1</x>
+				<y>0</y>
+				<z>0</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>0.501961</y>
+				<z>0.501961</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>0</y>
+				<z>1</z>
+			</Item>
+			<Item>
+				<x>1</x>
+				<y>0.501961</y>
+				<z>0.752941</z>
+			</Item>
+		</EnemyColors>
+		<UnitFullInfo>
+			<UserForward href="/UI/Game/Mission/UnitFullInfo3/Players/User_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+			<NeutralForward href="/UI/Game/Mission/UnitFullInfo3/Players/Neutral_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+			<FriendForwards>
+				<Item href="/UI/Game/Mission/UnitFullInfo3/Players/Friend01_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+			</FriendForwards>
+			<EnemyForwards>
+				<Item href="/UI/Game/Mission/UnitFullInfo3/Players/Enemy01_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+			</EnemyForwards>
+		</UnitFullInfo>
+		<UserInfo>
+			<Color>65280</Color>
+			<UnitFullInfo href="/UI/Game/Mission/UnitFullInfo3/Players/User_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</UserInfo>
+		<NeutralInfo>
+			<Color>12632256</Color>
+			<UnitFullInfo href="/UI/Game/Mission/UnitFullInfo3/Players/Neutral_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</NeutralInfo>
+		<FriendInfo>
+			<Color>255</Color>
+			<UnitFullInfo href="/UI/Game/Mission/UnitFullInfo3/Players/Friend01_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</FriendInfo>
+		<EnemyInfo>
+			<Color>16711680</Color>
+			<UnitFullInfo href="/UI/Game/Mission/UnitFullInfo3/Players/Enemy01_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+		</EnemyInfo>
+	</PlayersColors>
+	<ReinfButtons>
+		<Item>
+			<Type>RT_ENGINEERING</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf01_Eng_Track_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Ingineer_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/Ingineer_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="" />
+		</Item>
+		<Item>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf02_Inf_Main_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Infantry_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/Infantry_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Main_Infantry_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ASSAULT_INFANTRY</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf03_Inf_Assault_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/AssaultInf_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/AssaultInf_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Assault_Infantry_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_LIGHT_TANKS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf04_Armor_Light_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankLight_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/TankLight_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Light_Tanks_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_TANKS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf05_Armor_Med_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankMedium_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/TankMedium_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Medium_Tanks_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_HEAVY_TANKS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf06_Armor_Hev_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TankHeavy_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/TankHeavy_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Heavy_Tank_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_TANK_DESTROYERS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf07_Armor_TankDestr_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/TD_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/TD_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Tank_Destroyer_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ARTILLERY_ANTITANK</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf08_Art_AntiTank_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/AT_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/AT_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="AT_Artillery_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ARTILLERY</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf09_Art_Field_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Artillery_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/Artillery_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Field_Artillery_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ASSAULT_GUNS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf10_Art_SPG_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/SPG_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/SPG_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Assault_Guns_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ARTILLERY_ROCKET</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf11_Art_MLRS_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Rocket_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/ArtilleryRocket_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Rocket_Artillery_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_FIGHTERS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf12_AntiAir_Fighter_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/PlaneFighters_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/PlaneFighters_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Fighters_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_LIGHT_AAA</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf13_AntiAir_Light_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/AA_Light_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/AA_Light_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Light_AAA_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_HEAVY_AAA</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf14_AntiAir_Heavy_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/AA_Heavy_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/AA_Heavy_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Heavy_AAA_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_GROUND_ATTACK_PLANES</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf15_AirSupport_GrounAttack_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/PlaneGroundAttack_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/PlaneGroundAttack_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="GAP_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_BOMBERS</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf16_AirSupport_Bomber_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Bomber_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/Bomber_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Bombers_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_ELITE_INFANTRY</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf17_AirSuport_Para_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Paratroops_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/Paratroops_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="Elite_Description.txt" />
+		</Item>
+		<Item>
+			<Type>RT_RECON</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf18_AirSupport_Recon_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/PlaneRecon_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/PlaneRecon_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="" />
+		</Item>
+		<Item>
+			<Type>RT_SUPER_WEAPON</Type>
+			<Button href="/UI/Game/Mission/Reinforcement2/Reinf19_SuperWeapon_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+			<Texture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/super_weapon_Texture.xdb#xpointer(/Texture)" />
+			<TextureDisabled href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/Disabled/SuperWeapon_Texture.xdb#xpointer(/Texture)" />
+			<Desc href="" />
+			<DescFileRef href="" />
+		</Item>
+	</ReinfButtons>
+	<ChatSeasonColors>
+		<Item>
+			<Season>SEASON_WINTER</Season>
+			<Color>
+				<x>1</x>
+				<y>0.501961</y>
+				<z>0.25098</z>
+			</Color>
+		</Item>
+		<Item>
+			<Season>SEASON_SPRING</Season>
+			<Color>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Color>
+		</Item>
+		<Item>
+			<Season>SEASON_SUMMER</Season>
+			<Color>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Color>
+		</Item>
+		<Item>
+			<Season>SEASON_AUTUMN</Season>
+			<Color>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Color>
+		</Item>
+		<Item>
+			<Season>SEASON_AFRICA</Season>
+			<Color>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Color>
+		</Item>
+		<Item>
+			<Season>SEASON_ASIA</Season>
+			<Color>
+				<x>1</x>
+				<y>1</y>
+				<z>1</z>
+			</Color>
+		</Item>
+	</ChatSeasonColors>
+	<SeasonNames>
+		<Item>
+			<Season>SEASON_WINTER</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonWinter_Text.txt" />
+		</Item>
+		<Item>
+			<Season>SEASON_SPRING</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonSpring_Text.txt" />
+		</Item>
+		<Item>
+			<Season>SEASON_SUMMER</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonSummer_Text.txt" />
+		</Item>
+		<Item>
+			<Season>SEASON_AUTUMN</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonAutumn_Text.txt" />
+		</Item>
+		<Item>
+			<Season>SEASON_AFRICA</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonAfrica_Text.txt" />
+		</Item>
+		<Item>
+			<Season>SEASON_ASIA</Season>
+			<Name href="" />
+			<NameFileRef href="SeasonAsia_Text.txt" />
+		</Item>
+	</SeasonNames>
+	<Tags>
+		<Item>
+			<Name>color_def</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/color_def_Text.txt" />
+		</Item>
+		<Item>
+			<Name>color_sel</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/color_sel_Text.txt" />
+		</Item>
+		<Item>
+			<Name>hotkey</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/hotkey_Text.txt" />
+		</Item>
+		<Item>
+			<Name>message_box</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/message_box_Text.txt" />
+		</Item>
+		<Item>
+			<Name>h1</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/h1_Text.txt" />
+		</Item>
+		<Item>
+			<Name>h2</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/h2_Text.txt" />
+		</Item>
+		<Item>
+			<Name>body</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/body_Text.txt" />
+		</Item>
+		<Item>
+			<Name>numeric</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/numeric_Text.txt" />
+		</Item>
+		<Item>
+			<Name>button</Name>
+			<Text href="" />
+			<TextFileRef href="Tags/button.txt" />
+		</Item>
+	</Tags>
+	<MPLocalizedGameTypes>
+		<Item>
+			<GameType>MP_GT_STANDARD</GameType>
+			<LocalizedText href="" />
+			<LocalizedTextFileRef href="" />
+		</Item>
+	</MPLocalizedGameTypes>
+	<ChapterMapArrows />
+	<ForbiddenWords href="" />
+	<ForbiddenWordsFileRef href="/Other/Text/Misc/Forbidden.txt" />
+</UIConstsB2>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="4620">
+	<SrcName href="/Units/Technics/Japan/Artillery/FG_75-mm_Type38/2.mb" />
+	<uid>829F30DD-1DB3-4FD4-8483-E6257332E75B</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>1300</Length>
+	<Looped>false</Looped>
+	<FirstFrame>320</FirstFrame>
+	<LastFrame>359</LastFrame>
+	<AABBAName>AABB_A01</AABBAName>
+	<AABBDName>AABB_D01</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>15</x>
+			<y>-24</y>
+			<z>14.6657</z>
+		</Center>
+		<HalfSize>
+			<x>46</x>
+			<y>59</y>
+			<z>32.253</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>23</x>
+			<y>-26</y>
+			<z>20.3201</z>
+		</Center>
+		<HalfSize>
+			<x>35</x>
+			<y>57</y>
+			<z>21.4399</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

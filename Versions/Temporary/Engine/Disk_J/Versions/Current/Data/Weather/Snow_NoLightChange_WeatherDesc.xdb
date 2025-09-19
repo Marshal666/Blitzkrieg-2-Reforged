@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WeatherDesc ObjectRecordID="1000012">
+	<Type>WEATHER_SNOW</Type>
+	<PartMaterial href="" />
+	<PartMaterials>
+		<Item href="Snow_0_Material.xdb#xpointer(/Material)" />
+		<Item href="Snow_1_Material.xdb#xpointer(/Material)" />
+		<Item href="Snow_2_Material.xdb#xpointer(/Material)" />
+		<Item href="Snow_3_Material.xdb#xpointer(/Material)" />
+	</PartMaterials>
+	<PartSize>0.6</PartSize>
+	<FallHeight>60</FallHeight>
+	<Speed>0.002</Speed>
+	<TrajectoryParameter>1</TrajectoryParameter>
+	<Intensity>300</Intensity>
+	<WindAffected>true</WindAffected>
+	<WeatherLight href="" />
+	<Lightnings />
+	<LightningsPerMinute>0</LightningsPerMinute>
+	<LightningsRandom>0</LightningsRandom>
+	<Water href="" />
+	<AmbientSound />
+	<RandomSounds />
+</WeatherDesc>

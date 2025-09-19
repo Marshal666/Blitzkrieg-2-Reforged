@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowComboBox ObjectRecordID="1000001">
+	<ClassTypeID>387064640</ClassTypeID>
+	<Shared href="Player_WindowComboBoxShared.xdb#xpointer(/WindowComboBoxShared)" />
+	<Name>PlayerCombo</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="TTPlayerCombo.txt" />
+	<Visible>true</Visible>
+	<Priority>200</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>50</x>
+				<y>6</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>180</x>
+				<y>32</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<ListPriority>1000</ListPriority>
+	<MaxVisibleRows>2</MaxVisibleRows>
+	<OnSelection>
+		<Commands>
+			<Item href="ChangeSlotStatus_UISRunReaction.xdb#xpointer(/UISRunReaction)" />
+		</Commands>
+		<Reversable>false</Reversable>
+	</OnSelection>
+</WindowComboBox>

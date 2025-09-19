@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="635">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="1Unit/ReinfDesc1Unit_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="1Reinf/ReinfDesc1Reinf_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="MultiReinf/ReinfDescMultiReinf_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="upgrade/reinfdescupgrade_windowsimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ChapterMap/Reinf2/UpgradePanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ChapterMap/Reinf2/CompositionPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ChapterMap/MissionDesc/MissionDesc_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/ChapterMap/ChapterDesc/ChapterDesc_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="ReinfDescBgr_BackgroundSimpleTexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>1024</x>
+				<y>768</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

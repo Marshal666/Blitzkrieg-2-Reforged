@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="100">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Hits/Vehicle/Armor/variant1_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Hits/Vehicle/Armor/variant2_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>30</MinDist>
+			<MaxDist>60</MaxDist>
+			<Probability>50</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

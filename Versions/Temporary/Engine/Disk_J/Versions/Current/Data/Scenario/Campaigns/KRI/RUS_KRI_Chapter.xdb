@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="1000016">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="/Scenario/Campaigns/USSR/Chapter1/Name_Text.txt" />
+	<LocalizedNameSaveLoad href="" />
+	<LocalizedNameSaveLoadFileRef href="" />
+	<LocalizedDate href="" />
+	<LocalizedDateFileRef href="/Scenario/Campaigns/USSR/Chapter1/ChapterDate_Text.txt" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="/Scenario/Campaigns/USSR/Chapter1/Description_Text.txt" />
+	<MissionPath>
+		<Item>
+			<Map href="RUS1.1_KRI/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>496</x>
+				<y>191</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SNOW</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER1.0_KRI/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>30</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>1</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="USA1.2_KRI/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>15</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_EASY</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>true</UseMapReinforcements>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Special/KRI/RUS1.1_KRI/Player/Tank_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Special/KRI/RUS1.1_KRI/Player/Rocket_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers />
+	<MapPicture href="" />
+	<SeaNoiseMask href="/UI/Campaigns/USSR/chapter_map_mask.tga" />
+	<DifferentColourMap href="/UI/Campaigns/USSR/chapter_map_S.tga" />
+	<PositiveColour>-12234896</PositiveColour>
+	<NegativeColour>-13754111</NegativeColour>
+	<MainStrikeAngle>0</MainStrikeAngle>
+	<MainStrikePower>0</MainStrikePower>
+	<ReinforcementCalls>60</ReinforcementCalls>
+	<DetailsMap href="" />
+	<ArrowTextures>
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/2_Defence_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/3_Defence_Enemy_Texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+	<IntroMovie href="" />
+	<General>
+		<Desc href="" />
+		<DescFileRef href="" />
+		<Portrait href="" />
+		<ReinforcementType>RT_MAIN_INFANTRY</ReinforcementType>
+		<StatBonus href="" />
+	</General>
+</Chapter>

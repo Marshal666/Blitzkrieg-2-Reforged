@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="3689">
+	<SrcName href="/Units/Technics/Allies/Auto/Williys_MG/2.mb" />
+	<uid>E8F8CDD5-D496-45D7-B8D7-75A39B7820AD</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>120</FirstFrame>
+	<LastFrame>139</LastFrame>
+	<AABBAName>AABB_A04</AABBAName>
+	<AABBDName>AABB_D04</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>10</x>
+			<y>13</y>
+			<z>33.8759</z>
+		</Center>
+		<HalfSize>
+			<x>62</x>
+			<y>58</y>
+			<z>33.8759</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>10</x>
+			<y>27</y>
+			<z>21.4441</z>
+		</Center>
+		<HalfSize>
+			<x>62</x>
+			<y>44</y>
+			<z>21.4441</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

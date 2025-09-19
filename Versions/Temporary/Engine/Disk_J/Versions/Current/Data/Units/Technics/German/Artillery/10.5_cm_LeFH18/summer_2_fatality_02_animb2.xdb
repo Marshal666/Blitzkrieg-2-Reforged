@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2272">
+	<SrcName href="/Units/Technics/Germany/Artillery/10_5_cm_LeFH18/2.mb" />
+	<uid>7A68E798-8CDE-43FF-BECB-6842540607F8</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>1300</Length>
+	<Looped>false</Looped>
+	<FirstFrame>360</FirstFrame>
+	<LastFrame>399</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>0</x>
+			<y>-15</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>55</x>
+			<y>71</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>1</x>
+			<y>-17</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>58</x>
+			<y>70</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

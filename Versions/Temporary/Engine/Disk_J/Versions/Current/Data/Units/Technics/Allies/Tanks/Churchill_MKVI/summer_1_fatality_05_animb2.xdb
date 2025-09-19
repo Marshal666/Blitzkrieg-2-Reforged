@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2321">
+	<SrcName href="/Units/Technics/Allies/Tanks/Churchill_MKVII_Late/1.mb" />
+	<uid>E09BE16B-8648-4CEA-BCE6-E692E391A564</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>150</FirstFrame>
+	<LastFrame>169</LastFrame>
+	<AABBAName>AABB_A05</AABBAName>
+	<AABBDName>AABB_D05</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>0</x>
+			<y>2</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>47</x>
+			<y>88</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>0</x>
+			<y>2</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>47</x>
+			<y>88</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

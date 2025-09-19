@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowTextView ObjectRecordID="1000155">
+	<ClassTypeID>285694860</ClassTypeID>
+	<Shared href="MedalDescView_WindowTextViewShared.xdb#xpointer(/WindowTextViewShared)" />
+	<Name>MedalDescView</Name>
+	<Tooltip href="" />
+	<TooltipFileRef href="TTMedalDescView_Text.txt" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<Text href="" />
+	<TextFileRef href="/UI/Game/Menu/SingleStatictics2/Test_Text.txt" />
+	<ResizeOnTextSet>true</ResizeOnTextSet>
+	<TextFormat href="/UI/Game/Common/Normal_TextFormat.xdb#xpointer(/TextFormat)" />
+</WindowTextView>

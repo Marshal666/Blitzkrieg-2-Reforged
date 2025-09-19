@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<BuildingRPGStats ObjectRecordID="117">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_BUILDING</GameType>
+	<Comments />
+	<MaxHP>650</MaxHP>
+	<DamageLevels>
+		<Item>
+			<DamageHP>0.8</DamageHP>
+			<VisObj href="damaged01.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0.4</DamageHP>
+			<VisObj href="damaged02.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0.2</DamageHP>
+			<VisObj href="damaged03.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashPhase_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+		<Item>
+			<DamageHP>0</DamageHP>
+			<VisObj href="destroyed.xdb#xpointer(/VisObj)" />
+			<DamageEffectWindow href="" />
+			<DamageEffectSmoke href="/Scene/Effects/All/Destructions/StHouseCrashTotal_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+		</Item>
+	</DamageLevels>
+	<RepairCost>1</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>0.8</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>0.8</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>0.8</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>0.8</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>0.6</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>10</ArmorMin>
+			<ArmorMax>30</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-2</x>
+				<y>-27</y>
+				<z>21.6805</z>
+			</Pos>
+			<Orient>
+				<x>0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-2</x>
+				<y>28</y>
+				<z>21.6805</z>
+			</Pos>
+			<Orient>
+				<x>-0.707107</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>-19</y>
+				<z>55.4082</z>
+			</Pos>
+			<Orient>
+				<x>0.239663</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.970856</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>19</y>
+				<z>55.4082</z>
+			</Pos>
+			<Orient>
+				<x>-0.239663</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.970856</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-2</x>
+				<y>-16</y>
+				<z>89.028</z>
+			</Pos>
+			<Orient>
+				<x>0.644252</x>
+				<y>-0.266858</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-2</x>
+				<y>17</y>
+				<z>89.028</z>
+			</Pos>
+			<Orient>
+				<x>-0.644252</x>
+				<y>-0.266858</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-3</x>
+				<y>-13</y>
+				<z>171.511</z>
+			</Pos>
+			<Orient>
+				<x>0.644252</x>
+				<y>-0.266857</y>
+				<z>0</z>
+				<w>0.716748</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-3</x>
+				<y>14</y>
+				<z>171.511</z>
+			</Pos>
+			<Orient>
+				<x>-0.644252</x>
+				<y>-0.266858</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>-11</y>
+				<z>217.18</z>
+			</Pos>
+			<Orient>
+				<x>0.644252</x>
+				<y>0.266857</y>
+				<z>0</z>
+				<w>0.716748</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>6</x>
+				<y>11</y>
+				<z>217.18</z>
+			</Pos>
+			<Orient>
+				<x>-0.644252</x>
+				<y>0.266858</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-27</x>
+				<y>7</y>
+				<z>29.1606</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>28</x>
+				<y>7</y>
+				<z>29.1606</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-27</x>
+				<y>-20</y>
+				<z>39.397</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>-0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>28</x>
+				<y>-20</y>
+				<z>39.397</z>
+			</Pos>
+			<Orient>
+				<x>0</x>
+				<y>0.707107</y>
+				<z>0</z>
+				<w>0.707107</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-15</x>
+				<y>5</y>
+				<z>88.1179</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>-0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>16</x>
+				<y>5</y>
+				<z>88.1179</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-12</x>
+				<y>11</y>
+				<z>117.603</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>-0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>11</y>
+				<z>117.603</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-12</x>
+				<y>6</y>
+				<z>166.94</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>-0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>13</x>
+				<y>6</y>
+				<z>166.94</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-14</x>
+				<y>-1</y>
+				<z>177.351</z>
+			</Pos>
+			<Orient>
+				<x>0.266858</x>
+				<y>-0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>15</x>
+				<y>-1</y>
+				<z>177.351</z>
+			</Pos>
+			<Orient>
+				<x>0.266858</x>
+				<y>0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-11</x>
+				<y>4</y>
+				<z>225.293</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>-0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>12</x>
+				<y>4</y>
+				<z>225.293</z>
+			</Pos>
+			<Orient>
+				<x>-0.266858</x>
+				<y>0.644252</y>
+				<z>0</z>
+				<w>0.716747</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>31</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/Scene/Effects/All/Destructions/StoneObjectCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDeath href="/Scene/Effects/All/Destructions/StHouseCrashTotal_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>-27</x>
+						<y>-27</y>
+					</Item>
+					<Item>
+						<x>28</x>
+						<y>-27</y>
+					</Item>
+					<Item>
+						<x>28</x>
+						<y>28</y>
+					</Item>
+					<Item>
+						<x>-27</x>
+						<y>28</y>
+					</Item>
+					<Item>
+						<x>-27</x>
+						<y>-27</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>23.625</x>
+		<y>23.625</y>
+	</Origin>
+	<UsePassabilityForVisibility>true</UsePassabilityForVisibility>
+	<visibility>
+		<data />
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>56</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<type>TYPE_BULDING</type>
+	<RestSlots>0</RestSlots>
+	<MedicalSlots>0</MedicalSlots>
+	<PrimaryGun href="" />
+	<slots />
+	<DefaultWindow>
+		<DayObj href="" />
+		<NightObj href="" />
+		<DestroyedObj href="" />
+		<DestroyEffect href="" />
+		<DayDamageLevels />
+		<NightDamageLevels />
+		<MaxHP>100</MaxHP>
+	</DefaultWindow>
+	<entrances />
+	<firePoints />
+	<smokePoints>
+		<Item>
+			<Pos>
+				<x>0</x>
+				<y>0</y>
+				<z>0</z>
+			</Pos>
+			<Direction>24575.6</Direction>
+			<VerticalAngle>0</VerticalAngle>
+			<FireEffect />
+			<Coverage>0</Coverage>
+			<PicturePosition>
+				<x>0</x>
+				<y>0</y>
+			</PicturePosition>
+		</Item>
+	</smokePoints>
+	<dirExplosions />
+	<SightMultiplier>1</SightMultiplier>
+	<SoldierStatsModifier href="/Other/UnitStatsModifier/Game/Buildings/common_small.xdb#xpointer(/UnitStatsModifier)" />
+	<BuildingType>BUILDING_TYPE_UNKNOWN</BuildingType>
+	<VisibilitySrink>true</VisibilitySrink>
+	<ArmorPattern href="/Other/ArmorPattern/Game/building.xdb#xpointer(/ArmorPattern)" />
+	<DamageCoeff>0</DamageCoeff>
+</BuildingRPGStats>

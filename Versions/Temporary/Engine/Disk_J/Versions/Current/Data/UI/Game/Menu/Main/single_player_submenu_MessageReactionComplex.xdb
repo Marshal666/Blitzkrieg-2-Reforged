@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="83">
+	<ClassTypeID>0</ClassTypeID>
+	<branches />
+	<ConditionCheck href="" />
+	<commonBefore>
+		<data>
+			<Item href="/UI/Game/Menu/HideMain_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+		</data>
+	</commonBefore>
+	<commonAfter>
+		<data>
+			<Item href="/UI/Game/Menu/HideMain_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+			<Item href="/UI/Game/Menu/ShowSinglePlayer_ARSendUIMessage.xdb#xpointer(/ARSendUIMessage)" />
+		</data>
+	</commonAfter>
+</MessageReactionComplex>

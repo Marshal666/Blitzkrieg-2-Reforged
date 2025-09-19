@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ClientGameConsts ObjectRecordID="1">
+	<Camera href="/Consts/All/Mission_CameraLimits.xdb#xpointer(/CameraLimits)" />
+	<Cursors>
+		<Item>
+			<FileName href="/Cursors/Default.ani" />
+			<Action>USER_ACTION_UNKNOWN</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_ATTACK</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/Move.ani" />
+			<Action>USER_ACTION_MOVE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/hook_artillery.cur" />
+			<Action>USER_ACTION_HOOK_ARTILLERY</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/follow.cur" />
+			<Action>USER_ACTION_FOLLOW</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/capture_artillery.cur" />
+			<Action>USER_ACTION_CAPTURE_ARTILLERY</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/board.cur" />
+			<Action>USER_ACTION_BOARD</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/board.cur" />
+			<Action>USER_ACTION_MECH_BOARD</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_THROW</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/set_mines.cur" />
+			<Action>USER_ACTION_LAND_MINE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_TRACK_TARGETING</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/deploy_artillery.cur" />
+			<Action>USER_ACTION_DEPLOY_ARTILLERY</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/leave.cur" />
+			<Action>USER_ACTION_LEAVE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/repair.cur" />
+			<Action>USER_ACTION_ENGINEER_REPAIR</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/resupply.cur" />
+			<Action>USER_ACTION_SUPPORT_RESUPPLY</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/entrench_self.cur" />
+			<Action>USER_ACTION_ENTRENCH_SELF</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_DROP_BOMB</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/human_resupply.cur" />
+			<Action>USER_ACTION_FIRST_AID</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_EXACT_SHOT</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_COVER_FIRE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/rotate.cur" />
+			<Action>USER_ACTION_ROTATE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/set_mines.cur" />
+			<Action>USER_ACTION_ENGINEER_PLACE_MINES</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/clear_mines.cur" />
+			<Action>USER_ACTION_ENGINEER_CLEAR_MINES</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/use_spyglasses.cur" />
+			<Action>USER_ACTION_SPYGLASS</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/swarm.cur" />
+			<Action>USER_ACTION_SWARM</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/fill_ru.cur" />
+			<Action>USER_ACTION_FILL_RU</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/ranging.cur" />
+			<Action>USER_ACTION_RANGING</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/supress.cur" />
+			<Action>USER_ACTION_SUPPRESS</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/build_entrenchment.cur" />
+			<Action>USER_ACTION_ENGINEER_BUILD_ENTRENCHMENT</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/build_wire_fence.cur" />
+			<Action>USER_ACTION_ENGINEER_BUILD_DEFENSE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/ranging.cur" />
+			<Action>USER_ACTION_ZEROING_IN</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/build_wire_fence.cur" />
+			<Action>USER_ACTION_ENGINEER_BUILD_FENCE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/reinforcement.ani" />
+			<Action>USER_ACTION_REINF_COMMON</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/aviation.cur" />
+			<Action>USER_ACTION_REINF_BOMB</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/ranging.cur" />
+			<Action>USER_ACTION_REINF_PARATROOPERS</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/Default.ani" />
+			<Action>USER_ACTION_MOVE_LIKE_TERRAIN</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/AttackValid.ani" />
+			<Action>USER_ACTION_SUPER_WEAPON_MODE</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+		<Item>
+			<FileName href="/Cursors/reinforcement.ani" />
+			<Action>USER_ACTION_PLACE_MARKER</Action>
+			<M1Action>M1_ACTION_UNKNOWN</M1Action>
+		</Item>
+	</Cursors>
+	<ActionsPriority>
+		<SelfActions>
+			<Item>USER_ACTION_DEPLOY_ARTILLERY</Item>
+			<Item>USER_ACTION_LEAVE</Item>
+			<Item>USER_ACTION_ENGINEER_REPAIR</Item>
+			<Item>USER_ACTION_SUPPORT_RESUPPLY</Item>
+			<Item>USER_ACTION_ENTRENCH_SELF</Item>
+		</SelfActions>
+		<FriendActions>
+			<Item>USER_ACTION_HOOK_ARTILLERY</Item>
+			<Item>USER_ACTION_DEPLOY_ARTILLERY</Item>
+			<Item>USER_ACTION_BOARD</Item>
+			<Item>USER_ACTION_MECH_BOARD</Item>
+			<Item>USER_ACTION_SUPPORT_RESUPPLY</Item>
+			<Item>USER_ACTION_FILL_RU</Item>
+			<Item>USER_ACTION_ENGINEER_REPAIR</Item>
+			<Item>USER_ACTION_FOLLOW</Item>
+		</FriendActions>
+		<EnemyActions>
+			<Item>USER_ACTION_ATTACK</Item>
+		</EnemyActions>
+		<NeutralActions>
+			<Item>USER_ACTION_CAPTURE_ARTILLERY</Item>
+			<Item>USER_ACTION_FILL_RU</Item>
+			<Item>USER_ACTION_ENGINEER_REPAIR</Item>
+			<Item>USER_ACTION_BOARD</Item>
+			<Item>USER_ACTION_MOVE_LIKE_TERRAIN</Item>
+			<Item>USER_ACTION_MOVE</Item>
+			<Item>USER_ACTION_UNKNOWN</Item>
+		</NeutralActions>
+	</ActionsPriority>
+	<M1ActionsPriority>
+		<SelfActions />
+		<FriendActions />
+		<EnemyActions />
+		<NeutralActions />
+	</M1ActionsPriority>
+	<AcksParameters>
+		<Item>
+			<AckType>ACK_POSITIVE</AckType>
+			<AckClass>ACKT_POSITIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Positive/Text.txt" />
+			<TimeAfterPrevious>2000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NEGATIVE</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Negative/Text.txt" />
+			<TimeAfterPrevious>3000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_SELECTED</AckType>
+			<AckClass>ACKT_SELECTION</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Selected/Text.txt" />
+			<TimeAfterPrevious>3000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_INVALID_TARGET</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_CannotAttackInvalidTarget/Text.txt" />
+			<TimeAfterPrevious>2000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_DONT_SEE_THE_ENEMY</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_CannotAttackDontSeeTarget/Text.txt" />
+			<TimeAfterPrevious>2000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NOT_IN_ATTACK_ANGLE</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_NotInAttackAngle/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NOT_IN_FIRE_RANGE</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_NotInFireRange/Text.txt" />
+			<TimeAfterPrevious>2000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NO_AMMO</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_NoAmmo/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_CANNOT_PIERCE</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_CanNotPierce/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_CANNOT_MOVE_TRACK_DAMAGED</AckType>
+			<AckClass>ACKT_NEGATIVE</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_CanNotMoveTrackDamaged/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_GOING_TO_STORAGE</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_GoingToStorage/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NO_RESOURCES_CANT_FIND_DEPOT</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Cant_Find_Depot/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_START_SERVICE_RESUPPLY</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Start_Service_Resupply/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_START_SERVICE_REPAIR</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Start_Service_Repair/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_PLANE_LEAVING</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_PlaneLeaving/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_BORED_ATTACK</AckType>
+			<AckClass>ACKT_BORED</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_BoredAttack/Text.txt" />
+			<TimeAfterPrevious>10000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_BORED_IDLE</AckType>
+			<AckClass>ACKT_BORED</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Idle/Text.txt" />
+			<TimeAfterPrevious>30000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_SELECTION_TO_MUCH</AckType>
+			<AckClass>ACKT_SELECTION</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_SelectonTooMuch/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_PLANE_REACH_POINT_START_ATTACK</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Plane_Start_Attack/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_KILLED_ENEMY</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_KilledEnemy/Text.txt" />
+			<TimeAfterPrevious>15000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_BUILDING_FINISHED</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_BuildingFinished/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_CANNOT_FINISH_BUILD</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_CannotFinishBuilding/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_NEGATIVE_NOTIFICATION</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Negative/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_UNIT_DIED</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_Died/Text.txt" />
+			<TimeAfterPrevious>6000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_MOVE_END</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_MoveEnd/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_UNDER_ATTACK</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_UnderAttack/Text.txt" />
+			<TimeAfterPrevious>20000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_ENEMY_FOUND</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_EnemyFound/Text.txt" />
+			<TimeAfterPrevious>20000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_ORDER_FINISHED</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_OrderFinished/Text.txt" />
+			<TimeAfterPrevious>4000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_REINFORCEMENT_ARRIVED</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_ReinforcementArrived/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_INTERFACE</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_MINE_FOUND</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_MineFound/Text.txt" />
+			<TimeAfterPrevious>10000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_START_SERVICE_BUILDING</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_StartServiceBuilding/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_LOW_AMMO</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_LowAmmo/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+		<Item>
+			<AckType>ACK_LOW_HIT_POINTS</AckType>
+			<AckClass>ACKT_NOTIFY</AckClass>
+			<TextString href="" />
+			<TextStringFileRef href="/Other/Text/LocalizedAcks/Ack_LowHitPoints/Text.txt" />
+			<TimeAfterPrevious>1000</TimeAfterPrevious>
+			<Position>ACK_POS_UNIT</Position>
+		</Item>
+	</AcksParameters>
+	<AckConsts>
+		<MinAckRadius>0</MinAckRadius>
+		<MaxAckRadius>0</MaxAckRadius>
+		<TimeAckWait>0</TimeAckWait>
+		<NumSelectionsBeforeAnnoyed>3</NumSelectionsBeforeAnnoyed>
+	</AckConsts>
+	<MechUnitIconsSets>
+		<Item>
+			<Type>Super</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>90</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Train</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>60</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Torpedo_Boat</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>60</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Tank_Destroyer</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>45</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Heavy_Tank</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>55</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Medium_Tank</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>50</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Light_Tank</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Mortar</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>25</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Landing_Boat</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>55</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Coast_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>60</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Recon_Plane</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>50</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Cargo_Plane</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>60</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Ground_Attack_Plane</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>60</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Bomber</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>6</Raising>
+			<HPBarLen>80</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Fighter</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>6</Raising>
+			<HPBarLen>65</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Armored_Fighting_Vehicle</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>30</HPBarLen>
+		</Item>
+		<Item>
+			<Type>APC</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Tractor</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Resupply_Track</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Engineering_Track</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>MLRS</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>40</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Heavy_Machine_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>20</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Field_Artillery</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>45</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Assault_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>50</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Anti_Tank_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>35</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Anti_Aircraft_SPG</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>45</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Light_Anti_Aircraft_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>35</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Heavy_Anti_Aircraft_Gun</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>45</HPBarLen>
+		</Item>
+		<Item>
+			<Type>UNIT_TYPE_UNKNOWN</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>4</Raising>
+			<HPBarLen>55</HPBarLen>
+		</Item>
+	</MechUnitIconsSets>
+	<SquadIconsSets>
+		<Item>
+			<Type>SQUAD_TYPE_UNKNOWN</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>2</Raising>
+			<HPBarLen>15</HPBarLen>
+		</Item>
+	</SquadIconsSets>
+	<BuildingIconsSets>
+		<Item>
+			<Type>Large</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>10</Raising>
+			<HPBarLen>150</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Medium</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>100</HPBarLen>
+		</Item>
+		<Item>
+			<Type>Small</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>50</HPBarLen>
+		</Item>
+		<Item>
+			<Type>BUILDING_TYPE_UNKNOWN</Type>
+			<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+			<Raising>3</Raising>
+			<HPBarLen>70</HPBarLen>
+		</Item>
+	</BuildingIconsSets>
+	<PassengerIconsSet>
+		<IconsSet href="IconsSet/IconsSet.xdb#xpointer(/IconsSet)" />
+		<HPBarLen>15</HPBarLen>
+	</PassengerIconsSet>
+	<MapCommandAck>
+		<VisObj href="/Objects/SimpleObjects/ActionPoint/whole.xdb#xpointer(/VisObj)" />
+		<ShowTime>1</ShowTime>
+	</MapCommandAck>
+	<MapCommandAckDir>
+		<VisObj href="" />
+		<ShowTime>1</ShowTime>
+	</MapCommandAckDir>
+	<MapPointer href="/Objects/SimpleObjects/pointer/destroyed.xdb#xpointer(/VisObj)" />
+	<Noises href="/Noises/noises.xml" />
+</ClientGameConsts>

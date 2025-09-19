@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="1466">
+	<SrcName href="/Units/Technics/Germany/Artillery/7.5_cm PaK40/2.mb" />
+	<uid>C7D740CC-A7B7-4E9D-B857-40B565144E3A</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>1300</Length>
+	<Looped>false</Looped>
+	<FirstFrame>360</FirstFrame>
+	<LastFrame>399</LastFrame>
+	<AABBAName>AABB_A02</AABBAName>
+	<AABBDName>AABB_D02</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>7</x>
+			<y>-4</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>47</x>
+			<y>64</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>0</x>
+			<y>-5</y>
+			<z>27.5703</z>
+		</Center>
+		<HalfSize>
+			<x>38</x>
+			<y>60</y>
+			<z>28.4433</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>0.07</MoveSpeed>
+</AnimB2>

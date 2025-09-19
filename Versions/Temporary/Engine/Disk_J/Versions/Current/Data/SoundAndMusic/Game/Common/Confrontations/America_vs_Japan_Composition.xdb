@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Composition ObjectRecordID="8">
+	<Track href="America_vs_Japan_MusicTrack.xdb#xpointer(/MusicTrack)" />
+	<FadeIn href="/Other/Fade/Game/instant_fade_in.xdb#xpointer(/Fade)" />
+	<FadeOut href="/Other/Fade/Game/instant_fade_out.xdb#xpointer(/Fade)" />
+	<PlayTime href="/SoundAndMusic/Game/one_song_PlayTime.xdb#xpointer(/PlayTime)" />
+	<PlayPauseAfter>
+		<PauseTime>5000</PauseTime>
+		<PauseRandom>3000</PauseRandom>
+	</PlayPauseAfter>
+</Composition>

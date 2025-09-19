@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Chapter ObjectRecordID="32">
+	<ScenarioUnitsModifiers />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Name.txt" />
+	<LocalizedNameSaveLoad href="" />
+	<LocalizedNameSaveLoadFileRef href="NameSaveLoad.txt" />
+	<LocalizedDate href="" />
+	<LocalizedDateFileRef href="Date.txt" />
+	<LocalizedDescription href="" />
+	<LocalizedDescriptionFileRef href="Description.txt" />
+	<MissionPath>
+		<Item>
+			<Map href="GER3.0/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>3</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward />
+			<ExpectedEnemy />
+			<RecommendedCalls>56</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_FINAL</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_RAIN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER3.1/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="FieldArtillery_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="TankMedium_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>2</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_RAIN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER3.2/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GER3.2/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.2/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.2/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.2/4_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>5</RecommendedCalls>
+			<PotentialIncomplete>-6</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_CONVOY_PROTECT</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_NIGHT</Time>
+			<Weather>EMW_RAIN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER3.5/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GER3.5/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.5/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.5/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.5/4_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>2</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_DEFENCE</Type>
+			<Difficulty>EMD_MEDIUM</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER3.6_2/mapinfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GER3.6_2/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.6_2/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>5</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DAY</Time>
+			<Weather>EMW_SUN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+		<Item>
+			<Map href="GER3.7/MapInfo.xdb#xpointer(/MapInfo)" />
+			<PlaceOnChapterMap>
+				<x>0</x>
+				<y>0</y>
+			</PlaceOnChapterMap>
+			<MissionsToEnable>0</MissionsToEnable>
+			<MissionEnableType>MET_REGULAR</MissionEnableType>
+			<Reward>
+				<Item href="GER3.7/1_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.7/2_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.7/3_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+				<Item href="GER3.7/4_ChapterBonus.xdb#xpointer(/ChapterBonus)" />
+			</Reward>
+			<ExpectedEnemy />
+			<RecommendedCalls>6</RecommendedCalls>
+			<PotentialIncomplete>-10</PotentialIncomplete>
+			<PotentialComplete>10</PotentialComplete>
+			<Type>EMT_ATTACK</Type>
+			<Difficulty>EMD_HARD</Difficulty>
+			<Time>EMDT_DUSK</Time>
+			<Weather>EMW_RAIN</Weather>
+			<ShowPotentialComplete>false</ShowPotentialComplete>
+			<MainStrikeAngle>0</MainStrikeAngle>
+			<MainStrikePower>0</MainStrikePower>
+			<RecommendedOrder>0</RecommendedOrder>
+			<EndOffset>
+				<x>0</x>
+				<y>0</y>
+			</EndOffset>
+		</Item>
+	</MissionPath>
+	<ScriptFileRef href="" />
+	<UseMapReinforcements>false</UseMapReinforcements>
+	<BasePlayerReinforcements>
+		<Item>
+			<Reinforcements>
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Main_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Assault_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Elite_Squad_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Anti_tank_art_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Tank_Destroyer_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Tank_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Tank_medium_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/AA_light_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/AA_heavy_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Fighter_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/Bomber_Reinforcement.xdb#xpointer(/Reinforcement)" />
+				<Item href="/Reinforcements/Reinforcement/Game/!B2_final/Germany/Chapter_3/Player/GAP_Reinforcement.xdb#xpointer(/Reinforcement)" />
+			</Reinforcements>
+		</Item>
+	</BasePlayerReinforcements>
+	<ReinforcementModifiers />
+	<MapPicture href="chapter_map.xdb#xpointer(/Texture)" />
+	<SeaNoiseMask href="GER_Chapter3_map/chapter_map(mask).tga" />
+	<DifferentColourMap href="GER_Chapter3_map/chapter_map(blue).tga" />
+	<PositiveColour>-928439551</PositiveColour>
+	<NegativeColour>-65536</NegativeColour>
+	<MainStrikeAngle>195</MainStrikeAngle>
+	<MainStrikePower>5</MainStrikePower>
+	<ReinforcementCalls>56</ReinforcementCalls>
+	<DetailsMap href="GER_Chapter3_map/MapInfo.xdb#xpointer(/MapInfo)" />
+	<ArrowTextures>
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/0_Arrow_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/1_Arrow_Enemy_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/2_Defence_Own_Texture.xdb#xpointer(/Texture)" />
+		<Item href="/Scene/TexAndMats/Game/Menu/ChapterMap/Arrows/3_Defence_Enemy_Texture.xdb#xpointer(/Texture)" />
+	</ArrowTextures>
+	<IntroMovie href="/Movies/Chronicles/GER/3.xml" />
+	<General>
+		<Desc href="" />
+		<DescFileRef href="Ger3_general.txt" />
+		<Portrait href="GER_Chapter3_map/superior_general.xdb#xpointer(/Texture)" />
+		<ReinforcementType>RT_TANK_DESTROYERS</ReinforcementType>
+		<StatBonus href="/Other/UnitStatsModifier/Game/Generals/paulus.xdb#xpointer(/UnitStatsModifier)" />
+	</General>
+</Chapter>

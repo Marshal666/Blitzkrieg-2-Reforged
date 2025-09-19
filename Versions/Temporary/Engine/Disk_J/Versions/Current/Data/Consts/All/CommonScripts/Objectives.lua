@@ -1,0 +1,16 @@
+__objective_global_name = "temp.objective.";
+
+function ObjectiveState( obj )
+	objstate = GetIGlobalVar( __objective_global_name .. obj, 0 );
+	return objstate;
+end;
+
+function SetObjectiveState( obj, state )
+	SetIGlobalVar( __objective_global_name .. obj, state );
+	ObjectiveChanged( obj, 0 );
+end;
+
+GetObjectiveState = ObjectiveState;
+
+function CompleteObjective( objnum )	ObjectiveChanged( objnum, 2 );	SetIGlobalVar( __objective_global_name .. objnum, 2 );end;function FailObjective( objnum )	ObjectiveChanged( objnum, 3 );	SetIGlobalVar( __objective_global_name .. objnum, 3 );end;function GiveObjective( objnum )	if ( GetIGlobalVar( __objective_global_name .. objnum, 0 ) == 0 ) then		ObjectiveChanged( objnum, 1 );		SetIGlobalVar( __objective_global_name .. objnum, 1 );	end;end;function ObjectiveFunctionPrototype( checkfunc )	while ( 1 ) do		Wait( 2 );		if ( checkfunc() ~= nil ) then break end;	end;end;
+function StartAllObjectives( objective_checks, number_of_checks )	for i = 1, number_of_checks do		StartThread( ObjectiveFunctionPrototype, objective_checks[ i ] );	end;end;--Trace( "Objectives functions loaded" );

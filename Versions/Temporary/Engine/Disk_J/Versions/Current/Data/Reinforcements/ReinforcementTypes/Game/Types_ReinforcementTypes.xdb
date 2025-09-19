@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ReinforcementTypes ObjectRecordID="1">
+	<TypeInfo>
+		<Item>
+			<Type>RT_GROUND_ATTACK_PLANES</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/ui/game/menu/armymanager/parts/startreinforcements/ground_attack_planes.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_FIGHTERS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Fighters/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_BOMBERS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Bombers/Text.txt" />
+			<UserAction>USER_ACTION_REINF_BOMB</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_PARATROOPS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Paratroops/Text.txt" />
+			<UserAction>USER_ACTION_REINF_PARATROOPERS</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_TANKS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Medium_Tanks/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_LIGHT_TANKS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Light_Tanks/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_ASSAULT_GUNS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Assault_Guns/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_TANK_DESTROYERS</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Tank_Destroyers/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Battle_Boats/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_ARTILLERY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Artillery/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_HEAVY_ARTILLERY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Heavy_Artillery/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Main_Infantry/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_ASSAULT_INFANTRY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Assault_Infantry/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>RT_MAIN_INFANTRY</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/Assault_Squad/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+		<Item>
+			<Type>_RT_NONE</Type>
+			<Tooltip href="" />
+			<TooltipFileRef href="/Other/Text/Game/Tooltips/Reinforcements/Types/None/Text.txt" />
+			<UserAction>USER_ACTION_REINF_COMMON</UserAction>
+		</Item>
+	</TypeInfo>
+</ReinforcementTypes>

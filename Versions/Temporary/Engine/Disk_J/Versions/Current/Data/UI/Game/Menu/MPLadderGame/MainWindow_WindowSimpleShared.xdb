@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="595">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="Maps_WindowListCtrl.xdb#xpointer(/WindowListCtrl)" />
+		<Item href="MainWindow/StartGame_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="MainWindow/Back_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="MainWindow/InfoArea_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="MainWindow/Controls_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Common/HeaderPanel_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Title_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="ChecksumPWL/PWLBgr_WindowSimple.xdb#xpointer(/WindowSimple)" />
+	</Children>
+	<Background href="/UI/Game/Menu/MPCommon/defaultbackground_backgroundsimpletexture.xdb#xpointer(/BackgroundSimpleTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>50</y>
+			</First>
+			<Second>true</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_MARGIN</First>
+			<Second>true</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>30</y>
+			</First>
+			<Second>true</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>true</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

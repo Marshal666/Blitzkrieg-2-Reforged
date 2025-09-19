@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowSimpleShared ObjectRecordID="1000342">
+	<Crap>false</Crap>
+	<Children>
+		<Item href="/UI/Game/Menu/Common/ButtonBackground_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/MPLadderStatistics/MedalPopup/TopPart_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="/UI/Game/Menu/MPLadderStatistics/MedalPopup/Close_WindowMSButton.xdb#xpointer(/WindowMSButton)" />
+		<Item href="HorizLine_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="IconArea_WindowSimple.xdb#xpointer(/WindowSimple)" />
+		<Item href="Title_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="MedalName_WindowTextView.xdb#xpointer(/WindowTextView)" />
+		<Item href="MedalDesc_WindowTextView.xdb#xpointer(/WindowTextView)" />
+	</Children>
+	<Background href="/UI/Game/Menu/Common/PopupOuterBackground_BackgroundTiledTexture.xdb#xpointer(/BackgroundTiledTexture)" />
+	<Foreground href="" />
+	<Flags>
+		<Transparent>false</Transparent>
+	</Flags>
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<ActiveArea />
+	<IgnoreDblClick>false</IgnoreDblClick>
+</WindowSimpleShared>

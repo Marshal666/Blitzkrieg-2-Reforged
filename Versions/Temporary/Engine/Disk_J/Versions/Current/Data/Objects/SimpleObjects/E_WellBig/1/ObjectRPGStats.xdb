@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ObjectRPGStats ObjectRecordID="178">
+	<KeyName />
+	<ParentName />
+	<StatsType />
+	<VisType>SGVOT_MESH</VisType>
+	<GameType>SGVOGT_OBJECT</GameType>
+	<Comments />
+	<MaxHP>100</MaxHP>
+	<DamageLevels />
+	<RepairCost>0</RepairCost>
+	<defences>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+		<Item>
+			<ArmorMin>20</ArmorMin>
+			<ArmorMax>20</ArmorMax>
+			<Silhouette>1</Silhouette>
+		</Item>
+	</defences>
+	<visualObject href="whole.xdb#xpointer(/VisObj)" />
+	<IconTexture href="icon_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="name.txt" />
+	<SelectionScale>1.4</SelectionScale>
+	<SelectionType>SELECTION_TYPE_GROUND</SelectionType>
+	<LightEffects />
+	<SurfacePoints>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>-41</y>
+				<z>9.30432</z>
+			</Pos>
+			<Orient>
+				<x>0.578495</x>
+				<y>-0.098563</y>
+				<z>0</z>
+				<w>0.809709</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-10</x>
+				<y>8</y>
+				<z>9.30432</z>
+			</Pos>
+			<Orient>
+				<x>-0.592531</x>
+				<y>0.037383</y>
+				<z>0</z>
+				<w>0.80468</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>38</x>
+				<y>-29</y>
+				<z>10.3667</z>
+			</Pos>
+			<Orient>
+				<x>0.140557</x>
+				<y>-0.034053</y>
+				<z>0</z>
+				<w>0.989487</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>38</x>
+				<y>42</y>
+				<z>10.3667</z>
+			</Pos>
+			<Orient>
+				<x>-0.517281</x>
+				<y>0</y>
+				<z>0</z>
+				<w>0.855816</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-16</x>
+				<y>-37</y>
+				<z>16.1024</z>
+			</Pos>
+			<Orient>
+				<x>0.563484</x>
+				<y>-0.103205</y>
+				<z>0</z>
+				<w>0.819655</w>
+			</Orient>
+		</Item>
+		<Item>
+			<Pos>
+				<x>-5</x>
+				<y>-37</y>
+				<z>16.1024</z>
+			</Pos>
+			<Orient>
+				<x>0.003252</x>
+				<y>0.02079</y>
+				<z>0</z>
+				<w>0.999779</w>
+			</Orient>
+		</Item>
+	</SurfacePoints>
+	<NeedSurfacePoints>true</NeedSurfacePoints>
+	<IconsSet href="" />
+	<IconsSetParams>
+		<Custom>false</Custom>
+		<Raising>0</Raising>
+		<HPBarLen>0</HPBarLen>
+	</IconsSetParams>
+	<AIPassabilityClass>31</AIPassabilityClass>
+	<Burn>false</Burn>
+	<EffectExplosion href="/Scene/Effects/All/Destructions/StoneObjectCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDeath href="/Scene/Effects/All/Destructions/StoneObjectCrash_ComplexEffect.xdb#xpointer(/ComplexEffect)" />
+	<EffectDisappear href="" />
+	<LeaveCorpse>false</LeaveCorpse>
+	<DestructableCorpse>true</DestructableCorpse>
+	<ShootOnDestruction href="" />
+	<StaticDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</StaticDebris>
+	<DynamicDebris>
+		<Debris href="" />
+		<Masks />
+		<NeedDebris>false</NeedDebris>
+	</DynamicDebris>
+	<HasPassability>true</HasPassability>
+	<passability>
+		<data>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+			<Item>
+				<data>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+					<Item>1</Item>
+				</data>
+			</Item>
+		</data>
+	</passability>
+	<PassProfile>
+		<polygons>
+			<Item>
+				<verts>
+					<Item>
+						<x>-8</x>
+						<y>-52</y>
+					</Item>
+					<Item>
+						<x>34</x>
+						<y>-47</y>
+					</Item>
+					<Item>
+						<x>50</x>
+						<y>-30</y>
+					</Item>
+					<Item>
+						<x>48</x>
+						<y>-20</y>
+					</Item>
+					<Item>
+						<x>50</x>
+						<y>-20</y>
+					</Item>
+					<Item>
+						<x>50</x>
+						<y>47</y>
+					</Item>
+					<Item>
+						<x>27</x>
+						<y>47</y>
+					</Item>
+					<Item>
+						<x>27</x>
+						<y>34.6429</y>
+					</Item>
+					<Item>
+						<x>-12</x>
+						<y>43</y>
+					</Item>
+					<Item>
+						<x>-36</x>
+						<y>39</y>
+					</Item>
+					<Item>
+						<x>-38</x>
+						<y>18</y>
+					</Item>
+					<Item>
+						<x>-34</x>
+						<y>-19</y>
+					</Item>
+					<Item>
+						<x>-31</x>
+						<y>-48</y>
+					</Item>
+					<Item>
+						<x>-8</x>
+						<y>-52</y>
+					</Item>
+				</verts>
+				<Fake>0</Fake>
+			</Item>
+		</polygons>
+		<Fake>0</Fake>
+	</PassProfile>
+	<Origin>
+		<x>35.2292</x>
+		<y>40.2188</y>
+	</Origin>
+	<UsePassabilityForVisibility>false</UsePassabilityForVisibility>
+	<visibility>
+		<data />
+	</visibility>
+	<VisOrigin>
+		<x>0</x>
+		<y>0</y>
+	</VisOrigin>
+	<AmbientSound href="" />
+	<CycledSound href="" />
+	<AmbientSounds />
+	<CycledSoundTimed />
+	<CanFall>false</CanFall>
+	<ObjectHeight>99</ObjectHeight>
+	<FallEffect href="" />
+	<FallDuration>3000</FallDuration>
+	<FallCycles>2</FallCycles>
+	<SpecificJoints />
+	<HideForPerformance>false</HideForPerformance>
+</ObjectRPGStats>

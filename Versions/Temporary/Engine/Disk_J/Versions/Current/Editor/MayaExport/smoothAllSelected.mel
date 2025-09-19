@@ -1,0 +1,28 @@
+//Smoth all secected polyshapes
+// can be used in batch mode of Maya
+
+// 13.02.2004 Eugene Melkov
+
+
+global proc int smoothAllSelected()
+{
+$list = `ls -sl -tr`;
+$list_mesh = `ls -dag -lf -sl -et "mesh"`;
+if (size($list_mesh)==0)
+          {
+               warning "No polymesh was found for smoothing.";
+               return 1;
+          }
+for ($n in $list_mesh)
+     {
+//          print ("\nCheck: " + $n + " have been smoothed.");
+          select -r $n;
+          $en = `polyEvaluate -e`;
+          $a = $en[0]-1;
+          $comm = "polySoftEdge -a 180 -ch 1 "+$n+".e[0:" + $a + "]";
+          eval $comm;
+
+     }
+     select -r $list;
+     return 0;
+}

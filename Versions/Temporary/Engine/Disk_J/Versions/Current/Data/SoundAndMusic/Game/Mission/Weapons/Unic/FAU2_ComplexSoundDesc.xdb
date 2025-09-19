@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSoundDesc ObjectRecordID="1004617">
+	<sounds>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Unic/Fau2/variant01_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+		<Item>
+			<PathName href="/SoundAndMusic/All/Weapons/Unic/Fau2/variant02_SoundDesc.xdb#xpointer(/SoundDesc)" />
+			<MinDist>50</MinDist>
+			<MaxDist>100</MaxDist>
+			<Probability>100</Probability>
+			<soundType>COMBAT</soundType>
+		</Item>
+	</sounds>
+	<Looped>false</Looped>
+</ComplexSoundDesc>

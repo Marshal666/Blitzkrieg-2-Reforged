@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="19">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="/UI/Game/Mission/ActionTabControl/switch_reinforcment_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+					<Item href="/UI/Game/Mission/MultifunctionTabControl/switch_reinforcment_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+					<Item href="/UI/Game/Mission/Reinforcment/update_reinforcment_avail_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+					<Item href="/UI/Game/Mission/Reinforcment/open_reinforcement_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="/UI/Game/Mission/Buttons/check_button_reinforcment_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data />
+	</commonAfter>
+</MessageReactionComplex>

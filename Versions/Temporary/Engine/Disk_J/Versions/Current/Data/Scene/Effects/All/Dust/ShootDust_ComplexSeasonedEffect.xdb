@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ComplexSeasonedEffect ObjectRecordID="4">
+	<SoundEffect href="" />
+	<Seasons>
+		<Item>
+			<SeasonToUse>SEASON_WINTER</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotSnow_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+		<Item>
+			<SeasonToUse>SEASON_SPRING</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotDust_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+		<Item>
+			<SeasonToUse>SEASON_SUMMER</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotDust_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+		<Item>
+			<SeasonToUse>SEASON_AUTUMN</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotDust_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+		<Item>
+			<SeasonToUse>SEASON_AFRICA</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotDust_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+		<Item>
+			<SeasonToUse>SEASON_ASIA</SeasonToUse>
+			<SceneEffect href="/Scene/Effects/All/Shots/CannonShotDust_Effect.xdb#xpointer(/Effect)" />
+		</Item>
+	</Seasons>
+</ComplexSeasonedEffect>

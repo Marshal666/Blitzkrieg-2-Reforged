@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="4512">
+	<SrcName href="/Units/Technics/Allies/Tanks/M26_General_Pershing_low_USA/1.mb" />
+	<uid>58A08619-4A7C-42B6-A2D1-00C13BC22E5F</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>633</Length>
+	<Looped>false</Looped>
+	<FirstFrame>70</FirstFrame>
+	<LastFrame>89</LastFrame>
+	<AABBAName>AABB_A01</AABBAName>
+	<AABBDName>AABB_D01</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>37</x>
+			<y>-1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>93</x>
+			<y>84</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>37</x>
+			<y>-1</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>93</x>
+			<y>84</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

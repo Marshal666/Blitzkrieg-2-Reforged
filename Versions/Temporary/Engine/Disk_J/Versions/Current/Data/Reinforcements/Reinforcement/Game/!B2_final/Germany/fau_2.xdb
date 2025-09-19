@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Reinforcement ObjectRecordID="1000750">
+	<Type>RT_SUPER_WEAPON</Type>
+	<IconTexture href="/Scene/TexAndMats/Game/Mission/Reinforcement/Type/super_texture.xdb#xpointer(/Texture)" />
+	<LocalizedName href="" />
+	<LocalizedNameFileRef href="Super_weapon.txt" />
+	<Entries>
+		<Item>
+			<MechUnit href="/Units/Technics/German/aviation/Fau-2/MechUnitRPGStats.xdb#xpointer(/MechUnitRPGStats)" />
+			<Squad href="" />
+			<LinkIndex>-1</LinkIndex>
+			<LinkWith>-1</LinkWith>
+		</Item>
+	</Entries>
+	<Tooltip href="" />
+	<TooltipFileRef href="Super_weapon.txt" />
+	<Transports />
+	<LocalizedDesc href="" />
+	<LocalizedDescFileRef href="" />
+</Reinforcement>

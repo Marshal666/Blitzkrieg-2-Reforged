@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<AnimB2 ObjectRecordID="2832">
+	<SrcName href="/Units/Technics/USSR/Tanks/M3_Grant_Lend_Lease_MT/1.mb" />
+	<uid>846F25C7-C967-4690-B4BF-2CC8D2B505D2</uid>
+	<RootJoint>Basis</RootJoint>
+	<Type>ANIMATION_DEATH_FATALITY</Type>
+	<ActionFrame>0</ActionFrame>
+	<Action>0</Action>
+	<Length>300</Length>
+	<Looped>false</Looped>
+	<FirstFrame>110</FirstFrame>
+	<LastFrame>119</LastFrame>
+	<AABBAName>AABB_A03</AABBAName>
+	<AABBDName>AABB_D03</AABBDName>
+	<WeaponsToUseWith>0</WeaponsToUseWith>
+	<aabb_a>
+		<Center>
+			<x>14</x>
+			<y>-29</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>51</x>
+			<y>104</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_a>
+	<aabb_d>
+		<Center>
+			<x>14</x>
+			<y>-29</y>
+			<z>26.7809</z>
+		</Center>
+		<HalfSize>
+			<x>51</x>
+			<y>104</y>
+			<z>26.6604</z>
+		</HalfSize>
+	</aabb_d>
+	<MoveSpeed>1</MoveSpeed>
+</AnimB2>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<MessageReactionComplex ObjectRecordID="90">
+	<ClassTypeID>0</ClassTypeID>
+	<branches>
+		<Item>
+			<CustomCheckReturn>0</CustomCheckReturn>
+			<Sequience>
+				<data />
+			</Sequience>
+		</Item>
+		<Item>
+			<CustomCheckReturn>1</CustomCheckReturn>
+			<Sequience>
+				<data>
+					<Item href="ActionTabControl/switch_action_tab_ARSwitchTab.xdb#xpointer(/ARSwitchTab)" />
+				</data>
+			</Sequience>
+		</Item>
+	</branches>
+	<ConditionCheck href="Buttons/check_button_cancel_CheckIsWindowEnabled.xdb#xpointer(/CheckIsWindowEnabled)" />
+	<commonBefore>
+		<data />
+	</commonBefore>
+	<commonAfter>
+		<data>
+			<Item href="Forced_Actions/game_reset_forced_action_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+			<Item href="Misc/cancel_action_ARSendGameMessage.xdb#xpointer(/ARSendGameMessage)" />
+		</data>
+	</commonAfter>
+</MessageReactionComplex>

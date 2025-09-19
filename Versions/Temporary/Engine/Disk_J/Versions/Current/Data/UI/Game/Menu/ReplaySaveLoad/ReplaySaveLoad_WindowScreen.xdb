@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<WindowScreen ObjectRecordID="1000032">
+	<ClassTypeID>285694848</ClassTypeID>
+	<Shared href="ReplaySaveLoad_WindowScreenShared.xdb#xpointer(/WindowScreenShared)" />
+	<Name />
+	<TooltipFileRef href="" />
+	<Visible>true</Visible>
+	<Priority>0</Priority>
+	<GameMessageReactions />
+	<Placement>
+		<Position>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Position>
+		<VerAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</VerAllign>
+		<HorAllign>
+			<First>EPA_LOW_END</First>
+			<Second>false</Second>
+		</HorAllign>
+		<Size>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</Size>
+		<LowerMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</LowerMargin>
+		<UpperMargin>
+			<First>
+				<x>0</x>
+				<y>0</y>
+			</First>
+			<Second>false</Second>
+		</UpperMargin>
+	</Placement>
+	<Enabled>true</Enabled>
+	<TextString href="" />
+	<MessageReactions>
+		<reactions />
+		<ScriptFileRef href="" />
+	</MessageReactions>
+	<CommandSequiences />
+	<TooltipContext>0</TooltipContext>
+	<RelatedTexts>
+		<Item>
+			<Name>T_SAVE_SUCCESSFUL</Name>
+			<TextFileRef href="t_save_successful.txt" />
+		</Item>
+		<Item>
+			<Name>T_SAVE_FAILED</Name>
+			<TextFileRef href="t_save_failed.txt" />
+		</Item>
+		<Item>
+			<Name>T_OVERWRITE_QUESTION</Name>
+			<TextFileRef href="t_overwrite_question.txt" />
+		</Item>
+		<Item>
+			<Name>T_DELETE_QUESTION</Name>
+			<TextFileRef href="t_delete_question.txt" />
+		</Item>
+	</RelatedTexts>
+</WindowScreen>

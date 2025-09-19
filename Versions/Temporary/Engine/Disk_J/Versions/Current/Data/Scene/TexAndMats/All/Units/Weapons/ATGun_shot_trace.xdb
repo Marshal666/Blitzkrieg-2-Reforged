@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Material ObjectRecordID="1000610">
+	<Texture href="GunShotTraceOrange_Texture.xdb#xpointer(/Texture)" />
+	<Bump href="" />
+	<SpecFactor>0</SpecFactor>
+	<SpecColor>
+		<x>0</x>
+		<y>0</y>
+		<z>0</z>
+	</SpecColor>
+	<Gloss href="" />
+	<MetalMirror>0</MetalMirror>
+	<DielMirror>0</DielMirror>
+	<Mirror href="" />
+	<CastShadow>false</CastShadow>
+	<ReceiveShadow>true</ReceiveShadow>
+	<Priority>0</Priority>
+	<TranslucentColor>
+		<x>0.988235</x>
+		<y>0.92549</y>
+		<z>0.137255</z>
+	</TranslucentColor>
+	<FloatParam>0</FloatParam>
+	<DetailTexture href="" />
+	<DetailScale>5</DetailScale>
+	<ProjectOnTerrain>false</ProjectOnTerrain>
+	<LightingMode>L_SELFILLUM</LightingMode>
+	<Is2Sided>true</Is2Sided>
+	<Effect>M_GENERIC</Effect>
+	<AlphaMode>AM_TRANSPARENT</AlphaMode>
+	<AffectedByFog>true</AffectedByFog>
+	<AddPlaced>false</AddPlaced>
+	<IgnoreZBuffer>false</IgnoreZBuffer>
+	<BackFaceCastShadow>false</BackFaceCastShadow>
+</Material>
