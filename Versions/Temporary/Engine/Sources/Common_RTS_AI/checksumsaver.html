@@ -1,0 +1,121 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<TITLE>class CCheckSumSaver</TITLE>
+</HEAD>
+<BODY>
+
+<h2>Зачем это надо?</h2>
+Класс CCheckSumSaver позволяет подробно сверять контрольную сумму какого-нибудь дальнего потомка CObjectBase.
+
+<h2>Что использует</h2>
+
+<pre>
+#include "..\System\BinSaver.h"
+#include "..\System\CheckSumLog.h"
+#include "..\zlib\zlib.h"
+</pre>
+
+<h2>Применение класса CCheckSumSaver</h2>
+
+Класс, сумму которого мы хотим сохранить и сверить потом, должен просто уметь сериализоваться.
+Если какие-то члены класса не должны входить в контрольную сумму, то их нужно включить в сериализацию отдельно:
+
+<pre>
+class CImportantClass : public CObjectBase
+{
+	SomeType aNotChecksummingMember;
+	ZDATA 
+		/*
+		.....
+		*/
+	ZONSERIALIZE
+	ZEND int operator&( IBinSaver &amp;f ) {  .....; OnSerialize( f ); return 0; }
+	
+	void OnSerialize( IBinSaver &amp;f );
+};
+
+void CImportantClass::OnSerialize( IBinSaver &amp;f )
+{
+	if ( ! f.IsChecksum() )
+	{
+		f.Add( XX, &amp;aNotChecksummingMember );
+	}
+}
+</pre>
+
+Теперь о том, как вылавливать контрольную сумму и с чем ее сверять. Самый простой случай - когда вам не нужна
+подробная контрольная сумма для каждого члена класса, а просто нужно получить одно число для всего. Тогда делаем так:
+
+<pre>
+	unsigned long ulChecksum = crc32( 0L, Z_NULL, 0 );	
+	CPtr&lt;IBinSaver&gt; pChecksumSaver = CreateCheckSumSaver( &ulChecksum, 0, nTime );
+	pImportantClass-&gt;operator&( *pChecksumSaver );
+</pre>
+
+Параметр nTime для получения контрольной суммы не нужен лишь бы он не был равен -1 (если только вы не используете где-нибудь
+в конфигурациях игры переменную segment_break). Так что можно даже так:
+<pre>
+	unsigned long ulChecksum = crc32( 0L, Z_NULL, 0 );	
+	CPtr&lt;IBinSaver&gt; pChecksumSaver = CreateCheckSumSaver( &ulChecksum, 0, 0 );
+	pImportantClass-&gt;operator&( *pChecksumSaver );
+</pre>
+
+Более сложная ситуация - если вам нужна подробная контрольная сумма для каждого члена вашего класса и возможность ее сверять потом.
+Тогда нам понадобится класс запоминатель-сверятель контрольной суммы, наследованный от ICheckSumLog
+<pre>
+interface ICheckSumLog : virtual public CObjectBase
+{ 
+	virtual void AddChecksumLog( const int nGameTime, const unsigned long ulChecksum, const int nEntry ) = 0;
+};
+</pre>
+Например, такой:
+<pre>
+class CStoreLog : public ICheckSumLog
+{
+public:
+	hash_map&lt;unsigned long&gt; checksumsToBeStored;
+	void AddCheckSumLog( const int nTime, const unsigned long ulChecksum, const int nEntry )
+	{
+		checksumsToBeStored[nEntry] = ulChecksum;
+	}
+};
+</pre>
+
+Для записи контрольной суммы нужно сказать программе:
+<pre>
+	ICheckSumLog * pLog = new CStoreLog();
+	unsigned long ulChecksum = crc32( 0L, Z_NULL, 0 );	
+	CPtr&lt;IBinSaver&gt; pChecksumSaver = CreateCheckSumSaver( &ulChecksum, pLog, nTime );
+	pImportantClass-&gt;operator&( *pChecksumSaver );
+</pre>
+
+Опять же, переменная nTime может и не использоваться (как в примере), но, в принципе, является удобной для передачи
+текущего времени внутрь запоминателя-сверятеля :)
+<br>
+Для того, чтобы сверить контрольную сумму, надо использовать такой же класс-сверятель:
+<pre>
+class CVerifyLog : public ICheckSumLog
+{
+public:
+	hash_map&lt;unsigned long&gt; originalChecksums;
+	void AddCheckSumLog( const int nTime, const unsigned long ulChecksum, const int nEntry )
+	{
+		NI_ASSERT( originalChecksums[nEntry] == ulChecksum, "Checksums are different" );
+	}
+};
+</pre>
+и тот же кусок программы для запуска проверки:
+<pre>
+	ICheckSumLog * pLog = new CVerifyLog();
+	unsigned long ulChecksum = crc32( 0L, Z_NULL, 0 );	
+	CPtr&lt;IBinSaver&gt; pChecksumSaver = CreateCheckSumSaver( &ulChecksum, pLog, nTime );
+	pImportantClass-&gt;operator&( *pChecksumSaver );
+</pre>
+
+Так как ассерт происходит в момент записи суммы, то по стеку вызовов функций можно понять, какой именно член класса сейвится и выловить ошибку.
+<br>
+Вот кратко и все, остальное - см. исходники :)
+
+</BODY>
+</HTML>

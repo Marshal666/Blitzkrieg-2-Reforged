@@ -1,0 +1,83 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SMaterial;
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1311B302; no_checksum]
+class SIconsSet
+{
+	struct SIconType
+	{
+		enum EIconTypeEnum
+		{
+			ICONTYPE_NONE,
+			ICONTYPE_HPBAR,
+			ICONTYPE_GROUP00,
+			ICONTYPE_GROUP01,
+			ICONTYPE_GROUP02,
+			ICONTYPE_GROUP03,
+			ICONTYPE_GROUP04,
+			ICONTYPE_GROUP05,
+			ICONTYPE_GROUP06,
+			ICONTYPE_GROUP07,
+			ICONTYPE_GROUP08,
+			ICONTYPE_GROUP09,
+			ICONTYPE_BROKENTRUCK,
+			ICONTYPE_NEW_ABILITY,
+		};
+
+		EIconTypeEnum _Type;
+		SRect _Rect;
+	};
+	SMaterial *_MaterialZCheck;
+	SMaterial *_MaterialNonZCheck;
+	SIconType _icons[];
+};
+
+[typeID = 0x1313C400; no_checksum]
+class SVisObjIconsSet
+{
+	struct SVisObjIcon
+	{
+		enum EVisObjIconType
+		{
+			VOIT_NONE,
+			VOIT_GROUP00,
+			VOIT_GROUP01,
+			VOIT_GROUP02,
+			VOIT_GROUP03,
+			VOIT_GROUP04,
+			VOIT_GROUP05,
+			VOIT_GROUP06,
+			VOIT_GROUP07,
+			VOIT_GROUP08,
+			VOIT_GROUP09,
+			VOIT_BROKENTRUCK,
+			VOIT_NEW_ABILITY,
+			VOIT_INFANTRY,
+			VOIT_PROCESS,
+			VOIT_GUARD,
+			VOIT_NEED_REPAIR_KEY_OBJECT,
+			VOIT_NEED_RESUPPLY,
+			VOIT_AGRESSIVE,
+			VOIT_BEST_SHOT,
+			VOIT_PACIFIST,
+			VOIT_INVISIBLE,
+			VOIT_ABILITY_RANK_2,
+			VOIT_ABILITY_RANK_3,
+			VOIT_ABILITY_RANK_4,
+		};
+
+		EVisObjIconType _Type;
+		int _Priority;
+		SRect _texCoords;
+	};
+	STexture *_Texture;
+	SRect _hpBarBorders[1..];
+	SRect _hpBarColors[1..];
+	SVisObjIcon _icons[1..];
+	// (%HP) hp to change hp-bar color
+	float _hpBarRanges[1..];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

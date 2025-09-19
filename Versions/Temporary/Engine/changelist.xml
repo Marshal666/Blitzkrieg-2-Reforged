@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<log>
+	<logentry revision="12218">
+		<author>Developer1</author>
+		<date>2005-09-26T09:41:09.689922Z</date>
+		<msg>Поправил ошибку связанную с отсутствием тайлов в закладке закрашивания террейна в редакторе. Также убрал лишнее построение листа в методе заполнения параметров в закладке террейна, в fieldState вынес наружу из цикла получение имени сета для карты</msg>
+	</logentry>
+	<logentry revision="12217">
+		<author>Developer2</author>
+		<date>2005-09-24T12:36:12.871449Z</date>
+		<msg>internal: изменил систему логгеров - теперь есть только один класс логгеров, которые можно выстраивать иерархически</msg>
+	</logentry>
+	<logentry revision="12216">
+		<author>Developer2</author>
+		<date>2005-09-19T09:06:16.571217Z</date>
+		<msg>internal: добавил данные для TestParsing</msg>
+	</logentry>
+	<logentry revision="12215">
+		<author>Developer2</author>
+		<date>2005-09-14T13:53:08.456804Z</date>
+		<msg>feature: фокус на строке chat'а в lobby screen'е
+feature: сделал для CmdLine печать salutation и изменил под это dbcodegen и dbstruct</msg>
+	</logentry>
+	<logentry revision="12213">
+		<author>Developer1</author>
+		<date>2005-09-13T15:10:08.055107Z</date>
+		<msg>Поправил Tab Order для диалогов Create MOD, Open MOD</msg>
+	</logentry>
+	<logentry revision="12212">
+		<author>Developer3</author>
+		<date>2005-09-13T15:02:46.556184Z</date>
+		<msg>1. Moved the focus to the chat editline when entering MP Game Room
+2. Added "Profile Manager" button to the Multiplayer submenu of the Main Menu</msg>
+	</logentry>
+	<logentry revision="12211">
+		<author>Developer2</author>
+		<date>2005-09-09T15:57:15.500075Z</date>
+		<msg>internal: добавил более детальный report проблемы при обломе в парсинге</msg>
+	</logentry>
+	<logentry revision="12210">
+		<author>Developer2</author>
+		<date>2005-09-08T15:45:31.215916Z</date>
+		<msg>internal: сделал проверку на несколько одноранговых опций. работает она очень просто - при установке опции запоминается значение переменной, в которую будет писаться результат. Если в момент её выстановки из опции значение всё ещё начальное, то всё хорошо, иначе выходит с кодом ошибки. 
+</msg>
+	</logentry>
+	<logentry revision="12209">
+		<author>Developer4</author>
+		<date>2005-09-08T13:17:19.542434Z</date>
+		<msg>Fixed bug #7450 (workbench B2): Unitselection is limited to 35 units of the same kind.</msg>
+	</logentry>
+	<logentry revision="12208">
+		<author>Developer2</author>
+		<date>2005-09-07T13:54:59.203335Z</date>
+		<msg>internal: сделал, чтобы animdescs заполнялись по информации из skeleton'а на старте игры, а не exporter'ом в редакторе. Теперь достаточно переэкспортить только скелетон, а не все юниты, его использующие.</msg>
+	</logentry>
+	<logentry revision="12207">
+		<author>Developer2</author>
+		<date>2005-09-07T09:18:51.108336Z</date>
+		<msg>internal: перевёл dbstruct на испоьзование command line parser'а
+
+bugfix: libdb/ReportMetaInfo.cpp - открытие базы возвращало false в случае, если нет никакой code-reported meta info, а такая ситуация не редкость для tools'ов.</msg>
+	</logentry>
+	<logentry revision="12205">
+		<author>Developer2</author>
+		<date>2005-09-07T08:33:21.186279Z</date>
+		<msg>internal: перевёл dbcodegen на новую систему command line parser'а
+internal: забыл в прошлом commit'е залить System.vcproj - там подключены CmdLine.h/.cpp</msg>
+	</logentry>
+	<logentry revision="12204">
+		<author>Developer2</author>
+		<date>2005-09-06T14:24:44.928439Z</date>
+		<msg>internal: command line processing class. for usage see example at the bottom of System/CmdLine.cpp
+
+internal: добавил функцию GetNormalizedCurrDir - получить нормализованное имя текущей директории (folder separator = '/') с folder separator'ом на конце!</msg>
+	</logentry>
+	<logentry revision="12202">
+		<author>Developer2</author>
+		<date>2005-09-02T13:52:34.015420Z</date>
+		<msg>bugfix: удалил все нелокализуемые debug тексты из чата
+
+feature: dbcodegen.xml - rjyabuehfwbz lkя генерации сорсов из .cll</msg>
+	</logentry>
+	<logentry revision="12199">
+		<author>Developer2</author>
+		<date>2005-09-02T10:59:54.720605Z</date>
+		<msg>bugfix: закоментировал две non-localizable строки - забыли вырезать</msg>
+	</logentry>
+	<logentry revision="12198">
+		<author>Developer2</author>
+		<date>2005-09-02T09:24:45.771744Z</date>
+		<msg>bugfix: поспешил... не проверил... не делайте так... из CObjectBaseController::SUndoData::FillLists был удалён нужный CObj, что приводило к memory leaks</msg>
+	</logentry>
+	<logentry revision="12196">
+		<author>Developer2</author>
+		<date>2005-09-01T15:23:04.807025Z</date>
+		<msg>bugfix: MapEditorLib/ObjectBaseController.cpp: в CObjectBaseController::SUndoData::FillLists заменил CPtr на CObj в итерировании по новому манипулятору
+
+bugfix: libdb/Bind.cpp: поправил destructor, чтобы он нормально отрабатывал в случае, если объект был разрушен через CObj, но выжил через CPtr (invalid ref obj)
+
+
+</msg>
+	</logentry>
+	<logentry revision="12195">
+		<author>Developer2</author>
+		<date>2005-09-01T15:02:05.667640Z</date>
+		<msg>теперь dbcodegen работает из current working dir
+конфиг файл dbcodegen.xml об берёт тоже из current working dir (если не сказан другой)
+types.xml он генерит тоже в current working dir</msg>
+	</logentry>
+	<logentry revision="12193">
+		<author>Developer1</author>
+		<date>2005-09-01T12:06:34.011145Z</date>
+		<msg>Поправил Undo для удаления объектов. Теперь Undo работает горадло быстрее. Не забудте включить его в editor.cfg.</msg>
+	</logentry>
+	<logentry revision="12191">
+		<author>Developer2</author>
+		<date>2005-09-01T09:53:17.962056Z</date>
+		<msg>bugfix: libdb: если взять sub-manipulator на элемент массива, а в этом элементе тоже есть массив, то при итерировании возьмётся не размер второго массива, а размер его parent'а (т.е. основного массива).</msg>
+	</logentry>
+	<logentry revision="12183">
+		<author>Developer</author>
+		<date>2005-08-31T15:25:11.571068Z</date>
+		<msg>Bugfix: Очень редкое падение при загрузке софтварных текстур.</msg>
+	</logentry>
+	<logentry revision="12181">
+		<author>Developer</author>
+		<date>2005-08-31T09:32:01.193983Z</date>
+		<msg>Bugfix: Fixed crash when cann't connect to nival.net </msg>
+	</logentry>
+	<logentry revision="12180">
+		<author>Developer2</author>
+		<date>2005-08-31T08:18:39.666406Z</date>
+		<msg>для hotkey'а в tooltip'е берётся локализованное имя (по locale на момент формирования tooltip'а) первого control'а в комбинации</msg>
+	</logentry>
+	<logentry revision="12179">
+		<author>Developer2</author>
+		<date>2005-08-30T15:11:56.328987Z</date>
+		<msg>version printing fixed in dbindex
+version displaying disabled in finalrelease by conditional compilation</msg>
+	</logentry>
+	<logentry revision="12178">
+		<author>Developer3</author>
+		<date>2005-08-30T12:48:38.455526Z</date>
+		<msg>bugfix: #5267 - added an effect for every selection
+</msg>
+	</logentry>
+	<logentry revision="12177">
+		<author>Developer2</author>
+		<date>2005-08-30T11:09:21.172296Z</date>
+		<msg>добавил файлы revision.h в  несколько .exe проектов для автоматической сборки
+текущий revision number записывается в global var 'code_version_number'
+время начала build'а записывается в global var code_build_date_time</msg>
+	</logentry>
+	<logentry revision="12176">
+		<author>Developer</author>
+		<date>2005-08-30T08:55:59.827570Z</date>
+		<msg>Bugfix: Ok после окна сообщения об уровне подкрепления не выходит в windows.</msg>
+	</logentry>
+	<logentry revision="12175">
+		<author>Developer3</author>
+		<date>2005-08-30T07:36:02.886796Z</date>
+		<msg>internal: added display for global var "code_version_number" in the main menu</msg>
+	</logentry>
+	<logentry revision="12174">
+		<author>Developer</author>
+		<date>2005-08-30T07:12:50.344871Z</date>
+		<msg>Bugfix #7519: missing music on almost every mp map</msg>
+	</logentry>
+	<logentry revision="12173">
+		<author>Developer</author>
+		<date>2005-08-29T13:45:10.745516Z</date>
+		<msg>bugfix: метание юнитов возле конечной точки</msg>
+	</logentry>
+	<logentry revision="12172">
+		<author>Developer</author>
+		<date>2005-08-29T13:26:02.361255Z</date>
+		<msg>bugfix: исправлено недоезжание юнитов</msg>
+	</logentry>
+	<logentry revision="12171">
+		<author>Developer</author>
+		<date>2005-08-29T13:06:02.697244Z</date>
+		<msg>bugfix: метание юнитов и остановка из-за толкучки</msg>
+	</logentry>
+	<logentry revision="12170">
+		<author>Developer</author>
+		<date>2005-08-29T12:56:24.145317Z</date>
+		<msg>feature: мультиплеер с переходом юнитов другому игроку после n команд. включается через setvar commands_limit = n
+</msg>
+	</logentry>
+	<logentry revision="12169">
+		<author>Developer3</author>
+		<date>2005-08-29T12:06:39.152157Z</date>
+		<msg>internal: made B2 MapEditor compile</msg>
+	</logentry>
+	<logentry revision="12168">
+		<author>Developer3</author>
+		<date>2005-08-25T12:21:29.054220Z</date>
+		<msg>internal: corrcted previous bugfix, that created an assert in main menu</msg>
+	</logentry>
+	<logentry revision="12167">
+		<author>Developer3</author>
+		<date>2005-08-25T10:27:07.356647Z</date>
+		<msg>bugfix: #7342 - changed the way the hitbars are displayed for the keybuildings in MP
+bugfix: treated non-existing mp map in custom game list, no more garbage there</msg>
+	</logentry>
+	<logentry revision="12166">
+		<author>Developer</author>
+		<date>2005-08-24T13:15:40.024199Z</date>
+		<msg>Bugfix #7465: No prompt by shortcut Alt + F4 
+</msg>
+	</logentry>
+	<logentry revision="12165">
+		<author>Developer</author>
+		<date>2005-08-24T11:45:06.855590Z</date>
+		<msg>bugfix: #7501: У первого грузовика нет абилки убрать мину, а у вызванных она есть. ну и для кучи первое подкрепление получило правильные типы, а не RT_TANKS на всех</msg>
+	</logentry>
+	<logentry revision="12164">
+		<author>Developer3</author>
+		<date>2005-08-24T09:06:25.101260Z</date>
+		<msg>bugfix: #7499 - inserted a multiplier for the time limit</msg>
+	</logentry>
+	<logentry revision="12163">
+		<author>Developer</author>
+		<date>2005-08-24T08:25:28.346946Z</date>
+		<msg>bugfix: 7491 Pathfindingproblems with vehicles driving up a plateau. сделал, чтобы финальные точки всех юнитов группы были по одно сторону от обрывов и прочих препятствий. насколько я понял проблема была именно в этом</msg>
+	</logentry>
+	<logentry revision="12162">
+		<author>Developer3</author>
+		<date>2005-08-24T08:25:07.528893Z</date>
+		<msg>bugfix: #7511 - Added simple validation for emails : "something@somethingelse"</msg>
+	</logentry>
+	<logentry revision="12161">
+		<author>Developer</author>
+		<date>2005-08-24T08:08:59.566306Z</date>
+		<msg>bugfix: #6584: Бронепоезд при атаке поворачивает одно из орудий в противоположную от цели сторону</msg>
+	</logentry>
+	<logentry revision="12160">
+		<author>Developer</author>
+		<date>2005-08-24T07:58:11.098391Z</date>
+		<msg>Bugfix 
+Server: Now server returns a correct answer code for non-registered user logins. MemoryLib: Added #define for server build in release configuration.</msg>
+	</logentry>
+	<logentry revision="12159">
+		<author>Developer3</author>
+		<date>2005-08-24T07:50:09.643190Z</date>
+		<msg>internal: Cleared connection with Nival.net after an unsuccessful login</msg>
+	</logentry>
+	<logentry revision="12158">
+		<author>Developer</author>
+		<date>2005-08-24T07:47:14.488835Z</date>
+		<msg>Bugfix #7453: Юниты в энциклопедии всегда должны показываться в наивысшем качестве</msg>
+	</logentry>
+	<logentry revision="12157">
+		<author>Developer2</author>
+		<date>2005-08-23T14:23:16.318560Z</date>
+		<msg>добавил проверку на то, чтобы splash screens игрались не только в single demo, но и в multiplayer demo</msg>
+	</logentry>
+	<logentry revision="12155">
+		<author>Developer3</author>
+		<date>2005-08-23T13:29:10.611171Z</date>
+		<msg>bugfix: #cant remember, add a tooltip to a random country choice in MP Game Room</msg>
+	</logentry>
+	<logentry revision="12154">
+		<author>Developer3</author>
+		<date>2005-08-23T12:13:38.069204Z</date>
+		<msg>bugfix: #7400, #7447 - Abilities for the elite infantry were disabled (except right after getting a level). Changed initial state of the ability buttons to "enabled"
+internal: modified a GetKillSpeed check for the case of a searchlight</msg>
+	</logentry>
+	<logentry revision="12152">
+		<author>Developer3</author>
+		<date>2005-08-22T15:06:12.032131Z</date>
+		<msg>bugfix: #7496 Added another condition to the automatic showing of reinf.panel</msg>
+	</logentry>
+	<logentry revision="12151">
+		<author>Developer3</author>
+		<date>2005-08-22T14:55:58.272673Z</date>
+		<msg>bugfix: Fixed main menu scene disappearing after replay
+bugfix: #7494 Corrented number of players to the number of active players</msg>
+	</logentry>
+	<logentry revision="12150">
+		<author>Developer3</author>
+		<date>2005-08-22T13:16:56.874161Z</date>
+		<msg>bugfix: #7495 - Added a simple message box
+bugfix: #7497 - I don't know what was broken, but it works now (I made Multiplayer menu a normal screen, not a multiplayer one)</msg>
+	</logentry>
+	<logentry revision="12149">
+		<author>Developer</author>
+		<date>2005-08-22T09:27:44.829390Z</date>
+		<msg>после завершения работ грузовиком писалось Task Interrupt</msg>
+	</logentry>
+	<logentry revision="12148">
+		<author>Developer</author>
+		<date>2005-08-19T15:23:53.460157Z</date>
+		<msg>Removing GetRecordID from editor</msg>
+	</logentry>
+	<logentry revision="12147">
+		<author>Developer2</author>
+		<date>2005-08-19T15:22:56.487639Z</date>
+		<msg>поправка - если фонт не обнаружен, то вместо него берётся h2, а не h1</msg>
+	</logentry>
+	<logentry revision="12146">
+		<author>Developer3</author>
+		<date>2005-08-19T14:53:24.339360Z</date>
+		<msg>*** Branch
+Replays added. They are invisible, unless globalvar is defined: setver mp_replays_enabled = 1</msg>
+	</logentry>
+	<logentry revision="12138">
+		<author>Developer</author>
+		<date>2005-08-19T10:22:05.427346Z</date>
+		<msg>Bugfix 7483( если фонт не обнаружен, вместо него подставляется h1 )</msg>
+	</logentry>
+	<logentry revision="12134">
+		<author>Developer</author>
+		<date>2005-08-18T15:08:39.859066Z</date>
+		<msg>Bugfix 7451 (Силуэты заслонненых юнитов теперь видны и в 16 битном режиме )</msg>
+	</logentry>
+	<logentry revision="12129">
+		<author>Developer</author>
+		<date>2005-08-18T12:23:10.198904Z</date>
+		<msg>Немного порезал GetRecordID, но не до конца</msg>
+	</logentry>
+	<logentry revision="12128">
+		<author>Developer</author>
+		<date>2005-08-18T11:56:53.086113Z</date>
+		<msg>Bugfix 7477 ( select одинакового типа юнитов ) </msg>
+	</logentry>
+	<logentry revision="12127">
+		<author>Developer</author>
+		<date>2005-08-18T09:16:29.196024Z</date>
+		<msg>Bugfix ( дырки для окопов и рек )</msg>
+	</logentry>
+	<logentry revision="12126">
+		<author>Developer</author>
+		<date>2005-08-17T08:53:39.587564Z</date>
+		<msg>Bugfix(7443). Теперь скрость скролла карты зависит от Camera Sensitivity</msg>
+	</logentry>
+	<logentry revision="12125">
+		<author>Developer</author>
+		<date>2005-08-17T08:05:48.530260Z</date>
+		<msg>Restoring animated lights( after removing IDs )</msg>
+	</logentry>
+	<logentry revision="12123">
+		<author>Developer</author>
+		<date>2005-08-16T13:22:18.807621Z</date>
+		<msg>Баг с пропажей тултипов (7466)</msg>
+	</logentry>
+	<logentry revision="12122">
+		<author>Developer</author>
+		<date>2005-08-16T12:29:02.775049Z</date>
+		<msg>Bugfix 7468( падение редактора при создании карты )</msg>
+	</logentry>
+	<logentry revision="12121">
+		<author>Developer2</author>
+		<date>2005-08-16T12:04:20.274135Z</date>
+		<msg>Перевёл на использование lib'ов не по прописанным путям, а из локальной директории vendor, которая, как и все сорсы, хранится в SVN'е. Перевёл все пути в #include на относительные.
+Пути к библиотекам прописывает новый FixVCProj (AdditionalLibraryDirectories), для чего в nival_projects.xml завёл новую секцию AdditionalDirectories с двумя подсекциями Library и Includes. Сам nival_projects.xml переименовал в FixVCProj.xml, т.к. он уже стал конфигом, а не списком проектов.
+
+для Stingray не удалось сделать относительные пути в #include, т.к. он сам не использует внутри относительные пути и требует, чтобы includes были прописаны либо в системе либо в дополнительных опциях компилятора.
+
+для DirectX я это не делал, т.к. это больше чем SDK - он несёт с собой run-time'ы и ещё много чего (да и объём у него некислый). Если будет нужно, то можно очень легко поместить в SVN и DirectX.</msg>
+	</logentry>
+	<logentry revision="12120">
+		<author>Developer</author>
+		<date>2005-08-16T10:16:20.188573Z</date>
+		<msg>Correction of AutoDetect </msg>
+	</logentry>
+	<logentry revision="12119">
+		<author>Developer</author>
+		<date>2005-08-16T09:45:50.456335Z</date>
+		<msg>Bugfix 7355</msg>
+	</logentry>
+	<logentry revision="12117">
+		<author>Developer3</author>
+		<date>2005-08-16T09:05:46.204519Z</date>
+		<msg>Generate GUID as a CD Key when registering on Nival.Net</msg>
+	</logentry>
+	<logentry revision="12116">
+		<author>Developer</author>
+		<date>2005-08-16T08:56:54.502345Z</date>
+		<msg>Полное изживание IDs из игры, осталось их использование только в редакторе</msg>
+	</logentry>
+	<logentry revision="12115">
+		<author>Developer3</author>
+		<date>2005-08-16T08:39:18.280047Z</date>
+		<msg>Bug 7449: Returned key building ownership change, but without reinforcement increase.</msg>
+	</logentry>
+	<logentry revision="12114">
+		<author>Developer</author>
+		<date>2005-08-16T08:23:34.634063Z</date>
+		<msg>bugfixing: 7349 (Пехота после сварма разбредается)</msg>
+	</logentry>
+	<logentry revision="12111">
+		<author>Developer2</author>
+		<date>2005-08-15T14:43:30.707600Z</date>
+		<msg>Removed file/folder</msg>
+	</logentry>
+	<logentry revision="12110">
+		<author>Developer</author>
+		<date>2005-08-15T12:11:36.468895Z</date>
+		<msg>bugfixing: 7281 (artillery w/o crew doesn't say negative acks)</msg>
+	</logentry>
+	<logentry revision="12101">
+		<author>Developer</author>
+		<date>2005-07-29T14:27:04.577118Z</date>
+		<msg>bugfixing: 7410 (Самоходки не хотят стрелять по похоте в радиусе поражения)</msg>
+	</logentry>
+	<logentry revision="12099">
+		<author>Developer</author>
+		<date>2005-07-29T12:22:17.558995Z</date>
+		<msg>bugfixing: 5039 (не доделано, т.к. у многих заборов стадии разрушения прописаны не корректно с точки зрения проходимости. см. комментарий к CStaticObjects::AddNewFenceObject)</msg>
+	</logentry>
+	<logentry revision="12098">
+		<author>Developer3</author>
+		<date>2005-07-29T11:17:43.929800Z</date>
+		<msg>Fixed Alt-R ranges bugs:
+1. When showing ranges and clicking on terrain (not another unit)
+2. When showing ranges and selecting another group by number key</msg>
+	</logentry>
+	<logentry revision="12097">
+		<author>Developer</author>
+		<date>2005-07-29T10:38:40.964126Z</date>
+		<msg>bugfixing: 7438 (Anti tank obstacles are not destroyable)</msg>
+	</logentry>
+	<logentry revision="12096">
+		<author>Developer2</author>
+		<date>2005-07-29T10:04:20.969979Z</date>
+		<msg>Stingray Objective Toolkit</msg>
+	</logentry>
+	<logentry revision="12095">
+		<author>Developer2</author>
+		<date>2005-07-29T10:03:23.700891Z</date>
+		<msg>S3 texture compression library</msg>
+	</logentry>
+	<logentry revision="12094">
+		<author>Developer2</author>
+		<date>2005-07-29T10:02:46.173888Z</date>
+		<msg>MySQL binding library</msg>
+	</logentry>
+	<logentry revision="12093">
+		<author>Developer2</author>
+		<date>2005-07-29T10:02:10.344442Z</date>
+		<msg>Granny animation library</msg>
+	</logentry>
+	<logentry revision="12092">
+		<author>Developer2</author>
+		<date>2005-07-29T10:01:33.652808Z</date>
+		<msg>FMOD sound library</msg>
+	</logentry>
+	<logentry revision="12091">
+		<author>Developer2</author>
+		<date>2005-07-29T10:00:39.473023Z</date>
+		<msg>Bink library</msg>
+	</logentry>
+	<logentry revision="12090">
+		<author>Developer2</author>
+		<date>2005-07-29T10:00:29.748821Z</date>
+		<msg>for external SDKs, required for project linking</msg>
+	</logentry>
+	<logentry revision="12071">
+		<author>Developer2</author>
+		<date>2005-07-29T09:03:14.262572Z</date>
+		<msg>новый объект на хотел записываться до тех пор, пока в нём что-то не изменят</msg>
+	</logentry>
+	<logentry revision="12070">
+		<author>Developer2</author>
+		<date>2005-07-29T07:42:15.469897Z</date>
+		<msg>список шрифтов теперь записан в GameRoot и грузится оттуда</msg>
+	</logentry>
+	<logentry revision="12069">
+		<author>Developer2</author>
+		<date>2005-07-29T06:39:07.499532Z</date>
+		<msg>корректное удаление карт</msg>
+	</logentry>
+	<logentry revision="12068">
+		<author>Developer3</author>
+		<date>2005-07-28T14:53:37.761811Z</date>
+		<msg>Added weapon quantity for the unit info in Chapter Map</msg>
+	</logentry>
+	<logentry revision="12066">
+		<author>Developer3</author>
+		<date>2005-07-28T13:14:22.940363Z</date>
+		<msg>Fixed dual tooltips when a message box is displayed (e.g. when trying to register on Nival.Net with empty fields)</msg>
+	</logentry>
+	<logentry revision="12065">
+		<author>Developer</author>
+		<date>2005-07-28T13:13:27.208641Z</date>
+		<msg>bugfixing 7367 (engineering cars stunts near repaired bridges)</msg>
+	</logentry>
+	<logentry revision="12064">
+		<author>Developer</author>
+		<date>2005-07-28T12:46:48.087654Z</date>
+		<msg>Fixed bug with wrong animations</msg>
+	</logentry>
+	<logentry revision="12062">
+		<author>Developer</author>
+		<date>2005-07-27T13:21:11.868064Z</date>
+		<msg>bugfixing 7409 (b29 doesn't fly in bad weather)</msg>
+	</logentry>
+	<logentry revision="12061">
+		<author>Developer</author>
+		<date>2005-07-27T13:20:30.319454Z</date>
+		<msg>bugfixing: for units w/o weapons shoot areas shows at 0x0 at minimap</msg>
+	</logentry>
+	<logentry revision="12060">
+		<author>Developer</author>
+		<date>2005-07-27T10:26:26.380700Z</date>
+		<msg>Cheats is on in the fastdebug mode</msg>
+	</logentry>
+	<logentry revision="12059">
+		<author>Developer</author>
+		<date>2005-07-27T10:25:55.403702Z</date>
+		<msg>Bugfix: fog in the bad weather, particles is lit right color with normal weather.</msg>
+	</logentry>
+	<logentry revision="12058">
+		<author>Developer3</author>
+		<date>2005-07-27T10:19:33.339415Z</date>
+		<msg>Added destructible corpses for the trains. "DestructibleCorpse" property in MechUnitTPGStats must be set, nevertheless.</msg>
+	</logentry>
+	<logentry revision="12057">
+		<author>Developer2</author>
+		<date>2005-07-27T09:22:03.947994Z</date>
+		<msg>в рамкая бага №7390 добавил проверку на IsValidDirName? чтобы символы '*' и '?' тоже делали невалидным</msg>
+	</logentry>
+	<logentry revision="12056">
+		<author>Developer2</author>
+		<date>2005-07-27T09:11:42.887561Z</date>
+		<msg>перевёл ObjectFilter на mixed case в рамках исправления бага №5547, чем и закончил его исправление</msg>
+	</logentry>
+	<logentry revision="12054">
+		<author>Developer</author>
+		<date>2005-07-26T15:43:10.427346Z</date>
+		<msg>Fixed bug: crash at 800x600 in the chapter map</msg>
+	</logentry>
+	<logentry revision="12053">
+		<author>Developer2</author>
+		<date>2005-07-26T15:05:28.963398Z</date>
+		<msg>добавил /FIXED:NO в релизе для dbindex и для FontGen -- это нужно для starforce protection</msg>
+	</logentry>
+	<logentry revision="12052">
+		<author>Developer2</author>
+		<date>2005-07-26T15:04:40.791210Z</date>
+		<msg>сделал консольную команду на разблокировку читов
+password [REDACTED]</msg>
+	</logentry>
+	<logentry revision="12049">
+		<author>Developer2</author>
+		<date>2005-07-26T13:59:37.073914Z</date>
+		<msg>debug string fixed :)</msg>
+	</logentry>
+	<logentry revision="12048">
+		<author>Developer3</author>
+		<date>2005-07-26T13:55:49.414893Z</date>
+		<msg>Added different tooltips and names for reinforcement prizes in Single Statistics.</msg>
+	</logentry>
+	<logentry revision="12047">
+		<author>Developer2</author>
+		<date>2005-07-26T13:02:13.546015Z</date>
+		<msg>libdb/Bind.cpp - проверка на то, чтобы SetChanged не работала для не-загруженного объекта (т.е. чтобы процесс загрузки не вызывал кучу SetChanged на загрузку каждого поля). Для просто нового объекта всё работает нормально.
+
+libdb/Bind.h - добавил ResetLoaded для обработки DropCachedResources.
+
+libdb/EditorDatabase.cpp - переписал обработку DropCachedResources - теперь физические объекты не уничтожаются, а просто в них перегружаются данные с диска. Заодно поправил SEditorDbForceLoadGuard - внёс внутрь глобальные статики.</msg>
+	</logentry>
+	<logentry revision="12046">
+		<author>Developer3</author>
+		<date>2005-07-26T10:52:07.933062Z</date>
+		<msg>Further fix on the reinf recycle bug. Fixed enabling/disabling of the button when keybuildings are captured.</msg>
+	</logentry>
+	<logentry revision="12045">
+		<author>Developer2</author>
+		<date>2005-07-26T10:39:47.222064Z</date>
+		<msg>fonts list added to game root</msg>
+	</logentry>
+	<logentry revision="12044">
+		<author>Developer2</author>
+		<date>2005-07-26T10:39:08.155664Z</date>
+		<msg>пофиксил dbcodegen чтобы он ставил в конце строки CRLF, а не просто CR</msg>
+	</logentry>
+	<logentry revision="12043">
+		<author>Developer</author>
+		<date>2005-07-26T09:10:23.417255Z</date>
+		<msg>sorry, i forget to remove debug circles</msg>
+	</logentry>
+	<logentry revision="12042">
+		<author>Developer3</author>
+		<date>2005-07-26T09:03:20.420691Z</date>
+		<msg>Attempt to fix delay between reinforcement recycle end and reinforcement button enable. Refactored the behaviour of recycle, added one extra update per segment when recycling.</msg>
+	</logentry>
+	<logentry revision="12041">
+		<author>Developer2</author>
+		<date>2005-07-26T08:10:20.300113Z</date>
+		<msg>пофиксил clear.bat - теперь старая инфа удаляется только из следующих папок:
+Release
+BetaRelease
+FastDebug
+Debug
+</msg>
+	</logentry>
+	<logentry revision="12040">
+		<author>Developer2</author>
+		<date>2005-07-26T08:09:06.923255Z</date>
+		<msg>пофиксил MOD'ы - теперь не падает и не виснет при переключении + сделал, чтобы фонты искались только один раз при переключении MOD'а (либо при начальной инициализации)
+</msg>
+	</logentry>
+	<logentry revision="12039">
+		<author>Developer</author>
+		<date>2005-07-25T13:15:48.403574Z</date>
+		<msg>bugfix 6448 (reinforcement stunts in other units)</msg>
+	</logentry>
+	<logentry revision="12038">
+		<author>Developer2</author>
+		<date>2005-07-25T13:13:45.775803Z</date>
+		<msg>теперь не виснет в звуках при отключении мода во время входа в кампанию
+осталось только слетание шрифтов</msg>
+	</logentry>
+	<logentry revision="12037">
+		<author>Developer</author>
+		<date>2005-07-25T11:11:44.513241Z</date>
+		<msg/>
+	</logentry>
+	<logentry revision="12035">
+		<author>Developer2</author>
+		<date>2005-07-25T09:59:08.478400Z</date>
+		<msg>reset stack moved from AttachMOD function to mod pre-shutdown</msg>
+	</logentry>
+	<logentry revision="12034">
+		<author>Developer</author>
+		<date>2005-07-25T09:43:27.810256Z</date>
+		<msg>bugfix 4223 (AA artillery doesn't use cover fire ability)</msg>
+	</logentry>
+</log>

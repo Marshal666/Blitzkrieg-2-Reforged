@@ -1,0 +1,88 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SReinforcement;
+forward enum EHistoricalSide;
+forward class SPartyDependentInfo;
+forward class STexture;
+forward class SAIExpLevel;
+forward class SBackground;
+forward class SMedal;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EHistoricalSide
+{
+	HS_ALLIES,
+	HS_AXIS,
+};
+
+struct SMultiplayerTechLevel
+{
+	// tech level short name (for menu)
+	TextFileRef _NameFileRef;
+	TextFileRef _DescriptionFileRef;
+
+	#include "include_MultiplayerTechLevel.h"
+};
+
+struct STechLevelReinfSet
+{
+	// tech level reinforcements set; it is better to set all possible reinforcement types
+	SReinforcement *_Reinforcements[];
+	// start forces
+	SReinforcement *_StartingUnits;
+};
+
+struct SLadderRank
+{
+	// level, new rank will be given
+	int _Level;
+	// rank name
+	TextFileRef _NameFileRef;
+	// shoulder strap picture
+	STexture *_Texture;
+};
+
+struct SMultiplayerSide
+{
+	// shot name (for menu)
+	TextFileRef _NameFileRef;
+	SPartyDependentInfo *_PartyInfo;
+	// small texture with country flag - for MPGameRoom
+	STexture *_ListItemIcon;
+	EHistoricalSide _HistoricalSide;
+	STechLevelReinfSet _TechLevels[1..];
+	// ladder rank (strictly in ascention order!)
+	SLadderRank _LadderRanks[1..];
+	// medals (10)
+	SMedal *_Medals[10];
+
+	#include "include_MultiplayerSide.h"
+};
+
+[typeID = 0x191B2300]
+class SMultiplayerConsts
+{
+	struct SPlayerColor
+	{
+		Color _Color;
+		SBackground *_UnitFullInfo;
+	};
+	SMultiplayerTechLevel _TechLevels[1..];
+	SMultiplayerSide _Sides[1..];
+	// '?' texture - for MPGameRoom
+	STexture *_RandomCountryIcon;
+	// visual configs for sides 0,1,2. Used in MinimapKeyObjectIcon, ListItemIcon, KeyBuildingFlag
+	SPartyDependentInfo *_DiplomacyInfo[3];
+	// multiplayer levels
+	SAIExpLevel *_expLevels[];
+	// player colors
+	SPlayerColor _PlayerColorInfos[];
+	// (seconds) minimal and maximal reinforcement counter recycle time
+	CVec2 _ReinfCounterRecycle;
+	// (seconds) multiplayer pause time limit
+	int _TimeUserMPPause = 120;
+	// (seconds) other delays time limit (sum with previous)
+	int _TimeUserMPLag = 60;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

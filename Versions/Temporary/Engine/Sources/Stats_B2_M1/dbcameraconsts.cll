@@ -1,0 +1,24 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1007B4C0]
+class SCameraLimits
+{
+	struct SCLLimit
+	{
+		float fMin;
+		float fMax;
+		// Central value to reach
+		float fAve;
+		// Automatic speed for returning
+		float fAutoSpeed;
+		// Speed for manual changing
+		float fManualSpeed;
+		bool bCyclic;
+	};
+	SCLLimit _DistanceLimit;
+	SCLLimit _PitchLimit;
+	SCLLimit _YawLimit;
+	// Field of View
+	float fFOV = 26;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

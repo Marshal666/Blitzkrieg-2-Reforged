@@ -1,0 +1,1 @@
+"C:\Program Files\Xoreax\IncrediBuild\BuildConsole.exe" C:\home\B2\B2.sln /cfg="BetaRelease" /Prj="*" /Rebuild /log=buildlog.txt

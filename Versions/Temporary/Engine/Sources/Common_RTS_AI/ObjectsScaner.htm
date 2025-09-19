@@ -1,0 +1,136 @@
+<HTML>
+	<HEAD>
+		<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=windows-1251">
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+		<TITLE>ObjectsScaner и ScanerIterator :: сканирование объектов</TITLE>
+	</HEAD>
+	<BODY>
+		<h1>Введение</h1>
+		<p>Сканирование объектов - быстрый ответ на запросы типа "получить все 
+			дружественные юниты в радиусе 10 тайлов от заданной точки". Среднее количество 
+			юнитов - тысячи, среднее количество запросов - сотни за AI сегмент с радиусом в 
+			несколько десятков тайлов. Для использования предоставляется два объекта: 
+			ObjectsScaner - менеджер юнитов и ScanerIterator - итератор, получаемый в 
+			качестве результата на запрос и позволяющий проитерироваться по юнитам.</p>
+		<h1>ObjectsScaner</h1>
+		<p>Менеджер юнитов. Существует два типа юнитов: динамические и статические. 
+			Динамические юниты представляют собой точку и задаються координатами. Считается 
+			что динамические юниты постоянно меняют свою позицию. Статические юниты 
+			характеризуются занимаемой областью и не могут менять свою позицию.</p>
+		<p>Для увелечения скорости вся карта разбивается на ячейки. Существует несколько 
+			уровней разбиения. Одна ячейка верхнего уровня содержит целое число яцеек 
+			нижнего.
+		</p>
+		<p>Помимо разделения юнитов на статические и динамические можно определить классы 
+			юнитов. Для каждого класса юнитов создается свое разбиение на ячейки.</p>
+		<p>В классе CObjectsScaner определены следующие функции:</p>
+		<p><font face="monospace"><b>bool Init( const int nMapSizeX, const int nMapSizeY, 
+					const float fTileSize, const vector<int>
+					&sizes, const DWORD nDynamicClasses, const DWORD nStaticClasses )</b></font>
+			<br>
+			Инициализация сканера.
+			<br>
+			<font face="monospace">nMapSizeX, nMapSizeY</font> : размер карты в тайлах. 
+			Размеры уровней и статические объекты задаются именно в этих тайлах.
+			<br>
+			<font face="monospace">fTileSize</font> : размер тайла в точках. Положение 
+			динамичексих объектов задается в точках.
+			<br>
+			<font face="monospace">sizes</font> : размер ячейки для каждого уровня. Верхний 
+			уровень должен содержать целое число нижних уровней. Количесвто элементов в 
+			массиве - количество уровней, нулевой элемент определяет размер самого верхнего 
+			(крупного) уровня.
+			<br>
+			<font face="monospace">nDynamicClasses</font> : маска динамических классов.
+			<br>
+			<font face="monospace">nStaticClasses</font> : маска статических классов.
+		</p>
+		<p><font face="monospace"><b>const bool AddUnit( const int nID, const CVec2 
+					&vPosition, const DWORD nClass )</b></font>
+			<br>
+			Добавление динамечесткого объекта.
+			<br>
+			<font face="monospace">nID</font> : идентификатор объекта.
+			<br>
+			<font face="monospace">vPosition</font> : позиция в точках.
+			<br>
+			<font face="monospace">nClass</font> : класс объекта. Класс должен быть 
+			определен в маске динамических объектов.
+		</p>
+		<p><font face="monospace"><b>const bool AddUnit( const int nID, const vector<SVector>
+					&tiles, const DWORD nClass )</b></font>
+			<br>
+			Добавление статического объекта.
+			<br>
+			<font face="monospace">nID</font> : идентификатор объекта.
+			<br>
+			<font face="monospace">tiles</font> : тайлы, занимаемые объектов.
+			<br>
+			<font face="monospace">nClass</font> : класс объекта. Класс должен быть 
+			определен в маске статических объектов.
+		</p>
+		<p><font face="monospace"><b>const bool UpdateUnit( const int nID, const CVec2 
+					&vPosition )</b></font>
+			<br>
+			Изменение позиции объекта.
+			<br>
+			<font face="monospace">nID</font> : идентификатор объекта. Объект не может быть 
+			статическим.
+			<br>
+			<font face="monospace">vPosition</font> : новая позиция объекта.
+		</p>
+		<p><font face="monospace"><b>const bool UpdateUnit( const int nID, const DWORD 
+					nNewClass )</b></font>
+			<br>
+			Изменение класса объекта.
+			<br>
+			<font face="monospace">nID</font> : идентификатор объекта. Объект не может быть 
+			статическим.
+			<br>
+			<font face="monospace">nNewClass</font> : новая класс объекта. Динамический 
+			объект нельзя сделать статическим, статический объект нельзя сделать 
+			динамическим.
+		</p>
+		<p><font face="monospace"><b>const bool Delete( const int nID )</b></font>
+			<br>
+			Удаление объекта.
+			<br>
+			<font face="monospace">nID</font> : идентификатор объекта
+		</p>
+		<p><font face="monospace"><b>CScanerIterator *CreateIterator( const CVec2 &vCenter, 
+					const float fRadius, const DWORD nClasses )</b></font>
+			<br>
+			Создать итератор для получения объектов заданных классов находящихся на 
+			опрделенном расстоянии от заданной точки.
+			<br>
+			<font face="monospace">vCenter</font> : центральный точка круга, в пределах 
+			которого надо получить объекты.
+			<br>
+			<font face="monospace">fRadius</font> : радиус круга, в пределах которого надо 
+			получить объекты.
+			<br>
+			<font face="monospace">nClasses</font> : классы объектов которые надо получить.
+		</p>
+		<p>Для создания экземпляра класса CObjectsScaner можно использовать функцию 
+			CreateObjectsScaner, параметры которой совпадают с параметрами функции Init</p>
+		<h1>ScanerIterator</h1>
+		<p>Итератор для объектов. Для создания используется функция CreateIterator класса 
+			CObjectsScaner.</p>
+		<p>В классе CObjectsScaner определены следующие функции:</p>
+		<p><font face="monospace"><b>const int GetEl() const</b></font>
+			<br>
+			Получить идентификатор текущего объекта.
+			<br>
+		</p>
+		<p><font face="monospace"><b>void Next()</b></font>
+			<br>
+			Взять следующий объект.
+			<br>
+		</p>
+		<p><font face="monospace"><b>const bool IsEnd() const</b></font>
+			<br>
+			Больше нет объектов. Значение GetEl не определено.
+			<br>
+		</p>
+	</BODY>
+</HTML>

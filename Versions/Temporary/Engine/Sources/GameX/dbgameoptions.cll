@@ -1,0 +1,66 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x100CCC01; no_checksum]
+class SOptionSystem
+{
+	struct SOptionsCategory
+	{
+		struct SOptionEntry
+		{
+			struct SOptionEntryState
+			{
+				TextFileRef _NameFileRef;
+				TextFileRef _TooltipFileRef;
+				// Value to save to global var
+				string _Value;
+
+				#include "include_OptionEntryState.h"
+			};
+
+			enum EOptionEditorType
+			{
+				OPTION_EDITOR_EDITLINE,
+				OPTION_EDITOR_CHECKBOX,
+				OPTION_EDITOR_SLIDER,
+				OPTION_EDITOR_DROPLIST,
+				OPTION_EDITOR_EDITNUMBER,
+			};
+
+			struct SSliderSingleValue
+			{
+				// set-function or global var name
+				string _ProgName;
+				// each slider position variable value
+				string _Values[10..10];
+			};
+
+			// set-function or global var name
+			string _ProgName;
+			TextFileRef _NameFileRef;
+			TextFileRef _TooltipFileRef;
+			// option states list
+			SOptionEntryState _States[1..];
+			EOptionEditorType _EditorType = OPTION_EDITOR_EDITLINE;
+			string _DefaultValue;
+			// game states, this option can be accessed
+			[editorControl = "bit_field"; stringParam = "editor\\BitFields\\OptionModes.xml"]
+			int _ModeFlags;
+			// slider changes variables set
+			SSliderSingleValue _SliderValues[];
+
+			#include "include_OptionEntry.h"
+		};
+		// Category name, header
+		TextFileRef _NameFileRef;
+		TextFileRef _TooltipFileRef;
+		SOptionEntry _Options[1..];
+
+		#include "include_OptionCategory.h"
+	};
+	SOptionsCategory _Categories[1..];
+
+	#include "include_OptionSystem.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,92 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SFade;
+forward class SPlayTime;
+forward class SMusicTrack;
+forward class SPlayList;
+forward class SComposition;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x111814C0; no_checksum]
+class SPlayTime
+{
+	// number of repeats for composition
+	int _Numer = 0;
+	int _NumberRandom;
+	// Time to play composition (in MS)
+	int _PlayTime = 0;
+	int _PlayTimeRandom;
+};
+
+struct SPlayPause
+{
+	// Time when main stream don't play music(in MS)
+	int _PauseTime = 0;
+	int _PauseRandom = 0;
+};
+
+[typeID = 0x11181300; no_checksum]
+class SFade
+{
+	// [0-100]This volume will be set when fade in is finished
+	float _FinalVolume = 0;
+	// Time to Fade in in MS
+	int _FadeTime = 0;
+	// When true, it is pause fade. If Final Volume == 0, then fade will pause stream after reducing volume to 0. If final volume is not 0, then this fade will unpause stream.
+	[hidden] bool _Pause;
+};
+
+[typeID = 0x11181301; no_checksum]
+class SMusicTrack
+{
+	SoundFileRef _MusicFileName;
+};
+
+[typeID = 0x11181302; no_checksum]
+class SComposition
+{
+	SMusicTrack *_Track;
+	SFade *_FadeIn;
+	SFade *_FadeOut;
+	SPlayTime *_PlayTime;
+	SPlayPause _PlayPauseAfter;
+};
+
+[typeID = 0x11181380; no_checksum]
+class SVoice
+{
+	SMusicTrack *_Track;
+	SPlayTime *_PlayTime;
+	SFade *_FadeIn;
+	SFade *_FadeOut;
+	// To fade main stream in when Track is finished
+	SFade *_MusicStreamFadeIn;
+	// To fade main stream out when Track started.
+	SFade *_MusicStreamFadeOut;
+};
+
+struct SCompositionDesc
+{
+	SComposition *_Composition;
+	// Composition with more weight will be chosen more often
+	float _Weight;
+};
+
+[typeID = 0x11181303; no_checksum]
+class SPlayList
+{
+	SComposition *_StillOrder[];
+	SCompositionDesc _RandomOrder[];
+	// whole playlist may be faded in
+	SFade *_FadeIn;
+	// whole playlist may be faded out
+	SFade *_FadeOut;
+};
+
+[typeID = 0x11181305; no_checksum]
+class SMapMusic
+{
+	SPlayList *_PlayLists[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,148 @@
+#include "../game.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+#include "../stats_b2_m1/season.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SObjectRPGStats;
+forward class SVisObj;
+forward class SBuildingRPGStats;
+forward enum ESeason;
+forward enum EDayNight;
+forward class SInfantryRPGStats;
+forward enum EBuildingType;
+forward class SPartyDependentInfo;
+forward class SMechUnitRPGStats;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x10091381]
+[noKey; hidden; noCode] class SMapInfoBuilder
+{
+	[editorControl = "int_combo"; stringParam = "values:1#20; step:1"]
+	int _SizeX = 10;
+	[editorControl = "int_combo"; stringParam = "values:1#20; step:1"]
+	int _SizeY = 10;
+	ESeason _Season = SEASON_SUMMER;
+	EDayNight _DayTime = DAY_DAY;
+	SPartyDependentInfo *_Players[3..];
+};
+
+[typeID = 0x140923C0]
+[noKey; hidden; noCode] class SVisObjBuilder
+{
+	enum ETextureType
+	{
+		AM_OPAQUE,
+		AM_ALPHA_TEST,
+		AM_TRANSPARENT,
+	};
+
+	SceneFileRef _ModelFileName;
+	TGAFileRef _TextureFileName;
+	ETextureType _TextureType;
+	string _RootMesh;
+	string _RootJoint;
+	string _AIRootMesh;
+	SSkeleton *_Skeleton;
+};
+
+[typeID = 0x14092800]
+[noKey; hidden; noCode] class SObjectRPGStatsBuilder
+{
+	SVisObj *_VisualObject;
+	SObjectRPGStats *_Source;
+};
+
+[typeID = 0x14092801]
+[noKey; hidden; noCode] class SBuildingRPGStatsBuilder
+{
+	SVisObj *_VisualObject;
+	// Type of this building (see enum above for possible types)
+	EBuildingType _Type;
+	SBuildingRPGStats *_Source;
+	SWindowInfo _DefaultWindow;
+};
+
+[typeID = 0x14092802]
+[noKey; hidden; noCode] class SInfantryRPGStatsBuilder
+{
+	enum EDBInfantryRPGType
+	{  	
+		DB_RPG_TYPE_SOLDIER,
+		DB_RPG_TYPE_ENGINEER,
+		DB_RPG_TYPE_SNIPER,
+		DB_RPG_TYPE_OFFICER,
+	};
+	SVisObj *_VisualObject;
+	// Type of this infantry (see enum above for possible types)
+	EDBInfantryRPGType _Type;
+	SInfantryRPGStats *_Source;
+};
+
+[typeID = 0x14092803]
+[noKey; hidden; noCode] class SMechUnitRPGStatsBuilder
+{
+	enum EDBMechUnitRPGType
+	{
+		DB_RPG_TYPE_TRN_CARRIER,
+		DB_RPG_TYPE_TRN_SUPPORT,
+		DB_RPG_TYPE_TRN_MEDICINE,
+		DB_RPG_TYPE_TRN_TRACTOR,
+		DB_RPG_TYPE_TRN_MILITARY_AUTO,
+		DB_RPG_TYPE_TRN_CIVILIAN_AUTO,
+		DB_RPG_TYPE_ART_GUN,
+		DB_RPG_TYPE_ART_HOWITZER,
+		DB_RPG_TYPE_ART_HEAVY_GUN,
+		DB_RPG_TYPE_ART_AAGUN,
+		DB_RPG_TYPE_ART_ROCKET,
+		DB_RPG_TYPE_ART_SUPER,
+		DB_RPG_TYPE_ART_MORTAR,
+		DB_RPG_TYPE_ART_HEAVY_MG,
+		DB_RPG_TYPE_SPG_ASSAULT,
+		DB_RPG_TYPE_SPG_ANTITANK,
+		DB_RPG_TYPE_SPG_SUPER,
+		DB_RPG_TYPE_SPG_AAGUN,
+		DB_RPG_TYPE_ARM_LIGHT,
+		DB_RPG_TYPE_ARM_MEDIUM,
+		DB_RPG_TYPE_ARM_HEAVY,
+		DB_RPG_TYPE_ARM_SUPER,
+		DB_RPG_TYPE_AVIA_SCOUT,
+		DB_RPG_TYPE_AVIA_BOMBER,
+		DB_RPG_TYPE_AVIA_ATTACK,
+		DB_RPG_TYPE_AVIA_FIGHTER,
+		DB_RPG_TYPE_AVIA_SUPER,
+		DB_RPG_TYPE_AVIA_LANDER,
+		DB_RPG_TYPE_TRAIN_LOCOMOTIVE,
+		DB_RPG_TYPE_TRAIN_CARGO,
+		DB_RPG_TYPE_TRAIN_CARRIER,
+		DB_RPG_TYPE_TRAIN_SUPER,
+		DB_RPG_TYPE_TRAIN_ARMOR,
+	};
+	SVisObj *_VisualObject;
+	// Type of this mech unit (see enum above for possible types)
+	EDBMechUnitRPGType _Type;
+	SMechUnitRPGStats *_Source;
+};
+
+[typeID = 0x140A7540]
+[noKey; hidden; noCode] class SAnimB2Builder
+{
+	SceneFileRef _SrcName;
+	string _RootJoint;
+};
+
+[typeID = 0x160B2300]
+[noKey; hidden; noCode] class SMapInfoCopier
+{
+	[editorControl = "string_dir_ref"; intParam = 1]
+	string _MapFilesPath;
+};
+
+[typeID = 0x1019E440]
+[noKey; hidden; noCode] class SAcksBuilder
+{
+	// Excel file with new acks
+	ExcelFileRef _ExcelFile;
+	[editorControl = "string_dir_ref"; intParam = 1]
+	// source dir with ack sounds (relative to 'complete')
+	string _SourceDir;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

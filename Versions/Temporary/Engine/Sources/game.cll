@@ -1,0 +1,116 @@
+[typeRename = "CVec2"; typePrefix = "v"]
+[noHeader] struct CVec2
+{
+	float _x = 0;
+	float _y = 0;
+};
+
+[typeRename = "CVec3"; typePrefix = "v"]
+[noHeader] struct CVec3
+{
+	float _x = 0;
+	float _y = 0;
+	float _z = 0;
+};
+
+[typeRename = "CVec4"; typePrefix = "v"]
+[noHeader] struct CVec4
+{
+	float _x = 0;
+	float _y = 0;
+	float _z = 0;
+	float _w = 0;
+};
+
+[typeRename = "CQuat"; typePrefix = "q"]
+[noHeader] struct CQuat
+{
+	float _x = 0;
+	float _y = 0;
+	float _z = 0;
+	float _w = 1;
+};
+
+// сферические координаты
+[typeRename = "CVecPolar"; typePrefix = "v"]
+[noHeader] struct SVecPolar
+{
+	float _Lat;
+	float _Long;
+};
+
+
+[typeRename = "CTPoint{float}"; typePrefix = "pt"]
+[noHeader] struct SPoint
+{
+	float _x = 0;
+	float _y = 0;
+};
+
+[typeRename = "CTRect{float}"; typePrefix = "rc"]
+[noHeader] struct SRect
+{
+	float _x1 = 0;
+	float _y1 = 0;
+	float _x2 = 0;
+	float _y2 = 0;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[editorControl = "int_color_with_alpha"]
+typedef int Color;
+
+[useUpperType]
+[editorControl = "vec3_color"]
+typedef CVec3 VecColor;
+
+[minInclusive = 0; maxInclusive = 1; editorControl = "float_slider"; stringParam = "min:0, max:1, step:0.1, page:0.1"]
+typedef float Percent1;
+
+[minInclusive = 0; maxInclusive = 100; editorControl = "int_slider"; stringParam = "min:0, max:100, step:1, page:10"]
+typedef int Percent100;
+
+[minInclusive = 0; maxInclusive = 255; editorControl = "int_slider"; stringParam = "min:0, max:255, step:1, page:32"]
+typedef int Percent255;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeRename = "NFile::CFilePath"; filepath = true; no_checksum]
+typedef string FilePathRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "All Destination Files (*.*)|*.*||"]
+typedef FilePathRef AnyDstFileRef;
+
+[editorControl = "string_file_ref"; intParam = 1; stringParam = "All Source Files (*.*)|*.*||"]
+typedef FilePathRef AnySrcFileRef;
+
+[editorControl = "string_file_ref"; intParam = 1; stringParam = "Picture files (*.tga, *.psd)|*.tga; *.psd|All Files (*.*)|*.*||"]
+typedef FilePathRef PictureFileRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "Picture files (*.tga, *.psd)|*.tga; *.psd|All Files (*.*)|*.*||"]
+typedef FilePathRef PictureDstFileRef;
+
+[editorControl = "string_file_ref"; intParam = 1; stringParam = "MB files (*.mb)|*.mb|All Files (*.*)|*.*||"]
+typedef FilePathRef SceneFileRef;
+
+[editorControl = "string_file_ref"; intParam = 1; stringParam = "TGA files (*.tga)|*.tga|All Files (*.*)|*.*||"]
+typedef FilePathRef TGAFileRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "TGA files (*.tga)|*.tga|All Files (*.*)|*.*||"]
+typedef FilePathRef TGADstFileRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "All Cursor Files (*.cur, *.ani)|*.cur; *.ani|All Files (*.*)|*.*||"]
+typedef FilePathRef CursorFileRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "XML files (*.xml)|*.xml|All Files (*.*)|*.*||"]
+typedef FilePathRef XMLFileRef;
+
+[editorControl = "text_file"; intParam = 2; stringParam = "editor:lua, mask:LUA files (*.lua)|*.lua|All Files (*.*)|*.*||"]
+typedef FilePathRef LUAFileRef;
+
+[editorControl = "text_file"; intParam = 2; stringParam = "editor:text, mask:Unicode text files (*.txt)|*.txt|All Files (*.*)|*.*||"]
+typedef FilePathRef TextFileRef;
+
+[editorControl = "string_file_ref"; intParam = 2; stringParam = "Sound files (*.wav, *.ogg, *.mp3)|*.wav;*.ogg;*.mp3|All Files (*.*)|*.*||"]
+typedef FilePathRef SoundFileRef;
+
+[editorControl = "string_file_ref"; intParam = 1; stringParam = "Excel files (*.xls)|*.xls|All Files (*.*)|*.*||"]
+typedef FilePathRef ExcelFileRef;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

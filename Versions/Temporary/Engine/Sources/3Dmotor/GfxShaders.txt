@@ -1,0 +1,2347 @@
+[VS]
+;register mapping for vertex shaders 
+;v0 = pos; v1 = packed normal; v3 = tex (packed to shorts); v6 = texLM (packed to shorts)
+;v4 = rgb - color, w - warfog, v5 = rgb - color, w - warfog
+
+; c19 = (fogStart, 1/(fogEnd-fogStart), zStart, 1/(zEnd-zStart ) )
+; c20 = fogColor
+
+
+
+
+func CalcDistanceFogFromParam rPos  rFog
+	mad rFog, rPos.w, c19.x, c19.y
+	
+	
+func CalcDistanceFogFromParamExt rPos rRps rFog
+    locals rFg1
+	mad rFg1.x, rPos.w, c19.x, c19.y
+	mad rFg1.y, rRps.z, c19.z, c19.w
+    min rFog, rFg1.x, rFg1.y
+
+func CalcDistanceFog rFog
+	locals rPos
+	m4x4 rPos, v0, c10
+	mov oPos, rPos
+	CalcDistanceFogFromParamExt rPos v0 rFog
+
+
+func CalcWoodooDistanceFog rFog
+	locals rPos rWoodooPos
+	mov rWoodooPos, v0
+	mad rWoodooPos.xy, v6.xy, c31.xy, rWoodooPos.xy
+	mad rWoodooPos.xy, v6.xy, c31.zw, rWoodooPos.xy
+	m4x4 rPos, rWoodooPos, c10
+	mov oPos, rPos
+	CalcDistanceFogFromParamExt rPos v0 rFog
+
+
+func CalcNormal normal
+	mad normal.xyz, v1, c3.xxx, c3.yyy
+
+func CalcVectors normal texU texV
+	CalcNormal normal
+	mad texU.xyz, v4, c3.xxx, c3.yyy
+	mad texV.xyz, v5, c3.xxx, c3.yyy
+
+; res.w holds squared source length
+func Normalize3 res
+	locals rLeng
+	dp3 res.w, res, res
+	rsq rLeng.w, res.w
+	mul res.xyz, res.xyz, rLeng.w
+
+func CalcCameraDir res
+	mad res.xyz, c9.w, -v0, c9.xyz
+	Normalize3 res
+
+proc PureGeometry
+	m4x4 oPos, v0, c10
+	//CalcDistanceFog oFog
+
+proc ConstLight
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	mov oD0, c16
+
+proc Render2D
+	m4x4 oPos, v0, c10
+	mul oT0.xy, v3, c16
+	mov oD0, v4
+
+proc Render2DClouds
+    locals loc
+	m4x4 oPos, v0, c10
+	mul loc.xy, v3, c16
+	mov oT0.xy, loc
+	mad oT1.xy, c17.xy, loc.xy, c17.zw
+	mov oD0, v4
+
+proc DrawTexU
+	m4x4 oPos, v0, c10
+	mov oD0, v4
+
+proc Texture
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	mul oT0.xy, v3, c6.xx
+	
+proc SimpleSky
+	locals rTemp1, rTemp2
+	mov rTemp1, c10
+	mul rTemp1, rTemp1, c30
+	mov rTemp2, c11
+	mul rTemp2, rTemp2, c31
+	dp4 oPos.x, v0, rTemp1
+	dp4 oPos.y, v0, rTemp2
+	dp4 oPos.z, v0, c12
+	dp4 oPos.w, v0, c13
+	mul oT0.xy, v3, c6.xx
+
+proc TexturePerVertexTransp
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	mul oT0.xy, v3, c6.xx
+	mul oD0.a, v1.w, c16.x
+
+func LinearDepthMapProjection vSrc dst
+    locals uv
+	dp4 uv.y, vSrc, c25
+	dp4 uv.x, vSrc, c26
+	mad dst.xy, uv.xy, c27.xy, c27.zw
+
+func NonLinearDepthMapProjection vSrc dst
+	locals uv, inv, zz
+	dp4 uv.x, vSrc, c25
+	dp4 uv.y, vSrc, c26
+	mad inv.xy, uv.xy, uv.xy, c3.z
+	logp zz, inv.x
+	mul uv.x, uv.x, zz.z
+	logp zz, inv.y
+	mul uv.y, uv.y, zz.z
+	rsq inv.x, inv.x
+	rsq inv.y, inv.y
+	mul uv.xy, uv.xy, inv.xy
+	mad dst.xy, uv.xy, c27.xy, c27.zw
+
+func NonLinearDepthRenderPos
+	NonLinearDepthMapProjection v0 oPos
+	dp4 oPos.z, v0, c17
+	mov oPos.w, c1
+
+func LinearDepthRenderPos
+	LinearDepthMapProjection v0 oPos
+	dp4 oPos.z, v0, c17
+	mov oPos.w, c1
+
+
+proc Depth
+	NonLinearDepthRenderPos
+	dp4 oD0.w, v0, c24
+	mov oD0.xyz, c1
+
+proc DepthLP
+	LinearDepthRenderPos
+	dp4 oD0.w, v0, c24
+	mov oD0.xyz, c1
+
+
+proc DepthATTextureLP
+	LinearDepthRenderPos
+	dp4 oD0.w, v0, c24
+	mov oD0.xyz, c1
+	mul oT0.xy, v3, c6.xx
+
+
+proc DepthATTexture
+	NonLinearDepthRenderPos
+	dp4 oD0.w, v0, c24
+	mov oD0.xyz, c1
+	mul oT0.xy, v3, c6.xx
+
+proc LinearDepth16
+	LinearDepthRenderPos
+	dp4 oT0.x, v0, c24
+	mov oT0.y, c0   
+
+ 
+proc Depth16
+	NonLinearDepthRenderPos
+	dp4 oT0.x, v0, c24
+	mov oT0.y, c0   
+
+proc LinearDepth16ATTexture
+	LinearDepthRenderPos
+	dp4 oT0.x, v0, c24
+	mov oT0.y, c0
+	mul oT1.xy, v3, c6.xx
+
+
+proc Depth16ATTexture
+	NonLinearDepthRenderPos
+	dp4 oT0.x, v0, c24
+	mov oT0.y, c0
+	mul oT1.xy, v3, c6.xx
+
+proc LPDepth
+	m4x4 oPos, v0, c10
+	dp4 oD0, v0, c24
+
+proc TexturePerVertexTranspNLP
+	NonLinearDepthRenderPos
+	mul oT0.xy, v3, c6.xx
+	mul oD0.a, v1.w, c18.x
+
+proc ParticleLMDirectionalTest
+	m4x4 oPos, v6, c10
+	dp4 oD0, v0, c24 // depth
+	NonLinearDepthMapProjection v0 oT0
+
+proc RenderClouds
+	locals worldPos
+	mov worldPos, c30
+	mad worldPos, c31, v0.x, worldPos
+	mad worldPos, c32, v0.y, worldPos
+	NonLinearDepthMapProjection worldPos oPos
+	mov oPos.zw, c2.xy
+	dp4 oT0.x, worldPos, c28
+	dp4 oT0.y, worldPos, c29
+
+func G3DiffuseColors vertexColor normal vertexTransparency rWarFog
+	NonLinearDepthMapProjection v0 oT1
+	locals rTest, rLight // calc light
+	dp3 rTest.x, normal, c35
+	mul rWarFog.xyz, rWarFog.w, vertexColor
+	mul oD0.xyz, v4, rWarFog
+	mul oD0.w, v1.w, vertexTransparency.w
+	mul oD1.xyz, v5, rWarFog
+	locals rDepth        // calc depth
+	sge rDepth.y, -rTest.x, c35.w
+	dp4 rDepth.x, v0, c24           
+	add oT2, rDepth.x, rDepth.y
+	//add oD1.w, rDepth.x, rDepth.y
+
+func G3DiffuseColorsLP vertexColor normal vertexTransparency rWarFog
+	LinearDepthMapProjection v0 oT1
+	mul rWarFog.xyz, rWarFog.w, vertexColor
+	mul oD0.xyz, v4, rWarFog
+	mul oD0.w, v1.w, vertexTransparency.w
+	mul oD1.xyz, v5, rWarFog
+	dp4 oT2, v0, c23           
+	//add oT2, rDepth.x, rDepth.y
+	//add oD1.w, rDepth.x, rDepth.y
+
+
+func CalcWarFog warFog
+	mul warFog.w, v4.w, c30.y
+	mad warFog.w, v5.w, c30.x, warFog.w
+
+func CalcG3DiffuseCommon vertexColor normal vertexTransparency
+	locals rWarFog
+	CalcWarFog rWarFog
+	G3DiffuseColors vertexColor normal vertexTransparency rWarFog
+
+func CalcG3DiffuseCommonLP vertexColor normal vertexTransparency
+	locals rWarFog
+	CalcWarFog rWarFog
+	G3DiffuseColorsLP vertexColor normal vertexTransparency rWarFog
+
+func CalcG3DiffuseTex vertexColor normal
+	CalcG3DiffuseCommon vertexColor normal c29
+	mul oT0.xy, v3, c6.xx
+
+func CalcG3DiffuseTexLP vertexColor normal
+	CalcG3DiffuseCommonLP vertexColor normal c29
+	mul oT0.xy, v3, c6.xx
+
+proc G3DiffuseTex
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	CalcG3DiffuseTex c29 normal
+
+
+proc G3DiffuseTexLP
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	CalcG3DiffuseTexLP c29 normal
+
+proc G3DiffuseTexEXT
+	CalcWoodooDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	CalcG3DiffuseTex c29 normal
+
+proc G3TransparentGeom
+	CalcDistanceFog oFog
+	locals rColor, normal
+	mul rColor.xyz, v1.w, c29
+	CalcNormal normal
+	CalcG3DiffuseTex rColor normal
+
+proc G3TransparentGeomEXT
+	CalcWoodooDistanceFog oFog
+	locals rColor, normal
+	mul rColor.xyz, v1.w, c29
+	CalcNormal normal
+	CalcG3DiffuseTex rColor normal
+
+
+
+proc G3DiffuseTex2
+	G3DiffuseTex
+	mad oT3.xy, v6, c31.xx, c31.yy	
+
+proc G3DiffuseTex2NoShadows
+	G3DiffuseTex
+	mad oT1.xy, v6, c31.xx, c31.yy	
+	
+proc G3DiffuseTexDetail
+	G3DiffuseTex
+	mul oT3.xy, v3, c32.xx
+	
+proc G3DiffuseTexDetailLM
+	G3DiffuseTex
+	mad oT3.xy, v6, c31.xx, c31.yy
+	mul oT4.xy, v3, c32.xx
+
+proc G3DiffuseTexTerrain
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	CalcG3DiffuseTex c29 normal
+
+proc G3DiffuseTex2Terrain 
+	G3DiffuseTexTerrain
+	mul oT3.xy, v6, c6.xx
+
+proc ShowLM
+	m4x4 oPos, v0, c10
+	mad oT0.xy, v6, c16.xx, c16.yy
+
+func CalcLocalVector res globalVec normal texU texV
+	dp3 res.x, texU, globalVec
+	dp3 res.y, texV, globalVec
+	dp3 res.z, normal, globalVec          // r4 = local space normal
+
+func SetupSpec normal
+	locals vu, vv
+; calc du/dv vectors
+	mul vu.xyz, normal.yxz, c31
+	mul vv.xyz, normal.yzx, vu.zxy
+	mad vv.xyz, normal.zxy, -vu.yzx, vv
+	Normalize3 vu
+	Normalize3 vv
+//;	oT3 = H in local space
+//;	oT4 = H in local space
+	locals cameraDir, lightDir, halfVector
+	CalcCameraDir cameraDir
+	mad lightDir.xyz, -v0.xyz, c15.www, c15.xyz // r5 = (L),  world space 
+	Normalize3 lightDir
+	add halfVector.xyz, cameraDir.xyz, lightDir.xyz // r2 = not normalised half vector (H)
+	//CalcLocalVector oT3 halfVector normal vu vv
+	CalcLocalVector oT4 halfVector normal vu vv
+
+proc G3DiffuseTexSpec
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	//CalcG3DiffuseTex rColor normal
+	CalcG3DiffuseTex c29 normal
+	//mul oT2.xy, v3, c6.xx
+	mul oT3.xy, v3, c6.xx
+	SetupSpec normal
+
+proc G3DiffuseTexSpecLM
+	G3DiffuseTexSpec
+	//mad oT4.xy, v6, c31.xx, c31.yy
+	mad oT5.xy, v6, c31.xx, c31.yy
+
+proc Blend2TexColor
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	locals rWarFog
+	mul rWarFog.w, v4.w, c30.y
+	mad oD1.rgb, v5.w, c30.x, rWarFog.w
+	//mov oD1.w, v1.w
+	mov oT2, v1.w
+	mov oD0.rgb, v4
+	mov oD0.w, v5.x
+	mul oT0.xy, v3, c6.xx
+	mul oT1.xy, v6, c6.xx
+	
+proc ReflectionWater
+	// Common Part
+	CalcDistanceFog oFog
+	
+	//locals rWarFog
+	//mul rWarFog.w, v4.w, c30.y
+	//mad rWarFog.w, v5.w, c30.x, rWarFog.w
+
+	locals rPos rTex
+	m4x4 rPos, v0, c10
+	mov oPos, rPos
+	
+	mul rTex.xy, v3, c6.xx
+	mul rTex.xy, rTex, c32.xy
+	add oT0.xy, rTex.xy, c31.xy	
+	add oT3.xy, rTex.xy, c31.xy	
+	
+	//mul oT0.xy, v3, c6.xx
+		
+	// Calculate texture coordinates
+	locals rWave
+	rcp rWave.w, rPos.w
+	mul rPos.xyzw, rPos.xyzw, rWave.w	
+	mad rPos.xy, c2.xx, rPos.xy, c2.xx
+	
+	// Some Waves	
+	//mad rWave, rPos.xy, c30.xy, c30.zw
+	//frc rWave.xy, rWave.xy
+	//mad rWave.xy, rWave.xy, -rWave.xy, rWave.xy
+	//mul rWave.xy, rWave.xy, c2.z
+	//mul rWave.xy, rWave.xy, c31.zw
+	
+	//add rPos.xy, rPos.xy, rWave.xy
+	//mul rPos.xy, rPos.xy, rPos.w
+	//locals rR
+	//rcp rR.w, rPos.w
+	//mul rR.xyzw, rPos.xyzw, rR.wwww
+	
+	mul oT1.xyzw, rPos.xxxw, c35
+	mul oT2.xyzw, rPos.yyyw, c36
+	
+	// Calc Alpha	
+	mul oD0.w, v1.w, c34.z
+
+	locals cameraDir	
+	CalcCameraDir cameraDir
+	
+	add cameraDir.w, c1.x, -cameraDir.z
+	mul cameraDir.w, cameraDir.w, cameraDir.w
+	mul cameraDir.w, cameraDir.w, cameraDir.w
+	
+	mad cameraDir.w, cameraDir.w, c34.z, c34.w	
+	
+	mul oD1.w, cameraDir.w, v1.w
+	//mul oD1.w, cameraDir.w, rWarFog.w
+		
+		
+proc ReflectionWaterCube
+	// Common Part
+	CalcDistanceFog oFog
+	
+	locals rPos rTex cameraDir
+	m4x4 rPos, v0, c10
+	mov oPos, rPos
+	
+	mul rTex.xy, v3, c6.xx
+	mul rTex.xy, rTex, c32.xy
+	add oT0.xy, rTex.xy, c31.xy	
+	
+	mov oT1.xyz, c35
+	mov oT2.xyz, c36
+	mov oT3.xyz, c37
+	
+	CalcCameraDir cameraDir
+	
+	mov oT1.w, cameraDir.x
+	mov oT2.w, cameraDir.y
+	mul oT3.w, cameraDir.z, c38.w
+	
+	mov oD0.w, c34.z
+
+		
+		
+//; color should be stored to texU
+//proc TransparentMap
+//	m4x4 oPos, v0, c10
+//	mov oD0.w, v4
+//	mul oD0.xyz, v4.xyz, v4.w
+//	mul oT0.xy, v3, c6.xx
+//	mad oT1.xy, v6, c6.yy, c6.zz
+
+; color should be stored to texU
+proc G3Particles
+	locals rFog
+	CalcDistanceFog rFog
+	mul oD1.rgb, rFog, c20
+	//mov oD1.rgb, rFog, c20
+	mov oD1.w, rFog
+	mov oD0.w, v4
+	mul oD0.xyz, v4.xyz, v4.w
+	mul oT0.xy, v3, c6.xx
+	mad oT1.xy, v6, c6.yy, c6.zz
+
+func DoMirror outTex normal rWarFog
+	locals cameraDir, vFresnel
+	CalcCameraDir cameraDir
+	// r1 = cameraDir
+	dp3 cameraDir.w, cameraDir, normal
+	add vFresnel.w, c1.x, -cameraDir.w
+	mul vFresnel.w, vFresnel.w, vFresnel.w
+	mul vFresnel.w, vFresnel.w, vFresnel.w
+	mul cameraDir.w, cameraDir.w, c2.z // cameraDir.w = 2 * ( cameraDir dp3 normal )
+	mad vFresnel.w, vFresnel.w, c34.z, c34.w
+	mul oD0.w, vFresnel.w, rWarFog.w
+	mad outTex.xyz, cameraDir.w, normal, -cameraDir.xyz
+
+proc GlossedMirror
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	locals rWarFog
+	mul rWarFog.w, v4.w, c30.y
+	mad rWarFog.w, v5.w, c30.x, rWarFog.w
+	DoMirror oT0 normal rWarFog
+	mul oT1.xy, v3, c6.xx
+
+proc G3DiffuseTexMirror
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	locals normal
+	CalcNormal normal
+	locals rWarFog
+	mul rWarFog.w, v4.w, c30.y
+	mad rWarFog.w, v5.w, c30.x, rWarFog.w
+	G3DiffuseColors c29 normal c29 rWarFog
+	mul oT0.xy, v3, c6.xx
+	//DoMirror oT2 normal rWarFog
+	//mul oT3.xy, v3, c6.xx
+	DoMirror oT3 normal rWarFog
+	mul oT4.xy, v3, c6.xx
+
+proc Tracks
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	mul oT0.xy, v3, c6.xx
+	mov oD0.xyz, v4
+	
+proc CLSkyLight3
+	locals pos, temp, rPos
+	m4x4 pos, v6, c10
+	mov oPos, pos
+	mov rPos, pos
+	CalcDistanceFogFromParam rPos oFog
+	mul temp.xy, c34.zw, pos.w
+	mad pos.xy, pos.xy, c34.xy, temp.xy
+	mov oT3.xyzw, pos.xyww
+	CalcNormal oT4
+	dp4 oD0.x, v0, c16
+	dp4 oT0.x, v0, c17         // depth map projection
+	dp4 oT0.y, v0, c18
+	dp4 oD0.y, v0, c25
+	dp4 oT1.x, v0, c26         // depth map projection
+	dp4 oT1.y, v0, c27
+	dp4 oD0.z, v0, c28
+	dp4 oT2.x, v0, c29         // depth map projection
+	dp4 oT2.y, v0, c30
+	
+proc PointCubeMapDepth
+	//m4x4 oPos, v0, c10
+	CalcDistanceFog oFog
+	locals vDir
+	add vDir, v0, -c15
+	mul oT0.xyz, vDir, c16.x
+
+proc CLPointLightShadowed
+	locals pos, temp, rPos
+	m4x4 pos, v6, c10
+	mov oPos, pos
+	mov rPos, pos
+	CalcDistanceFogFromParam rPos oFog
+	mul temp.xy, c17.zw, pos.w
+	mad pos.xy, pos.xy, c17.xy, temp.xy
+	mov oT1.xyzw, pos.xyww
+	locals vDir
+	add vDir, v0, -c15
+	mul oT0.xyz, vDir, c16.x
+	CalcNormal oT2
+
+proc Clouds
+	//m4x4 oPos, v0, c10
+	//locals rFog
+	//CalcDistanceFog rFog
+	CalcDistanceFog oFog
+	//mul oT1, rFog, c20
+
+	locals rWarFog
+	CalcWarFog rWarFog
+	mov oD0, rWarFog.w
+
+	//mov oD0.w, rFog
+	mad oT0.xy, v3, c25.zz, c25
+
+func G3AnimWaterCommon rTex rVertCalc rFogPos
+	locals rPos
+	mov rPos, v0
+	
+	// Calcing rotation around original point
+	mad rVertCalc.xy, v6, c36.xx, c36.yy
+
+	mad rVertCalc.x, rVertCalc.y, c33.x, rVertCalc.x
+	frc rVertCalc.xy, rVertCalc.x
+	sge rVertCalc.z, rVertCalc.x, c34.z
+	mad rVertCalc.x, rVertCalc.z, -c34.z, rVertCalc.x
+	
+	mad rVertCalc.x, rVertCalc.x, c37.x, c37.y
+	mad rVertCalc.z, rVertCalc.z, -c34.x, -c34.y
+	
+	mul rVertCalc.x, rVertCalc.x, rVertCalc.z
+	mad rPos.x, rVertCalc.x, c34.w, rPos.x
+	mad rVertCalc.x, rVertCalc.x, rVertCalc.x, c34.y
+	mul rVertCalc.x, rVertCalc.x, rVertCalc.z
+	mad rPos.y, rVertCalc.x, c34.w, rPos.y
+	
+	// Calcing height
+//	add rVertCalc.y, rPos.x, c31.w
+//	frc rVertCalc.y, rVertCalc.y
+//	mad rVertCalc.y, rVertCalc.y, -rVertCalc.y, rVertCalc.y
+//	mul rVertCalc.y, rVertCalc.y, c37.w	
+//	add rPos.z, rPos.z, rVertCalc.y
+	
+	// Common part
+	m4x4 rFogPos, rPos, c10
+	mov oPos, rFogPos
+		
+	CalcDistanceFogFromParamExt rFogPos rPos oFog
+	
+	//m4x4 oPos, v0, c10
+	locals normal
+	//mul rColor.xyz, v1.w, c29
+	CalcNormal normal
+	CalcG3DiffuseCommon c29 normal c29
+	
+	mul rTex.xy, v3, c6.xx
+//	mul rTex.xy, rTex, c32.xy
+	add oT0.xy, rTex.xy, c31.xy	
+
+
+proc G3AnimWaterWithoutHorse
+	locals rTex, rVertCalc, rFogPos
+	G3AnimWaterCommon rTex rVertCalc rFogPos
+
+proc G3AnimWater
+	locals rTex, rVertCalc, rFogPos
+	G3AnimWaterCommon rTex rVertCalc rFogPos
+	
+	// Moving horses	
+	add oT1.xy, rTex, c31.zw
+	
+	// Calculating alpha for horses and putting it to oT2.w	
+	
+	// locals rProfile, rHeight - registers are finished, so rTex and rVertCalc will be used instead of it
+	
+	//	fIncHeight += pController->waves[k].fAmplitude * curNode->amplitudes[k] *
+	//		GetWaveProfile( GetFracPart( curNode->phases[k] + fCurTime * pController->waves[k].fInvPeriod ) );
+			
+	// rTex = curNode->phases[k] + fCurTime * pController->waves[k].fInvPeriod
+	add rTex.xyz, v1.xyz, c38.xxx
+	
+	// GetFracPart, we will use this fact, that 0 <= rTex.* <= 2
+	sge rVertCalc.xyz, rTex, c1
+	add rTex.xyz, rTex, -rVertCalc.xyz
+					
+	// rTex = GetWaveProfile( rTex ) / 24
+	add rTex.xyz, rTex.xyz, -c2.xxx
+	mul rVertCalc.xyz, rTex, rTex
+	mul rTex.xyz, rVertCalc, rVertCalc
+	mul rTex.xyz, rTex, rVertCalc
+		
+	// rTex = curNode->amplitudes[k]* rTex, amplitude is divided by 2 ( because max amplitude = 2 )
+	mul rTex.xyz, rTex, v5.xyz
+		
+	// rTex.w += (24*2*pController->waves[k].fAmplitude) * wave[k], also need to multipy on 3 because we used only 3 waves insteed 9
+	dp3 rTex.w, rTex, c38.yyy
+
+	// Now calc alpha from height
+	// nAlpha = fabs2( Clamp( InvSqr( ( fIncHeight - DEF_MIN_HEIGHT ) * DEF_HEIGHT_COEFF ), 0.0f, 1.0f ) );
+	
+	// rTex.w = ( fIncHeight - DEF_MIN_HEIGHT ) * DEF_HEIGHT_COEFF
+	mad rTex.w, rTex.w, c38.z, c38.w
+	
+	// rTex.w = InvSqr( rTex.w )
+	max rTex.w, rTex.w, c0
+	min rTex.w, rTex.w, c1
+	
+	add rTex.w, c1, -rTex.w
+	mad rTex.w, rTex.w, -rTex.w, c1
+	
+	// fabs2
+	mul oT3, rTex.w, rTex.w
+	
+proc G3AnimWaterOld
+	locals rPos, rVertCalc
+	mov rPos, v0
+
+
+	mad rVertCalc.xy, v6, c36.xx, c36.yy
+
+	mad rVertCalc.x, rVertCalc.y, c33.x, rVertCalc.x
+	frc rVertCalc.xy, rVertCalc.x
+	sge rVertCalc.z, rVertCalc.x, c34.z
+	mad rVertCalc.x, rVertCalc.z, -c34.z, rVertCalc.x
+
+	mad rVertCalc.x, rVertCalc.x, c37.x, c37.y
+
+	mad rVertCalc.z, rVertCalc.z, -c34.x, -c34.y
+
+	mul rVertCalc.x, rVertCalc.x, rVertCalc.z
+	mad rPos.x, rVertCalc.x, c34.w, rPos.x
+	mad rVertCalc.x, rVertCalc.x, rVertCalc.x, c34.y
+	mul rVertCalc.x, rVertCalc.x, rVertCalc.z
+	mad rPos.y, rVertCalc.x, c34.w, rPos.y
+	
+	add rPos.x, rPos.x, c37.z
+
+	locals rFogPos
+	m4x4 rFogPos, rPos, c10
+	mov oPos, rFogPos
+
+	CalcDistanceFogFromParam rFogPos oFog
+	
+	//m4x4 oPos, v0, c10
+	locals normal
+	//mul rColor.xyz, v1.w, c29
+	CalcNormal normal
+	CalcG3DiffuseCommon c29 normal c29
+	
+	locals rTex
+	mul rTex.xy, v3, c6.xx
+	mul rTex.xy, rTex, c32.xy
+	add oT0.xy, rTex.xy, c31.xy
+		
+	
+func G3SurfProc rPos rVertCalc
+	locals rNorm, rCalc, rTest
+	mul rVertCalc.xy, v3, c6.xx
+	frc rPos.xy, rVertCalc.x
+	sub rVertCalc.x, rVertCalc.x, rPos.x
+	mul oT0.x, rPos.x, c33.x
+	sge oT0.y, rVertCalc.x, c33.w
+
+	mov rPos, v0
+	mad rNorm.xy, v6, c31.xx, c31.yy
+	//mov rNorm.zw, rNorm.xy
+	mov rTest.xy, rNorm.xy
+	sge rVertCalc.z, rVertCalc.y, c33.y
+	mul rNorm.xy, rNorm.xy, rVertCalc.zz
+	add rVertCalc.x, rVertCalc.y, c32.x
+	frc rVertCalc.xy, rVertCalc.x
+	
+	sge rVertCalc.z, rVertCalc.x, c33.z
+	mad rVertCalc.x, rVertCalc.z, -c33.z, rVertCalc.x
+	mul rVertCalc.x, rVertCalc.x, c33.x
+	add rVertCalc.w, -rVertCalc.z, c33.y
+	
+	// x2
+	mad rTest.z, rVertCalc.z, c33.x, -c33.y
+	mad rVertCalc.x, rVertCalc.x, rTest.z, rVertCalc.w
+	mul rVertCalc.x, rVertCalc.x, rVertCalc.x
+	mad rVertCalc.x, rVertCalc.x, rTest.z, rVertCalc.w
+
+	// scale
+	mul rCalc.xy, rVertCalc.xx, rNorm.xy
+	mul rCalc.xy, rCalc.xy, rVertCalc.ww
+	mad rCalc.xy, rNorm.xy, rVertCalc.zz, rCalc.xy
+	//mad rPos.xy, rCalc.xy, c32.w, rPos.xy
+	add rPos.xy, rCalc.xy, rPos.xy
+	
+	// trans
+	mul rTest.xy, rTest.xy, rVertCalc.xx
+	mul rTest.xy, rTest.xy, -rVertCalc.zz
+	mad rPos.xy, rTest.xy, c32.w, rPos.xy
+	//add rPos.xy, rTest.xy, rPos.xy
+
+	//mad rVertCalc.x, rVertCalc.y, c32.x, rVertCalc.x
+	//sge rVertCalc.z, rVertCalc.x, c33.z
+
+proc G3Surf
+	//m4x4 oPos, v0, c10
+	locals normal
+	CalcNormal normal
+	locals rPos, rVertCalc
+	G3SurfProc rPos rVertCalc
+	locals rFogPos
+	m4x4 rFogPos, rPos, c10
+	mov oPos, rFogPos
+	CalcDistanceFogFromParam rFogPos oFog
+	
+	// alpha
+	mul rVertCalc.y, rVertCalc.x, rVertCalc.w
+	add rVertCalc.x, c33.y, -rVertCalc.x
+	mad rVertCalc.y, rVertCalc.x, rVertCalc.z, rVertCalc.y
+	
+	locals vertexTransp
+	//mul rColor.xyz, v1.w, c29
+	mul vertexTransp.w, rVertCalc.y, c29.w
+	//CalcG3DiffuseCommon rColor normal vertexTransp
+	CalcG3DiffuseCommon c29 normal vertexTransp
+	
+proc G3WriteZ
+	// c29.x = dist from focal plane;  c29.y = 2.0f / focus range;
+	locals rTemp
+	m4x4 rTemp, v0, c10
+	mov oPos, rTemp
+
+	mul oT0.xy, v3, c6.xx
+
+	mov oT1, rTemp.z
+	//rcp rTemp.w, rTemp.w
+	//mul oT0, rTemp.z, rTemp.w
+
+[PS] G3WriteZ
+ps.2.0
+dcl t0.xy
+dcl t1.x
+dcl_2d s0
+
+texld r1, t0, s0
+
+sub r0, t1.x, c29.x
+//max r1, r0, c29.w
+//mul r1, r1, c29.y
+//max r2, -r0, c29.w
+//mul r2, r2, c29.z
+//add_sat r0, r1, r2
+abs r0, r0
+mul_sat r0, r0, c29.y
+
+//sub r0, c30.x, r0
+//mul r0, r0, r0
+//sub r0, c30.x, r0
+
+mov r0.a, r1.a
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DepthOfField
+ps.2.0
+dcl t0.xy
+dcl_2d s0
+dcl_2d s1
+
+//texld r0, t0, s1
+//mov oC0, r0
+
+// Fetch middle sample
+texld r0, t0, s0
+texld r1, t0, s1
+
+// Compute CoC size based on blurriness
+mul r1.w, r1.y, c26.x
+
+// Texture coords
+mad r3.xy, c0, r1.w, t0
+mad r5.xy, c1, r1.w, t0
+mad r7.xy, c2, r1.w, t0
+mad r9.xy, c3, r1.w, t0
+mad r11.xy, c4, r1.w, t0
+
+// Sample 1 fetch
+texld r2, r3, s0
+texld r3, r3, s1
+
+// Sample 2 fetch
+texld r4, r5, s0
+texld r5, r5, s1
+
+// Sample 3 fetch
+texld r6, r7, s0
+texld r7, r7, s1
+
+// Sample 4 fetch
+texld r8, r9, s0
+texld r9, r9, s1
+
+// Sample 5 fetch
+texld r10, r11, s0
+texld r11, r11, s1
+
+// Sample 1 contribution
+sub r3.w, r3.x, r1.x
+cmp r3.x, r3.w, c26.z, r3.y
+mad r0.rgb, r2, r3.x, r0
+add r1.z, c26.z, r3.x
+
+// Sample 2 contribution
+sub r5.w, r5.x, r1.x
+cmp r5.x, r5.w, c26.z, r5.y
+mad r0.rgb, r4, r5.x, r0
+add r1.z, r1.z, r5.x
+
+// Sample 3 contribution
+sub r7.w, r7.x, r1.x
+cmp r7.x, r7.w, c26.z, r7.y
+mad r0.rgb, r6, r7.x, r0
+add r1.z, r1.z, r7.x
+
+// Sample 4 contribution
+sub r9.w, r9.x, r1.x
+cmp r9.x, r9.w, c26.z, r9.y
+mad r0.rgb, r8, r9.x, r0
+add r1.z, r1.z, r9.x
+
+// Sample 5 contribution
+sub r11.w, r11.x, r1.x
+cmp r11.x, r11.w, c26.z, r11.y
+mad r0.rgb, r10, r11.x, r0
+add r1.z, r1.z, r11.x
+
+// Texture coords
+mad r3.xy, c5, r1.w, t0
+mad r5.xy, c6, r1.w, t0
+mad r7.xy, c7, r1.w, t0
+mad r9.xy, c8, r1.w, t0
+mad r11.xy, c9, r1.w, t0
+
+// Sample 6 fetch
+texld r2, r3, s0
+texld r3, r3, s1
+
+// Sample 7 fetch
+texld r4, r5, s0
+texld r5, r5, s1
+
+// Sample 8 fetch
+texld r6, r7, s0
+texld r7, r7, s1
+
+// Sample 9 fetch
+texld r8, r9, s0
+texld r9, r9, s1
+
+// Sample 10 fetch
+texld r10, r11, s0
+texld r11, r11, s1
+
+// Sample 6 contribution
+sub r3.w, r3.x, r1.x
+cmp r3.x, r3.w, c26.z, r3.y
+mad r0.rgb, r2, r3.x, r0
+add r1.z, r1.z, r3.x
+
+// Sample 7 contribution
+sub r5.w, r5.x, r1.x
+cmp r5.x, r5.w, c26.z, r5.y
+mad r0.rgb, r4, r5.x, r0
+add r1.z, r1.z, r5.x
+
+// Sample 8 contribution
+sub r7.w, r7.x, r1.x
+cmp r7.x, r7.w, c26.z, r7.y
+mad r0.rgb, r6, r7.x, r0
+add r1.z, r1.z, r7.x
+
+// Sample 9 contribution
+sub r9.w, r9.x, r1.x
+cmp r9.x, r9.w, c26.z, r9.y
+mad r0.rgb, r8, r9.x, r0
+add r1.z, r1.z, r9.x
+
+// Sample 10 contribution
+sub r11.w, r11.x, r1.x
+cmp r11.x, r11.w, c26.z, r11.y
+mad r0.rgb, r10, r11.x, r0
+add r1.z, r1.z, r11.x
+
+// Texture coords
+mad r3.xy, c10, r1.w, t0
+mad r5.xy, c11, r1.w, t0
+
+// Sample 11 fetch
+texld r2, r3, s0
+texld r3, r3, s1
+
+// Sample 12 fetch
+texld r4, r5, s0
+texld r5, r5, s1
+
+// Sample 11 contribution
+sub r3.w, r3.x, r1.x
+cmp r3.x, r3.w, c26.z, r3.y
+mad r0.rgb, r2, r3.x, r0
+add r1.z, r1.z, r3.x
+
+// Sample 12 contribution
+sub r5.w, r5.x, r1.x
+cmp r5.x, r5.w, c26.z, r5.y
+mad r0.rgb, r4, r5.x, r0
+add r1.z, r1.z, r5.x
+
+// Scale sample sum
+rcp r1.w, r1.z
+mul r0.rgb, r0, r1.w
+
+// Output color
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] Dp3
+ps.1.1
+tex t0
+dp3 r0, t0, c0
+add r0.rgb, r0, 1-r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] AlphaTestTexturePerVertexTransp
+ps.1.1
+tex t0
+mov r0.rgb, t0
+mul r0.a, t0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATER
+
+[PS_PROC] G3CommonDiffuseTexNoShadows
+ps.1.1
+tex t0
+mul_x4_sat r0.rgb, v1, t0
++mul r0.a, t0.a, v0.a
+
+[PS_PROC] G3CommonDiffuseTex
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+mul_x4_sat r0.rgb, v0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, v1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++mul r0.a, t0.a, v0.a
+
+[PS] G3DiffuseTex
+G3CommonDiffuseTex
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+
+[PS_PROC] G3CommonDiffuseTexNoAlpha
+ps.1.1
+tex t0
+tex t1
+mul_x4_sat r0.rgb, v0, t0
+mul_x4_sat r1.rgb, v1, t0
+lrp r0.rgb, t1, r1, r0
++mul r0.a, t0.a, v0.a
+
+[PS] G3DiffuseTexNoAlpha
+G3CommonDiffuseTexNoAlpha
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+
+[PS] G3DiffuseTexNoShadows
+G3CommonDiffuseTexNoShadows
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+
+[PS] G3TransparentGeomNoLM
+ps.1.1
+tex t0
+mul_x4_sat r0.rgb, v1, t0
++mul r0.a, t0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3TransparentGeom
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+//texcoord t3
+mul_x4_sat r0.rgb, v0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, v1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++mul r0.a, t0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+; first diffuse texture with alpha is applied with premult alpha
+; then mirror is layed on top of the result with normal alpha
+[PS] G3DiffuseTexMirror
+G3CommonDiffuseTex
+[PS14]
+ps.1.4
+texld r0, t0
+texld r1, t1
+texcrd r2.rgb, t2.xyw
+texld r3, t3
+texld r4, t4
+mul_x4_sat r5.rgb, v0, r0
++add_x4_sat r5.a, r1, -r2.b
+mul_x4_sat r2.rgb, v1, r0
++add r5.a, c4, r5
+lrp r2.rgb, r1, r2, r5
+cnd r5.rgb, r5.a, r5, r2
++mul r5.a, r0.a, c0
+mov r2.rgb, r3
++mul r2.a, v0.a, r3.a
+mul r2, r2, r4
+; r5 = diffuse color   r2 = reflection color
+lrp r0.rgb, r2.a, r2, r5
++mad r0.a, r2.a, 1-r5.a, r5.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTexDetail
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+tex t3
+mul_x4 r0.rgb, v0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4 r1.rgb, v1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++mul r0.a, t0.a, v0.a
+mul_x2 r0, r0, t3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTex2
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+tex t3
+mul r0.rgb, v0, t0
+mul r1.rgb, v1, t0
+mul_x4_sat r0.rgb, r0, t3
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, r1, t3
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++mul r0.a, t0.a, v0.a
+mul r0.a, r0.a, t3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS_PROC] G3CommonDiffuseTexLM
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+tex t3
+mul r0.rgb, t3, c2
+add r0.rgb, r0, c1
+add r1.rgb, v1, r0
+add r0.rgb, v0, r0
+mul_x4_sat r0.rgb, r0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, r1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++mul r0.a, t0.a, v0.a
+
+[PS_PROC] G3CommonDiffuseTexLMNoShadows
+ps.1.1
+tex t0
+tex t1
+mul_x4 r0, t1, t0;
+
+
+[PS] G3DiffuseTexLM
+G3CommonDiffuseTexLM
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTexLMNoShadows
+G3CommonDiffuseTexLMNoShadows
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+
+[PS] G3DiffuseTexDetailLM
+G3CommonDiffuseTexLM
+[PS14]
+ps.1.4
+texld r0, t0
+texld r1, t1
+texcrd r2.rgb, t2.xyw
+texld r3, t3
+texld r4, t4
+mad r5.rgb, r3, c2, c1
++add_x4_sat r5.a, r1, -r2.b
+add r2.rgb, v1, r5
+add r5.rgb, v0, r5
+mul_x4 r5.rgb, r5, r0
+mul_x4 r2.rgb, r2, r0
++add r5.a, c4, r5
+lrp r2.rgb, r1, r2, r5
+cnd r5.rgb, r5.a, r5, r2
++mul r5.a, r0.a, v0.a
+mul_x2 r5, r5, r4
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTexTerrain
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+mul_x4_sat r0.rgb, v0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, v1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++add r0.a, t0, v0_bx2
+add_x4 r0.a, r0.a, c3.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTex2Terrain
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+tex t3
+mul_x4_sat r0.rgb, v0, t0
++add_x4_sat r0.a, t1, -t2.z
+mul_x4_sat r1.rgb, v1, t0
++add r0.a, c4, r0
+lrp r1.rgb, t1, r1, r0
+cnd r0.rgb, r0.a, r0, r1
++add r0.a, t0, v0_bx2
+add_x4 r0.a, r0.a, c3.a
+mul r0, r0, t3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTexSpec
+G3CommonDiffuseTex
+[PS14]
+ps.1.4
+texld r3, t3.xyz
+texld r4, t4.xyz
+mul r5.rgb, r4.a, r4.a
++mul r5.a, r4.a, c0
+mul r5.rgb, r5, r5
++mad r5.a, r5.b, c1, r5.a
+mul r5.rgb, r3, c5
++mad r5.a, r5.b, c2, r5.a
+mul r3.rgb, r5.a, r5
+phase
+texld r0, t0.xyz
+texld r1, t1.xyz
+texcrd r2.rgb, t2.xyw
+mul_x4_sat r5.rgb, v1, r0
++add_x4_sat r5.a, r1, -r2.b
+add r5.rgb, r3, r5
+mul_x4_sat r2.rgb, v0, r0
++add r5.a, c6, r5
+lrp r2.rgb, r1, r2, r5
+cnd r0.rgb, r5.a, r2, r5
++mul r0.a, r0.a, v0.a
+dp3_x4_sat r1.a, v0, c5.w
+mul r0.rgb, r0, r1.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] G3DiffuseTexSpecLM
+G3CommonDiffuseTex
+[PS14]
+ps.1.4
+texld r3, t3.xyz
+texld r4, t4.xyz
+mul r5.rgb, r4.a, r4.a
++mul r5.a, r4.a, c0
+mul r5.rgb, r5, r5
++mad r5.a, r5.b, c1, r5.a
+mul r5.rgb, r3, c5
++mad r5.a, r5.b, c2, r5.a
+mul r3.rgb, r5.a, r5
+phase
+texld r0, t0.xyz
+texld r1, t1.xyz
+texcrd r2.rgb, t2.xyw
+texld r5, t5.xyz
+mad r5.rgb, r5, c3, c4
+add r4.rgb, v0, r5
+add r5.rgb, v1, r5
+mul_x4_sat r5.rgb, r5, r0
++add_x4_sat r5.a, r1, -r2.b
+add r5.rgb, r3, r5
+mul_x4_sat r4.rgb, r4, r0
++add r5.a, c6, r5
+lrp r4.rgb, r1, r4, r5
+cnd r0.rgb, r5.a, r4, r5
++mul r0.a, r0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] TFactor
+ps.1.1
+mov r0, c0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP                 D3DTOP_SELECTARG1
+0 D3DTSS_COLORARG1               D3DTA_TFACTOR
+0 D3DTSS_ALPHAOP                 D3DTOP_SELECTARG1
+0 D3DTSS_ALPHAARG1               D3DTA_TFACTOR
+1 D3DTSS_ALPHAOP                 D3DTOP_DISABLE
+1 D3DTSS_COLOROP                 D3DTOP_DISABLE
+
+[PS] TextureCopyAlpha
+ps.1.1
+tex t0
+mov r0, t0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_SELECTARG1
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAOP D3DTOP_SELECTARG1
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TextureAlpha
+ps.1.1
+tex t0
+mov r0, t0.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_SELECTARG1
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE|D3DTA_ALPHAREPLICATE
+0 D3DTSS_ALPHAOP D3DTOP_SELECTARG1
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TextureTFactor
+ps.1.1
+tex t0
+mul r0, t0, c0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_TFACTOR
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_TFACTOR
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] Clouds
+ps.1.1
+tex t0
+//texcoord t1
+mul r0, t0, c0
+mul r0.rgb, r0, v0
+//mul r1.rgb, t1, r0.a
+//+mul r1.a, r0.a, v0.w
+//lrp r0, v0.w, r0, r1
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_TFACTOR
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_TFACTOR
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] DiffuseTexture
+ps.1.1
+tex t0
+mul r0, t0, v0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TexturePlusDiffuse
+ps.1.1
+tex t0
+add r0, t0, v0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_ADD
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_ADD
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TnLLitTexture
+ps.1.1
+tex t0
+mul_x4 r0.rgb, t0, v0
++mul r0.a, t0, v0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE4X
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TnLLitTexture2
+ps.1.1
+tex t0
+tex t1
+mul r0, t0, v0
+mul_x4 r0.rgb, r0, t1
++mul r0.a, r0, t1
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_COLOROP D3DTOP_MODULATE4X
+1 D3DTSS_COLORARG1 D3DTA_CURRENT
+1 D3DTSS_COLORARG2 D3DTA_TEXTURE
+1 D3DTSS_ALPHAOP D3DTOP_MODULATE
+1 D3DTSS_ALPHAARG1 D3DTA_CURRENT
+1 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+
+[PS] TnLLitTextureTerrain
+ps.1.1
+tex t0
+mul_x4 r0.rgb, t0, v0
++add r0.a, t0, v0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE4X
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_ADD
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+
+[PS] TnLLitTexture2Terrain
+ps.1.1
+tex t0
+tex t1
+mul_x4 r0.rgb, t0, v0
++add r0.a, t0, v0
+mul r0, r0, t1
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE4X
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_ADD
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_COLOROP D3DTOP_MODULATE
+1 D3DTSS_COLORARG1 D3DTA_CURRENT
+1 D3DTSS_COLORARG2 D3DTA_TEXTURE
+1 D3DTSS_ALPHAOP D3DTOP_MODULATE
+1 D3DTSS_ALPHAARG1 D3DTA_CURRENT
+1 D3DTSS_ALPHAARG2 D3DTA_TEXTURE
+
+[PS] SoftShadowTest
+ps.1.1
+tex t0
+add_sat r0.a, t0, -v0
+lrp r0.rgb, t0, c1, c2
++add_x4_sat r0.a, r0, r0
+mov_x2 r0.a, 1-r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] DepthATTexture
+ps.1.1
+tex t0
+add r0.rgb, t0, 1-t0
++mov r0.a, t0
+cnd r0.a, r0.a, v0, c0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+D3DRS_ALPHAREF 1
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] CloudShadows
+ps.1.1
+tex t0
+tex t1
+mul r0.rgb, t1, t0
++mov r0.a, t0.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+
+[PS] Depth16ATTexture
+ps.1.1
+tex t0
+tex t1
+mov r0.a, t1
+cnd r0, r0.a, t0, c0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+D3DRS_ALPHAREF 1
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] Constant
+ps.1.1
+tex t0
+mul r0, t0, c0
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+D3DRS_ALPHAREF 120
+//D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+
+[PS] Diffuse
+ps.1.1
+mov r0, v0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP                 D3DTOP_SELECTARG1
+0 D3DTSS_COLORARG1               D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP                 D3DTOP_SELECTARG1
+0 D3DTSS_ALPHAARG1               D3DTA_DIFFUSE
+1 D3DTSS_ALPHAOP                 D3DTOP_DISABLE
+1 D3DTSS_COLOROP                 D3DTOP_DISABLE
+
+[PS] DiffuseAlpha
+ps.1.1
+mov r0, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] TransparentDifTex4
+ps.1.1
+tex t0
+mul_x4 r0.rgb, t0, v0
++mul r0.a, t0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+[TSS]
+0 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+1 D3DTSS_TEXTURETRANSFORMFLAGS D3DTTFF_DISABLE
+0 D3DTSS_COLOROP D3DTOP_MODULATE4X
+0 D3DTSS_COLORARG1 D3DTA_TEXTURE
+0 D3DTSS_COLORARG2 D3DTA_DIFFUSE
+0 D3DTSS_ALPHAOP D3DTOP_MODULATE
+0 D3DTSS_ALPHAARG1 D3DTA_TEXTURE
+0 D3DTSS_ALPHAARG2 D3DTA_DIFFUSE
+1 D3DTSS_COLOROP D3DTOP_DISABLE
+1 D3DTSS_ALPHAOP D3DTOP_DISABLE
+
+[PS] G3Particles
+ps.1.1
+tex t0
+tex t1
+mul r0.rgb, t0, v0
++mul r0.a, t0.a, v0.a
+mul_x4 r0.rgb, r0, t1
+mul r1.rgb, v1, r0.a
++mul r1.a, r0.a, v1.w
+lrp r0, v1.w, r0, r1
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] G3SimpleParticles
+ps.1.1
+tex t0
+mul r0.rgb, t0, v0
++mul r0.a, t0.a, v0.a
+mul r1.rgb, v1, r0.a
++mul r1.a, r0.a, v1.w
+lrp r0, v1.w, r0, r1
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+
+[PS] GlossedMirror
+ps.1.1
+tex t0
+tex t1
+mov r0.rgb, t0
++mul r0.a, v0.a, t0.a
+mul r0, r0, t1
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+; v0.rgb - t0 color
+; v0.a - t1.a multiplier for blend
+; v1.a - per vertex transparency
+; v1.rgb - total color
+
+[PS] Blend2TexColor
+ps.1.1
+
+tex t0
+tex t1
+texcoord t2
+mul r1.rgb, t0, v0
++mul r1.a, v0.a, t1.a
+lrp r0.rgb, r1.a, t1, r1
+mul r0.rgb, r0, v1
++mul r0.a, t2.z, t0.a
+//+mul r0.a, v1.a, t0.a
+
+
+[PS] ReflectionWaterCube
+    ps_1_1
+    tex t0
+    texm3x3pad t1, t0_bx2
+    texm3x3pad t2, t0_bx2
+    texm3x3vspec t3, t0_bx2
+    mov r0.rgb, t3
+    +mul r0.a, v0.a, t3.a
+
+
+
+[PS] ReflectionWater
+ps.1.1
+tex t0
+texm3x2pad t1, t0_bx2
+texm3x2tex t2, t0_bx2  
+tex t3
+//tex t1
+lrp r0.rgb, t3.a, t2, t3
++mov r0.a, v0.a
+
+
+//[PS14]
+//ps.1.4
+//texld r0, t0
+//texld r1, t1_dw.xyw
+
+//lrp r0.rgb, v1.a, r1, r0
+//+lrp r0.a, v1.a, v1.a, r0.a
+//mul r0.a, v0.a, r0.a
+
+[PS] G3AnimWater
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+texcoord t3
+mul_x4_sat r0.rgb, v0, t0
++add r0.a, c4, -t2.z
+mul r1.a, t1.a, t3.z
+lrp r0.rgb, r1.a, t1, r0
++mul r0.a, t0.a, v0.a
+
+[PS] G3AnimWaterWithoutHorse
+ps.1.1
+tex t0
+tex t1
+texcoord t2
+mul_x4_sat r0.rgb, v1, t0
++add r0.a, c4, -t2.z
+mul r0.a, t0.a, v0.a
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] CLSkyLight3
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_cube s2
+dcl t0.xy
+dcl t1.xy
+dcl t2.xy
+dcl t3
+dcl t4
+dcl v0
+;    depth check
+texld r0, t0, s0
+texld r1, t1, s0
+texld r2, t2, s0
+add_sat r0.rgb, r0, -v0
+add_sat r1.rgb, r1, -v0
+add_sat r2.rgb, r2, -v0
+mad r0.rgb, r0, c0, c0.a
+mad r0.rgb, r1, c1, r0
+mad r0.rgb, r2, c2, r0
+;   calc light
+texld r4, t4, s2
+mad r4, r4, c9.x, c9.y
+dp3_sat r3.r, r4, c6
+dp3_sat r3.g, r4, c7
+dp3_sat r3.b, r4, c8
+;   add to prev
+cmp r0.rgb, r0, c3, r3
+dp3 r0.rgb, r0, c4
+texldp r1, t3, s1
+mad r0.rgb, r0, c5, r1
+mov r0.a, c4
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] CLSkyLight3Translucent
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_cube s2
+dcl t0.xy
+dcl t1.xy
+dcl t2.xy
+dcl t3
+dcl t4
+dcl v0
+;    depth check
+texld r0, t0, s0
+texld r1, t1, s0
+texld r2, t2, s0
+add_sat r0.rgb, r0, -v0
+add_sat r1.rgb, r1, -v0
+add_sat r2.rgb, r2, -v0
+mad r0.rgb, r0, c0, c0.a
+mad r0.rgb, r1, c1, r0
+mad r0.rgb, r2, c2, r0
+;   calc light
+texld r4, t4, s2
+mad r4, r4, c9.x, c9.y
+dp3_sat r3.r, r4, c6
+dp3_sat r3.g, r4, c7
+dp3_sat r3.b, r4, c8
+dp3_sat r5.r, -r4, c6
+dp3_sat r5.g, -r4, c7
+dp3_sat r5.b, -r4, c8
+;   add to prev
+cmp r5.rgb, r0, c3, r5
+cmp r0.rgb, r0, c3, r3
+dp3 r0.rgb, r0, c4
+dp3 r5.rgb, r5, c4
+mad r0.rgb, r5, c10, r0
+texldp r1, t3, s1
+mad r0.rgb, r0, c5, r1
+mov r0.a, c4
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] LinearToGamma
+ps.2.0
+dcl_2d s0
+dcl t0.xy
+texld r0, t0, s0
+pow r0.r, r0.r, c0.r
+pow r0.g, r0.g, c0.r
+pow r0.b, r0.b, c0.r
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] PointCubeMapDepth
+ps.2.0
+dcl t0.xyz
+dp3_sat r0, t0, t0
+rsq r1.w, r0.w
+mul r0, r1.w, r0.w
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+[PS] CLPointLightShadowed
+ps.2.0
+dcl_cube s0 ; depth map
+dcl_2d s1 ; previous data
+dcl_cube s2 ; normalisation map
+dcl t0.xyz  ; vLight
+dcl t1      ; prev mapping
+dcl t2.xyz  ; vNormal
+dp3_sat r0.w, t0, t0 ; r0.w = distance to point light, relative to radius (1 - on radius)
+;   calc attenuation alpha
+add r2.w, -r0.w, -c0.y
+max r2.w, r2.w, c0.z  ; r2.w = fCut
+mad r1.w, r0.w, c4.x, c4.y
+rcp r1.w, r1.w
+mul r1.w, r1.w, r2.w ; attenuation
+;   calc (N dot L)
+rsq r4.w, r0.w
+mul r3.xyz, t0, r4.w ; vLight
+texld r2, t2, s2
+mad r2, r2, c0.x, c0.y
+dp3_sat r3, r3, -r2
+dp3_sat r2, r3, r2
+mad r3, r2, c5, r3
+;   account attenuation & light color
+mul r1, r1.w, c3
+mul r3, r3, r1
+;   account shadow
+mul r0.w, r4.w, r0.w
+texld r2, t0, s0
+add r0.w, r2, -r0
+add r0.w, r0.w, c2.w
+cmp r0, r0.w, r3, c1
+;   add to previous
+texldp r1, t1, s1
+add r0, r0, r1
+mov oC0, r0
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// G5 Shaders {
+[PS_PROC] G5Header2Tex
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5Header3Tex
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_2d s3
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl t3.xy
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5Header4Tex
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_2d s3
+dcl_2d s4
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl t3.xy
+dcl t4.xy
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5Header4TexSpec
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_2d s3
+dcl_cube s4
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl t3.xy
+dcl t4.xyz
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5Header4TexMirror
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_cube s3
+dcl_2d s4
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl t3.xyz
+dcl t4.xy
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5Header5TexSpec
+ps.2.0
+dcl_2d s0
+dcl_2d s1
+dcl_2d s3
+dcl_cube s4
+dcl_2d s5
+dcl t0.xy
+dcl t1.xy
+dcl t2.xyzw
+dcl t3.xy
+dcl t4.xyz
+dcl t5.xy
+dcl v0.xyzw
+dcl v1.xyz
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5ShadowColorsCalc
+texld r2, t0, s0
+mul r3, v0, r2
+mul_sat r0, r3, c7.x
+mul r1.rgb, v1, r2
+mul_sat r1.rgb, r1, c7.x
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5ShadowColorsCalcLM
+texld r2, t0, s0
+mul r3, r0, r2
+mul_sat r0, r3, c7.x
+mul r1.rgb, r1, r2
+mul_sat r1.rgb, r1, c7.x
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5ShadowPreCalc
+texld r4, t1, s1
+lrp r1.rgb, r4, r1, r0
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5ShadowCalc
+add r4, r4.a, -t2.w
+mad r4, r4, c7.x, -c7.w
+cmp r3.rgb, r4, r0, r1
+
+// samples
+add r4.xy, c10, t1
+add r5.xy, c11, t1
+add r6.xy, c12, t1
+add r7.xy, c13, t1
+
+texld r4, r4, s1
+texld r5, r5, s1
+texld r6, r6, s1
+texld r7, r7, s1
+
+// sample 1
+add r4, r4.a, -t2.w
+mad r4, r4, c7.x, -c7.w
+cmp r4.rgb, r4, r0, r1
+add r3.rgb, r3, r4
+
+// sample 2
+add r5, r5.a, -t2.w
+mad r5, r5, c7.x, -c7.w
+cmp r5.rgb, r5, r0, r1
+add r3.rgb, r3, r5
+
+// sample 3
+add r6, r6.a, -t2.w
+mad r6, r6, c7.x, -c7.w
+cmp r6.rgb, r6, r0, r1
+add r3.rgb, r3, r6
+
+// sample 4
+add r7, r7.a, -t2.w
+mad r7, r7, c7.x, -c7.w
+cmp r7.rgb, r7, r0, r1
+add r3.rgb, r3, r7
+
+// more samples
+add r4.xy, c14, t1
+add r5.xy, c15, t1
+add r6.xy, c16, t1
+add r7.xy, c17, t1
+
+texld r4, r4, s1
+texld r5, r5, s1
+texld r6, r6, s1
+texld r7, r7, s1
+
+// sample 1
+add r4, r4.a, -t2.w
+mad r4, r4, c7.x, -c7.w
+cmp r4.rgb, r4, r0, r1
+add r3.rgb, r3, r4
+
+// sample 2
+add r5, r5.a, -t2.w
+mad r5, r5, c7.x, -c7.w
+cmp r5.rgb, r5, r0, r1
+add r3.rgb, r3, r5
+
+// sample 3
+add r6, r6.a, -t2.w
+mad r6, r6, c7.x, -c7.w
+cmp r6.rgb, r6, r0, r1
+add r3.rgb, r3, r6
+
+// sample 4
+add r7, r7.a, -t2.w
+mad r7, r7, c7.x, -c7.w
+cmp r7.rgb, r7, r0, r1
+add r3.rgb, r3, r7
+
+// normalize color
+mul r3.rgb, r3, c8.x
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5TerrainAlphaCalc
+mad r1, v0.w, c7.y, -c7.z
+add_sat r3.a, r2, r1
+add r3.a, r3.a, c3.a
+mul r3.a, r3.a, c7.x
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS_PROC] G5CalcLMColors
+texld r0, t3, s3
+mul r0.rgb, r0, c2
+add r0.rgb, r0, c1
+add r1.rgb, v1, r0
+add r0.rgb, v0, r0
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTex
+G5Header2Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5TransparentGeom
+G5Header2Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexMirror
+G5Header4TexMirror
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+mul r3.a, r2.a, c0
+texld r1, t3, s3
+mul r1.a, v0.a, r1.a
+texld r0, t4, s4
+mul r1, r1, r0
+; r3 - diffuse color, r1 - reflection color
+lrp r4.rgb, r1.a, r1, r3
+add r4.a, c7.z, -r3.a
+mad r4.a, r1.a, r4.a, r3.a
+
+mov oC0, r4
+
+[RS]
+D3DRS_ALPHATESTENABLE FALSE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexDetail
+G5Header3Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+texld r0, t3, s3
+mul r3, r3, r0
+mul r3, r3, c7.y
+
+mov oC0, r3
+
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTex2
+G5Header3Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+texld r0, t3, s3
+mul r3, r3, r0
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexLM
+G5Header3Tex
+
+G5CalcLMColors
+G5ShadowColorsCalcLM
+G5ShadowPreCalc
+G5ShadowCalc
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexDetailLM
+G5Header4Tex
+
+G5CalcLMColors
+G5ShadowColorsCalcLM
+G5ShadowPreCalc
+G5ShadowCalc
+
+texld r0, t4, s4
+mul r3, r3, r0
+mul r3, r3, c7.y
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexSpec
+G5Header4TexSpec
+texld r0, t0, s0
+texld r1, t1, s1
+texld r3, t3, s3
+texld r4, t4, s4
+mul r5.rgb, v1, r0
+mul_sat r5.rgb, r5, c7.x
+mul r2.rgb, r4.a, r4.a
+mul r2.a, r4.a, c0
+mad r2.a, r2.b, c1, r2.a
+mul r2.rgb, r2, r2
+mad r2.a, r2.b, c2, r2.a
+mul r2.rgb, r3, c5
+mad r5.rgb, r2.a, r2, r5
+mul r3, v0, r0
+mul_sat r3.rgb, r3, c7.x
+lrp r3.rgb, r1, r3, r5
+mov r0.rgb, r3
+mov r1.rgb, r5
+
+G5ShadowCalc
+
+dp3 r1.a, v0, c5.w
+mul_sat r1.a, r1, c7.x
+mul r3.rgb, r3, r1.a
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexSpecLM
+G5Header5TexSpec
+
+texld r2, t3, s3
+texld r3, t4, s4
+mul r0.rgb, r3.a, r3.a
+mul r0.a, r3.a, c0
+
+mad r0.a, r0.b, c1, r0.a
+mul r0.rgb, r0, r0
+
+mad r0.a, r0.b, c2, r0.a
+mul r0.rgb, r2, c5
+mul r2.rgb, r0.a, r0
+
+texld r3, t0, s0
+texld r4, t1, s1
+texld r1, t5, s5
+
+;mad r1.rgb, r1, c3, c4
+mul r1.rgb, r1, c3
+add r1.rgb, r1, c4
+
+add r0.rgb, v0, r1
+add r1.rgb, v1, r1
+mul r1.rgb, r1, r3
+mul_sat r1.rgb, r1, c7.x
+add r1.rgb, r2, r1
+mul r0.rgb, r0, r3
+mul_sat r0.rgb, r0, c7.x
+
+lrp r0.rgb, r4, r0, r1
+mul r3.a, r3.a, v0.a
+
+G5ShadowCalc
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTexTerrain
+G5Header2Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+G5TerrainAlphaCalc
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+[PS] G5DiffuseTex2Terrain
+G5Header3Tex
+
+G5ShadowColorsCalc
+G5ShadowPreCalc
+G5ShadowCalc
+
+G5TerrainAlphaCalc
+
+// apply second texture
+texld r2, t3, s3
+mul r3, r3, r2
+
+mov oC0, r3
+[RS]
+D3DRS_ALPHATESTENABLE TRUE
+; set from code
+;D3DRS_ALPHAREF 120
+D3DRS_ALPHAFUNC D3DCMP_GREATEREQUAL
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// } G5 Shaders
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+[HLSL] Main
+vs GfxMainVS.fx
+ps GfxMainPS.fx
+
+feature_switch ASDF EPRST
+//feature FOG
+//feature MIRROR
+
+vsoutput float4 ShadowColor COLOR
+vsoutput float4 LightColor COLOR
+vsoutput float2 TexDiffuse TEXCOORD
+vsoutput float2 TexShadow TEXCOORD
+
+vsparam float4 Color c16
+//texture xz xz

@@ -1,0 +1,107 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SHeightRange;
+forward enum EPlanesAttitude;
+forward class SDirectionRange;
+forward class SDistanceRange;
+forward enum EManuverDestination;
+forward class SSpeedRange;
+forward enum EManuverID;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum ESpeedRelation
+{
+	ESR_NEAR_STALL,
+	ESR_SMALL,
+	ESR_NORMAL,
+	ESR_MAXIMUM,
+	_ESR_COUNT,
+};
+
+enum EPlanesAttitude
+{
+	EPA_ATTACK,
+	EPA_RETREAT,
+};
+
+enum EManuverDestination
+{
+	EMD_PREDICTED_POINT,
+	EMD_MANUVER_DEPENDENT,
+};
+
+enum EManuverID
+{
+	DB_EMID_GENERIC,
+	DB_EMID_STEEP_CLIMB,
+};
+
+
+[minInclusive = 0; maxInclusive = 180]
+typedef float Direction_1_180;
+
+[minInclusive = 1]
+typedef float Speed;
+
+[typeID = 0x1108EB80]
+class SDirectionRange
+{
+	Direction_1_180 _Min;
+	Direction_1_180 _Max;
+};
+
+[typeID = 0x1108EB81]
+class SSpeedRange
+{
+	Speed _Min;
+	Speed _Max;
+};
+
+[typeID = 0x1108EB82]
+class SDistanceRange
+{
+	// with respect to plane's turn radius
+	float _Min;
+	// with respect to plane's turn radius
+	float _Max;
+};
+
+[typeID = 0x1108EB83]
+class SHeightRange
+{
+	float _Min;
+	float _Max;
+};
+
+struct SManuverConditions
+{
+	// angle diff between enemy plane's speed and line connecting 2 planes
+	SDirectionRange *_EnemyDirection;
+	// angle between self speed and line connecting 2 planes
+	SDirectionRange *_SelfDirection;
+	// dirs difference between 2 planes speed vectors
+	SDirectionRange *_SpeedAngle;
+	// distance range to enemy plane (with respect to current plane turn radius)
+	SDistanceRange *_Distance;
+	// = (planes height - minimum height) / plane turn radius
+	SHeightRange *_SelfHeight;
+	// height difference between plane and enemy with respect to turn radius
+	SHeightRange *_HeightDifference;
+	// speed with respect to plane's stall speed
+	SSpeedRange *_SelfSpeed;
+	// enemy's speed with respect to its stall speed
+	SSpeedRange *_EnemySpeed;
+};
+
+[typeID = 0x1108EB84]
+class SManuverDescriptor
+{
+	SManuverConditions _Conditions;
+	EManuverID _ManuverID;
+	// where to perform manuver
+	EManuverDestination _Destination;
+	EPlanesAttitude _Attitude;
+
+	#include "include_manuverdescriptor.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

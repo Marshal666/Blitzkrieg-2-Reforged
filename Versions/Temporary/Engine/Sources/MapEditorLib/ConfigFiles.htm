@@ -1,0 +1,80 @@
+<HTML xmlns:o xmlns:v>
+	<HEAD>
+		<TITLE></TITLE>
+		<META content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+	</HEAD>
+	<BODY>
+		<H3>Система сохранения настроек редакторов экспортеров и компоновщиков в 
+			конфигурационных файлах.</H3>
+		<P>Эта система позволяет сохранять любую информацию, используемую в редакторах 
+			экспортерах и компоновщиках в отдельные xml файлы. Для этого необходимо сначала 
+			создать структуру данных, которая будет описывать настроечную информацию. 
+			Например, мы хотим настраивать наш редактор:</P>
+		<PRE><FONT color=#990033>class CMyEditor : public IEditor
+{
+	…
+	struct SMyEditorSettings
+	{
+		bool bShowMyDockingWindow;
+		…
+		SMyEditorSettings () : bShowMyDockingWindow( true ), … {}
+		int operator&amp;( IXmlSaver &amp;xs )
+		{ 
+			xs.Add( "ShowMyDockingWindow", &amp;bShowMyDockingWindow );
+			…
+			return 0;
+		}
+	};
+	SMyEditorSettings myEditorSettings;
+	…
+};</PRE>
+		</FONT>
+		<P>В этой структуре необходимо реализовывать конструктор по умолчанию с дефалтовыми 
+			настройками, и метод сохранения и считывания из XML файла. Сам XML файл 
+			сохраняется в каталоге \Editor\. Считывание и запись конфигурационных файлов 
+			происходит с помощью синглтона Singleton&lt;IUserDataContainer&gt;().
+			<PRE>cчитывание:
+
+<FONT color=#990033>SUserData *pUserData = Singleton&lt;IUserDataContainer&gt;()-&gt;Get();
+pUserData-&gt;SerializeSettings( myEditorSettings, “MyEditor”, SUserData::EDITOR_SETTINGS, SUserData::ST_LOAD );</FONT>
+
+сохранение:
+
+<FONT color=#990033>SUserData *pUserData = Singleton&lt;IUserDataContainer&gt;()-&gt;Get();
+pUserData-&gt;SerializeSettings( myEditorSettings, “MyEditor”, SUserData::EDITOR_SETTINGS, SUserData::ST_SAVE );</FONT></PRE>
+		<P>“MyEditor” - это метка нашего редактора, обычно это имя типа объектов, которые 
+			редактируются этим редактором.<BR>
+			SUserData::EDITOR_SETTINGS - тип конфигурационного файла. Всего предусмотрено 
+			четыре типа конфигурационных файлов:</P>
+		<PRE><FONT color=#990033>EDITOR_SETTINGS		// редактор, постфикс: "Editor"
+EXPORTER_SETINGS	// экспортер, постфикс: "Expoter"
+BUILDER_SETTINGS	// компоновщик, постфикс: "Builder"
+PRIVATE_SETTINGS	// общие данные, постфикс отсутствует</FONT></PRE>
+		<P>Имя файла формируется следующим образом, rszTypeName - метка, rszPostfix - 
+			постфикс:</P>
+		<PRE><FONT color=#990033>szSettingsFileName = StrFmt( "Editor\\%s%s.xml", rszTypeName.c_str(), rszPostrfix.c_str() );</FONT></PRE>
+		<P>Иногда необходимо вручную задать имя конфигурационного файла. Для это существует 
+			механизм задания имен конфигурационных файлов в главном конфигурационном файле 
+			программы ..\Editor\ConstUserData.xml. Для этого в этом файле находите раздел 
+			ObjectTypeConfigFiles и заводите в нем подраздел с меткой ваших редактора, 
+			экспортера и компоновщика. В нем записываете в соответствующие поля имена 
+			конфигурационных файлов. Если имя отсутствует - оно создается автоматически по 
+			описанному выше правилу. Расширение .xml указывать не надо. Путь указывайте от 
+			корня игры, т.е. не забывайте добавлять "Editor\".<BR>
+			Пример:</P>
+		<PRE><FONT color=#990033>ObjectTypeConfigFiles
+	Geometry
+		EditorSettingsFileName
+		ExporterSettingsFileName	Editor\Exporters
+		BuilderSettingsFileName
+	AIGeometry
+		EditorSettingsFileName
+		ExporterSettingsFileName	Editor\Exporters
+		BuilderSettingsFileName
+	…
+	MechUnitRPGStats	 
+		EditorSettingsFileName
+		ExporterSettingsFileName	Editor\Exporters
+		BuilderSettingsFileName</FONT></PRE>
+	</BODY>
+</HTML>

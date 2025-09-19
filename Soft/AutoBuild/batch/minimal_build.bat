@@ -1,0 +1,6 @@
+@echo off
+echo Getting latest version...
+call ssafe.bat
+echo Building...
+call compile.bat
+echo Done.

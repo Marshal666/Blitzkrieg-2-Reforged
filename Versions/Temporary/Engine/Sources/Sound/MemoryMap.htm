@@ -1,0 +1,23 @@
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+	</HEAD>
+	<BODY>
+		<P><STRONG>Звук, добавленный в звуковую в SoundScene</STRONG> с максимальным 
+			радиусом (R)&nbsp;AI тайлов и wav-file длиной (L) bytes будет занимать:</P>
+		<P>1) PHS map: 16&nbsp;* &nbsp;(R / 4) * (R / 4) bytes</P>
+		<P>2) создастся запись в звуковой сцене: ~200 bytes</P>
+		<P><STRONG>Звук, отправленный на проигрышь</STRONG></P>
+		<P>1) Файл будет считан в память: L bytes</P>
+		<P><STRONG>Статическая память</STRONG></P>
+		<P>1) всякие классы: 1K
+		</P>
+		<P>2) Звуковые клетки:&nbsp; 30 * (mapTileSizeX/4) * (mapTileSizeY/4)</P>
+		<P>&nbsp;</P>
+		<P>таким образом, например 10 взрывов с R = 60 Тайлов, L = 75K,&nbsp;будет 
+			занимать&nbsp;</P>
+		<P>10 * 3600 + 75000 ~= 100К</P>
+		<P>&nbsp;</P>
+	</BODY>
+</HTML>

@@ -1,0 +1,1 @@
+call putbin.bat c:\home\b2\betarelease c:\b2\bin

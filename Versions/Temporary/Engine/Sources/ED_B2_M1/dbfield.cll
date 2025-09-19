@@ -1,0 +1,56 @@
+#include "../game.cll"
+#include "../stats_b2_m1/season.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SHPObjectRPGStats;
+forward class STGTerraSet;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SFieldTileDesc
+{
+	int _Value;
+	int _Weight;
+};
+
+struct SFieldObjectDesc
+{
+	SHPObjectRPGStats *_Value;
+	int _Weight;
+};
+
+struct SFieldPatternSize
+{
+	[editorControl = "int_combo"; stringParam = "values:1 2 3 4 5 6; step:1"]
+	int _Min;
+	[editorControl = "int_combo"; stringParam = "values:1 2 3 4 5 6; step:1"]
+	int _Max;
+};
+
+struct SFieldTileShell
+{
+	SFieldTileDesc _Tiles[];
+	float _Width;
+};
+
+struct SFieldObjectShell
+{
+	SFieldObjectDesc _Objects[];
+	float _Width;
+	int _BetweenDistance;
+	[editorControl = "float_slider"; stringParam = "precision:3, min:0, max:1, step:0.01, page:0.1"]
+	float _Ratio;
+};
+
+[typeID = 0x14130C40; no_checksum]
+class SField
+{
+	SFieldTileShell _TileShells[];
+	STGTerraSet *_TerraSet;
+	SFieldObjectShell _ObjectShells[];
+	TGADstFileRef _ProfileFileName;
+	float _Height;
+	SFieldPatternSize _PatternSize;
+	[editorControl = "float_slider"; stringParam = "precision:3, min:0, max:1, step:0.01, page:0.1"]
+	float _PositiveRatio;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

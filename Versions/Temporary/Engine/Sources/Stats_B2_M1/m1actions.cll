@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EM1Action
+{
+	M1_ACTION_UNKNOWN,
+	M1_ACTION_MOVE,
+	M1_ACTION_ATTACK,
+	M1_ACTION_STOP,
+	M1_ACTION_ROTATE,
+	M1_ACTION_LEAVE,
+	M1_ACTION_LAND_MINE,
+	M1_ACTION_BUILD,
+	M1_ACTION_CAPTURE,
+	M1_ACTION_STORM,
+	M1_ACTION_LOAD,
+	M1_ACTION_UNLOAD,
+	M1_ACTION_LASER_MARK,
+	M1_ACTION_BOARD,
+	M1_ACTION_ENTER_SIEGE_MODE,
+	M1_ACTION_LEAVE_SIEGE_MODE,
+	M1_ACTION_GLOBE_BOMB_MISSION,
+};
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

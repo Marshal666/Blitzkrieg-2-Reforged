@@ -1,0 +1,41 @@
+#include "../game.cll"
+[hExternal] #include "rpgstats.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SVisObj;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SM1UnitSpecific
+{
+	[noCode; hidden] int _Fake = 0;
+};
+
+[typeID = 0x31197340]
+[noKey] class SM1UnitHelicopter : public SM1UnitSpecific
+{
+	struct SHelicopterAxis
+	{
+		// stationary and starting unit model
+		SVisObj *_Scaled;
+		// rotating main rotor
+		SVisObj *_Dynamic;
+		// locator name to attach main rotor
+		string _LocatorName;
+		// angular velocity to scale impeller blades (1.0 - impeller blades are ready)
+		Percent1 fStartScaleSpeed;
+		// angular velocity to hide impeller blades static model 
+		Percent1 fHideStaticSpeed;
+	};
+	SHelicopterAxis _Axes[1..];
+	// (ai points) prefered flying height
+	float _FlyingHeight = 300;
+	// (ai points/second) maximum flying speed
+	float _MaxSpeed = 500;
+	// (ai points/sec^2) maximum acceleration
+	float _MaxAcceleration = 200;
+	// (radians) maximum tilting angle (in flight direction, speed proportional)
+	float _MaxTilt = 0.785;
+	// (radian/sec) hull rotation speed 
+	float _RotationSpeed = 0.098;
+	float _FullSpinTime = 2;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

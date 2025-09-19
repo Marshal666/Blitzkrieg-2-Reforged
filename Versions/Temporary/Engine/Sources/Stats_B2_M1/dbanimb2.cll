@@ -1,0 +1,40 @@
+#include "../3dmotor/dbscene.cll"
+#include "../game.cll"
+#include "animationtype.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EAnimationType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[noBase] struct SAnimAABB
+{
+	CVec3 _Center;
+	CVec3 _HalfSize;
+};
+
+[typeID = 0x10093480; no_checksum]
+class SAnimB2 : public SAnimBase
+{
+	[noCode] string _RootJoint;
+	EAnimationType _Type = ANIMATION_UNKNOWN;
+	[hidden; noCode] int _ActionFrame;
+	// Action point, then real AI action will be performed (with respect to animation start)
+	[readonly] int _Action;
+	[hidden] int _Length;
+	// Is this animation looped?
+	bool _Looped = false;
+	// First frame in the common sequence
+	[noCode] int _FirstFrame;
+	// Last frame in the common sequence
+	[noCode] int _LastFrame;
+	// Mesh name for death-animation-in-progress AABB
+	[noCode] string _AABBAName;
+	// Mesh name for after-death-animation AABB
+	[noCode] string _AABBDName;
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\Weapons.xml"]
+	[hidden] int _WeaponsToUseWith;
+	[hidden] SAnimAABB _aabb_a;
+	[hidden] SAnimAABB _aabb_d;
+	// movement speed (for movement animations) to calculate animation coeff
+	float _MoveSpeed = 0.07;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

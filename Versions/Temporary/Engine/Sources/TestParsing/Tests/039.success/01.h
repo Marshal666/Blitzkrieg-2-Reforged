@@ -1,0 +1,7 @@
+class CA
+{
+};
+
+struct SA
+{
+};

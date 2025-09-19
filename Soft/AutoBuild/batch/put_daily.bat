@@ -1,0 +1,1 @@
+call putbin.bat c:\home\b2\betarelease j:\versions\DailyBuild\bin

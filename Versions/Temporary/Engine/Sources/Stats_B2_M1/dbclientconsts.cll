@@ -1,0 +1,107 @@
+#include "../game.cll"
+#include "../Stats_B2_M1/M1Actions.cll"
+#include "../Stats_B2_M1/UserActions.cll"
+#include "../Stats_B2_M1/AckTypes.cll"
+#include "../Stats_B2_M1/RPGStats.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SVisObj;
+forward class SCameraLimits;
+forward class SIconsSet;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SWCActionsPriority
+{
+	EUserAction _SelfActions[];
+	EUserAction _FriendActions[];
+	EUserAction _EnemyActions[];
+	EUserAction _NeutralActions[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SM1WCActionsPriority
+{
+	EM1Action _SelfActions[];
+	EM1Action _FriendActions[];
+	EM1Action _EnemyActions[];
+	EM1Action _NeutralActions[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SCursor
+{
+	CursorFileRef _FileName;
+	EUserAction eAction;
+	EM1Action eM1Action;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SAckParameter
+{
+	EUnitAckType eAckType;
+	EAckClass eAckClass;
+	TextFileRef _TextStringFileRef;
+	int nTimeAfterPrevious = 1000;
+	EAckPosition ePosition;
+
+	#include "include_AckParameter.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SAckManagerConsts
+{
+	int nMinAckRadius;
+	int nMaxAckRadius;
+	int nTimeAckWait;
+	int nNumSelectionsBeforeAnnoyed;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SMapCommandAck
+{
+	SVisObj *pVisObj;
+	// (seconds) max show time
+	float fShowTime;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1007BA80]
+class SClientGameConsts
+{
+	struct SMechUnitIconsSet
+	{
+		EDesignUnitType eType;
+		SIconsSet *pIconsSet;
+		float fRaising;
+		float fHPBarLen;
+	};
+	struct SSquadIconsSet
+	{
+		EDesignSquadType eType;
+		SIconsSet *pIconsSet;
+		float fRaising;
+		float fHPBarLen;
+	};
+	struct SBuildingIconsSet
+	{
+		EDesignBuildingType eType;
+		SIconsSet *pIconsSet;
+		float fRaising;
+		float fHPBarLen;
+	};
+	struct SPassengerIconsSet
+	{
+		SIconsSet *pIconsSet;
+		float fHPBarLen;
+	};
+	SCameraLimits *pCamera;
+	SCursor _Cursors[];
+	SWCActionsPriority _ActionsPriority;
+	SM1WCActionsPriority _M1ActionsPriority;
+	SAckParameter _AcksParameters[];
+	SAckManagerConsts _AckConsts;
+	SMechUnitIconsSet _MechUnitIconsSets[];
+	SSquadIconsSet _SquadIconsSets[];
+	SBuildingIconsSet _BuildingIconsSets[];
+	SPassengerIconsSet _PassengerIconsSet;
+	SMapCommandAck _MapCommandAck;
+	SMapCommandAck _MapCommandAckDir;
+	SVisObj *_MapPointer;
+	// Pre-generated noises for general-purpose use
+	TGAFileRef _Noises;
+
+	#include "include_ClientGameConsts.h"
+};

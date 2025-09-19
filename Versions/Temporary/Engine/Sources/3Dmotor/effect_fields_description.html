@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>Описание типа NDb::Effect</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css"> <!-- .code { font-family: "Courier New", Courier, mono; color: #003333; }
+	body,td,th { font-family: Verdana; font-size: 13px; }
+	body { background-color: #ECFFFA; }
+	/* tr td + td { font-family: "Courier New", Courier, mono; color: #ff3333; }
+	*/ tr:first-child + td { font-family: "Courier New", Courier, mono; color: #ff3333; }
+	--></style>
+	</head>
+	<body>
+		<table border="1" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+				<th class="xl2211284" width="258">
+					Тип </TD>
+					<th width="231">
+						Имя поля </TD>
+						<th class="xl2211284" width="488">
+				Описание </TD>
+			</tr>
+			<tr>
+				<th colspan="3" class="xl3311284">
+				Effect </TD>
+			</tr>
+			<tr>
+				<td class="xl2511284" width="258">массив ссылок на ParticleInstance
+				</td>
+				<td width="231">Instances</td>
+				<td class="xl2511284">Ссылки на партиклы, образующие эффект
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2411284" width="258">массив ссылок на Lightinstance
+				</td>
+				<td width="231">Lights
+				</td>
+				<td class="xl2411284">Ссылки на объекты освещения, образующие эффект
+				</td>
+			</tr>
+			<tr>
+				<td class="xl3011284" width="258">массив ссылок на ModelInstance
+				</td>
+				<td width="231">Models
+				</td>
+				<td class="xl3211284">Список моделей, участвующих в создании эффекта
+				</td>
+			</tr>
+			<tr>
+				<th colspan="3" class="xl3311284">
+				ParticleInstance </TD>
+			</tr>
+			<tr>
+				<td class="xl2511284" width="258">&nbsp;
+				</td>
+				<td width="231">SrcName
+				</td>
+				<td class="xl2511284">&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">ENUM
+				</td>
+				<td class="code" width="231">Light
+				</td>
+				<td class="xl2311284">= освещается ли партикл солнцем и ambient, по умолчанию нет 
+					(L_NORMAL)
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">ссылка на Particle
+				</td>
+				<td class="code" width="231">Particle
+				</td>
+				<td class="xl2311284">Ссылка на соответствующий партикл
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">трёхмерный вектор
+				</td>
+				<td class="code" width="231">Position
+				</td>
+				<td class="xl2311284">Координаты эффекта
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">кватернион
+				</td>
+				<td class="code" width="231">Rotation
+				</td>
+				<td class="xl2311284">Разворот эффекта
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">число
+				</td>
+				<td class="code" width="231">Scale
+				</td>
+				<td class="xl2311284">Масштабирование
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">число
+				</td>
+				<td class="code" width="231">Speed
+				</td>
+				<td class="xl2311284">Скорость проигрывания
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">число
+				</td>
+				<td class="code" width="231">Offset
+				</td>
+				<td class="xl2311284">Пауза перед проигрыванием в секундах
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">число
+				</td>
+				<td class="code" width="231">EndCycle
+				</td>
+				<td class="xl2311284">Длина одного цикла в секундах (не повторять = 0)
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">число
+				</td>
+				<td class="code" width="231">CycleCount
+				</td>
+				<td class="xl2311284">Количество повторений при проигрывании партикла, 0 = 
+					бесконечно
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">пара чисел
+				</td>
+				<td class="code" width="231">Pivot
+				</td>
+				<td class="xl2311284">место крепления текстуры к партиклу
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">массив ссылок на текстуры
+				</td>
+				<td class="code" width="231">Textures
+				</td>
+				<td class="xl2311284">Набор текстур
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">boolean
+				</td>
+				<td class="code" width="231">IsCrown
+				</td>
+				<td class="xl2311284">Является ли кроной дерева, по умолчанию нет, Legacy
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">ENUM
+				</td>
+				<td class="code" width="231">Static
+				</td>
+				<td class="xl2311284">Надо ли пересчитывать тень от этого эффекта, по умолчанию 
+					нет (P_STATIC)
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">boolean
+				</td>
+				<td class="code" width="231">DoesCastShadow
+				</td>
+				<td class="xl2311284">Отбрасывает ли тень, по умолчанию нет.
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">номер кости
+				</td>
+				<td class="code" width="231">GlueToBone
+				</td>
+				<td class="xl2311284">Номер кости, к которой приклеивается партикл
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2411284" width="258">boolean
+				</td>
+				<td class="code" width="231">LeaveParticlesWhereStarted
+				</td>
+				<td class="xl2411284">будет ли оставаться след из партиклов, если их приклеить к 
+					кости
+				</td>
+			</tr>
+			<tr>
+				<th colspan="3" class="xl3311284">
+				Particle </TD>
+			</tr>
+			<tr>
+				<td class="xl2511284" width="258">Строка-путь
+				</td>
+				<td class="code" width="231">SrcName
+				</td>
+				<td class="xl2511284">Путь к mb-файлу
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2311284" width="258">Строка
+				</td>
+				<td class="code" width="231">ExportPrefix
+				</td>
+				<td class="xl2311284">имя группы в mb-файле
+				</td>
+			</tr>
+			<tr>
+				<td class="xl2411284" width="258">два числа
+				</td>
+				<td class="code" width="231">WrapSize
+				</td>
+				<td class="xl2411284">&nbsp;
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

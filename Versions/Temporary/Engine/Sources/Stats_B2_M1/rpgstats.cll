@@ -1,0 +1,1849 @@
+#include "../3dmotor/dbscene.cll"
+#include "../game.cll"
+#include "acktypes.cll"
+#include "dbpassprofile.cll"
+#include "dbplanemanuvers.cll"
+#include "season.cll"
+#include "useractions.cll"
+[hExternal] #include "../3dmotor/dbscene.h"
+[hExternal] #include "commands_actions.h"
+[hExternal] #include "constructorinfo.h"
+[hExternal] #include "iconsset.h"
+[hExternal] #include "prefix_rpgstats.h"
+[hExternal] #include "unittypes.h"
+[hExternal] #include "../System/FilePath.h"
+[cppExternal] #include "AnimationType.h"
+[cppExternal] #include "DBAnimB2.h"
+[cppExternal] #include "DBVisObj.h"
+[cppExternal] #include "include_infantryrpgstats_cpp.h"
+[cppExternal] #include "include_mechunitrpgstats_cpp.h"
+[cppExternal] #include "include_unitbaserpgstats_cpp.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EUnitSpecialAbility;
+forward enum EUnitSpecialAbilityGroup;
+forward class SUnitStatsModifier;
+forward class SWeaponRPGStats;
+forward enum EObjectVisType;
+forward enum EObjGameType;
+forward enum ESeason;
+forward class SComplexSoundDesc;
+forward class SEffect;
+forward class SIconsSet;
+forward class SComplexEffect;
+forward enum ESelectionType;
+forward class SBurningFuel;
+forward class SModel;
+forward class SVisObj;
+forward class SComplexEffect;
+forward class STexture;
+forward class SProjectile;
+forward class SCraterSet;
+forward class SAttachedModelVisObj;
+forward class SDynamicDebrisSet;
+forward class SStaticDebrisSet;
+forward enum EDesignBuildingType;
+forward enum EBuildingType;
+forward class SArmorPattern;
+forward enum EUnitPoliticalSide;
+forward class SUnitSpecialAblityDesc;
+forward enum EDBUnitRPGType;
+forward class SArmorPatternPlacement;
+forward class SM1UnitType;
+forward class SM1UnitActions;
+forward class SAnimBase;
+forward class SM1UnitSpecific;
+forward enum EEncyclopediaFilterUnitType;
+forward class SAckSetRPGStats;
+forward class SUnitActions;
+forward enum EDesignUnitType;
+forward class SComplexSeasonedEffect;
+forward enum EReinforcementType;
+forward enum EUserAction;
+forward class SPartyDependentInfo;
+forward class SMechUnitRPGStats;
+forward class SInfantryRPGStats;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EUnitSpecialAbility
+{
+	ABILITY_NOT_ABILITY,
+	ABILITY_PLACE_CHARGE,
+	ABILITY_PLACE_CONTROLLED_CHARGE,
+	ABILITY_DETONATE,
+	ABILITY_EXACT_SHOT,
+	ABILITY_CRITICAL_TARGETING,
+	ABILITY_RAPID_SHOT_MODE,
+	ABILITY_REPAIR_LESSER_DAMAGE,
+	ABILITY_HOLD_SECTOR,
+	ABILITY_TRACK_TARGETING,
+	ABILITY_HIGH_PASSABLENESS_MODE,
+	ABILITY_MANUVERABLE_FIGHT_MODE,
+	ABILITY_USE_BINOCULAR,
+	ABILITY_REMOVE_MINE_FIELD,
+	ABILITY_RAPID_FIRE_MODE,
+	ABILITY_SET_MINE_FIELD,
+	ABILITY_DIG_TRENCHES,
+	ABILITY_ADRENALINE_RUSH,
+	ABILITY_DIE_HARD,
+	ABILITY_BUILD_OBSTACLES,
+	ABILITY_CAMOFLAGE_MODE,
+	ABILITY_ADAVNCED_CAMOFLAGE_MODE,
+	ABILITY_THROW_GRENADE,
+	ABILITY_THROW_ANTITANK_GRENADE,
+	ABILITY_SPY_MODE,
+	ABILITY_LOW_HEIGHT_MODE,
+	ABILITY_OVERLOAD_MODE,
+	ABILITY_DROP_BOMBS,
+	ABILITY_FIRE_AA_MISSILES,
+	ABILITY_FIRE_AA_GUIDED_MISSILES,
+	ABILITY_FIRE_AS_MISSILES,
+	ABILITY_REPEAT_LAST_SHOT,
+	ABILITY_AREA_FIRE,
+	ABILITY_SMOKE_SHOTS,
+	ABILITY_ANTIATRILLERY_FIRE,
+	ABILITY_TAKE_HIDED_REINFORCEMENT,
+	ABILITY_COMMAND_VOICE,
+	ABILITY_AUTHORITY,
+	ABILITY_ARMOR_TUTOR,
+	ABILITY_TAKE_PLACE,
+	ABILITY_LAND_MINE,
+	ABILITY_ENTRENCH_SELF,
+	ABILITY_SUPRESS,
+	ABILITY_AMBUSH,
+	ABILITY_MOBILE_FORTRESS,
+	ABILITY_FLAMETHROWER,
+	ABILITY_CAUTION,
+	ABILITY_FIRST_AID,
+	ABILITY_LINKED_GRENADES,
+	ABILITY_MASTER_OF_STREETS,
+	ABILITY_ZEROING_IN,
+	ABILITY_SUPPORT_FIRE,
+	ABILITY_COVER_FIRE,
+	ABILITY_PATROL,
+	ABILITY_EXACT_BOMBING,
+	ABILITY_DROP_PARATROOPERS,
+	ABILITY_MASTER_PILOT,
+	ABILITY_SKY_GUARD,
+	ABILITY_SURVIVAL,
+	ABILITY_TANK_HUNTER,
+	ABILITY_RADIO_CONTROLLED_MODE,
+	_ABILITY_COUNT,
+};
+
+enum EUnitSpecialAbilityGroup
+{
+	ABILITY_GROUP_NOGROUP,
+	ABILITY_GROUP_CAMOFLAGE,
+};
+
+[typeID = 0x110832C0]
+class SUnitSpecialAblityDesc
+{
+	EUnitSpecialAbility _Name;
+	int _RefreshTime;
+	int _WorkTime;
+	int _SwitchOnTime;
+	// time to ability to switch off
+	int _SwitchOffTime;
+	EUnitSpecialAbilityGroup _GroupID = ABILITY_GROUP_NOGROUP;
+	// whole group is disabled on this time if this ability run
+	int _DisableGroupTime;
+	// stats bonus
+	SUnitStatsModifier *_StatsBonus;
+	// numeric parameter (have unique meaning for each ability)
+	float _Parameter = 0;
+	// paramenter description
+	[noCode] wstring _Description;
+	// do we need to stop current action to start this ability?
+	bool _StopCurrentAction = false;
+	TextFileRef _LocalizedNameFileRef;
+	TextFileRef _LocalizedDescFileRef;
+
+	#include "include_unitspecialablitydesc.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  do not change the directions ordering!!!
+enum EArmorDirection
+{
+	RPG_FRONT,
+	RPG_LEFT,
+	RPG_BACK,
+	RPG_RIGHT,
+	RPG_TOP,
+	RPG_BOTTOM,
+};
+
+enum EObjGameType
+{
+	SGVOGT_UNKNOWN,
+	SGVOGT_UNIT,
+	SGVOGT_BUILDING,
+	SGVOGT_FORTIFICATION,
+	SGVOGT_ENTRENCHMENT,
+	SGVOGT_TANK_PIT,
+	SGVOGT_BRIDGE,
+	SGVOGT_MINE,
+	SGVOGT_OBJECT,
+	SGVOGT_FENCE,
+	SGVOGT_TERRAOBJ,
+	SGVOGT_EFFECT,
+	SGVOGT_PROJECTILE,
+	SGVOGT_SHADOW,
+	SGVOGT_ICON,
+	SGVOGT_SQUAD,
+	SGVOGT_FLASH,
+	SGVOGT_FLAG,
+	SGVOGT_SOUND,
+	SGVOGT_FLORA,
+};
+
+enum EObjectVisType
+{
+	SGVOT_MESH,
+	SGVOT_SPRITE,
+};
+
+class SCommonRPGStats
+{
+	[hidden] string _KeyName;
+	[hidden] string _ParentName;
+	[hidden] string _StatsType;
+	[hidden] EObjectVisType _VisType;
+	// Game type (legacy from B1, but must be set correctly)
+	EObjGameType _GameType;
+	// General-purpose comment
+	[noCode] wstring _Comments;
+
+	#include "include_commonrpgstats.h"
+};
+
+[typeRename = "CUserCommands"; numBytes = 16; editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIActions.xml"]
+[noHeader] typedef hexbinary UserCommands;
+
+[typeRename = "CUserActions"]
+[noHeader] struct SUserActions
+{
+	int _actions[4..4];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x15096402; no_checksum]
+class SComplexEffect
+{
+	// to be compatible with old data
+	SEffect *_SceneEffect;
+	// List of visual effects to choose randomly from
+	SEffect *_SceneEffects[];
+	// sound effect to play with particles
+	[unsafe] SComplexSoundDesc *_SoundEffect;
+
+	#include "include_complexeffect.h"
+};
+
+struct SSeasonEffect
+{
+	ESeason _SeasonToUse;
+	SEffect *_SceneEffect;
+};
+
+[typeID = 0x110CEC40; no_checksum]
+class SComplexSeasonedEffect
+{
+	SComplexSoundDesc *_SoundEffect;
+	SSeasonEffect _Seasons[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106AC40; no_checksum]
+class SAckSetRPGStats : public SCommonRPGStats
+{
+	SAckType _types[];
+	// actor voice number
+	int _VoiceNumber;
+
+	#include "include_acksetrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum ESelectionType
+{
+	SELECTION_TYPE_GROUND,
+	SELECTION_TYPE_WATER,
+	SELECTION_TYPE_AIR,
+	SELECTION_TYPE_NONE,
+	SELECTION_TYPE_CANNOT_SELECT,
+};
+
+
+struct SAttachedLightEffect
+{
+	// locator name to attach effect
+	string _LocatorName;
+	CVec3 _Pos;
+	CQuat _Rot;
+	// flare effect position
+	CVec3 _FlarePos;
+	// effect size; 0 - empty effect
+	float _FlareSize = 0;
+	// own light position
+	CVec3 _PointLightPos;
+	// effect size; 0 - empty effect
+	float _PointLightSize;
+	// light cone length (scale from base model)
+	float _ConeLength;
+	// light cone size (width); 0 - empty cone
+	float _ConeSize;
+	VecColor _Colour;
+	// additional effect
+	SComplexEffect *_AdditionalEffect;
+	// do we need this effect at day time
+	bool _OnAtDay = false;
+	// do we need this effect at night time
+	bool _OnAtNight = true;
+	// light cone texture
+	STexture *_ConeTexture;
+	// flare texture
+	STexture *_FlareTexture;
+};
+
+struct SIconsSetParams
+{
+	// use individual params for this object
+	bool _Custom;
+	float _Raising;
+	float _HPBarLen;
+};
+
+class SHPObjectRPGStats : public SCommonRPGStats
+{
+	struct SByteArray2
+	{
+		struct SByteArray1
+		{
+			int _data[];
+		};
+		SByteArray1 _data[];
+
+		#include "include_ByteArray2.h"
+	};
+
+	struct SDefenseRPGStats
+	{
+		int _ArmorMin;
+		int _ArmorMax;
+		float _Silhouette;
+	};
+	struct SDamageLevel
+	{
+		// damaged HP to turn this model on
+		Percent1 _DamageHP;
+		// destruction model
+		SVisObj *_VisObj;
+		// window effect to play then change to this state
+		SComplexEffect *_DamageEffectWindow;
+		// smoke points effect to play then change to this state
+		SComplexEffect *_DamageEffectSmoke;
+	};
+	struct SModelSurfacePoint
+	{
+		CVec3 _Pos;
+		CVec4 _Orient;
+	};
+	// (HP) max object health
+	float _MaxHP = 100;
+	// hp sequence to change object state
+	[no_checksum] SDamageLevel _DamageLevels[];
+	// 1 HP repair change
+	float _RepairCost;
+	// use only for buildings!
+	SDefenseRPGStats _defences[6..6];
+	// main visual object
+	SVisObj *_visualObject;
+	// informational visual object (if it differs from main)
+	[hidden] SVisObj *_infoVisualObject;
+	// icon for UI screen
+	STexture *_IconTexture;
+	// multiselect icon background
+	STexture *_IconFlagBackground;
+	// object name
+	TextFileRef _LocalizedNameFileRef;
+	// Scale factor for selection picture
+	[no_checksum] float _SelectionScale = 1.4;
+	// selection type (ground, water, air)
+	[no_checksum] ESelectionType _SelectionType = SELECTION_TYPE_GROUND;
+	// attached lights
+	[no_checksum] SAttachedLightEffect _LightEffects[];
+	[hidden; no_checksum] SModelSurfacePoint _SurfacePoints[];
+	// Do we need surface points to be generated?
+	[noCode] bool _NeedSurfacePoints = true;
+	// state icons set
+	[no_checksum] SIconsSet *_IconsSet;
+	[no_checksum] SIconsSetParams _IconsSetParams;
+
+	#include "include_hpobjectrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x111C33C0]
+class SBurningFuel
+{
+	int _BurnTime;
+	SWeaponRPGStats *_WeaponFireEachSecond;
+	SWeaponRPGStats *_WeaponFireOnDesctruction;
+};
+
+class SStaticObjectRPGStats : public SHPObjectRPGStats
+{
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIClasses.xml"]
+	int _AIPassabilityClass;
+	// this building burns then 50% hp reached
+	bool _Burn;
+	// death with explosion (projectile hit)
+	SComplexEffect *_EffectExplosion;
+	// 'silent' death - squished by tank
+	SComplexEffect *_EffectDeath;
+	// corpse disappear effect
+	SComplexEffect *_EffectDisappear;
+	// does this object leaves corpse?
+	bool _LeaveCorpse = false;
+	// can this corpse be squished by units with TRACK passability
+	bool _DestructableCorpse = true;
+	// does this object explodes then squished?
+	SBurningFuel *_ShootOnDestruction;
+
+	#include "include_staticobjectrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x120AEBC0; no_checksum]
+class SCraterSet
+{
+	struct SSingleSeasonCraters
+	{
+		struct SCraterDesc
+		{
+			SMaterial *_Material;
+			float _Scale = 0.05;
+		};
+		ESeason _Season;
+		SCraterDesc _Craters[1..];
+	};
+	SSingleSeasonCraters _Craters[1..];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x300C3B80; no_checksum]
+class SProjectile
+{
+	// projectile model
+	SModel *_Model;
+	// smoke trail
+	[unsafe] SComplexEffect *_SmokyExhaustEffect;
+	// smoky effect locator (or object center)
+	string _SmokyEffectLocator;
+	// (meters) interval to place smoky effects
+	float _SmokyExhaustEffectInterval = 2;
+	// attached effect
+	[unsafe] SComplexEffect *_AttachedEffect;
+	// Effect that will be attached to shell 1 second before it explode
+	[unsafe] SComplexEffect *_EffectBeforeHit;
+	// locator for attached effect
+	string _AttachedEffectLocator;
+};
+
+[typeID = 0x11069B82]
+class SWeaponRPGStats : public SCommonRPGStats
+{
+	struct SShell
+	{
+		enum ETrajectoryType
+		{
+			TRAJECTORY_LINE,
+			TRAJECTORY_HOWITZER,
+			TRAJECTORY_BOMB,
+			TRAJECTORY_CANNON,
+			TRAJECTORY_ROCKET,
+			TRAJECTORY_GRENADE,
+			TRAJECTORY_TORPEDO,
+			TRAJECTORY_AA_ROCKET,
+			TRAJECTORY_FLAME_THROWER,
+		};
+
+		enum EShellDamageType
+		{
+			DAMAGE_HEALTH,
+			DAMAGE_MORALE,
+			DAMAGE_FOG,
+		};
+
+		EShellDamageType _DamageType;
+		// piercing
+		int _Piercing;
+		// damage random
+		int _DamageRandom = 100;
+		// damage
+		float _DamagePower = 50;
+		// piercing random
+		int _PiercingRandom = 100;
+		// (meter) main damage radius
+		float _Area;
+		// (meter) secondary damage radius
+		float _Area2;
+		// (meter/sec) projectile speed
+		float _Speed = 800;
+		// trasser speed (coeff to projectile speed)
+		[editorControl = "float_slider"; stringParam = "precision:3, min:0, max:1, step:0.02, page:0.1"]
+		float _TraceSpeedCoeff;
+		// trasser probability
+		[editorControl = "float_slider"; stringParam = "precision:3, min:0, max:1, step:0.02, page:0.1"]
+		float _TraceProbability;
+		// trasser length
+		float _TraceLength;
+		// trasser width
+		float _TraceWidth;
+		// trasser material
+		SMaterial *_TraceMaterial;
+		// camera quake in projectile explosion
+		[no_checksum] float _DetonationPower;
+		// trajectory type
+		ETrajectoryType _trajectory;
+		// (percents) brake track probability
+		float _BrokeTrackProbability;
+		[hidden] string _FireSound;
+		// gun fire effect
+		SComplexEffect *_EffectGunFire;
+		// trajectory effect
+		SComplexEffect *_EffectTrajectory;
+		// direct hit effect
+		SComplexEffect *_EffectHitDirect;
+		// hit-miss effect
+		SComplexEffect *_EffectHitMiss;
+		// damage reflection effect
+		SComplexEffect *_EffectHitReflect;
+		// ground hit effect
+		SComplexEffect *_EffectHitGround;
+		// water hit effect
+		SComplexEffect *_EffectHitWater;
+		// air hit effect (for AA guns with cover fire)
+		SComplexEffect *_EffectHitAir;
+		// craters after explosion
+		SCraterSet *_Craters;
+		// (bullets/minute) fire rate
+		float _FireRate;
+		// (seconds) relax time 
+		float _RelaxTime;
+		// projectile model
+		SProjectile *_visProjectile;
+
+		#include "include_weaponrpgstats_shell.h"
+	};
+
+	enum EWeaponType
+	{
+		WEAPON_PISTOL,
+		WEAPON_MACHINEGUN,
+		WEAPON_SUBMACHINEGUN,
+		WEAPON_RIFLE,
+		WEAPON_SNIPER_RIFLE,
+		WEAPON_ANTITANK_RIFLE,
+		WEAPON_BAZOOKA,
+		WEAPON_PIAT,
+		WEAPON_RIFLE_AMERICAN,
+		WEAPON_FLAME_THROWER,
+		WEAPON_STEN,
+		WEAPON_PANZERFAUST,
+		WEAPON_LUFTFAUST,
+		WEAPON_HEAVY_CANNON,
+		WEAPON_HIDED,
+		_WEAPON_COUNTER,
+	};
+
+	EWeaponType _WeaponType = WEAPON_HEAVY_CANNON;
+	STexture *_WeaponTypeTexture;
+	float _Dispersion;
+	// aiming time
+	float _AimingTime;
+	// ammo per burst
+	int _AmmoPerBurst;
+	// max range
+	float _RangeMax;
+	// min range
+	float _RangeMin;
+	// max height (for AA guns)
+	int _Ceiling;
+	// (meter) counter-fire detection radius
+	float _RevealRadius;
+	// (degrees) delta (half) angle to add to fire sector
+	float _DeltaAngle;
+	// all possible shalls
+	SShell _shells[1..];
+	// infantry weapon model
+	[unsafe] SVisObj *_VisObj;
+	// weapon name
+	TextFileRef _LocalizedNameFileRef;
+
+	#include "include_weaponrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[noBase] struct SBaseGunRPGStats
+{
+	SWeaponRPGStats *_Weapon;
+	// (for constructor) model gun+carriage
+	[unsafe] SAttachedModelVisObj *_AttachedGunVisObj;
+	// locator to attach gun (for constructor)
+	string _AttachedGunLocator;
+	// shoot point offset
+	CVec3 _ShootPointOffset;
+	// do we need to invert effect direction? (for bazooka and other roket weapon)
+	bool _ShootEffectInvert = false;
+	// gun priority: 0 - need to stop to fire, > 0 - other weapon - don't need to stop to fire
+	int _Priority;
+	// primary or secondary gun (for ammo representation in UI)
+	bool _IsPrimary;
+	// max amount of ammo in this gun
+	int _Ammo;
+	[hidden] float _Direction;
+	// reload cost (in RU) to reload ONE shell of any type for this gun
+	float _ReloadCost = 1;
+	// independent mounted AA gun. must me mounted to ground unit turret
+	bool _TargetAAOnly = false;
+
+	#include "include_basegunrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x140BAB40; no_checksum]
+[noCode; noKey] class SStaticDebrisSet
+{
+	[noCode] struct SStaticDebrisDesc
+	{
+		[noCode] PictureFileRef _SrcName;
+		float _Width;
+		ESeason _Season = SEASON_SUMMER;
+	};
+	SStaticDebrisDesc _Debris[];
+};
+
+[typeID = 0x140BAB41; no_checksum]
+class SDynamicDebrisSet
+{
+	struct SDynamicDebrisDesc
+	{
+		STexture *_Texture;
+		ESeason _Season = SEASON_SUMMER;
+		float _Width;
+	};
+	SDynamicDebrisDesc _Debris[];
+};
+
+class SObjectBaseRPGStats : public SStaticObjectRPGStats
+{
+	[noCode] struct SStaticDebris
+	{
+		[noCode] struct SStaticMaskDesc
+		{
+			[noCode] PictureFileRef _SrcName;
+			[readonly] CVec2 _Origin;
+			ESeason _Season = SEASON_SUMMER;
+		};
+		SStaticDebrisSet *_Debris;
+		SStaticMaskDesc _Masks[];
+		[noCode] bool _NeedDebris = false;
+	};
+	struct SDynamicDebris
+	{
+		struct SDynamicMaskDesc
+		{
+			SMaterial *_Material;
+			[readonly] CVec2 _Origin;
+			[readonly] CVec2 _Size;
+			ESeason _Season = SEASON_SUMMER;
+			float _Width;
+		};
+		SDynamicDebrisSet *_Debris;
+		[hidden; readonly] SDynamicMaskDesc _Masks[];
+		[noCode] bool _NeedDebris = false;
+	};
+	struct SAmbientSound
+	{
+		[unsafe] SComplexSoundDesc *_SoundDesc;
+		// play sound only for this season
+		ESeason _Season = SEASON_SUMMER;
+		[editorControl = "bit_field"; stringParam = "editor\\BitFields\\DayTime.xml"]
+		// play sound only for this daytimes
+		int _DayTime;
+	};
+	SStaticDebris _StaticDebris;
+	SDynamicDebris _DynamicDebris;
+	[noCode] bool _HasPassability = true;
+	[hidden] SByteArray2 _passability;
+	[hidden] SPassProfile _PassProfile;
+	[hidden] CVec2 _Origin;
+	bool _UsePassabilityForVisibility = true;
+	[hidden] SByteArray2 _visibility;
+	[hidden] CVec2 _VisOrigin;
+	// play this sound if no appropriate sound found in AmbientSounds
+	[unsafe] SComplexSoundDesc *_AmbientSound; 
+	[unsafe] SComplexSoundDesc *_CycledSound;
+	// sounds with specified seasons and daytimes
+	SAmbientSound _AmbientSounds[]; 
+	[unsafe] SComplexSoundDesc *_CycledSoundTimed[4..4];
+ 	[no_checksum] bool _CanFall = false;
+	[minInclusive = 1]
+	int _ObjectHeight = 1;
+	[unsafe] SComplexEffect *_FallEffect;
+	[no_checksum] int _FallDuration = 3000;
+	[no_checksum] float _FallCycles = 2;
+
+	// death with explosion (projectile hit), if it is setted, EffectExplosion is ignored
+	SComplexSeasonedEffect *_SeasonedEffectExplosion;
+	// 'silent' death - squished by tank, if it is setted, EffectDeath is ignored
+	SComplexSeasonedEffect *_SeasonedEffectDeath;
+	// Seasoned version of falling effect, if it is setted, simple fall effect is ignored
+	SComplexSeasonedEffect *_SeasonedFallEffect;
+
+	#include "include_objectbaserpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11069BC1]
+class STerraObjSetRPGStats : public SStaticObjectRPGStats
+{
+	struct SSegment
+	{
+		SByteArray2 _passability;
+		CVec2 _Origin;
+		SByteArray2 _visibility;
+		CVec2 _VisOrigin;
+
+		#include "include_terraobjsetrpgstats_segment.h"
+	};
+	SSegment _segments[];
+	int _fronts[];
+	int _backs[];
+
+	#include "include_terraobjsetrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11069BC4]
+class SObjectRPGStats : public SObjectBaseRPGStats
+{
+	// General-purpose list of specific joints for variable use
+	[no_checksum] string _SpecificJoints[];
+	// Object can be hidden to increase performance
+	[hidden] bool _HideForPerformance = false;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EBuildingType
+{
+	TYPE_BULDING,
+	TYPE_MAIN_RU_STORAGE,
+	TYPE_TEMP_RU_STORAGE,
+	TYPE_DOT,
+};
+
+enum EDesignBuildingType
+{
+	BUILDING_TYPE_UNKNOWN,
+	Small,
+	Medium,
+	Large,
+};
+
+
+struct SSlotDamageLevel
+{
+	Percent1 _DamageHP;
+	SVisObj *_VisObj;
+	SComplexEffect *_DamageEffect;
+};
+
+struct SWindowInfo
+{
+	[unsafe] SVisObj *_DayObj;
+	[unsafe] SVisObj *_NightObj;
+	[unsafe] SVisObj *_DestroyedObj;
+	[unsafe] SComplexEffect *_DestroyEffect;
+	SSlotDamageLevel _DayDamageLevels[];
+	SSlotDamageLevel _NightDamageLevels[];
+	float _MaxHP = 100;
+};
+
+[typeID = 0x11069BC9]
+class SBuildingRPGStats : public SObjectBaseRPGStats
+{
+	struct SEntrance
+	{
+		// entrance placement
+		CVec3 _Pos;
+		// is this entrance stormable?
+		bool _Stormable;
+		int _Dir;
+
+		#include "include_buildingrpgstats_entrance.h"
+	};
+	struct SSlot
+	{
+		[readonly; no_checksum] string _LocatorName;
+		// Number of fireplaces in this point
+		int _NumFirePlaces = 1;
+		[readonly] CVec3 _Pos;
+		// slot center to calculate damage
+		CVec3 _DamageCenter;
+		[hidden] CQuat _Rot;
+		// (degree) fire/sight direction
+		[readonly] float _Direction;
+		// (degree) fire/sight angle
+		float _Angle = 180;
+		// coverage for the unit in this slot [0..1]
+		float _Coverage = 1;
+		// mounted gun
+		SBaseGunRPGStats _Gun;
+		// (seconds for full rotate) vertical rotation speed
+		float _RotationSpeed = 1;
+		SWindowInfo _Window;
+		// windows model scale
+		[no_checksum] CVec2 _WindowScale;
+		SUnitStatsModifier *_SoldierStatsModifier;
+		// sight multiplier
+		float _SightMultiplier = 1;
+
+		#include "include_buildingrpgstats_slot.h"
+	};
+	struct SFirePoint
+	{
+		CVec3 _Pos;
+		float _Direction;
+		// (radian) angle from horizontal plane in the vertical plane, which crosses 'fDirection'
+		float _VerticalAngle;
+		// particle fire effect
+		string _FireEffect;
+		// coverage for the unit in this slot [0..1]
+		float _Coverage;
+		// 2D picture position
+		CVec2 _PicturePosition;
+
+		#include "include_buildingrpgstats_firepoint.h"
+	};
+	struct SDirectionExplosion
+	{
+		CVec3 _Pos;
+		float _Direction;
+		// (radian) angle from horizontal plane in the vertical plane, which crosses 'fDirection'
+		float _VerticalAngle;
+		CVec2 _PicturePosition;
+
+		#include "include_buildingrpgstats_directionexplosion.h"
+	};
+	// type of this building (see enum above for possible types)
+	EBuildingType _type;
+	// slots for resting
+	int _RestSlots;
+	// slots for medical assistance
+	int _MedicalSlots;
+	[hidden; unsafe] SWeaponRPGStats *_PrimaryGun;
+	// shoot slots...
+	SSlot _slots[];
+	[noCode] SWindowInfo _DefaultWindow;
+	SEntrance _entrances[];
+	[hidden] SFirePoint _firePoints[];
+	// smoke points (for destruction)
+	[hidden] SFirePoint _smokePoints[];
+	// direction explosions, 5 items, see EDirectionExplosionType
+	[hidden] SDirectionExplosion _dirExplosions[];
+	[minInclusive = 0]
+	float _SightMultiplier = 1;
+	SUnitStatsModifier *_SoldierStatsModifier;
+	EDesignBuildingType _BuildingType = BUILDING_TYPE_UNKNOWN;
+	// Alexander Vinnikov's method of visibility - use reduced passability for visibility
+	bool _VisibilitySrink = true;
+	// armor pattern visual model
+	SArmorPattern *_ArmorPattern;
+	Percent1 _DamageCoeff;
+
+	#include "include_buildingrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11069BCA]
+class SBridgeRPGStats : public SStaticObjectRPGStats
+{
+	enum EDirection
+	{
+		VERTICAL,
+		HORIZONTAL,
+	};
+
+	struct SSegmentRPGStats
+	{
+		enum ESegmentType
+		{
+			SLAB,
+			GIRDER,
+		};
+		// segment type - slab or girder
+		ESegmentType _Type;
+		// this bridge segment AI passability 
+		SByteArray2 _passability;
+		// segment zero point for passability
+		CVec2 _Origin;
+		bool _UsePassabilityForVisibility = true;
+		[hidden] SByteArray2 _visibility;
+		[hidden] CVec2 _VisOrigin;
+		[hidden] CVec2 _RelPos;
+		SVisObj *_VisObj;
+		[hidden] int _FrameIndex;
+
+		#include "include_bridgerpgstats_segmentrpgstats.h"
+	};
+	struct SSpan
+	{
+		// slab part of the span segment index
+		int _Slab;
+		// back part of the span's girder segment index
+		int _BackGirder;
+		// front part of the span's girder segment index
+		int _FrontGirder;
+		// span width
+		float _Width;
+		// span length
+		float _Length;
+	};
+	struct SDamageState
+	{
+		// all spans of the bridge
+		SSpan _spans[];
+		// indices of the 'begin' segments in the 'spans'
+		int _begins[];
+		// indices of the 'line' segments in the 'spans'
+		int _lines[];
+		// indices of the 'end' segments in the 'spans'
+		int _ends[];
+	};
+	// fire point description, fire-on-the-bridge
+	struct SBridgeFirePoint
+	{
+		// position
+		CVec2 _Pos;
+		// (radian) direction
+		float _Direction;
+		// (radian) angle from horizontal plane in the vertical plane, which crosses 'fDirection'
+		float _VerticalAngle;
+		// particle fire effect
+		string _FireEffect;
+		// 2D picture position
+		CVec2 _PicturePosition;
+
+		#include "include_bridgerpgstats_firepoint.h"
+	};
+	// direction explosion description
+	struct SBridgeDirectionExplosion
+	{
+		// position
+		CVec2 _Pos;
+		// (radian) direction
+		float _Direction;
+		// (radian) angle from horizontal plane in the vertical plane, which crosses 'fDirection'
+		float _VerticalAngle;
+		// particle fire effect
+		string _FireEffect;
+		// 2D picture position
+		CVec2 _PicturePosition;
+
+		#include "include_bridgerpgstats_directionexplosion.h"
+	};
+	struct SElementRPGStats
+	{
+		struct SBridgeDamageState
+		{
+			Percent1 _DamageHP;
+			SVisObj *_VisObjects[1..];
+			SComplexEffect *_SmokeEffect;
+		};
+		// segment AI passability
+		[hidden] SByteArray2 _Passability;
+		// segment zero point for passability
+		[readonly] CVec2 _Origin;
+		[readonly] CVec2 _Size;
+		SBridgeDamageState _DamageStates[1..];
+		SVisObj *_VisualObjects[];
+	};
+	SElementRPGStats _Center;
+	SElementRPGStats _End;
+	float _Height;
+	EDirection _direction;
+	SSegmentRPGStats _segments[1..];
+	SDamageState _states[3..3];
+	SBridgeFirePoint _firePoints[];
+	SBridgeFirePoint _smokePoints[];
+	string _SmokeEffect;
+	SBridgeDirectionExplosion _dirExplosions[];
+	string _DirExplosionEffect;
+	[minInclusive = 0]
+	float _SightMultiplier = 1;
+
+	#include "include_bridgerpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EEntrenchSegmType
+{
+	EST_LINE,
+	EST_FIREPLACE,
+	EST_TERMINATOR,
+	EST_ARC,
+};
+
+[typeID = 0x11069BC8]
+class SEntrenchmentRPGStats : public SHPObjectRPGStats
+{
+	struct SEntrenchSegmentRPGStats
+	{
+		SVisObj *_VisObj;
+		CVec2 _AABBCenter;
+		CVec3 _AABBHalfSize;
+		float _Coverage;
+		CVec2 _fireplaces[];
+		EEntrenchSegmType _Type;
+
+		#include "include_entrenchmentrpgstats_segmentrpgstats.h"
+	};
+	SEntrenchSegmentRPGStats _segments[1..];
+	int _lines[];
+	int _fireplaces[];
+	int _terminators[];
+	int _arcs[];
+	SUnitStatsModifier *_InnerUnitBonus;
+
+	#include "include_entrenchmentrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EFenceDirection
+{
+	FENCE_DIRECTION_0,
+	FENCE_DIRECTION_1,
+	FENCE_DIRECTION_2,
+	FENCE_DIRECTION_3,
+};
+
+enum EFenceDamageType
+{
+	FENCE_TYPE_NORMAL,
+	FENCE_TYPE_LDAMAGE,
+	FENCE_TYPE_RDAMAGE,
+	FENCE_TYPE_CDAMAGE,
+};
+
+[typeID = 0x11069BC7]
+class SFenceRPGStats : public SStaticObjectRPGStats
+{
+	enum EFencePlacementMode
+	{
+		FENCE_PLACE_ON_TERRAIN,
+		FENCE_PLACE_STAGGERED,
+	};
+
+	struct SFenceSegmentRPGStats
+	{
+		// segment AI passability
+		SByteArray2 _passability;
+		// segment passability zero point
+		CVec2 _Origin;
+		SByteArray2 _visibility;
+		CVec2 _VisOrigin;
+		int _SpriteIndex;
+
+		#include "include_fencerpgstats_segmentrpgstats.h"
+	};
+	struct SDir
+	{
+		int _centers[];
+		int _ldamages[];
+		int _rdamages[];
+		int _cdamages[];
+	};
+	struct SSegments
+	{
+		SVisObj *_VisObjes[];
+		SByteArray2 _passability;
+		[hidden] SPassProfile _PassProfile;
+		bool _UsePassabilityForVisibility = false;
+		CVec2 _Origin;
+	};
+	[hidden] SFenceSegmentRPGStats _stats[];
+	[hidden] SDir _dirs[];
+	EFencePlacementMode _PlacementType = FENCE_PLACE_STAGGERED;
+	SSegments _CenterSegments;
+	SSegments _DamagedSegments;
+	SSegments _DamagedSegmentsOtherSide;
+	SSegments _DestroyedSegments;
+	// fence hight (AI points), used to calculate visibility
+	float _FenceHeight = 100;
+
+	#include "include_fencerpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EMineType
+{
+	MT_INFANTRY,
+	MT_TECHNICS,
+	MT_CHARGE,
+	MT_LANDMINE,
+	MT_INFANTRY_AND_TECHNICS,
+};
+
+[typeID = 0x11069BC5]
+class SMineRPGStats : public SObjectBaseRPGStats
+{
+	SWeaponRPGStats *_Weapon;
+	EMineType _type;
+	float _Weight;
+	string _FlagModel;
+	// Range to trigger mine, AI tiles
+	int _TriggerRange = 3;
+	// If mine is triggered simply by proximity
+	bool _RangeDetonator = false;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SAnimDesc
+{
+	int _Length;
+	int _Action;
+	int _FrameIndex;
+	int _AABB_A;
+	int _AABB_D;
+	SAnimBase *_Animation;
+};
+
+struct Svector_AnimDescs
+{
+	SAnimDesc _anims[];
+};
+
+[typeID = 0x11141380]
+class SUnitActions
+{
+	// this unit commands
+	UserCommands _availCommands;
+	// commands, which can be performed over this unit
+	UserCommands _availExposures;
+	[hidden] SUserActions _availUserActions;
+	[hidden] SUserActions _availUserExposures;
+	SUnitSpecialAblityDesc *_SpecialAbilities[4];
+
+	#include "include_unitbaserpgstats_actions.h"
+};
+
+enum EDBUnitRPGType
+{
+	DB_RPG_TYPE_SOLDIER,
+	DB_RPG_TYPE_ENGINEER,
+	DB_RPG_TYPE_SNIPER,
+	DB_RPG_TYPE_OFFICER,
+	DB_RPG_TYPE_TRN_CARRIER,
+	DB_RPG_TYPE_TRN_SUPPORT,
+	DB_RPG_TYPE_TRN_MEDICINE,
+	DB_RPG_TYPE_TRN_TRACTOR,
+	DB_RPG_TYPE_TRN_MILITARY_AUTO,
+	DB_RPG_TYPE_TRN_CIVILIAN_AUTO,
+	DB_RPG_TYPE_ART_GUN,
+	DB_RPG_TYPE_ART_HOWITZER,
+	DB_RPG_TYPE_ART_HEAVY_GUN,
+	DB_RPG_TYPE_ART_AAGUN,
+	DB_RPG_TYPE_ART_ROCKET,
+	DB_RPG_TYPE_ART_SUPER,
+	DB_RPG_TYPE_ART_MORTAR,
+	DB_RPG_TYPE_ART_HEAVY_MG,
+	DB_RPG_TYPE_SPG_ASSAULT,
+	DB_RPG_TYPE_SPG_ANTITANK,
+	DB_RPG_TYPE_SPG_SUPER,
+	DB_RPG_TYPE_SPG_AAGUN,
+	DB_RPG_TYPE_ARM_LIGHT,
+	DB_RPG_TYPE_ARM_MEDIUM,
+	DB_RPG_TYPE_ARM_HEAVY,
+	DB_RPG_TYPE_ARM_SUPER,
+	DB_RPG_TYPE_AVIA_SCOUT,
+	DB_RPG_TYPE_AVIA_BOMBER,
+	DB_RPG_TYPE_AVIA_ATTACK,
+	DB_RPG_TYPE_AVIA_FIGHTER,
+	DB_RPG_TYPE_AVIA_SUPER,
+	DB_RPG_TYPE_AVIA_LANDER,
+	DB_RPG_TYPE_TRAIN_LOCOMOTIVE,
+	DB_RPG_TYPE_TRAIN_CARGO,
+	DB_RPG_TYPE_TRAIN_CARRIER,
+	DB_RPG_TYPE_TRAIN_SUPER,
+	DB_RPG_TYPE_TRAIN_ARMOR,
+	DB_RPG_TYPE_COUNT,
+};
+
+enum EUnitPoliticalSide
+{
+	POLITICAL_SIDE_UNKNOWN,
+	POLITICAL_SIDE_ALLIES,
+	POLITICAL_SIDE_GERMAN,
+	POLITICAL_SIDE_JAPAN,
+	POLITICAL_SIDE_USSR,
+	POLITICAL_SIDE_USA,
+};
+
+
+
+enum EEncyclopediaFilterUnitType
+{
+	EFUT_UNKNOWN,
+	EFUT_ARTILLERY,
+	EFUT_ARMOR,
+	EFUT_AIR,
+	EFUT_SEA,
+	EFUT_TRANSPORT,
+	EFUT_MISC,
+	EFUT_COUNT,
+};
+
+
+struct SBoundCircle
+{
+	float _Radius;
+	bool _IsRound;
+};
+
+class SUnitBaseRPGStats : public SHPObjectRPGStats
+{
+	struct SAABBDesc
+	{
+		CVec2 _Center;
+		CVec2 _HalfSize;
+
+		#include "include_unitbaserpgstats_aabbdesc.h"
+	};
+	EDBUnitRPGType _DBtype;
+	[unsafe; hidden] SM1UnitType *_M1UnitTargetType;
+	[unsafe; hidden] SM1UnitSpecific *_M1UnitSpecific;
+	[hidden] SM1UnitActions *_M1UnitActions;
+	EUnitPoliticalSide _PoliticalSide = POLITICAL_SIDE_UNKNOWN;
+	TextFileRef _FullDescriptionFileRef;
+	EEncyclopediaFilterUnitType _EncyclopediaFilterUnitType;
+	// passability types, this unit can pass
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIClasses.xml"]
+	int _AIPassabilityClass;
+	SAckSetRPGStats *_AcksNames[];
+	// (meter) sight range
+	float _Sight = 20;
+	// (meter) sight power
+	float _SightPower = 1;
+	// (km/h) speed on the road
+	float _Speed;
+	// (degree/sec) rotation speed
+	float _RotateSpeed;
+	// passability
+	float _Passability;
+	// priority for collision blocking
+	int _Priority;
+	// (meter %) camouflage - coeff for enemy's sight power
+	float _Camouflage;
+	[hidden] int _MaxArmor;
+	[hidden] int _MinArmor;
+	// (AI tiles) bound radius
+	int _BoundTileRadius;
+	// (kg) mass (for towing)
+	float _Weight;
+	// AI price coeff (AI price multiplier from consts)
+	float _Price = 1;
+	[hidden] CVec2 _AABBCenter;
+	[hidden] CVec2 _AABBHalfSize;
+	// bound circle for round units
+	SBoundCircle _BoundCircle;
+	[hidden] SAABBDesc _aabb_as[];
+	[hidden] SAABBDesc _aabb_ds[];
+	[hidden] Svector_AnimDescs _animdescs[];
+	// AABB coeff for AI hit calculation
+	float _SmallAABBCoeff;
+	SUnitActions *_Actions;
+	// (sec) install/uninstall time to transport
+	float _UninstallTransport;
+	// (sec) install/uninstall time to rotate
+	float _UninstallRotate;
+	// armor pattern
+	SArmorPattern *_ArmorPattern;
+	// exp to receive, then kill this unit
+	float _ExpPrice = 1;
+
+	#include "include_unitbaserpgstats.h"
+};
+
+[typeID = 0x1711A341; no_checksum]
+class SArmorPatternPlacement
+{
+	SPoint _FrontPos;
+	SPoint _SidePos;
+	SPoint _BackPos;
+	SPoint _TopPos;
+};
+
+[typeID = 0x1711A340; no_checksum]
+class SArmorPattern
+{
+	STexture *_Picture;
+	SArmorPatternPlacement *_Placement;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11069B81]
+class SInfantryRPGStats : public SUnitBaseRPGStats
+{
+	struct SInfantryGun : public SBaseGunRPGStats
+	{
+		[hidden] int _Fake;
+	};
+	// guns[0] - main gun (rifle, machinegun, etc.), guns[1] - (if it is) secondary weapon - grenade
+	[private] SInfantryGun _guns[];
+	// can attack at stand position
+	bool _CanAttackUp;
+	// can attack in lie position
+	bool _CanAttackDown;
+	// run speed
+	float _RunSpeed;
+	// crawl speed
+	float _CrawlSpeed;
+	[hidden] int _animtimes[];
+	float _Armor;
+	// Bone to place rifle to
+	string _GunBoneName;
+
+	#include "include_infantryrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+struct SBoardedMechUnitPosition
+{
+	CVec3 _Pos;
+	int _Direction;
+};
+
+struct SGunnersVector
+{
+	CVec2 _gunners[1..];
+};
+
+enum EDesignUnitType
+{
+	UNIT_TYPE_UNKNOWN,
+	Heavy_Anti_Aircraft_Gun,
+	Light_Anti_Aircraft_Gun,
+	Anti_Aircraft_SPG,
+	Anti_Tank_Gun,
+	Assault_Gun,
+	Field_Artillery,
+	Heavy_Machine_Gun,
+	MLRS,
+	Engineering_Track,
+	Resupply_Track,
+	Tractor,
+	APC,
+	Armored_Fighting_Vehicle,
+	Fighter,
+	Bomber,
+	Ground_Attack_Plane,
+	Cargo_Plane,
+	Recon_Plane,
+	Coast_Gun,
+	Landing_Boat,
+	Mortar,
+	Light_Tank,
+	Medium_Tank,
+	Heavy_Tank,
+	Tank_Destroyer,
+	Torpedo_Boat,
+	Train,
+	Super,
+};
+
+[typeID = 0x11069B80]
+class SMechUnitRPGStats : public SUnitBaseRPGStats
+{
+	struct SMechUnitGun : public SBaseGunRPGStats
+	{
+		// shoot point locator
+		string _ShootPoint;
+		[hidden; readonly] CVec3 _AIShootPointPos;
+		// do we have racoil then firing from this gun?
+		bool _Recoil;
+		[hidden] float _RecoilLength;
+		// (msec) recoil time
+		int _recoilTime;
+		// (msec) recoil shake time
+		int _RecoilShakeTime;
+		// (radian) recoil shake angle
+		float _RecoilShakeAngle;
+		// recoil model part
+		string _RecoilPoint;
+		// vertical rotate point
+		string _RotatePoint;
+		[hidden] int _ModelPart;
+	};
+	struct SConstraint
+	{
+		float _Min;
+		float _Max;
+
+		#include "include_mechunitrpgstats_constraint.h"
+	};
+	struct SPlatform
+	{
+		// (radian) recoil shake angle
+		float _RecoilShakeAngle;
+		// (seconds for full rotate)
+		float _HorizontalRotationSpeed;
+		// (seconds for full rotate) vertical rotation speed
+		float _VerticalRotationSpeed;
+		[hidden] int _ModelPart;
+		SConstraint _constraint;
+		SConstraint _constraintVertical;
+		[hidden] int _GunCarriageParts;
+		// horizontal rotate part
+		string _RotatePoint;
+		[hidden; readonly] CVec3 _AIRotatePointPos;
+		// platform model (for contructor)
+		SAttachedModelVisObj *_AttachedPlatformVisObj;
+		// locator to attach constructor model
+		string _AttachedPlatformLocator;
+		int _ParentPlatform = 0;
+		// this platform guns list
+		[private] SMechUnitGun _guns[];
+
+		#include "include_mechunitrpgstats_platform.h"
+	};
+	struct SArmor
+	{
+		float _Min = 100;
+		float _Max = 120;
+
+		#include "include_mechunitrpgstats_armor.h"
+	};
+	struct SJoggingParams
+	{
+		float _Period1;
+		float _Period2;
+		float _Amp1;
+		float _Amp2;
+		float _Phaze1;
+		float _Phaze2;
+	};
+	struct SSlotInfo
+	{
+		string _AttachedLocator;
+		SAttachedModelVisObj *_AttachedVisObjects[1..];
+	};
+	struct SShipEffects
+	{
+		// stern effect
+		[unsafe] SComplexEffect *_BoardSideEffect;
+		[hidden] string _BoardSideLocators[];
+		// rostrum effect
+		[unsafe] SComplexEffect *_RastrumEffect;
+		[hidden] string _RastrumLocators[];
+	};
+	struct SSmokeTrailEffect
+	{
+		string _LocatorName;
+		float _Interval = 2;
+		SComplexEffect *_Effect;
+	};
+	struct SCameraPlacement
+	{
+		CVec3 _Anchor;
+		float _Distance;
+		float _Pitch;
+		float _Yaw;
+		float _Fov;
+	};
+
+	EDesignUnitType _UnitType = UNIT_TYPE_UNKNOWN;
+	// all platforms. [0] - base, [1+] - turret(s)
+	[private] SPlatform _platforms[];
+	SSlotInfo _slots[];
+	// armor from 6 directions (front, left, back, right, top, bottom). used only in mech units
+	SArmor _armors[6..6];
+	// (kg) towing force to tow artillery
+	float _TowingForce;
+	// number of crew members, required to operate
+	int _Crew;
+	// number of possible passengers to carry
+	int _Passangers;
+	// (meter) rotate radius
+	float _TurnRadius;
+	[hidden] string _exhaustPoints[];
+	[hidden] string _damagePoints[];
+	[hidden] int _peoplePointIndices[];
+	[hidden] string _FatalitySmokePoint;
+	[hidden] string _ShootDustPoint;
+	[hidden] CVec2 _TowPoint;
+	[hidden] CVec2 _EntrancePoint;
+	[hidden] CVec2 _PeoplePoints[1..];
+	[hidden] CVec2 _AmmoPoint;
+	[hidden] SGunnersVector _Gunners[1..];
+	[hidden] CVec2 _HookPoint;
+	[hidden] CVec2 _FrontWheel;
+	[hidden] CVec2 _BackWheel;
+	// diesel smoke effect
+	SComplexEffect *_EffectDiesel;
+	// dust from the wheels
+	SComplexSeasonedEffect *_EffectWheelDust;
+	// splashes from the wheels (then moving along coast)
+	SComplexSeasonedEffect *_EffectWheelSplash;
+	// Death smoke effect
+	SComplexEffect *_EffectSmoke;
+	// Fatality death effect
+	SComplexEffect *_EffectFatality;
+	SSmokeTrailEffect _SmokeTrails[];
+	// dust, then large artillery shooting
+	[unsafe] SComplexSeasonedEffect *_EffectShootDust;
+	// entrenching effect
+	[unsafe] SComplexSeasonedEffect *_EffectEntrenching;
+	// corpse disappear effect
+	SComplexEffect *_EffectDisappear;
+	// jogging in X axis
+	SJoggingParams _jx;
+	// jogging in Y axis
+	SJoggingParams _jy;
+	[hidden] SJoggingParams _jz;
+	// do we need to leave tracks
+	bool _LeavesTracks;
+	// (% AABB) track width
+	float _TrackWidth = 0.2;
+	// (% AABB) width indent
+	float _TrackOffset = 0;
+	// (% AABB) start indent
+	float _TrackStart = 0.2;
+	// (% AABB) finish indent
+	float _TrackEnd = 0.2;
+	// track intensity
+	float _TrackIntensity = 0.7;
+	// (msec) track lifetime
+	int _TrackLifetime = 10000;
+	// track place frequency
+	float _TrackFrequency = 0.5;
+	// start moving sound
+	SComplexSoundDesc *_SoundMoveStart;
+	// move cycle sound
+	SComplexSoundDesc *_SoundMoveCycle;
+	// stop moving sound
+	SComplexSoundDesc *_SoundMoveStop;
+	// Idle engine sound
+	SComplexSoundDesc *_SoundIdle;
+	// dive bomber sound
+	SComplexSoundDesc *_SoundDive;
+	// (airplanes) (meter) flying height
+	float _MaxHeight;
+	// (airplanes) diveing angle
+	float _DivingAngle;
+	// (airplanes) climb angle (after dive)
+	float _ClimbAngle;
+	// (airplanes)
+	float _TiltAngle;
+	// (airplanes) don't use it
+	float _TiltRatio;
+	// (airplanes) (degree/sec^2) bank acceleration
+	float _TiltAcceleration = 180;
+	// (airplanes) (degree/sec) max bank speed
+	float _TiltSpeed = 360;
+	// (airplanes, GAP) air target attack modifier
+	SUnitStatsModifier *_GAPAirAttackModifier;
+	// death crater after mech unit death
+	SCraterSet *_deathCraters;
+	// Price (army points) 
+	float _ReinforcementPrice = 1;
+	// Weight coefficient for price calculation in reinforcement
+	[hidden; noCode] float _ReinforcementWeight = 1;
+	// fuel amount in liters. (for planes)
+	float _Fuel = 1000;
+	EManuverID _AllowedPlaneManuvers[];
+	// animated model (for artillery and trucks)
+	[unsafe] SVisObj *_AnimableModel;
+	// transportable model (for artillery)
+	[unsafe] SVisObj *_TransportableModel;
+	SShipEffects _ShipEffects;
+	SBoardedMechUnitPosition _BoardedMechUnitPosition[];
+	// can corpse be squished
+	bool _DestructableCorpse = true;
+	SUnitStatsModifier *_InnerUnitBonus;
+	// camera placement for icon shot
+	[hidden; noCode] SCameraPlacement _CameraPlacementIconShot;
+
+	#include "include_mechunitrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+enum EEvent
+{
+	HIT_NEAR,
+};
+
+enum EDesignSquadType
+{
+	SQUAD_TYPE_UNKNOWN,
+	Main_Squad,
+	Machine_Gun_Squad,
+	Anti_Tank_Squad,
+	Assault_Squad,
+	Special_Squad,
+	Single_Unit,
+};
+
+[typeID = 0x11069BC2]
+class SSquadRPGStats : public SHPObjectRPGStats
+{
+	enum ESquadType
+	{
+		RIFLEMANS,
+		INFANTRY,
+		SUBMACHINEGUNNERS,
+		MACHINEGUNNERS,
+		AT_TEAM,
+		MORTAR_TEAM,
+		SNIPERS,
+		GUNNERS,
+		ENGINEERS,
+	};
+
+	struct SFormation
+	{
+		struct SEntry
+		{
+			CVec2 _Pos;
+			float _Dir;
+
+			#include "include_squadrpgstats_formation_entry.h"
+		};
+
+		enum EFormationMoveType
+		{
+			DEFAULT,
+			MOVEMENT,
+			DEFENSIVE,
+			OFFENSIVE,
+			SNEAK,
+		};
+
+		EFormationMoveType _type = DEFAULT;
+		// Order of all soldiers in this formation
+		[hidden] SEntry _order[];
+		// 0 - standard behavior, 1 - stand, 2 - lie
+		int _LieFlag;
+		SUnitStatsModifier *_StatsModifiers;
+		// formation to change to in event, -1 - don't change
+		int _changesByEvent[];
+		float _SpeedBonus = 1;
+		float _DispersionBonus = 1;
+		float _FireRateBonus = 1;
+		float _RelaxTimeBonus = 1;
+		float _CoverBonus = 1;
+		float _VisibleBonus = 1;
+
+		#include "include_squadrpgstats_formation.h"
+	};
+	EDesignSquadType _SquadType = SQUAD_TYPE_UNKNOWN;
+	[hidden] string _Icon;
+	ESquadType _type = RIFLEMANS;
+	SInfantryRPGStats *_members[];
+	SFormation _formations[1..];
+	UserCommands _availCommands;
+	UserCommands _availExposures;
+	[hidden] SUserActions _availUserActions;
+	[hidden] SUserActions _availUserExposures;
+	// Price (army points)
+	float _ReinforcementPrice = 1;
+	// Weight coefficient for price calculation in reinforcement
+	[hidden; noCode] float _ReinforcementWeight = 1;
+	// Cover in entrenchment
+	float _EntrenchCover = 0.5;
+
+	#include "include_squadrpgstats.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EReinforcementType
+{
+	RT_MAIN_INFANTRY,
+	RT_ASSAULT_INFANTRY,
+	RT_ELITE_INFANTRY,
+	RT_ARTILLERY_ANTITANK,
+	RT_ARTILLERY,
+	RT_ASSAULT_GUNS,
+	RT_TANK_DESTROYERS,
+	RT_ARTILLERY_ROCKET,
+	RT_LIGHT_TANKS,
+	RT_TANKS,
+	RT_HEAVY_TANKS,
+	RT_LIGHT_AAA,
+	RT_HEAVY_AAA,
+	RT_FIGHTERS,
+	RT_BOMBERS,
+	RT_GROUND_ATTACK_PLANES,
+	RT_RECON,
+	RT_PARATROOPS,
+	RT_ENGINEERING,
+	RT_HEAVY_ARTILLERY,
+	RT_SUPER_WEAPON,
+	_RT_NONE,
+};
+
+
+struct SReinforcementEntry
+{
+	SMechUnitRPGStats *_MechUnit;
+	SSquadRPGStats *_Squad;
+	// index of linked entry (transport unit) in this reinforcement
+	int _LinkIndex = -1;
+	int _LinkWith = -1;
+};
+
+[typeID = 0x120C4CC0]
+class SDeployTemplate
+{
+	struct SDeployTemplateEntry
+	{
+		// (relative) deploy coordinates
+		CVec2 _Position;
+		// (relative) units direction
+		int _Direction;
+	};
+	// units placement in reinforcement order
+	SDeployTemplateEntry _Entries[];
+	[hidden] bool _IsDefault = true;
+	[hidden] EReinforcementType _ReinforcementType;
+};
+
+[typeID = 0x120A6B80]
+class SReinforcement
+{
+	EReinforcementType _Type = RT_TANKS;
+	STexture *_IconTexture;
+	TextFileRef _LocalizedNameFileRef;
+	SReinforcementEntry _Entries[1..];
+	TextFileRef _TooltipFileRef;
+	SMechUnitRPGStats *_Transports[];
+	TextFileRef _LocalizedDescFileRef;
+	SDeployTemplate *_TemplateOverride;
+
+	#include "include_Reinforcement.h"
+};
+
+[typeID = 0x120C5B00]
+class SPlayerRank
+{
+	// rank name
+	TextFileRef _RankNameFileRef;
+	STexture *_Strap;
+	// side (USA, USSR, Germany, etc.)
+	SPartyDependentInfo *_Party;
+
+	#include "include_PlayerRank.h"
+};
+
+struct SReinforcementTypeInfo
+{
+	EReinforcementType _Type;
+	TextFileRef _TooltipFileRef;
+	EUserAction _UserAction = USER_ACTION_REINF_COMMON;
+
+	#include "include_ReinforcementTypeInfo.h"
+};
+
+[typeID = 0x17146480]
+class SReinforcementTypes
+{
+	SReinforcementTypeInfo _TypeInfo[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11069BCC]
+class SAIExpLevel
+{
+	struct SLevel
+	{
+		float _Experience = 1;
+		SUnitStatsModifier *_StatsBonus;
+	};
+	string _TypeName;
+	EReinforcementType _DBType;
+	SLevel _levels[4..4];
+
+	#include "include_aiexplevel.h"
+};
+
+[typeID = 0x19126C00]
+class SUnitStatsModifier
+{
+	struct SParameterModifier
+	{
+		float _AddBonus = 0;
+		float _MultBonus = 1;
+		int _ZeroCount = 0;
+
+		#include "include_unitstatsmodifier_parametermodifier.h"
+	};
+	// HP (*) – Resistance, damage must be reduced
+	SParameterModifier _Durability;
+	SParameterModifier _SmallAABBCoeff;
+	SParameterModifier _Camouflage;
+	SParameterModifier _SightPower;
+	SParameterModifier _SightRange;
+	SParameterModifier _Speed;
+	SParameterModifier _RotateSpeed;
+	SParameterModifier _WeaponDispersion;
+	SParameterModifier _WeaponDamage;
+	SParameterModifier _WeaponPiercing;
+	SParameterModifier _WeaponTrackDamageProb;
+	SParameterModifier _WeaponRelaxTime;
+	SParameterModifier _WeaponAimTime;
+	SParameterModifier _WeaponShellSpeed;
+	SParameterModifier _WeaponArea;
+	SParameterModifier _WeaponArea2;
+	SParameterModifier _Cover;
+
+	#include "include_unitstatsmodifier.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,79 @@
+#include "../game.cll"
+#include "m1actions.cll"
+#include "rpgstats.cll"
+[hExternal] #include "commands_actions.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SM1UnitStatsModifier;
+forward enum EM1Action;
+forward class SM1UnitSpecAction;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SM1UnitSpecAction
+{
+	EM1Action _Type;
+};
+
+[typeID = 0x33196B41]
+[noKey] class SM1UnitActions
+{
+	// actions, this unit can do
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIActions.xml"]
+	UserCommands _DefaultPerformableActions;
+	// actions, one can do with this unit
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIActions.xml"]
+	UserCommands _DefaultActionsToEndure;
+	// action params
+	SM1UnitSpecAction *_ActionParams[];
+};
+
+[typeID = 0x331ADBC0]
+[noKey] class SM1UnitActionBuild : public SM1UnitSpecAction
+{
+};
+
+[typeID = 0x331BEB41]
+[noKey] class SM1UnitActionTransform : public SM1UnitSpecAction
+{
+	int _TransformationTime;
+	SM1UnitStatsModifier *_StatsModifier;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SM1ParameterModifier
+{
+	float _MultParam = 1;
+	float _AddParam = 0;
+};
+
+struct SShellStatsModifier
+{
+	SM1ParameterModifier _damage;
+	SM1ParameterModifier _piercing;
+};
+
+struct SWeaponStatsModifier
+{
+	SM1ParameterModifier _range;
+	SShellStatsModifier _shells[];
+};
+
+struct SPlatformWeaponsStatsModifier
+{
+	SWeaponStatsModifier _Guns[];
+};
+
+struct SWeaponsStatsModifier
+{
+	SPlatformWeaponsStatsModifier _Platforms[];
+};
+
+[typeID = 0x3016A480]
+[noKey] class SM1UnitStatsModifier
+{
+	SWeaponsStatsModifier _weapons;
+	SM1ParameterModifier _sightRange;
+	SM1ParameterModifier _speed;
+	SM1ParameterModifier _rotateSpeed;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

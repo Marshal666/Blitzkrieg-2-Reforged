@@ -1,0 +1,13 @@
+нельзя добавлять/удалять элементы массива напрямую - необходимо делать это через манипулятор, 
+иначе возникнет расхождение в указателях на элементы.
+
+* при генерации кода не обрабатывается аттрибут private (область видимости)
+
+список enum-полей, названных неправильно (с маленькой буквы)
+Field "soundType" of type "SoundType"
+Field "trajectory" of type "TrajectoryType"
+Field "type" of type "BuildingType"
+Field "direction" of type "Direction"
+Field "type" of type "MineType"
+Field "type" of type "FormationMoveType"
+Field "type" of type "SquadType"

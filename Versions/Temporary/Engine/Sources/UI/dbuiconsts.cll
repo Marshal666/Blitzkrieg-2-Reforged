@@ -1,0 +1,41 @@
+#include "../game.cll"
+#include "dbuserinterface.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowTooltip;
+forward class SUIStateBase;
+forward class STooltipContext;
+forward class SWindowConsole;
+forward class SWindowStatsSystem;
+forward class SWindowSimple;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x15087B80; no_checksum]
+class STooltipContext
+{
+	SWindowTooltip *_Window;
+	SUIStateBase *_AppearCommands[1..];
+	// Max mouse offset that is allowed to count mouse cursor as if it is on the same position
+	int _MouseMaxOffsetToAppear;
+	// Milliseconds. Tooltip appear delay. 
+	int _AppearDelay;
+	int _SingleLineWidth;
+	// multi line tooltip window will be formatted with this ratio
+	float _HorisontalToVerticalRatio;
+};
+
+class SUIGameConsts
+{
+	STooltipContext *_Contexts[1..];
+	SWindowConsole *_Console;
+	SWindowSimple *_DebugInfo;
+	SWindowStatsSystem *_StatsWindow;
+	// standart button click sound
+	SUIStateSequence _ButtonClickSound;
+};
+
+// fake class to not make SUIGameConsts terminal class
+[typeID = 0x3022CBC0]
+[noCode] class SUIGameConstsTerminal : public SUIGameConsts
+{
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

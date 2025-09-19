@@ -1,0 +1,419 @@
+#include "../game.cll"
+#include "../stats_b2_m1/dbmapinfo.cll"
+#include "../stats_b2_m1/m1actions.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+#include "../stats_b2_m1/season.cll"
+#include "../stats_b2_m1/useractions.cll"
+#include "../ui/dbuiconsts.cll"
+#include "../ui/dbuserinterface.cll"
+[cppExternal] #include "dbuispecificcpp.h"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum ESpecialAbilityParam;
+forward enum EUserAction;
+forward enum EM1Action;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1508D300; no_checksum]
+class SARSetSpecialAbility : public SUIDesc
+{
+	EUserAction _Ability;
+	ESpecialAbilityParam _AbilityParam;
+
+	#include "include_arsetspecialability.h"
+};
+
+[typeID = 0x1508A340; no_checksum]
+class SARSetForcedAction : public SUIDesc
+{
+	EUserAction _UserAction;
+	EM1Action _M1UserAction;
+
+	#include "include_arsetforcedaction.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EReinforcementType;
+forward enum ESeason;
+forward enum EActionButtonPanel;
+forward enum EUserAction;
+forward class STexture;
+forward enum EM1Action;
+forward class SWindowMSButton;
+forward enum EMPGameType;
+forward class SActionButtonInfo;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EActionButtonPanel
+{
+	ACTION_BTN_PANEL_DEFAULT,
+	ACTION_BTN_PANEL_ESC,
+	ACTION_BTN_PANEL_FORMATIONS,
+	ACTION_BTN_PANEL_RADIO_CONTROLLED,
+};
+
+struct SActionButton
+{
+	EUserAction eAction;
+	SWindowMSButton *pButton;
+	SWindowMSButton *pNewButton;
+	bool bIsAbility;
+	bool bAutocast;
+	bool bPassive;
+	CVec2 vPos;
+	TextFileRef _TooltipFileRef;
+	STexture *pIcon;
+	STexture *pForegroundIcon;
+	STexture *pIconDisabled;
+	STexture *pForegroundIconDisabled;
+	bool bPressEffect;
+	EActionButtonPanel ePanel = ACTION_BTN_PANEL_DEFAULT;
+	EActionButtonPanel eTargetPanel = ACTION_BTN_PANEL_DEFAULT;
+
+	#include "include_ActionButton.h"
+};
+
+struct SM1ActionButton
+{
+	EM1Action _Action;
+	string _CrapName;
+	SWindowMSButton *_Button;
+	SWindowMSButton *_NewButton;
+	bool _IsAbility;
+	bool _Autocast;
+	bool _Passive;
+	CVec2 _Pos;
+	TextFileRef _TooltipFileRef;
+	STexture *_Icon;
+	STexture *_ForegroundIcon;
+	STexture *_IconDisabled;
+	STexture *_ForegroundIconDisabled;
+	bool _PressEffect;
+	EActionButtonPanel _Panel = ACTION_BTN_PANEL_DEFAULT;
+	EActionButtonPanel _TargetPanel = ACTION_BTN_PANEL_DEFAULT;
+
+	#include "include_M1ActionButton.h"
+};
+
+[typeID = 0x1717BAC0; no_checksum]
+class SActionButtonInfo
+{
+	EUserAction _Action;
+	bool _NoButton;
+	bool _IsAbility;
+	bool _Autocast;
+	bool _Passive;
+	int _Slot = 0;
+	EActionButtonPanel _Panel = ACTION_BTN_PANEL_DEFAULT;
+	EActionButtonPanel _TargetPanel = ACTION_BTN_PANEL_DEFAULT;
+	TextFileRef _TooltipFileRef;
+	STexture *_Icon;
+	STexture *_IconDisabled;
+	STexture *_ForegroundIcon;
+	STexture *_ForegroundIconDisabled;
+	bool _PressEffect;
+	string _HotkeyCmd;
+
+	#include "include_ActionButtonInfo.h"
+};
+
+struct SPlayersColors
+{
+	struct SPlayer
+	{
+		Color _Color;
+		SBackground *_UnitFullInfo;
+	};
+	struct SUnitFullInfo
+	{
+		SBackground *_UserForward;
+		SBackground *_NeutralForward;
+		SBackground *_FriendForwards[];
+		SBackground *_EnemyForwards[];
+	};
+	// obsolete
+	VecColor _UserColor;
+	// obsolete
+	VecColor _NeutralColor;
+	// obsolete
+	VecColor _FriendColors[];
+	// obsolete
+	VecColor _EnemyColors[];
+	// obsolete
+	SUnitFullInfo _UnitFullInfo;
+	
+	SPlayer _UserInfo;
+	SPlayer _NeutralInfo;
+	SPlayer _FriendInfo;
+	SPlayer _EnemyInfo;
+};
+
+struct SReinfButton
+{
+	EReinforcementType _Type;
+	SWindowMSButton *_Button;
+	STexture *_Texture;
+	STexture *_TextureDisabled;
+	// description of the reinforcement type
+	TextFileRef _DescFileRef;
+};
+
+struct SSeasonColor
+{
+	ESeason _Season;
+	VecColor _Color;
+};
+
+struct SMLTag
+{
+	string _Name;
+	TextFileRef _TextFileRef;
+
+	#include "include_MLTag.h"
+};
+
+struct SMPLocalizedGameType
+{
+	EMPGameType _GameType;
+	TextFileRef _LocalizedTextFileRef;
+
+	#include "include_MPLocalizedGameType.h"
+};
+
+[typeID = 0x1109C340; no_checksum]
+class SUIConstsB2 : public SUIGameConsts
+{
+	struct SSeasonName
+	{
+		ESeason _Season;
+		TextFileRef _NameFileRef;
+	};
+	
+	SActionButton _ActionButtons[];
+	SM1ActionButton _M1ActionButtons[];
+	SActionButtonInfo *_ActionButtonInfos[];
+	SPlayersColors _PlayersColors;
+	SReinfButton _ReinfButtons[];
+	SSeasonColor _ChatSeasonColors[];
+	SSeasonName _SeasonNames[];
+	SMLTag _Tags[];
+	SMPLocalizedGameType _MPLocalizedGameTypes[];
+	// arrows for chapter map screen
+	STexture *_ChapterMapArrows[];
+	// forbidden words (for chat)
+	TextFileRef _ForbiddenWordsFileRef;
+	
+
+	#include "include_UIConstsB2.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1508E480; no_checksum]
+class SWindowMiniMapShared : public SWindowShared
+{
+	// point 0x0 coords with respact to control (0x0 - top left, 1x1 - bottom right)
+	CVec2 _Point00;
+	// point 0x1 coords with respact to control (0x0 - top left, 1x1 - bottom right)
+	CVec2 _Point01;
+	// point 1x0 coords with respact to control (0x0 - top left, 1x1 - bottom right)
+	CVec2 _Point10;
+	// point 1x1 coords with respact to control (0x0 - top left, 1x1 - bottom right)
+	CVec2 _Point11;
+	VecColor _PlayerColors[1..];
+	VecColor _ViewportFrameColor;
+	bool _Rotable;
+	// rotated background texture
+	STexture *_RotableBackgroundTexture;
+	STexture *_RotableForegroundTexture;
+	// rotated background real size (can differ from texture size)
+	CVec2 _RotableBackgroundSize;
+	// minimap size
+	CVec2 _RotableSize;
+};
+
+[typeID = 0x1508E481; no_checksum]
+class SWindowMiniMap : public SWindow
+{
+
+	#include "include_windowminimap.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SBackground;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x110BD482; no_checksum]
+class SWindowSelectionShared : public SWindowShared
+{
+};
+
+[typeID = 0x110BD480; no_checksum]
+class SWindowSelection : public SWindow
+{
+	SBackground *_SelectorTexture;
+
+	#include "include_windowselection.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x171713C0; no_checksum]
+class SWindowRoundProgressBarShared : public SWindowShared
+{
+	STexture *_Texture;
+	Color _Color;
+};
+
+[typeID = 0x171713C1; no_checksum]
+class SWindowRoundProgressBar : public SWindow
+{
+
+	#include "include_windowroundprogressbar.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x17176480; no_checksum]
+class SWindow3DControlShared : public SWindowShared
+{
+	struct SObjectParams
+	{
+		CVec2 _Pos;
+		CVec2 _Size;
+	};
+	SObjectParams _Places[];
+};
+
+[typeID = 0x17176400; no_checksum]
+class SWindow3DControl : public SWindow
+{
+
+	#include "include_window3dcontrol.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1717A440; no_checksum]
+class SWindowFrameSequenceShared : public SWindowShared
+{
+	// frames sequence texture
+	STexture *_Texture;
+	// one picture size
+	CVec2 _FrameSize;
+	// number of picture in X direction
+	int _FrameCountX;
+	// number of picture in Y direction
+	int _FrameCountY;
+	// (msec) one frame duration
+	int _Time;
+	// frames in sequence
+	int _FrameCount;
+	// start with random frame?
+	bool _RandomStartFrame;
+	// random time to add
+	int _RandomAddTime;
+};
+
+[typeID = 0x1717A441; no_checksum]
+class SWindowFrameSequence : public SWindow
+{
+
+	#include "include_windowframesequence.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SComplexSoundDesc;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// vector parameter
+[typeRename = "CParam{CDBPtr{SComplexSoundDesc} }"]
+[noHeader] struct SUIParam_SoundRef
+{
+	SComplexSoundDesc *_First;
+	bool _Second;
+};
+
+[typeID = 0x11075C03; no_checksum]
+class SUISPlaySound : public SUIStateBase
+{
+	SUIParam_SoundRef _pSoundToPlay;
+
+	#include "include_uisplaysound.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x171B1C40; no_checksum]
+class SUISB2MoveShared : public SUIStateBaseShared
+{
+	SUIParam_Vec2 _vOffset;
+	SUIParam_Vec2 _vAccel;
+	SUIParam_float _fMoveTime;
+	SUIParam_Vec2 _vOffset2;
+	SUIParam_Vec2 _vAccel2;
+	SUIParam_float _fMoveTime2;
+};
+
+[typeID = 0x171B1C41; no_checksum]
+class SUISB2Move : public SUIStateBase
+{
+	CVec2 _Offset;
+	CVec2 _AccelCoeff;
+	float _MoveTime;
+	CVec2 _OffsetBounce;
+	CVec2 _AccelCoeffBounce;
+	float _MoveTimeBounce;
+	string _ElementToMove;
+	bool _Border;
+	float _MaxMoveTime;
+
+	#include "include_uisb2move.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x191B53C0; no_checksum]
+class SWindowPotentialLinesShared : public SWindowShared
+{
+	Color _Colour;
+};
+
+[typeID = 0x191B53C1; no_checksum]
+class SWindowPotentialLines : public SWindow
+{
+
+	#include "include_windowpotentiallines.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x171C1B81; no_checksum]
+class SBackgroundFrameSequence : public SBackground
+{
+	// frames sequence
+	STexture *_SequenceTexture;
+	// one picture size
+	CVec2 _FrameSize;
+	// number of frames in X
+	int _FrameCountX;
+	// number of frames in Y
+	int _FrameCountY;
+	// (msec) one frame time
+	int _Time;
+	// number of frames in sequence
+	int _FrameCount;
+	// start from random frame?
+	bool _RandomStartFrame;
+	// (msec) random time to add
+	int _RandomAddTime;
+
+	#include "include_backgroundframesequence.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

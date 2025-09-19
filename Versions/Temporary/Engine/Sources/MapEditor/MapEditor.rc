@@ -1,0 +1,1293 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "toolkit\secres.h"
+#include "ResourceDefines.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_EDITORTYPE          ICON                    "..\\MapEditor\\res\\editor.ico"
+IDR_MAINFRAME           ICON                    "..\\MapEditor\\res\\main_frame.ico"
+#endif    // Neutral (Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SCRIPT_EDITOR DIALOGEX 0, 0, 434, 346
+STYLE DS_LOCALEDIT | DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Script Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,319,325,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,377,325,50,14
+    EDITTEXT        IDC_ERRLOG,7,259,420,60,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    CONTROL         "",IDC_EDIT_TEXT,"Scintilla",WS_CLIPSIBLINGS | 
+                    WS_CLIPCHILDREN | WS_TABSTOP,7,7,420,246
+END
+
+IDD_PC_DB_LINK DIALOGEX 0, 0, 512, 379
+STYLE DS_SETFONT | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Game Data Base Link"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,399,358,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,455,358,50,14
+    LTEXT           "",IDC_PC_DBL_TREE_STATUSBAR,257,318,248,11,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_PC_DBL_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_FULLROWSELECT | 
+                    WS_TABSTOP,257,16,248,301,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_PC_DBL_TAB_PLACEHOLDER,"Static",SS_ETCHEDFRAME | 
+                    NOT WS_VISIBLE,7,16,248,313
+    LTEXT           "",IDC_PC_DBL_PREV_SEL_LABEL_RIGHT,72,346,433,8,NOT 
+                    WS_GROUP
+    LTEXT           "Previous Selection:",IDC_PC_DBL_PREV_SEL_LABEL_LEFT,7,
+                    346,62,8
+    LTEXT           "",IDC_PC_DBL_CUR_SEL_LABEL_RIGHT,72,333,433,8,NOT 
+                    WS_GROUP
+    LTEXT           "Current Selection:",IDC_PC_DBL_CUR_SEL_LABEL_LEFT,7,333,
+                    62,8
+    PUSHBUTTON      "Set Empty",IDC_PC_DBL_SET_EMPTY_BUTTON,7,358,50,14
+    LTEXT           "Objects:",IDC_PC_DBL_TAB_LABEL,7,7,247,8
+    LTEXT           "Properties:",IDC_PC_DBL_TREE_LABEL,257,7,248,8
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 231, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDCANCEL,89,63,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_ABOUT_ICON,7,8,21,20
+    LTEXT           "Version",IDC_ABOUT_VERSION_LABEL_LEFT,42,20,25,8,
+                    SS_NOPREFIX
+    LTEXT           "",IDC_ABOUT_VERSION_LABEL_RIGHT,72,20,152,8
+    LTEXT           "Copyright © 2003 Nival Interactive. All rights reserved.",
+                    IDC_ABOUT_COPYRIGHT_LABEL,42,32,182,25
+    LTEXT           "",IDC_ABOUT_PROGRAM_TITLE_LABEL,42,7,182,8,SS_NOPREFIX
+END
+
+IDD_PC DIALOGEX 0, 0, 209, 189
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",IDC_PC_STATUSBAR,0,176,209,11,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "",IDOK,0,0,6,6,NOT WS_VISIBLE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    CONTROL         "Tree1",IDC_PC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_FULLROWSELECT | 
+                    WS_TABSTOP,0,0,209,175,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "",IDCANCEL,5,0,6,6,NOT WS_VISIBLE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+END
+
+IDD_CHOOSE_TABLES DIALOGEX 0, 0, 238, 302
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Game Database Tables"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,124,281,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,281,50,14
+    LISTBOX         IDC_CT_TABLES_LIST,7,7,224,269,LBS_SORT | 
+                    LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | 
+                    LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | WS_VSCROLL | 
+                    WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_MENU_DROP_DOWN_LIST DIALOGEX 0, 0, 102, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,0,0,6,6,NOT WS_VISIBLE | NOT WS_TABSTOP
+    PUSHBUTTON      "",IDCANCEL,5,0,6,6,NOT WS_VISIBLE | NOT WS_TABSTOP
+    LISTBOX         IDC_MDDL_OPERATIONS_LIST,1,1,99,82,LBS_NOINTEGRALHEIGHT | 
+                    NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_CLIENTEDGE
+END
+
+IDD_TEXT_EDITOR DIALOGEX 0, 0, 434, 346
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Text Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TE_TEXT_PLACEHOLDER,"Static",SS_ETCHEDFRAME | NOT 
+                    WS_VISIBLE,7,7,420,296
+    CONTROL         "",IDC_TE_STATUSBAR,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_SUNKEN,7,308,420,10
+    DEFPUSHBUTTON   "OK",IDOK,319,325,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,377,325,50,14
+END
+
+IDD_PC_DB_LINK_EX DIALOGEX 0, 0, 512, 379
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,399,358,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,455,358,50,14
+    LTEXT           "",IDC_PC_DBL_TREE_STATUSBAR,257,160,248,11,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_PC_DBL_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_FULLROWSELECT | 
+                    WS_TABSTOP,257,16,248,142,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_PC_DBL_TAB_PLACEHOLDER,"Static",SS_ETCHEDFRAME | 
+                    NOT WS_VISIBLE,7,16,248,313
+    LTEXT           "",IDC_PC_DBL_PREV_SEL_LABEL_RIGHT,72,346,433,8,NOT 
+                    WS_GROUP
+    LTEXT           "Previous Selection:",IDC_PC_DBL_PREV_SEL_LABEL_LEFT,7,
+                    346,62,8
+    LTEXT           "",IDC_PC_DBL_CUR_SEL_LABEL_RIGHT,72,333,433,8,NOT 
+                    WS_GROUP
+    LTEXT           "Current Selection:",IDC_PC_DBL_CUR_SEL_LABEL_LEFT,7,333,
+                    62,8
+    PUSHBUTTON      "Set Empty",IDC_PC_DBL_SET_EMPTY_BUTTON,7,358,50,14
+    LTEXT           "Objects:",IDC_PC_DBL_TAB_LABEL,7,7,247,8
+    LTEXT           "Properties:",IDC_PC_DBL_TREE_LABEL,257,7,248,8
+    CONTROL         "",IDC_PC_DBL_EDITOR_PLACEHOLDER,"Static",SS_ETCHEDFRAME | 
+                    NOT WS_VISIBLE,258,173,247,144
+    LTEXT           "",IDC_PC_DBL_EDITOR_STATUSBAR,257,318,248,11,NOT 
+                    WS_GROUP,WS_EX_CLIENTEDGE
+END
+
+IDD_BIT_FIELD DIALOGEX 0, 0, 238, 302
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "name"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,124,281,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,181,281,50,14
+    LISTBOX         IDC_CT_FIELDS,7,7,224,269,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_SEARCH_OBJECT DIALOGEX 0, 0, 253, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Find Object"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_SO_TEXT_EDIT,31,7,215,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,72,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,26,50,14
+    LTEXT           "Name:",IDC_SO_TEXT_LABEL,7,8,24,10
+END
+
+IDD_PC_BD DIALOGEX 0, 0, 310, 230
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Create Game Data Base Object"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_PC_BD_NAME_EDIT,32,7,271,13,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PC_BD_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_FULLROWSELECT | 
+                    WS_TABSTOP,7,33,296,156,WS_EX_CLIENTEDGE
+    DEFPUSHBUTTON   "OK",IDOK,197,209,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,209,50,14
+    LTEXT           "Name:",IDC_PC_BD_NAME_LABEL,7,9,23,8
+    LTEXT           "Properties:",IDC_PC_BD_TREE_LABEL,7,24,296,8
+    LTEXT           "",IDC_PC_BD_TREE_STATUSBAR,7,192,296,11,NOT WS_GROUP,
+                    WS_EX_CLIENTEDGE
+    CONTROL         "Export object after creation",
+                    IDC_PC_BD_NEED_EXPORT_CHEKBOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,212,100,10
+END
+
+IDD_REF_LIST DIALOGEX 0, 0, 254, 239
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_WINDOWEDGE
+CAPTION "References"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Empty current",IDC_REF_LIST_EMPTY_CURRENT,29,217,61,14
+    DEFPUSHBUTTON   "OK",IDOK,167,217,56,14
+    EDITTEXT        IDC_REF_LIST_FIELDS,6,111,239,100,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | WS_VSCROLL,WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_REF_LIST_OBJECTS,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_TABSTOP,6,8,239,
+                    96,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "Empty all",IDC_REF_LIST_EMPTY_ALL,98,217,61,14
+END
+
+IDD_FINDTEXT DIALOGEX 0, 0, 229, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FINDTEXT,50,7,108,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "Find Next",ID_FINDNEXT,172,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,172,24,50,14
+    LTEXT           "Find what:",IDC_STATIC,7,7,35,8
+    CONTROL         "Match whole word only",IDC_MATCHWHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,25,89,10
+    CONTROL         "Match case",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,38,52,10
+END
+
+IDD_REPLACETEXT DIALOGEX 0, 0, 293, 76
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FINDTEXT,61,7,161,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REPLACETEXT,61,23,161,12,ES_AUTOHSCROLL
+    CONTROL         "Match whole word only",IDC_MATCHWHOLEWORD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,43,89,10
+    CONTROL         "Match case",IDC_MATCHCASE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,56,52,10
+    DEFPUSHBUTTON   "Find Next",ID_FINDNEXT,233,7,53,14
+    PUSHBUTTON      "Replace",ID_REPLACE,233,23,53,14
+    PUSHBUTTON      "Replace All",ID_REPLACEALL,233,39,53,14
+    PUSHBUTTON      "Close",IDCANCEL,233,55,53,14
+    LTEXT           "Find what:",IDC_STATIC,7,9,35,8
+    LTEXT           "Replace with:",IDC_STATIC,7,24,44,8
+END
+
+IDD_NEW_OBJECT DIALOGEX 0, 0, 310, 65
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Create Game Data Base Object"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_NO_NAME_EDIT,33,25,226,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,197,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,44,50,14
+    LTEXT           "Name:",IDC_NO_NAME_LABEL,7,27,23,8
+    CONTROL         "Export object after creation",
+                    IDC_NO_NEED_EXPORT_CHEKBOX,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,46,187,10
+    LTEXT           "Type:",IDC_NO_TYPE_LABEL,7,9,23,8
+    COMBOBOX        IDC_NO_TYPE_COMBO,33,7,270,62,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Add Type",IDC_NO_ADD_TYPE_CHECKBOX,"Button",
+                    BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,260,25,43,13
+END
+
+IDD_REF_LIST_WAIT DIALOGEX 0, 0, 158, 40
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | 
+    WS_CLIPCHILDREN | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Requesting info from XDBWatcher"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Cancel",IDOK,50,21,56,14
+    LTEXT           "Waiting for XDBWatcher to finish file scan..",
+                    IDC_STATIC,10,8,141,12
+END
+
+IDD_PROGRESS DIALOGEX 0, 0, 254, 204
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "name"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    PUSHBUTTON      "OK",IDOK,72,183,50,14,WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,128,183,50,14
+    CONTROL         "",IDC_PROGRESS_LINE,"msctls_progress32",WS_BORDER,7,163,
+                    239,14
+    LISTBOX         IDC_PROGRESS_LOG,7,7,239,148,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_EXTENDEDSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+END
+
+IDD_CREATE_MOD DIALOGEX 0, 0, 284, 112
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Create MOD"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    EDITTEXT        IDC_CM_FOLDER_EDIT,32,7,245,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CM_NAME_EDIT,32,23,245,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CM_DESC_EDIT,7,47,270,39,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,171,91,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,91,50,14
+    LTEXT           "Folder:",IDC_CM_FOLDER_LABEL,7,9,23,8
+    LTEXT           "Name:",IDC_CM_NAME_LABEL,7,24,23,8
+    LTEXT           "Description:",IDC_CM_DESC_LABEL,7,38,270,8
+END
+
+IDD_OPEN_MOD DIALOGEX 0, 0, 284, 98
+STYLE DS_SETFONT | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Open MOD"
+FONT 8, "MS Sans Serif", 400, 0, 0xCC
+BEGIN
+    COMBOBOX        IDC_OM_NAME_COMBO,32,7,245,64,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_OM_DESC_EDIT,7,32,270,39,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_WANTRETURN
+    DEFPUSHBUTTON   "OK",IDOK,171,77,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,227,77,50,14
+    LTEXT           "Name:",IDC_OM_NAME_LABEL,7,9,23,8
+    LTEXT           "Description:",IDC_OM_DESC_LABEL,7,23,270,8
+END
+
+IDD_PROGRESS_SIMPLE DIALOG  0, 0, 296, 47
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | 
+    WS_CAPTION
+CAPTION "Progress"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "",IDOK,0,0,6,6,NOT WS_VISIBLE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    PUSHBUTTON      "",IDCANCEL,7,0,6,6,NOT WS_VISIBLE | WS_DISABLED | NOT 
+                    WS_TABSTOP
+    CONTROL         "",IDC_PROGRESS_LABEL,"Static",SS_LEFTNOWORDWRAP,8,8,280,
+                    8
+    CONTROL         "Progress1",IDC_PROGRESS_BAR,"msctls_progress32",
+                    WS_BORDER,8,21,280,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_SCRIPT_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 427
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 339
+    END
+
+    IDD_PC_DB_LINK, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 505
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 372
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 224
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_PC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 182
+    END
+
+    IDD_CHOOSE_TABLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_MENU_DROP_DOWN_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_TEXT_EDITOR, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 427
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 339
+    END
+
+    IDD_PC_DB_LINK_EX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 505
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 372
+    END
+
+    IDD_BIT_FIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 295
+    END
+
+    IDD_SEARCH_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_PC_BD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 223
+    END
+
+    IDD_REF_LIST, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 245
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 231
+    END
+
+    IDD_FINDTEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_REPLACETEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_NEW_OBJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_REF_LIST_WAIT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 156
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 38
+    END
+
+    IDD_PROGRESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 197
+    END
+
+    IDD_CREATE_MOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 105
+    END
+
+    IDD_OPEN_MOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 91
+    END
+
+    IDD_PROGRESS_SIMPLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDT_MAIN                BITMAP                  "..\\MapEditor\\res\\toolbar_main.bmp"
+IDB_EDITOR_STARTUP      BITMAP                  "..\\MapEditor\\res\\startup.bmp"
+IDB_PC_TYPES_IMAGE_LIST BITMAP                  "..\\MapEditor\\res\\pc_types.bmp"
+IDB_PC_HEADER_IMAGE_LIST BITMAP                  "..\\MapEditor\\res\\pc_header.bmp"
+IDT_PROPERTY_CONTROL    BITMAP                  "..\\MapEditor\\res\\toolbar_pc.bmp"
+IDT_VIEW                BITMAP                  "..\\MapEditor\\res\\toolbar_view.bmp"
+IDT_SELECTION           BITMAP                  "..\\MapEditor\\res\\toolbar_selection.bmp"
+IDT_OBJECT              BITMAP                  "..\\MapEditor\\res\\toolbar_object.bmp"
+IDB_TABGDBB_TREE_TYPES_IMAGE_LIST BITMAP                  "..\\MapEditor\\res\\tree_types.bmp"
+IDT_CONTROLLER_CONTAINER BITMAP                  "..\\MapEditor\\res\\toolbar_uo.bmp"
+IDT_TEXT_EDITOR         BITMAP                  "..\\MapEditor\\res\\toolbar_te.bmp"
+IDB_TABGDBB_TREE_HEADER_IMAGE_LIST BITMAP                  "..\\MapEditor\\res\\tree_header.bmp"
+IDB_DEFAULT_SMALL_OBJECT_IMAGE BITMAP                  "..\\mapeditor\\res\\small_object.bmp"
+IDB_DEFAULT_NORMAL_OBJECT_IMAGE BITMAP                  "..\\mapeditor\\res\\normal_object.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDT_MAIN TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_MAIN_NEW
+    BUTTON      ID_MAIN_OPEN
+    BUTTON      ID_MAIN_OPEN_RESOURCE
+    BUTTON      ID_MAIN_SAVE
+    BUTTON      ID_MAIN_SELECT
+END
+
+IDT_PROPERTY_CONTROL TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_PC_EXPAND
+    BUTTON      ID_PC_COLLAPSE
+    BUTTON      ID_PC_EXPAND_ALL
+    BUTTON      ID_PC_COLLAPSE_ALL
+    BUTTON      ID_PC_OPTIMAL_WIDTH
+    BUTTON      ID_PC_REFRESH
+    BUTTON      ID_PC_ADD_NODE
+    BUTTON      ID_PC_DELETE_ALL_NODES
+    BUTTON      ID_PC_INSERT_NODE
+    BUTTON      ID_PC_DELETE_NODE
+    BUTTON      ID_PC_SHOW_HIDDEN
+END
+
+IDT_VIEW TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_VIEW_DW_GDB_BROWSER_FIRST
+    BUTTON      ID_VIEW_DW_PROPERTY_BROWSER
+    BUTTON      ID_VIEW_DW_LOG
+END
+
+IDT_CONTROLLER_CONTAINER TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_CC_UNDO
+    BUTTON      ID_CC_REDO
+    BUTTON      ID_CC_UNDO_ARROW
+    BUTTON      ID_CC_REDO_ARROW
+END
+
+IDT_SELECTION TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_SELECTION_CUT
+    BUTTON      ID_SELECTION_COPY
+    BUTTON      ID_SELECTION_PASTE
+    BUTTON      ID_SELECTION_CLEAR
+    BUTTON      ID_SELECTION_RENAME
+    BUTTON      ID_SELECTION_FIND
+    SEPARATOR
+    BUTTON      ID_SELECTION_PROPERTIES
+END
+
+IDT_OBJECT TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_OBJECT_LOAD
+    BUTTON      ID_MAIN_OBJECT_LOCATE
+    BUTTON      ID_OBJECT_REF_LOOKUP
+    BUTTON      ID_OBJECT_NEW_FOLDER
+    BUTTON      ID_OBJECT_NEW
+    BUTTON      ID_OBJECT_CHECK
+    BUTTON      ID_OBJECT_EXPORT
+    BUTTON      ID_OBJECT_EXPORT_FORCE
+    BUTTON      ID_OBJECT_EXPORT_NO_REF
+    BUTTON      ID_OBJECT_EXPORT_NO_REF_FORCE
+    BUTTON      ID_OBJECT_COLOR
+END
+
+IDT_TEXT_EDITOR TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_TE_SAVE
+    BUTTON      ID_TE_CLOSE
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""toolkit\\secres.h""\r\n"
+    "#include ""ResourceDefines.h""\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "//\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""\r\n"
+    "#endif\r\n"
+    "//\r\n"
+    "//#include ""toolkit\\secres.rc""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_MAIN_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "DW_GDB_BROWSER"
+    BEGIN
+        MENUITEM "Select &Tables",              ID_MAIN_SELECT, GRAYED
+        MENUITEM "&Refresh Tables",             ID_MAIN_RELOAD, GRAYED
+        MENUITEM "Save A&ll Tables",            ID_MAIN_SAVE, GRAYED
+    END
+    POPUP "TREE_GDB_BROWSER"
+    BEGIN
+        MENUITEM "GET_LABEL",                   ID_OBJECT_LOAD, GRAYED
+        MENUITEM "List &References...",         ID_OBJECT_REF_LOOKUP, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "New &Folder",                 ID_OBJECT_NEW_FOLDER, GRAYED
+        MENUITEM "&New Object",                 ID_OBJECT_NEW, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "New Root F&older",            ID_OBJECT_NEW_FOLDER_AT_ROOT
+        , GRAYED
+        MENUITEM "Ne&w Root Object",            ID_OBJECT_NEW_AT_ROOT
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t",                        ID_SELECTION_CUT, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM "&Delete",                     ID_SELECTION_CLEAR, GRAYED
+        MENUITEM "Rena&me",                     ID_SELECTION_RENAME, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All",                 ID_SELECTION_SELECT_ALL
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Export",                     ID_OBJECT_EXPORT_NO_REF
+        , GRAYED
+        MENUITEM "Force E&xport",               ID_OBJECT_EXPORT_NO_REF_FORCE
+        , GRAYED
+        POPUP "Hierarchical Export"
+        BEGIN
+            MENUITEM "C&heck",                      ID_OBJECT_CHECK, GRAYED
+            MENUITEM "&Export",                     ID_OBJECT_EXPORT, GRAYED
+            MENUITEM "Force E&xport",               ID_OBJECT_EXPORT_FORCE
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...",                    ID_SELECTION_FIND, GRAYED
+    END
+END
+
+IDM_PC_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "NODE"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+    POPUP "MULTI_NODE"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand",                     ID_PC_EXPAND, GRAYED
+        MENUITEM "&Collapse",                   ID_PC_COLLAPSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+    POPUP "ARRAY"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand",                     ID_PC_EXPAND, GRAYED
+        MENUITEM "&Collapse",                   ID_PC_COLLAPSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Add",                        ID_PC_ADD_NODE, GRAYED
+        MENUITEM "De&lete All",                 ID_PC_DELETE_ALL_NODES
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+    POPUP "ARRAY_NODE"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert",                     ID_PC_INSERT_NODE, GRAYED
+        MENUITEM "&Delete",                     ID_PC_DELETE_NODE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+    POPUP "ARRAY_MULTI_NODE"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand",                     ID_PC_EXPAND, GRAYED
+        MENUITEM "&Collapse",                   ID_PC_COLLAPSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert",                     ID_PC_INSERT_NODE, GRAYED
+        MENUITEM "&Delete",                     ID_PC_DELETE_NODE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+    POPUP "ARRAY_ARRAY"
+    BEGIN
+        MENUITEM "Re&fesh",                     ID_PC_REFRESH, GRAYED
+        MENUITEM "&Copy",                       ID_SELECTION_COPY, GRAYED
+        MENUITEM "&Paste",                      ID_SELECTION_PASTE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Expand",                     ID_PC_EXPAND, GRAYED
+        MENUITEM "&Collapse",                   ID_PC_COLLAPSE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Add",                        ID_PC_ADD_NODE, GRAYED
+        MENUITEM "De&lete All",                 ID_PC_DELETE_ALL_NODES
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Insert",                     ID_PC_INSERT_NODE, GRAYED
+        MENUITEM "&Delete",                     ID_PC_DELETE_NODE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Undo",                       ID_CC_UNDO, GRAYED
+        MENUITEM "&Redo",                       ID_CC_REDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Show Hidden",                ID_PC_SHOW_HIDDEN, GRAYED
+    END
+END
+
+IDM_TEXT_EDITOR MENU 
+BEGIN
+    POPUP "Text"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",               ID_TE_SAVE, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+F4",               ID_TE_CLOSE, GRAYED
+    END
+END
+
+IDM_LOG_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "CONTEXT_MENU"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               1081, GRAYED
+        MENUITEM "C&lear All\tDel",             1085, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         1086, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Messages",                    ID_LOG_SHOW_MESSAGES, GRAYED
+        MENUITEM "Warnings",                    ID_LOG_SHOW_WARNINGS, GRAYED
+        MENUITEM "Errors",                      ID_LOG_SHOW_ERRORS, GRAYED
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_DRAG_AND_DROP_MOVE  CURSOR                  "..\\MapEditor\\res\\DragAndDropMove.cur"
+IDC_DRAG_AND_DROP_COPY  CURSOR                  "..\\MapEditor\\res\\DragAndDropCopy.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDA_MODAL ACCELERATORS 
+BEGIN
+    "Y",            ID_CC_REDO,             VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_CC_UNDO,             VIRTKEY, ALT, NOINVERT
+    "Z",            ID_CC_UNDO,             VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_MAIN_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_MAIN_SELECT,         VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_MINUS,   ID_PC_COLLAPSE_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_PC_COLLAPSE_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_PC_EXPAND_ALL,       VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_PLUS,    ID_PC_EXPAND_ALL,       VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_SELECTION_CLEAR,     VIRTKEY, NOINVERT
+    VK_DELETE,      ID_SELECTION_CLEAR,     VIRTKEY, NOINVERT
+    "C",            ID_SELECTION_COPY,      VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_SELECTION_COPY,      VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_SELECTION_CUT,       VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_SELECTION_FIND,      VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_SELECTION_PASTE,     VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_SELECTION_PASTE,     VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_SELECTION_SELECT_ALL, VIRTKEY, CONTROL, NOINVERT
+END
+
+IDA_MAIN ACCELERATORS 
+BEGIN
+    "Y",            ID_CC_REDO,             VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_CC_UNDO,             VIRTKEY, ALT, NOINVERT
+    "Z",            ID_CC_UNDO,             VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_MAIN_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_MAIN_NEW_RESOURCE,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "O",            ID_MAIN_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_MAIN_OPEN_RESOURCE,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "S",            ID_MAIN_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "T",            ID_MAIN_SELECT,         VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_MINUS,   ID_PC_COLLAPSE_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_SUBTRACT,    ID_PC_COLLAPSE_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_ADD,         ID_PC_EXPAND_ALL,       VIRTKEY, CONTROL, NOINVERT
+    VK_OEM_PLUS,    ID_PC_EXPAND_ALL,       VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_SELECTION_CLEAR,     VIRTKEY, NOINVERT
+    "C",            ID_SELECTION_COPY,      VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_SELECTION_COPY,      VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_SELECTION_CUT,       VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_SELECTION_FIND,      VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_SELECTION_PASTE,     VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_SELECTION_PASTE,     VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_SELECTION_SELECT_ALL, VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_VIEW_DW_GDB_BROWSER_FIRST, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "L",            ID_VIEW_DW_LOG,         VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_RETURN,      ID_VIEW_DW_PROPERTY_BROWSER, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_EDITORTYPE          "IDR_EDITORTYPE"
+    IDR_MAINFRAME           "IDR_MAINFRAME"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TOOLBAR_CUSTOMIZE_COMMAND "Command"
+    IDS_TOOLBAR_MENU        "Menu"
+    IDS_TOOLBAR_MAIN        "File Toolbar"
+    IDS_TOOLBAR_SELECTION   "Edit Toolbar"
+    IDS_TOOLBAR_CONTROLLER_CONTAINER "Undo / Redo Operation Toolbar"
+    IDS_TOOLBAR_OBJECT      "Object Toolbar"
+    IDS_TOOLBAR_PROPERTY_CONTROL "Property Control Toolbar"
+    IDS_TOOLBAR_VIEW        "View Toolbar"
+    IDS_DW_GDB_BROWSE_NAME  "Game Database Window %d"
+    IDS_DW_PROPERTY_BROWSE_NAME "Selection Properties"
+    IDS_DW_LOG_NAME         "Log Window"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PROGRAM_VERSION     "1.0"
+    IDS_HELP_FILE_NAME      "MapEditor.chm"
+    IDS_NO_HELP_FILE_MESSAGE "Can't find <%s> help file."
+    IDS_BROWSE_FOR_FOLDER_DIALOG_TITLE "Browse for folder: %s"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROWSE_FOR_FILE_DIALOG_TITLE "Browse for file: %s"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Common Editor"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_PATH       "Nival Interactive"
+    IDS_REGISTRY_KEY        "Params"
+    IDS_REGISTRY_KEY_MAXIMIZE "Maximize"
+    IDS_REGISTRY_KEY_RECT   "Rect"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_KEY_VERSION "Version"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REGISTRY_KEY_RECENT_LIST "List"
+    IDS_REGISTRY_KEY_TABLE  "Table"
+    IDS_REGISTRY_CURRENT_TABLE "CurrentTable"
+    IDS_REGISTRY_KEY_TOOLBAR "Toolbars"
+    IDS_REGISTRY_KEY_WINDOWBAR "Windows"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TREE_GDB_BROWSE_NEW_FOLDER "New Folder"
+    IDS_TREE_GDB_BROWSE_NEW_RESOURCE "New Object"
+    IDS_TREE_GDB_BROWSE_NEW_MAIN_OBJECT "New Map"
+    IDS_TREE_GDB_BROWSE_DELETE_OBJECTS_MESSAGE 
+                            "Are you sure you want to delete these objects?"
+    IDS_TREE_GDB_BROWSE_NO_OBJECT_FOUND_MESSAGE 
+                            "Search is complete.\r\nThere are no %s objects to display."
+    IDS_TREE_GDB_BROWSE_CFM "All unreferenced objects in active table will be deleted.\r\nAre you sure you want to delete all unreferenced objects?"
+    IDS_TREE_GDB_BROWSE_CFM_OBJECT_FOUND "%d unreferenced object was deleted."
+    IDS_TREE_GDB_BROWSE_CFM_OBJECTS_FOUND 
+                            "%d unreferenced objects were deleted."
+    IDS_TREE_GDB_BROWSE_CFM_NO_OBJECT_FOUND "No unreferenced objects found."
+    IDS_TREE_GDB_BROWSE_LOAD "Edit &Selection"
+    IDS_TREE_GDB_LINK_BROWSE_SELECT "&Select"
+    IDS_TREE_GDB_BROWSE_CHECK_WARNING 
+                            "You have chosen hierarchical check. This operation can take several minutes.\r\nContinue?"
+    IDS_TREE_GDB_BROWSE_EXPORT_WARNING 
+                            "You have chosen hierarchical export. This operation can take several minutes.\r\nContinue?"
+    IDS_TREE_GDB_BROWSE_EXPORT_FORCE_WARNING 
+                            "You have chosen forced hierarchical export. This operation can take several minutes.\r\nContinue?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PC_PROPERTY_THN_0   "Property"
+    IDS_PC_PROPERTY_THN_1   "Value"
+    IDS_PC_PROPERTY_THN_2   "Description"
+    IDS_PC_DELETE_MESSAGE   "Are you sure you want to delete selected elements?"
+    IDS_PC_DELETE_ALL_MESSAGE "Are you sure you want to delete all elements?"
+    IDS_TABGDBB_PROPERTY_THN_0 "Name"
+    IDS_TABGDBB_PROPERTY_THN_1 "ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PM_CREATE_EDITOR    "Open resource %s..."
+    IDS_PM_DESTROY_EDITOR   "Close active editor..."
+    IDS_PM_RELOAD_EDITOR    "Reload active editor..."
+    IDS_PM_SAVE             "Save resources..."
+    IDS_PM_REDO             "Redo changes..."
+    IDS_PM_UNDO             "Undo changes..."
+    IDS_PM_CREATE_MOD       "Create MOD: %s..."
+    IDS_PM_OPEN_MOD         "Open MOD: %s..."
+    IDS_PM_CLOSE_MOD        "Close MOD: %s..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR_MAIN    "Toggle ( show or hide ) the Main toolbar\nMain Toolbar"
+    ID_VIEW_TOOLBAR_CONTROLLER_CONTAINER 
+                            "Toggle ( show or hide ) the Undo / Redo toolbar\nUndo / Redo Toolbar"
+    ID_VIEW_TOOLBAR_SELECTION 
+                            "Toggle ( show or hide ) the Edit toolbar\nEdit Toolbar"
+    ID_VIEW_TOOLBAR_OBJECT  "nToggle ( show or hide ) the Object toolbar\nObject Toolbar"
+    ID_VIEW_TOOLBAR_PROPERTY_CONTROL 
+                            "Toggle ( show or hide ) the Property Control toolbar\nPoperty Control Toolbar"
+    ID_VIEW_TOOLBAR_VIEW    "Toggle ( show or hide ) the View toolbar\nView  Toolbar"
+    ID_VIEW_DW_PROPERTY_BROWSER 
+                            "Toggle ( show or hide ) the Selection Property window\nSelection Property Window"
+    ID_VIEW_DW_LOG          "Toggle ( show or hide ) the Log window\nLog Window"
+    ID_VIEW_DW_GDB_BROWSER_FIRST 
+                            "Toggle ( show or hide ) the Game Database window\nGame Database Window"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_CUSTOMIZE      "Customize toolbars\nCustomize"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_CONTENTS        "Help Topics\nContents"
+    ID_HELP_ABOUT           "Display program information, version number and copyright\nAbout"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_EXIT             "Quit the Map Editor\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PC_BD_DIALOG_TITLE  "Create New <%s> Object"
+    IDS_PC_OPEN_DIALOG_EMPTY_TITLE "Open Object"
+    IDS_PC_OPEN_DIALOG_TITLE "Open <%s> Object"
+    IDS_PC_LINK_DIALOG_EMPTY_TITLE "Browse Object Link"
+    IDS_PC_LINK_DIALOG_TITLE "Browse <%s> Object Link"
+    IDS_RECENT_EMPTY        "No Recent List Entries"
+    IDS_DW_GDB_BROWSE_MENU_LABEL "Game Database Window &%d\tCtrl+Shift+B"
+    IDS_DW_GDB_BROWSE_MENU_LABEL_SHORT "Game Database Window &%d"
+    IDS_DW_GDB_BROWSE_EMPTY_MENU_LABEL "No Game Database Windows"
+    IDS_PC_LUA_EDITOR_TITLE "Script Editor"
+    IDS_PC_TXT_EDITOR_TITLE "Text Editor"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REF_LIST_NO_ITEMS   "No references were found"
+    IDS_REF_LIST_SET_EMPTY_FAILURE 
+                            "Nullification of some references have failed."
+    IDS_REF_LIST_EMPTY_ALL_LONG_TIME_WARNING 
+                            "This is a very lengthy operation. The application may not respond for a long time.\nDo you really want to continue?"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN_NEW             "Create new map\nNew"
+    ID_MAIN_OPEN            "Open existing map\nOpen"
+    ID_MAIN_CLOSE           "Close active editor\nClose"
+    ID_MAIN_NEW_RESOURCE    "Create new game resource\nNew resource"
+    ID_MAIN_OPEN_RESOURCE   "Open existing game resource\nOpen resource"
+    ID_MAIN_SAVE            "Save all unsaved data\nSave All"
+    ID_MAIN_RELOAD          "Refresh active tables\nRefresh Tables"
+    ID_MAIN_SELECT          "Select active tables\nSelect Tables"
+    ID_MAIN_RECENT_0        "Open this map\nOpen"
+    ID_MAIN_RECENT_1        "Open this map\nOpen"
+    ID_MAIN_RECENT_2        "Open this map\nOpen"
+    ID_MAIN_RECENT_3        "Open this map\nOpen"
+    ID_MAIN_RECENT_4        "Open this map\nOpen"
+    ID_MAIN_RECENT_5        "Open this map\nOpen"
+    ID_MAIN_RECENT_6        "Open this map\nOpen"
+    ID_MAIN_RECENT_7        "Open this map\nOpen"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN_RECENT_8        "Open this map\nOpen"
+    ID_MAIN_RECENT_9        "Open this map\nOpen"
+    ID_MAIN_RECENT_RESOURCE_0 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_1 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_2 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_3 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_4 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_5 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_6 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_7 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_8 "Open this game resource\nOpen resource"
+    ID_MAIN_RECENT_RESOURCE_9 "Open this game resource\nOpen resource"
+    ID_MAIN_GETLATEST       "Get latest database\nGet Latest"
+    ID_MAIN_CHECKOUT        "Check out database\nCheck Out"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MAIN_CHECKIN         "Check it database\nCheck In"
+    ID_MAIN_OBJECT_LOCATE   "Show resource properties\nProperties"
+    ID_SELECTION_CUT        "Cut selection and put it on the Clipboard\nCut"
+    ID_SELECTION_COPY       "Copy the selection and put it on the Clipboard\nCopy"
+    ID_SELECTION_PASTE      "Insert Clipboard contents\nPaste"
+    ID_SELECTION_RENAME     "Rename the selection\nRename"
+    ID_SELECTION_CLEAR      "Erase the selection\nDelete"
+    ID_SELECTION_SELECT_ALL "Select the entire document\nSelect All"
+    ID_SELECTION_FIND       "Find the specified element\n Find"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_CC_UNDO              "Undo the last action\nUndo"
+    ID_CC_REDO              "Redo the previously undone action\nRedo"
+    ID_CC_UNDO_ARROW        "Undo the last action\nUndo"
+    ID_CC_REDO_ARROW        "Redo the previously undone action\nRedo"
+    ID_OBJECT_LOAD          "Open selected game resource\nSelect"
+    ID_OBJECT_NEW_FOLDER    "Create new folder\nNew Folder"
+    ID_OBJECT_NEW           "Create new game resource\nNew Object"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OBJECT_NEW_FOLDER_AT_ROOT "Create new root folder\nNew Root Folder"
+    ID_OBJECT_NEW_AT_ROOT   "Create new root game resource\nNew Root Object"
+    ID_OBJECT_CHECK         "Check selected game resources\nCheck"
+    ID_OBJECT_EXPORT        "Export selected game rosources\nExport"
+    ID_OBJECT_EXPORT_FORCE  "Force export selected game resources\nForce Export"
+    ID_OBJECT_EXPORT_NO_REF "Export selected game resources without export referenced resources\nExport Selection Only"
+    ID_OBJECT_EXPORT_NO_REF_FORCE 
+                            "Force export selected game resources without export referenced resources\nForce Export Selection Only"
+    ID_OBJECT_COLOR         "Change selection color\nColor"
+    ID_OBJECT_REF_LOOKUP    "Find All game resources who references on selection\nList &References"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PC_EXPAND_ALL        "Expand all nodes\nExpand All Nodes"
+    ID_PC_EXPAND            "Expand focused node\nExpand Node"
+    ID_PC_COLLAPSE          "Collapse focused node\nCollapse Node"
+    ID_PC_COLLAPSE_ALL      "Collapse all nodes\nCollapse All Nodes"
+    ID_PC_OPTIMAL_WIDTH     "Set optimal width\nSet Optimal Width"
+    ID_PC_REFRESH           "Refresh selecton from base\nRefresh"
+    ID_PC_ADD_NODE          "Add node\nAdd Node"
+    ID_PC_DELETE_ALL_NODES  "Delete all nodes\nDelete All Nodes"
+    ID_PC_INSERT_NODE       "Insert node to focused position\nInsert Node"
+    ID_PC_DELETE_NODE       "Delete focused node\nDelete Node"
+    ID_PC_SHOW_HIDDEN       "Show hidden nodes\nShow Hidden"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TE_SAVE              "Save\nSave"
+    ID_TE_CLOSE             "Close\nClose"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_LOG_SHOW_MESSAGES    "Show messages\nShow Messages"
+    ID_LOG_SHOW_WARNINGS    "Show warnings\nShow Warnings"
+    ID_LOG_SHOW_ERRORS      "Show errors\nShow Errors"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONFIRM_SAVE_MESSAGE_SHORT "Do you want save changes?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONFIRM_SAVE_MESSAGE_LONG "Do you want save changes in %s?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_BROWSE_BUTTON_TITLE "..."
+    IDS_NEW_BUTTON_TITLE    "New"
+    IDS_EDIT_BUTTON_TITLE   "Edit"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+//
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "afxres.rc"
+#endif
+//
+//#include "toolkit\secres.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

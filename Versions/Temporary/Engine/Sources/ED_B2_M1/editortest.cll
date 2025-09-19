@@ -1,0 +1,90 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SEditorTest;
+forward class SWindowBaseShared;
+forward class SWindowSimpleShared;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[numBytes = 128; editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIActions.ini"]
+[noHeader] typedef hexbinary EditorTestBitField;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1206A380]
+[noKey; noCode] class SEditorTest
+{
+	// EditorDesc\Test\test
+	[editorControl = "int_input"]
+	int _int_input;
+	// NewDesc
+	[editorControl = "int_input"]
+	[readonly] int _int_input_read_only;
+	[editorControl = "int_input"]
+	[hidden] int _int_input_hidden;
+	[editorControl = "int_slider"; stringParam = "min:0, max:100, step:1, page:10"]
+	int _int_slider;
+	[editorControl = "int_combo"; stringParam = "values:-10#-2 5 9 30; step:2"]
+	int _int_combo;
+	[editorControl = "int_color"]
+	int _int_color;
+	[editorControl = "int_color_with_alpha"]
+	int _int_color_with_alpha;
+	[editorControl = "float_input"; stringParam = "precision:3"]
+	float _float_input;
+	[editorControl = "float_slider"; stringParam = "precision:3, min:0, max:1, step:0.02, page:0.1"]
+	float _float_slider;
+	[editorControl = "float_combo"; stringParam = "values: 0.03#0.26 0.56 0.98 step: 0.03 precision:3"]
+	float _float_combo;
+	[editorControl = "bool_combo"]
+	bool _bool_combo;
+	[editorControl = "bool_checkbox"]
+	bool _bool_checkbox;
+	[editorControl = "bool_switcher"]
+	bool _bool_switcher;
+	SEditorTest *_string_ref;
+	[stringParam = "width:200"]
+	SEditorTest *_string_ref_fixed_width;
+	[stringParam = "editor:true"]
+	SEditorTest *_string_ref_editor;
+	[stringParam = "editor:true width:300"]
+	SEditorTest *_string_ref_editor_fixed_width;
+	[stringParam = "editor:true height:250"]
+	SEditorTest *_string_ref_editor_fixed_height;
+	[stringParam = "editor:true width: 250 height: 300"]
+	SEditorTest *_string_ref_editor_fixed_width_fixed_height;
+	SEditorTest *_string_multi_ref;
+	[editorControl = "string_input"]
+	string _string_input;
+	[editorControl = "string_big_input"; stringParam = "editor:lua"]
+	string _string_big_input;
+	[editorControl = "string_combo"]
+	string _string_combo;
+	[editorControl = "string_combo_ref"]
+	SEditorTest *_string_combo_ref;
+	[editorControl = "string_combo_multi_ref"]
+	SEditorTest *_string_combo_multi_ref;
+	PictureFileRef _string_file_ref;
+	[editorControl = "string_dir_ref"; intParam = 1]
+	string _string_dir_ref;
+	EditorTestBitField _bit_field;
+	[editorControl = "string_new_ref"]
+	SEditorTest *_string_new_ref;
+	[editorControl = "string_new_multi_ref"]
+	SWindowBaseShared *_string_new_multi_ref;
+	[editorControl = "string_new_ref"]
+	SWindowSimpleShared *_string_new_ref2;
+	[editorControl = "text_file"; stringParam = "TGA files (*.tga)|*.tga|All Files (*.*)|*.*||"; intParam = 3]
+	string _text_file;
+	CVec2 _vec2;
+	CVec3 _vec3;
+	CVec4 _vec4;
+	SPoint _point;
+	SRect _rect;
+	[editorControl = "int_input"]
+	int _Array[];
+	// [numBytes = 16; editorControl = "guid"]
+	GUID _GUID;
+	// LUA-script file reference
+	LUAFileRef _LUAFile;
+	// Unicode text file reference
+	TextFileRef _TextFile;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,1 @@
+call j:\soft\copydll.bat c:\home\b2 Release

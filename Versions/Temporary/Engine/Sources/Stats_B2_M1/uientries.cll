@@ -1,0 +1,45 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowScreen;
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SUIScreenEntry
+{
+	SWindowScreen *_Screen;
+	// formal screen type (for example, MainMenu)
+	string _Type;
+	TextFileRef _HelpHeaderFileRef;
+	TextFileRef _HelpDescFileRef;
+	bool _HelpNoMultiplayer;
+
+	#include "include_UIScreenEntry.h"
+};
+
+struct SUITextEntry
+{
+	TextFileRef _TextFileRef;
+	// text identifier (to use from the code)
+	string _TextID;
+
+	#include "include_UITextEntry.h"
+};
+
+struct SUITextureEntry
+{
+	string _TextID;
+	STexture *_Texture;
+};
+
+[typeID = 0x171AE380; no_checksum]
+class STextEntry
+{
+	// text identifier
+	string _Name;
+	// text itself
+	TextFileRef _TextFileRef;
+
+	#include "include_TextEntry.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
