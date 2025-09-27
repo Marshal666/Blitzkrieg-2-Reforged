@@ -1,0 +1,305 @@
+#include "../game.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+#include "../stats_b2_m1/uientries.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SPlayerRank;
+forward class SDifficultyLevel;
+forward class STexture;
+forward class SMapMusic;
+forward class SChapter;
+forward class SUnitStatsModifier;
+forward class SReinforcementTypes;
+forward class SMedal;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SRankExperience
+{
+	float _Experience;
+	SPlayerRank *_Rank;
+	// number of new commander promotions for this level
+	int _AddPromotion;
+};
+
+struct SLeaderExpLevel
+{
+	TextFileRef _RankNameFileRef;
+	int _ExpNeeded;
+	SUnitStatsModifier *_StatsBonus;
+
+	#include "include_LeaderExpLevel.h"
+};
+
+struct SMedalConditions
+{
+	// medal description
+	SMedal *_Medal;
+	float _Parameter;
+	// starting chapter to receive this medal
+	int _StartingChapter;
+};
+
+[typeID = 0x10083400]
+class SCampaign
+{
+	struct SLeader
+	{
+		// commanders full name
+		TextFileRef _NameFileRef;
+		// commanders picture
+		STexture *_Picture;
+	};
+	
+	SChapter *_Chapters[1..];
+	TextFileRef _LocalizedNameFileRef;
+	TextFileRef _LocalizedDescFileRef;
+	LUAFileRef _ScriptFileRef;
+	SUIScreenEntry _Screens[];
+	STexture *_TextureNotStarted;
+	STexture *_TextureCompleted;
+	STexture *_TextureNotStartedSelected;
+	STexture *_TextureCompletedSelected;
+	STexture *_TextureMissionCompleted;
+	STexture *_TextureMenuBackground;
+	// small icon for custom campaign menu
+	STexture *_TextureMenuIcon;
+	// chapter map medal background texture
+	STexture *_TextureChapterFinishBonus;
+	SRankExperience _RankExperiences[1..];
+	SLeaderExpLevel _LeaderRanks[4..4];
+	// commanders' info
+	SLeader _Leaders[];
+	SDifficultyLevel *_DifficultyLevels[];
+	// Campaign Intro movie
+	XMLFileRef _IntroMovie;
+	// Campaign Outro movie
+	XMLFileRef _OutroMovie;
+	// all reinforcements descriptions
+	SReinforcementTypes *_ReinforcementTypes;
+	SMapMusic *_IntermissionMusic;
+	// small texture for lists
+	STexture *_SaveLoadFlag;
+	// historical missions medals
+	SMedalConditions _MedalsForChapter[1..];
+	// number-of-kills medals ( parameter - number of killed units )
+	SMedalConditions _MedalsForKills[1..];
+	// kill/lost medal ( parameter = kill/lost )
+	SMedalConditions _MedalsForTactics[1..];
+	// economy medal ( parameter = percent of reinforcements, which was called )
+	SMedalConditions _MedalsForEconomy[1..];
+	// Medal for all reinforcements maximum level reach
+	SMedal *_MedalForMunchkinism;
+
+	#include "include_Campaign.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EReinforcementType;
+forward class SMapInfo;
+forward enum EMissionEnableType;
+forward enum EDBUnitRPGType;
+forward class SChapterBonus;
+forward class STexture;
+forward class SReinforcement;
+forward enum EChapterBonusType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SUnitClassEntry
+{
+	[hidden; noCode] EDBUnitRPGType _UnitType;
+	[hidden; noCode] EReinforcementType _Type;
+	[hidden; noCode] SMechUnitRPGStats *_Mech;
+	[hidden; noCode] SSquadRPGStats *_Squad;
+	SReinforcement *_Reinforcement;
+};
+
+struct SEnemyEntry
+{
+	SMechUnitRPGStats *_MechUnit;
+	SSquadRPGStats *_Squad;
+};
+
+enum EMissionEnableType
+{
+	MET_REGULAR,
+	MET_CHAPTER_START,
+	MET_CHAPTER_END,
+	MET_CHAPTER_START_END,
+};
+
+enum EMissionType
+{
+	EMT_FINAL,
+	EMT_AIR_COVER,
+	EMT_ART_COVER,
+	EMT_ATTACK,
+	EMT_DEFENCE,
+	EMT_CONVOY_PROTECT,
+	EMT_CONVOY_DESTROY,
+};
+
+enum EMissionWeather
+{
+	EMW_SUN,
+	EMW_RAIN,
+	EMW_SNOW,
+	EMW_SANDSTORM,
+};
+
+enum EMissionDayTime
+{
+	EMDT_DAY,
+	EMDT_DUSK,
+	EMDT_NIGHT,
+	EMDT_DAWN,
+};
+
+enum EMissionDifficulty
+{
+	EMD_EASY,
+	EMD_MEDIUM,
+	EMD_HARD,
+	EMD_VERY_HARD,
+};
+
+struct SMissionEnableInfo
+{
+	SMapInfo *_Map;
+	CVec2 _PlaceOnChapterMap;
+	// Number of missions that player have to complete to enable this mission
+	int _MissionsToEnable = 0;
+	// Mission may be enabled by chapter start (START_CHAPTER), by another missions(REGULAR), or finis chapter(FINISH_CHAPTER)
+	[hidden] EMissionEnableType _MissionEnableType = MET_REGULAR;
+	SChapterBonus *_Reward[];
+	SEnemyEntry _ExpectedEnemy[4];
+	// recommended number of reinforcement calls
+	int _RecommendedCalls;
+	// INCOMPLETE mission value (for front line calculation)
+	float _PotentialIncomplete = -10;
+	// COMPLETE mission value (for front line calculation)
+	float _PotentialComplete = 10;
+	// mission type icon for Chapter Map
+	EMissionType _Type;
+	// difficulty level icon for Chapter Map
+	EMissionDifficulty _Difficulty;
+	// daytime icon for Chapter Map
+	EMissionDayTime _Time;
+	// weather icon for Chapter Map
+	EMissionWeather _Weather;
+	// (editor only). consider this mission as complete (for front line).
+	bool _ShowPotentialComplete = false;
+	// (degree). main strike direction (for front line)
+	[hidden; noCode] float _MainStrikeAngle;
+	// main strike power (for front line)
+	[hidden; noCode] float _MainStrikePower;
+	// recommended missions order
+	int _RecommendedOrder;
+	// other end shift
+	CVec2 _EndOffset;
+};
+
+struct SScenarioUnitModifier
+{
+	EReinforcementType _Type;
+	// if -1 then don't modify quantity
+	int _Quantity;
+	SReinforcement *_Units;
+};
+
+struct SBaseReinforcements
+{
+	SReinforcement *_Reinforcements[1..];
+};
+
+enum EChapterBonusType
+{
+	CBT_REINF_DISABLE,
+	CBT_REINF_CHANGE,
+	CBT_ADD_CALLS,
+};
+
+struct SChapterGeneralInfo
+{
+	// General description
+	TextFileRef _DescFileRef;
+	// General portrait
+	STexture *_Portrait;
+	// reinforcement, this general gives bonus to
+	EReinforcementType _ReinforcementType;
+	// bonus
+	SUnitStatsModifier *_StatBonus;
+};
+
+[typeID = 0x1917A440]
+class SChapterBonus
+{
+	EChapterBonusType _BonusType;
+	bool _ApplyToEnemy = false;
+	// reinforcement to remove
+	EReinforcementType _ReinforcementType;
+	// reinforcement to add/change
+	SReinforcement *_ReinforcementSet;
+	int _NumberOfCalls = 0;
+};
+
+[typeID = 0x10083401]
+class SChapter
+{
+	[hidden; noCode] SScenarioUnitModifier _ScenarioUnitsModifiers[];
+	TextFileRef _LocalizedNameFileRef;
+	TextFileRef _LocalizedNameSaveLoadFileRef;
+	TextFileRef _LocalizedDateFileRef;
+	TextFileRef _LocalizedDescriptionFileRef;
+	SMissionEnableInfo _MissionPath[];
+	LUAFileRef _ScriptFileRef;
+	bool _UseMapReinforcements = false; // used for tutorial chapter
+	SBaseReinforcements _BasePlayerReinforcements[];
+	// don't use it, legacy
+	[hidden] SUnitClassEntry _ReinforcementModifiers[];
+	// Chapter's map
+	STexture *_MapPicture;
+	// see mask and noise for front line
+	TGADstFileRef _SeaNoiseMask;
+	// chapter map with other color for friend/foe color differencing
+	TGADstFileRef _DifferentColourMap;
+	// positive values chapter map color
+	Color _PositiveColour;
+	// negative values chapter map color
+	Color _NegativeColour;
+	// (degrees). main strike direction (for front line)
+	float _MainStrikeAngle;
+	// main strike power (for front line)
+	float _MainStrikePower;
+	// Number of reinforcement, that human player can call during scenario
+	int _ReinforcementCalls;
+	// special map to convert to chapter map
+	SMapInfo *_DetailsMap;
+	// strike direction textures for chapter map
+	STexture *_ArrowTextures[];
+	// Intro movie
+	XMLFileRef _IntroMovie;
+	// General for this chapter
+	SChapterGeneralInfo _General;
+
+	#include "include_Chapter.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x170C9480]
+class SMedal
+{
+	// medal name
+	TextFileRef _LocalizedNameFileRef;
+	// medal description
+	TextFileRef _LocalizedDescFileRef;
+	// medal icon (for UI)
+	STexture *_IconTexture;
+	// medal large picture
+	STexture *_PictureTexture;
+
+	#include "include_Medal.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="vs_showGrid" content="True">
+		<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+	</head>
+	<body>
+		<H2 align="center">Список общих тегов,<BR>
+			поддерживаемых ML-текстом<BR>
+			(interface IML)</H2>
+		<PRE><U>Форматирование:</U></PRE>
+		<PRE>&lt;br&gt; - перевод строки</PRE>
+		<PRE>&lt;tab&gt; - табуляция</PRE>
+		<PRE><U>Выравнивание текста:</U></PRE>
+		<PRE>&lt;left&gt; - выравнивание по левому краю</PRE>
+		<DIV align="left">
+			<PRE>&lt;right&gt; - выравнивание по правому краю</PRE>
+			<PRE>&lt;center&gt; - выравнивание по центру</PRE>
+			<PRE>&lt;nowrap&gt; - отключает автоматическое выравнивание</PRE>
+			<PRE>&lt;justify&gt; - выравнивание по обоим краям, с растяжением пробелов (может и не работать)</PRE>
+			<PRE>&lt;wrapleft&gt; - выравнивание по левому краю, с "откусыванием" пространства</PRE>
+			<PRE>&lt;wrapright&gt; - тоже, но по правому краю</PRE>
+			<PRE>&lt;top&gt; - выравнивание по верхнему краю (нужно, если в строке есть шрифты разного размера)</PRE>
+			<PRE>&lt;bottom&gt; - тоже, но по нижнему</PRE>
+			<PRE>&lt;middle&gt;&nbsp;- тоже, но по центру</PRE>
+			<PRE><U>Шрифт:</U></PRE>
+			<PRE>&lt;font ...&gt;</PRE>
+			<PRE>	size - размер шрифта (pt - в точках, px - в пикселах. Использовать только pt, тк он не зависит от разрешения!)</PRE>
+			<PRE>	face - название шрифта (из базы)	</PRE>
+			<PRE>	outlinesize - размер обводки</PRE>
+			<PRE>	outlinecolor - цвет обводки</PRE>
+			<PRE>	forcefontsize - заставляет игнорировать прибавку, создаваемую Outline-ом</PRE>
+			<PRE>Примеры: &lt;font face=Courierbold outlinesize=1 outlinecolor=0xFF222012 forcefontsize=true size=27&gt;</PRE>
+			<PRE>&lt;minfontsize&gt; - ?</PRE>
+			<PRE><U>Цвет:</U></PRE>
+			<PRE>&lt;color ...&gt; - цвет шрифта</PRE>
+			<PRE>	AARRGGBB - код цвета в шестнацетеричном формате</PRE>
+			<PRE>	Название цвета:</PRE>
+			<PRE>	white<BR>	red<BR>	green<BR>	blue<BR>	yellow<BR>	cyan<BR>	orange<BR>	pink<BR>	brown<BR>	grey<BR>	black<BR>	darkyellow<BR>	beige<BR>	lightblue</PRE>
+			<PRE>Примеры: &lt;color=FFCECFCE&gt;</PRE>
+			<PRE><U>Картинка:</U></PRE>
+			<PRE>&lt;image ...&gt; - картинка</PRE>
+			<PRE>	align - left или right (это wrap-allign)</PRE>
+			<PRE>	id - номер картинки в базе UITexture</PRE>
+			<PRE>	width - ширина (если не задана, то берётся из картинки)</PRE>
+			<PRE>	height - высота (аналогично)</PRE>
+			<PRE>	border - отступы вокруг картинки</PRE>
+			<PRE><U>Сохранение/восстановление состояния:</U></PRE>
+			<PRE>&lt;push&gt; - сохранить текущее состояние (фонт, цвет и т.д.)</PRE>
+			<PRE>&lt;pop&gt; - восстановить сохраненное состояние</PRE>
+		</DIV>
+	</body>
+</html>

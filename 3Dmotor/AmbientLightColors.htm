@@ -1,0 +1,38 @@
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+	</HEAD>
+	<BODY>
+		<P>¬се освещение домножаетс€ на 4, поэтому цвет, который не искажает текстур - 
+			64,64,64. „то означают цвета<BR>
+			<STRONG>AmbientColor</STRONG> - цвет в отсуствии освещени€. »спользуетс€ дл€ 
+			поверхностей, которые ориентированы параллельны лучам солнца<BR>
+			<STRONG>LightColor</STRONG> - цвет поверхностей, повернутых к солнцу, не 
+			наход€щиес€ в тени<BR>
+			<STRONG>IncidentShadowColor</STRONG> - цвет поверхностей, повернутых к солнцу, 
+			наход€щиес€ в тени<BR>
+			<STRONG>ShadeColor</STRONG> - цвет поверхностей, которые направлены от солнца, 
+			различи€ между поверхност€ми в тени и на свету не делаетс€<BR>
+			<STRONG>TranslucentColor</STRONG> - цвет полупрозрачности. ≈сли он не равен 0, 
+			то дл€ поверхностей, которые направлены от солнца и не наход€тс€ в тени цвет 
+			считаетс€ дл€ противоположной стороны и домножаетс€ на TranslucentColor</P>
+		<P>–асчет результирующего цвета дл€ освещенной и затененной частей<BR>
+			Lit = AmbientColor<BR>
+			Shadow = AmbientColor<BR>
+			if ( NdotL &gt; 0 )<BR>
+			{<BR>
+			&nbsp; Lit += NdotL * ( LightColor - AmbientColor )<BR>
+			&nbsp; Shadow += NdotL * ( IncidentShadowColor - AmbientColor )<BR>
+			}<BR>
+			else<BR>
+			{<BR>
+			&nbsp; if ( TranslucentColor != 0 )<BR>
+			&nbsp;&nbsp;&nbsp; Lit += (-NdotL) * ( LightColor - AmbientColor )&nbsp;* 
+			TranslucentColor<BR>
+			&nbsp; else<BR>
+			&nbsp; &nbsp; Lit += (-NdotL) * ( ShadeColor - AmbientColor )<BR>
+			&nbsp; Shadow += (-NdotL) * ( ShadeColor - AmbientColor )<BR>
+			}</P>
+	</BODY>
+</HTML>

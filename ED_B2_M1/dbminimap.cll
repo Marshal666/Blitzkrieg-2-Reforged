@@ -1,0 +1,102 @@
+#include "../game.cll"
+#include "../stats_b2_m1/season.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EImageScaleMethod;
+forward enum EMinimapLayerType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EMinimapLayerType
+{
+	LAYER_UNKNOWN,
+	LAYER_BRIDGE,
+	LAYER_BUILDING,
+	LAYER_RIVER,
+	LAYER_RAILOAD,
+	LAYER_ROAD,
+	LAYER_FLORA,
+	LAYER_GRAG,
+	LAYER_SWAMP,
+	LAYER_LAKE,
+	LAYER_OCEAN,
+	LAYER_TERRAIN,
+};
+
+enum EImageScaleMethod
+{
+	IMAGE_SCALE_METHOD_DEFAULT,
+	IMAGE_SCALE_METHOD_FILTER,
+	IMAGE_SCALE_METHOD_BOX,
+	IMAGE_SCALE_METHOD_TRIANGLE,
+	IMAGE_SCALE_METHOD_BELL,
+	IMAGE_SCALE_METHOD_BSPLINE,
+	IMAGE_SCALE_METHOD_LANCZOS3,
+	IMAGE_SCALE_METHOD_MITCHELL,
+};
+
+
+
+struct SShadowPoint
+{
+	// (pixels) layer shadow horizontal size 
+	[editorControl = "int_combo"; stringParam = "values:-7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7"]
+	int _x;
+	// (pixels) layer shadow vertical size 
+	[editorControl = "int_combo"; stringParam = "values:-7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7"]
+	int _y;
+};
+
+struct SEmbossPoint
+{
+	// (pixels) emboss effect horizontal size
+	[editorControl = "int_combo"; stringParam = "values:-7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7"]
+	int _x;
+	// (pixels) emboss effect vertical  size
+	[editorControl = "int_combo"; stringParam = "values:-7 -6 -5 -4 -3 -2 -1 0 1 2 3 4 5 6 7"]
+	int _y;
+};
+
+struct SMinimapLayer
+{
+	// layer type to sort. Lowest layers - terrain and water, highest - building and bridge
+	EMinimapLayerType _Type = LAYER_UNKNOWN;
+	// emboss effect blur folter
+	[editorControl = "int_combo"; stringParam = "values: 0 1 3  5 7"]
+	int _EmbossFilterSize = 3;
+	// do we need to scale noise?
+	[editorControl = "bool_combo"]
+	bool _ScaleNoise;
+	// default layer color
+	Color _Color;
+	// layer border color
+	Color _BorderColor;
+	// layer border width
+	[editorControl = "int_combo"; stringParam = "values:1 2 3 4 5"]
+	int _BorderWidth = 1;
+	SShadowPoint _ShadowPoint;
+	SEmbossPoint _EmbossPoint;
+	// noise file
+	TGAFileRef _NoiseImage;
+	// scale method
+	EImageScaleMethod _ScaleMethod = IMAGE_SCALE_METHOD_DEFAULT;
+};
+
+[typeID = 0x1414DB40; no_checksum]
+class SMinimap
+{
+	// (pixels) tree crown radius
+	[editorControl = "int_combo"; stringParam = "values: 0#7"]
+	int _WoodRadius = 5;
+	// shade value for terrain and water
+	Percent100 _TerrainShadeRatio = 100;
+	// draw all passability rect and locked tiles only
+	[editorControl = "bool_combo"]
+	bool _ShowAllBuildingsPassability;
+	// draw terrain shade
+	[editorControl = "bool_combo"]
+	bool _ShowTerrainShades;
+	// min alpha to process color
+	Percent255 _MinAlpha = 1;
+	SMinimapLayer _Layers[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,27 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1509D440]
+[noKey; hidden; noCode] class SWindowSimpleSharedBuilder
+{
+	bool _UseDefBuilder;
+	PictureFileRef _Texture;
+	Color _Color;
+};
+
+
+[typeID = 0x1609F300]
+[noKey; hidden; noCode] class SWindowMSButtonSharedBuilder
+{
+	struct SVisualState
+	{
+		PictureFileRef _NormalTexture;
+		Color _NormalColor;
+		PictureFileRef _PushedTexture;
+		Color _PushedColor;
+		PictureFileRef _DisabledTexture;
+		Color _DisabledColor;
+	};
+	bool _UseDefBuilder;
+	SVisualState _VisualStates[1..];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

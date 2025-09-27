@@ -1,0 +1,91 @@
+#include "../game.cll"
+#include "../stats_b2_m1/season.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SModel;
+forward class SMapInfo;
+forward class SAmbientLight;
+forward class SPreLight;
+forward enum ESeason;
+forward class STGTerraSet;
+forward class SWater;
+forward enum EDayNight;
+forward class SSkeleton;
+forward class SMinimap;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x100C2500]
+[noKey; hidden; noCode] class SEditorOptions
+{
+	struct SOptsDayTime
+	{
+		EDayNight _DayTime = DAY_DAY;
+		SAmbientLight *_Light;
+		SPreLight *_PreLight;
+	};
+
+	struct SOptsSeasonMapInfo
+	{
+		ESeason _Season = SEASON_SUMMER;
+		SOptsDayTime _DayTimes[1..];
+		// timeset for season
+		STGTerraSet *_Tileset;
+		SWater *_OceanWater;
+		SMinimap *_Minimap;
+	};
+
+	struct SOptsVSO
+	{
+		struct SOptsVSOCrag
+		{
+			float _SamplingStep = 32;
+		};
+		struct SOptsVSORiver
+		{
+			float _SamplingStep = 32;
+		};
+		struct SOptsVSORoad
+		{
+			float _SamplingStep = 64;
+		};
+		struct SOptsVSOCoast
+		{
+			float _SamplingStep = 64;
+		};
+
+		SOptsVSORoad _Road;
+		SOptsVSOCrag _Crag;
+		SOptsVSORiver _River;
+		SOptsVSOCoast _Coast;
+	};
+
+	struct SOptsBgMap
+	{
+		ESeason _Season = SEASON_SUMMER;
+		SMapInfo *_Map;
+		// Camera anchor on this map
+		CVec3 _Anchor;
+	};
+
+	struct SOptsBuilder
+	{
+		SSkeleton *_HumanSkeleton;
+	};
+
+	struct SOptsMisc
+	{
+		SAmbientLight *_Light;
+	};
+
+	struct SUtilityModels
+	{
+		SModel *_CameraModel;
+	};
+
+	SOptsSeasonMapInfo _MapInfo[1..];
+	SOptsVSO _VSO;
+	SOptsBgMap _Backgrounds[1..];
+	SOptsBuilder _Builders;
+	SUtilityModels _UtilityModels;
+	SOptsMisc _Misc;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

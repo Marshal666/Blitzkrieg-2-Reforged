@@ -1,0 +1,187 @@
+<HTML xmlns:o>
+	<HEAD>
+		<TITLE></TITLE>
+		<meta name="vs_showGrid" content="True">
+		<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+	</HEAD>
+	<BODY>
+		<P class="MsoNormal" align="center">DG – dependency graph.
+		</P>
+		<P class="MsoNormal">Зачем это нужно? Основная проблема, для решения которой 
+			используется DG - желание сэкономить на повторяющихся рассчетах в условиях, 
+			когда последовательность рассчетов не четко задана, а определяется данными. 
+			Наиболее широко&nbsp;DG используется в 3д движке. Допустим у нас есть функция, 
+			которая вычисляет матрицы трансформации костей для текущего времени (назовем ее 
+			аниматор). Пусть результат этой функции используется в нескольких местах. При 
+			использовании традиционного подхода мы должны будем написать некую 
+			"мета-функцию", которая будет выделять память под матрицы, вызывать 
+			функции-аниматоры, потом вызывать функции, которые требуют результатов работы 
+			аниматоров итд. DG позволяет не писать в явном виде такую "мета-функцию". 
+			Фактически эта функция будет задаваться топологией графа.</P>
+		<P class="MsoNormal">Идея DG взята из Maya. Суть заключается в том, что программа 
+			записывается не в форме исходного текста, а в форме конфигурации узлов 
+			Dependency Graph`a. Таким образом, DG можно считать реализацией data driven 
+			подхода. Узлами в DG являются функции. Ребра – линии передачи данных. Любую 
+			фиксированную конфигурацию DG можно записать на C как последовательность 
+			вызовов функций. Преимущество DG заключается в том, что можно менять эту 
+			последовательность в run time. Фактически использование DG обменивает 
+			производительность на гибкость.
+		</P>
+		<P class="MsoNormal">Базовым классом для узлов DG является CVersioningBase. Узлы, 
+			которые возвращают значение наследуются от CFuncBase&lt;&gt; и 
+			CPtrFuncBase&lt;&gt;. Связи в DG представляются с помощью CDGPtr&lt;&gt;.</P>
+		<P class="MsoNormal">С точки зрения программы узел DG эквивалентен функции, DGPtr – 
+			передаче параметров, значение узла DG – возвращаемому значению функции.</P>
+		<P class="MsoNormal">
+			Помимо задания логики программы в run time DG можно использовать для 
+			кеширования результатов расчетов. Для того, чтобы это было возможно узлы DG при 
+			одних и тех же входных данных должны давать одинаковый результат (т.е. 
+			результат вычисления в узле DG не может зависеть от какого-либо random`a, иначе 
+			может быть закеширован один из вариантов результата расчетов) Возможны 2 
+			подхода к кешированию результатов расчетов в DG. При первом подходе 
+			(используемом в Maya) при изменении какого-либо узла в DG во все узлы, которые 
+			зависят от этого узла проставляется флажок dirty. При последующем запросе 
+			значения некоторого узла проверяется его флажок dirty и если он выставлен 
+			значение рассчитывается заново. Это требует, чтобы все ссылки в DG были 
+			двунаправленными. В нашем DG используется альтернативный подход, который 
+			основан на том, что узел сам узнает что изменилось, и, если данные на основе 
+			которых он рассчитывался изменились, происходит перерасчет. Для каждого узла у 
+			нас есть “номер версии” (CVersioningBase::nVersion). При изменении значения<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>этого 
+			узла номер версии увеличивается на 1. Для того, чтобы знать изменилось 
+			значение, использованное при расчете, или нет в DGPtr&lt;&gt; хранится nVersion 
+			–версия узла, на который ссылается этот DGPtr&lt;&gt;, которая была в момент 
+			последнего вызова DGPtr&lt;&gt;::Refresh().</P>
+		<P class="MsoNormal">Значение узла DG может поменяться двумя способами. Первый – 
+			“внутренний” – происходит в момент, когда поменялись узлы DG, от которых 
+			зависит этот узел. В этом случае зовется функция Recalc(), которая должна 
+			вычислить новое значение узла.Второй – “извне”. “извне” это изменение значения 
+			узла графа не в функции Recalc(). При изменении значения узла графа “извне” 
+			необходимо позвать функцию Updated(), которая прибавляет 1 к номеру версии. При 
+			вызове функции Recalc() номер версии меняется автоматически.</P>
+		<P class="MsoNormal">Для ускорения прохода по сложному DG у нас используется 
+			понятие “кадра”. Идея заключается в том, что можно кешировать результат прохода 
+			по графу на промежутках, когда значение узлов графа не меняется “извне”. Начало 
+			кадра обозначается вызовом функции MarkNewDGFrame(). После этого на данном 
+			кадре для каждого узла определяется должен он пересчитываться<SPAN style="mso-spacerun: yes">&nbsp; </SPAN>или 
+			нет только один раз. Номер кадра, на котором происходил последний такой расчет 
+			хранится в CVersioningBase::nFrameCalced.</P>
+		<P class="MsoNormal">Класс <STRONG>CFuncBase&lt;&gt;</STRONG> - простой узел DG, 
+			который имеет значение. Значение этого узла хранится в переменной value.</P>
+		<P class="MsoNormal"><STRONG>DGPtr&lt;&gt;</STRONG> - указатель, который 
+			используется как ребро DG. В качестве параметра темплейта
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt; удобно 
+			указывать абстрактные типы, например, CFuncBase&lt;float&gt;, а не 
+			CMyFloatFunc, чтобы вместо CMyFloatFunc можно было подставить любой узел, 
+			возвращающий float.</P>
+		<P class="MsoNormal">Функции в CVersioningBase, которые используются для 
+			обеспечения работы DG:<BR>
+			<STRONG>bool NeedUpdate()</STRONG> – используется для прохода по DG и 
+			определения необходимости рассчета нового значения узла<BR>
+			<STRONG>void Recalc() </STRONG>– в этой функции происходит расчет нового 
+			значения узла. Гарантируется, что в течение одного кадра перед любым Recalc() 
+			будет вызван NeedUpdate()
+			<o:p></o:p></P>
+		<P class="MsoNormal"><SPAN lang="EN-US" style="mso-ansi-language: EN-US">
+				<o:p></o:p>
+			</SPAN></P>
+		<P class="MsoNormal">Логика работы <STRONG>
+				<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt;::<SPAN lang="EN-US" style="mso-ansi-language: EN-US">Refresh</SPAN>()</STRONG>. 
+			Посмотрим не обрабатывался ли узел на текущем кадре. Если нет – проверить нужно 
+			ли пересчитывать значение узла с помощью функции
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">NeedUpdate</SPAN>(). Если 
+			нужно позовем
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">Recalc</SPAN>() и увеличим 
+			номер версии. После этого сохраним в
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt; 
+			текущий номер версии узла, на который указывает
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt; с 
+			предыдущим. Если этот номер версии изменился с предыдущего вызова вернем
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">true</SPAN>, иначе
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">false</SPAN>.
+			<o:p></o:p></P>
+		<P class="MsoNormal"><SPAN lang="EN-US" style="mso-ansi-language: EN-US">
+				<o:p></o:p>
+			</SPAN></P>
+		<P class="MsoNormal">Таким образом, если
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt;::<SPAN lang="EN-US" style="mso-ansi-language: EN-US">Refresh</SPAN>() 
+			вернул
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">true</SPAN>, то это 
+			означает, что узел, на который он указывает изменил свое значение с момента 
+			последнего вызова
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DGPtr</SPAN>&lt;&gt;::<SPAN lang="EN-US" style="mso-ansi-language: EN-US">Refresh</SPAN><SPAN lang="EN-US"></SPAN>для 
+			этого указателя. Это свойство активно испольуется при написании функций
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">NeedUpdate</SPAN>().
+			<o:p>&nbsp;</o:p></P>
+		<P class="MsoNormal">Для корректной работы требуется чтобы Refresh() всем 
+			DGPtr&lt;&gt;, которые есть в узле звались из функции NeedUpdate(). Если таких 
+			DGPtr&lt;&gt; несколько, то необходимо вызывать Refresh() для каждого. Удобной 
+			является следующая запись:
+			<o:p></o:p></P>
+		<P class="MsoNormal">bool NeedUpdate() { return pParam1.Refresh() | 
+			pParam2.Refresh() |…; }
+			<o:p></o:p></P>
+		<P class="MsoNormal">Вызов Refresh() какого-то DGPtr&lt;&gt; в Recalc(), скорее 
+			всего, является ошибкой, так как в этом случае неправильно будет работать 
+			определение необходимости расчета нового значения узла.</P>
+		<P class="MsoNormal"><STRONG>Пример.</STRONG> Пусть у нас есть данные типа float, 
+			есть константы и есть функция Mul( float a, float b ), которая перемножает два 
+			float`a. В терминах DG это будет выглядеть так:
+			<o:p></o:p></P>
+		<PRE class="MsoNormal"><FONT color=#0000ff>// узел – константа, значение которого может быть изменено только извне<BR>DEFINE_DG_CONSTANT_NODE( CCFloat, float ); <BR>// узел – функция перемножения двух float`ов<BR>class CMul : public CFuncBase&lt;float&gt;<BR>{<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>OBJECT_NOCOPY_METHODS(CMul);<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>ZDATA<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>CDGPtr&lt;CFuncBase&lt;float&gt; &gt; p1, p2;<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>ZEND<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>bool NeedUpdate() { return p1.Refresh() | p2.Refresh(); }<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>void Recalc() { value = p1-&gt;GetValue() * p2-&gt;GetValue(); }<BR>public:<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>CMul() {}<BR><SPAN style="mso-spacerun: yes">&nbsp; </SPAN>CMul(CFuncBase&lt;float&gt; *_p1, CFuncBase&lt;float&gt; *_p2 ) : p1(_p1), p2(_p2) {}<BR>};
+<o:p></o:p></FONT></PRE>
+		<P class="MsoNormal">Имея эти два типа узлов DG мы можем перемножать произвольное 
+			количество констант и использовать результат в любом месте, которое принимает 
+			на вход CFuncBase&lt;float&gt;.
+			<o:p>&nbsp;</o:p></P>
+		<P class="MsoNormal">Использование
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">DG</SPAN><SPAN lang="EN-US"></SPAN>выглядит 
+			так. Пусть у нас есть
+			<SPAN lang="EN-US" style="mso-ansi-language: EN-US">pOurPtr</SPAN><SPAN lang="EN-US"></SPAN>на 
+			некий узел графа, который нам нужен:
+			<o:p></o:p></P>
+		<PRE class="MsoNormal"><FONT color=#0000ff><SPAN lang=EN-US style="mso-ansi-language: EN-US">CDGPtr</SPAN>&lt;<SPAN lang=EN-US style="mso-ansi-language: EN-US">CFuncBase</SPAN>&lt;<SPAN lang=EN-US style="mso-ansi-language: EN-US">T</SPAN>&gt; &gt; <SPAN lang=EN-US style="mso-ansi-language: EN-US">pOurPtr</SPAN>;<BR><SPAN lang=EN-US style="mso-ansi-language: EN-US">MarkNewDGFrame</SPAN>(); // вызвать после всех изменений узлов “извне”, до начала использования </FONT><SPAN lang=EN-US style="mso-ansi-language: EN-US"><FONT color=#0000ff>DG<BR></FONT></SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US"><FONT color=#0000ff>…<BR></FONT></SPAN><FONT color=#0000ff><SPAN lang=EN-US style="mso-ansi-language: EN-US">pOurPtr.Refresh();<BR></SPAN><SPAN lang=EN-US style="mso-ansi-language: EN-US">blah( pOurPtr-&gt;GetValue() );
+<o:p></o:p></SPAN></FONT></PRE>
+		<P class="MsoNormal">Зачем нужны <STRONG>CPtrFuncBase&lt;&gt;</STRONG>. Отличие 
+			CPtrFuncBase&lt;&gt; от CFuncBase&lt;&gt; заключается в возвращаемом значении. 
+			Для CPtrFuncBase&lt;&gt; это указатель CPtrFuncBase &lt;&gt;::pValue. Иногда в 
+			DG нужны узлы, которые возвращают объекты, про которые нам известен только 
+			указатель, а не конкретный тип или которые могут быть потеряны из-за внешних 
+			обстоятельств. Такими объектами, в частности, является большинство объектов Gfx 
+			– текстуры, буфера под геометрию итп. Второй момент, для которого можно 
+			использовать CPtrFuncBase это экономия памяти. Так как DG позволяет в любой 
+			момент посчитать значение узла заново мы можем безболезненно освобождать pValue 
+			узла CPtrFuncBase в случае нехватки памяти и рассчитывать его заново в случае 
+			необходимости.
+			<o:p></o:p></P>
+		<P class="MsoNormal"><STRONG>CHoldedFuncBase&lt;&gt;</STRONG> / holdqueue. 
+			Некоторые элементы DG могут использоваться не постоянно, а с небольшими 
+			интервалами. Например, узлы, которые считывают геометрию с диска, звуки итд. 
+			Для того, чтобы такие узлы не удалялись сразу после того, как они стали не 
+			нужны, а еще какое-то время находились в памяти предназначена holdqueue. 
+			Наследники CHoldedFuncBase помещаются в эту очередь на несколько кадров по 
+			истечении которых они будут удалены окончательно.
+			<o:p></o:p></P>
+		<P class="MsoNormal"><STRONG>CChangeTrackPtr&lt;&gt;.</STRONG> Это редко 
+			используемый читерский класс, используемый для увеличения производительности в 
+			3dmotor. DGPtr&lt;&gt; обладает особенностью, которая не всегда является 
+			желательной – при вызове DGPtr&lt;&gt;::Refresh() если узел, на который 
+			ссылается DGPtr&lt;&gt; должен пересчитаться, так как узлы, от которых он 
+			зависит изменились, то этот узел пересчитается. CChangeTrackPtr&lt;&gt; это 
+			способ узнать об изменении узла без перерасчета. 
+			CChangeTrackPtr&lt;&gt;::GetChanges() возвращает одно из трех значений :<BR>
+			DG_CHANGE_UNKNOWN – нельзя сказать поменялся узел или нет<BR>
+			DG_CHANGE_NONE – узел не изменился<BR>
+			DG_CHANGE_CHANGED – узел изменился
+			<o:p></o:p></P>
+		<P class="MsoNormal">После считывания из save`a происходит перерасчет всего DG. 
+			Происходит это благодаря тому, что nVersion не записывается в save и, 
+			следовательно, равен значению, присваиваемому в конструкторе по умолчанию. 
+			Перерасчет всего DG позволяет уменьшить размер сейва, так как в этом случае не 
+			нужно записывать значение узла в save.
+			<o:p></o:p></P>
+		<P class="MsoNormal">
+			<o:p>&nbsp;</o:p></P>
+		<P class="MsoNormal">&nbsp;
+			<o:p></o:p></P>
+	</BODY>
+</HTML>

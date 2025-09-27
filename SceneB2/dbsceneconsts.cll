@@ -1,0 +1,62 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SAmbientLight;
+forward class STexture;
+forward class SAIGeometry;
+forward class SVisObjIconsSet;
+forward class SMaterial;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SLightEffectConsts
+{
+	STexture *_LightConeTexture;
+	STexture *_FlareTexture;
+	// flare appear/disappear time
+	float _FlareAppearTime;
+};
+
+[typeID = 0x100AC381; no_checksum]
+class SSceneConsts
+{
+	struct SSelectionMaterials
+	{
+		SMaterial *_Air;
+		SMaterial *_Water;
+		SMaterial *_Ground;
+	};
+	struct STrackMaterials
+	{
+		SMaterial *_Track;
+	};
+	struct SIconAIGeometry
+	{
+		SAIGeometry *_Icon;
+	};
+	struct STerraGenConsts
+	{
+		TGAFileRef _BorderSmoothNoise;
+		TGAFileRef _TextureCombiningNoise;
+		TGAFileRef _DebrisMaskNoise;
+	};
+	struct SDebugMaterials
+	{
+		SMaterial *_RedMaterial;
+		SMaterial *_GreenMaterial;
+		SMaterial *_BlueMaterial;
+		SMaterial *_BlackMaterial;
+		SMaterial *_WhiteMaterial;
+	};
+	SSelectionMaterials _SelectionMaterials;
+	STrackMaterials _TrackMaterials;
+	SMaterial *_ShotTraceMaterial;
+	STerraGenConsts _TerraGenConsts;
+	SIconAIGeometry _IconAIGeometry;
+	SVisObjIconsSet *_VisObjIconsSet;
+	SLightEffectConsts _LightFX;
+	// interface 3d models light
+	SAmbientLight *_InterfaceLight;
+	// debug information materials
+	SDebugMaterials _DebugMaterials;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

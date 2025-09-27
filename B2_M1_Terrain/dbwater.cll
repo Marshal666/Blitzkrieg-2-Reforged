@@ -1,0 +1,69 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWaterSet;
+forward class STwoSidedLight;
+forward class STGNoise;
+forward class SMaterial;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SAnimatedTexture
+{
+	SMaterial *_Material;
+	int _NumFramesX;
+	int _NumFramesY;
+	// How many frames to use in animated sequence (0 - all)
+	int _UseFrames;
+
+	#include "include_animatedtexture.h"
+};
+
+[typeID = 0x10084340; no_checksum]
+class SWaterSet
+{
+	// Main water sequence
+	SAnimatedTexture _Water;
+	// Animated "white horses" on water
+	SAnimatedTexture _WhiteHorses;
+	// complex surf on the coast
+	SMaterial *_Surf;
+};
+
+[typeID = 0x10084341; no_checksum]
+class SWater
+{
+	enum EWaterType
+	{
+		WT_OCEAN,
+		WT_LAKE,
+		WT_RIVER,
+		WT_SWAMP,
+		WT_OTHER
+	};
+	struct SWaterWaveType
+	{
+		float _Amplitude = 1.4;
+		float _Period = 0.3;
+		float _PeriodVariation = 0.15;
+		[hidden] float _InvPeriod;
+		float _DeepWaveNumber = 0.1;
+		[hidden] float _PhaseOffset;
+
+		#include "include_waterwavetype.h"
+	};
+	SWaterWaveType _Waves[1..];
+	SWaterSet *_WaterSet;
+	STwoSidedLight *_Light;
+	STGNoise *_DepthNoise;
+	float _DepthNoiseCoeff;
+	int _TilesNumPerWaterTexture = 6;
+	bool _UseWaves = true;
+	float _HorDeformMinRadius = 0.0;
+	float _HorDeformMaxRadius = 0.5;
+	float _HorDeformRadiusSpeed = 0.0005;
+	float _HorDeformRotationSpeedMin = 0.000875;
+	float _HorDeformRotationSpeedVariation = 0.002625;
+	EWaterType eWaterType = WT_OTHER;
+
+	#include "include_water.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,1 @@
+basestruct c1;

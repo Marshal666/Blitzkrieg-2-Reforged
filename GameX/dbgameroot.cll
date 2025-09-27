@@ -1,0 +1,81 @@
+#include "../game.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+#include "../stats_b2_m1/uientries.cll"
+#include "dbscenario.cll"
+[hExternal] #include "../ui/dbuserinterface.h"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowScreen;
+forward class SMapInfo;
+forward class STextEntry;
+forward class SComplexSoundDesc;
+forward class SCampaign;
+forward class SNotificationEvent;
+forward class SGameConsts;
+forward class SOptionSystem;
+forward class SNotification;
+forward class SMechUnitRPGStats;
+forward class SMultiplayerMap;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SUISoundEntry
+{
+	string _Type;
+	SComplexSoundDesc *_Sound;
+};
+
+struct SMainMenuBackground
+{
+	SMapInfo *_Map;
+	STexture *_Picture;
+};
+
+struct SHallOfFameRecord
+{
+	// Player name
+	TextFileRef _NameFileRef;
+	int _Score;
+};
+
+[typeID = 0x1007B4C1]
+class SGameRoot
+{
+	struct STutorialMap
+	{
+		SMapInfo *_MapInfo;
+		// Difficulty name
+		TextFileRef _DifficultyFileRef;
+	};
+
+	SGameConsts *_Consts;
+	SCampaign *_Campaigns[1..];
+	[hidden; noCode] SCampaign *_Tutorial;
+	STutorialMap _TutorialMaps[];
+	[hidden; noCode] SMapInfo *_CustomMissions[];
+	SWindowScreen *_ScreenVideoPlayer;
+	SUIScreenEntry _Screens[];
+	[hidden; noCode] SUITextEntry _Texts[];
+	STextEntry *_TextEntries[];
+	// fonts, used in the game
+	SFont *_Fonts[];
+	// general-purpose sound effects list 
+	SUISoundEntry _Sounds[];
+	SUITextureEntry _Textures[];
+	SOptionSystem *_GameOptions;
+	SMainMenuBackground _MainMenuBackground;
+	STexture *_InterfacesBackground;
+	SNotification *_Notifications[];
+	SNotificationEvent *_NotificationEvents[];
+	// Game Intro movie
+	XMLFileRef _IntroMovie;
+	SMechUnitRPGStats *_EncyclopediaMechUnits[];
+	// citations for pwl screen
+	TextFileRef _CitationFileRefs[];
+	SMultiplayerMap *_MultiplayerMaps[];
+	// automatic testing map
+	SMultiplayerMap *_TestMap;
+	SMapMusic *_MainMenuMusic;
+	SHallOfFameRecord _HallOfFameDefaultRecords[];
+	#include "include_GameRoot.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

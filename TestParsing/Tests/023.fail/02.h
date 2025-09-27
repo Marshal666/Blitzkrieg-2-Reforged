@@ -1,0 +1,2 @@
+attribute b();
+attribute a();

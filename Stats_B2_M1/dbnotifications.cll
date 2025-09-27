@@ -1,0 +1,106 @@
+#include "../game.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum ENotificationType;
+forward class SComplexSoundDesc;
+forward class STexture;
+forward class SNotification;
+forward enum ENotificationEventType;
+forward enum EMinimapFigureType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum ENotificationType
+{
+	NTF_OBJECTIVE_RECEIVED,
+	NTF_OBJECTIVE_COMPLETED,
+	NTF_OBJECTIVE_FAILED,
+	NTF_KEY_OBJECT_CAPTURED,
+	NTF_KEY_OBJECT_LOSED,
+	NTF_ENEMY_ARTILLERY,
+	NTF_ENEMY_AA_FIRE,
+	NTF_REINFORCEMENT_ARRIVED,
+	NTF_OBJECTIVES_NOTIFY_REPEAT,
+	NTF_AVIA_BAD_WEATHER_RETREAT,
+	NTF_ENEMY_AVIA,
+	NTF_ENEMY_UNIT,
+	NTF_KEY_OBJECT_ATTACKED,
+	NTF_MINE_DETECTED,
+	NTF_UNIT_ATTACKED,
+	NTF_UNITS_GIVEN,
+	NTF_MINIMAP_FLARE,
+	NTF_COUNT,
+};
+
+enum EMinimapFigureType
+{
+	MFT_TRIANGLE,
+	MFT_SQUARE,
+	MFT_CIRCLE,
+};
+
+[typeID = 0x17135D40; no_checksum]
+class SNotification
+{
+	ENotificationType _Type;
+	TextFileRef _TextFileRef;
+	SComplexSoundDesc *_Sound;
+	EMinimapFigureType _FigureType;
+	Color _Color;
+	float _Time;
+	float _Size;
+	float _RotationSpeed;
+	// (msec)time to accumulate the same notifications
+	float _DuplicateDelay = 0;
+
+	#include "include_Notification.h"
+};
+
+enum ENotificationEventType
+{
+	NEVT_OBJECTIVE_COMPLETED,
+	NEVT_OBJECTIVE_RECEIVED,
+	NEVT_OBJECTIVE_FAILED,
+	NEVT_KEY_POINT_CAPTURED,
+	NEVT_KEY_POINT_ATTACKED,
+	NEVT_KEY_POINT_LOST,
+	NEVT_PLAYER_ELIMINATED,
+	NEVT_REINF_NEW_TYPE,
+	NEVT_REINF_LEVELUP,
+	NEVT_REINF_CANT_CALL,
+	NEVT_AVIA_AVAILABLE,
+	NEVT_AVIA_BAD_WEATHER_RETREAT,
+	NEVT_ENEMY_AVIA_DETECTED,
+	NEVT_ENEMY_ART_DETECTED,
+	NEVT_ENEMY_AA_DETECTED,
+	NEVT_ENEMY_UNIT_DETECTED,
+	NEVT_UNIT_ATTACKED,
+	NEVT_UNIT_BLOWUP_AT_MINE,
+	NEVT_UNIT_OUT_OF_AMMUNITION,
+	NEVT_ENGINEERING_MINE_DETECTED,
+	NEVT_ENGINEERING_COMPLETED,
+	NEVT_ENGINEERING_INTERRUPTED,
+	NEVT_OBJECTIVE_MOVED,
+	NEVT_UNITS_GIVEN,
+	NEVT_COUNT,
+};
+
+
+[typeID = 0x171BCB00; no_checksum]
+class SNotificationEvent
+{
+	ENotificationEventType _Type;
+	STexture *_Texture;
+	TextFileRef _TextFileRef;
+	TextFileRef _TooltipFileRef;
+	SComplexSoundDesc *_Sound;
+	bool _ShowByCamera;
+	// (seconds)
+	float _AutoRemoveTime;
+	SNotification *_Notification;
+	float _NoDupArea;
+	// (seconds)
+	float _NoDupTime;
+
+	#include "include_NotificationEvent.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

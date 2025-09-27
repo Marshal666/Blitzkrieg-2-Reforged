@@ -1,0 +1,174 @@
+#include "../game.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SVSODesc;
+forward class SComplexSoundDesc;
+forward class SMaterial;
+forward class SWater;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct STerrainAIProperties
+{
+	Percent1 _Passability = 1.0;
+	int nAIClass = 0;
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\AIClasses.xml"]
+	int nAIPassabilityClass;
+	bool bCanEntrench = true;
+	[editorControl = "bit_field"; stringParam = "editor\\BitFields\\SoilParams.xml "]
+	int nSoilType = 0;
+};
+
+[noBase] struct SVSOLayerBaseDesc
+{
+	// inner part opacity
+	Percent1 _CenterOpacity = 1;
+	// Texture step for tiling
+	float _TilingStep = 0.1;
+};
+
+struct SVSOLayerBorderDesc : public SVSOLayerBaseDesc
+{
+	// Material with texture for border
+	SMaterial *_Material;
+	// First pixel in texture (across)
+	int _UseFromPixel;
+	// Last pixel in texture (across)
+	int _UseToPixel;
+};
+
+struct SVSOLayerCenterDesc : public SVSOLayerBaseDesc
+{
+	// Layer mesh disturbance (for rivers)
+	Percent1 _Disturbance = 0.3;
+	// How many cells in width (for rivers)
+	int _NumCells = 8;
+	// Material(s) (add more then one for animated layer)
+	SMaterial *_Materials[1..];
+	// First pixel in texture (across)
+	int _UseFromPixel;
+	// Last pixel in texture (across)
+	int _UseToPixel;
+	// stream speed (for rivers only)
+	float _StreamSpeed = 0.1;
+};
+
+class SVSODesc
+{
+	int _Type;
+	int _Priority;
+	STerrainAIProperties _AIProperty;
+	// minimap center color (alpha = 0, if don't need center)
+	Color _MiniMapCenterColor;
+	// minimap border color (alpha = 0, if don't need border)
+	Color _MiniMapBorderColor;
+	// minimap center relative width
+	Percent100 _MiniMapCenterWidth = 100;
+	SComplexSoundDesc *_AmbientSound;
+	SComplexSoundDesc *_CycledSound;
+};
+
+struct SVSOPoint
+{
+	CVec3 _Pos;
+	// Normale to curve at this point
+	CVec3 _Norm;
+	// Width at this point
+	float _Width;
+	// Opacity at this point (for key-points)
+	Percent1 _Opacity;
+	// Is this a key-point ?
+	bool _KeyPoint;
+	float _Radius;
+	float _Reserved = 0;
+};
+
+struct SVSOInstance
+{
+	SVSODesc *_Descriptor;
+	SVSOPoint _points[];
+	CVec3 _ControlPoints[];
+	int _VSOID;
+	// (for chapter map) arrow type
+	int _CMArrowType;
+	// (for chapter map) mission arrow
+	int _CMArrowMission;
+	// (for chapter map) additional arrow attachment
+	int _CMArrowMission2;
+};
+
+[typeID = 0x1007C380]
+class SRoadDesc : public SVSODesc
+{
+	SVSOLayerBorderDesc _LeftBorder;
+	SVSOLayerBorderDesc _RightBorder;
+	SVSOLayerCenterDesc _Center;
+	[noCode = false]
+	float _DefaultWidth = 256;
+	Percent1 _DefaultOpacity = 1;
+};
+
+[typeID = 0x1308AC00]
+class SCragDesc : public SVSODesc
+{
+	// random in upper part
+	float _BorderRand = 1.0;
+	// normal parallel deepening
+	float _Depth = 0.15;
+	// deepening dispersion
+	float _DepthRand = 0.6;
+	float _RandX = 0.25;
+	float _RandY = 0.65;
+	bool _HasPeak = true;
+	SMaterial *_RidgeMaterial;
+	SMaterial *_FootMaterial;
+	// left-side precipice
+	bool _LeftSided = true;
+	// ridge texture scale coeff
+	float _RidgeTexGeomScale = 50;
+	[noCode = false]
+	float _DefaultWidth = 128;
+	[noCode = false]
+	float _DefaultHeight = 128;
+};
+
+[typeID = 0x10094B80]
+class SRiverDesc : public SVSODesc
+{
+	SMaterial *_BottomMaterial;
+	SMaterial *_PrecipiceMaterial;
+	SMaterial *_WaterMaterial;
+	float _StreamSpeed = 0.1;
+	float _BorderRand = 0.5;
+	float _Depth = 0.15;
+	float _DepthRand = 0.6;
+	float _RandX = 0.25;
+	float _RandY = 0.65;
+	// ridge texture scale coeff
+	float _RidgeTexGeomScale = 50;
+	SVSOLayerCenterDesc _WaterLayers[1..3];
+	bool _HasPeak = true;
+	float _DefaultWidth = 256;
+	Percent1 _DefaultOpacity = 1;
+};
+
+[typeID = 0x140C9400]
+class SCoastDesc : public SVSODesc
+{
+	SWater *_Water;
+	// (ai tiles) gradient width
+	int _MiniMapGradientWidth = 10;
+	[noCode = false]
+	float _DefaultWidth;
+};
+
+[typeID = 0x100C8300]
+class SLakeDesc : public SVSODesc
+{
+	[unsafe] SWater *_WaterParams;
+	// Is this a lake or island?
+	bool _IsLake = true;
+	// (ai tiles) gradient width
+	int _MiniMapGradientWidth = 10;
+	[noCode = false]
+	float _DefaultWidth = 256;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

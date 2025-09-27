@@ -1,0 +1,54 @@
+#include "stdafx.h"
+
+#include "..\stats_b2_m1\actions.h"
+#include "MountedGun.h"
+#include "Turret.h"
+#include "Building.h"
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+REGISTER_SAVELOAD_CLASS( 0x1108D4B6, CMountedToBaseGun );
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CCommonMountedGun::CCommonMountedGun( CBuilding *_pObject, CMountedTurret *_pTurret, const int _nSlot )
+: nSlot( _nSlot ), pBuildingStats( checked_cast<const SBuildingRPGStats*>(_pObject->GetStats()) ), pTurret( _pTurret ), pBuilding( _pObject )
+{
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const SBaseGunRPGStats& CCommonMountedGun::GetGun() const
+{
+	return pBuildingStats->aiSlots[nSlot].gun;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const SWeaponRPGStats* CCommonMountedGun::GetWeapon() const
+{
+	return GetGun().pWeapon;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CTurret* CCommonMountedGun::GetTurret() const
+{
+	return pTurret;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void CCommonMountedGun::GetInfantryShotInfo( SAINotifyInfantryShot *pInfantryShotInfo, const NTimer::STime &time ) const
+{
+	pInfantryShotInfo->nSlot = nSlot;
+	pInfantryShotInfo->nObjUniqueID = pBuilding->GetUniqueId();
+	pInfantryShotInfo->pWeapon = GetWeapon();
+	pInfantryShotInfo->time = time;
+	pInfantryShotInfo->typeID = -1;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+void CMountedToBaseGun::GetInfantryShotInfo( SAINotifyInfantryShot *pInfantryShotInfo, const NTimer::STime &time ) const
+{
+	CCommonMountedGun::GetInfantryShotInfo( pInfantryShotInfo, time );
+	pInfantryShotInfo->cShell = CBaseGun::nShellType;
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//*******************************************************************
+//*											  CMountedGunsFactory												*
+//*******************************************************************
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+CBasicGun* CMountedGunsFactory::CreateGun( const EGunTypes eType, const int nShell, SCommonGunInfo *pCommonGunInfo ) const
+{
+	//return new CMountedGun<CBaseGun>( pBuilding, pMountedTurret, nCommonGun, nShell, pCommonGunInfo, eType );
+	return new CMountedToBaseGun( pBuilding, pMountedTurret, nCommonGun, nShell, pCommonGunInfo, eType );
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

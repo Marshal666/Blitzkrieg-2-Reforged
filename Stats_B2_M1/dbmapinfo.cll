@@ -1,0 +1,481 @@
+#include "../b2_m1_terrain/dbterrain.cll"
+#include "../game.cll"
+#include "dbconstructorprofile.cll"
+#include "rpgstats.cll"
+#include "season.cll"
+#include "dbreinforcements.cll"
+
+[hExternal] #include "prefix_dbmapinfo.h"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EMPGameType
+{
+	MP_GT_STANDARD,
+	MP_GT_COUNT,
+};
+
+
+struct SMPMapInfo
+{
+	EMPGameType _GameTypes[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SDBConstructorProfile;
+forward enum ESeason;
+forward class SMissionBonus;
+forward class SMaterial;
+forward class SComplexEffect;
+forward enum EParcelType;
+forward enum EReinforcementType;
+forward class SReinforcement;
+forward class SObjectBaseRPGStats;
+forward enum EDayNight;
+forward class SMapMusic;
+forward class SDeployTemplate;
+forward enum EDBUnitRPGType;
+forward class SHPObjectRPGStats;
+forward enum EScriptAreaTypes;
+forward class SMissionObjective;
+forward class SPartyDependentInfo;
+forward class STexture;
+forward class SPlayerRank;
+forward class SVisObj;
+forward enum EReinforcementType;
+forward class SMapInfo;
+forward class SReinforcement;
+forward class SMissionBonus;
+forward class SDifficultyLevel;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SCameraPlacement
+{
+	CVec3 _Anchor;
+	float _Yaw;
+	float _Pitch;
+	float _Dist;
+	// use anchor only, or full camera placement on the start?
+	bool _UseAnchorOnly = true;
+};
+
+struct SScriptCameraPlacement
+{
+	string _Name;
+	CVec3 _Position;
+	float _Yaw;
+	float _Pitch;
+	float _FOV;
+};
+
+// abstract key
+struct SScriptMovieKey
+{
+	// spline weight of this point being the end of segment
+	//float _InSpline = 0.0f;
+
+	// spline weight of this point being the start of segment
+	//float _OutSpline = 0.0f;
+
+	// is the key direction Flat / Tangent
+	bool _IsTangentIn = false;
+	bool _IsTangentOut = false;
+	string _KeyParam;
+
+	float _StartTime;
+};
+
+// key for position
+struct SScriptMovieKeyPos : public SScriptMovieKey
+{
+	int _PositionIndex;
+};
+
+// key for target object to follow
+struct SScriptMovieKeyFollow : public SScriptMovieKey
+{
+	int _ObjectScriptID = -1;
+};
+
+// the trajectory keys indexes
+struct SScriptMovieSequence
+{
+	SScriptMovieKeyPos _posKeys[];
+	SScriptMovieKeyFollow _followKeys[];
+
+	#include "include_scriptmoviesequence.h"
+};
+
+// the movie struct
+struct SScriptMovies
+{
+	SScriptCameraPlacement _ScriptCameraPlacements[];
+	SScriptMovieSequence _ScriptMovieSequences[];
+
+	#include "include_scriptmovies.h"
+};
+
+[typeID = 0x11074C80]
+class SPartyDependentInfo
+{
+	string _GeneralPartyName;
+	SSquadRPGStats *_GunCrewSquad;
+	SSquadRPGStats *_HowitzerGunCrewSquad;
+	SSquadRPGStats *_HeavyMachinegunSquad;
+	SSquadRPGStats *_AAGunSquad;
+	SSquadRPGStats *_ResupplyEngineerSquad;
+	TextFileRef _LocalizedNameFileRef;
+	STexture *_MinimapKeyObjectIcon;
+	STexture *_MinimapKeyObjectIconSelected;
+	STexture *_StatisticsIcon;
+	// Vis object to replace paradropped soldier during paradropping
+	SVisObj *_ParatrooperVisObj;
+	// small texture with country's flag
+	STexture *_ListItemIcon;
+	SObjectBaseRPGStats *_KeyBuildingFlag;
+
+	#include "include_PartyDependentInfo.h"
+};
+
+[typeID = 0x1711F2C0; no_checksum]
+class SMissionObjective
+{
+	// objective header
+	TextFileRef _HeaderFileRef;
+	// objective brief description
+	TextFileRef _BriefingFileRef;
+	// objective full description
+	TextFileRef _DescriptionFileRef;
+	bool _IsPrimary = true;
+	// objective marker position on minimap
+	CVec2 _MapPositions[];
+	// objective complete exp
+	int _Experience;
+	[hidden; noCode] bool _IsSecret = false;
+
+	#include "include_MissionObjective.h"
+};
+
+struct SMapObjectInfo
+{
+	struct SLinkInfo
+	{
+		int _LinkID = -1;
+		int _LinkWith = -1;
+		bool _Intention = false;
+	};
+	CVec3 _Pos;
+	int _Dir = 0;
+	int _Player = 0;
+	int _ScriptID = -1;
+	float _HP = 1;
+	int _FrameIndex = -1;
+	SLinkInfo _Link;
+	SHPObjectRPGStats *_Object;
+	[hidden;unsafe] SDBConstructorProfile *_ConstructorProfile;
+};
+
+struct SEntrenchmentInfo
+{
+	SIntArray _sections[];
+};
+
+enum EScriptAreaTypes
+{
+	EAT_RECTANGLE,
+	EAT_CIRCLE,
+};
+
+struct SScriptArea
+{
+	EScriptAreaTypes _Type;
+	string _Name;
+	CVec2 _Center;
+	CVec2 _AABBHalfSize;
+	float _R;
+};
+
+struct SAIStartCommand
+{
+	int _CmdType;
+	int _unitLinkIDs[1..];
+	int _LinkID;
+	CVec2 _Pos;
+	bool _FromExplosion;
+	float _Number;
+
+	#include "include_aistartcommand.h"
+};
+
+struct SBattlePosition
+{
+	int _ArtilleryLinkID;
+	int _TruckLinkID;
+	CVec2 _Pos;
+};
+
+struct SMapSoundInfo
+{
+	SComplexSoundDesc *_sound;
+	CVec2 _Pos;
+};
+
+struct SEditAreaInfo
+{
+	string _Name;
+	CVec2 _Points[3..];
+};
+
+enum EParcelType
+{
+	EPATCH_UNKNOWN,
+	EPATCH_DEFENCE,
+	EPATCH_REINFORCE,
+};
+
+struct SReinforcePoint
+{
+	CVec2 _Center;
+	float _Direction;
+
+	#include "include_reinforcepoint.h"
+};
+
+struct SAIGeneralParcel
+{
+	SReinforcePoint _reinforcePoints[];
+	EParcelType _Type;
+	CVec2 _Center;
+	float _Radius;
+	// point importance
+	float _Importance = 0;
+	float _DefenceDirection;
+	// minimal number of units for this point reinforcement
+	int _MinUnitsToReinforce = 3;
+
+	#include "include_aigeneralparcelinfo.h"
+};
+
+struct SAIGeneralSide
+{
+	int _mobileScriptIDs[];
+	SAIGeneralParcel _parcels[];
+	int _MaxMobileTanks = 20;
+};
+
+
+struct SBonusInstance
+{
+	int _LinkID;
+};
+
+struct SBuildingBonuses
+{
+	// Rienforcement point number in player array. This point will be enabled if player own this building.
+	int _PointID;
+	[hidden; noCode] SPlayerReinforcementEnable _Reinforcements[];
+};
+
+struct SPlayerBonusData
+{
+	int _LinkID;
+	SBuildingBonuses _PlayerBonuses[1..];
+	// Is this building a storage
+	bool _Storage;
+};
+
+enum ESuperWeaponType
+{
+	SUPER_WEAPON_BOMBER,
+	SUPER_WEAPON_ROCKET,
+	SUPER_WEAPON_ARTILLERY,
+};
+
+struct SMapPlayerInfo
+{
+	struct SDeployPosition
+	{
+		CVec2 _Position;
+		int _Direction;
+	};
+	struct SSuperWeaponInfo
+	{
+		ESuperWeaponType _SuperWeaponType = SUPER_WEAPON_BOMBER;
+		// Shells per one call. Use 0 for bombers, 1 - rocket (FAU2), >1 - artillery
+		int _Count = 0;
+		// Recycle time for Super Weapon for this mission and player in secs
+		float _RecycleTime = 5.0;
+		// Interval between shoot effect and sheel appearence in secs
+		float _FlyTime = 0.0;
+	};
+	SCameraPlacement _Camera;
+	SAIGeneralSide _general;
+	SPartyDependentInfo *_PartyInfo;
+	SReinforcementPosition _ReinforcementPoints[];
+	SReinforcement *_ReinforcementTypes[];
+	// default rank for multiplayer and AI general
+	SPlayerRank *_DefaultRank;
+	// 0, 1  are enemies, 2 is neutral to all. 0 is user side for single player game
+	int _DiplomacySide = 0;
+	// Recycle time coefficient for this player
+	float _RecycleTimeCoefficient = 1.0;
+	// Number of allowed reinforcement calls for non-human players in single player and for all players in multiplayer
+	int _ReinforcementCalls;
+	// General or player name
+	TextFileRef _LocalizedPlayerNameFileRef;
+	// multiplayer start position
+	CVec2 _MPStartPos;
+	SReinforcement *_ScriptReinforcements[];
+	SScriptReinforcementEntry _ScriptReinforcementsTextID[];
+	SSuperWeaponInfo _SuperWeapon;
+
+	#include "include_MapPlayerInfo.h"
+};
+
+[typeID = 0x10071C00]
+class SMapInfo : public STerrain
+{
+	// Map Designer name. It will be displayed in game's debug info. 
+	TextFileRef _MapDesignerFileRef;
+	// place on map where North mark will be displayed
+	[hidden] CVec2 _NorthPoint;
+	// type of north mark 0, 1, 2, 3.
+	int _NortType;
+	// players list for the map
+	SMapPlayerInfo _Players[3..];
+	[hidden] SMapObjectInfo _Objects[];
+	[noCode; hidden; readonly] SHPObjectRPGStats *_HiddenObjectType;
+	// season
+	ESeason _Season = SEASON_SUMMER;
+	// day time
+	EDayNight _DayTime = DAY_DAY;
+	[hidden] int _Diplomacies[3..];
+	[hidden] SEntrenchmentInfo _Entrenchments[];
+	[hidden] SIntArray _Bridges[];
+	[hidden] SMapObjectInfo _ScenarioObjects[];
+	[hidden] SReinforcementGroupInfo _Reinforcements;
+	// zone script
+	LUAFileRef _ScriptFileRef;
+	[hidden] SScriptArea _ScriptAreas[];
+	[hidden] SAIStartCommand _startCommandsList[];
+	[hidden] SBattlePosition _reservePositionsList[];
+	[hidden] SMapSoundInfo _soundsList[];
+	[hidden] SComplexSoundDesc *_ForestCircleSound;
+	[hidden] SComplexSoundDesc *_ForestAmbientSounds;
+	[hidden] int _MapType;
+	[hidden] int _AttackingSide;
+	SPlayerBonusData _PlayerBonusObjects[];
+	[hidden] SMissionBonus *_Bonuses[];
+	[hidden; noCode] SEditAreaInfo _EditAreas[];
+	SMaterial *_MiniMap;
+	// mission name
+	TextFileRef _LocalizedNameFileRef;
+	// mission short description
+	TextFileRef _LocalizedDescriptionFileRef;
+	// mission long description (for pwl)
+	TextFileRef _LoadingDescriptionFileRef;
+	// pwl picture
+	STexture *_LoadingPicture;
+	[hidden] SCameraPlacement _CameraPositions[];
+	SScriptMovies _ScriptMovies;
+	// final win/loose camera points
+	CVec2 _FinalPositions[];
+	// mission objectives
+	SMissionObjective *_Objectives[];
+	// mission music
+	SMapMusic *_Music;
+	SMapMusic *_MusicWin;
+	SMapMusic *_MusicLost;
+	[hidden] SMPMapInfo _MPInfo;
+	// blocked tiles on the map border
+	int _BorderLockSize = 0;
+	int _BorderCameraSize = 0;
+	// script-accessed effects
+	SComplexEffect *_ScriptEffects[];
+	// custom mission difficulty levels
+	SDifficultyLevel *_CustomDifficultyLevels[];
+
+	#include "include_mapinfo.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x19221C80]
+class SMultiplayerMap
+{
+	SMapInfo *_Map;
+	// Multiplayer mission name
+	TextFileRef _MapNameFileRef;
+	// map X-size
+	int _SizeX;
+	// map Y-size
+	int _SizeY;
+	// max number of players
+	int _Players;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EBonusType
+{
+	BT_REPLACE_REINFORCEMENT,
+	BT_ENABLE_REINFORCEMENT,
+};
+
+class SMissionBonus
+{
+	SMapInfo *_MapToApply;
+	TextFileRef _TextDescFileRef;
+	[hidden] int _Player;
+	EReinforcementType _ReinforcementToChange;
+	// If true, then bonus is given to human player, otherwise to his enemy.
+	bool _HumanPlayer;
+
+	#include "include_MissionBonus.h"
+};
+
+[typeID = 0x110BC4C1]
+class SReinforcementChange : public SMissionBonus
+{
+	SReinforcement *_NewReinforcement;
+};
+
+[typeID = 0x110BC481]
+class SReinforcementEnable : public SMissionBonus
+{
+};
+
+[typeID = 0x110BC4C0]
+class SReinforcementDisable : public SMissionBonus
+{
+};
+
+[typeID = 0x11163C00]
+class SAddReinforcementCalls : public SMissionBonus
+{
+	// Additional reinforcement calls, given at the MissionToApply start
+	int _Calls;
+};
+
+struct SStartUnisAvalabiltyEntry
+{
+	EReinforcementType _StartReinforcmentType;
+	int _Number;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SUnitStatsModifier;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1712D2C0]
+class SDifficultyLevel
+{
+	TextFileRef _LocalizedNameFileRef;
+	// player units modifier
+	SUnitStatsModifier *_PlayerStatModifier;
+	// enemy units modifier
+	SUnitStatsModifier *_EnemyStatModifier;
+	// enemy reinforcements multiplier
+	float _EnemyReinfCallsCoeff = 1;
+	// enemy reinforcement recycle time multiplier
+	float _EnemyReinfRecycleCoeff = 1;
+
+	#include "include_DifficultyLevel.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

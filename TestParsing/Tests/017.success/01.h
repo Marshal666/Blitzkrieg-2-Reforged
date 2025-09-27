@@ -1,0 +1,2 @@
+enum e {};
+enum ETest { };

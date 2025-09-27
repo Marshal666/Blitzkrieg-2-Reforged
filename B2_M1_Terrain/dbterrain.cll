@@ -1,0 +1,134 @@
+#include "../game.cll"
+#include "dbterrainspot.cll"
+#include "dbvso.cll"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STGTerraType;
+forward class SWeatherDesc;
+forward class SAmbientLight;
+forward class SLightInstance;
+forward class STGTerraSet;
+forward class SPreLight;
+forward enum EWeatherType;
+forward class SComplexSoundDesc;
+forward class SWater;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x10081500; no_checksum]
+class STGNoise
+{
+	// File with noise
+	TGAFileRef _FileName;
+};
+
+[typeID = 0x13121B41]
+class STGTerraType
+{
+	SMaterial *_Material;
+	STerrainAIProperties _AIProperty;
+	// Color, which is associated with this terrain in minimap
+	[editorControl = "int_color"]
+	int _Color;
+	SMaterial *_PeakMaterial;
+	// scale coeff
+	[editorControl = "float_combo"; stringParam = "values: 1 2 4 8"]
+	float _ScaleCoeff = 1;
+	SComplexSoundDesc *_Sound;
+	SComplexSoundDesc *_CycledSound;
+};
+
+[typeID = 0x13121B01]
+class STGTerraSet
+{
+	STGTerraType *_TerraTypes[];
+	// special flag for "chapter-map-terrain"
+	bool _WrapTexture = false;
+};
+
+enum EWeatherType
+{
+	WEATHER_RAIN,
+	WEATHER_SNOW,
+	WEATHER_SANDSTORM,
+};
+
+struct SWeather
+{
+	// (degrees from Y axis) wind direction
+	[editorControl = "int_slider"; stringParam = "min:0, max: 360 step: 1, page: 45"]
+	int _WindDirection = 0;
+	// wind power, 0 - 10 (0 = calm)
+	[editorControl = "int_slider"; stringParam = "min:0, max: 10 step: 1, page: 1"]
+	int _WindForce = 0;
+	// (seconds) weather change period
+	float _WeatherPeriod;
+	// (seconds) weather change period random
+	float _WeatherPeriodRandom;
+	// visual effects
+	SWeatherDesc *_Visuals;
+};
+
+[typeID = 0x1918BBC0]
+class SWeatherDesc
+{
+	struct SAmbientSoundDescr
+	{
+		SComplexSoundDesc *_AmbientSound;
+		// sound length before fade-in
+		float _SoundLength;
+	};
+
+	EWeatherType _Type;
+	// material for water drops, snowflakes, etc
+	SMaterial *_PartMaterial;
+	// List of materials for particles. If it setted PartMaterial will be ignored
+	SMaterial * _PartMaterials[];
+	float _PartSize;
+	// drop height
+	float _FallHeight;
+	// drop speed
+	float _Speed;
+	// trajectory calculation parameter (have different means for different types)
+	float _TrajectoryParameter;
+	// number of weather elements per patch
+	int _Intensity = 1;
+	// affected by wind?
+	bool _WindAffected = true;
+	// weather-specific light
+	SAmbientLight *_WeatherLight;
+	// lightning animation
+	SLightInstance* _Lightnings[];
+	// average number of lightnings in minute
+	float _LightningsPerMinute = 1;
+	// average number of lightnings in minute random
+	float _LightningsRandom = 0;
+	// bad weather water params
+	SWater *_Water;
+	// background sounds
+	SAmbientSoundDescr _AmbientSound[];
+	// thunder sounds
+	SComplexSoundDesc *_RandomSounds[1..];
+};
+
+class STerrain
+{
+	[readonly] int _NumPatchesX;
+	[readonly] int _NumPatchesY;
+	STGTerraSet *_TerraSet;
+	[readonly] string _MapFilesPath;
+	SAmbientLight *_Light;
+	SPreLight *_PreLight;
+	// map's weather
+	SWeather _Weather;
+	[unsafe] SWater *_OceanWater;
+	[hidden] SVSOInstance _Roads[];
+	[hidden] SVSOInstance _Rivers[];
+	[hidden] SVSOInstance _Crags[];
+	[hidden] STerrainSpotInstance _Spots[];
+	[hidden] SVSOInstance _Lakes[];
+	bool _HasCoast = false;
+	[hidden] SVSOInstance _Coast;
+	[hidden] CVec3 _CoastMidPoint;
+	[readonly] GUID _uid;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

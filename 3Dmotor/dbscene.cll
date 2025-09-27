@@ -1,0 +1,525 @@
+#include "../game.cll"
+[hExternal] #include "../Misc/geom.h"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SAnimBase;
+forward class SMaterial;
+forward class SGeometry;
+forward class SSkeleton;
+forward class SAIGeometry;
+forward class SAmbientLight;
+forward enum EConvertionType;
+forward class SDistanceFog;
+forward class SModel;
+forward class SParticleInstance;
+forward class STexture;
+forward class SSunFlares;
+forward class SHeightFog;
+forward class SDepthOfField;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B88; no_checksum]
+class SModel
+{
+	SMaterial *_Materials[];
+	SGeometry *_Geometry;
+	SSkeleton *_Skeleton;
+	SAnimBase *_Animations[];
+	float _WindPower = 1;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EConvertionType
+{
+	CONVERT_ORDINARY,
+	CONVERT_BUMP,
+	CONVERT_TRANSPARENT,
+	CONVERT_TRANSPARENT_ADD,
+	CONVERT_LINEAR_PICTURE,
+	CONVERT_ORDINARY_FASTMIP,
+};
+
+[typeID = 0x12069B8E; no_checksum]
+class STexture
+{
+	enum EType
+	{
+		REGULAR,
+		TEXTURE_2D,
+	};
+	enum EAddrType
+	{
+		CLAMP,
+		WRAP,
+		WRAP_X,
+		WRAP_Y,
+	};
+	enum EFormat
+	{
+		TF_DXT1,
+		TF_DXT3,
+		TF_8888,
+		TF_565,
+	};
+	// source file name
+	[noCode] PictureFileRef _SrcName;
+	[hidden; readonly] FilePathRef _DestName;
+	// texture type: TEXTURE_2D - for particles and small interface textures, REGULAR - for normal textures
+	EType _Type;
+	EConvertionType _ConversionType = CONVERT_ORDINARY;
+	EAddrType _AddrType;
+	EFormat _Format;
+	[readonly] int _Width;
+	[readonly] int _Height;
+	float _MappingSize;
+	// number of mip-map levels to generate (0 - generate as many as possible)
+	int _NMips = 0;
+	float _Gain;
+	[readonly; hidden] Color _AverageColor;
+	bool _InstantLoad;
+	[hidden] bool _IsDXT;
+	// Do we need flip texture vertically? (mostly for particles)
+	bool _FlipY = false;
+	[hidden; noCode] bool _StandardExport = true;
+	// Use optimized S3TC or DirectX compressor
+	[noCode] bool _UseS3TC = false;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B82; no_checksum]
+class SCubeTexture
+{
+	STexture *_PositiveX;
+	STexture *_PositiveY;
+	STexture *_PositiveZ;
+	STexture *_NegativeX;
+	STexture *_NegativeY;
+	STexture *_NegativeZ;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SSunFlare
+{
+	float _Distance;
+	STexture *_Texture;
+	bool _Fade;
+	float _Scale;
+};
+
+[typeID = 0xB4406170; no_checksum]
+class SSunFlares
+{
+	SSunFlare _Flares[];
+	STexture *_OverBright;
+};
+
+[typeID = 0x12069B80; no_checksum]
+class SAmbientLight
+{
+	// lighted unshadowed planes color
+	VecColor _LightColor;
+	// ambient color for planes, which is parallel to sunlight
+	VecColor _AmbientColor;
+	// color for planes, which is directed outside sunlight
+	VecColor _ShadeColor;
+	// color for planes, which is directed to sun, but in shadow
+	VecColor _IncidentShadowColor;
+	// particles color for L_NORMAL lighting type
+	VecColor _ParticlesColor;
+	// brightness whitening
+	bool _Whitening = true;
+	// vertical deviation angle
+	float _Pitch;
+	// horizontal deviation angle
+	float _Yaw;
+	// vertical deviation angle for shadow casting (if = 100, then take it from sun)
+	float _ShadowPitch = 100;
+	// horizontal deviation angle for shadow casting (if = 100, then take it from sun)
+	float _ShadowYaw = 100;
+	// cube texture for environmental mapping
+	[unsafe] SCubeTexture *_Sky;
+	VecColor _GlossColor;
+	[hidden] VecColor _FogColor;
+	float _FogStartDistance = 1000;
+	[hidden] float _FogDistance = 2000;
+	[hidden] float _VapourHeight;
+	[hidden] float _VapourDensity = 0;
+	[hidden] float _VapourNoiseParam;
+	[hidden] float _VapourSpeed;
+	[hidden] float _VapourSwitchTime;
+	[hidden] VecColor _VapourColor;
+	[hidden] VecColor _ShadowColor;
+	[hidden] bool _InGameUse = true;
+	[hidden] VecColor _BackColor;
+	[hidden; unsafe] SAmbientLight *_GForce2Light;
+	[hidden] float _VapourStartHeight;
+	[hidden] float _BlurStrength;
+	[hidden] VecColor _GroundAmbientColor;
+	// height cap for shadow casting
+	float _MaxShadowHeight = 20;
+	SSunFlares *_SunFlares;
+	STexture *_Haze;
+	STexture *_CloudTex;
+	CVec2 _CloudSize;
+	float _CloudDir = 0;
+	float _CloudSpeed = 1;
+	SParticleInstance *_Rain;
+	float _SunFlarePitch;
+	float _SunFlareYaw;
+	float _ShadowsMaxDetailLength = 10;
+	SHeightFog *_HeightFog;
+	SDepthOfField *_DepthOfField;
+	SDistanceFog *_DistanceFog;
+	SModel *_SkyDome;
+	// dynamic light multiplayer
+	VecColor _DymanicLightsModifications;
+
+	#include "include_ambientlight.h"
+};
+
+[typeID = 0x1318BB40; no_checksum]
+class SHeightFog
+{
+	VecColor _FogColor;
+	float _MinHeight = 0;
+	float _MaxHeight = 20;
+};
+
+[typeID = 0x13192480; no_checksum]
+class SDepthOfField
+{
+	float _FocalDist = 4;
+	float _FocusRange = 8;
+};
+[typeID = 0x1319E340; no_checksum]
+class SDistanceFog
+{
+	VecColor _Color;
+	float _MinDist;
+	float _MaxDist;
+	// minimal z for height fog
+	float _MinZDis = -10000;
+	// maximal z for height fog
+	float _MaxZDis = -10001;
+	// fog color from camera placement
+	STexture *_ColorTexture;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B8A; no_checksum]
+class SSkeleton
+{
+	[noCode] SceneFileRef _SrcName;
+	// Root joint (single-skin) or root mesh (bodyparts) to export
+	[noCode] string _RootJoint;
+	[noCode; hidden] bool _MSRFormat = true;
+	SAnimBase *_Animations[];
+	[readonly] GUID _uid;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SAnimBase
+{
+	[noCode] SceneFileRef _SrcName;
+	[readonly] GUID _uid;
+
+	#include "include_AnimBase.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1206A301; no_checksum]
+class SAnimLight
+{
+	[noCode] SceneFileRef _SrcName;
+	string _SelectNode;
+	[readonly] GUID _uid;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeRename = "SBound"; numBytes = 28]
+[noHeader] typedef hexbinary ParticleBound;
+
+[typeID = 0x12069B89; no_checksum]
+class SParticle
+{
+	[noCode] SceneFileRef _SrcName;
+	[noCode] string _ExportPrefix;
+	CVec2 _WrapSize;
+	[hidden] ParticleBound _Bound;
+	bool _PerParticleFog = false;
+	[readonly] GUID _uid;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1206A2C1; no_checksum]
+class SLightInstance
+{
+	SAnimLight *_Light;
+	CVec3 _Position;
+	CQuat _Rotation;
+	float _Scale = 1;
+	float _Speed = 1;
+	float _Offset;
+	float _EndCycle;
+	int _CycleCount = 1;
+	int _GlueToBone;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1206A2C0; no_checksum]
+class SParticleInstance
+{
+	enum ELight
+	{
+		L_NORMAL,
+		L_LIT,
+	};
+	enum EStatic
+	{
+		P_STATIC,
+		P_DYNAMIC,
+	};
+	[noCode; hidden] string _SrcName;
+	// do we need to lit particle?
+	ELight _Light = L_NORMAL;
+	SParticle *_Particle;
+	CVec3 _Position;
+	CQuat _Rotation;
+	// scale coeff
+	float _Scale = 1;
+	// play speed coeff
+	float _Speed = 1;
+	// (seconds) delay before play
+	float _Offset;
+	// (seconds) one cycle length (0 = do not cycle)
+	float _EndCycle;
+	// number of cycles, 0 = infinite
+	int _CycleCount = 1;
+	// texture pivot
+	CVec2 _Pivot;
+	[unsafe] STexture *_Textures[];
+	[hidden] bool _IsCrown = false;
+	[hidden] EStatic _Static = P_STATIC;
+	[hidden] bool _DoesCastShadow = false;
+	[hidden] int _GlueToBone;
+	// Do we need particles be attached to it's source or leaved at birth place?
+	bool _LeaveParticlesWhereStarted = false;
+	int _Priority = 0;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x5014B340; no_checksum]
+class SModelInstance
+{
+	// model
+	SModel *_Model;
+	// model animation
+	SAnimBase *_SkelAnim;
+	CVec3 _Position;
+	CQuat _Rotation;
+	// scale coeff
+	float _Scale = 1;
+	// (seconds) delay before play
+	float _Offset = 0;
+	// (seconds) one cycle length (0 -- own animation legth)
+	float _CycleLength = 0;
+	// number of cycles (0 -- infinite)
+	int _CycleCount = 0;
+	// bone identifier to glue model (0 -- don't glue)
+	[hidden] int _GlueToBone = 0;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B83; no_checksum]
+class SEffect
+{
+	SParticleInstance *_Instances[];
+	SLightInstance *_Lights[];
+	SModelInstance *_Models[];
+	bool _WindAffected = false;
+	float _WindPower = 1;
+	// (seconds) effect duration. (H5 specific, manual enter!).
+	float _Duration = 2.5;
+};
+
+[typeID = 0x131A73C0; no_checksum]
+class SDecal
+{
+	SMaterial *_Material;
+	float _Radius = 4;
+	int _FadeInTime = 2000;
+	int _NoFadingTime = 10000;
+	int _FadeOutTime = 2000;
+	float _ExplosionHeight = 2;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B84; no_checksum]
+class SFont
+{
+	enum EPitch
+	{
+		DEFAULT,
+	};
+	enum ECharset
+	{
+		ANSI,
+		BALTIC,
+		CHINESEBIG5,
+		DEF_CHARSET,
+		EASTEUROPE,
+		GB2312,
+		GREEK,
+		HANGUL,
+		RUSSIAN,
+		SHIFTJIS,
+		SYMBOL,
+		TURKISH,
+		HEBREW,
+		ARABIC,
+		THAI,
+	};
+	STexture *_Texture;
+	[readonly] GUID _uid;
+	int _Height = 20;
+	int _Thickness = 400;
+	bool _Italic = false;
+	bool _Antialiased = true;
+	EPitch _Pitch = DEFAULT;
+	ECharset _Charset;
+	string _FaceName = "Times New Roman";
+	string _Name;
+	// file with characters, to be generated
+	TextFileRef _CharactersFile;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1007EC80; no_checksum]
+class SAIGeometry
+{
+	[noCode] SceneFileRef _SrcName;
+	// Root AI mesh to export
+	[noCode] string _RootMesh;
+	// Root joint (single-skin) to export
+	[noCode] string _RootJoint;
+	[hidden] float _Volume;
+	[hidden] float _SolidPart;
+	[readonly] CVec3 _AABBCenter;
+	[readonly] CVec3 _AABBHalfSize;
+	//[typeRename = "GUID"; numBytes = 16; editorControl = "guid"]
+	[readonly] GUID _uid;
+};
+
+[typeID = 0x12069B85; no_checksum]
+class SGeometry
+{
+	[noCode] SceneFileRef _SrcName;
+	//[typeRename = "GUID"; numBytes = 16; editorControl = "guid"]
+	[readonly] GUID _uid;
+	// Root mesh to export
+	[noCode] string _RootMesh;
+	// Root joint (single-skin) or root mesh (bodyparts) to export. In the case of bodyparts this must be equal to 'RootMesh'
+	[noCode] string _RootJoint;
+	[readonly] CVec3 _Size;
+	[readonly] CVec3 _Center;
+	[unsafe] SAIGeometry *_AIGeometry;
+	[hidden] int _NumMeshes;
+	[hidden] int _MaterialQuantities[];
+	[hidden] string _MeshNames[];
+	[hidden] int _MeshAnimated[];
+	[hidden] int _MeshWindAffected[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EAddressMode
+{
+	AM_WRAP,
+	AM_CLAMP,
+};
+
+[typeID = 0x12069B87; no_checksum]
+class SMaterial
+{
+	enum ELightingMode
+	{
+		L_NORMAL,
+		L_SELFILLUM,
+	};
+	enum EEffect
+	{
+		M_GENERIC,
+		M_WATER,
+		M_TRACKS,
+		M_TERRAIN,
+		M_CLOUDS_H5,
+		M_ANIM_WATER,
+		M_SURF,
+		M_SIMPLE_SKY,
+		M_REFLECT_WATER,
+	};
+	enum EAlphaMode
+	{
+		AM_OPAQUE,
+		AM_OVERLAY,
+		AM_OVERLAY_ZWRITE,
+		AM_TRANSPARENT,
+		AM_ALPHA_TEST,
+		AM_DECAL,
+	};
+	
+	enum EDynamicMode
+	{
+		DM_DONT_CARE,
+		DM_FORCE_STATIC,
+		DM_FORCE_DYNAMIC,
+	};
+	
+	STexture *_Texture;
+	[unsafe] STexture *_Bump;
+	float _SpecFactor;
+	[hidden] VecColor _SpecColor;
+	[unsafe] STexture *_Gloss;
+	float _MetalMirror;
+	float _DielMirror;
+	[unsafe] STexture *_Mirror;
+	bool bCastShadow = true;
+	bool bReceiveShadow = true;
+	int _Priority = 0;
+	VecColor _TranslucentColor;
+	float _FloatParam;
+	[unsafe] STexture *_DetailTexture;
+	float _DetailScale = 5;
+	bool _ProjectOnTerrain = false;
+	ELightingMode _LightingMode = L_NORMAL;
+	EDynamicMode  _DynamicMode = DM_DONT_CARE;
+	bool _Is2Sided = false;
+	EEffect _Effect = M_GENERIC;
+	EAlphaMode _AlphaMode = AM_OPAQUE;
+	bool _AffectedByFog = true;
+	bool _AddPlaced = false;
+	bool _IgnoreZBuffer = false;
+	[hidden] bool _BackFaceCastShadow = false;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x12069B8B; no_checksum]
+class SSpot
+{
+	SMaterial *_Material;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

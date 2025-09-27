@@ -1,0 +1,87 @@
+#include "../game.cll"
+#include "rpgstats.cll"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SIntArray
+{
+	int _data[];
+};
+
+struct SReinforcementGroupInfoEntry
+{
+	int _GroupID;
+	SIntArray _GroupsVector;
+};
+
+struct SReinforcementGroupInfo
+{
+	SReinforcementGroupInfoEntry _infos[1..];
+
+	#include "include_reinforcementgroupinfo.h"
+};
+
+struct SReinforcementMaskEntry
+{
+	int _Direction;
+	CVec2 _Position;
+};
+
+struct SReinforcementMask
+{
+	SReinforcementMaskEntry _Positions[];
+};
+
+struct SReinforcementDefinition
+{
+	SMechUnitRPGStats *_MechUnit;
+	SSquadRPGStats *_Squad;
+	EDBUnitRPGType _UnitType;
+	bool _IsAmmunition = false;
+	EReinforcementType _Type;
+	SReinforcement *_Reinforcement;
+};
+
+struct STypedDeployTemplate
+{
+	EReinforcementType _Type;
+	SDeployTemplate *_Template;
+};
+
+struct SReinforcementPosition
+{
+	// Deploy positoin for ground units
+	CVec2 _Position;
+	// Deploy position for aviation calls
+	CVec2 _AviationPosition;
+	int _Direction = 0;
+	SDeployTemplate *_Template;
+	// Specific templates for reinforcement types
+	STypedDeployTemplate _TypedTemplates[];
+	bool _IsDefault = false;
+	bool ____delete_from_here_to_the_end;
+	[hidden] EReinforcementType _Type;
+	[hidden] int _FactoryID = -1;
+	[deprecated; hidden] int _PositionID = 1;
+	// points to deploy scenario units
+	[hidden; noCode] SReinforcementMask _DeployMask;
+	[hidden; noCode] bool _IsAerial = false;
+	[hidden; noCode] bool _IsSea = false;
+	[hidden; noCode] bool _IsGround = false;
+	[hidden; noCode] float _Radius = 10;
+};
+
+struct SScriptReinforcementEntry
+{
+	SReinforcement *_Reinforcement;
+	string _Name;
+};
+
+struct SPlayerReinforcementEnable
+{
+	SReinforcementPosition _NewPointOnEnable;
+	EReinforcementType _ReinforcementToEnable;
+	// when true allows to move reinforcement point to NewPointOnEnable
+	bool _SetPoint;
+	// Upon map start NewPointOnEnable will be added to player reinforcement points and point ID will be stored here
+	[hidden] int _GivenReinforcementPointID;
+};

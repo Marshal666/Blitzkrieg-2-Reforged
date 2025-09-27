@@ -1,0 +1,71 @@
+#include "../b2_m1_terrain/dbterrainspot.cll"
+#include "../b2_m1_terrain/dbvso.cll"
+#include "../game.cll"
+#include "../stats_b2_m1/dbmapinfo.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EEntrenchSegmType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1812CB40]
+[noKey; noCode; hidden] class SMapClip
+{
+	struct SClipboardTerraSpot
+	{
+		string _Type;
+		int _TypeID;
+		int _DescID;
+		STerrainSpotInstance _spotInstance;
+	};
+
+	struct SClipboardVSO
+	{
+		string _Type;
+		int _TypeID;
+		int _DescID;
+		SVSOInstance _vsoInstance;
+	};
+
+	struct STrenchSegInfo
+	{
+		EEntrenchSegmType _SegType;
+		CVec3 _Pos0;
+		CVec3 _Pos1;
+		CVec3 _PosCenter;
+		float _DirAngle;
+		CVec3 _AABBSize;
+		CVec2 _AABBCenter;
+	};
+
+	struct SClipboardTrench
+	{
+		STrenchSegInfo _segmentsInfo[2..];
+		SMapObjectInfo _ObjectInfo;
+	};
+
+	struct SClipboardBridge
+	{
+		SMapObjectInfo _ObjectInfo;
+		CVec2 _CenterSize;
+		CVec2 _EndSize;
+		CVec3 _centerPointList[2..];
+	};
+
+	struct SIntArray2
+	{
+		struct SIntArray1
+		{
+			int _data[];
+		};
+		SIntArray1 _data[];
+	};
+
+	SMapObjectInfo _Objects[];
+	CVec2 _PasteRegion[1..];
+	SIntArray2 _Heights;
+	SIntArray2 _TileTypes;
+	SClipboardTerraSpot _TerraSpots[];
+	SClipboardVSO _vsoArray[];
+	SClipboardTrench _Entrenchments[];
+	SClipboardBridge _Bridges[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

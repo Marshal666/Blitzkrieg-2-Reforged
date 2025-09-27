@@ -1,0 +1,1006 @@
+#include "../game.cll"
+[hExternal] #include "commandparam.h"
+[hExternal] #include "../System/FilePath.h"
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EPositionAllign;
+forward class SUIStateBase;
+forward class SUIStateBaseShared;
+forward class SForegroundTextString;
+forward class SWindowMSButton;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EPositionAllign
+{
+	EPA_LOW_END,
+	ERA_CENTER,
+	EPA_HIGH_END,
+	EPA_MARGIN,
+};
+
+
+// UI object parameters
+class SUIDesc
+{
+	[hidden] int _ClassTypeID;
+};
+
+// string parameter
+[typeRename = "CParam{string}"]
+[noHeader] struct SUIParam_string
+{
+	string _First;
+	// This parameter does not work in shared part!
+	bool _Second;
+
+	#include "include_stringparam"
+};
+
+// int parameter
+[typeRename = "CParam{int}"]
+[noHeader] struct SUIParam_int
+{
+	int _First;
+	// This parameter does not work in shared part!
+	bool _Second;
+};
+
+// int parameter
+[typeRename = "CParam{float}"]
+[noHeader] struct SUIParam_float
+{
+	float _First;
+	// This parameter does not work in shared part!
+	bool _Second;
+};
+
+// vector parameter
+[typeRename = "CParam{CVec2}"]
+[noHeader] struct SUIParam_Vec2
+{
+	CVec2 _First;
+	// This parameter does not work in shared part!
+	bool _Second;
+};
+
+// position align parameter
+[typeRename = "CParam{EPositionAllign}"]
+[noHeader] struct SUIParam_PositionAlign
+{
+	EPositionAllign _First = EPA_LOW_END;
+	// This parameter does not work in shared part!
+	bool _Second;
+};
+
+// base class to command
+struct SUICommandBase
+{
+	// 1st string parameter
+	SUIParam_string _szParam1;
+	// 2nd string parameter
+	SUIParam_string _szParam2;
+	// vector parameter
+	SUIParam_Vec2 _vParam1;
+	// 1st generic parameter
+	SUIParam_int _nParam1;
+};
+
+// -- may be not needed -- window may have context. when window executes command sequence, it passes its context. if message reaction or command doesn't have enough parameters it asks context about it.
+typedef SUICommandBase WindowContext;
+
+//  -- may be not needed -- broadcast message (old fashioned), visits all windows untill some of them processed it
+struct SBUIMessage
+{
+	// message ID.
+	string _MessageID;
+	// string parameter
+	string _StringParam;
+	int _IntParam;
+};
+
+class SUIStateBaseShared
+{
+	[hidden; noCode] int _FakeField;
+};
+
+// fake class to not make SUIGameConsts terminal class
+[typeID = 0x3022CBC1]
+[noCode] class SUIStateBaseSharedTerminal : public SUIStateBaseShared
+{
+};
+
+class SUIStateBase : public SUIDesc
+{
+	SUIStateBaseShared *_pShared;
+};
+
+[typeID = 0x11075C00; no_checksum]
+class SUISMoveTo : public SUIStateBase
+{
+	SUIParam_Vec2 _vOffset;
+	SUIParam_float _fMoveTime;
+	SUIParam_string _szElementToMove;
+
+	#include "include_uismoveto.h"
+};
+
+[typeID = 0x11075C05; no_checksum]
+class SUISRunReaction : public SUIStateBase
+{
+	SUIParam_string _szReactionForward;
+	SUIParam_string _szReactionBack;
+
+	#include "include_uisrunreaction.h"
+};
+
+[typeID = 0x11075C07; no_checksum]
+class SUISSendUIMessage : public SUIStateBase
+{
+	SUIParam_string _szMessageID;
+	SUIParam_string _szParam;
+	SUIParam_int _nForwardParam;
+	SUIParam_int _nBackParam;
+
+	#include "include_uissenduimessage.h"
+};
+
+[typeID = 0x110953C1; no_checksum]
+class SUIConsoleCommand : public SUIStateBase
+{
+	string _EditBoxName;
+
+	#include "include_uiconsolecommand.h"
+};
+
+[typeID = 0x210C5480; no_checksum]
+class SUISDirectRunReaction : public SUIStateBase
+{
+	SUIDesc *_ReactionForward;
+	SUIDesc *_ReactionBackward;
+
+	#include "include_uisdirectrunreaction.h"
+};
+
+// UIScreen recieve command sequience
+struct SUIStateSequence
+{
+	SUIStateBase *_Commands[];
+	bool _Reversable;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STexture;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SBackground : public SUIDesc
+{
+	STexture *_Texture;
+	Color _Color;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106CB03; no_checksum]
+class SBackgroundSimpleScallingTexture : public SBackground
+{
+	// Real size of texture (mainly for n^2-aligned textures)
+	CVec2 _Size;
+
+	#include "include_backgroundsimplescallingtexture.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EPositionAllign;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106F441; no_checksum]
+class SBackgroundSimpleTexture : public SBackground
+{
+	EPositionAllign _TextureX;
+	EPositionAllign _TextureY;
+
+	#include "include_backgroundsimpletexture.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SSubRect
+{
+	SPoint _Size;
+	SRect _Maps;
+	[hidden] SRect _Rect;
+	[hidden] int _Rotate;
+};
+
+[typeID = 0x1106CB02; no_checksum]
+class SBackgroundTiledTexture : public SBackground
+{
+	// Left Top corner
+	SSubRect _rLT;
+	// Right Top corner
+	SSubRect _rRT;
+	SSubRect _rLB;
+	SSubRect _rRB;
+	// Top border
+	SSubRect _rT;
+	SSubRect _rL;
+	SSubRect _rR;
+	SSubRect _rB;
+	// Inner fill
+	SSubRect _rF;
+
+	#include "include_backgroundtiledtexture.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowBaseShared;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SWindowBaseShared
+{
+	// check-in heal
+	[noCode; hidden] bool _Crap;
+};
+
+class SWindowBaseDesc : public SUIDesc
+{
+	SWindowBaseShared *_Shared;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SBackground;
+forward class SUIDesc;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SGameMessageReaction
+{
+	// game message to react on
+	string _GameMessage;
+	string _LogicalReaction;
+	SUIStateSequence _VisualReaction;
+	bool _WaitVisual = true;
+	// if true, then Reaction will lur in forward direction, else - in backward
+	bool _Forward = true;
+};
+
+struct SWindowPlacement
+{
+	SUIParam_Vec2 _Position;
+	SUIParam_PositionAlign _VerAllign;
+	SUIParam_PositionAlign _HorAllign;
+	SUIParam_Vec2 _Size;
+	SUIParam_Vec2 _LowerMargin;
+	SUIParam_Vec2 _UpperMargin;
+};
+
+struct SWindowFlags
+{
+	bool _Transparent;
+};
+
+class SWindowShared : public SWindowBaseShared
+{
+	SUIDesc *_Children[];
+	SBackground *_Background;
+	SBackground *_Foreground;
+	SWindowFlags _Flags;
+	SWindowPlacement _Placement;
+	CVec2 _ActiveArea[];
+	// treat double click as ordinary mouse clicks
+	bool _IgnoreDblClick = false;
+};
+
+class SWindow : public SWindowBaseDesc
+{
+	string _Name;
+	TextFileRef _TooltipFileRef;
+	bool _Visible = true;
+	int _Priority;
+	SGameMessageReaction _GameMessageReactions[];
+	SWindowPlacement _Placement;
+	bool _Enabled = true;
+	SForegroundTextString *_TextString;
+
+	#include "include_Window.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SForegroundTextStringShared;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106CB40; no_checksum]
+class SForegroundTextStringShared
+{
+	TextFileRef _TextStringFileRef;
+	SWindowPlacement _Position;
+	// common text format
+	TextFileRef _FormatStringFileRef;
+
+	#include "include_ForegroundTextStringShared.h"
+};
+
+[typeID = 0x1106CB42; no_checksum]
+class SForegroundTextString : public SUIDesc
+{
+	SForegroundTextStringShared *_Shared;
+	TextFileRef _TextStringFileRef;
+	
+	#include "include_foregroundtextstring.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x17159C40; no_checksum]
+class STextFormat : public SUIDesc
+{
+	SWindowPlacement _Placement;
+	TextFileRef _FormatStringFileRef;
+
+	#include "include_textformat.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11082C40; no_checksum]
+class SWindowSimpleShared : public SWindowShared
+{
+};
+
+[typeID = 0x1107C380; no_checksum]
+class SWindowSimple : public SWindow
+{
+
+	#include "include_windowsimple.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct SMessageSequence
+{
+	SUIDesc *_data[];
+};
+
+struct SMessageSequienceEntry
+{
+	int _CustomCheckReturn;
+	SMessageSequence _Sequience;
+};
+
+typedef SUIDesc MessageCheckBase;
+
+[typeID = 0x1106BC41; no_checksum]
+class SCheckRunScript : public MessageCheckBase
+{
+	string _ScriptFunction;
+
+	#include "include_checkrunscript.h"
+};
+
+[typeID = 0x1106BC42; no_checksum]
+class SCheckPreprogrammed : public MessageCheckBase
+{
+	// Name of preprogrammed check
+	string _CheckName;
+
+	#include "include_checkpreprogrammed.h"
+};
+
+[typeID = 0x15083380; no_checksum]
+class SCheckIsWindowEnabled : public MessageCheckBase
+{
+	string _WindowName;
+	string _ParentWindowName;
+
+	#include "include_checkiswindowenabled.h"
+};
+
+[typeID = 0x110B3400; no_checksum]
+class SCheckIsWindowVisible : public MessageCheckBase
+{
+	string _WindowName;
+	string _ParentWindowName;
+
+	#include "include_checkiswindowvisible.h"
+};
+
+[typeID = 0x170B6300; no_checksum]
+class SCheckIsTabActive : public MessageCheckBase
+{
+	string _TabControlName;
+	int _Tab;
+
+	#include "include_checkistabactive.h"
+};
+
+[typeID = 0x1106BC43; no_checksum]
+class SMessageReactionComplex : public SUIDesc
+{
+	// all possible branches
+	SMessageSequienceEntry _branches[];
+	// check for branch.
+	MessageCheckBase *_ConditionCheck;
+	// always run and before any branch
+	SMessageSequence _commonBefore;
+	// always run and after any branch
+	SMessageSequence _commonAfter;
+
+	#include "include_messagereactioncomplex.h"
+};
+
+[typeID = 0x1106BC44; no_checksum]
+class SARSetGlobalVar : public SUIDesc
+{
+	string _VarName;
+	string _VarValue;
+
+	#include "include_arsetglobalvar.h"
+};
+
+[typeID = 0x1106BC45; no_checksum]
+class SARRemoveGlobalVar : public SUIDesc
+{
+	string _VarName;
+
+	#include "include_arremoveglobalvar.h"
+};
+
+[typeID = 0x1106BC46; no_checksum]
+class SARSendUIMessage : public SUIDesc
+{
+	string _MessageID;
+	string _StringParam;
+	int _IntParam;
+
+	#include "include_arsenduimessage.h"
+};
+
+[typeID = 0x15084340; no_checksum]
+class SARSendGameMessage : public SUIDesc
+{
+	string _EventName;
+	int _IntParam;
+
+	#include "include_arsendgamemessage.h"
+};
+
+[typeID = 0x15083384; no_checksum]
+class SARSwitchTab : public SUIDesc
+{
+	string _TabControlName;
+	int _Tab;
+
+	#include "include_arswitchtab.h"
+};
+
+struct SReactionSequenceEntry
+{
+	string _Name;
+	SUIDesc *_Reaction;
+};
+
+struct SMessageReactionsDesc
+{
+	SReactionSequenceEntry _reactions[];
+	LUAFileRef _ScriptFileRef;
+};
+
+struct SCommandSequienceEntry
+{
+	string _Name;
+	SUIStateSequence _Sequence;
+};
+
+struct SScreenTextEntry
+{
+	// text identifier
+	string _Name;
+	// text itself
+	TextFileRef _TextFileRef;
+};
+
+[typeID = 0x1106BC48; no_checksum]
+class SWindowScreenShared : public SWindowShared
+{
+};
+
+[typeID = 0x1106BC4A; no_checksum]
+class SWindowScreen : public SWindow
+{
+	// message reactions
+	SMessageReactionsDesc _MessageReactions;
+	//  all possible command sequiences possible on this screen when some window generates command sequience it only sends it's id
+	SCommandSequienceEntry _CommandSequiences[];
+	int _TooltipContext = 0;
+	// Misc. texts used in the screen
+	SScreenTextEntry _RelatedTexts[];
+
+	#include "include_screen.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SBackground;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C405; no_checksum]
+class SWindowProgressBarShared : public SWindowShared
+{
+	SBackground *_Forward;
+	SBackground *_Backward;
+	SBackground *_Glow;
+	// progress bar visual step or 0
+	float _StepSize;
+	CVec2 _GlowSize;
+};
+
+[typeID = 0x1106C402; no_checksum]
+class SWindowProgressBar : public SWindow
+{
+	float _Progress;
+
+	#include "include_windowprogressbar.h"
+};
+
+struct SProgressBarTextureInfo
+{
+	int _MaxValue;
+	SBackground *_Texture;
+};
+
+struct SMultiTextureProgressBarSharedState
+{
+	float _Value;
+	SBackground *_Background;
+};
+
+[typeID = 0x150A0AC1; no_checksum]
+class SWindowMultiTextureProgressBarShared : public SWindowShared
+{
+	SMultiTextureProgressBarSharedState _States[];
+};
+
+[typeID = 0x150A0AC2; no_checksum]
+class SWindowMultiTextureProgressBar : public SWindow
+{
+	float _Progresses[];
+	bool _Solid = true;
+	float _PieceSize;
+
+	#include "include_windowmultitextureprogressbar.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class STextFormat;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C3C2; no_checksum]
+class SWindowTextViewShared : public SWindowShared
+{
+	int _Color;
+	int _Format;
+	string _FontName;
+	int _RedLineSpace;
+};
+
+[typeID = 0x1106C3C4; no_checksum]
+class SWindowTextView : public SWindow
+{
+	TextFileRef _TextFileRef;
+	// Text View have constant width and recalculate it's height resized accoring to text set. If false, window has constant size.
+	bool _ResizeOnTextSet = true;
+	STextFormat *_TextFormat;
+
+	#include "include_windowtextview.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C409; no_checksum]
+class SWindowTooltipShared : public SWindowShared
+{
+	CVec2 _LowerBorder;
+	CVec2 _HigherBorder;
+};
+
+[typeID = 0x1106C40A; no_checksum]
+class SWindowTooltip : public SWindow
+{
+
+	#include "include_windowtooltip.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x170A7B80; no_checksum]
+class SWindowPlayerShared : public SWindowShared
+{
+};
+
+[typeID = 0x170A7B81; no_checksum]
+class SWindowPlayer : public SWindow
+{
+	string _SequenceName;
+	bool _MaintainAspectRatio = true;
+
+	#include "include_windowplayer.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum ETextEntryType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum ETextEntryType
+{
+	ETET_ALL,
+	ETET_NUMERIC,
+	ETET_GAME_SPY,
+	ETET_LOCAL_PLAYERNAME,
+	ETET_FILENAME,
+};
+
+[typeID = 0x1106C340; no_checksum]
+class SWindowEditLineShared : public SWindowShared
+{
+	string _FontName;
+	Color _Color;
+	Color _CursorColor;
+	Color _SelColor;
+	int _LeftSpace;
+	int _RightSpace;
+	int _YOffset;
+};
+
+[typeID = 0x1106C342; no_checksum]
+class SWindowEditLine : public SWindow
+{
+	string _OnReturn;
+	SUIStateSequence _SequienceOnReturn;
+	string _OnEscape;
+	SUIStateSequence _SequienceOnEscape;
+	// number of characters in text limit
+	int _MaxLength = -1;
+	bool _TextScroll;
+	ETextEntryType _TextEntryType;
+	bool _Password;
+	SUIStateSequence _SequienceOnTextChanged;
+	string _OnTextChanged;
+	int _TabOrder = -1;
+	SUIStateSequence _SequienceOnFocusLost;
+
+	#include "include_windoweditline.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x11095B02; no_checksum]
+class SWindowConsoleOutputShared : public SWindowShared
+{
+	bool _AutoDelete;
+};
+
+[typeID = 0x11095B01; no_checksum]
+class SWindowConsoleOutput : public SWindow
+{
+
+	#include "include_windowconsoleoutput.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x110AC480; no_checksum]
+class SWindowStatsSystemShared : public SWindowShared
+{
+};
+
+[typeID = 0x110AC4C0; no_checksum]
+class SWindowStatsSystem : public SWindow
+{
+
+	#include "include_windowstatssystem.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C303; no_checksum]
+class SWindowConsoleShared : public SWindowShared
+{
+	int _Color;
+	SWindowEditLine *_EditLine;
+	SUIStateSequence _MakeVisible;
+};
+
+[typeID = 0x1106C304; no_checksum]
+class SWindowConsole : public SWindow
+{
+
+	#include "include_windowconsole.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowScrollBar;
+forward class SWindow;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+class SWindowScrollableContainerBaseShared : public SWindowShared
+{
+	int _Interval;
+	SWindowScrollBar *_ScrollBar;
+	SWindow *_Border;
+	SWindow *_Selection;
+	SWindow *_PreSelection;
+	SWindow *_NegativeSelection;
+};
+
+class SWindowScrollableContainerBase : public SWindow
+{
+	// Whenever a new selection is made
+	SUIStateSequence _OnSelection;
+	SUIStateSequence _OnDoubleClick;
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x170AF300; no_checksum]
+class SWindowScrollableContainerShared : public SWindowScrollableContainerBaseShared
+{
+};
+
+[typeID = 0x1107C381; no_checksum]
+class SWindowScrollableContainer : public SWindowScrollableContainerBase
+{
+
+	#include "include_windowscrollablecontainer.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C3C0; no_checksum]
+class SWindow1LvlTreeControlShared : public SWindowScrollableContainerBaseShared
+{
+	SWindow *_ItemSample;
+	SWindow *_SubItemSample;
+};
+
+[typeID = 0x1106C3C1; no_checksum]
+class SWindow1LvlTreeControl : public SWindowScrollableContainerBase
+{
+
+	#include "include_window1lvltreecontrol.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowListHeader;
+forward class SWindowListItem;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C2C0; no_checksum]
+class SWindowListHeaderShared : public SWindowShared
+{
+	SWindow *_SortIconDown;
+	SWindow *_SortIconUp;
+	SWindowMSButton *_SubHeaderSamples[];
+};
+
+[typeID = 0x1106C2C2; no_checksum]
+class SWindowListHeader : public SWindow
+{
+
+	#include "include_windowlistheader.h"
+};
+
+[typeID = 0x170CC480; no_checksum]
+class SWindowListItemShared : public SWindowShared
+{
+	SWindow *_SubItemSamples[];
+};
+
+[typeID = 0x1106C2C3; no_checksum]
+class SWindowListItem : public SWindow
+{
+
+	#include "include_windowlistitem.h"
+};
+
+[typeID = 0x1106C301; no_checksum]
+class SWindowListSharedData : public SWindowScrollableContainerBaseShared
+{
+	SWindowListItem *_ListItem;
+	SWindowListHeader *_ListHeader;
+};
+
+[typeID = 0x1106C302; no_checksum]
+class SWindowListCtrl : public SWindowScrollableContainerBase
+{
+
+	#include "include_windowlistctrl.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowScrollableContainerBase;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C440; no_checksum]
+class SWindowTabControlShared : public SWindowShared
+{
+	SWindowScrollableContainerBase *_HeadersContainer;
+	SWindow *_ContainerSample;
+	SWindowMSButton *_ButtonSample;
+};
+
+[typeID = 0x1106C442; no_checksum]
+class SWindowTabControl : public SWindow
+{
+	struct STab
+	{
+		SWindow *_TabContainer;
+		string _ButtonName;
+	};
+	STab _tabs[];
+
+	#include "include_windowtabcontrol.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowListCtrl;
+forward class SWindowMSButton;
+forward class SWindow;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x17122380; no_checksum]
+class SWindowComboBoxShared : public SWindowShared
+{
+	// Shows or edits selected item
+	SWindow *_Line;
+	// Icon button shows the drop-down list
+	SWindowMSButton *_Icon;
+	// Scrollable drop-down list
+	SWindowListCtrl *_List;
+};
+
+[typeID = 0x17122381; no_checksum]
+class SWindowComboBox : public SWindow
+{
+	int _ListPriority;
+	// "= 0" - fixed size, "> 0" - resizeable with given initial size
+	int _MaxVisibleRows;
+	// Whenever a new selection is made
+	SUIStateSequence _OnSelection;
+
+	#include "include_windowcombobox.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EButtonSubstateType;
+forward class STextFormat;
+forward enum EButtonChangeStateType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+enum EButtonSubstateType
+{
+	BST_NORMAL,
+	BST_MOUSE_OVER,
+	BST_PUSHED_DEEP,
+	BST_DISABLED,
+	BST_RIGHT_DOWN,
+};
+
+enum EButtonChangeStateType
+{
+	BCST_ON_PUSH,
+	BCST_ON_RELEASE,
+};
+
+struct SButtonVisualSubState
+{
+	SBackground *_Background;
+	SBackground *_Foreground;
+	SForegroundTextString *_TextString;
+	// visual effect on enter to this state 
+	SUIStateSequence _OnEnterSubState;
+	STextFormat *_TextFormat;
+};
+
+struct SButtonVisualState
+{
+	SButtonVisualSubState _Normal;
+	SButtonVisualSubState _MouseOver;
+	SButtonVisualSubState _Pushed;
+	SButtonVisualSubState _Disabled;
+	SButtonVisualSubState _RightButtonDown;
+	EButtonSubstateType _DefaultSubState;
+	// button reaction
+	SUIStateSequence _VisualOnEnterState;
+};
+
+struct SButtonLogicalState
+{
+	string _MessageOnEnterState;
+	SUIStateSequence _CommandsOnEnterState;
+	SUIStateSequence _CommandsOnRightClick;
+	SUIStateSequence _commandsOnLDblKlick;
+	bool _WaitVisual;
+	bool _ReverseCommands;
+	// State ID
+	string _Name;
+};
+
+[typeID = 0x1106C380; no_checksum]
+class SWindowMSButtonShared : public SWindowShared
+{
+	SButtonVisualState _VisualStates[];
+	EButtonChangeStateType _TriggerMode = BCST_ON_RELEASE;
+};
+
+// Multi State Button may have any number of states (must be equal in number to graphical states ). 
+[typeID = 0x1106C382; no_checksum]
+class SWindowMSButton : public SWindow
+{
+	SButtonLogicalState _ButtonStates[];
+	// 0 means no group. other values mean button is in group
+	int _ButtonGroupID;
+	// if true then this button works like switch button
+	bool _AutoChangeState;
+	SUIStateSequence _PushEffect; // shortcut to most common button action (eg. sound)
+	int _State;
+	TextFileRef _TextFileRef;
+	STextFormat *_TextFormat;
+
+	#include "include_windowmsbutton.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C401; no_checksum]
+class SWindowSliderShared : public SWindowShared
+{
+	bool _Horisontal;
+	SWindowMSButton *_Lever;
+	// minimal lever size, to ensure lever is always visible and not reduce to size 0
+	float _MinLeverSize = 32;
+	// maximum lever size. if 0, then allow resize up to all scrollbar size
+	float _MaxLeverSize = 0;
+};
+
+[typeID = 0x1106C400; no_checksum]
+class SWindowSlider : public SWindow
+{
+	// number of special positions. if !=0 then slider will stop on the nearest
+	int _SpecialPositions = 0;
+
+	#include "include_windowslider.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SWindowSlider;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x1106C383; no_checksum]
+class SWindowScrollBarShared : public SWindowShared
+{
+	float _Speed;
+	SWindowMSButton *_ButtonLower;
+	SWindowMSButton *_ButtonGreater;
+	SWindowSlider *_Slider;
+};
+
+// contains 1 slider and 2 buttons (up down)
+[typeID = 0x1106C384; no_checksum]
+class SWindowScrollBar : public SWindow
+{
+	SUIStateSequence _Effects;
+
+	#include "include_windowscrollbar.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward enum EButtonSubstateType;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+[typeID = 0x170AE340; no_checksum]
+class SUISButtonSubstate : public SUIStateBase
+{
+	EButtonSubstateType _Substate;
+	float _WaitTime;
+	SUIParam_string _szButton;
+
+	#include "include_uisbuttonsubstate.h"
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

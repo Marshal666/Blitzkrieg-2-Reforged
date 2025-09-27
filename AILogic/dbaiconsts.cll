@@ -1,0 +1,117 @@
+#include "../game.cll"
+#include "../stats_b2_m1/rpgstats.cll"
+#include "../stats_b2_m1/dbreinforcements.cll"
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+forward class SFenceRPGStats;
+forward class SEntrenchmentRPGStats;
+forward class SSquadRPGStats;
+forward class SUnitStatsModifier;
+forward enum EReinforcementType;
+forward enum EDesignUnitType;
+forward class SObjectBaseRPGStats;
+forward enum EDBUnitRPGType;
+forward class SMineRPGStats;
+forward class SAIExpLevel;
+forward class SInfantryRPGStats;
+forward class SStaticObjectRPGStats;
+forward class SMechUnitRPGStats;
+forward class SManuverDescriptor;
+forward class SVisObj;
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+struct STankPitInfo
+{
+	SMechUnitRPGStats *_sandBagTankPits[1..];
+	SMechUnitRPGStats *_digTankPits[1..];
+};
+
+struct SCommonInfo
+{
+	SObjectBaseRPGStats *_antitankObjects[1..];
+	SFenceRPGStats *_APFence;
+	SMineRPGStats *_MineUniversal;
+	SMineRPGStats *_MineAT;
+	SMineRPGStats *_MineAP;
+	SMineRPGStats *_MineCharge;
+	SMineRPGStats *_LandMine;
+	SEntrenchmentRPGStats *_Entrenchment;
+	SMechUnitRPGStats *_TorpedoStats;
+	SInfantryRPGStats *_MosinStats;
+	SMechUnitRPGStats *_G152mmML20Stats;
+	SSquadRPGStats *_SingleUnitFormation;
+	SStaticObjectRPGStats *_ShellBox;
+	SAIExpLevel *_expLevels[];
+	// experience part to distribute among other reinforcements in case of level cap
+	float _ExpReinfDistributionCoeff;
+	// commander experience part to distribute among other reinforcements in case of level cap
+	float _ExpCommanderDistributionCoeff;
+	// unit experience for commander penalty pool
+	float _ExpCommanderUnitPenaltyCoeff;
+	// commander exp part to compensate penalty pool
+	float _ExpCommanderPenaltyCoeff;
+	SUnitStatsModifier *_NightStatModifier;
+	SUnitStatsModifier *_BadWeatherStatModifier;
+};
+
+struct SWarFogConsts
+{
+	int _MaxRadius;
+	bool _UseHeights;
+	float _TanEpsilon;
+	float _UnitHeight;
+};
+
+struct SReinforcementRemap
+{
+	EReinforcementType _ReinfType;
+	EDBUnitRPGType _UnitRPGType;
+};
+
+struct SReinforcementExpediency
+{
+	float _Expediency[20..20];
+};
+
+struct SUnitTypePriority
+{
+	EDesignUnitType _UnitType;
+	int _Priority;
+};
+
+struct SReinfRecycleTime
+{
+	EReinforcementType _Type;
+	// (seconds) Recycle time for this reinforcement
+	int _Time;
+};
+
+[typeID = 0x11074CC0]
+class SAIGameConsts
+{
+	struct SCommonScriptEntry
+	{
+		LUAFileRef _ScriptFileRef;
+	};
+	STankPitInfo _TankPits;
+	SMechUnitRPGStats *_FoxHoles[1..];
+	SCommonInfo _Common;
+	SManuverDescriptor *_PlaneManuvers[];
+	SWarFogConsts _WarFog;
+	SCommonScriptEntry _CommonScriptFileRefs[];
+	SReinforcementRemap _ReinforcementTypes[];
+	SReinforcementExpediency _ReinfExpediency[20..20];
+	SUnitTypePriority _UnitTypesPriorities[];
+	SVisObj *_Parachute;
+	// Time to remove parachute when paratrooper landed
+	int _RemoveParachuteTime;
+	SReinfRecycleTime _ReinforcementRecycleTime[1..];
+	// When small plane hit ground it shoots from this weapon to produce area damage and plane explosition effect.
+	SWeaponRPGStats *_AviationGroundCrashExplosion;
+	SWeaponRPGStats *_FlamethrowerDeathExplotion; // when flamethrower dies it explodes with this weapon shoot
+	// planes with length less then this will hit ground upon crash
+	int _GroundCrashPlaneSize = 100;
+	// reinforcement deploy templates
+	STypedDeployTemplate _TypedTemplates[];
+};
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
