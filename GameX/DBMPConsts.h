@@ -53,7 +53,8 @@ namespace NDb
 		CDBPtr< SReinforcement > pStartingUnits;
 
 		STechLevelReinfSet() :
-			__dwCheckSum( 0 )
+			__dwCheckSum( 0 ),
+			bDisabled(false)	// Make levels are enabled by default
 		{ }
 		//
 		void ReportMetaInfo( const string &szAddName, BYTE *pThis ) const;
