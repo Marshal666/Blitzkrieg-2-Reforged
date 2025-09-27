@@ -1,4 +1,3 @@
-[English](README.md)        [Русский](README_Russian.md)        [中文](README_Chinese.md)        [हिन्दी](README_Hindi.md)        [Español](README_Spanish.md)        [Français](README_French.md)        [Deutsch](README_German.md)        [Português](README_Portuguese.md)        [日本語](README_Japanese.md)        [Bahasa Indonesia](README_Indonesian.md)
 
 [![Blitzkrieg II Trailer](Blitzkrieg_2.png)](https://www.youtube.com/watch?v=Cw8rA2hvDGg)
 
@@ -8,6 +7,10 @@ The game is still available on [Steam](https://store.steampowered.com/app/313500
 
 In 2025, the game's source code was released under a [special license](LICENSE.md) that prohibits commercial use but is completely open for the game's community, education and research.
 Please review the terms of the [license agreement](LICENSE.md) carefully before using it.
+
+## The new edited source code is on the [dev](https://github.com/Marshal666/Blitzkrieg-2-Reforged/tree/dev) branch!
+
+
 
 ## Tech stack
 
