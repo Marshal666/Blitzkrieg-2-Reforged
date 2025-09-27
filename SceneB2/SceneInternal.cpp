@@ -209,6 +209,7 @@ bool CScene::SetupMode( ESceneMode eMode, bool _bEditorMode )
 
 	theUIVisitor.SetGView( data[eScene]->p2DView );
 	Singleton<IUIInitialization>()->Set2DGameView( data[eScene]->p2DView );
+	
 	//
 	return true;
 }
@@ -424,7 +425,7 @@ static void CalcGammaRamp2Bounded( NGfx::SPixel8888 *pRamp, float fBrightness, f
 {
 	// calculate equation params for Y = A*X + B
 	// contrast: a*x + b
-	// если contrast < 0, то a = 1/a (наклон <45 градусов)
+	// пїЅпїЅпїЅпїЅ contrast < 0, пїЅпїЅ a = 1/a (пїЅпїЅпїЅпїЅпїЅпїЅ <45 пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 	float fA = 1.0f + 4.0f*fabs( fContrast );
 	if ( fContrast < 0 )
 		fA = 1.0f / fA;

@@ -162,6 +162,29 @@ bool CInterfaceMPGameRoom::Execute( const string &szSender, const string &szReac
 	return false;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int CInterfaceMPGameRoom::SelectionIndexToNationIndex(int nSelectionIndex)
+{
+	const NDb::SMultiplayerConsts *pMPConsts = NGameX::GetMPConsts();
+	int nTechLevel = gameDesc.nTechLevel;
+	vector< NDb::SMultiplayerSide > sides = pMPConsts->sides;
+
+	if ( !sides[0].techLevels[nTechLevel].bDisabled && nSelectionIndex == 0 )
+			return 0;
+
+	int nValidIndex = 0;
+	for(int i = 0; i < sides.size(); i++)
+	{
+		if ( !sides[i].techLevels[nTechLevel].bDisabled )
+			nValidIndex++;
+		
+		if ( nValidIndex == nSelectionIndex )
+			return i;
+	}
+	
+	// If nation index selection is somehow wrong (it should never be), just pick a random one..
+	return 0;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool CInterfaceMPGameRoom::OnPlayerCombo( const string &szSender )
 {
 	int nIndex = -1;
@@ -208,7 +231,7 @@ bool CInterfaceMPGameRoom::OnChangeSideReaction()
 	}
 	else
 	{
-		slot.info.nCountry = nIndex - 1;
+		slot.info.nCountry = SelectionIndexToNationIndex(nIndex);
 		slot.info.bRandomCountry = false;
 	}
 
@@ -313,7 +336,16 @@ void CInterfaceMPGameRoom::SendUpdateSlot( const int nSlot )
 	if ( slots[nSlot].info.bRandomCountry )
 	{
 		const NDb::SMultiplayerConsts *pMPConsts = NGameX::GetMPConsts();
-		slots[nSlot].info.nCountry = NWin32Random::Random( pMPConsts->sides.size() );
+		vector< NDb::SMultiplayerSide > sides = pMPConsts->sides;
+		int nTechLevel = gameDesc.nTechLevel;
+
+		// Build a list of valid nation indexes and pick a random one from there
+		nstl::vector< int > validIndexes;
+		for ( int i = 0; i < sides.size(); i++ )
+			if ( !sides[i].techLevels[nTechLevel].bDisabled )
+				validIndexes.push_back(i);
+
+		slots[nSlot].info.nCountry = validIndexes[NWin32Random::Random( validIndexes.size() )];
 	}
 	pMsg->info = slots[nSlot].info;
 	pMsg->nSlot = nSlot;
@@ -463,7 +495,9 @@ bool CInterfaceMPGameRoom::OnGameRoomInitMessage( const SMPUIGameRoomInitMessage
 		slot.pCountry->AddItem( pRandomItem );
 		for ( int j = 0; j < pMPConsts->sides.size(); ++j )
 		{
-			if ( pMPConsts->sides[j].pPartyInfo && CHECK_TEXT_NOT_EMPTY_PRE(pMPConsts->sides[j].,Name) )
+			if ( pMPConsts->sides[j].pPartyInfo && 
+				 !pMPConsts->sides[j].techLevels[gameDesc.nTechLevel].bDisabled && 
+				 CHECK_TEXT_NOT_EMPTY_PRE(pMPConsts->sides[j].,Name))
 			{
 				CPtr<CTextureData> pData = new CTextureData( pMPConsts->sides[j].pListItemIcon, GET_TEXT_PRE(pMPConsts->sides[j].,Name) );
 				slot.pCountry->AddItem( pData );

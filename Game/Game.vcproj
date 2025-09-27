@@ -20,7 +20,7 @@
 			ATLMinimizesCRunTimeLibraryUsage="FALSE">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Ow /Zm500 /w34701"
+				AdditionalOptions="/Ow /Zm1400 /w34701"
 				Optimization="0"
 				AdditionalIncludeDirectories="$(CommonProgramFiles)\System\ado;$(SolutionDir)vendor\Stingray\Include"
 				PreprocessorDefinitions="WIN32,_DEBUG,NIVAL_DLL,_NSTL_HELP_DEBUG;_DO_ASSERT_SLOW,_WINDOWS"
@@ -91,7 +91,7 @@
 			ATLMinimizesCRunTimeLibraryUsage="FALSE">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Ow /Zm300 /w34701"
+				AdditionalOptions="/Ow /Zm900 /w34701"
 				Optimization="0"
 				AdditionalIncludeDirectories="$(CommonProgramFiles)\System\ado;$(SolutionDir)vendor\Stingray\Include"
 				PreprocessorDefinitions="WIN32,_DEBUG,FAST_DEBUG,NIVAL_DLL;_FASTDEBUG;_NSTL_HELP_DEBUG;_DO_ASSERT_SLOW,_WINDOWS"
@@ -162,7 +162,7 @@
 			ATLMinimizesCRunTimeLibraryUsage="FALSE">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Ow /Zm300 /w34701"
+				AdditionalOptions="/Ow /Zm900 /w34701"
 				Optimization="3"
 				GlobalOptimizations="TRUE"
 				InlineFunctionExpansion="2"
@@ -243,7 +243,7 @@
 			ATLMinimizesCRunTimeLibraryUsage="FALSE">
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalOptions="/Ow /Zm300 /w34701"
+				AdditionalOptions="/Ow /Zm900 /w34701"
 				Optimization="3"
 				GlobalOptimizations="TRUE"
 				InlineFunctionExpansion="2"

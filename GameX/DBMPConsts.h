@@ -49,6 +49,7 @@ namespace NDb
 		mutable DWORD __dwCheckSum;
 	public:
 		vector< CDBPtr< SReinforcement > > reinforcements;
+		bool bDisabled;
 		CDBPtr< SReinforcement > pStartingUnits;
 
 		STechLevelReinfSet() :

@@ -71,6 +71,7 @@ class CInterfaceMPGameRoom : public CInterfaceMPScreenBase,
 	CPtr<ITextView> pCantStartColour;
 public:
 	ZEND int operator&( IBinSaver &f ) { f.Add(1,(CInterfaceMPScreenBase*)this); f.Add(2,&pSessionName); f.Add(3,&pTechLevel); f.Add(4,&pNumPlayers); f.Add(5,&pMapName); f.Add(6,&pMinimap); f.Add(7,&pTimeLimit); f.Add(8,&pCaptureTime); f.Add(9,&pGameSpeed); f.Add(10,&pUnitExperience); f.Add(11,&pMain); f.Add(12,&slots); f.Add(13,&nOwnSlot); f.Add(14,&pList); f.Add(15,&pSlotTemplate); f.Add(16,&pButtonBeginGame); f.Add(17,&pChatInput); f.Add(18,&pChatOutput); f.Add(19,&pWaitMessage); f.Add(20,&bConnected); f.Add(21,&gameDesc); f.Add(22,&bHost); return 0; }
+	int SelectionIndexToNationIndex(int nSelectionIndex);
 private:
 	void RegisterObservers();
 

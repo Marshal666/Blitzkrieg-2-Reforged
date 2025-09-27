@@ -11,7 +11,7 @@
 			<Tool Name="VCPreLinkEventTool"  CommandLine="set LIB=$(SolutionDir)vendor\MySQL\lib;$(SolutionDir)vendor\Granny\lib;$(SolutionDir)vendor\Bink;$(SolutionDir)vendor\FMOD\api\lib;$(SolutionDir)vendor\S3TC;$(SolutionDir)vendor\Stingray\lib;$(SolutionDir)vendor\libintl\lib;$(SolutionDir)vendor\libsvn\lib;%LIB%
 cd $(ProjectDir)
 cd $(IntDir)
-n:\Dev\Soft\Utils\DefBuild.exe $(ProjectName).def
+c:\BK2_Compile_Utils\DefBuild.exe $(ProjectName).def
 if errorlevel 1 goto checklib
 :BuildImportLib
 lib /NOLOGO *.obj /def:$(ProjectName).def /MACHINE:X86 /out:$(OutDir)/$(ProjectName).lib
@@ -29,7 +29,7 @@ dir>nul" />
 			<Tool Name="VCPreLinkEventTool"  CommandLine="set LIB=$(SolutionDir)vendor\MySQL\lib;$(SolutionDir)vendor\Granny\lib;$(SolutionDir)vendor\Bink;$(SolutionDir)vendor\FMOD\api\lib;$(SolutionDir)vendor\S3TC;$(SolutionDir)vendor\Stingray\lib;$(SolutionDir)vendor\libintl\lib;$(SolutionDir)vendor\libsvn\lib;%LIB%
 cd $(ProjectDir)
 cd $(IntDir)
-n:\Dev\Soft\Utils\DefBuild.exe $(ProjectName).def
+c:\BK2_Compile_Utils\DefBuild.exe $(ProjectName).def
 if errorlevel 1 goto checklib
 :BuildImportLib
 lib /NOLOGO *.obj /def:$(ProjectName).def /MACHINE:X86 /out:$(OutDir)/$(ProjectName).lib
@@ -47,7 +47,7 @@ dir>nul" />
 			<Tool Name="VCPreLinkEventTool"  CommandLine="set LIB=$(SolutionDir)vendor\MySQL\lib;$(SolutionDir)vendor\Granny\lib;$(SolutionDir)vendor\Bink;$(SolutionDir)vendor\FMOD\api\lib;$(SolutionDir)vendor\S3TC;$(SolutionDir)vendor\Stingray\lib;$(SolutionDir)vendor\libintl\lib;$(SolutionDir)vendor\libsvn\lib;%LIB%
 cd $(ProjectDir)
 cd $(IntDir)
-n:\Dev\Soft\Utils\DefBuild.exe $(ProjectName).def
+c:\BK2_Compile_Utils\DefBuild.exe $(ProjectName).def
 if errorlevel 1 goto checklib
 :BuildImportLib
 lib /NOLOGO *.obj /def:$(ProjectName).def /MACHINE:X86 /out:$(OutDir)/$(ProjectName).lib
@@ -64,7 +64,7 @@ dir>nul" />
 			<Tool Name="VCLibrarianTool"  AdditionalOptions="/list >nul"  OutputFile="$(OutDir)/$(ProjectName).lib"  SuppressStartupBanner="TRUE" />
 			<Tool Name="VCPreLinkEventTool"  CommandLine="cd $(ProjectDir)
 cd $(IntDir)
-n:\Dev\Soft\Utils\DefBuild.exe $(ProjectName)UniqueName.obj _ReferenceModuleHook15
+c:\BK2_Compile_Utils\DefBuild.exe $(ProjectName)UniqueName.obj _ReferenceModuleHook15
 &quot;$(VCInstallDir)bin\lib&quot; /NOLOGO /OUT:$(OutDir)/$(ProjectName).lib *.obj" />
 			<Tool Name="VCResourceCompilerTool"  PreprocessorDefinitions="NDEBUG"  Culture="1049"  AdditionalIncludeDirectories="$(CommonProgramFiles)\System\ado;$(SolutionDir)vendor\Stingray\Include" />
 		</Configuration>

@@ -1,6 +1,6 @@
 cd ..
 echo Getting latest tools...
-xcopy /D /Y "N:\Dev\Soft\Utils\ArchCopiesToLocal\*.*" ".\arch\"
+xcopy /D /Y "c:\BK2_Compile_Utils\ArchCopiesToLocal\*.*" ".\arch\"
 
 echo Checking code, step 1 of 5: arx with code synchronization tool
 arch\ArxWithCodeSync.exe arch\Directories.txt NPC >> issues.tmp

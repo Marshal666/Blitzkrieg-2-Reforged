@@ -1,0 +1,87 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build Release Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\CompileRelease.bat",
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\CompileDebug.bat",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build Fast Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\CompileFastDebug.bat",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Rebuild Release Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\RebuildRelease.bat",
+      "problemMatcher": []
+    },
+    {
+      "label": "Rebuild Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\RebuildDebug.bat",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Rebuild Fast Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\CompileScripts\\RebuildFastDebug.bat",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Release Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\Release\\Game.exe",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\Debug\\Game.exe",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Fast Debug Game.exe",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\FastDebug\\Game.exe",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Show release build log",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\BuildLogs\\ReleaseBuild.log",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+    {
+      "label": "Show debug build log",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\BuildLogs\\DebugBuild.log",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+        {
+      "label": "Show fast debug build log",
+      "type": "shell",
+      "command": "${workspaceFolder}\\..\\BuildLogs\\FastDebugBuild.log",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": []
+    },
+  ]
+}

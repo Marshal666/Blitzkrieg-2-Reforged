@@ -121,7 +121,7 @@ static void StartLagProfiling()
 static string szLaunchDirectory;
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow )
 {
-	CreateMutex( 0, TRUE, "NIVAL_RTS_ENGINE" ); // при выходе система сама уничтожит этот mutex
+	// CreateMutex( 0, TRUE, "NIVAL_RTS_ENGINE" ); // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ mutex
 	if ( GetLastError() == ERROR_ALREADY_EXISTS )
 		return 0xDEAD;
 #ifndef _FINALRELEASE
@@ -183,7 +183,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	CreateAI();
 	//
 	// initialize win app
-	if ( !NWinFrame::SFLB1_InitApplication(hInstance, " Blitzkrieg II", "NIVAL_RTS_ENGINE", MAKEINTRESOURCE(IDI_MAIN)) )
+	if ( !NWinFrame::SFLB1_InitApplication(hInstance, " Blitzkrieg II Reforged", "NIVAL_RTS_ENGINE", MAKEINTRESOURCE(IDI_MAIN)) )
 	{
 		MessageBox( 0, "InitApplication", "Error", MB_OK );
 		return 0xDEAD;
@@ -217,10 +217,13 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 	//
 	NGlobal::SetVar( "code_version_number", REVISION_NUMBER_STR );
 	NGlobal::SetVar( "code_build_date_time", BUILD_DATE_TIME_STR );
+
+
+
 	// 
 	pSplashScreen = 0;
-	// setup video mode
-	if ( !Scene()->SetupMode(SCENE_MODE_CONFIG, false) )
+	// setup video mode - SCENE_MODE was changed to windowed by default - easier black screen closing
+	if ( !Scene()->SetupMode(SCENE_MODE_WINDOWED, false) )
 	{
 		MessageBox( 0, "Can't setup scene mode from config", "Error", MB_OK );
 		return 0xDEAD;
