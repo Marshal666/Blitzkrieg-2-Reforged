@@ -166,11 +166,9 @@ int CInterfaceMPGameRoom::SelectionIndexToNationIndex(int nSelectionIndex)
 {
 	const NDb::SMultiplayerConsts *pMPConsts = NGameX::GetMPConsts();
 	int nTechLevel = gameDesc.nTechLevel;
-	vector< NDb::SMultiplayerSide > sides = pMPConsts->sides;
+	const nstl::vector< NDb::SMultiplayerSide > &sides = pMPConsts->sides;
 
-	if ( !sides[0].techLevels[nTechLevel].bDisabled && nSelectionIndex == 0 )
-			return 0;
-
+	// nSelectionIndex is always >= 1
 	int nValidIndex = 0;
 	for(int i = 0; i < sides.size(); i++)
 	{
@@ -183,6 +181,22 @@ int CInterfaceMPGameRoom::SelectionIndexToNationIndex(int nSelectionIndex)
 	
 	// If nation index selection is somehow wrong (it should never be), just pick a random one..
 	return 0;
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+int CInterfaceMPGameRoom::NationIndexToSelectionIndex(int nCountryIndex)
+{
+	const NDb::SMultiplayerConsts *pMPConsts = NGameX::GetMPConsts();
+	int nTechLevel = gameDesc.nTechLevel;
+	const nstl::vector< NDb::SMultiplayerSide > &sides = pMPConsts->sides;
+
+	int nValidIndex = -1;
+	for(int i = 0; i <= nCountryIndex; i++)
+	{
+		if ( !sides[i].techLevels[nTechLevel].bDisabled )
+			nValidIndex++;
+	}
+	
+	return nValidIndex;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 bool CInterfaceMPGameRoom::OnPlayerCombo( const string &szSender )
@@ -336,7 +350,7 @@ void CInterfaceMPGameRoom::SendUpdateSlot( const int nSlot )
 	if ( slots[nSlot].info.bRandomCountry )
 	{
 		const NDb::SMultiplayerConsts *pMPConsts = NGameX::GetMPConsts();
-		vector< NDb::SMultiplayerSide > sides = pMPConsts->sides;
+		const nstl::vector< NDb::SMultiplayerSide >& sides = pMPConsts->sides;
 		int nTechLevel = gameDesc.nTechLevel;
 
 		// Build a list of valid nation indexes and pick a random one from there
@@ -591,7 +605,7 @@ void CInterfaceMPGameRoom::UpdateInterior()
 		if ( slot.info.bRandomCountry )
 			slot.pCountry->Select( 0 );
 		else
-			slot.pCountry->Select( slot.info.nCountry + 1 );
+			slot.pCountry->Select( NationIndexToSelectionIndex(slot.info.nCountry) + 1 );
 		slot.pTeam->SetState( slot.info.nTeam );
 		slot.pColour->Select( slot.info.nColour );
 		slot.pAccept->SetState( slot.info.bAccept ? 1 : 0 );
