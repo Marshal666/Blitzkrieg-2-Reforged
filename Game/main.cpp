@@ -122,8 +122,8 @@ static string szLaunchDirectory;
 int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow )
 {
 	// CreateMutex( 0, TRUE, "NIVAL_RTS_ENGINE" ); // ��� ������ ������� ���� ��������� ���� mutex
-	if ( GetLastError() == ERROR_ALREADY_EXISTS )
-		return 0xDEAD;
+	// if ( GetLastError() == ERROR_ALREADY_EXISTS )
+	// 	return 0xDEAD;
 #ifndef _FINALRELEASE
 	if ( !IsRunningOnLocalDrive() ) 
 	{
@@ -222,8 +222,7 @@ int WINAPI WinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLin
 
 	// 
 	pSplashScreen = 0;
-	// setup video mode - SCENE_MODE was changed to windowed by default - easier black screen closing
-	if ( !Scene()->SetupMode(SCENE_MODE_WINDOWED, false) )
+	if ( !Scene()->SetupMode(SCENE_MODE_FULLSCREEN, false) )
 	{
 		MessageBox( 0, "Can't setup scene mode from config", "Error", MB_OK );
 		return 0xDEAD;
