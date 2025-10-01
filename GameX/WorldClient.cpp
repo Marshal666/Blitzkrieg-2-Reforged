@@ -34,8 +34,8 @@
 const int CURSOR_FADE_HALF_SIZE_X = 150;
 const int CURSOR_FADE_HALF_SIZE_Y = 150;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const int CLIENT_UNIQUE_ID_MAP_COMMAND_ACK = -2; // look for other CLIENT_UNIQUE_ID_xxx (криво, но менять поздно)
-const int CLIENT_UNIQUE_ID_MAP_COMMAND_ACK_DIR = -3; // look for other CLIENT_UNIQUE_ID_xxx (криво, но менять поздно)
+const int CLIENT_UNIQUE_ID_MAP_COMMAND_ACK = -2; // look for other CLIENT_UNIQUE_ID_xxx (пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
+const int CLIENT_UNIQUE_ID_MAP_COMMAND_ACK_DIR = -3; // look for other CLIENT_UNIQUE_ID_xxx (пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ)
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const float SELECTION_FADE_IN_TIME = 1.0f;
 const float SELECTION_FADE_OUT_TIME = 2.0f;
@@ -56,11 +56,11 @@ static bool bForcedXRayMode = false;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 static void MsgXRay( const SGameMessage &msg, int nPressed );
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// нужно для сохранения порядка сортировки равноправных объектов
+// пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 struct SPickObject
 {
 	CMapObj *pMO;
-	int nOrder; // чем меньше nOrder, тем ближе объект
+	int nOrder; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ nOrder, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 };
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 1.level: hp > 0?
@@ -641,12 +641,12 @@ bool CWorldClient::IsSuperActive( CMapObj *pMapObj )
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void CWorldClient::DoUpdateSpecialAbility( CMapObj *pMO )
 {
-	pSelector->DoUpdateSpecialAbility( pMO ); // обновить доступнvе абилити можно только через селектор
+	pSelector->DoUpdateSpecialAbility( pMO ); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅvпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void CWorldClient::DoUpdateObjectStats( CMapObj *pMO )
 {
-	pSelector->DoUpdateStats( pMO ); // обновить статv объекта можно только через селектор
+	pSelector->DoUpdateStats( pMO ); // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅv пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	if ( IsSuperWeapon( pMO ) )
 		NInput::PostEvent( "mission_update_super_weapon_stats", pMO->GetID(), 0 );
 }
@@ -1626,7 +1626,7 @@ void CWorldClient::MsgScrollMap( const SGameMessage &msg )
 	CVec2 vAnc;
 	AI2Vis( &vAnc, UnPackCoords( msg.nParam1 ) );
 	Camera()->SetAnchor( CVec3( vAnc.x,  vAnc.y, 0 ) );
-//	Camera()->Update(); // нужно, чтобv сохранить правильнvй угол камерv при обновлении _нитов на минимапе - заменим на задержку в 1 сегмент
+//	Camera()->Update(); // пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅv пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅvпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅv пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ _пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ 1 пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 	bCameraUpdated = true;
 }
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -1678,7 +1678,7 @@ void CWorldClient::MsgCenterCurrentSelection( const SGameMessage &msg )
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 void CWorldClient::CenterSelectionGroupPrivate( const vector<CMOSelectable*> &group )
 {
-	// TODO: надо сделать нормальное центрирование, чтобv в поле видимости (лучше в центр) попадал хотя бv один _нит
+	// TODO: пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅпїЅv пїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ (пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ) пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅv пїЅпїЅпїЅпїЅ _пїЅпїЅпїЅ
 	
 	if ( group.empty() )
 		return;
@@ -2301,6 +2301,10 @@ void CWorldClient::OnUpdateNotifyFeedback( const struct SAIFeedbackUpdate *pUpda
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int CWorldClient::GetHPBarColorIndex( const CMapObj *pMO, const int nPlayer )
 {
+	// Special contested color, this is one of the most shittiest, hardcoded parts of BK2 code... just for a fucking color...
+	if ( nPlayer == -2 )
+		return 12;
+
 	IScenarioTracker *pST = Singleton<IScenarioTracker>();
 	if ( !pST )
 		return 0;
@@ -2495,7 +2499,7 @@ void CWorldClient::SMapCommandAck::Update()
 	{
 		nTime = nCurrentTime;
 
-		// уберем объект после загрузки игрv (то, что он может убраться в самом начале игрv можно проигнорировать)
+		// пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅv (пїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅv пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ)
 		Scene()->RemoveObject( nUniqueID );
 		bPlaced = false;
 		return;
@@ -2555,15 +2559,15 @@ void CWorldClient::GetTerrainMassData( vector<SSoundTerrainInfo> *pData, int nMa
 		(*pData)[i].nTerrainType = it->first;
 	}
 
-	// сначала отсортировать по массе
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ
 	SSoundTerrainInfo::CPrSoundsMassSort prMassSort;
 	sort( pData->begin(), pData->end(), prMassSort );
-	// удалить все с нулевой массой
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 	SSoundTerrainInfo::CPrZeroMass prZeroMass;
 	vector<SSoundTerrainInfo>::iterator firstZeromass = find_if( pData->begin(), pData->end(), prZeroMass );
 	int nSize = Min( nMaxSize, firstZeromass - pData->begin() );
 	pData->resize( nSize );
-	// оставшееся отсортировать по TerrainType
+	// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ TerrainType
 	SSoundTerrainInfo::CPrTerrainTypeSort prTerrainType;
 	sort( pData->begin(), pData->end(), prTerrainType );
 }
