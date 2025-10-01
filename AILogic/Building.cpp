@@ -383,22 +383,17 @@ void CBuildingSimple::Segment()
 				if ( curTime < timeToChangeOwner || bIsContested )		// still not done, do not change
 				{
 					float fProgress = 0.5f;
-					/*if ( timeToChangeOwnerTotal > 1 )
-						fProgress = 1.0f - float( timeToChangeOwner - curTime ) / timeToChangeOwnerTotal;*/
-					
-					// Used in case when the base cap is full, but the base is still contested
-					/*if ( fProgress >= 0.999f && bIsContested )
-					{
-						fProgress = 0.999f;
-						timeToChangeOwner = curTime + 8;
-					}*/
-					timeToChangeOwner = curTime + 64;
+
+					int nTotalTime = timeToChangeOwnerTotal;
+					int nPassedTime = timeToChangeOwner - curTime;
+
+					fProgress = Min( 1.0f - float( nPassedTime ) / nTotalTime, 1.0f );
 
 					CPtr<SAIKeyBuildingCaptureUpdate> pProgressUpdate = new SAIKeyBuildingCaptureUpdate;
 					pProgressUpdate->nObjUniqueID = GetUniqueId();
 					pProgressUpdate->fProgress = fProgress;
 					pProgressUpdate->nOldSide = theDipl.GetNParty( GetPlayer() );
-					pProgressUpdate->nNewSide = theDipl.GetNParty( nNewPlayer );
+					pProgressUpdate->nNewSide = bIsContested ? -2 : theDipl.GetNParty( nNewPlayer );
 					updater.AddUpdate( pProgressUpdate, ACTION_NOTIFY_KEY_CAPTURE_PROGRESS, this, 0 );
 
 					nNewPlayer = GetPlayer();
