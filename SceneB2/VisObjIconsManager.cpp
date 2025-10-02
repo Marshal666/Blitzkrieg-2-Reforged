@@ -8,11 +8,12 @@
 //#include <VTuneAPI.h>
 //#pragma comment (lib, "vtuneapi.lib")
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-const int DEF_HPBAR_PARTS_NUM = 3;
+const int DEF_HPBAR_PARTS_NUM = 4;
+const int DEF_HPBAR_BORDERS_NUM = 3;
 const int DEF_ICONS_GAP_X = 2;
 const int DEF_ICONS_ABOVE_Y = 2;
 const int DEF_ICONS_BELOW_Y = 2;
-const int DEF_HP_COLOR_NUM = 4 + 8 + 9; // user, friend, enemy, neutral + mp colors + contested color + second batch of (mp?) colors
+const int DEF_HP_COLOR_NUM = 5 + 16; // user, friend, enemy, neutral, contested + mp colors
 const int DEF_HP_GAP_Y = 2;
 const int DEF_ICON_GROUP_GAP_X = -20;
 const int DEF_ICON_GROUP_GAP_Y = 0;
@@ -32,10 +33,10 @@ void CVisObjIconsManager::Init( const NDb::SVisObjIconsSet *pIconsSet )
 	hpBarTexCoords.resize( DEF_HPBAR_PARTS_NUM + nHPBarColorsNum );
 	CTRect<float> nullRect( VNULL2, VNULL2 );
 	fill( hpBarTexCoords.begin(), hpBarTexCoords.end(), nullRect );
-	NI_ASSERT( pIconsSet->hpBarBorders.size() >= DEF_HPBAR_PARTS_NUM, "HPBar contains too small number of parts" );
-	if ( pIconsSet->hpBarBorders.size() >= DEF_HPBAR_PARTS_NUM )
+	NI_ASSERT( pIconsSet->hpBarBorders.size() >= DEF_HPBAR_BORDERS_NUM, "HPBar contains too small number of parts" );
+	if ( pIconsSet->hpBarBorders.size() >= DEF_HPBAR_BORDERS_NUM )
 	{
-		for ( int i = 0; i < DEF_HPBAR_PARTS_NUM; ++i )
+		for ( int i = 0; i < DEF_HPBAR_BORDERS_NUM; ++i )
 			hpBarTexCoords[i] = pIconsSet->hpBarBorders[i];
 	}
 
