@@ -860,7 +860,27 @@ void CScenarioTracker::SetReinforcementXP( int nPlayer, NDb::EReinforcementType 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int CScenarioTracker::GetReinforcementXPLevel( int nPlayer, NDb::EReinforcementType eType ) const
 {
-	if ( eType == NDb::RT_ENGINEERING || eType == NDb::RT_RECON || eType == NDb::RT_SUPER_WEAPON )
+	if ( eType == NDb::RT_ENGINEERING
+		|| eType == NDb::RT_RECON
+		|| eType == NDb::RT_SUPER_WEAPON
+		// --- Extra Max Level Ground ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_5
+		// --- Extra Max Level Air ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_5
+		// --- Extra Max Level Mixed ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_5 )
 	{
 		return N_MAX_XP_LEVEL;
 	}
@@ -909,7 +929,7 @@ float CScenarioTracker::GetReinforcementXPForLevel( NDb::EReinforcementType eTyp
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int CScenarioTracker::GetReinforcementCallsLeft( int nPlayer )
 {
-//	NI_ASSERT( GetCurrentMap() != 0, "mission not started" ); // ассерт не нужен, т.к. миссия может быть запущена как подложка - без ScenarioTracker
+//	NI_ASSERT( GetCurrentMap() != 0, "mission not started" ); // пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅ.пїЅ. пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - пїЅпїЅпїЅ ScenarioTracker
 	if ( GetCurrentMission() == 0 )
 	{
 		return 0;
@@ -953,7 +973,7 @@ enum EMissionObjectiveState CScenarioTracker::GetObjectiveState( const int nID )
 void CScenarioTracker::SetObjectiveState( const int nID, const EMissionObjectiveState eState )
 {
 	if ( !GetCurrentMission() )
-		return; // запущена карта без миссии
+		return; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
 	NI_VERIFY( nID >= 0 && nID < objectives.size(), StrFmt("Objective ID (%d) out of range [0..%d]", nID, objectives.size()), return );
 	NI_VERIFY( eState >= EMOS_MIN && eState <= EMOS_MAX, StrFmt("Objective state (%d) invalid (must be in range [%d..%d])", eState, EMOS_MIN + 1, EMOS_MAX - 1), return );
@@ -1761,7 +1781,27 @@ void CScenarioTracker::UndoAssignLeader( const SUndoLeaderInfo &undo )
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 int CScenarioTracker::GetLeaderLevel( int nPlayer, NDb::EReinforcementType eType )
 {
-	if ( eType == NDb::RT_ENGINEERING || eType == NDb::RT_RECON || eType == NDb::RT_SUPER_WEAPON )
+	if ( eType == NDb::RT_ENGINEERING
+		|| eType == NDb::RT_RECON
+		|| eType == NDb::RT_SUPER_WEAPON
+		// --- Extra Max Level Ground ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_GROUND_5
+		// --- Extra Max Level Air ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_AIR_5
+		// --- Extra Max Level Mixed ---
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_1
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_2
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_3
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_4
+		|| eType == NDb::RT_EXTRA_MAXLVL_MIXED_5 )
 	{
 		return N_MAX_XP_LEVEL;
 	}
