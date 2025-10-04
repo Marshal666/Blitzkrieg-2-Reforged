@@ -2303,7 +2303,7 @@ int CWorldClient::GetHPBarColorIndex( const CMapObj *pMO, const int nPlayer )
 {
 	// Special contested color, this is one of the most shittiest, hardcoded parts of BK2 code... just for a fucking color (((index)))...
 	if ( nPlayer == -2 )
-		return 4;
+		return 20;
 
 	IScenarioTracker *pST = Singleton<IScenarioTracker>();
 	if ( !pST )
