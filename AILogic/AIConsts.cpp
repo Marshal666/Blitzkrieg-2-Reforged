@@ -216,6 +216,7 @@ float SConsts::PLAYER_POINTS_SPEED = 10.0f;
 
 float SConsts::FLAG_POINTS_TO_REINFORCEMENT = 30.0f;
 float SConsts::FLAG_TIME_TO_CAPTURE = 5000.0f;
+WORD SConsts::STOP_BASE_CAPTURING_ON_CONTESTED = 0; 
 
 int SConsts::ARMOR_FOR_AREA_DAMAGE = 10;
 float SConsts::BUILDING_FIREPLACE_DEFAULT_COVER = 0.5f;
@@ -435,6 +436,7 @@ START_REGISTER(AILogicConsts)
 
 	REGISTER_VAR_EX( "AI.Flags.PointsToReinforcement",NGlobal::VarFloatHandler, &SConsts::FLAG_POINTS_TO_REINFORCEMENT, 30.0f, STORAGE_NONE );
 	REGISTER_VAR_EX( "AI.Flags.TimeToCapture",NGlobal::VarFloatHandler, &SConsts::FLAG_TIME_TO_CAPTURE, 5000.0f, STORAGE_NONE );
+	REGISTER_VAR_EX( "AI.Flags.StopBaseCapturingOnContested", NGlobal::VarBoolHandler, &SConsts::STOP_BASE_CAPTURING_ON_CONTESTED, 0, STORAGE_NONE );
 
 	REGISTER_VAR_EX( "AI.Common.ArmorForAreaDamage", NGlobal::VarIntHandler, &SConsts::ARMOR_FOR_AREA_DAMAGE, 10, STORAGE_NONE );
 

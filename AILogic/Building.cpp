@@ -386,6 +386,13 @@ void CBuildingSimple::Segment()
 
 					int nTotalTime = timeToChangeOwnerTotal;
 					int nPassedTime = timeToChangeOwner - curTime;
+					int nStartTime = nPassedTime - nTotalTime + curTime;
+
+					// TODO: if (AIConsts["StopCappingBar"]) -> reset timeToChangeOwner
+					if (bIsContested && SConsts::STOP_BASE_CAPTURING_ON_CONTESTED)
+					{
+						timeToChangeOwner = curTime + nPassedTime;
+					}
 
 					fProgress = Min( 1.0f - float( nPassedTime ) / nTotalTime, 1.0f );
 
